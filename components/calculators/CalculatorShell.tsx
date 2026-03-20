@@ -1,0 +1,155 @@
+import { ReactNode } from "react";
+import Breadcrumb from "@/components/layout/Breadcrumb";
+import AdBlock from "@/components/calculators/AdBlock";
+import FAQSection from "@/components/calculators/FAQSection";
+import { breadcrumbSchema, howToSchema } from "@/lib/seo/schemas";
+
+interface FAQ {
+  question: string;
+  answer: string;
+}
+
+interface CalculatorShellProps {
+  title: string;
+  slug: string;
+  description: string;
+  categoryLabel: string;
+  categorySlug: string;
+  howToUse: string[];
+  materialInfo: string;
+  installationTips: string[];
+  commonMistakes: string[];
+  faqs: FAQ[];
+  children: ReactNode; // the interactive calculator
+}
+
+export default function CalculatorShell({
+  title,
+  slug,
+  description,
+  categoryLabel,
+  categorySlug,
+  howToUse,
+  materialInfo,
+  installationTips,
+  commonMistakes,
+  faqs,
+  children,
+}: CalculatorShellProps) {
+  const crumbs = breadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Calculators", url: "/calculators/" },
+    { name: categoryLabel, url: `/calculators/${categorySlug}/` },
+    { name: title, url: `/calculators/${categorySlug}/${slug}/` },
+  ]);
+
+  return (
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            howToSchema({
+              name: `How to Use the ${title}`,
+              description: `Step-by-step guide to using the ${title} on BuildEstimatory.`,
+              steps: howToUse,
+              url: `/calculators/${categorySlug}/${slug}/`,
+            })
+          ),
+        }}
+      />
+
+      <Breadcrumb
+        items={[
+          { label: "Calculators", href: "/calculators" },
+          { label: categoryLabel, href: `/calculators/${categorySlug}` },
+          { label: title },
+        ]}
+      />
+
+      <div className="lg:grid lg:grid-cols-3 lg:gap-12">
+        {/* Main content */}
+        <div className="lg:col-span-2">
+          <h1 className="text-3xl font-extrabold text-gray-900 mb-3">{title}</h1>
+          <p className="text-gray-500 text-lg mb-8">{description}</p>
+
+          <AdBlock slot="hero" className="mb-8" />
+
+          {/* Calculator widget */}
+          <div className="mb-8">{children}</div>
+
+          <AdBlock slot="after-results" className="mb-8" />
+
+          {/* How to use */}
+          <section className="mb-10">
+            <h2 className="text-xl font-bold text-gray-900 mb-4">How to Use This Calculator</h2>
+            <ol className="space-y-2">
+              {howToUse.map((step, i) => (
+                <li key={i} className="flex gap-3 text-gray-600">
+                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-orange-100 text-orange-600 text-sm font-bold flex items-center justify-center">
+                    {i + 1}
+                  </span>
+                  {step}
+                </li>
+              ))}
+            </ol>
+          </section>
+
+          <AdBlock slot="middle" className="mb-8" />
+
+          {/* Material info */}
+          <section className="mb-10">
+            <h2 className="text-xl font-bold text-gray-900 mb-3">About This Material</h2>
+            <p className="text-gray-600 leading-relaxed">{materialInfo}</p>
+          </section>
+
+          {/* Installation tips */}
+          <section className="mb-10">
+            <h2 className="text-lg font-bold text-gray-900 mb-3">Installation Tips</h2>
+            <ul className="space-y-2">
+              {installationTips.map((tip, i) => (
+                <li key={i} className="flex gap-2 text-gray-600">
+                  <span className="text-orange-500 mt-1">•</span>
+                  {tip}
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          {/* Common mistakes */}
+          <section className="mb-10">
+            <h2 className="text-lg font-bold text-gray-900 mb-3">Common Mistakes to Avoid</h2>
+            <ul className="space-y-2">
+              {commonMistakes.map((mistake, i) => (
+                <li key={i} className="flex gap-2 text-gray-600">
+                  <span className="text-red-400 mt-1" aria-hidden="true">⚠</span>
+                  {mistake}
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <FAQSection faqs={faqs} />
+        </div>
+
+        {/* Sidebar */}
+        <aside className="hidden lg:block mt-16 lg:mt-0">
+          <div className="sticky top-24 space-y-6">
+            <AdBlock slot="sidebar" />
+            <div className="bg-orange-50 border border-orange-200 rounded-xl p-5">
+              <h3 className="font-bold text-orange-800 mb-3">Quick Tip</h3>
+              <p className="text-sm text-orange-700 leading-relaxed">
+                Always add 10% waste factor to your material orders. Construction always
+                produces off-cuts, and running short mid-project is costly.
+              </p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  );
+}

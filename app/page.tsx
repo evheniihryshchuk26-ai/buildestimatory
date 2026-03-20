@@ -1,65 +1,169 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import Link from "next/link";
+import { categories } from "@/content/calculators";
+import AdBlock from "@/components/calculators/AdBlock";
+import HeroAnimation from "@/components/HeroAnimation";
+import { siteConfig } from "@/lib/seo/metadata";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "BuildEstimatory — Free Construction Material Calculators",
+  description:
+    "Free construction material calculators for US builders and contractors. Get accurate estimates for framing, roofing, foundation, insulation, and more — instant results, no signup.",
+  openGraph: {
+    title: "BuildEstimatory — Free Construction Material Calculators",
+    description:
+      "Free construction material calculators for US builders and contractors. Instant results from foundation to roof.",
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    type: "website",
+    images: [
+      {
+        url: `${siteConfig.url}/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: "BuildEstimatory — Free Construction Material Calculators",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BuildEstimatory — Free Construction Material Calculators",
+    description:
+      "Free construction material calculators for US builders and contractors. Instant results from foundation to roof.",
+    images: [`${siteConfig.url}/og-image.png`],
+  },
+  alternates: {
+    canonical: `${siteConfig.url}/`,
+  },
+};
+
+const categoryIcons: Record<string, string> = {
+  foundation: "🏛️",
+  "floor-framing": "🪵",
+  "wall-framing": "🔨",
+  roofing: "🏠",
+  "exterior-shell": "🧱",
+  "insulation-drywall": "🔩",
+  hardware: "🔧",
+};
+
+export default function HomePage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Hero */}
+      <section className="py-16">
+        <div className="flex flex-col lg:flex-row items-center gap-12">
+          {/* Left — Text */}
+          <div className="flex-1 text-center lg:text-left">
+            <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight">
+              Free Construction Material
+              <span className="text-orange-500"> Calculators</span>
+            </h1>
+            <p className="mt-4 text-xl text-gray-500 max-w-xl">
+              Accurate material estimates for US builders and contractors. Get your
+              shopping list in seconds — foundation to roof.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3 justify-center lg:justify-start">
+              <Link
+                href="/calculators"
+                className="bg-orange-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors"
+              >
+                Browse All Calculators
+              </Link>
+              <Link
+                href="/calculators/wall-framing/stud-calculator"
+                className="border border-orange-500 text-orange-500 px-8 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors"
+              >
+                Stud Calculator →
+              </Link>
+            </div>
+          </div>
+
+          {/* Right — Animated Demo */}
+          <div className="flex-1 w-full max-w-lg">
+            <HeroAnimation />
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Ad — hero */}
+      <AdBlock slot="hero" className="mb-12" />
+
+      {/* Category Grid */}
+      <section className="py-8">
+        <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+          Calculator Categories
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {categories.map((cat) => (
+            <Link
+              key={cat.slug}
+              href={`/calculators/${cat.slug}`}
+              className="bg-white rounded-xl border border-gray-200 p-6 hover:border-orange-400 hover:shadow-md transition-all group"
+            >
+              <div className="text-3xl mb-3" aria-hidden="true">{categoryIcons[cat.slug] ?? "📐"}</div>
+              <h3 className="font-bold text-gray-900 group-hover:text-orange-600 transition-colors mb-2">
+                {cat.title}
+              </h3>
+              <p className="text-sm text-gray-500 leading-relaxed line-clamp-2">
+                {cat.description}
+              </p>
+              <p className="mt-3 text-sm text-orange-500 font-medium">
+                {cat.calculators.length} calculators →
+              </p>
+            </Link>
+          ))}
         </div>
-      </main>
+      </section>
+
+      {/* Popular calculators */}
+      <section className="py-12">
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">
+          Most Popular Calculators
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[
+            { href: "/calculators/wall-framing/stud-calculator", label: "Stud Calculator", desc: "16\" or 24\" OC with corners & openings" },
+            { href: "/calculators/roofing/shingle-calculator", label: "Shingle Calculator", desc: "Bundles needed for any roof area" },
+            { href: "/calculators/floor-framing/floor-joist-calculator", label: "Floor Joist Calculator", desc: "Joists by room width and spacing" },
+            { href: "/calculators/roofing/truss-calculator", label: "Roof Truss Calculator", desc: "Truss count by roof length" },
+            { href: "/calculators/insulation-drywall/drywall-calculator", label: "Drywall Calculator", desc: "Sheets needed for walls and ceilings" },
+            { href: "/calculators/foundation/anchor-bolt-calculator", label: "Anchor Bolt Calculator", desc: "Bolts for foundation perimeter" },
+          ].map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="flex items-start gap-3 p-4 bg-white rounded-lg border border-gray-200 hover:border-orange-400 hover:shadow-sm transition-all"
+            >
+              <span className="text-orange-500 text-lg mt-0.5" aria-hidden="true">📐</span>
+              <div>
+                <div className="font-semibold text-gray-900">{item.label}</div>
+                <div className="text-sm text-gray-500">{item.desc}</div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Value props */}
+      <section className="py-12 bg-white rounded-xl border border-gray-200 px-8 mb-16">
+        <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+          Why Use BuildEstimatory?
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {[
+            { icon: "⚡", title: "Instant Results", desc: "Get your material list in seconds — no account, no signup required." },
+            { icon: "🎯", title: "US Code Standards", desc: "Built around standard US framing practices: 16\" and 24\" OC spacing, 4x8 sheets, and more." },
+            { icon: "🛒", title: "Shopping-Ready Output", desc: "Results come as a clear shopping list with quantities and units you can take straight to the lumber yard." },
+          ].map((item) => (
+            <div key={item.title} className="text-center">
+              <div className="text-4xl mb-3">{item.icon}</div>
+              <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
+              <p className="text-sm text-gray-500 leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
