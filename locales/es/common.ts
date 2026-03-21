@@ -75,6 +75,12 @@ const common: CommonTranslations = {
     viewCalculator: "Abrir calculadora \u2192",
   },
 
+  clusterLinks: {
+    moreCalculators: "Calculadoras M\u00e1s Espec\u00edficas",
+    moreCalculatorsDescription: "\u00bfNecesitas un c\u00e1lculo m\u00e1s espec\u00edfico? Prueba una de estas:",
+    relatedGuides: "Gu\u00edas Relacionadas",
+  },
+
   heroAnimation: {
     quickCalculator: "Calculadora R\u00e1pida",
     chooseCategory: "1. Elige Categor\u00eda",

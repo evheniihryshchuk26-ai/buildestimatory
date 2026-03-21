@@ -47,6 +47,46 @@ export const categories: CategoryMeta[] = [
         category: "Cimentación",
         categorySlug: "foundation",
       },
+      {
+        slug: "concrete-calculator",
+        title: "Calculadora de Concreto",
+        description:
+          "¿Cuánto concreto necesito? Calculadora gratis para losas, zapatas y columnas — metros cúbicos y cantidad de bultos con factor de desperdicio.",
+        category: "Cimentación",
+        categorySlug: "foundation",
+      },
+      {
+        slug: "concrete-slab-calculator",
+        title: "Calculadora de Losa de Concreto",
+        description:
+          "¿Cuánto concreto para una losa? Calculadora gratis para cochera, patio y banqueta — metros cúbicos y bultos para cualquier espesor.",
+        category: "Cimentación",
+        categorySlug: "foundation",
+      },
+      {
+        slug: "concrete-footing-calculator",
+        title: "Calculadora de Zapata de Concreto",
+        description:
+          "Calculadora de zapatas: Estima metros cúbicos para zapatas corridas y aisladas. Herramienta gratis para cimentación — incluye desperdicio.",
+        category: "Cimentación",
+        categorySlug: "foundation",
+      },
+      {
+        slug: "concrete-column-calculator",
+        title: "Calculadora de Columna de Concreto",
+        description:
+          "¿Cuánto concreto para columnas o pilares? Calculadora gratis para diámetros de 20, 25 y 30 cm — m³ por columna y total al instante.",
+        category: "Cimentación",
+        categorySlug: "foundation",
+      },
+      {
+        slug: "concrete-steps-calculator",
+        title: "Calculadora de Escalones de Concreto",
+        description:
+          "Calculadora de escalones de concreto: ¿Cuántos metros cúbicos para escaleras? Herramienta gratis — ingresa ancho, huella y peralte.",
+        category: "Cimentación",
+        categorySlug: "foundation",
+      },
     ],
   },
   {
@@ -204,6 +244,30 @@ export const categories: CategoryMeta[] = [
         title: "Calculadora de Gotero de Techo",
         description:
           "¿Cuántos metros de gotero necesito? Calculadora gratis de botaguas por perímetro — calcula piezas para tiras estándar de 3 m al instante.",
+        category: "Techado",
+        categorySlug: "roofing",
+      },
+      {
+        slug: "roof-pitch-calculator",
+        title: "Calculadora de Pendiente de Techo",
+        description:
+          "¿Qué pendiente tiene mi techo? Calculadora gratis — ingresa elevación y distancia para obtener ángulo, porcentaje y multiplicador de área.",
+        category: "Techado",
+        categorySlug: "roofing",
+      },
+      {
+        slug: "roof-area-calculator",
+        title: "Calculadora de Área de Techo",
+        description:
+          "Calculadora de área de techo: Convierte dimensiones planas al área real del techo. Herramienta gratis — considera multiplicador de pendiente y da cuadros de techado.",
+        category: "Techado",
+        categorySlug: "roofing",
+      },
+      {
+        slug: "roof-slope-calculator",
+        title: "Calculadora de Inclinación de Techo",
+        description:
+          "¿Qué tan empinado es mi techo? Calculadora gratis de inclinación — mide elevación y recorrido para obtener relación de pendiente, ángulo y material recomendado.",
         category: "Techado",
         categorySlug: "roofing",
       },

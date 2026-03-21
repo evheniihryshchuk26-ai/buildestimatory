@@ -105,6 +105,13 @@ export interface HeroAnimationTranslations {
   calcSillPlate: string;
 }
 
+/** Cluster links — sub-calculators and guides shown on hub calculator pages */
+export interface ClusterLinksTranslations {
+  moreCalculators: string;
+  moreCalculatorsDescription: string;
+  relatedGuides: string;
+}
+
 /** All common (non-page-specific) translations */
 export interface CommonTranslations {
   nav: NavTranslations;
@@ -116,6 +123,7 @@ export interface CommonTranslations {
   layout: LayoutTranslations;
   categoryPage: CategoryPageTranslations;
   relatedCalculators: RelatedCalculatorsTranslations;
+  clusterLinks: ClusterLinksTranslations;
   heroAnimation: HeroAnimationTranslations;
 }
 
@@ -238,9 +246,196 @@ export interface GuidesIndexTranslations {
   guides: { title: string; description: string; href: string }[];
 }
 
+export interface PitchTableRow {
+  pitch: string;
+  degrees: string;
+  slopePercent: string;
+  multiplier: string;
+  description: string;
+}
+
+export interface RoofPitchChartGuideTranslations {
+  title: string;
+  metaDescription: string;
+  heroTitle: string;
+  heroSubtitle: string;
+  heroDescription: string;
+  quickRefHeading: string;
+  quickRefSubheading: string;
+  quickRefColPitch: string;
+  quickRefColDegrees: string;
+  quickRefColSlope: string;
+  quickRefColMultiplier: string;
+  quickRefColDescription: string;
+  quickRefRows: PitchTableRow[];
+  readingHeading: string;
+  readingText1: string;
+  readingText2: string;
+  readingText3: string;
+  lowSlopeHeading: string;
+  lowSlopeIntro: string;
+  lowSlopeItems: string[];
+  lowSlopeSummary: string;
+  standardHeading: string;
+  standardIntro: string;
+  standardItems: string[];
+  standardSummary: string;
+  steepHeading: string;
+  steepIntro: string;
+  steepItems: string[];
+  steepSummary: string;
+  costHeading: string;
+  costIntro: string;
+  costText1: string;
+  costText2: string;
+  costText3: string;
+  materialHeading: string;
+  materialIntro: string;
+  materialItems: string[];
+  climateHeading: string;
+  climateIntro: string;
+  climateItems: string[];
+  calculatorCtaHeading: string;
+  calculatorCtaText: string;
+  calculatorLinks: { label: string; href: string; description: string }[];
+  faqHeading: string;
+  faqs: GuideFaq[];
+}
+
+export interface MinPitchMaterialRow {
+  material: string;
+  standardMin: string;
+  absoluteMin: string;
+  notes: string;
+}
+
+export interface MinimumRoofPitchGuideTranslations {
+  title: string;
+  metaDescription: string;
+  heroTitle: string;
+  heroSubtitle: string;
+  heroDescription: string;
+  quickAnswerHeading: string;
+  quickAnswerText: string;
+  materialTableHeading: string;
+  materialTableSubheading: string;
+  materialTableColMaterial: string;
+  materialTableColStandardMin: string;
+  materialTableColAbsoluteMin: string;
+  materialTableColNotes: string;
+  materialTableRows: MinPitchMaterialRow[];
+  whyMinHeading: string;
+  whyMinIntro: string;
+  whyMinItems: string[];
+  whyMinSummary: string;
+  codeHeading: string;
+  codeIntro: string;
+  codeItems: string[];
+  codeSummary: string;
+  belowMinHeading: string;
+  belowMinIntro: string;
+  belowMinItems: string[];
+  belowMinSummary: string;
+  solutionsHeading: string;
+  solutionsIntro: string;
+  solutionsItems: string[];
+  solutionsSummary: string;
+  calculatorCtaHeading: string;
+  calculatorCtaText: string;
+  calculatorLinks: { label: string; href: string; description: string }[];
+  faqHeading: string;
+  faqs: GuideFaq[];
+}
+
+export interface ReadyMixVsBaggedGuideTranslations {
+  title: string;
+  metaDescription: string;
+  heroTitle: string;
+  heroSubtitle: string;
+  heroDescription: string;
+  quickAnswerHeading: string;
+  quickAnswerText: string;
+  whatIsReadyMixHeading: string;
+  whatIsReadyMixText1: string;
+  whatIsReadyMixText2: string;
+  whatIsBaggedHeading: string;
+  whatIsBaggedText1: string;
+  whatIsBaggedText2: string;
+  comparisonHeading: string;
+  comparisonSubheading: string;
+  comparisonCol1: string;
+  comparisonCol2: string;
+  comparisonCol3: string;
+  comparisonRows: { category: string; readyMix: string; bagged: string }[];
+  costHeading: string;
+  costIntro: string;
+  costText1: string;
+  costText2: string;
+  costText3: string;
+  whenReadyMixHeading: string;
+  whenReadyMixIntro: string;
+  whenReadyMixItems: string[];
+  whenReadyMixSummary: string;
+  whenBaggedHeading: string;
+  whenBaggedIntro: string;
+  whenBaggedItems: string[];
+  whenBaggedSummary: string;
+  calculatorCtaHeading: string;
+  calculatorCtaText: string;
+  calculatorLinks: { label: string; href: string; description: string }[];
+  faqHeading: string;
+  faqs: GuideFaq[];
+}
+
+export interface ConcreteCostGuideTranslations {
+  title: string;
+  metaDescription: string;
+  heroTitle: string;
+  heroSubtitle: string;
+  heroDescription: string;
+  quickAnswerHeading: string;
+  quickAnswerText: string;
+  costByProjectHeading: string;
+  costByProjectIntro: string;
+  costByProjectColProject: string;
+  costByProjectColTypical: string;
+  costByProjectColNotes: string;
+  costByProjectRows: { project: string; typical: string; notes: string }[];
+  baggedCostHeading: string;
+  baggedCostIntro: string;
+  baggedCostText1: string;
+  baggedCostText2: string;
+  baggedCostText3: string;
+  readyMixPricingHeading: string;
+  readyMixPricingIntro: string;
+  readyMixPricingText1: string;
+  readyMixPricingText2: string;
+  readyMixPricingText3: string;
+  factorsHeading: string;
+  factorsIntro: string;
+  factorsItems: string[];
+  laborHeading: string;
+  laborIntro: string;
+  laborText1: string;
+  laborText2: string;
+  laborText3: string;
+  savingTipsHeading: string;
+  savingTipsIntro: string;
+  savingTipsItems: string[];
+  calculatorCtaHeading: string;
+  calculatorCtaText: string;
+  calculatorLinks: { label: string; href: string; description: string }[];
+  faqHeading: string;
+  faqs: GuideFaq[];
+}
+
 export interface GuidesTranslations {
   index: GuidesIndexTranslations;
   spacingGuide: SpacingGuideTranslations;
+  roofPitchChart: RoofPitchChartGuideTranslations;
+  minimumRoofPitch: MinimumRoofPitchGuideTranslations;
+  readyMixVsBagged: ReadyMixVsBaggedGuideTranslations;
+  concreteCostGuide: ConcreteCostGuideTranslations;
   breadcrumbGuides: string;
 }
 

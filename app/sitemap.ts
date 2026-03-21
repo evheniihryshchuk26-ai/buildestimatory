@@ -16,6 +16,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const guidePages: MetadataRoute.Sitemap = [
     { url: `${baseUrl}/guides/16-vs-24-on-center-spacing/`, lastModified, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/guides/roof-pitch-chart/`, lastModified, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/guides/minimum-roof-pitch-for-shingles/`, lastModified, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/guides/ready-mix-vs-bagged-concrete/`, lastModified, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/guides/concrete-cost-guide/`, lastModified, changeFrequency: "monthly", priority: 0.8 },
   ];
 
   const categoryPages: MetadataRoute.Sitemap = categories.map((cat) => ({

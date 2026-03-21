@@ -3,6 +3,7 @@ import Breadcrumb from "@/components/layout/Breadcrumb";
 import AdBlock from "@/components/calculators/AdBlock";
 import FAQSection from "@/components/calculators/FAQSection";
 import RelatedCalculators from "@/components/calculators/RelatedCalculators";
+import ClusterLinks from "@/components/calculators/ClusterLinks";
 import { breadcrumbSchema, howToSchema, webApplicationSchema } from "@/lib/seo/schemas";
 import { getCommonTranslations } from "@/lib/i18n/translations";
 
@@ -100,6 +101,8 @@ export default function CalculatorShell({
           <div className="mb-8">{children}</div>
 
           <AdBlock slot="after-results" className="mb-8" />
+
+          <ClusterLinks calculatorSlug={slug} categorySlug={categorySlug} />
 
           {/* How to use */}
           <section className="mb-10">

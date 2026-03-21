@@ -173,6 +173,280 @@ export const sillPlateCalculator: CalculatorSEOContent = {
   ],
 };
 
+export const concreteCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "Esta estimación incluye un 10% de factor de desperdicio. El desperdicio real puede variar según las condiciones del sitio, la precisión del encofrado y el método de colocación. Siempre confirma las cantidades con tu proveedor de concreto premezclado.",
+  howToUse: [
+    "Mide el largo y ancho del área de tu proyecto en metros.",
+    "Ingresa la profundidad (espesor) en centímetros — 10 cm es estándar para losas, 20–30 cm para zapatas.",
+    "Selecciona el tipo de proyecto (losa, zapata o columna).",
+    "Haz clic en Calcular Materiales para obtener metros cúbicos, cantidad de bultos y recomendaciones de pedido.",
+  ],
+  materialInfo:
+    "El concreto (también llamado hormigón en algunos países de Latinoamérica) es una mezcla de cemento Portland, arena, grava (agregado) y agua que fragua hasta convertirse en un material sólido como la roca. Se comercializa en dos formas: bultos de concreto premezclado y concreto premezclado entregado por camión revolvedora (olla). Los bultos de cemento más comunes en Latinoamérica son de 50 kg (Cemex, Holcim, Argos) y rinden aproximadamente 0.035 m³ cuando se mezclan con arena y grava en proporción 1:2:3. Para trabajos pequeños como postes de cerca o bases de buzón, los bultos son prácticos. Para cualquier volumen mayor a 1 m³, el concreto premezclado por camión es mucho más eficiente y produce un resultado más consistente.\n\nLa resistencia del concreto se mide en kg/cm² (o MPa) a los 28 días de curado. Los grados residenciales más comunes son: f'c=150 kg/cm² para aplicaciones no estructurales como banquetas y patios, f'c=200 kg/cm² para cimentaciones residenciales estándar y losas, y f'c=250 kg/cm² para pisos de cochera, zapatas estructurales y áreas con cargas pesadas. Grados superiores (f'c=300–350 kg/cm²) se especifican para obra comercial o aplicaciones especiales.\n\nEl concreto premezclado cuesta entre $1,800 y $2,800 MXN por metro cúbico entregado, dependiendo de la resistencia, ubicación y tamaño del pedido. La mayoría de los proveedores requieren un pedido mínimo de 3 m³, y cobran cargos adicionales por pedidos menores. Los bultos de cemento cuestan entre $180 y $250 MXN por bulto de 50 kg, lo que resulta significativamente más caro por metro cúbico que el premezclado. La malla electrosoldada, varilla corrugada y otros refuerzos agregan $50 a $150 MXN por metro cuadrado al costo total.",
+  installationTips: [
+    "Construye las cimbras niveladas, a plomo y bien arriostradas antes de que llegue el concreto.",
+    "Humedece el terreno con agua antes de colar para evitar que el suelo seco absorba la humedad del concreto demasiado rápido.",
+    "Coloca y distribuye el concreto lo más rápido posible — el premezclado empieza a fraguar en 60 a 90 minutos dependiendo de la temperatura.",
+    "Usa un vibrador o golpea las cimbras con un martillo para consolidar el concreto y eliminar burbujas de aire.",
+    "Empareja la superficie con una regla de aluminio primero, luego espera a que desaparezca el agua de sangrado antes del acabado final con llana o escoba.",
+    "Cura el concreto por al menos 7 días manteniéndolo húmedo con membrana de curado, plástico o riego periódico con agua.",
+  ],
+  commonMistakes: [
+    "Agregar demasiada agua a la mezcla — esto debilita el concreto y causa agrietamiento. Mantén una consistencia de revenimiento de 10 a 12 cm para la mayoría de los trabajos residenciales.",
+    "No pedir suficiente concreto — siempre agrega 10% por desperdicio, derrames y sobre-excavación. Quedarse corto durante un colado crea juntas frías.",
+    "Omitir el refuerzo — usa varilla corrugada del #3 o #4 a cada 20–30 cm o malla electrosoldada 6x6 para losas de 10 cm o más de espesor.",
+    "Colar en temperaturas extremas sin precauciones — debajo de 5°C usa agua tibia y cobijas aislantes; arriba de 32°C usa agua fría y protección contra el viento.",
+    "Dar acabado demasiado pronto mientras el agua de sangrado aún está en la superficie — esto atrapa agua, debilita la capa superior y causa descascaramiento.",
+  ],
+  faqs: [
+    {
+      question: "¿Cuánto concreto necesito para una losa de 3x3 metros?",
+      answer: "Una losa de 3x3 m con 10 cm de espesor requiere aproximadamente 0.9 m³ de concreto. Con un 10% de factor de desperdicio, pide 1.0 m³. Este volumen está justo en el límite donde el concreto premezclado por camión es más práctico que mezclar bultos a mano.",
+    },
+    {
+      question: "¿Cuántos bultos de cemento necesito por metro cúbico?",
+      answer: "Para una mezcla estándar de proporción 1:2:3 (cemento:arena:grava), necesitas aproximadamente 7 bultos de cemento de 50 kg por metro cúbico de concreto. Además necesitarás 0.56 m³ de arena y 0.84 m³ de grava. Para concreto premezclado en bulto (solo agregar agua), necesitarás aproximadamente 28 a 30 bultos de 50 kg por m³.",
+    },
+    {
+      question: "¿Cuántos metros cúbicos de concreto para una cochera?",
+      answer: "Una cochera típica para dos autos (6 m de ancho por 6 m de largo con 12 cm de espesor) requiere aproximadamente 4.3 m³ de concreto. Agrega 10% de desperdicio para un pedido total de 4.8 m³. Para cocheras, especifica concreto de f'c=250 kg/cm² con malla electrosoldada para mayor durabilidad.",
+    },
+    {
+      question: "¿Cuál es la diferencia entre concreto de f'c=200 y f'c=250?",
+      answer: "El valor f'c indica la resistencia a la compresión a los 28 días. El f'c=200 kg/cm² es el estándar para cimentaciones residenciales, muros de contención y losas interiores. El f'c=250 kg/cm² es más resistente y duradero, recomendado para cocheras, rampas, losas exteriores y áreas con cargas pesadas o ciclos de mojado-secado. La diferencia de costo es típicamente de $100 a $300 MXN por metro cúbico.",
+    },
+    {
+      question: "¿Cuánto cuesta un metro cúbico de concreto premezclado?",
+      answer: "El concreto premezclado por camión revolvedora cuesta entre $1,800 y $2,800 MXN por metro cúbico entregado, dependiendo de la resistencia y ubicación. Hay cargos adicionales por pedidos menores al mínimo (generalmente 3 m³), entregas en sábado y colados fuera de horario. Mezclar con bultos de cemento cuesta aproximadamente $3,500 a $4,500 MXN por metro cúbico, por lo que solo conviene para trabajos muy pequeños.",
+    },
+    {
+      question: "¿Se puede colar concreto con lluvia?",
+      answer: "Una llovizna ligera generalmente es aceptable si puedes proteger la superficie fresca. La lluvia fuerte puede lavar la pasta de cemento, debilitar la superficie y causar descascaramiento. Si se espera lluvia, ten plástico listo para cubrir el concreto recién colado inmediatamente. Nunca des acabado al concreto con agua estancada en la superficie.",
+    },
+    {
+      question: "¿Qué espesor debe tener una losa de concreto?",
+      answer: "Las losas residenciales estándar (patios, andadores, bases para bodega) tienen 10 cm de espesor. Pisos de cochera deben tener de 12 a 15 cm de espesor. Las zapatas para muros de carga tienen típicamente de 20 a 30 cm de espesor y se extienden por debajo de la línea de desplante según las normas locales. Siempre consulta el reglamento de construcción de tu localidad para requisitos mínimos.",
+    },
+    {
+      question: "¿Necesito varilla o malla en una losa de concreto?",
+      answer: "Para losas de 10 cm de espesor o más, el refuerzo es recomendado. Las opciones incluyen varilla corrugada del #3 o #4 a cada 20-30 cm en ambas direcciones, malla electrosoldada 6x6-10/10, o fibra de polipropileno mezclada en el concreto. La varilla corrugada proporciona el mejor control de grietas para cocheras, pisos industriales y losas estructurales. Para patios y andadores no estructurales, la malla electrosoldada o fibra suele ser suficiente.",
+    },
+  ],
+};
+
+export const concreteSlabCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "Esta estimación incluye un 10% de factor de desperdicio. El desperdicio real puede variar según la preparación del terreno, la precisión del encofrado y las variaciones de espesor. Siempre confirma las cantidades con tu proveedor de concreto premezclado.",
+  howToUse: [
+    "Mide el largo y ancho de la losa planificada en metros.",
+    "Ingresa el espesor de la losa en centímetros — 10 cm es estándar para patios y andadores, 12–15 cm para cocheras.",
+    "Haz clic en Calcular Materiales para obtener los metros cúbicos necesarios, incluyendo un 10% de desperdicio.",
+    "Usa la cantidad de bultos para trabajos pequeños o el total en m³ para pedir concreto premezclado por camión.",
+  ],
+  materialInfo:
+    "Una losa de concreto es una superficie plana y horizontal colada directamente sobre un terreno preparado, utilizada para patios, pisos de cochera, rampas de acceso, pisos de bodega y bases de construcción. El espesor estándar residencial es de 10 cm para áreas peatonales como andadores y patios. Cocheras y rampas vehiculares deben tener de 12 a 15 cm de espesor para soportar el peso de los vehículos.\n\nLa preparación del terreno es crítica para la durabilidad de la losa. El suelo debe estar compactado, nivelado y libre de materia orgánica. Una capa de 10 cm de grava compactada (tepetate o material de banco) proporciona drenaje y una base estable. Se recomienda una membrana de polietileno calibre 600 entre la grava y el concreto para prevenir la migración de humedad, especialmente en losas interiores de espacios habitables.\n\nLas opciones de refuerzo para losas incluyen malla electrosoldada 6x6-10/10, varilla corrugada del #3 o #4 a cada 20–30 cm en ambas direcciones, o fibra de polipropileno mezclada en el concreto. Las juntas de control (cortes con disco o juntas moldeadas) deben colocarse a intervalos no mayores de 2 a 3 veces el espesor de la losa — para una losa de 10 cm, juntas cada 2.5 a 3 metros.\n\nEl concreto para losas se especifica típicamente con resistencia f'c=200 a f'c=250 kg/cm² con un revenimiento de 10 cm. El concreto premezclado por camión cuesta entre $1,800 y $2,800 MXN por metro cúbico entregado. Los bultos de cemento de 50 kg cuestan entre $180 y $250 MXN cada uno, lo que resulta considerablemente más caro por metro cúbico — práctico solo para colados muy pequeños menores a 0.5 m³.",
+  installationTips: [
+    "Compacta el terreno y agrega 10 cm de grava como base antes de colar — esto previene asentamientos y grietas.",
+    "Coloca las cimbras con estacas cada 60–90 cm y verifica el nivel; aplica aceite a las cimbras para un desmoldeo fácil.",
+    "Coloca el refuerzo (malla o varilla) sobre calzas para que quede en el tercio inferior de la losa, no sobre el suelo.",
+    "Cola el concreto en una sola operación continua para evitar juntas frías — ten suficiente ayuda y equipo listo antes de que llegue el camión.",
+    "Empareja con regla de aluminio, luego escobilla la superficie para tracción antes de aplicar membrana de curado.",
+  ],
+  commonMistakes: [
+    "Omitir la base de grava — colar directamente sobre tierra causa asentamientos y grietas en el primer año.",
+    "Hacer la losa demasiado delgada — losas de 7 cm se agrietan fácilmente; siempre cola al menos 10 cm para uso residencial.",
+    "Colocar la malla directamente en el suelo en vez de sobre calzas — el refuerzo en el fondo no funciona; debe estar en el tercio inferior de la losa.",
+    "Olvidar las juntas de control — sin juntas cada 2.5 a 3 metros, la losa se agrietará aleatoriamente durante el curado.",
+    "Dar acabado mientras el agua de sangrado está presente — esto atrapa agua en la capa superior y causa descascaramiento.",
+  ],
+  faqs: [
+    {
+      question: "¿Cuánto concreto necesito para una losa de 3x3 metros?",
+      answer: "Una losa de 3x3 m con 10 cm de espesor requiere aproximadamente 0.9 m³ de concreto. Con 10% de desperdicio, pide 1.0 m³. A 15 cm de espesor (para cochera), necesitas 1.4 m³. Este volumen está en el límite donde el premezclado por camión es más práctico que mezclar bultos a mano.",
+    },
+    {
+      question: "¿Qué espesor debe tener una losa de concreto?",
+      answer: "El espesor estándar es 10 cm para patios, andadores y bases de bodega. Cocheras y rampas deben tener de 12 a 15 cm, con bordes engrosados en el perímetro. Losas que soporten equipo pesado o vehículos de más de 5 toneladas pueden necesitar 15 a 20 cm. Consulta el reglamento de construcción local para requisitos mínimos.",
+    },
+    {
+      question: "¿Cuánto cuesta una losa de concreto?",
+      answer: "El costo del material para una losa de concreto es de $350 a $700 MXN por metro cuadrado para espesor estándar de 10 cm con premezclado. El costo instalado (incluyendo mano de obra, grava, cimbra, refuerzo y acabado) va de $700 a $1,400 MXN por m². Una losa típica de 6x6 m para patio cuesta entre $25,000 y $50,000 MXN instalada.",
+    },
+    {
+      question: "¿Necesito malla o varilla en una losa de concreto?",
+      answer: "Para losas residenciales de 10 cm, la malla electrosoldada 6x6-10/10 o la fibra de polipropileno proporcionan un control adecuado de grietas por contracción. La varilla corrugada del #3 a cada 25 cm se recomienda para cocheras y losas con cargas vehiculares. La malla agrega aproximadamente $50–80 MXN por m² al costo del material.",
+    },
+    {
+      question: "¿Cuántos bultos de cemento para una losa?",
+      answer: "Para una mezcla estándar 1:2:3, necesitas aproximadamente 7 bultos de 50 kg por metro cúbico. Para una losa de 3x3 m a 10 cm de espesor (0.9 m³), necesitas unos 6 bultos de cemento más arena y grava. Para bultos de concreto premezclado (solo agregar agua), necesitarás aproximadamente 26 bultos de 50 kg.",
+    },
+    {
+      question: "¿Cuánto tarda en curar una losa de concreto?",
+      answer: "El concreto alcanza aproximadamente el 70% de su resistencia en 7 días y la resistencia total de diseño a los 28 días. Puedes caminar sobre la losa después de 24 a 48 horas, circular con vehículo después de 7 días, y colocar cargas pesadas después de 28 días. Mantén la superficie húmeda los primeros 7 días con membrana de curado, plástico o riego periódico.",
+    },
+  ],
+};
+
+export const concreteFootingCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "Esta estimación incluye un 10% de factor de desperdicio. Las dimensiones de la zapata deben cumplir con los requisitos del reglamento de construcción local para profundidad de desplante, ancho y refuerzo. Siempre verifica con tu autoridad de construcción antes de colar.",
+  howToUse: [
+    "Mide la longitud total de la zapata en metros — para una zapata perimetral, suma todos los lados.",
+    "Ingresa el ancho de la zapata en metros — las zapatas corridas típicas tienen de 30 a 60 cm de ancho.",
+    "Ingresa la profundidad de la zapata en metros — profundidades comunes son de 20 a 30 cm para zapatas superficiales.",
+    "Haz clic en Calcular Materiales para obtener metros cúbicos, cantidad de bultos y totales con desperdicio.",
+  ],
+  materialInfo:
+    "Las zapatas de concreto son la base estructural que transfiere las cargas del edificio al suelo. Se ubican bajo el nivel del terreno y soportan muros de cimentación, columnas y postes. Existen dos tipos principales: zapatas corridas (de franja) que recorren la longitud de un muro, y zapatas aisladas que soportan columnas o postes individuales.\n\nLas zapatas corridas para construcción residencial tienen típicamente de 30 a 60 cm de ancho y de 20 a 30 cm de profundidad, con el ancho siendo al menos el doble del espesor del muro que soportan. Para un muro de block de 15 cm, la zapata debe tener al menos 30 cm de ancho y 20 cm de profundidad. Las zapatas aisladas para columnas son generalmente de 60x60 cm o mayores, dependiendo de la carga.\n\nEl fondo de la zapata debe extenderse por debajo del nivel de desplante especificado en la normativa local, que varía según la zona sísmica, el tipo de suelo y las condiciones del terreno. Las zapatas deben apoyarse sobre suelo firme no alterado o debidamente compactado con capacidad de carga adecuada.\n\nEl refuerzo para zapatas corridas consiste en dos varillas del #3 o #4 corriendo horizontalmente cerca del fondo, con bastones verticales que se extienden hacia el muro de cimentación a intervalos de 1.20 m. Las zapatas aisladas llevan una parrilla de varilla del #3 a cada 15–20 cm en ambas direcciones. El concreto para zapatas se especifica con resistencia f'c=200 a f'c=250 kg/cm² y debe tener un revenimiento de 10 a 12 cm para trabajabilidad en la zanja.\n\nEl concreto premezclado por camión es el método estándar para zapatas. El costo es de $1,800 a $2,800 MXN por metro cúbico. Una casa típica de 140 m² con perímetro de 50 metros lineales de zapata corrida de 40 cm de ancho por 20 cm de profundidad requiere aproximadamente 4 m³ de concreto.",
+  installationTips: [
+    "Excava la zanja al ancho y profundidad exactos especificados en los planos — la sobre-excavación desperdicia concreto y dinero.",
+    "Nivela el fondo de la zanja con pisón manual antes de colar — una base desnivelada causa asentamientos diferenciales.",
+    "Coloca la varilla sobre calzas o pedazos de tabique para mantener 7 cm de recubrimiento de concreto debajo del acero.",
+    "Instala bastones verticales de varilla cada 1.20 m para amarrar la zapata al muro de cimentación superior.",
+    "No cueles zapatas sobre suelo congelado o con agua estancada — ambas condiciones impiden el curado adecuado y reducen la resistencia.",
+  ],
+  commonMistakes: [
+    "Hacer zapatas demasiado angostas — el ancho de la zapata debe ser al menos el doble del espesor del muro para distribuir la carga al suelo.",
+    "No respetar la profundidad de desplante — zapatas superficiales en climas fríos se levantarán por el efecto de la helada.",
+    "Sobre-excavar la zanja y rellenar con tierra suelta — las zapatas deben apoyarse sobre suelo firme no alterado o compactado mecánicamente.",
+    "Omitir la varilla en zapatas corridas — las zapatas sin refuerzo se agrietan en puntos de esfuerzo y pierden integridad estructural.",
+    "Colar el muro de cimentación el mismo día que la zapata — permite que la zapata fragüe al menos 24 horas antes de cargarla con cimbra y concreto del muro.",
+  ],
+  faqs: [
+    {
+      question: "¿Qué ancho debe tener una zapata de concreto?",
+      answer: "El ancho de la zapata debe ser al menos el doble del espesor del muro que soporta. Para un muro de block de 15 cm, usa una zapata de 30 cm de ancho. Para un muro colado de 20 cm, usa una zapata de 40 cm. En suelos con baja capacidad de carga, el ingeniero puede especificar zapatas más anchas (60 a 90 cm).",
+    },
+    {
+      question: "¿Qué profundidad deben tener las zapatas?",
+      answer: "La profundidad depende de dos factores: requisitos estructurales y nivel de desplante. La zapata en sí tiene típicamente de 20 a 30 cm de espesor. Pero el fondo debe estar por debajo de la profundidad de desplante especificada por la normativa local, que varía según zona sísmica y tipo de suelo. Consulta el reglamento de construcción de tu localidad.",
+    },
+    {
+      question: "¿Cuánto concreto para la zapata de una casa?",
+      answer: "Una casa típica de 140 m² con perímetro de 50 metros lineales usando zapata corrida de 40 cm de ancho por 20 cm de profundidad requiere aproximadamente 4 m³ de concreto. Con 10% de desperdicio, pide 4.4 m³. Agrega extra para zapatas de muros interiores de carga, dados de columnas o zapatas escalonadas en terrenos inclinados.",
+    },
+    {
+      question: "¿Las zapatas necesitan varilla?",
+      answer: "Sí. La mayoría de los reglamentos requieren al menos dos varillas del #3 o #4 corriendo continuamente cerca del fondo de las zapatas corridas, con traslape mínimo de 40 diámetros en los empalmes. Las zapatas aisladas necesitan una parrilla de varilla del #3 a cada 15–20 cm. La varilla previene grietas por asentamiento del suelo y proporciona resistencia a tensión.",
+    },
+    {
+      question: "¿Se puede colar la zapata y el muro al mismo tiempo?",
+      answer: "Los colados monolíticos (zapata y muro juntos) se hacen a veces para cimentaciones superficiales especiales, pero para construcción estándar, la zapata se cuela primero y la cimbra del muro se coloca encima después de que la zapata cure al menos 24 horas. Esto asegura una base nivelada para la cimbra del muro y conexiones adecuadas de varilla.",
+    },
+    {
+      question: "¿Qué resistencia de concreto usar para zapatas?",
+      answer: "Las zapatas residenciales estándar usan concreto de f'c=200 kg/cm², que proporciona resistencia adecuada para la mayoría de las condiciones de suelo. En áreas con nivel freático alto, suelo agresivo (alto contenido de sulfatos) o cargas estructurales pesadas, especifica f'c=250 kg/cm² con cemento resistente a sulfatos. La diferencia de costo es de $100 a $300 MXN por m³.",
+    },
+  ],
+};
+
+export const concreteColumnCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "Esta estimación incluye un 10% de factor de desperdicio. La profundidad de la columna debe cumplir con los requisitos locales de nivel de desplante y capacidad de carga. Verifica las dimensiones y el refuerzo con tus planos estructurales.",
+  howToUse: [
+    "Selecciona el diámetro de la columna — 20 cm para cargas ligeras, 25 cm para postes estándar de terraza, 30 cm para cargas estructurales pesadas.",
+    "Ingresa la altura de la columna en metros — mide desde el fondo del cimiento hasta la parte superior del pilar.",
+    "Ingresa la cantidad de columnas o tubos que necesitas llenar.",
+    "Haz clic en Calcular Materiales para obtener m³ por columna, concreto total y cantidad de bultos.",
+  ],
+  materialInfo:
+    "Las columnas de concreto (también llamadas pilares, pilas o dados) son soportes cilíndricos de concreto utilizados para cimentación de terrazas, bases de postes, soportes de porches y pilares estructurales ligeros. Se forman usando tubos de cartón rígido (tipo Sonotube) o moldes metálicos que se colocan en el terreno, se llenan de concreto y se retiran después del curado.\n\nLos diámetros comunes para trabajo residencial son 20 cm (cargas ligeras como barandales y cobertizos pequeños), 25 cm (postes estándar de terraza y cargas moderadas) y 30 cm (vigas de terraza pesadas, columnas de pórtico y pilares estructurales). Tamaños mayores (35, 40 y 60 cm) están disponibles para aplicaciones comerciales y estructurales pesadas.\n\nLa profundidad de la columna debe extenderse por debajo del nivel de desplante, que varía según la zona sísmica y el tipo de suelo. La columna se apoya sobre un dado de cimentación en el fondo, que puede ser una base preformada o una sección ensanchada de concreto colada antes de la columna. Algunas normativas requieren un ensanchamiento tipo campana en la base que aumenta el área de apoyo.\n\nEl refuerzo para columnas de concreto consiste típicamente en una o dos varillas del #3 o #4 colocadas verticalmente por el centro de la columna, con un ancla de poste fijada en la parte superior mientras el concreto está fresco. La varilla se extiende desde 7 cm arriba del dado de cimentación hasta 5 cm debajo de la parte superior de la columna.\n\nLos tubos tipo Sonotube cuestan entre $150 y $500 MXN cada uno para longitudes de 2.5 a 3.5 m en diámetros residenciales estándar. El concreto se mezcla mejor con bultos de 50 kg para trabajos de columnas — cada bulto con proporción 1:2:3 rinde aproximadamente 0.035 m³. Una columna de 30 cm de diámetro a 1.20 m de profundidad usa aproximadamente 0.085 m³ de concreto (unos 2.5 bultos de cemento con arena y grava).",
+  installationTips: [
+    "Excava el hoyo de 10 a 15 cm más ancho que el tubo para permitir el relleno y la plomada del tubo.",
+    "Coloca el tubo sobre una base plana (dado pre-colado o grava compactada) y apuntalado perfectamente a plomo con puntales de madera.",
+    "Llena el tubo en capas de 30 cm, vibrando o varillando cada capa para eliminar burbujas de aire.",
+    "Fija el ancla de poste o perno en el concreto fresco en la posición correcta antes de que fragüe.",
+    "Rellena alrededor del tubo solo después de que el concreto haya curado al menos 24 horas para evitar desplazamientos.",
+  ],
+  commonMistakes: [
+    "No extender las columnas por debajo del nivel de desplante — pilares superficiales se levantan con las heladas o movimientos del suelo.",
+    "No aplomar el tubo antes de llenarlo — una columna torcida causa desalineamiento del entramado y problemas estructurales.",
+    "Vaciar todo el concreto de golpe sin varillado — esto atrapa burbujas de aire que debilitan la columna, especialmente en la base.",
+    "Olvidar instalar el ancla de poste antes de que fragüe el concreto — perforar concreto curado es difícil y compromete la columna.",
+    "Usar un diámetro de columna demasiado pequeño para la carga — siempre consulta tablas de carga; un pilar de 20 cm soporta mucho menos que uno de 30 cm.",
+  ],
+  faqs: [
+    {
+      question: "¿Cuánto concreto para una columna cilíndrica?",
+      answer: "Una columna de 30 cm de diámetro a 1.20 m de profundidad requiere aproximadamente 0.085 m³ de concreto — unos 2.5 bultos de cemento de 50 kg con arena y grava. Una columna de 25 cm a la misma profundidad necesita 0.059 m³ (2 bultos), y una de 20 cm necesita 0.038 m³ (1.5 bultos). Siempre agrega 10% por desperdicio.",
+    },
+    {
+      question: "¿Qué diámetro de columna necesito para una terraza?",
+      answer: "Para la mayoría de las terrazas residenciales, columnas de 25 o 30 cm de diámetro son estándar. Un pilar de 30 cm puede soportar de 2,000 a 3,000 kg en suelo típico, lo cual es suficiente para las cargas de la mayoría de las vigas de terraza. Usa columnas de 20 cm solo para aplicaciones muy ligeras como bases de barandal.",
+    },
+    {
+      question: "¿Qué profundidad deben tener los pilares de una terraza?",
+      answer: "Los pilares de terraza deben extenderse por debajo del nivel de desplante especificado en la normativa local, que varía según la zona sísmica y el tipo de suelo. En general, la profundidad mínima es de 60 a 80 cm en climas templados y hasta 1.20 m en zonas con heladas. Consulta el reglamento de tu localidad.",
+    },
+    {
+      question: "¿Las columnas de concreto necesitan varilla?",
+      answer: "La mayoría de los reglamentos requieren al menos una varilla del #3 o #4 vertical en cada columna que soporte cargas estructurales. Para columnas de más de 30 cm de diámetro o más de 1.20 m de profundidad, se recomiendan dos varillas verticales con estribos. La varilla proporciona resistencia a tensión y previene el agrietamiento.",
+    },
+    {
+      question: "¿Cuántos bultos de cemento por columna de 30 cm?",
+      answer: "Una columna de 30 cm de diámetro usa aproximadamente 0.071 m³ de concreto por metro lineal de altura. A 1.20 m de profundidad, eso es 0.085 m³ — aproximadamente 2.5 bultos de cemento de 50 kg con arena y grava en proporción 1:2:3. Para 10 pilares a 1.20 m, necesitas unos 25 bultos de cemento.",
+    },
+    {
+      question: "¿Se puede mezclar el concreto dentro del tubo?",
+      answer: "No — nunca mezcles concreto dentro del tubo. Mezcla en una carretilla, artesa o revolvedora, luego vacía en el tubo en capas de 30 cm. Vibra o varillea cada capa para eliminar burbujas de aire. Para gran cantidad de pilares, rentar una revolvedora portátil ahorra tiempo y esfuerzo significativos.",
+    },
+  ],
+};
+
+export const concreteStepsCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "Esta estimación incluye un 10% de factor de desperdicio y un descanso de 1 m a 10 cm de espesor. Las dimensiones de los escalones deben cumplir con el reglamento de construcción local para peralte, huella y ancho. Siempre verifica los requisitos con tu autoridad de construcción.",
+  howToUse: [
+    "Ingresa el ancho de la escalera en metros — los reglamentos típicamente requieren al menos 90 cm para escaleras de acceso residencial.",
+    "Ingresa el peralte (altura del escalón) en centímetros — el estándar residencial es de 17 a 19 cm.",
+    "Ingresa la huella (profundidad del escalón) en centímetros — el estándar es de 25 a 28 cm.",
+    "Ingresa el número total de escalones y haz clic en Calcular Materiales para obtener metros cúbicos y cantidad de bultos.",
+  ],
+  materialInfo:
+    "Los escalones de concreto (también llamados escaleras de concreto o escalinatas) son estructuras sólidas coladas en sitio construidas en accesos de edificios, entre cambios de nivel y para acceso a sótanos. A diferencia de las escaleras de madera o prefabricadas, las escaleras de concreto colado son una masa monolítica que incluye las huellas, peraltes y el relleno sólido debajo.\n\nLos reglamentos de construcción rigen las dimensiones de los escalones de concreto por seguridad. La normativa mexicana (NTC) especifica un peralte máximo de 18 cm y una huella mínima de 25 cm. Todos los peraltes en un tramo deben ser uniformes con una tolerancia máxima de 1 cm, y todas las huellas deben ser uniformes con la misma tolerancia. El ancho mínimo de la escalera es de 90 cm, aunque 120 cm es más cómodo para escaleras de acceso principal. Los pasamanos son obligatorios para tramos de 4 o más escalones.\n\nLos escalones de concreto se cimbran usando triplay o madera cortada al perfil exacto de la escalera. La cimbra debe estar fuertemente arriostrada porque el concreto fresco ejerce una presión considerable — una escalera de 1.20 m de ancho con 5 escalones puede pesar más de 1,000 kg. El concreto se cuela desde el escalón inferior hacia arriba, maestreando y acabando cada escalón antes de pasar al siguiente.\n\nEl refuerzo para escalones de concreto incluye varilla del #3 colocada horizontalmente a través de la masa a intervalos de 30 a 45 cm en sentido vertical, con varillas verticales que amarran los escalones al descanso y a la cimentación. La especificación de concreto es típicamente f'c=250 kg/cm² para durabilidad, con un revenimiento de 10 cm para trabajabilidad en la cimbra.\n\nLos escalones de concreto colados cuestan entre $3,500 y $6,000 MXN por metro lineal de ancho instalados, incluyendo cimbra, refuerzo, colado y acabado. Una escalinata estándar de 1.20 m de ancho con 4 escalones cuesta entre $15,000 y $25,000 MXN instalada. Los escalones prefabricados son una alternativa más económica pero no permiten medidas personalizadas.",
+  installationTips: [
+    "Construye la cimbra con triplay de 19 mm, fuertemente arriostrada con polines — el concreto fresco es extremadamente pesado y reventará cimbras débiles.",
+    "Cola desde el escalón inferior hacia arriba, llenando y acabando cada escalón antes de pasar al siguiente.",
+    "Maestrea cada huella y luego escobilla la superficie para antiderrapante — las escaleras con acabado liso de llana son peligrosamente resbalosas cuando están mojadas.",
+    "Instala tiras antiderrapantes o aplica acabado de escoba en los bordes de las huellas para tracción adicional.",
+    "Amarra los escalones a la cimentación del edificio con bastones de varilla para evitar que la escalinata se asiente y se separe de la casa.",
+  ],
+  commonMistakes: [
+    "Hacer peraltes de diferentes alturas — peraltes desiguales son un peligro de tropiezo y una violación al reglamento; todos deben estar dentro de 1 cm entre sí.",
+    "Olvidar inclinar las huellas — cada huella debe tener una pendiente de 1% hacia afuera del edificio para drenaje de agua.",
+    "Sub-arriostrar la cimbra — el concreto fresco pesa 2,400 kg por metro cúbico y reventará cimbras débiles, arruinando el colado.",
+    "No amarrar los escalones a la cimentación — sin bastones de varilla, la escalinata eventualmente se asentará y se separará de la casa.",
+    "Dar acabado liso de llana a las huellas — esto crea una superficie resbalosa cuando está mojada; siempre aplica acabado de escoba o agrega agregado antiderrapante.",
+  ],
+  faqs: [
+    {
+      question: "¿Cuánto concreto necesito para escalones?",
+      answer: "Una escalinata típica de 1.20 m de ancho con 4 escalones de 17 cm de peralte y 28 cm de huella requiere aproximadamente 0.5 m³ de concreto incluyendo el descanso. Con 10% de desperdicio, pide 0.6 m³. Para 3 escalones, calcula 0.4 m³. La cantidad exacta depende de la altura total y si las escaleras incluyen un descanso.",
+    },
+    {
+      question: "¿Cuáles son las medidas estándar de peralte y huella?",
+      answer: "La normativa mexicana especifica un peralte máximo de 18 cm y una huella mínima de 25 cm. Las dimensiones más cómodas son un peralte de 17 cm con huella de 28 cm. Todos los peraltes deben estar dentro de 1 cm entre sí, y todas las huellas deben estar dentro de 1 cm entre sí por seguridad.",
+    },
+    {
+      question: "¿Cuánto cuestan los escalones de concreto?",
+      answer: "Los escalones de concreto colados cuestan entre $3,500 y $6,000 MXN por metro lineal de ancho instalados. Una escalinata estándar de 1.20 m de ancho con 4 escalones cuesta entre $15,000 y $25,000 MXN incluyendo cimbra, refuerzo, concreto y acabado. Los escalones prefabricados son más económicos pero no se pueden personalizar a las dimensiones exactas de tu acceso.",
+    },
+    {
+      question: "¿Los escalones de concreto necesitan varilla?",
+      answer: "Sí. Los escalones de concreto deben tener varilla del #3 corriendo horizontalmente a través de la masa a intervalos de 30 a 45 cm, con varillas verticales que amarren los escalones al descanso y a la cimentación. Sin refuerzo, los escalones se agrietarán y se separarán con el tiempo, especialmente en climas con heladas.",
+    },
+    {
+      question: "¿Puedo colar escalones de concreto yo mismo?",
+      answer: "Colar escalones de concreto es un proyecto avanzado de autoconstrucción. La cimbra es compleja, el concreto es pesado (una escalinata de 1.20 m puede pesar más de 1,000 kg), y el colado debe completarse en una sola operación. Necesitas cimbra resistente, arriostramientos adecuados y al menos dos ayudantes. Para un primer proyecto, considera escalones prefabricados o contratar un albañil especializado.",
+    },
+    {
+      question: "¿Cuánto duran los escalones de concreto?",
+      answer: "Los escalones de concreto correctamente construidos y mantenidos duran de 50 a 100 años. El problema de mantenimiento más común es el descascaramiento por ciclos de mojado-secado, que se puede prevenir usando concreto con aditivo impermeabilizante, aplicando sellador penetrante cada 2 a 3 años, y evitando sales deshelantes (usa arena para tracción).",
+    },
+  ],
+};
+
 // ─── FLOOR FRAMING ───────────────────────────────────────────────────────────
 
 export const rimJoistCalculator: CalculatorSEOContent = {
@@ -1080,6 +1354,190 @@ export const dripEdgeCalculator: CalculatorSEOContent = {
   ],
 };
 
+export const roofPitchCalculator: CalculatorSEOContent = {
+  disclaimer: "Esta calculadora proporciona valores aproximados. Consulta a un ingeniero estructural para decisiones de diseño y carga.",
+  howToUse: [
+    "Mide la elevación vertical de tu techo en centímetros — cuánto sube el techo sobre una distancia horizontal.",
+    "Ingresa el recorrido horizontal en centímetros (estándar: 30 cm para la notación convencional de pendiente).",
+    "Haz clic en Calcular Materiales para obtener la relación de pendiente, el ángulo en grados, el porcentaje de inclinación y el multiplicador de área.",
+    "Usa el multiplicador de área para convertir el área en planta de tu techo al área real de la superficie — multiplica el área plana por este número.",
+  ],
+  materialInfo:
+    "La pendiente del techo (también llamada inclinación o caída) es la relación entre la elevación vertical y el recorrido horizontal, expresada como centímetros de elevación por cada 30 cm de recorrido (equivalente a la notación americana de pulgadas por cada 12 pulgadas). Es una de las dimensiones más críticas en un techo porque determina qué materiales son adecuados, la capacidad de evacuación del agua, las trayectorias de carga estructural y la facilidad de acceso para los instaladores. Las pendientes residenciales más comunes van de 4:12 a 8:12. Una pendiente de 4:12 (18.4°) es la mínima recomendada para tejas asfálticas estándar y es fácil de caminar. Una pendiente de 6:12 (26.6°) es la más popular, ofreciendo un buen equilibrio entre estética y evacuación de agua. Una pendiente de 8:12 (33.7°) o mayor proporciona excelente evacuación de nieve y una línea de techo dramática, pero incrementa costos de material y dificultad de mano de obra. En regiones con nevadas intensas del sur de Chile y Argentina, pendientes de 8:12 a 12:12 son comunes para prevenir acumulación peligrosa de nieve. En zonas tropicales de México, Centroamérica y el Caribe, pendientes de 4:12 a 6:12 son suficientes ya que la carga de nieve no es un factor. Los techos de baja pendiente (menos de 2:12) requieren sistemas especiales como membranas de bitumen modificado, TPO o EPDM porque las tejas no pueden evacuar el agua de forma confiable en ángulos tan bajos.",
+  installationTips: [
+    "Usa un medidor de pendiente o escuadra rápida colocada sobre un cabio para verificar la pendiente antes de pedir materiales.",
+    "Para techos inaccesibles, mide la pendiente desde el interior del ático colocando un nivel horizontal y midiendo la elevación a 30 cm de recorrido.",
+    "Al usar una aplicación de inclinómetro en el celular, coloca el teléfono directamente sobre la superficie del techo o un cabio para mayor precisión.",
+    "Siempre verifica la pendiente en múltiples secciones del techo — buhardillas, ampliaciones y techos de garaje a menudo tienen pendientes diferentes al techo principal.",
+    "Convierte la pendiente al multiplicador de área antes de estimar materiales — un techo más empinado usa significativamente más tejas, membrana y revestimiento de lo que sugiere el área en planta.",
+  ],
+  commonMistakes: [
+    "Confundir elevación con recorrido — la elevación es vertical (hacia arriba), el recorrido es horizontal (hacia los lados). Intercambiarlos da una pendiente incorrecta.",
+    "Medir a lo largo de la pendiente en vez de horizontalmente para el recorrido — el recorrido debe ser la distancia horizontal, no la longitud del cabio.",
+    "Suponer que todo el techo tiene una sola pendiente — muchas viviendas tienen múltiples pendientes en diferentes secciones.",
+    "Usar el área en planta para estimar materiales sin aplicar el multiplicador de pendiente — esto causa faltante de material en techos empinados.",
+    "Ignorar los requisitos de pendiente mínima para el material de techo elegido — las tejas asfálticas necesitan al menos 2:12, y la instalación estándar requiere 4:12 o más.",
+  ],
+  faqs: [
+    {
+      question: "¿Cómo se calcula la pendiente de un techo?",
+      answer:
+        "La pendiente se calcula dividiendo la elevación vertical entre el recorrido horizontal. Para la notación estándar, mide cuántos centímetros sube el techo por cada 30 cm de recorrido horizontal. Por ejemplo, si sube 15 cm en 30 cm de recorrido, la pendiente es 6:12. También puedes expresarla en grados usando la fórmula: ángulo = arctan(elevación / recorrido).",
+    },
+    {
+      question: "¿Qué pendiente tiene mi techo?",
+      answer:
+        "Puedes medir la pendiente desde afuera usando un nivel y cinta métrica sobre la superficie del techo, o desde el interior del ático midiendo a lo largo de un cabio. Coloca un nivel horizontal con un extremo tocando la parte inferior del cabio, mide 30 cm a lo largo del nivel, y luego mide la distancia vertical desde el extremo del nivel hasta el cabio — esa distancia en centímetros dividida entre 2.54 te da la pendiente en la notación X:12.",
+    },
+    {
+      question: "¿Cuántos grados son una pendiente de 4:12?",
+      answer:
+        "Una pendiente de 4:12 equivale a 18.4 grados. Se considera una pendiente moderada-baja y es la mínima recomendada para la instalación estándar de tejas asfálticas. A este ángulo, el techo es fácil de caminar y evacua el agua adecuadamente para la mayoría de los climas.",
+    },
+    {
+      question: "¿Cuál es la pendiente mínima para tejas asfálticas?",
+      answer:
+        "La pendiente mínima absoluta para tejas asfálticas es 2:12 (9.5°), pero requiere instalación especial con doble membrana y sellador en cada lengüeta. La instalación estándar sin medidas especiales requiere un mínimo de 4:12 (18.4°). Por debajo de 2:12, debes usar un sistema de techo de baja pendiente como membrana de bitumen modificado, TPO o EPDM.",
+    },
+    {
+      question: "¿Qué pendiente de techo es mejor para lluvia intensa?",
+      answer:
+        "Una pendiente de 6:12 (26.6°) o mayor es recomendada en climas con lluvias intensas, como las zonas tropicales de México, Centroamérica y Colombia. Pendientes más pronunciadas evacuán el agua más rápidamente, reduciendo el riesgo de filtraciones. En zonas de nieve como el sur de Chile, pendientes de 8:12 a 12:12 son comunes para evitar acumulación.",
+    },
+    {
+      question: "¿Cómo afecta la pendiente al costo del techo?",
+      answer:
+        "Las pendientes más pronunciadas aumentan los costos de tres formas: más material (una pendiente de 12:12 usa 41% más material que el área en planta), mano de obra más cara (los techos empinados requieren arneses, andamios y trabajo más lento), y estructura más compleja (cabios más largos, conexiones más resistentes). El incremento de material es proporcional al multiplicador de área.",
+    },
+    {
+      question: "¿Qué es el multiplicador de área del techo?",
+      answer:
+        "El multiplicador de área convierte el área en planta de tu techo al área real de la superficie inclinada. Multiplica el área de la planta por este factor para determinar cuánto material necesitas realmente. Multiplicadores comunes: 4:12 = 1.054, 6:12 = 1.118, 8:12 = 1.202, 10:12 = 1.302, 12:12 = 1.414. Se deriva del teorema de Pitágoras: multiplicador = raíz cuadrada de (1 + (elevación/recorrido)²).",
+    },
+    {
+      question: "¿Se puede cambiar la pendiente de un techo existente?",
+      answer:
+        "Sí, pero es una renovación estructural mayor. Cambiar la pendiente requiere remover el techo existente, modificar o reemplazar los cabios o cerchas, ajustar la altura de la cumbrera y potencialmente reforzar los muros para manejar diferentes ángulos de carga. El costo típico va de $300,000 a $800,000 MXN o más dependiendo del tamaño y complejidad. Requiere permiso de construcción y planos de ingeniería.",
+    },
+  ],
+};
+
+export const roofAreaCalculator: CalculatorSEOContent = {
+  disclaimer: "Esta calculadora proporciona valores aproximados. El área real puede variar por buhardillas, limahoyas y formas irregulares. Siempre verifica las medidas en sitio.",
+  howToUse: [
+    "Mide el largo y ancho de la huella de tu edificio en metros — estas son las dimensiones planas vistas desde arriba.",
+    "Ingresa la pendiente del techo como elevación por cada 30 cm de recorrido (por ejemplo, 6 para una pendiente 6:12). Si no conoces tu pendiente, usa primero la Calculadora de Pendiente de Techo.",
+    "Selecciona el tipo de techo: A dos aguas (dos faldones inclinados), a cuatro aguas (todos los lados inclinados) o cobertizo (un solo faldón).",
+    "Haz clic en Calcular Materiales para obtener el área real de la superficie del techo, los cuadros de techado y el multiplicador de pendiente.",
+  ],
+  materialInfo:
+    "El cálculo del área de techo es la base de toda estimación de materiales de techado. El error más común que cometen propietarios e incluso algunos contratistas es usar el área de la huella plana en lugar del área real de la superficie inclinada — esto genera faltantes significativos de material, especialmente en techos empinados. El multiplicador de pendiente convierte el área plana al área real usando el teorema de Pitágoras: multiplicador = raíz cuadrada de (1 + (pendiente/12)²). Para una pendiente estándar de 6:12, el multiplicador es 1.118, lo que significa que el área real del techo es aproximadamente 12% más grande que la huella. A 12:12, el techo tiene 41% más superficie que el plano. Los materiales de techado se venden en 'cuadros', donde un cuadro cubre 9.3 metros cuadrados (100 pies cuadrados) de superficie. Las tejas asfálticas típicamente vienen en paquetes de 3 por cuadro. Al pedir materiales, siempre agrega un 10-15% por desperdicio de cortes, hileras iniciales, tapas de cumbrera y limahoyas. Para techos a cuatro aguas, agrega un 5% adicional porque las limatesas y limahoyas generan más desperdicio de corte que un techo simple a dos aguas.",
+  installationTips: [
+    "Siempre mide las dimensiones del techo desde el alero hasta la cumbrera sobre el faldón, no solo la huella horizontal — o usa el multiplicador de pendiente para convertir.",
+    "Para techos complejos con múltiples pendientes, calcula cada sección por separado y suma las áreas para obtener el total.",
+    "Al pedir tejas, redondea hacia arriba al cuadro completo más cercano y agrega 10-15% por cortes y desperdicio en limatesas, limahoyas y bordes.",
+    "Verifica la medida de pendiente en cada plano del techo — ampliaciones y buhardillas frecuentemente tienen pendientes diferentes al techo principal.",
+    "Para techos a cuatro aguas, mide cada sección triangular y trapezoidal individualmente para la estimación más precisa.",
+  ],
+  commonMistakes: [
+    "Usar el área de la huella plana en lugar del área real de la superficie inclinada — esto subestima los materiales, especialmente en pendientes pronunciadas.",
+    "Olvidar considerar ambos lados de un techo a dos aguas — la huella solo muestra un plano, pero los techos a dos aguas tienen dos superficies inclinadas.",
+    "No agregar factor de desperdicio — limahoyas, limatesas y bordes crean desperdicio de corte que incrementa la necesidad de material en 10-15%.",
+    "Confundir cuadros de techado con metros cuadrados — un cuadro son 9.3 m², así que un techo de 280 m² necesita 30 cuadros, no 280.",
+    "Ignorar buhardillas, chimeneas y otras penetraciones del techo al calcular el área.",
+  ],
+  faqs: [
+    {
+      question: "¿Cómo calculo el área de techo desde el suelo?",
+      answer:
+        "Puedes calcular el área del techo sin subir midiendo la huella del edificio (largo × ancho) y multiplicando por el multiplicador de pendiente y el número de faldones. Para un techo a dos aguas, multiplica la huella por el multiplicador y luego por 2. Determina la pendiente desde el interior del ático usando nivel y cinta métrica, o usa una app de inclinómetro en el celular apuntando al faldón.",
+    },
+    {
+      question: "¿Cuántos cuadros de techado necesito?",
+      answer:
+        "Divide el área total real del techo (no la huella) entre 9.3 m² para obtener el número de cuadros. Por ejemplo, un área de techo de 260 m² necesita 28 cuadros. Agrega 10-15% por desperdicio, llevando el pedido a 31-32 cuadros. Cada cuadro de tejas estándar requiere 3 paquetes, así que 28 cuadros equivalen a 84 paquetes más desperdicio.",
+    },
+    {
+      question: "¿Cuál es el multiplicador de área para una pendiente 6:12?",
+      answer:
+        "El multiplicador de pendiente para un techo 6:12 es 1.118. Esto significa que una huella de 93 m² tiene un área real de superficie de 104 m² por faldón. Para un techo a dos aguas (dos lados), el total sería 208 m². El multiplicador se calcula como raíz cuadrada de (1 + (6/12)²) = raíz cuadrada de (1.25) = 1.118.",
+    },
+    {
+      question: "¿Cómo calculo los metros cuadrados de techo para tejas?",
+      answer:
+        "Primero, determina el área de la huella plana (largo × ancho). Luego multiplica por el multiplicador de pendiente para tu inclinación. Para un techo a dos aguas, multiplica el resultado por 2 para ambos lados. Finalmente, agrega 10-15% por desperdicio. Divide el total entre 9.3 para convertir a cuadros de techado. Cada cuadro requiere 3 paquetes de tejas estándar.",
+    },
+    {
+      question: "¿Cuál es la diferencia entre área de techo y área de piso?",
+      answer:
+        "El área de piso (o huella) es el área horizontal del edificio vista desde arriba. El área de techo es la superficie real del techo inclinado, que siempre es mayor que la huella para cualquier techo con pendiente. Cuanto más empinada la pendiente, mayor la diferencia. Una pendiente de 4:12 agrega aproximadamente 5.4% más área, mientras que 12:12 agrega 41.4% comparado con la huella plana.",
+    },
+    {
+      question: "¿Cómo calculo el área de un techo a cuatro aguas?",
+      answer:
+        "Un techo a cuatro aguas tiene cuatro faldones inclinados en lugar de dos. Calcula el área de la huella, multiplica por el multiplicador de pendiente y luego por aproximadamente 2.1 (en lugar de 2 para un techo a dos aguas) para considerar las áreas adicionales de limatesas y limahoyas. Alternativamente, mide cada sección triangular y trapezoidal individualmente y suma las áreas.",
+    },
+  ],
+};
+
+export const roofSlopeCalculator: CalculatorSEOContent = {
+  disclaimer: "Esta calculadora proporciona valores aproximados. La pendiente real puede variar entre secciones. Verifica las medidas en múltiples puntos y consulta a un profesional de techado para selección de materiales.",
+  howToUse: [
+    "Mide la elevación vertical en centímetros — cuántos centímetros sube el techo sobre la distancia horizontal medida.",
+    "Mide el recorrido horizontal en metros — esta es la distancia plana y nivelada que mediste (no a lo largo del faldón).",
+    "Haz clic en Calcular Materiales para obtener la relación de pendiente (por cada 30 cm de recorrido), el ángulo en grados, el porcentaje de inclinación y la recomendación de material.",
+    "Usa la recomendación de material para confirmar que tu material de techado es apropiado para la inclinación de tu techo.",
+  ],
+  materialInfo:
+    "La medición de la inclinación del techo es el primer paso crítico antes de seleccionar materiales de techado, porque cada producto tiene un requisito mínimo de pendiente establecido por el fabricante y exigido por los códigos de construcción. La inclinación es la relación entre la elevación vertical y el recorrido horizontal, y determina directamente qué tan rápido se evacuan el agua y la nieve de la superficie del techo. Los techos planos y de muy baja pendiente (menos de 2:12) requieren sistemas de membrana continua como TPO (poliolefina termoplástica), EPDM (monómero de etileno propileno dieno), PVC o techado multicapa (BUR) con múltiples capas de bitumen y tela de refuerzo. Estos sistemas de membrana crean un sello hermético que no depende de la gravedad para evacuar el agua. Los techos de baja pendiente entre 2:12 y 4:12 pueden usar tejas asfálticas, pero solo con métodos especiales de instalación incluyendo doble membrana impermeabilizante, sellador adicional en cada lengüeta y membrana autoadhesiva en toda la cubierta en climas fríos. Las tejas asfálticas estándar (de 3 lengüetas y arquitectónicas) funcionan mejor en techos con pendiente de 4:12 a 8:12, donde la gravedad canaliza eficazmente el agua. Los techos de pendiente pronunciada por encima de 8:12 se benefician de materiales pesados como teja de concreto, teja de barro, pizarra o paneles metálicos de junta alzada que resisten el levantamiento por viento y se fijan mecánicamente para manejar el ángulo pronunciado.",
+  installationTips: [
+    "Usa un nivel de 60 cm o 1.20 m y una cinta métrica para la medición más precisa — niveles más largos reducen el error por irregularidades de la superficie.",
+    "Mide desde el interior del ático a lo largo de un cabio si la superficie del techo es inaccesible — coloca el nivel horizontal y mide la caída vertical a una distancia horizontal conocida.",
+    "Una app de inclinómetro en el celular puede dar una lectura rápida del ángulo, pero verifícala con una medición manual para decisiones de compra de materiales.",
+    "Revisa la pendiente en múltiples ubicaciones — el techo principal, el garaje, las buhardillas y las ampliaciones frecuentemente tienen pendientes diferentes.",
+    "Registra la elevación en centímetros y el recorrido en metros claramente para evitar errores de conversión de unidades al comunicarte con proveedores.",
+  ],
+  commonMistakes: [
+    "Medir a lo largo del faldón en lugar de horizontalmente para el recorrido — el recorrido siempre debe ser la distancia horizontal y nivelada.",
+    "Confundir porcentaje de inclinación con relación de pendiente — una inclinación del 50% equivale a una pendiente 6:12, no una pendiente del 6%.",
+    "Suponer que una medición aplica para todo el techo — los techos de múltiples secciones comúnmente tienen dos o más pendientes diferentes.",
+    "Usar tejas en un techo por debajo de la pendiente mínima de 2:12 — esto viola el código de construcción y probablemente causará filtraciones.",
+    "Medir elevación y recorrido en unidades diferentes (por ejemplo, elevación en pulgadas y recorrido en metros) sin convertir antes de calcular.",
+  ],
+  faqs: [
+    {
+      question: "¿Cómo mido la pendiente del techo desde el suelo?",
+      answer:
+        "Aléjate del edificio y usa una app de inclinómetro en el celular apuntando al borde del techo para obtener un ángulo aproximado. Para una medición más precisa, entra al ático y mide a lo largo de un cabio: sostén un nivel horizontal con un extremo tocando el cabio, mide 1 metro de distancia horizontal, luego mide la caída vertical desde el nivel hasta el cabio en ese punto. Convierte la elevación a la notación estándar dividiendo entre el recorrido y multiplicando por 12.",
+    },
+    {
+      question: "¿Cuál es la diferencia entre inclinación y pendiente de techo?",
+      answer:
+        "En la construcción moderna, los términos se usan frecuentemente de forma intercambiable. Técnicamente, la inclinación (slope) es la relación de elevación a recorrido para un lado del techo (por ejemplo, 6:12), mientras que la pendiente (pitch) tradicional es la relación de elevación al claro total (ancho completo). Un techo con inclinación 6:12 en cada lado tiene una pendiente de 6:24, o 1/4. Sin embargo, en el uso cotidiano, la mayoría de los constructores dicen 'pendiente' cuando se refieren a la elevación por cada 30 cm de recorrido.",
+    },
+    {
+      question: "¿Qué pendiente necesito para tejas asfálticas?",
+      answer:
+        "Las tejas asfálticas estándar requieren una pendiente mínima de 4:12 (18.4°) para instalación normal. Entre 2:12 y 4:12, las tejas pueden usarse pero requieren instalación especial de baja pendiente con doble membrana, sellador en cada hilera y membrana autoadhesiva en toda la cubierta. Por debajo de 2:12, las tejas no deben usarse — cambia a un sistema de membrana como TPO, EPDM o bitumen modificado.",
+    },
+    {
+      question: "¿Cómo convierto la inclinación del techo a grados?",
+      answer:
+        "Para convertir una relación de pendiente a grados, usa la función arcotangente: grados = arctan(elevación / recorrido) × (180 / π). Para una pendiente 6:12: grados = arctan(6/12) × 57.296 = arctan(0.5) × 57.296 = 26.57° ≈ 26.6°. Conversiones comunes: 4:12 = 18.4°, 6:12 = 26.6°, 8:12 = 33.7°, 10:12 = 39.8°, 12:12 = 45°.",
+    },
+    {
+      question: "¿Qué herramientas necesito para medir la pendiente del techo?",
+      answer:
+        "Las herramientas básicas son un nivel de carpintero de 60 cm o 1.20 m y una cinta métrica. Coloca el nivel horizontal contra un cabio o la superficie del techo, mide 30 cm a lo largo del nivel, luego mide la distancia vertical desde el extremo del nivel hasta el techo — esa distancia vertical en centímetros dividida entre 2.54 es tu pendiente por 12. Los medidores de ángulo digitales y las apps de inclinómetro proporcionan lecturas rápidas pero deben verificarse con una medición manual.",
+    },
+    {
+      question: "¿Qué material de techado es mejor para techos de baja pendiente?",
+      answer:
+        "Para techos con pendiente menor a 2:12, TPO (poliolefina termoplástica) y EPDM (membrana de caucho) son las opciones más populares. El TPO es blanco, eficiente energéticamente y se suelda térmicamente en las juntas para un sello hermético. El EPDM es una lámina de caucho negro que se pega o fija mecánicamente. El bitumen modificado es otra opción, aplicado en rollos con soplete o adhesivo. Para pendientes de 2:12 a 4:12, las tejas arquitectónicas con instalación especial de baja pendiente pueden funcionar, pero los sistemas de membrana son más confiables.",
+    },
+  ],
+};
+
 // ─── EXTERIOR SHELL ─────────────────────────────────────────────────────────
 
 export const housewrapCalculator: CalculatorSEOContent = {
@@ -1671,6 +2129,11 @@ export const registryES: Record<string, Record<string, CalculatorSEOContent>> = 
     "anchor-bolt-calculator": anchorBoltCalculator,
     "sill-seal-calculator": sillSealCalculator,
     "sill-plate-calculator": sillPlateCalculator,
+    "concrete-calculator": concreteCalculator,
+    "concrete-slab-calculator": concreteSlabCalculator,
+    "concrete-footing-calculator": concreteFootingCalculator,
+    "concrete-column-calculator": concreteColumnCalculator,
+    "concrete-steps-calculator": concreteStepsCalculator,
   },
   "floor-framing": {
     "rim-joist-calculator": rimJoistCalculator,
@@ -1694,6 +2157,9 @@ export const registryES: Record<string, Record<string, CalculatorSEOContent>> = 
     "shingle-calculator": shingleCalculator,
     "underlayment-calculator": underlaymentCalculator,
     "drip-edge-calculator": dripEdgeCalculator,
+    "roof-pitch-calculator": roofPitchCalculator,
+    "roof-area-calculator": roofAreaCalculator,
+    "roof-slope-calculator": roofSlopeCalculator,
   },
   "exterior-shell": {
     "housewrap-calculator": housewrapCalculator,

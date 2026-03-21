@@ -75,6 +75,12 @@ const common: CommonTranslations = {
     viewCalculator: "Open calculator \u2192",
   },
 
+  clusterLinks: {
+    moreCalculators: "More Specific Calculators",
+    moreCalculatorsDescription: "Need a more specific calculation? Try one of these:",
+    relatedGuides: "Related Guides",
+  },
+
   heroAnimation: {
     quickCalculator: "Quick Calculator",
     chooseCategory: "1. Choose Category",

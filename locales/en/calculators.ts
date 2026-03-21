@@ -31,6 +31,46 @@ export const categories: CategoryMeta[] = [
         category: "Foundation",
         categorySlug: "foundation",
       },
+      {
+        slug: "concrete-calculator",
+        title: "Concrete Calculator",
+        description:
+          "How much concrete do I need? Free calculator for slabs, footings & columns — gives cubic yards, 60lb & 80lb bag counts with waste factor.",
+        category: "Foundation",
+        categorySlug: "foundation",
+      },
+      {
+        slug: "concrete-slab-calculator",
+        title: "Concrete Slab Calculator",
+        description:
+          "How much concrete for a slab? Free calculator for garage, patio & driveway slabs — gives cubic yards and bag count for any thickness.",
+        category: "Foundation",
+        categorySlug: "foundation",
+      },
+      {
+        slug: "concrete-footing-calculator",
+        title: "Concrete Footing Calculator",
+        description:
+          "Concrete footing calculator: Estimate cubic yards for continuous & spread footings. Free tool for foundation walls — includes waste factor.",
+        category: "Foundation",
+        categorySlug: "foundation",
+      },
+      {
+        slug: "concrete-column-calculator",
+        title: "Concrete Column Calculator",
+        description:
+          "How much concrete for Sonotubes? Free column calculator for 8\", 10\" & 12\" diameter piers — gives cubic yards per column and total.",
+        category: "Foundation",
+        categorySlug: "foundation",
+      },
+      {
+        slug: "concrete-steps-calculator",
+        title: "Concrete Steps Calculator",
+        description:
+          "Concrete steps calculator: How many cubic yards for stairs? Free tool — enter width, rise, run & step count for instant estimate.",
+        category: "Foundation",
+        categorySlug: "foundation",
+      },
     ],
   },
   {
@@ -72,6 +112,9 @@ export const categories: CategoryMeta[] = [
       { slug: "shingle-calculator", title: "Shingle Calculator", description: "Shingle calculator: How many bundles do I need? Free estimator for 3-tab & architectural shingles — converts square footage to bundles.", category: "Roofing", categorySlug: "roofing" },
       { slug: "underlayment-calculator", title: "Roofing Underlayment Calculator", description: "How many rolls of roofing underlayment? Free calculator for 15 lb felt, 30 lb felt & synthetic — accounts for overlap and waste.", category: "Roofing", categorySlug: "roofing" },
       { slug: "drip-edge-calculator", title: "Drip Edge Calculator", description: "Drip edge calculator: Estimate linear feet of flashing for your roof. Free tool — gives piece count for standard 10 ft drip edge strips.", category: "Roofing", categorySlug: "roofing" },
+      { slug: "roof-pitch-calculator", title: "Roof Pitch Calculator", description: "What pitch is my roof? Free roof pitch calculator — enter rise & run for instant angle, slope %, and area multiplier. Works for any roof type.", category: "Roofing", categorySlug: "roofing" },
+      { slug: "roof-area-calculator", title: "Roof Area Calculator", description: "Roof area calculator: Convert flat dimensions to actual roof area. Free tool — accounts for pitch multiplier, gives roofing squares.", category: "Roofing", categorySlug: "roofing" },
+      { slug: "roof-slope-calculator", title: "Roof Slope Calculator", description: "How steep is my roof? Free slope calculator — measure rise & run to get pitch ratio, angle, and recommended roofing material type.", category: "Roofing", categorySlug: "roofing" },
     ],
   },
   {
