@@ -33,6 +33,7 @@ const common: CommonTranslations = {
     quickTipHeading: "Consejo R\u00e1pido",
     quickTipBody:
       "Agrega siempre un 10% de factor de desperdicio a tus pedidos de materiales. La construcci\u00f3n siempre genera recortes y quedarse corto a mitad de obra sale caro.",
+    nextStepsHeading: "Siguientes Pasos:",
     calculatorNotFound: "Calculadora no encontrada.",
     validationError: (fieldLabel: string) =>
       `Por favor ingresa un n\u00famero v\u00e1lido para "${fieldLabel}".`,

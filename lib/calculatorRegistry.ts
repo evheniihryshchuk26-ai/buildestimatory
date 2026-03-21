@@ -80,12 +80,18 @@ import {
   calculatePrimer,
 } from "./calculations/finishingCalculations";
 
+export interface NextStep {
+  label: string;
+  href: string;
+}
+
 export interface CalculatorConfig {
   fields: FieldConfig[];
   calculate: (values: Record<string, number | string>) => ResultItem[];
   disclaimer: string;
   howToUse: string[];
   materialInfo: string;
+  nextSteps?: NextStep[];
   installationTips: string[];
   commonMistakes: string[];
   faqs: { question: string; answer: string }[];
@@ -113,6 +119,11 @@ const anchorBoltCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Anchor bolts (J-bolts) are L-shaped or J-shaped steel fasteners embedded in wet concrete to mechanically secure the wood sill plate to the foundation. The standard residential anchor bolt is 1/2-inch diameter by 10 inches long, with at least 7 inches of embedment. They are available in hot-dipped galvanized steel for corrosion resistance. The IRC mandates placement every 6 feet on center and within 12 inches of each board end, corner, and joint. In high-wind or seismic zones, engineers may specify 5/8-inch bolts or closer spacing. Epoxy-set retrofit anchor bolts (such as Simpson SET-XP or Hilti HIT-RE 500) are used when bolts were missed during the pour. Expect to pay $1.50 to $3.00 per bolt for standard J-bolts at most building supply stores, with retrofit epoxy anchors costing $8 to $15 each installed.",
+  nextSteps: [
+    { label: "Sill Seal Calculator", href: "/calculators/foundation/sill-seal-calculator/" },
+    { label: "Pressure Treated Sill Plate Calculator", href: "/calculators/foundation/sill-plate-calculator/" },
+    { label: "Concrete Calculator", href: "/calculators/foundation/concrete-calculator/" },
+  ],
   installationTips: [
     "Set bolts before concrete sets fully, while it is still workable.",
     "Use a template jig to maintain consistent spacing and alignment.",
@@ -151,6 +162,10 @@ const sillSealCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Sill seal is a closed-cell polyethylene foam gasket installed between the concrete foundation wall and the pressure-treated sill plate. Its primary purpose is to block air infiltration and prevent moisture from wicking up through the concrete into the wood framing. Standard sill seal comes in 5.5-inch and 7.5-inch widths to match 2x6 and 2x8 sill plates, sold in 50-foot rolls. Thickness options are 1/4-inch for standard applications and 1/2-inch for foundations with minor surface irregularities. Some premium sill seals include a polyethylene moisture barrier bonded to the foam. In termite-prone regions, borate-treated sill seal or stainless steel termite mesh may be required. Sill seal costs approximately $5 to $10 per 50-foot roll, making it one of the least expensive but most important air-sealing materials in the building envelope.",
+  nextSteps: [
+    { label: "Pressure Treated Sill Plate Calculator", href: "/calculators/foundation/sill-plate-calculator/" },
+    { label: "Anchor Bolt Calculator", href: "/calculators/foundation/anchor-bolt-calculator/" },
+  ],
   installationTips: [
     "Unroll sill seal along the foundation just before placing sill plates.",
     "Overlap seams by at least 6 inches.",
@@ -187,6 +202,11 @@ const sillPlateCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Pressure-treated (PT) sill plates are the lowest horizontal wood member of the wall framing, bolted directly to the concrete foundation. The preservative treatment (ACQ, CA-B, or micronized copper) resists rot, fungal decay, and insect damage from ground contact and moisture exposure. Standard sill plate sizes are 2x6 and 2x8, matching the wall framing width. Lumber should be rated UC4A or UC4B (Use Category 4) for ground contact applications. Common board lengths are 8, 12, and 16 feet, with longer boards reducing the number of joints. Always use PT-compatible fasteners (hot-dipped galvanized, stainless steel, or silicon bronze) since the copper in modern treatments corrodes standard steel hardware. Sill plates cost roughly $8 to $16 per 8-foot board depending on region and lumber prices. In some jurisdictions, engineered composite sill plates are permitted as an alternative to pressure-treated lumber.",
+  nextSteps: [
+    { label: "Anchor Bolt Calculator", href: "/calculators/foundation/anchor-bolt-calculator/" },
+    { label: "Sill Seal Calculator", href: "/calculators/foundation/sill-seal-calculator/" },
+    { label: "Bottom Plate Calculator", href: "/calculators/wall-framing/bottom-plate-calculator/" },
+  ],
   installationTips: [
     "Use ACQ or CA pressure-treated lumber rated for ground contact (UC4B).",
     "Pre-drill for anchor bolts before laying on foundation.",
@@ -246,6 +266,12 @@ const concreteCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Concrete is a mixture of Portland cement, sand, gravel (aggregate), and water that cures into a rock-hard building material. It is sold in two forms: bags of pre-mixed concrete and ready-mix delivered by truck. Pre-mixed bags come in 40 lb, 60 lb, and 80 lb sizes — the 60 lb bag yields about 0.45 cubic feet and the 80 lb bag yields about 0.6 cubic feet when mixed. For small jobs like fence posts or mailbox bases, bags are practical. For anything over 1 cubic yard, ready-mix delivery is far more efficient and produces a more consistent result.\n\nConcrete strength is measured in PSI (pounds per square inch) at 28 days of cure. The most common residential grades are 2,500 PSI for non-structural applications like sidewalks and patios, 3,000 PSI for standard residential foundations, driveways, and slabs, and 4,000 PSI for garage floors, structural footings, and areas subject to heavy loads or freeze-thaw cycles. Higher PSI mixes (4,500–5,000) are specified for commercial work or special applications.\n\nReady-mix concrete costs $125 to $175 per cubic yard delivered, depending on PSI rating, location, and order size. Most suppliers require a minimum order of 1 yard, and short-load fees apply for orders under 8–10 yards. Bagged concrete costs $4 to $6 per 80 lb bag at home centers, which works out to roughly $300 to $400 per cubic yard — significantly more expensive than ready-mix. Fiber mesh, rebar, and other reinforcement add $0.10 to $0.50 per square foot to the total cost.",
+  nextSteps: [
+    { label: "Concrete Slab Calculator", href: "/calculators/foundation/concrete-slab-calculator/" },
+    { label: "Concrete Footing Calculator", href: "/calculators/foundation/concrete-footing-calculator/" },
+    { label: "Concrete Column Calculator", href: "/calculators/foundation/concrete-column-calculator/" },
+    { label: "Concrete Steps Calculator", href: "/calculators/foundation/concrete-steps-calculator/" },
+  ],
   installationTips: [
     "Build forms that are level, plumb, and securely braced before any concrete arrives.",
     "Dampen the subgrade with water before pouring to prevent the dry soil from pulling moisture out of the concrete too quickly.",
@@ -326,6 +352,11 @@ const concreteSlabCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "A concrete slab is a flat, horizontal surface poured directly on a prepared subgrade, used for patios, garage floors, driveways, basement floors, and shed pads. The standard residential slab thickness is 4 inches for pedestrian-only areas such as walkways and patios. Driveways and garage floors should be 4 to 6 inches thick to withstand vehicle loads, while commercial or heavy-equipment slabs may require 6 to 8 inches or more.\n\nProper subgrade preparation is critical for slab longevity. The ground must be compacted, level, and free of organic material. A 4-inch layer of compacted gravel (Class 5 or crushed limestone) provides drainage and a stable base. A 6-mil polyethylene vapor barrier is recommended between the gravel and the concrete to prevent moisture migration, especially for interior slabs in conditioned spaces.\n\nReinforcement options for slabs include 6x6 W1.4/W1.4 welded wire mesh, #4 rebar on 18 to 24-inch centers in both directions, or synthetic fiber mesh mixed into the concrete. Wire mesh and fiber control shrinkage cracking, while rebar provides structural reinforcement for heavy loads. Control joints (saw cuts or tooled joints) should be placed at intervals no greater than 2 to 3 times the slab thickness in feet — for a 4-inch slab, joints every 8 to 12 feet.\n\nConcrete for slabs is typically specified at 3,000 to 4,000 PSI with a 4-inch slump. Air-entrained concrete (5–7% air) is recommended in freeze-thaw climates. Ready-mix costs $125 to $175 per cubic yard delivered. An 80 lb bag of pre-mixed concrete yields 0.6 cubic feet and costs $4 to $6, making bagged concrete roughly $300 to $400 per cubic yard — practical only for very small pours under 0.5 cubic yards.",
+  nextSteps: [
+    { label: "Concrete Footing Calculator", href: "/calculators/foundation/concrete-footing-calculator/" },
+    { label: "Anchor Bolt Calculator", href: "/calculators/foundation/anchor-bolt-calculator/" },
+    { label: "Pressure Treated Sill Plate Calculator", href: "/calculators/foundation/sill-plate-calculator/" },
+  ],
   installationTips: [
     "Compact the subgrade and add 4 inches of gravel base before pouring — this prevents settling and cracking.",
     "Set forms with stakes every 2 to 3 feet and check for level; oil the forms for easy removal.",
@@ -397,6 +428,11 @@ const concreteFootingCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Concrete footings are the structural base that transfers building loads to the soil. They sit below grade and support foundation walls, columns, and posts. There are two main types: continuous (strip) footings that run along the length of a wall, and spread (pad) footings that support individual columns or posts.\n\nContinuous footings for residential construction are typically 12 to 24 inches wide and 8 to 12 inches deep, with the width being at least twice the thickness of the wall they support. For a standard 8-inch concrete block wall, the footing should be at least 16 inches wide and 8 inches deep. Spread footings for deck posts and columns are usually 24x24 inches or larger, depending on the load.\n\nThe bottom of the footing must extend below the local frost line to prevent frost heave — this ranges from 12 inches in the southern United States to 48 inches or more in northern states and Canada. Local building codes specify the exact frost depth for your area. Footings must bear on undisturbed or properly compacted soil with adequate bearing capacity, typically 1,500 to 2,000 PSF for residential construction.\n\nReinforcement for continuous footings consists of two #4 rebar bars running horizontally near the bottom of the footing, with vertical dowels extending up into the foundation wall at 48-inch intervals. Spread footings use a grid of #4 rebar on 12-inch centers in both directions. Footing concrete is specified at 3,000 to 3,500 PSI and should have a 4 to 5-inch slump for workability in the trench.\n\nReady-mix delivery is the standard method for footings. Costs run $125 to $175 per cubic yard. A typical 1,500 sq ft house perimeter (140 linear feet of 16-inch-wide by 8-inch-deep footing) requires approximately 3.5 cubic yards of concrete.",
+  nextSteps: [
+    { label: "Concrete Slab Calculator", href: "/calculators/foundation/concrete-slab-calculator/" },
+    { label: "Concrete Column Calculator", href: "/calculators/foundation/concrete-column-calculator/" },
+    { label: "Anchor Bolt Calculator", href: "/calculators/foundation/anchor-bolt-calculator/" },
+  ],
   installationTips: [
     "Dig the trench to the exact width and depth specified in your plans — over-excavation wastes concrete and money.",
     "Level the bottom of the trench with a hand tamper before pouring — an uneven footing base causes differential settling.",
@@ -477,6 +513,10 @@ const concreteColumnCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Concrete columns (also called piers, pilings, or Sonotube columns) are cylindrical concrete supports used for deck footings, post foundations, porch supports, and light structural piers. They are formed using Sonotube cardboard forms — rigid cylindrical tubes that are set in the ground, filled with concrete, and stripped away after curing.\n\nCommon Sonotube diameters for residential work are 8 inches (light loads such as railings and small sheds), 10 inches (standard deck posts and moderate loads), and 12 inches (heavy deck beams, porch columns, and structural piers). Larger sizes (14, 16, 18, and 24 inches) are available for commercial and heavy structural applications.\n\nColumn depth must extend below the frost line — this is the most critical requirement. In northern climates, this means 36 to 48 inches deep. The column sits on a footing pad at the bottom, which can be a pre-formed base or a widened section of concrete poured before the column. Some codes require a \"bell\" at the bottom of the column — a wider flared section that increases bearing area.\n\nReinforcement for concrete columns typically consists of one or two #4 rebar bars run vertically through the center of the column, with a J-bolt or post anchor bracket set into the top while the concrete is still wet. The rebar extends from 3 inches above the footing pad to 2 inches below the top of the column.\n\nSonotube forms cost $8 to $25 each for 8 to 12-foot lengths in standard residential diameters. The concrete itself is best mixed from 80 lb bags for column work — each bag fills approximately 0.6 cubic feet. A 12-inch diameter column at 4 feet deep uses about 3.1 cubic feet (roughly 5 bags of 80 lb mix).",
+  nextSteps: [
+    { label: "Concrete Footing Calculator", href: "/calculators/foundation/concrete-footing-calculator/" },
+    { label: "Deck Footing Calculator", href: "/calculators/outdoor/deck-footing-calculator/" },
+  ],
   installationTips: [
     "Dig the hole 4 to 6 inches wider than the Sonotube to allow for backfill and plumbing the tube.",
     "Set the tube on a flat footing base (pre-poured pad or compacted gravel) and brace it perfectly plumb with 2x4 kickers.",
@@ -549,6 +589,10 @@ const concreteStepsCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Concrete steps (also called concrete stairs or stoops) are solid, poured-in-place structures built at building entries, between grade changes, and for basement access. Unlike wood or prefabricated steps, poured concrete stairs are a monolithic mass of concrete that includes the treads, risers, and the solid fill underneath.\n\nBuilding codes govern the dimensions of concrete steps for safety. The International Residential Code (IRC) requires a maximum rise of 7.75 inches and a minimum run (tread depth) of 10 inches. All risers in a flight must be uniform within 3/8 inch, and all treads must be uniform within 3/8 inch. The minimum stair width is 36 inches, though 48 inches is more comfortable for entry stairs. Handrails are required for flights of 4 or more risers.\n\nConcrete steps are formed using plywood or lumber forms built to the exact profile of the staircase. The forms must be heavily braced because wet concrete exerts significant pressure — a 4-foot-wide stair with 5 steps can weigh over 2,000 lbs. The concrete is poured from the bottom step up, with each step screeded and troweled before moving to the next.\n\nReinforcement for concrete steps includes #4 rebar run horizontally through the mass at 12 to 18-inch intervals, with vertical bars tying the steps to the landing and foundation. Wire mesh in each tread helps control surface cracking. The concrete specification is typically 4,000 PSI air-entrained mix for freeze-thaw durability, with a 4-inch slump for workability in the forms.\n\nPoured concrete steps cost $300 to $500 per linear foot of width installed, including forming, reinforcement, pouring, and finishing. A standard 4-foot-wide, 4-step entry stoop costs $1,200 to $2,000 installed. Pre-cast concrete steps are an alternative at $200 to $400 per step but lack the custom sizing and monolithic strength of poured steps.",
+  nextSteps: [
+    { label: "Concrete Slab Calculator", href: "/calculators/foundation/concrete-slab-calculator/" },
+    { label: "Deck Stair Calculator", href: "/calculators/outdoor/deck-stair-calculator/" },
+  ],
   installationTips: [
     "Build forms from 3/4-inch plywood, heavily braced with 2x4s — wet concrete is extremely heavy and will blow out weak forms.",
     "Pour from the bottom step upward, filling and finishing each step before moving to the next.",
@@ -610,6 +654,10 @@ const rimJoistCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Rim joists (also called band joists or header joists) are the perimeter boards that cap the ends of the floor joists, forming the outer edge of the floor frame. They must match the depth of the floor joists, so a floor built with 2x10 joists uses 2x10 rim joists. Common sizes are 2x8, 2x10, and 2x12 in standard dimensional lumber, though engineered I-joists often require a specific engineered rim board (such as 1-1/8-inch LVL rim board). Rim joists serve three critical functions: they transfer vertical loads to the foundation or wall below, provide lateral bracing for the floor joists, and close off the floor cavity from outside air and pests. Because rim joists are a major source of heat loss, many energy codes now require insulation in the rim joist cavity. Costs range from $6 to $20 per board depending on lumber dimension and length.",
+  nextSteps: [
+    { label: "Floor Joist Calculator", href: "/calculators/floor-framing/floor-joist-calculator/" },
+    { label: "OSB Panel Calculator", href: "/calculators/floor-framing/osb-panel-calculator/" },
+  ],
   installationTips: [
     "Install rim joists flush with the top of floor joists.",
     "Nail through the rim joist into each floor joist end.",
@@ -656,6 +704,11 @@ const floorJoistCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Floor joists are the horizontal structural members that span between bearing walls or beams to support the subfloor and all live and dead loads above. Standard dimensional lumber sizes are 2x8 (spans up to 12 feet), 2x10 (up to 15 feet), and 2x12 (up to 18 feet) at 16-inch on-center spacing, though exact spans depend on species, grade, and load requirements. Engineered options include LVL (laminated veneer lumber) joists for heavy loads or long spans, and I-joists (TJI) for consistent depth and lightweight handling. I-joists are available in depths from 9.5 to 16 inches and can span over 20 feet. Floor joists are typically spaced 16 inches on center for standard residential construction, providing a stiff, bounce-free floor. The 24-inch spacing is acceptable with thicker subfloor but produces a less rigid floor. Dimensional lumber joists cost $8 to $25 each depending on size, while I-joists run $3 to $6 per linear foot.",
+  nextSteps: [
+    { label: "Rim Joist Calculator", href: "/calculators/floor-framing/rim-joist-calculator/" },
+    { label: "Bridging Calculator", href: "/calculators/floor-framing/bridging-calculator/" },
+    { label: "Joist Hanger Calculator", href: "/calculators/hardware/joist-hanger-calculator/" },
+  ],
   installationTips: [
     "Crown all joists the same way (crown up) for a flat floor.",
     "Use joist hangers at beam connections.",
@@ -691,6 +744,10 @@ const bridgingCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Bridging (also called blocking or cross-bridging) consists of short pieces of lumber or metal straps installed between floor joists to prevent twisting, distribute concentrated loads, and stiffen the overall floor system. There are three main types: solid blocking uses the same dimension lumber as the joists cut to fit snugly between them; wood cross-bridging uses 1x3 or 2x2 boards installed in an X pattern; and metal cross-bridging uses pre-formed steel straps. Solid blocking is the most common in modern construction because it also serves as a fire block and provides a nailing surface for pipes, ducts, and subfloor edges. The IRC requires bridging at mid-span for joists exceeding 8 feet of unsupported span, with additional rows at 8-foot intervals for longer spans. Metal cross-bridging costs about $1 to $2 per pair, while solid blocking uses offcut lumber and costs only the labor.",
+  nextSteps: [
+    { label: "Floor Joist Calculator", href: "/calculators/floor-framing/floor-joist-calculator/" },
+    { label: "Subfloor Adhesive Calculator", href: "/calculators/floor-framing/subfloor-adhesive-calculator/" },
+  ],
   installationTips: [
     "Install solid blocking or metal cross-bridging.",
     "Stagger blocking for easier nailing access.",
@@ -727,6 +784,10 @@ const subfloorAdhesiveCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Subfloor adhesive is a construction-grade polyurethane or solvent-based adhesive applied to the top of floor joists before laying subfloor panels. Popular brands include PL Premium, Loctite PL 400, and Liquid Nails Subfloor & Deck. The adhesive creates a permanent bond between the joist and the panel that eliminates floor squeaks caused by nail pops and panel movement. Applied in a continuous 1/4-inch bead along each joist, one 28-oz tube typically covers 40 to 50 square feet of floor area. Polyurethane-based adhesives (PL Premium) offer the strongest bond and are waterproof, while solvent-based adhesives are less expensive and cure faster. Cold-weather formulations are available for winter construction when temperatures drop below 40 degrees F. Expect to pay $4 to $8 per tube, and a standard 800 sq ft floor requires 16 to 20 tubes.",
+  nextSteps: [
+    { label: "OSB Panel Calculator", href: "/calculators/floor-framing/osb-panel-calculator/" },
+    { label: "Floor Joist Calculator", href: "/calculators/floor-framing/floor-joist-calculator/" },
+  ],
   installationTips: [
     "Apply a continuous bead — do not dot the adhesive.",
     "Work in sections and lay panels before adhesive skins over.",
@@ -764,6 +825,11 @@ const osbPanelCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "OSB (Oriented Strand Board) subfloor panels are the standard structural subfloor material in modern residential construction. Standard panels are 4x8 feet (32 sq ft each) with tongue-and-groove edges for a tight, squeak-free fit. The most common thickness is 23/32 inch (marketed as 3/4 inch) for 16-inch joist spacing, while 7/8-inch or 1-inch panels are used for 24-inch spacing or heavy loads like tile and stone. Premium brands like AdvanTech offer superior moisture resistance and a 500-day no-sand guarantee. Standard OSB subfloor costs $25 to $35 per sheet, while premium moisture-resistant panels run $35 to $50. CDX plywood is an alternative that handles moisture better than standard OSB but costs more. Always use panels rated Exposure 1 or better, as subfloor panels may be exposed to weather during construction. Panels carry a span rating printed on the grade stamp indicating maximum joist spacing.",
+  nextSteps: [
+    { label: "Subfloor Adhesive Calculator", href: "/calculators/floor-framing/subfloor-adhesive-calculator/" },
+    { label: "Floor Joist Calculator", href: "/calculators/floor-framing/floor-joist-calculator/" },
+    { label: "Bottom Plate Calculator", href: "/calculators/wall-framing/bottom-plate-calculator/" },
+  ],
   installationTips: [
     "Install panels with the long edge perpendicular to joists.",
     "Stagger end joints for structural continuity.",
@@ -821,6 +887,11 @@ const studCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Wall studs are the vertical lumber members that form the skeleton of the wall, carrying roof, floor, and ceiling loads down to the foundation. The two standard sizes are 2x4 (3.5-inch cavity for R-13 insulation) and 2x6 (5.5-inch cavity for R-19 or R-21 insulation). Pre-cut studs are milled to 92-5/8 inches for 8-foot ceilings and 104-5/8 inches for 9-foot ceilings, saving the labor of cutting each stud to length. Lumber grades range from stud grade (most common, least expensive) to #1 or #2 for load-bearing applications. Douglas fir and SPF (Spruce-Pine-Fir) are the most widely available species. At 16-inch on-center spacing, you need about 1 stud per linear foot of wall after accounting for corners and openings. Stud prices fluctuate with the lumber market — expect $3 to $6 for 2x4 pre-cuts and $5 to $10 for 2x6 pre-cuts. For exterior walls in energy-conscious builds, 2x6 studs at 24-inch spacing (advanced framing) reduce thermal bridging and lumber usage.",
+  nextSteps: [
+    { label: "Bottom Plate Calculator", href: "/calculators/wall-framing/bottom-plate-calculator/" },
+    { label: "Top Plate Calculator", href: "/calculators/wall-framing/top-plate-calculator/" },
+    { label: "Header Calculator", href: "/calculators/wall-framing/header-calculator/" },
+  ],
   installationTips: [
     "Use pre-cut or pre-sorted studs for consistent wall height.",
     "Mark stud layout on the plate before framing to keep spacing accurate.",
@@ -860,6 +931,10 @@ const bottomPlateCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "The bottom plate (also called the sole plate) is the horizontal framing member at the base of each wall section, to which all vertical studs are nailed. It serves as the foundation connection for the wall and transfers loads to the floor system or foundation below. Bottom plates match the stud width — 2x4 for 2x4 walls, 2x6 for 2x6 walls. Any bottom plate in direct contact with concrete or masonry must be pressure-treated lumber rated for ground contact (UC4A or UC4B). Interior bottom plates on wood subfloors can use standard untreated lumber. Common board lengths are 8, 12, and 16 feet, with longer boards preferred to reduce the number of joints. Joints in bottom plates should fall over studs or over solid blocking. Bottom plates are cut from the same lumber as the wall studs, so costs are comparable — $4 to $8 for 8-foot PT boards and $3 to $6 for untreated boards.",
+  nextSteps: [
+    { label: "Stud Calculator", href: "/calculators/wall-framing/stud-calculator/" },
+    { label: "Top Plate Calculator", href: "/calculators/wall-framing/top-plate-calculator/" },
+  ],
   installationTips: [
     "Use PT lumber for all exterior bottom plates.",
     "Snap a chalk line before laying plates for accuracy.",
@@ -896,6 +971,11 @@ const topPlateCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Most load-bearing walls require a double top plate for structural continuity. The first top plate sits directly on the stud ends, and the second plate (cap plate) is nailed on top with joints offset by at least 4 feet from the first plate's joints. The cap plate ties intersecting walls together at corners and T-intersections by lapping over the adjoining wall's top plate. Top plates match the stud width — 2x4 or 2x6 — and are cut from the same lumber stock. Since a double top plate is required, you need twice the linear footage of plates compared to the total wall length. Longer boards (12 or 16 feet) are preferred to minimize joints. In advanced framing (OVE), a single top plate is permitted when studs, joists, and rafters stack directly above each other, but this requires careful layout coordination. Top plate lumber costs the same as stud lumber — $3 to $10 per board depending on size and length.",
+  nextSteps: [
+    { label: "Stud Calculator", href: "/calculators/wall-framing/stud-calculator/" },
+    { label: "Bottom Plate Calculator", href: "/calculators/wall-framing/bottom-plate-calculator/" },
+    { label: "Header Calculator", href: "/calculators/wall-framing/header-calculator/" },
+  ],
   installationTips: [
     "Offset joints in the cap plate from joints in the first top plate by at least 4 feet.",
     "Tie corners together with the cap plate for structural rigidity.",
@@ -938,6 +1018,10 @@ const headerCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Headers are horizontal structural beams that span door and window openings, transferring the roof, floor, and wall loads above the opening around it to the jack studs (trimmers) and king studs on each side. Header size is determined by the span width and the load being carried — a 3-foot door in a single-story wall may only need a doubled 2x6, while a 6-foot sliding door or 8-foot garage header may require a 4x12 or engineered LVL beam. Standard headers are built from two pieces of dimensional lumber with a 1/2-inch plywood or OSB spacer sandwiched between them to match the 3.5-inch or 5.5-inch wall thickness. Pre-made engineered LVL headers are available in standard lengths and eliminate the need for site-built assemblies. In non-load-bearing walls, a single flat 2x4 can serve as a header. Header lumber costs vary widely from $10 for a small doubled 2x6 header to $80 or more for a large LVL beam.",
+  nextSteps: [
+    { label: "Stud Calculator", href: "/calculators/wall-framing/stud-calculator/" },
+    { label: "Exterior Sheathing Calculator", href: "/calculators/wall-framing/exterior-sheathing-calculator/" },
+  ],
   installationTips: [
     "Build headers from doubled 2x lumber with a 1/2\" plywood spacer to match wall width.",
     "Or use LVL (laminated veneer lumber) for larger spans.",
@@ -977,6 +1061,10 @@ const exteriorSheathingCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Exterior wall sheathing is the structural panel layer applied over the wall studs before housewrap and siding. Its primary function is providing racking (shear) resistance against lateral forces from wind and earthquakes, while also serving as a nail base for siding attachment. The standard material is 7/16-inch or 1/2-inch OSB, which costs $15 to $30 per 4x8 sheet. CDX plywood offers better moisture performance at a higher price ($25 to $45 per sheet). Panels are installed vertically (long dimension running floor to ceiling) for maximum racking resistance and are nailed to the studs following a specific nail schedule — typically 8d nails at 6 inches on center along panel edges and 12 inches in the field. Some builders in hot-humid climates prefer structural insulated panels or rigid foam sheathing with metal bracing for better moisture management, though these require engineering approval. Sheathing is required on all exterior walls in most wind and seismic zones.",
+  nextSteps: [
+    { label: "Stud Calculator", href: "/calculators/wall-framing/stud-calculator/" },
+    { label: "Housewrap Calculator", href: "/calculators/exterior-shell/housewrap-calculator/" },
+  ],
   installationTips: [
     "Orient panels vertically (long edge vertical) for best racking resistance.",
     "Leave 1/8\" gaps at all panel edges.",
@@ -1027,6 +1115,10 @@ const trussCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Roof trusses are pre-engineered triangular wood assemblies designed to span the full width of the building without requiring interior load-bearing walls. Each truss is factory-built to a specific engineering design using 2x4 or 2x6 lumber connected with metal gusset plates. Common truss profiles include Fink (W-pattern, the most common), Howe, and scissors (for vaulted ceilings). Trusses must be ordered from a licensed truss manufacturer based on your building plans, and they typically have a 4 to 8 week lead time. Standard residential trusses are spaced 24 inches on center and can span 24 to 40 feet depending on design. Truss pricing depends on span and complexity — simple 24-foot span Fink trusses cost $75 to $150 each, while 40-foot spans or specialty profiles can cost $200 to $400 each. Delivery usually requires a flatbed truck, and installation requires a crane or boom truck for lifting trusses into position.",
+  nextSteps: [
+    { label: "Roof Sheathing Calculator", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Hurricane Tie Calculator", href: "/calculators/hardware/hurricane-tie-calculator/" },
+  ],
   installationTips: [
     "Order trusses 4–6 weeks in advance — lead times can be long.",
     "Have a crane or boom truck on site for lifting.",
@@ -1075,6 +1167,10 @@ const rafterCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Rafters are the sloped structural lumber members that form the roof frame in stick-built (site-framed) construction. Unlike factory-built trusses, rafters are individually cut and installed on site, allowing for open attic space, cathedral ceilings, or unique roof geometries. Common rafter sizes are 2x6 (spans up to 10 feet), 2x8 (up to 13 feet), 2x10 (up to 16 feet), and 2x12 (up to 20 feet) at 16-inch on-center spacing, depending on the lumber species, grade, and local snow or wind loads. Each rafter requires a bird's mouth cut where it sits on the wall top plate and a plumb cut at the ridge. Rafters are typically paired on opposite sides of a ridge board and connected with collar ties or ceiling joists to prevent the walls from spreading outward. Rafter lumber costs $8 to $25 per board depending on dimension and length. Stick framing with rafters is more labor-intensive than trusses but offers greater design flexibility.",
+  nextSteps: [
+    { label: "Ridge Board Calculator", href: "/calculators/roofing/ridge-board-calculator/" },
+    { label: "Roof Sheathing Calculator", href: "/calculators/roofing/roof-sheathing-calculator/" },
+  ],
   installationTips: [
     "Cut a test rafter and verify fit before cutting the full set.",
     "Use a speed square to mark consistent bird's mouth cuts.",
@@ -1115,6 +1211,10 @@ const ridgeBoardCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "The ridge board runs along the peak of the roof and serves as the connecting member where opposing rafters meet. In a traditional rafter roof with collar ties, the ridge board is non-structural — it simply aligns the rafters and provides a nailing surface. It must be at least one nominal size deeper than the rafters to provide full bearing (for example, a 2x10 or 1x10 ridge board with 2x8 rafters). Common board lengths are 12 and 16 feet, joined end-to-end at rafter locations. A structural ridge beam is different — it is an engineered beam (LVL, glulam, or steel) that carries the full roof load without requiring collar ties or ceiling joists, allowing open cathedral ceilings. Structural ridge beams are significantly more expensive and require posts at each end bearing down to the foundation. Standard ridge boards cost $15 to $40 each depending on size and length, while structural ridge beams can cost $200 to $1,000+ depending on span.",
+  nextSteps: [
+    { label: "Rafter Calculator", href: "/calculators/roofing/rafter-calculator/" },
+    { label: "Roof Sheathing Calculator", href: "/calculators/roofing/roof-sheathing-calculator/" },
+  ],
   installationTips: [
     "Temporary support the ridge board while setting rafters.",
     "Keep the ridge board straight — use temporary bracing.",
@@ -1154,6 +1254,11 @@ const roofSheathingCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Roof sheathing creates the structural deck that supports roofing underlayment, shingles, and all roof loads. The standard material is 7/16-inch OSB for 16-inch rafter or truss spacing, and 1/2-inch OSB or CDX plywood for 24-inch spacing. Panels are 4x8 feet (32 sq ft each) and are installed horizontally starting from the eave, with staggered end joints between rows. H-clips — small metal clips inserted between panel edges at mid-span — are required wherever unsupported panel edges span between rafters or trusses to prevent sagging under load. OSB roof sheathing costs $15 to $30 per sheet, while CDX plywood runs $25 to $45. In regions with frequent wind-driven rain, radiant barrier sheathing (OSB with a reflective foil face) helps reduce attic heat gain. Always use Exposure 1-rated panels since roof sheathing may be exposed to weather during construction. The nailing schedule is critical for wind uplift resistance — 8d nails at 6 inches on edges and 12 inches in the field.",
+  nextSteps: [
+    { label: "Shingle Calculator", href: "/calculators/roofing/shingle-calculator/" },
+    { label: "Roofing Underlayment Calculator", href: "/calculators/roofing/underlayment-calculator/" },
+    { label: "Roof Area Calculator", href: "/calculators/roofing/roof-area-calculator/" },
+  ],
   installationTips: [
     "Start from the eave, working toward the ridge.",
     "Stagger end joints between rows.",
@@ -1196,6 +1301,10 @@ const shingleCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Asphalt shingles are the most popular residential roofing material in North America, covering over 75% of all homes. They come in two main styles: 3-tab shingles (flat, uniform appearance, 20-25 year warranty, lower cost) and architectural/dimensional shingles (layered, textured appearance, 30-50 year warranty, more wind resistant). Shingles are sold in bundles, with 3 bundles covering 1 roofing square (100 sq ft). Architectural shingles cost $30 to $50 per bundle, while premium designer shingles run $50 to $100 per bundle. Popular brands include GAF Timberline, CertainTeed Landmark, and Owens Corning Duration. Shingle color affects attic temperature — lighter colors reflect more heat in southern climates. Wind ratings range from 60 mph for basic 3-tab to 130 mph for high-wind architectural shingles. Ridge cap shingles are sold separately (about 20 linear feet per bundle) and are needed for all ridge and hip lines.",
+  nextSteps: [
+    { label: "Roofing Underlayment Calculator", href: "/calculators/roofing/underlayment-calculator/" },
+    { label: "Drip Edge Calculator", href: "/calculators/roofing/drip-edge-calculator/" },
+  ],
   installationTips: [
     "Start from the eave, working up to the ridge.",
     "Offset vertical joints by 6\" minimum between courses.",
@@ -1244,6 +1353,11 @@ const underlaymentCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Roofing underlayment is the secondary moisture barrier installed over the roof sheathing before shingles or other roofing materials are applied. There are three main types: 15-pound asphalt felt (the traditional choice, sold in rolls covering 400 sq ft, costs $15-25 per roll), 30-pound felt (heavier and more durable, 200 sq ft per roll, $20-35 per roll), and synthetic underlayment (modern non-woven polypropylene, 1,000 sq ft per roll, $50-100 per roll). Synthetic underlayment has largely replaced felt in professional roofing because it is lighter, stronger, does not absorb moisture, and can be left exposed longer during construction. In cold climates (zones 5-8), ice and water shield — a self-adhered rubberized asphalt membrane — is required along the eaves for at least the first 24 inches past the interior wall line. Most shingle manufacturers require underlayment for their warranty to be valid, and building codes universally mandate it as part of the roof assembly.",
+  nextSteps: [
+    { label: "Shingle Calculator", href: "/calculators/roofing/shingle-calculator/" },
+    { label: "Drip Edge Calculator", href: "/calculators/roofing/drip-edge-calculator/" },
+    { label: "Roof Sheathing Calculator", href: "/calculators/roofing/roof-sheathing-calculator/" },
+  ],
   installationTips: [
     "Install horizontally, starting at the eave.",
     "Overlap each course 2–4 inches over the one below.",
@@ -1282,6 +1396,10 @@ const dripEdgeCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Drip edge is an L-shaped or T-shaped metal flashing installed along the eaves and rake edges of the roof to direct water runoff away from the fascia board and into the gutters. It prevents water from wicking back under the sheathing edge, which is a common cause of fascia rot and soffit damage. Drip edge comes in standard 10-foot lengths in profiles Type A (small, simple L-shape), Type C/D-style (wider lower flange for better water diversion), and Type F (for use with gutters). Materials include galvanized steel (most common, $3-5 per 10-foot piece), aluminum ($4-7), and copper ($15-25 for premium applications). The IRC has required drip edge on all asphalt shingle roofs since the 2012 code cycle. Drip edge is available in a variety of colors to match the roof or fascia. At the eaves, drip edge goes under the underlayment; at the rakes, it goes over the underlayment — this sequencing is critical for proper water management.",
+  nextSteps: [
+    { label: "Shingle Calculator", href: "/calculators/roofing/shingle-calculator/" },
+    { label: "Roofing Underlayment Calculator", href: "/calculators/roofing/underlayment-calculator/" },
+  ],
   installationTips: [
     "Install eave drip edge BEFORE underlayment, rake drip edge AFTER underlayment.",
     "Overlap pieces by 2 inches minimum.",
@@ -1325,6 +1443,12 @@ const roofPitchCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Roof pitch is the ratio of vertical rise to horizontal run, typically expressed as inches of rise per 12 inches of run (e.g., 6/12). It is one of the most critical dimensions in roofing because it determines material suitability, water shedding performance, structural load paths, and walkability for installers. Common residential pitches range from 4/12 to 8/12. A 4/12 pitch (18.4°) is the minimum recommended for standard asphalt shingles and is easy to walk on. A 6/12 pitch (26.6°) is the most popular in the United States, offering a balanced look and good water shedding. An 8/12 pitch (33.7°) and steeper provides excellent snow shedding and a dramatic roofline but increases material costs and labor difficulty. In northern climates with heavy snowfall — such as Minnesota, Michigan, and the Northeast — steeper pitches of 8/12 to 12/12 are common to prevent dangerous snow accumulation. In the South and Southwest, lower pitches of 4/12 to 6/12 prevail because snow load is not a concern. Low-slope roofs (below 2/12) require special roofing systems such as modified bitumen, TPO, or EPDM membrane because shingles cannot reliably shed water at such shallow angles. Pitch also affects material quantity: a 12/12 pitch roof has 41% more surface area than the same footprint at flat, requiring proportionally more shingles, underlayment, and sheathing. The roof area multiplier converts plan-view area to actual surface area, saving contractors from costly underestimates.",
+  nextSteps: [
+    { label: "Roof Area Calculator", href: "/calculators/roofing/roof-area-calculator/" },
+    { label: "Roof Slope Calculator", href: "/calculators/roofing/roof-slope-calculator/" },
+    { label: "Roof Truss Calculator", href: "/calculators/roofing/truss-calculator/" },
+    { label: "Rafter Calculator", href: "/calculators/roofing/rafter-calculator/" },
+  ],
   installationTips: [
     "Use a pitch gauge or speed square placed on a rafter or truss tail to verify pitch before ordering materials.",
     "For inaccessible roofs, measure pitch from inside the attic by holding a level horizontally and measuring rise at 12 inches of run.",
@@ -1391,6 +1515,11 @@ const roofAreaCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Roof area calculation is the foundation of every roofing material estimate. The most common mistake homeowners and even some contractors make is using the flat footprint area instead of the actual sloped surface area — this leads to significant material shortages, especially on steep roofs. The pitch multiplier converts flat area to true surface area using the Pythagorean theorem: multiplier = sqrt(1 + (pitch/12)²). For a standard 6/12 pitch, the multiplier is 1.118, meaning the actual roof area is about 12% larger than the footprint. At 12/12, the roof has 41% more surface area than the flat plan. Roofing materials are sold in 'squares,' where one square covers 100 square feet of roof surface. Asphalt shingles typically come in bundles of 3 per square, so a 2,400 sq ft roof needs 24 squares or 72 bundles. When ordering materials, always add 10-15% for waste from cuts, starter courses, ridge caps, and valleys. For hip roofs, add an additional 5% because hip ridges and valleys create more cut waste than a simple gable. Understanding your true roof area also helps you accurately estimate underlayment rolls, drip edge linear footage, and ice-and-water shield for eaves and valleys.",
+  nextSteps: [
+    { label: "Roof Sheathing Calculator", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Shingle Calculator", href: "/calculators/roofing/shingle-calculator/" },
+    { label: "Roof Pitch Calculator", href: "/calculators/roofing/roof-pitch-calculator/" },
+  ],
   installationTips: [
     "Always measure roof dimensions from the eave to the ridge on the slope, not just the horizontal footprint — or use the pitch multiplier to convert.",
     "For complex roofs with multiple pitches, calculate each section separately and sum the areas for the total.",
@@ -1438,6 +1567,10 @@ const roofSlopeCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Roof slope measurement is a critical first step before selecting roofing materials, because every roofing product has a minimum slope requirement set by the manufacturer and enforced by building codes. The slope is the ratio of vertical rise to horizontal run, and it directly determines how quickly water and snow shed from the roof surface. Flat and very low-slope roofs (below 2:12) require continuous membrane systems such as TPO (thermoplastic polyolefin), EPDM (ethylene propylene diene monomer), PVC, or built-up roofing (BUR) with multiple layers of bitumen and reinforcing fabric. These membrane systems create a watertight seal that does not rely on gravity to shed water. Low-slope roofs between 2:12 and 4:12 can use asphalt shingles, but only with special installation methods including double underlayment, additional sealant at every tab, and ice-and-water shield on the entire deck in cold climates. Standard asphalt shingles (3-tab and architectural) perform best on roofs with 4:12 to 8:12 pitch, where gravity effectively channels water off the surface. Steep-slope roofs above 8:12 benefit from heavyweight materials like concrete tile, clay tile, slate, or standing-seam metal panels that resist wind uplift and are mechanically fastened to handle the steep angle. Measuring your slope accurately — using a level, tape measure, and the rise-over-run method — ensures you select the right material and installation method for long-term performance.",
+  nextSteps: [
+    { label: "Roof Pitch Calculator", href: "/calculators/roofing/roof-pitch-calculator/" },
+    { label: "Roof Area Calculator", href: "/calculators/roofing/roof-area-calculator/" },
+  ],
   installationTips: [
     "Use a 2-foot or 4-foot level and a tape measure for the most accurate slope measurement — longer levels reduce error from surface irregularities.",
     "Measure from inside the attic along a rafter if the roof surface is inaccessible — place the level horizontal and measure the vertical drop at a known horizontal distance.",
@@ -1481,6 +1614,11 @@ const housewrapCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Housewrap is a synthetic weather-resistant barrier (WRB) installed over wall sheathing and behind siding to protect the building from bulk water infiltration while allowing water vapor to escape from inside the wall cavity. DuPont Tyvek HomeWrap is the most widely recognized brand, but other options include Tyvek DrainWrap (with built-in drainage channels), Henry Blueskin VP100 (self-adhered), and ZIP System sheathing tape (integrated WRB). Standard housewrap comes in 9-foot by 100-foot or 150-foot rolls covering 900 to 1,500 sq ft per roll, priced at $100 to $200 per roll. The key performance metrics are water holdout (resistance to liquid water penetration) and vapor permeance (ability to let moisture vapor pass through). All seams, penetrations, and window/door openings must be sealed with manufacturer-compatible tape. Housewrap must not be left exposed to UV for more than 90 to 120 days, as sunlight degrades its performance.",
+  nextSteps: [
+    { label: "Vinyl Siding Calculator", href: "/calculators/exterior-shell/vinyl-siding-calculator/" },
+    { label: "Hardie Plank Siding Calculator", href: "/calculators/exterior-shell/hardie-siding-calculator/" },
+    { label: "Window Flashing Calculator", href: "/calculators/exterior-shell/window-flashing-calculator/" },
+  ],
   installationTips: [
     "Start at the bottom, working upward. Overlap horizontal seams 6\" minimum.",
     "Tape all seams, penetrations, and window openings with compatible flashing tape.",
@@ -1521,6 +1659,10 @@ const vinylSidingCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Vinyl siding is a PVC-based exterior cladding available in a wide range of profiles, colors, and textures. Common profiles include Dutch Lap (beveled overlap), clapboard (horizontal lap), board-and-batten (vertical), and shake/shingle styles. Standard panels are 12 to 12.5 feet long with a 4 to 5-inch exposed face, yielding approximately 2 sq ft of wall coverage per linear foot of panel. Vinyl siding is sold by the square (100 sq ft) or by the carton (typically 200 sq ft per carton). Prices range from $60 to $100 per square for basic siding to $150 to $250 per square for premium insulated or architectural-grade products. Insulated vinyl siding has a foam backer that adds R-2 to R-5 insulation and creates a flatter, more rigid panel. Accessories include J-channel, F-channel, utility trim, starter strip, inside and outside corner posts, and soffit panels, which can add 20-30% to the total material cost.",
+  nextSteps: [
+    { label: "Housewrap Calculator", href: "/calculators/exterior-shell/housewrap-calculator/" },
+    { label: "Window Flashing Calculator", href: "/calculators/exterior-shell/window-flashing-calculator/" },
+  ],
   installationTips: [
     "Install on a flat, plumb substrate.",
     "Leave 1/4\" gaps at all trim for thermal expansion.",
@@ -1561,6 +1703,10 @@ const hardieSidingCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "HardiePlank (James Hardie fiber cement siding) is a lap siding made from a mixture of cement, sand, and cellulose fiber. Standard HardiePlank boards are 12 feet long and 6.25 inches wide with a 5-inch exposed face, covering approximately 1.17 sq ft per linear foot at 4-inch exposure. Fiber cement siding is fire-resistant (non-combustible), insect-resistant, rot-proof, and dimensionally stable — it does not expand and contract with temperature changes like vinyl or wood. HardiePlank is available in smooth or woodgrain textures, factory pre-primed or factory pre-painted (ColorPlus Technology) in dozens of colors. Pricing ranges from $1.00 to $1.50 per sq ft for primed boards and $1.50 to $2.50 for pre-painted. HardiePlank carries a 30-year non-prorated limited warranty when properly installed. Related products include HardiePanel (4x8 vertical sheets), HardieShingle (shake-style panels), and HardieTrim (trim boards). Fiber cement is heavier than vinyl (about 2.5 lbs per sq ft) and requires specific cutting tools to manage silica dust.",
+  nextSteps: [
+    { label: "Housewrap Calculator", href: "/calculators/exterior-shell/housewrap-calculator/" },
+    { label: "Window Flashing Calculator", href: "/calculators/exterior-shell/window-flashing-calculator/" },
+  ],
   installationTips: [
     "Use fiber cement specific nails (hot-dipped galvanized or stainless).",
     "Paint cut ends with matching touch-up paint.",
@@ -1599,6 +1745,11 @@ const windowFlashingCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Window flashing tape is a self-adhered flexible membrane used to seal the rough opening around windows and doors, creating a waterproof connection between the window frame and the housewrap or WRB. Common products include DuPont FlexWrap NF (flexible, follows corners), Henry Blueskin TWF (straight runs), 3M All Weather Flashing Tape, and ZIP System stretch tape. Flashing tape comes in widths of 4, 6, and 9 inches, with 4-inch being standard for most window installations and 6-inch or 9-inch for sill pans and wider applications. Rolls are typically 75 feet long and cost $25 to $60 depending on width and brand. The installation sequence is critical: sill flashing is applied first (with a back-dam fold), then jamb flashing overlapping the sill tape, and finally the housewrap head flap is lapped over the top to create a shingle-lap drainage system. Improper flashing is the leading cause of window leaks and wall rot in residential construction.",
+  nextSteps: [
+    { label: "Housewrap Calculator", href: "/calculators/exterior-shell/housewrap-calculator/" },
+    { label: "Vinyl Siding Calculator", href: "/calculators/exterior-shell/vinyl-siding-calculator/" },
+    { label: "Hardie Plank Siding Calculator", href: "/calculators/exterior-shell/hardie-siding-calculator/" },
+  ],
   installationTips: [
     "Install sill flashing first with a back-dam fold.",
     "Lap jamb flashing over sill flashing.",
@@ -1641,6 +1792,10 @@ const cavityInsulationCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Cavity insulation fills the space between studs, joists, or rafters to slow heat transfer through the building envelope. The two most common batt insulation materials are fiberglass (Owens Corning, Johns Manville, Knauf) and mineral wool (Rockwool). Standard R-values for common wall cavities are: R-13 or R-15 for 2x4 walls (3.5-inch cavity), R-19 or R-21 for 2x6 walls (5.5-inch cavity), and R-30 to R-38 for floor and ceiling cavities. Attic insulation requirements range from R-38 in mild climate zones to R-60 in cold zones (5-8). Fiberglass batts are the least expensive option at $0.50 to $1.00 per sq ft, while mineral wool batts cost $1.00 to $1.50 per sq ft but offer better soundproofing, fire resistance (non-combustible), and moisture resistance. Batts are available in 15-inch widths for 16-inch framing and 23-inch widths for 24-inch framing. Spray foam insulation is an alternative that fills cavities completely and air-seals simultaneously but costs 2 to 4 times more than batts.",
+  nextSteps: [
+    { label: "Drywall Sheet Calculator", href: "/calculators/insulation-drywall/drywall-calculator/" },
+    { label: "Exterior Sheathing Calculator", href: "/calculators/wall-framing/exterior-sheathing-calculator/" },
+  ],
   installationTips: [
     "Fill cavities completely — compressed or gapped insulation loses R-value.",
     "Do not leave gaps around electrical boxes and pipes.",
@@ -1694,6 +1849,10 @@ const drywallCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Drywall (also called gypsum board, wallboard, or by the brand name Sheetrock) is the standard interior wall and ceiling finish material. Sheets are 4 feet wide and come in 8, 10, and 12-foot lengths, with 4x8 (32 sq ft) being the most common. Standard 1/2-inch drywall is used for walls, while 5/8-inch Type X (fire-rated) is required for garage-to-house walls, ceilings below livable space, and many multi-family assemblies. Lightweight drywall (UltraLight by GP, LightRock by CertainTeed) weighs 20-25% less than standard boards and is much easier to handle on ceilings. Moisture-resistant drywall (green board or purple board) is used in bathrooms and kitchens. Cement board (Durock, Hardiebacker) is required behind tile in wet areas like showers. Standard 1/2-inch 4x8 sheets cost $10 to $15 each, while 5/8-inch Type X costs $13 to $18 each. Longer sheets (4x12) reduce the number of end joints but are heavier and harder to handle.",
+  nextSteps: [
+    { label: "Drywall Screw Calculator", href: "/calculators/insulation-drywall/drywall-screw-calculator/" },
+    { label: "Joint Compound Calculator", href: "/calculators/insulation-drywall/joint-compound-calculator/" },
+  ],
   installationTips: [
     "Hang ceilings first, then walls.",
     "Stagger joints — no H-joints.",
@@ -1731,6 +1890,10 @@ const drywallScrewCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Drywall screws are specially designed fasteners with a bugle head that sits flush with the drywall surface without tearing the paper face. Two thread types are available: coarse-thread for wood framing (by far the most common in residential construction) and fine-thread for metal stud framing. Standard lengths are 1-1/4 inches for 1/2-inch drywall on walls, 1-5/8 inches for 5/8-inch drywall and for ceiling applications (the extra length provides better holding power against gravity), and 3 inches for double-layer drywall assemblies. Screws are sold in 1-pound boxes (roughly 150 screws), 5-pound boxes, and 25-pound buckets. A 1-pound box costs $5 to $8, while 25-pound buckets run $30 to $50 and are the most economical for large jobs. Phillips head is standard, but square-drive (Robertson) screws are gaining popularity for their better bit engagement. Always use an auto-feed screw gun or a standard drill with a dimple (depth-setting) bit for consistent screw depth.",
+  nextSteps: [
+    { label: "Drywall Sheet Calculator", href: "/calculators/insulation-drywall/drywall-calculator/" },
+    { label: "Joint Compound Calculator", href: "/calculators/insulation-drywall/joint-compound-calculator/" },
+  ],
   installationTips: [
     "Use an auto-feed screw gun or a dimpler bit on a standard drill.",
     "Screws should dimple 1/32\" without breaking the paper.",
@@ -1767,6 +1930,11 @@ const jointCompoundCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Joint compound (also called mud) is the plaster-like material used to embed drywall tape over joints, fill screw holes, and create a smooth finish surface ready for paint. The main types are: all-purpose (premixed, ready to use, good for all coats), lightweight all-purpose (easier to sand, preferred for finish coats), topping compound (thinner, designed specifically for final coats), and setting-type compound (powder mixed with water, sets by chemical reaction and is very hard — good for tape coats and repairs). A standard 4.5-gallon bucket of premixed compound covers approximately 15 to 16 sheets of drywall over three coats (tape, fill, finish). Buckets cost $12 to $18 each. For large jobs, buy compound in 5-gallon boxes which are easier to load into a mud pan. Setting-type compounds (like Durabond or Easy Sand) come in 18-pound and 45-pound bags and are available in set times from 5 minutes to 90 minutes. Joint tape (paper or mesh) is used with the first coat to reinforce the joints.",
+  nextSteps: [
+    { label: "Drywall Sheet Calculator", href: "/calculators/insulation-drywall/drywall-calculator/" },
+    { label: "Drywall Screw Calculator", href: "/calculators/insulation-drywall/drywall-screw-calculator/" },
+    { label: "Paint Coverage Calculator", href: "/calculators/finishing/paint-coverage-calculator/" },
+  ],
   installationTips: [
     "Apply 3 coats: tape coat, second coat (thin out), finish coat.",
     "Sand between coats when fully dry.",
@@ -1807,6 +1975,10 @@ const framingNailCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Framing nails are the primary fastener used to assemble wood-frame structures. The standard framing nail is the 16d (3.5-inch) sinker or common nail, used for face-nailing studs through plates and connecting structural members. Pneumatic framing nailers use stick (21-degree, 28-degree, or 30-degree) or coil nails ranging from 3.1 to 3.5 inches in length. Nail types include bright (uncoated), vinyl-coated (sinkers, for easier driving), hot-dipped galvanized (for exterior and PT lumber), and stainless steel (for coastal and corrosive environments). A 30-pound box of 16d sinkers contains approximately 500 nails. Hand-drive nails are available but rarely used in modern framing due to the speed advantage of pneumatic nailers. The IRC prescribes a specific nailing schedule for each framing connection — for example, two 16d nails per stud end through the plate, and three 16d nails per rim joist connection. Framing nails cost $40 to $60 per 30-pound box, or $30 to $50 per case of collated strip nails for pneumatic guns.",
+  nextSteps: [
+    { label: "Stud Calculator", href: "/calculators/wall-framing/stud-calculator/" },
+    { label: "Joist Hanger Calculator", href: "/calculators/hardware/joist-hanger-calculator/" },
+  ],
   installationTips: [
     "End nail through plates into studs (2 nails per end).",
     "Toenail extra studs at corners and openings.",
@@ -1841,6 +2013,10 @@ const joistHangerCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Joist hangers are galvanized steel connectors that support the ends of floor joists, ceiling joists, or rafters where they frame into a beam, header, or ledger board. The most common residential models are the Simpson Strong-Tie LUS series (for dimensional lumber) and the LB series (light-capacity applications). Hangers are sized to match the exact joist dimensions — LUS26 for 2x6, LUS28 for 2x8, LUS210 for 2x10, and LUS212 for 2x12. For engineered I-joists, use the manufacturer-specified hanger (like the IUS series). Each hanger has a rated load capacity that assumes all nail holes are filled with the correct joist hanger nails (1.5-inch x 10-gauge short stocky nails, not regular 16d nails). Individual hangers cost $1.50 to $5.00 each depending on size. Joist hanger nails are sold separately in 1-pound and 10-pound boxes. For specialty connections like skewed joists, sloped rafters, or double joists, Simpson offers adjustable and heavy-duty hanger models.",
+  nextSteps: [
+    { label: "Floor Joist Calculator", href: "/calculators/floor-framing/floor-joist-calculator/" },
+    { label: "Framing Nail Calculator", href: "/calculators/hardware/framing-nail-calculator/" },
+  ],
   installationTips: [
     "Use all the nail holes — every nail matters for rated load capacity.",
     "Use joist hanger nails (1.5\" x 10d) — do NOT use regular 16d nails.",
@@ -1876,6 +2052,10 @@ const hurricaneTieCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Hurricane ties (also called rafter ties or wind clips) are galvanized steel connectors that mechanically fasten rafters or trusses to the wall top plate, creating a continuous load path from the roof to the foundation that resists wind uplift forces. Common models include the Simpson H2.5A (540 lbs uplift, for standard rafter-to-plate connections), H10A (1,330 lbs uplift, heavy-duty), and META20 (twist strap for truss-to-plate). Hurricane ties are required by the IRC in areas with design wind speeds of 90 mph or greater, which includes the entire Gulf Coast, Atlantic Coast, and much of the Midwest. The 2018 and later IRC editions effectively require continuous load path connections in all areas. Ties cost $0.50 to $2.50 each and must be installed with the correct nails (Simpson 10d x 1.5-inch or 16d sinkers, depending on the model). In coastal areas, use stainless steel or ZMAX-coated ties to resist salt air corrosion.",
+  nextSteps: [
+    { label: "Roof Truss Calculator", href: "/calculators/roofing/truss-calculator/" },
+    { label: "Rafter Calculator", href: "/calculators/roofing/rafter-calculator/" },
+  ],
   installationTips: [
     "Nail all specified holes with proper 10d or 16d nails.",
     "Use galvanized or stainless in coastal areas.",
@@ -1939,6 +2119,10 @@ const paintCoverageCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Interior latex paint is the standard finish material for walls and ceilings in residential construction. Coverage rates vary by paint quality and type — flat/matte finishes typically cover 350 to 400 square feet per gallon, while satin, semi-gloss, and high-gloss finishes cover 300 to 350 square feet per gallon due to their thicker consistency. Premium paints from brands like Benjamin Moore Regal Select, Sherwin-Williams Duration, and Behr Marquee often advertise one-coat coverage, but most professional painters recommend two coats for even color and full hide, especially when changing colors. A gallon of paint weighs approximately 10 to 12 pounds when wet. Standard one-gallon cans cost $25 to $70 depending on quality tier, while five-gallon buckets offer significant savings per gallon (typically 15-20% less per gallon). For large projects, buying five-gallon buckets also ensures color consistency across all walls — even within the same color code, individual gallon cans can vary slightly in hue. Ceiling paint is usually a flat white formulated with higher solids for better spatter resistance when rolling overhead. Primer is strongly recommended before the topcoat on new drywall, repaired surfaces, and when making dramatic color changes.",
+  nextSteps: [
+    { label: "Paint Cost Calculator", href: "/calculators/finishing/paint-cost-calculator/" },
+    { label: "Primer Calculator", href: "/calculators/finishing/primer-calculator/" },
+  ],
   installationTips: [
     "Use a 3/8\" nap roller for smooth walls, 1/2\" nap for light texture, and 3/4\" nap for heavy texture or stucco.",
     "Cut in edges with a 2.5\" angled brush before rolling the field.",
@@ -2022,6 +2206,10 @@ const paintCostCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Paint cost varies significantly by quality tier. Economy paints ($20 to $30 per gallon) like Behr Flat and Glidden Essentials are suitable for rental properties, ceilings, and areas where appearance is not critical — they require more coats and have shorter lifespans. Standard paints ($30 to $40 per gallon) like Behr Premium Plus, Valspar Signature, and Sherwin-Williams SuperPaint offer good coverage and durability for most residential applications. Premium paints ($45 to $55 per gallon) like Benjamin Moore Regal Select and Sherwin-Williams Duration provide superior coverage (often true one-coat hide), excellent washability, and a 15+ year lifespan on interior walls. Ultra-premium lines ($60 to $80 per gallon) like Benjamin Moore Aura and Sherwin-Williams Emerald feature the highest pigment loads, self-priming formulas, and advanced color technology for the most demanding applications. Beyond paint, budget for supplies: a quality roller frame and covers ($10 to $15), angled brushes ($8 to $12 each), painter's tape ($5 to $8 per roll), drop cloths ($8 to $15), paint tray liners ($5), and extension poles for ceilings ($15 to $25). Professional painters typically charge $2 to $6 per square foot for interior painting, which includes labor, paint, and supplies.",
+  nextSteps: [
+    { label: "Paint Coverage Calculator", href: "/calculators/finishing/paint-coverage-calculator/" },
+    { label: "Primer Calculator", href: "/calculators/finishing/primer-calculator/" },
+  ],
   installationTips: [
     "Buy all your paint at once to ensure color consistency across the batch.",
     "Invest in quality rollers and brushes — they make a noticeable difference in finish quality.",
@@ -2076,6 +2264,10 @@ const primerCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Primer is a preparatory coating applied before the topcoat paint to ensure proper adhesion, uniform sheen, and consistent color. Different surface types require different primer formulations. PVA (polyvinyl acetate) primer is the standard choice for new, unpainted drywall — it seals the porous gypsum surface so the topcoat does not absorb unevenly, which causes a blotchy appearance called flashing. PVA primer costs $12 to $18 per gallon and covers approximately 300 square feet per gallon on new drywall. For previously painted surfaces in good condition, a bonding primer or a paint-and-primer-in-one product is sufficient, covering up to 400 square feet per gallon. Bare wood surfaces require an oil-based or shellac-based primer to seal the grain and prevent tannin bleed-through, especially on knotty pine, cedar, and redwood — coverage is lower at around 250 square feet per gallon due to wood's absorbency. Stain-blocking primer (shellac-based like Zinsser BIN or oil-based like Kilz Original) is essential for covering water stains, smoke damage, crayon marks, and ink — these specialty primers have the lowest coverage at approximately 200 square feet per gallon but provide unmatched stain sealing. Popular primer brands include Kilz (Masterchem), Zinsser (Rust-Oleum), and Sherwin-Williams PrepRite. For best results, tint your primer close to the final topcoat color — most paint stores can add a small amount of colorant to white primer at no extra charge.",
+  nextSteps: [
+    { label: "Paint Coverage Calculator", href: "/calculators/finishing/paint-coverage-calculator/" },
+    { label: "Drywall Sheet Calculator", href: "/calculators/insulation-drywall/drywall-calculator/" },
+  ],
   installationTips: [
     "Apply primer with the same roller nap you plan to use for the topcoat.",
     "Allow primer to dry completely before topcoating — typically 1 to 2 hours for latex, 24 hours for oil-based.",
@@ -2134,6 +2326,10 @@ const lumberCostCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Dimensional lumber is the backbone of residential wood-frame construction in North America. Standard sizes like 2x4, 2x6, 2x8, 2x10, and 2x12 are milled from softwood species — primarily spruce, pine, and fir (SPF) — and graded for structural use. The actual dimensions of a 2x4 are 1.5 inches by 3.5 inches after surfacing and drying, and standard lengths run 8, 10, 12, 14, and 16 feet. Lumber is sold by the piece at retail home centers and by the thousand board feet (MBF) at wholesale lumberyards. Prices vary significantly by region, species, grade, and market conditions — the 2021-2022 lumber price spike saw 2x4x8 studs reach $12 or more per board, compared to the historical average of $3 to $5. When estimating lumber costs, always add 10-15% for waste, defective boards, and cutting losses. Pressure-treated lumber for ground contact or exterior use costs 50-100% more than untreated SPF. For structural applications, specify the correct grade (No. 2 and Better is standard for most framing) and verify the moisture content is appropriate for your climate. Lumber is typically stocked at nominal 15% MC (KD-HT) for interior framing use.",
+  nextSteps: [
+    { label: "Board Feet Calculator", href: "/calculators/hardware/board-feet-calculator/" },
+    { label: "Plywood Calculator", href: "/calculators/hardware/plywood-calculator/" },
+  ],
   installationTips: [
     "Inspect every board for crown, twist, and splits before installing.",
     "Install boards crown-up for joists and rafters.",
@@ -2182,6 +2378,10 @@ const boardFeetCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "A board foot (BF) is the standard unit of volume measurement for lumber in North America. One board foot equals a piece of wood 1 inch thick, 12 inches wide, and 1 foot long — or 144 cubic inches of wood. The formula is: Board Feet = (Thickness in inches x Width in inches x Length in feet) / 12. Board feet use nominal (not actual) dimensions, so a surfaced 2x6 is calculated as 2 x 6, not 1.5 x 5.5. This measurement is essential for purchasing hardwood lumber, which is almost always sold by the board foot rather than by the piece. Softwood framing lumber at retail stores is typically sold by the piece, but wholesale lumberyards and sawmills price it by the thousand board feet (MBF). Common hardwood prices per board foot: red oak $4-7, white oak $5-9, maple $5-8, cherry $6-10, walnut $8-15, and exotic species $10-25+. When buying rough-sawn hardwood for furniture or cabinetry, account for waste from surfacing (planing removes 1/8 to 1/4 inch per face), edge jointing, and defect cutting — add 25-40% to your calculated board footage to arrive at the purchase quantity.",
+  nextSteps: [
+    { label: "Lumber Cost Calculator", href: "/calculators/hardware/lumber-cost-calculator/" },
+    { label: "Plywood Calculator", href: "/calculators/hardware/plywood-calculator/" },
+  ],
   installationTips: [
     "Use nominal (not actual) dimensions when calculating board feet.",
     "Add 25-40% waste factor when buying rough-sawn hardwood for furniture projects.",
@@ -2238,6 +2438,11 @@ const plywoodCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Plywood is an engineered wood panel made from thin layers (plies or veneers) of wood glued together with adjacent layers having their grain rotated 90 degrees. This cross-laminated construction gives plywood superior strength, stiffness, and dimensional stability compared to solid wood of the same thickness. Standard plywood sheets measure 4 feet by 8 feet (32 square feet) and are available in thicknesses from 1/4 inch to 3/4 inch. Common grades include CDX (construction grade, suitable for sheathing and subflooring), BC sanded (one smooth face for cabinetry and shelving), AC (one premium face), and marine grade (waterproof glue, no voids). Plywood is used extensively in residential construction for roof sheathing, wall sheathing, subflooring, cabinet boxes, furniture, and finish applications. For structural applications, use panels stamped with the APA (Engineered Wood Association) grade mark. The most common structural plywood is 1/2-inch CDX for wall sheathing and 3/4-inch tongue-and-groove for subflooring. Always store plywood flat and indoors — panels stored on edge or exposed to moisture will warp permanently. When cutting, use a fine-tooth blade (80-tooth for table saw) to minimize tear-out on the veneer face.",
+  nextSteps: [
+    { label: "Lumber Cost Calculator", href: "/calculators/hardware/lumber-cost-calculator/" },
+    { label: "Board Feet Calculator", href: "/calculators/hardware/board-feet-calculator/" },
+    { label: "OSB Panel Calculator", href: "/calculators/floor-framing/osb-panel-calculator/" },
+  ],
   installationTips: [
     "Leave a 1/8-inch gap between sheets to allow for thermal expansion.",
     "Install with the face grain perpendicular to supports (joists or studs).",
@@ -2289,6 +2494,11 @@ const deckBoardCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Deck boards are the visible surface of your deck and take the most wear from foot traffic, furniture, weather, and UV exposure. The most common material choices are pressure-treated lumber, cedar, redwood, and composite decking.\n\nPressure-treated southern yellow pine (SYP) is the most popular choice for budget-conscious projects. Standard 5/4x6 (1 inch thick by 5.5 inches wide) deck boards cost $1.50 to $3.00 per linear foot and are rated for ground contact when treated to 0.40 pcf retention. Boards are available in 8, 10, 12, 16, and 20-foot lengths. The treatment protects against rot and termites but requires annual sealing or staining to prevent graying, warping, and splitting. Expect a 10 to 15-year lifespan with proper maintenance.\n\nCedar and redwood are naturally rot-resistant softwoods prized for their appearance. Western red cedar deck boards run $3.00 to $5.00 per linear foot, while redwood ranges from $5.00 to $8.00. Both species are softer than treated pine and dent more easily, but they are dimensionally stable and less prone to warping. Cedar decks last 15 to 20 years with periodic sealing.\n\nComposite decking (Trex, TimberTech, Fiberon) is made from wood fibers and recycled plastic. Prices range from $4.00 to $12.00 per linear foot depending on the product line. Composites never need staining, resist rot and insects, and carry 25 to 50-year warranties. However, they require specific fastening systems, expand and contract with temperature, and can get very hot in direct sunlight. Most composite boards are 12, 16, or 20 feet long.\n\nBoard spacing is critical: maintain a 1/8 to 1/4-inch gap between boards for drainage and ventilation. For pressure-treated boards installed wet, butt the boards tight - they will shrink as they dry. For kiln-dried and composite boards, leave the full gap during installation.",
+  nextSteps: [
+    { label: "Deck Footing Calculator", href: "/calculators/outdoor/deck-footing-calculator/" },
+    { label: "Deck Railing Calculator", href: "/calculators/outdoor/deck-railing-calculator/" },
+    { label: "Deck Stair Calculator", href: "/calculators/outdoor/deck-stair-calculator/" },
+  ],
   installationTips: [
     "Start the first board perfectly straight and square to the house - every subsequent board follows this line.",
     "Pre-drill the ends of boards within 2 inches of the edge to prevent splitting, especially with treated lumber.",
@@ -2356,6 +2566,10 @@ const deckFootingCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Deck footings are concrete piers that transfer the weight of the deck structure and its live loads to the ground below the frost line. Without proper footings, freeze-thaw cycles will heave the deck, causing it to shift, crack, and separate from the house.\n\nThe two most common footing methods are poured concrete piers using Sonotubes (cardboard form tubes) and precast concrete deck blocks (only suitable for freestanding ground-level decks in some jurisdictions). For any elevated or attached deck, poured footings extending below the frost line are required by building code.\n\nStandard residential deck footings use 10-inch or 12-inch diameter Sonotubes. The depth depends on the local frost line - 36 to 48 inches in northern states, 12 to 24 inches in the south. Each 12-inch diameter by 42-inch deep footing requires approximately 2.3 cubic feet (0.085 cubic yards) of concrete. For a deck with 9 footings, you need about 0.8 cubic yards total - roughly 35 bags of 80 lb concrete mix.\n\nPost spacing depends on beam size and species. For a standard 2-ply 2x8 treated beam, maximum post spacing is 8 feet. For 2-ply 2x10 beams, spacing can increase to 10 feet. For 2-ply 2x6 beams, keep spacing at 6 feet or less. Beam rows (running perpendicular to joists) are typically spaced 6 to 8 feet apart depending on joist size and span tables.\n\nPost-to-footing connections require approved hardware. Set a J-bolt or post base anchor in the wet concrete, then attach the post with a Simpson ABA or ABU post base. Never embed wood posts directly in concrete - this traps moisture and causes rot at the most critical structural connection in the deck.\n\nFooting concrete should be at least 3,500 PSI and be poured in dry conditions. Allow 24 to 48 hours of cure time before loading footings with posts and framing.",
+  nextSteps: [
+    { label: "Deck Board Calculator", href: "/calculators/outdoor/deck-board-calculator/" },
+    { label: "Concrete Column Calculator", href: "/calculators/foundation/concrete-column-calculator/" },
+  ],
   installationTips: [
     "Dig footing holes at least 6 inches below the frost line - check your local building code for the exact depth required.",
     "Use Sonotubes (cardboard form tubes) to create clean, round footings with a consistent diameter.",
@@ -2422,6 +2636,10 @@ const deckRailingCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Deck railing is a critical safety feature required by building code on any deck surface 30 inches or more above grade (24 inches in some jurisdictions). The International Residential Code (IRC) specifies a minimum railing height of 36 inches for residential decks and 42 inches for commercial or multi-family structures.\n\nRailing systems consist of four main components: posts, top rail, bottom rail, and balusters (spindles). Posts are typically 4x4 pressure-treated lumber or aluminum, spaced no more than 6 feet apart (8 feet maximum in some codes). Posts must be securely bolted to the deck frame - never just screwed to the deck boards or fascia. Use 1/2-inch carriage bolts or approved post-mount hardware like Simpson DTT2Z tension ties.\n\nBalusters must be spaced so that a 4-inch sphere cannot pass between them. For standard 1.5-inch square balusters, this means roughly 4 inches on center. The IRC also requires that the gap between the deck surface and the bottom rail be less than 4 inches, and that no opening in the railing allows a 4-inch sphere to pass through at any point.\n\nTop and bottom rails are typically made from 2x4 pressure-treated lumber, composite rail kits, or aluminum extrusions. A 2x6 flat cap on top of the posts creates a comfortable drink rail. Most composite railing systems (Trex, TimberTech, Deckorators) come as kits with pre-cut balusters, rail sections, and post sleeves in 6-foot and 8-foot lengths.\n\nWood railing materials cost $15 to $30 per linear foot installed. Composite railing systems run $30 to $60 per linear foot. Aluminum and cable railing systems range from $50 to $100 per linear foot. For a typical 12x16-foot deck (approximately 40 linear feet of railing after subtracting the house side), wood railing costs $600 to $1,200 and composite costs $1,200 to $2,400.\n\nRailing is one of the most common deck code violations. Inspectors frequently flag insufficient post attachment, excessive baluster spacing, below-minimum railing height, and gaps exceeding 4 inches between the deck surface and bottom rail.",
+  nextSteps: [
+    { label: "Deck Board Calculator", href: "/calculators/outdoor/deck-board-calculator/" },
+    { label: "Deck Stair Calculator", href: "/calculators/outdoor/deck-stair-calculator/" },
+  ],
   installationTips: [
     "Bolt railing posts through the rim joist or deck frame with 1/2-inch carriage bolts - never attach posts with screws or lag bolts alone.",
     "Use a spacer jig (cut a 4-inch block of wood) to maintain consistent baluster spacing across all sections.",
@@ -2490,6 +2708,11 @@ const deckStairCalculator: CalculatorConfig = {
   ],
   materialInfo:
     "Deck stairs connect the deck surface to the ground and are one of the most structurally critical and code-regulated elements of a deck. Building code strictly governs riser height, tread depth, stairway width, headroom, handrail requirements, and landing dimensions.\n\nThe two standard approaches to deck stair construction are cut stringers and housed (routed) stringers. Cut stringers are the most common residential method - a 2x12 board is notched in a sawtooth pattern to support the treads and risers. Each cut removes material from the board, so the effective throat (remaining wood behind the cuts) must be at least 3.5 inches to maintain structural integrity.\n\nThe IRC specifies a maximum riser height of 7-3/4 inches and a minimum tread depth of 10 inches. The ideal residential stair has a 7-inch rise and 11-inch run, which produces a comfortable 37-degree angle. All risers must be the same height, with a maximum 3/8-inch variation between any two risers in the same flight. This means you cannot simply divide the deck height by a convenient number - you must calculate the exact rise per step.\n\nStringer spacing follows the same rules as joist spacing: 16 inches on center for standard loads. A 36-inch wide stair typically needs 3 stringers (one on each side plus one in the center). For stair widths over 36 inches, add a stringer for each additional 16 inches. Stringers must be made from pressure-treated lumber since they rest on or near the ground.\n\nTread boards are typically two 5/4x6 or 2x6 deck boards per step, with a 1/4-inch gap between them and a 1-inch nosing overhang at the front. Riser boards are optional by code in many areas but recommended to prevent children from climbing through the stairs. When used, risers are typically 1x8 boards.\n\nStair stringers must land on a concrete pad, footing, or compacted gravel base - never directly on soil. A 4-inch concrete pad at least 36 inches wide and 36 inches deep (from the bottom riser) provides a solid, code-compliant landing. The landing must be level and extend at least the width of the stairs in the direction of travel.",
+  nextSteps: [
+    { label: "Deck Board Calculator", href: "/calculators/outdoor/deck-board-calculator/" },
+    { label: "Deck Railing Calculator", href: "/calculators/outdoor/deck-railing-calculator/" },
+    { label: "Concrete Steps Calculator", href: "/calculators/foundation/concrete-steps-calculator/" },
+  ],
   installationTips: [
     "Use a framing square with stair gauges to mark consistent 7-inch rise and 11-inch run cuts on the stringer.",
     "Cut stringers from 2x12 pressure-treated lumber - the remaining throat after cuts must be at least 3.5 inches.",

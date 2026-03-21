@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import Link from "next/link";
 import Breadcrumb from "@/components/layout/Breadcrumb";
 import AdBlock from "@/components/calculators/AdBlock";
 import FAQSection from "@/components/calculators/FAQSection";
@@ -14,6 +15,11 @@ interface FAQ {
   answer: string;
 }
 
+interface NextStep {
+  label: string;
+  href: string;
+}
+
 interface CalculatorShellProps {
   title: string;
   slug: string;
@@ -22,6 +28,7 @@ interface CalculatorShellProps {
   categorySlug: string;
   howToUse: string[];
   materialInfo: string;
+  nextSteps?: NextStep[];
   installationTips: string[];
   commonMistakes: string[];
   faqs: FAQ[];
@@ -36,6 +43,7 @@ export default function CalculatorShell({
   categorySlug,
   howToUse,
   materialInfo,
+  nextSteps,
   installationTips,
   commonMistakes,
   faqs,
@@ -123,6 +131,22 @@ export default function CalculatorShell({
           <section className="mb-10">
             <h2 className="text-xl font-bold text-gray-900 mb-3">{t.calculator.aboutMaterialHeading}</h2>
             <p className="text-gray-600 leading-relaxed">{materialInfo}</p>
+            {nextSteps && nextSteps.length > 0 && (
+              <div className="mt-4 p-4 bg-orange-50 border border-orange-200 rounded-lg">
+                <p className="text-sm font-semibold text-orange-800 mb-2">{t.calculator.nextStepsHeading}</p>
+                <div className="flex flex-wrap gap-2">
+                  {nextSteps.map((step) => (
+                    <Link
+                      key={step.href}
+                      href={step.href}
+                      className="inline-flex items-center gap-1 px-3 py-1.5 bg-white border border-orange-200 rounded-lg text-sm font-medium text-orange-700 hover:border-orange-400 hover:bg-orange-50 transition-all"
+                    >
+                      {step.label} {"\u2192"}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
           </section>
 
           {/* Installation tips */}

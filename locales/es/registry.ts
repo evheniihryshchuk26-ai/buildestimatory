@@ -5,6 +5,7 @@ export interface CalculatorSEOContent {
   disclaimer: string;
   howToUse: string[];
   materialInfo: string;
+  nextSteps?: { label: string; href: string }[];
   installationTips: string[];
   commonMistakes: string[];
   faqs: { question: string; answer: string }[];
@@ -24,6 +25,11 @@ export const anchorBoltCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "Los pernos de anclaje (tipo J o tipo L) son varillas de acero roscadas que se embeben en la cimentación de concreto para fijar la placa de apoyo de madera. La norma constructiva exige pernos cada 1.80 m como máximo y a no más de 30 cm de cada esquina o junta de placa. En Latinoamérica, los diámetros más comunes son 12 mm (1/2\") y 16 mm (5/8\"), siendo el de 12 mm el estándar mínimo para construcción residencial. Los pernos tipo J son los más utilizados por su facilidad de colocación en el concreto fresco, mientras que los tipo L ofrecen mayor resistencia al arrancamiento. Para zonas sísmicas — comunes en México, Colombia, Chile y Perú — se recomienda usar pernos de 16 mm con arandelas de mayor superficie. El costo promedio en la región oscila entre $15 y $30 MXN por perno, dependiendo del diámetro y acabado. Es fundamental que los pernos cumplan con la especificación ASTM A307 o equivalente en norma local para garantizar la resistencia requerida.",
+  nextSteps: [
+    { label: "Calculadora de Sello de Solera", href: "/calculators/foundation/sill-seal-calculator/" },
+    { label: "Calculadora de Placa de Apoyo Tratada", href: "/calculators/foundation/sill-plate-calculator/" },
+    { label: "Calculadora de Concreto", href: "/calculators/foundation/concrete-calculator/" },
+  ],
   installationTips: [
     "Coloca los pernos antes de que el concreto fragüe por completo, mientras aún esté trabajable.",
     "Usa una plantilla o guía para mantener un espaciado y alineación uniformes.",
@@ -78,6 +84,11 @@ export const sillSealCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "El sello de solera es un material tipo junta de espuma de polietileno expandido que se coloca entre la cimentación de concreto y la placa de apoyo de madera tratada a presión. Su función principal es prevenir la infiltración de aire, la absorción de humedad por capilaridad y la entrada de insectos y plagas. Viene en rollos de diferentes anchos — los más comunes son de 9 cm, 14 cm y 19 cm, correspondientes a las secciones estándar de madera (38x89 mm, 38x140 mm y 38x184 mm). El espesor estándar es de 6 mm, aunque existe de 12 mm para superficies de cimentación irregulares. En Latinoamérica, el sello de solera puede encontrarse como \"cinta de neopreno\" o \"sello antihumedad\" en ferreterías especializadas, con un costo aproximado de $80 a $200 MXN por rollo de 15 metros. Es un material económico que genera un gran ahorro energético a largo plazo al eliminar la infiltración de aire en la base del muro.",
+  nextSteps: [
+    { label: "Calculadora de Placa de Apoyo Tratada", href: "/calculators/foundation/sill-plate-calculator/" },
+    { label: "Calculadora de Pernos de Anclaje", href: "/calculators/foundation/anchor-bolt-calculator/" },
+    { label: "Calculadora de Viga Perimetral", href: "/calculators/floor-framing/rim-joist-calculator/" },
+  ],
   installationTips: [
     "Desenrolla el sello de solera a lo largo de la cimentación justo antes de colocar las placas de apoyo.",
     "Traslapa las uniones al menos 15 cm.",
@@ -130,6 +141,11 @@ export const sillPlateCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "Las placas de apoyo tratadas a presión son el elemento horizontal más bajo del entramado de muros y constituyen la conexión estructural entre la cimentación de concreto y la estructura de madera. El tratamiento a presión con CCA, ACQ o cobre micronizado protege contra la pudrición y el ataque de insectos xilófagos como termitas y polillas. En Latinoamérica, la madera tratada se consigue en aserraderos especializados o se puede mandar a tratar en plantas industriales. Las secciones estándar son 38x89 mm para muros interiores y 38x140 mm para muros exteriores, en largos comerciales de 2.44 m, 3.05 m, 3.66 m y 4.88 m. El costo de la madera tratada es entre un 30% y 50% mayor que la madera sin tratamiento, pero es una inversión obligatoria para la durabilidad de la estructura. En climas tropicales húmedos de México, Centroamérica y el Caribe, se recomienda tratamiento con retención de químico más alta (UC4A o superior).",
+  nextSteps: [
+    { label: "Calculadora de Pernos de Anclaje", href: "/calculators/foundation/anchor-bolt-calculator/" },
+    { label: "Calculadora de Sello de Solera", href: "/calculators/foundation/sill-seal-calculator/" },
+    { label: "Calculadora de Viga Perimetral", href: "/calculators/floor-framing/rim-joist-calculator/" },
+  ],
   installationTips: [
     "Usa madera tratada a presión con clasificación adecuada para contacto con el suelo.",
     "Pre-perfora los orificios para los pernos de anclaje antes de colocar la placa sobre la cimentación.",
@@ -184,6 +200,12 @@ export const concreteCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "El concreto (también llamado hormigón en algunos países de Latinoamérica) es una mezcla de cemento Portland, arena, grava (agregado) y agua que fragua hasta convertirse en un material sólido como la roca. Se comercializa en dos formas: bultos de concreto premezclado y concreto premezclado entregado por camión revolvedora (olla). Los bultos de cemento más comunes en Latinoamérica son de 50 kg (Cemex, Holcim, Argos) y rinden aproximadamente 0.035 m³ cuando se mezclan con arena y grava en proporción 1:2:3. Para trabajos pequeños como postes de cerca o bases de buzón, los bultos son prácticos. Para cualquier volumen mayor a 1 m³, el concreto premezclado por camión es mucho más eficiente y produce un resultado más consistente.\n\nLa resistencia del concreto se mide en kg/cm² (o MPa) a los 28 días de curado. Los grados residenciales más comunes son: f'c=150 kg/cm² para aplicaciones no estructurales como banquetas y patios, f'c=200 kg/cm² para cimentaciones residenciales estándar y losas, y f'c=250 kg/cm² para pisos de cochera, zapatas estructurales y áreas con cargas pesadas. Grados superiores (f'c=300–350 kg/cm²) se especifican para obra comercial o aplicaciones especiales.\n\nEl concreto premezclado cuesta entre $1,800 y $2,800 MXN por metro cúbico entregado, dependiendo de la resistencia, ubicación y tamaño del pedido. La mayoría de los proveedores requieren un pedido mínimo de 3 m³, y cobran cargos adicionales por pedidos menores. Los bultos de cemento cuestan entre $180 y $250 MXN por bulto de 50 kg, lo que resulta significativamente más caro por metro cúbico que el premezclado. La malla electrosoldada, varilla corrugada y otros refuerzos agregan $50 a $150 MXN por metro cuadrado al costo total.",
+  nextSteps: [
+    { label: "Calculadora de Losa de Concreto", href: "/calculators/foundation/concrete-slab-calculator/" },
+    { label: "Calculadora de Zapata de Concreto", href: "/calculators/foundation/concrete-footing-calculator/" },
+    { label: "Calculadora de Columna de Concreto", href: "/calculators/foundation/concrete-column-calculator/" },
+    { label: "Calculadora de Escalones de Concreto", href: "/calculators/foundation/concrete-steps-calculator/" },
+  ],
   installationTips: [
     "Construye las cimbras niveladas, a plomo y bien arriostradas antes de que llegue el concreto.",
     "Humedece el terreno con agua antes de colar para evitar que el suelo seco absorba la humedad del concreto demasiado rápido.",
@@ -246,6 +268,11 @@ export const concreteSlabCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "Una losa de concreto es una superficie plana y horizontal colada directamente sobre un terreno preparado, utilizada para patios, pisos de cochera, rampas de acceso, pisos de bodega y bases de construcción. El espesor estándar residencial es de 10 cm para áreas peatonales como andadores y patios. Cocheras y rampas vehiculares deben tener de 12 a 15 cm de espesor para soportar el peso de los vehículos.\n\nLa preparación del terreno es crítica para la durabilidad de la losa. El suelo debe estar compactado, nivelado y libre de materia orgánica. Una capa de 10 cm de grava compactada (tepetate o material de banco) proporciona drenaje y una base estable. Se recomienda una membrana de polietileno calibre 600 entre la grava y el concreto para prevenir la migración de humedad, especialmente en losas interiores de espacios habitables.\n\nLas opciones de refuerzo para losas incluyen malla electrosoldada 6x6-10/10, varilla corrugada del #3 o #4 a cada 20–30 cm en ambas direcciones, o fibra de polipropileno mezclada en el concreto. Las juntas de control (cortes con disco o juntas moldeadas) deben colocarse a intervalos no mayores de 2 a 3 veces el espesor de la losa — para una losa de 10 cm, juntas cada 2.5 a 3 metros.\n\nEl concreto para losas se especifica típicamente con resistencia f'c=200 a f'c=250 kg/cm² con un revenimiento de 10 cm. El concreto premezclado por camión cuesta entre $1,800 y $2,800 MXN por metro cúbico entregado. Los bultos de cemento de 50 kg cuestan entre $180 y $250 MXN cada uno, lo que resulta considerablemente más caro por metro cúbico — práctico solo para colados muy pequeños menores a 0.5 m³.",
+  nextSteps: [
+    { label: "Calculadora de Concreto", href: "/calculators/foundation/concrete-calculator/" },
+    { label: "Calculadora de Zapata de Concreto", href: "/calculators/foundation/concrete-footing-calculator/" },
+    { label: "Calculadora de Pernos de Anclaje", href: "/calculators/foundation/anchor-bolt-calculator/" },
+  ],
   installationTips: [
     "Compacta el terreno y agrega 10 cm de grava como base antes de colar — esto previene asentamientos y grietas.",
     "Coloca las cimbras con estacas cada 60–90 cm y verifica el nivel; aplica aceite a las cimbras para un desmoldeo fácil.",
@@ -299,6 +326,11 @@ export const concreteFootingCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "Las zapatas de concreto son la base estructural que transfiere las cargas del edificio al suelo. Se ubican bajo el nivel del terreno y soportan muros de cimentación, columnas y postes. Existen dos tipos principales: zapatas corridas (de franja) que recorren la longitud de un muro, y zapatas aisladas que soportan columnas o postes individuales.\n\nLas zapatas corridas para construcción residencial tienen típicamente de 30 a 60 cm de ancho y de 20 a 30 cm de profundidad, con el ancho siendo al menos el doble del espesor del muro que soportan. Para un muro de block de 15 cm, la zapata debe tener al menos 30 cm de ancho y 20 cm de profundidad. Las zapatas aisladas para columnas son generalmente de 60x60 cm o mayores, dependiendo de la carga.\n\nEl fondo de la zapata debe extenderse por debajo del nivel de desplante especificado en la normativa local, que varía según la zona sísmica, el tipo de suelo y las condiciones del terreno. Las zapatas deben apoyarse sobre suelo firme no alterado o debidamente compactado con capacidad de carga adecuada.\n\nEl refuerzo para zapatas corridas consiste en dos varillas del #3 o #4 corriendo horizontalmente cerca del fondo, con bastones verticales que se extienden hacia el muro de cimentación a intervalos de 1.20 m. Las zapatas aisladas llevan una parrilla de varilla del #3 a cada 15–20 cm en ambas direcciones. El concreto para zapatas se especifica con resistencia f'c=200 a f'c=250 kg/cm² y debe tener un revenimiento de 10 a 12 cm para trabajabilidad en la zanja.\n\nEl concreto premezclado por camión es el método estándar para zapatas. El costo es de $1,800 a $2,800 MXN por metro cúbico. Una casa típica de 140 m² con perímetro de 50 metros lineales de zapata corrida de 40 cm de ancho por 20 cm de profundidad requiere aproximadamente 4 m³ de concreto.",
+  nextSteps: [
+    { label: "Calculadora de Concreto", href: "/calculators/foundation/concrete-calculator/" },
+    { label: "Calculadora de Losa de Concreto", href: "/calculators/foundation/concrete-slab-calculator/" },
+    { label: "Calculadora de Columna de Concreto", href: "/calculators/foundation/concrete-column-calculator/" },
+  ],
   installationTips: [
     "Excava la zanja al ancho y profundidad exactos especificados en los planos — la sobre-excavación desperdicia concreto y dinero.",
     "Nivela el fondo de la zanja con pisón manual antes de colar — una base desnivelada causa asentamientos diferenciales.",
@@ -352,6 +384,11 @@ export const concreteColumnCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "Las columnas de concreto (también llamadas pilares, pilas o dados) son soportes cilíndricos de concreto utilizados para cimentación de terrazas, bases de postes, soportes de porches y pilares estructurales ligeros. Se forman usando tubos de cartón rígido (tipo Sonotube) o moldes metálicos que se colocan en el terreno, se llenan de concreto y se retiran después del curado.\n\nLos diámetros comunes para trabajo residencial son 20 cm (cargas ligeras como barandales y cobertizos pequeños), 25 cm (postes estándar de terraza y cargas moderadas) y 30 cm (vigas de terraza pesadas, columnas de pórtico y pilares estructurales). Tamaños mayores (35, 40 y 60 cm) están disponibles para aplicaciones comerciales y estructurales pesadas.\n\nLa profundidad de la columna debe extenderse por debajo del nivel de desplante, que varía según la zona sísmica y el tipo de suelo. La columna se apoya sobre un dado de cimentación en el fondo, que puede ser una base preformada o una sección ensanchada de concreto colada antes de la columna. Algunas normativas requieren un ensanchamiento tipo campana en la base que aumenta el área de apoyo.\n\nEl refuerzo para columnas de concreto consiste típicamente en una o dos varillas del #3 o #4 colocadas verticalmente por el centro de la columna, con un ancla de poste fijada en la parte superior mientras el concreto está fresco. La varilla se extiende desde 7 cm arriba del dado de cimentación hasta 5 cm debajo de la parte superior de la columna.\n\nLos tubos tipo Sonotube cuestan entre $150 y $500 MXN cada uno para longitudes de 2.5 a 3.5 m en diámetros residenciales estándar. El concreto se mezcla mejor con bultos de 50 kg para trabajos de columnas — cada bulto con proporción 1:2:3 rinde aproximadamente 0.035 m³. Una columna de 30 cm de diámetro a 1.20 m de profundidad usa aproximadamente 0.085 m³ de concreto (unos 2.5 bultos de cemento con arena y grava).",
+  nextSteps: [
+    { label: "Calculadora de Concreto", href: "/calculators/foundation/concrete-calculator/" },
+    { label: "Calculadora de Zapata de Concreto", href: "/calculators/foundation/concrete-footing-calculator/" },
+    { label: "Calculadora de Escalones de Concreto", href: "/calculators/foundation/concrete-steps-calculator/" },
+  ],
   installationTips: [
     "Excava el hoyo de 10 a 15 cm más ancho que el tubo para permitir el relleno y la plomada del tubo.",
     "Coloca el tubo sobre una base plana (dado pre-colado o grava compactada) y apuntalado perfectamente a plomo con puntales de madera.",
@@ -405,6 +442,11 @@ export const concreteStepsCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "Los escalones de concreto (también llamados escaleras de concreto o escalinatas) son estructuras sólidas coladas en sitio construidas en accesos de edificios, entre cambios de nivel y para acceso a sótanos. A diferencia de las escaleras de madera o prefabricadas, las escaleras de concreto colado son una masa monolítica que incluye las huellas, peraltes y el relleno sólido debajo.\n\nLos reglamentos de construcción rigen las dimensiones de los escalones de concreto por seguridad. La normativa mexicana (NTC) especifica un peralte máximo de 18 cm y una huella mínima de 25 cm. Todos los peraltes en un tramo deben ser uniformes con una tolerancia máxima de 1 cm, y todas las huellas deben ser uniformes con la misma tolerancia. El ancho mínimo de la escalera es de 90 cm, aunque 120 cm es más cómodo para escaleras de acceso principal. Los pasamanos son obligatorios para tramos de 4 o más escalones.\n\nLos escalones de concreto se cimbran usando triplay o madera cortada al perfil exacto de la escalera. La cimbra debe estar fuertemente arriostrada porque el concreto fresco ejerce una presión considerable — una escalera de 1.20 m de ancho con 5 escalones puede pesar más de 1,000 kg. El concreto se cuela desde el escalón inferior hacia arriba, maestreando y acabando cada escalón antes de pasar al siguiente.\n\nEl refuerzo para escalones de concreto incluye varilla del #3 colocada horizontalmente a través de la masa a intervalos de 30 a 45 cm en sentido vertical, con varillas verticales que amarran los escalones al descanso y a la cimentación. La especificación de concreto es típicamente f'c=250 kg/cm² para durabilidad, con un revenimiento de 10 cm para trabajabilidad en la cimbra.\n\nLos escalones de concreto colados cuestan entre $3,500 y $6,000 MXN por metro lineal de ancho instalados, incluyendo cimbra, refuerzo, colado y acabado. Una escalinata estándar de 1.20 m de ancho con 4 escalones cuesta entre $15,000 y $25,000 MXN instalada. Los escalones prefabricados son una alternativa más económica pero no permiten medidas personalizadas.",
+  nextSteps: [
+    { label: "Calculadora de Concreto", href: "/calculators/foundation/concrete-calculator/" },
+    { label: "Calculadora de Losa de Concreto", href: "/calculators/foundation/concrete-slab-calculator/" },
+    { label: "Calculadora de Escaleras para Deck", href: "/calculators/outdoor/deck-stair-calculator/" },
+  ],
   installationTips: [
     "Construye la cimbra con triplay de 19 mm, fuertemente arriostrada con polines — el concreto fresco es extremadamente pesado y reventará cimbras débiles.",
     "Cola desde el escalón inferior hacia arriba, llenando y acabando cada escalón antes de pasar al siguiente.",
@@ -458,6 +500,11 @@ export const rimJoistCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "Las vigas perimetrales (también llamadas vigas de borde o vigas de cierre) recorren el contorno del entramado de piso, cerrando los extremos de las viguetas y proporcionando rigidez lateral al sistema. Típicamente son de la misma sección que las viguetas de piso: 38x184 mm, 38x235 mm o 38x286 mm, dependiendo del diseño estructural. En Latinoamérica, la madera dimensionada puede variar ligeramente según el país — en México se encuentran secciones nominales similares a las norteamericanas, mientras que en Chile y Argentina pueden diferir. Las vigas perimetrales se consiguen en largos comerciales de 2.44 m, 3.66 m y 4.88 m. Es fundamental que sean de madera estructural clasificada (grado No. 2 o mejor) para garantizar la resistencia requerida. Su costo es similar al de las viguetas, y representan una fracción menor del presupuesto total del entramado pero son estructuralmente críticas para la integridad del sistema de piso.",
+  nextSteps: [
+    { label: "Calculadora de Viguetas de Piso", href: "/calculators/floor-framing/floor-joist-calculator/" },
+    { label: "Calculadora de Placa de Apoyo Tratada", href: "/calculators/foundation/sill-plate-calculator/" },
+    { label: "Calculadora de Clavos para Estructura", href: "/calculators/hardware/framing-nail-calculator/" },
+  ],
   installationTips: [
     "Instala las vigas perimetrales a ras con la cara superior de las viguetas.",
     "Clava a través de la viga perimetral hacia el extremo de cada vigueta.",
@@ -510,6 +557,11 @@ export const floorJoistCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "Las viguetas de piso son los elementos horizontales estructurales que soportan el subpiso y las cargas vivas del piso. Las secciones más comunes en construcción residencial son 38x184 mm (luces hasta 3.60 m), 38x235 mm (luces hasta 4.50 m) y 38x286 mm (luces hasta 5.20 m), todas medidas a 40 cm entre centros. Para luces mayores se utilizan viguetas de madera laminada (LVL) o vigas dobles T (tipo TJI), que cubren hasta 9 metros sin apoyos intermedios. En Latinoamérica, la madera estructural clasificada se obtiene en aserraderos certificados — pide siempre grado estructural No. 2 o mejor. El pino radiata (común en Chile), el pino caribaea (Centroamérica) y el pino tratado (México) son las especies más utilizadas. El costo de las viguetas representa una porción significativa del presupuesto de la estructura, por lo que optimizar la sección y el espaciado según las tablas de luces es clave para un proyecto eficiente.",
+  nextSteps: [
+    { label: "Calculadora de Puentes (Arriostramientos)", href: "/calculators/floor-framing/bridging-calculator/" },
+    { label: "Calculadora de Paneles OSB", href: "/calculators/floor-framing/osb-panel-calculator/" },
+    { label: "Calculadora de Conectores de Viguetas", href: "/calculators/hardware/joist-hanger-calculator/" },
+  ],
   installationTips: [
     "Coloca todas las viguetas con la curvatura (combadura) hacia arriba para lograr un piso nivelado.",
     "Usa conectores metálicos de viguetas en las conexiones con vigas principales.",
@@ -562,6 +614,11 @@ export const bridgingCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "Los puentes o arriostramientos son elementos que se instalan entre las viguetas de piso a intervalos regulares para evitar la rotación lateral, el pandeo y la vibración excesiva. La norma exige arriostramientos para luces mayores a 2.40 m, colocados a media luz de cada tramo. Existen tres tipos principales: bloqueo sólido (piezas de madera cortadas a medida entre viguetas), arriostramientos cruzados de madera (piezas diagonales en X) y arriostramientos metálicos cruzados (tipo Simpson o equivalente). El bloqueo sólido se fabrica con recortes de la misma sección de la vigueta, lo que lo hace económico. Los arriostramientos metálicos tienen un costo por unidad que varía entre $20 y $50 MXN, pero su instalación es mucho más rápida. En construcciones en Latinoamérica, el bloqueo sólido de madera es el método más utilizado por su bajo costo y disponibilidad de material. Para viguetas doble T, el fabricante proporciona instrucciones específicas de arriostramiento.",
+  nextSteps: [
+    { label: "Calculadora de Viguetas de Piso", href: "/calculators/floor-framing/floor-joist-calculator/" },
+    { label: "Calculadora de Adhesivo de Subpiso", href: "/calculators/floor-framing/subfloor-adhesive-calculator/" },
+    { label: "Calculadora de Clavos para Estructura", href: "/calculators/hardware/framing-nail-calculator/" },
+  ],
   installationTips: [
     "Instala bloqueo sólido o arriostramientos metálicos cruzados.",
     "Alterna los bloqueos para facilitar el clavado.",
@@ -614,6 +671,11 @@ export const subfloorAdhesiveCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "El adhesivo de subpiso es un pegamento de construcción de alta resistencia (tipo poliuretano como PL400, PL Premium o Liquid Nails Subfloor) que se aplica en cordón continuo sobre las viguetas antes de colocar los paneles OSB o de contrachapado. Su función principal es eliminar los pisos que rechinan al crear una unión estructural entre el panel y la vigueta, mejorando significativamente la rigidez del sistema de piso. En Latinoamérica, se consigue en presentaciones de cartucho de 300 ml (rinde aproximadamente 4 a 5 m² de subpiso) y en salchicha de 800 ml para pistola industrial. Los adhesivos de poliuretano son superiores a los de base solvente porque mantienen su elasticidad, resisten la humedad y tienen mayor capacidad de relleno para superficies irregulares. El costo por cartucho varía entre $80 y $180 MXN dependiendo de la marca y calidad. Es una inversión mínima comparada con el costo de reparar pisos rechinantes después de terminada la obra.",
+  nextSteps: [
+    { label: "Calculadora de Paneles OSB", href: "/calculators/floor-framing/osb-panel-calculator/" },
+    { label: "Calculadora de Viguetas de Piso", href: "/calculators/floor-framing/floor-joist-calculator/" },
+    { label: "Calculadora de Puentes (Arriostramientos)", href: "/calculators/floor-framing/bridging-calculator/" },
+  ],
   installationTips: [
     "Aplica un cordón continuo — no apliques el adhesivo en puntos separados.",
     "Trabaja por secciones y coloca los paneles antes de que el adhesivo se seque superficialmente.",
@@ -665,6 +727,11 @@ export const osbPanelCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "Los paneles OSB (Tablero de Hebras Orientadas) son el material estándar para subpisos en construcción con entramado de madera. Se fabrican con hojuelas de madera orientadas y prensadas con resina, resultando en un panel estructural resistente y económico. El formato estándar es de 1.22 m x 2.44 m (4x8 pies), con espesores de 11 mm, 15 mm, 18 mm y 22 mm. Para subpisos residenciales, el espesor mínimo recomendado es 15 mm con viguetas a 40 cm entre centros, y 18 mm o 22 mm para viguetas a 60 cm. Los paneles tipo machiembrado (T&G) facilitan la instalación y crean un piso más rígido al interconectar los bordes. En Latinoamérica, los paneles OSB se importan principalmente de Estados Unidos, Chile y Brasil. Su costo varía entre $250 y $600 MXN por lámina según el espesor y la clasificación. Las marcas como Oriented Strand Board, LP y Norbord son comunes en el mercado regional. Siempre verifica que el panel tenga clasificación estructural (Exposure 1 o Exterior) para resistir la humedad durante la construcción.",
+  nextSteps: [
+    { label: "Calculadora de Adhesivo de Subpiso", href: "/calculators/floor-framing/subfloor-adhesive-calculator/" },
+    { label: "Calculadora de Viguetas de Piso", href: "/calculators/floor-framing/floor-joist-calculator/" },
+    { label: "Calculadora de Montantes", href: "/calculators/wall-framing/stud-calculator/" },
+  ],
   installationTips: [
     "Instala los paneles con el borde largo perpendicular a las viguetas.",
     "Alterna las juntas de tope entre filas para continuidad estructural.",
@@ -723,6 +790,12 @@ export const studCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "Los montantes son las piezas verticales de madera que forman el esqueleto del muro y soportan las cargas del techo y los pisos superiores. Las secciones estándar son 38x89 mm (2x4) para muros interiores y divisorios, y 38x140 mm (2x6) para muros exteriores que requieren mayor capacidad de aislamiento térmico. En Latinoamérica, la construcción con entramado de madera (wood frame) está creciendo especialmente en Chile, México, Panamá y Costa Rica. Los montantes pre-cortados de 2.35 m para muros de 2.44 m de altura ahorran tiempo y aseguran uniformidad. La madera debe ser estructural clasificada con contenido de humedad menor al 19% — la madera húmeda o verde se deformará al secarse, causando muros torcidos y fisuras en los acabados. Las especies más utilizadas en la región son pino radiata, pino patula y pino tratado. El costo de los montantes varía según el país y la especie, pero representa una parte significativa del presupuesto de la estructura de muros.",
+  nextSteps: [
+    { label: "Calculadora de Solera Inferior", href: "/calculators/wall-framing/bottom-plate-calculator/" },
+    { label: "Calculadora de Solera Superior", href: "/calculators/wall-framing/top-plate-calculator/" },
+    { label: "Calculadora de Dinteles", href: "/calculators/wall-framing/header-calculator/" },
+    { label: "Calculadora de Clavos para Estructura", href: "/calculators/hardware/framing-nail-calculator/" },
+  ],
   installationTips: [
     "Usa montantes pre-cortados o pre-seleccionados para una altura de muro consistente.",
     "Marca la distribución de montantes en la solera antes de armar para mantener el espaciado preciso.",
@@ -778,6 +851,11 @@ export const bottomPlateCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "La solera inferior es el elemento horizontal de madera que forma la base de cada muro de entramado, y sobre ella se clavan los montantes verticales. Todas las soleras inferiores de muros exteriores que están en contacto directo con la cimentación de concreto deben ser de madera tratada a presión para resistir la humedad y las plagas. Las secciones corresponden a la del muro: 38x89 mm para muros de 38x89 mm y 38x140 mm para muros de 38x140 mm. En Latinoamérica, la madera tratada con CCA es la más disponible, aunque la tendencia es hacia tratamientos con cobre alcalino (ACQ) o cobre micronizado por razones ambientales. Los largos comerciales más comunes son 2.44 m, 3.05 m, 3.66 m y 4.88 m. El costo de la madera tratada es entre 30% y 50% superior a la madera natural, pero es un requisito normativo ineludible. Para las soleras interiores que no están en contacto con concreto, se puede usar madera sin tratamiento de la misma sección.",
+  nextSteps: [
+    { label: "Calculadora de Montantes", href: "/calculators/wall-framing/stud-calculator/" },
+    { label: "Calculadora de Solera Superior", href: "/calculators/wall-framing/top-plate-calculator/" },
+    { label: "Calculadora de Placa de Apoyo Tratada", href: "/calculators/foundation/sill-plate-calculator/" },
+  ],
   installationTips: [
     "Usa madera tratada a presión para todas las soleras inferiores exteriores.",
     "Traza una línea con hilo azul antes de colocar las soleras para mayor precisión.",
@@ -830,6 +908,11 @@ export const topPlateCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "La solera superior es el elemento horizontal que corona el muro de entramado, y en la mayoría de los casos se compone de dos capas: la primera solera y la solera de amarre (o segunda solera). La doble solera superior es un requisito normativo para muros portantes que cumple múltiples funciones: distribuir las cargas del techo y pisos superiores, proporcionar continuidad estructural en las uniones de muros, y crear un elemento de amarre que conecta esquinas e intersecciones. La primera solera se clava directamente sobre los montantes, y la solera de amarre se clava sobre la primera con sus juntas desfasadas al menos 1.20 m. En Latinoamérica, se utilizan las mismas secciones que los montantes: 38x89 mm o 38x140 mm. Al calcular la cantidad de tablas, recuerda que necesitas el doble de material que para la solera inferior, ya que son dos capas. El costo de la doble solera es significativo y debe presupuestarse correctamente. En algunos sistemas constructivos avanzados con entramado optimizado (advanced framing), se permite una sola solera superior en muros no portantes.",
+  nextSteps: [
+    { label: "Calculadora de Montantes", href: "/calculators/wall-framing/stud-calculator/" },
+    { label: "Calculadora de Solera Inferior", href: "/calculators/wall-framing/bottom-plate-calculator/" },
+    { label: "Calculadora de Revestimiento Estructural Exterior", href: "/calculators/wall-framing/exterior-sheathing-calculator/" },
+  ],
   installationTips: [
     "Desfasa las juntas de la solera de amarre con respecto a las juntas de la primera solera al menos 1.20 m.",
     "Une las esquinas con la solera de amarre para rigidez estructural.",
@@ -882,6 +965,11 @@ export const headerCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "Los dinteles son elementos estructurales horizontales que abarcan las aberturas de puertas y ventanas, transfiriendo las cargas del techo, pisos superiores y su propio peso hacia los pies derechos de soporte (jack studs) y los montantes rey (king studs) a cada lado del vano. El tamaño del dintel depende de la luz del vano y la carga que soporta. Las secciones comunes van desde 38x140 mm para ventanas pequeñas de hasta 1.20 m de ancho, hasta doble 38x286 mm para grandes aberturas de hasta 3.60 m. Los dinteles se construyen típicamente con dos piezas de madera con un separador de contrachapado de 12 mm entre ellas para igualar el ancho del muro de 38x140 mm. Para luces mayores a 3 metros, se recomienda usar madera laminada (LVL) o vigas de acero. En Latinoamérica, las tablas de luces admisibles para dinteles deben consultarse en la normativa local — en México es la NMX-C-409, en Chile la NCh 1198, y en Colombia la NSR-10. El costo de los dinteles varía significativamente según la sección y el material.",
+  nextSteps: [
+    { label: "Calculadora de Montantes", href: "/calculators/wall-framing/stud-calculator/" },
+    { label: "Calculadora de Revestimiento Estructural Exterior", href: "/calculators/wall-framing/exterior-sheathing-calculator/" },
+    { label: "Calculadora de Costo de Madera", href: "/calculators/hardware/lumber-cost-calculator/" },
+  ],
   installationTips: [
     "Construye dinteles con doble madera y un separador de contrachapado de 12 mm para igualar el ancho del muro.",
     "O utiliza madera laminada (LVL) para luces mayores.",
@@ -935,6 +1023,11 @@ export const exteriorSheathingCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "El revestimiento estructural exterior es un panel de OSB o contrachapado que se clava sobre los montantes del muro para proporcionar resistencia al corte (fuerza lateral contra viento y sismo) y una base de clavado firme para el recubrimiento exterior. El espesor estándar es de 11 mm o 12 mm, en formato de 1.22 m x 2.44 m (2.98 m² por panel). El OSB es la opción más económica y es el material más utilizado. El contrachapado CDX ofrece mayor resistencia a la humedad y es preferido en zonas de alto riesgo de lluvia. En Latinoamérica, donde la construcción con entramado de madera está en crecimiento, el revestimiento estructural es fundamental para la resistencia sísmica de la edificación. En zonas sísmicas como Chile, México y la costa del Pacífico, la normativa exige revestimiento estructural continuo o en segmentos estratégicos para cumplir con los requisitos de resistencia lateral. El costo por panel varía entre $200 y $500 MXN según el tipo y espesor. El patrón de clavado es crítico: clavos cada 15 cm en bordes y cada 30 cm en el campo.",
+  nextSteps: [
+    { label: "Calculadora de Membrana Hidrófuga", href: "/calculators/exterior-shell/housewrap-calculator/" },
+    { label: "Calculadora de Montantes", href: "/calculators/wall-framing/stud-calculator/" },
+    { label: "Calculadora de Clavos para Estructura", href: "/calculators/hardware/framing-nail-calculator/" },
+  ],
   installationTips: [
     "Orienta los paneles verticalmente (borde largo vertical) para mejor resistencia al corte.",
     "Deja juntas de expansión de 3 mm en todos los bordes del panel.",
@@ -991,6 +1084,11 @@ export const trussCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "Las cerchas de techo (armaduras) son ensambles prefabricados de madera que abarcan todo el ancho de la edificación sin necesidad de muros portantes interiores, transfiriendo las cargas del techo directamente a los muros exteriores. Se fabrican a medida en plantas industriales usando madera de sección pequeña (38x89 mm o 38x140 mm) unida con placas dentadas de acero galvanizado. En Latinoamérica, las cerchas prefabricadas están disponibles en Chile (principal productor de la región), México, Costa Rica y Panamá. Las configuraciones más comunes son la cercha Fink (tipo W), la Howe y la Pratt, cada una optimizada para diferentes luces y cargas. El espaciado estándar es de 60 cm entre centros para residencial, aunque puede ser de 40 cm en zonas de carga de nieve alta. Las cerchas se piden con 4 a 6 semanas de anticipación, y requieren un plano de armado específico del fabricante. Su costo incluye diseño de ingeniería, fabricación y transporte, siendo generalmente más económicas que los cabios armados en sitio para luces mayores a 6 metros.",
+  nextSteps: [
+    { label: "Calculadora de Revestimiento de Techo", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Calculadora de Amarres Anti-Huracán", href: "/calculators/hardware/hurricane-tie-calculator/" },
+    { label: "Calculadora de Cabios", href: "/calculators/roofing/rafter-calculator/" },
+  ],
   installationTips: [
     "Pide las cerchas con 4–6 semanas de anticipación — los tiempos de producción pueden ser largos.",
     "Ten una grúa o camión con brazo articulado en obra para el izaje.",
@@ -1045,6 +1143,11 @@ export const rafterCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "Los cabios son los elementos estructurales inclinados que forman la pendiente del techo, transmitiendo las cargas de la cubierta hacia los muros exteriores y la cumbrera. A diferencia de las cerchas prefabricadas, los cabios se arman en sitio, lo que permite áticos abiertos, cielos catedral y diseños de techo personalizados. Las secciones comunes son 38x140 mm (luces hasta 2.70 m por lado), 38x184 mm (luces hasta 3.60 m) y 38x235 mm (luces hasta 4.80 m), todas medidas en proyección horizontal a 40 cm entre centros. La longitud real del cabio es mayor que la proyección horizontal debido a la pendiente — se calcula usando el teorema de Pitágoras o factores de pendiente. En Latinoamérica, los techos con cabios son la opción más flexible para diseños arquitectónicos complejos y están ampliamente disponibles ya que no requieren fabricación industrial. El costo de los cabios depende de la especie de madera y la sección, siendo el pino radiata y el pino tratado las opciones más económicas en la región.",
+  nextSteps: [
+    { label: "Calculadora de Tabla Cumbrera", href: "/calculators/roofing/ridge-board-calculator/" },
+    { label: "Calculadora de Revestimiento de Techo", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Calculadora de Cerchas de Techo", href: "/calculators/roofing/truss-calculator/" },
+  ],
   installationTips: [
     "Corta un cabio de prueba y verifica el ajuste antes de cortar todo el lote.",
     "Usa una escuadra de velocidad para marcar cortes de asiento (bird's mouth) consistentes.",
@@ -1098,6 +1201,11 @@ export const ridgeBoardCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "La tabla cumbrera es el elemento horizontal que recorre el punto más alto del techo, en la intersección de los cabios de ambos lados. En un techo tradicional con cabios y tirantes de collar, la tabla cumbrera no es estructural — su función es proporcionar apoyo de montaje y alineación para los cabios. Debe ser de una sección un tamaño mayor que los cabios para permitir el contacto completo del corte a plomo (por ejemplo, tabla de 38x235 mm con cabios de 38x184 mm). Los largos comerciales estándar son de 2.44 m, 3.66 m y 4.88 m, y se unen con juntas traslapadas sobre un par de cabios para continuidad. Es importante distinguir entre tabla cumbrera y viga cumbrera: la viga cumbrera es un elemento estructural que soporta los cabios y se requiere en cielos catedral donde no hay tirantes de collar. La viga cumbrera debe ser calculada por un ingeniero y puede ser de madera laminada, LVL o acero. En Latinoamérica, la madera más utilizada para tablas cumbrera es pino clasificado grado No. 2 o mejor, con un costo similar al de los cabios.",
+  nextSteps: [
+    { label: "Calculadora de Cabios", href: "/calculators/roofing/rafter-calculator/" },
+    { label: "Calculadora de Revestimiento de Techo", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Calculadora de Costo de Madera", href: "/calculators/hardware/lumber-cost-calculator/" },
+  ],
   installationTips: [
     "Soporta temporalmente la tabla cumbrera mientras colocas los cabios.",
     "Mantén la tabla cumbrera recta — usa arriostramientos temporales.",
@@ -1149,6 +1257,11 @@ export const roofSheathingCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "El revestimiento de techo es el panel estructural que se clava sobre los cabios o cerchas para crear la superficie continua (cubierta) donde se instala la membrana impermeabilizante y las tejas o material de techado final. Los materiales más comunes son OSB de 11 mm o 12 mm y contrachapado CDX de 12 mm, ambos en formato estándar de 1.22 m x 2.44 m. El OSB es la opción más económica y de uso más extendido. El contrachapado CDX ofrece mejor resistencia a la humedad y es preferido en zonas de lluvia prolongada. Los clips H son pequeños conectores metálicos que se insertan entre los bordes no apoyados de paneles adyacentes para prevenir la deflexión diferencial — son obligatorios para revestimiento instalado sobre estructura a 60 cm entre centros. En Latinoamérica, el revestimiento de techo se consigue en las mismas fuentes que el revestimiento de muros, con costos similares por panel. La clasificación del panel debe ser adecuada para uso exterior (Exposure 1 o Exterior) para resistir las condiciones de humedad durante la construcción.",
+  nextSteps: [
+    { label: "Calculadora de Membrana Impermeabilizante", href: "/calculators/roofing/underlayment-calculator/" },
+    { label: "Calculadora de Tejas", href: "/calculators/roofing/shingle-calculator/" },
+    { label: "Calculadora de Gotero de Techo", href: "/calculators/roofing/drip-edge-calculator/" },
+  ],
   installationTips: [
     "Comienza desde el alero, avanzando hacia la cumbrera.",
     "Alterna las juntas de tope entre hileras.",
@@ -1203,6 +1316,11 @@ export const shingleCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "Las tejas asfálticas son el material de techado más utilizado en construcción residencial por su equilibrio entre costo, durabilidad y facilidad de instalación. Existen dos tipos principales: las tejas de 3 lengüetas (estándar, garantía 20-25 años, más económicas) y las tejas arquitectónicas o dimensionales (aspecto premium, garantía 30-50 años, mayor resistencia al viento). Las tejas se venden en paquetes que cubren aproximadamente 3.1 m² cada uno — se necesitan 3 paquetes para cubrir un \"cuadrado de techado\" (9.29 m²). En Latinoamérica, las tejas asfálticas han ganado popularidad como alternativa a las tejas de barro y las láminas metálicas, especialmente en México, Colombia, Panamá y Costa Rica. Las marcas más disponibles son GAF, Owens Corning, CertainTeed e IKO. El costo por paquete varía entre $300 y $800 MXN según el tipo y la marca. Las tejas arquitectónicas son la opción más recomendada por su superior resistencia al viento (hasta 210 km/h), mejor aspecto estético y mayor vida útil.",
+  nextSteps: [
+    { label: "Calculadora de Membrana Impermeabilizante", href: "/calculators/roofing/underlayment-calculator/" },
+    { label: "Calculadora de Gotero de Techo", href: "/calculators/roofing/drip-edge-calculator/" },
+    { label: "Calculadora de Área de Techo", href: "/calculators/roofing/roof-area-calculator/" },
+  ],
   installationTips: [
     "Comienza desde el alero, avanzando hacia la cumbrera.",
     "Desfasa las juntas verticales al menos 15 cm entre hileras.",
@@ -1257,6 +1375,11 @@ export const underlaymentCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "La membrana impermeabilizante (también llamada fieltro o papel asfáltico) es la capa de protección que se instala sobre el revestimiento de techo y debajo de las tejas, funcionando como barrera secundaria contra el agua. Existen tres tipos principales: fieltro asfáltico #15 (el más económico, ~37 m²/rollo, adecuado para pendientes moderadas), fieltro asfáltico #30 (más grueso y resistente, ~18.5 m²/rollo, para pendientes mayores), y membrana sintética (la opción premium, ~93 m²/rollo, más liviana, resistente al desgarre y antideslizante). En zonas con riesgo de congelamiento o lluvias extremas, se requiere además una membrana autoadhesiva (ice & water shield) en los primeros 60 cm desde el alero. En Latinoamérica, el fieltro asfáltico #15 es la opción más utilizada por su bajo costo, con precios entre $150 y $300 MXN por rollo. Las membranas sintéticas (marcas como GAF FeltBuster, Titanium y Sharkskin) están ganando popularidad por su superior rendimiento. Todas las garantías de fabricantes de tejas exigen la instalación de membrana impermeabilizante.",
+  nextSteps: [
+    { label: "Calculadora de Revestimiento de Techo", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Calculadora de Tejas", href: "/calculators/roofing/shingle-calculator/" },
+    { label: "Calculadora de Gotero de Techo", href: "/calculators/roofing/drip-edge-calculator/" },
+  ],
   installationTips: [
     "Instala horizontalmente, comenzando desde el alero.",
     "Traslapa cada franja 5–10 cm sobre la inferior.",
@@ -1311,6 +1434,11 @@ export const dripEdgeCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "El gotero (botaguas de alero) es un perfil metálico en forma de L o C que se instala en todos los bordes del techo — tanto en los aleros como en los hastiales (aguas) — para dirigir el escurrimiento de agua lejos de la facia, la cornisa y la estructura de madera. Es un componente obligatorio por norma para todos los techos con tejas asfálticas. Los goteros se fabrican en aluminio, acero galvanizado o acero prepintado, en piezas estándar de 3 metros de largo. Los perfiles más comunes son el tipo C (también llamado estilo D) con una pestaña inferior extendida, y el tipo A (perfil simple en L). El tipo C es preferido para residencial porque aleja el agua más efectivamente de la facia. En Latinoamérica, los goteros se consiguen en laminadoras y ferreterías especializadas, con costos entre $30 y $80 MXN por pieza de 3 metros según el material y calibre. Los colores más demandados son blanco, café y negro para combinar con la facia y las tejas. Es uno de los componentes más económicos del techo pero uno de los más importantes para la durabilidad de la estructura.",
+  nextSteps: [
+    { label: "Calculadora de Tejas", href: "/calculators/roofing/shingle-calculator/" },
+    { label: "Calculadora de Membrana Impermeabilizante", href: "/calculators/roofing/underlayment-calculator/" },
+    { label: "Calculadora de Revestimiento de Techo", href: "/calculators/roofing/roof-sheathing-calculator/" },
+  ],
   installationTips: [
     "Instala el gotero de alero ANTES de la membrana impermeabilizante; el gotero de hastial DESPUÉS de la membrana.",
     "Traslapa las piezas al menos 5 cm.",
@@ -1364,6 +1492,11 @@ export const roofPitchCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "La pendiente del techo (también llamada inclinación o caída) es la relación entre la elevación vertical y el recorrido horizontal, expresada como centímetros de elevación por cada 30 cm de recorrido (equivalente a la notación americana de pulgadas por cada 12 pulgadas). Es una de las dimensiones más críticas en un techo porque determina qué materiales son adecuados, la capacidad de evacuación del agua, las trayectorias de carga estructural y la facilidad de acceso para los instaladores. Las pendientes residenciales más comunes van de 4:12 a 8:12. Una pendiente de 4:12 (18.4°) es la mínima recomendada para tejas asfálticas estándar y es fácil de caminar. Una pendiente de 6:12 (26.6°) es la más popular, ofreciendo un buen equilibrio entre estética y evacuación de agua. Una pendiente de 8:12 (33.7°) o mayor proporciona excelente evacuación de nieve y una línea de techo dramática, pero incrementa costos de material y dificultad de mano de obra. En regiones con nevadas intensas del sur de Chile y Argentina, pendientes de 8:12 a 12:12 son comunes para prevenir acumulación peligrosa de nieve. En zonas tropicales de México, Centroamérica y el Caribe, pendientes de 4:12 a 6:12 son suficientes ya que la carga de nieve no es un factor. Los techos de baja pendiente (menos de 2:12) requieren sistemas especiales como membranas de bitumen modificado, TPO o EPDM porque las tejas no pueden evacuar el agua de forma confiable en ángulos tan bajos.",
+  nextSteps: [
+    { label: "Calculadora de Área de Techo", href: "/calculators/roofing/roof-area-calculator/" },
+    { label: "Calculadora de Inclinación de Techo", href: "/calculators/roofing/roof-slope-calculator/" },
+    { label: "Calculadora de Cabios", href: "/calculators/roofing/rafter-calculator/" },
+  ],
   installationTips: [
     "Usa un medidor de pendiente o escuadra rápida colocada sobre un cabio para verificar la pendiente antes de pedir materiales.",
     "Para techos inaccesibles, mide la pendiente desde el interior del ático colocando un nivel horizontal y midiendo la elevación a 30 cm de recorrido.",
@@ -1432,6 +1565,11 @@ export const roofAreaCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "El cálculo del área de techo es la base de toda estimación de materiales de techado. El error más común que cometen propietarios e incluso algunos contratistas es usar el área de la huella plana en lugar del área real de la superficie inclinada — esto genera faltantes significativos de material, especialmente en techos empinados. El multiplicador de pendiente convierte el área plana al área real usando el teorema de Pitágoras: multiplicador = raíz cuadrada de (1 + (pendiente/12)²). Para una pendiente estándar de 6:12, el multiplicador es 1.118, lo que significa que el área real del techo es aproximadamente 12% más grande que la huella. A 12:12, el techo tiene 41% más superficie que el plano. Los materiales de techado se venden en 'cuadros', donde un cuadro cubre 9.3 metros cuadrados (100 pies cuadrados) de superficie. Las tejas asfálticas típicamente vienen en paquetes de 3 por cuadro. Al pedir materiales, siempre agrega un 10-15% por desperdicio de cortes, hileras iniciales, tapas de cumbrera y limahoyas. Para techos a cuatro aguas, agrega un 5% adicional porque las limatesas y limahoyas generan más desperdicio de corte que un techo simple a dos aguas.",
+  nextSteps: [
+    { label: "Calculadora de Tejas", href: "/calculators/roofing/shingle-calculator/" },
+    { label: "Calculadora de Pendiente de Techo", href: "/calculators/roofing/roof-pitch-calculator/" },
+    { label: "Calculadora de Revestimiento de Techo", href: "/calculators/roofing/roof-sheathing-calculator/" },
+  ],
   installationTips: [
     "Siempre mide las dimensiones del techo desde el alero hasta la cumbrera sobre el faldón, no solo la huella horizontal — o usa el multiplicador de pendiente para convertir.",
     "Para techos complejos con múltiples pendientes, calcula cada sección por separado y suma las áreas para obtener el total.",
@@ -1490,6 +1628,11 @@ export const roofSlopeCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "La medición de la inclinación del techo es el primer paso crítico antes de seleccionar materiales de techado, porque cada producto tiene un requisito mínimo de pendiente establecido por el fabricante y exigido por los códigos de construcción. La inclinación es la relación entre la elevación vertical y el recorrido horizontal, y determina directamente qué tan rápido se evacuan el agua y la nieve de la superficie del techo. Los techos planos y de muy baja pendiente (menos de 2:12) requieren sistemas de membrana continua como TPO (poliolefina termoplástica), EPDM (monómero de etileno propileno dieno), PVC o techado multicapa (BUR) con múltiples capas de bitumen y tela de refuerzo. Estos sistemas de membrana crean un sello hermético que no depende de la gravedad para evacuar el agua. Los techos de baja pendiente entre 2:12 y 4:12 pueden usar tejas asfálticas, pero solo con métodos especiales de instalación incluyendo doble membrana impermeabilizante, sellador adicional en cada lengüeta y membrana autoadhesiva en toda la cubierta en climas fríos. Las tejas asfálticas estándar (de 3 lengüetas y arquitectónicas) funcionan mejor en techos con pendiente de 4:12 a 8:12, donde la gravedad canaliza eficazmente el agua. Los techos de pendiente pronunciada por encima de 8:12 se benefician de materiales pesados como teja de concreto, teja de barro, pizarra o paneles metálicos de junta alzada que resisten el levantamiento por viento y se fijan mecánicamente para manejar el ángulo pronunciado.",
+  nextSteps: [
+    { label: "Calculadora de Pendiente de Techo", href: "/calculators/roofing/roof-pitch-calculator/" },
+    { label: "Calculadora de Área de Techo", href: "/calculators/roofing/roof-area-calculator/" },
+    { label: "Calculadora de Tejas", href: "/calculators/roofing/shingle-calculator/" },
+  ],
   installationTips: [
     "Usa un nivel de 60 cm o 1.20 m y una cinta métrica para la medición más precisa — niveles más largos reducen el error por irregularidades de la superficie.",
     "Mide desde el interior del ático a lo largo de un cabio si la superficie del techo es inaccesible — coloca el nivel horizontal y mide la caída vertical a una distancia horizontal conocida.",
@@ -1549,6 +1692,11 @@ export const housewrapCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "La membrana hidrófuga (barrera resistente al agua o WRB por sus siglas en inglés) es una lámina transpirable que se instala sobre el revestimiento estructural de los muros exteriores, antes del recubrimiento final (siding). Su función es doble: bloquear el agua líquida que pueda penetrar el recubrimiento exterior, y al mismo tiempo permitir que el vapor de humedad interior escape hacia afuera, previniendo la condensación, el moho y la pudrición de la estructura. Las marcas más conocidas son DuPont Tyvek HomeWrap (la más utilizada mundialmente), Kimberly-Clark Block-It y GenWrap. Los rollos estándar cubren 93 m² (3 m x 30.5 m de largo). En Latinoamérica, la membrana Tyvek es la más disponible y se distribuye a través de redes de ferreterías industriales y distribuidores de materiales de construcción en México, Chile, Colombia, Perú y Centroamérica. El costo por rollo varía entre $1,500 y $3,000 MXN. Es un componente obligatorio por norma en la mayoría de los códigos de construcción y esencial para la durabilidad del sistema de muros exteriores.",
+  nextSteps: [
+    { label: "Calculadora de Revestimiento Vinílico", href: "/calculators/exterior-shell/vinyl-siding-calculator/" },
+    { label: "Calculadora de Revestimiento de Fibrocemento", href: "/calculators/exterior-shell/hardie-siding-calculator/" },
+    { label: "Calculadora de Tapajuntas de Ventana", href: "/calculators/exterior-shell/window-flashing-calculator/" },
+  ],
   installationTips: [
     "Comienza desde abajo hacia arriba. Traslapa las juntas horizontales al menos 15 cm.",
     "Sella todas las juntas, penetraciones y aberturas de ventanas con cinta de sellado compatible.",
@@ -1602,6 +1750,11 @@ export const vinylSidingCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "El revestimiento vinílico (vinyl siding) es un sistema de paneles de PVC que se instala como recubrimiento exterior sobre la membrana hidrófuga. Es uno de los recubrimientos más económicos y de menor mantenimiento disponibles, ya que no requiere pintura, no se pudre ni es atacado por insectos. Los paneles estándar miden 3.66 m de largo y exponen entre 10 y 13 cm de cara por hilera, cubriendo aproximadamente 0.19 m² de área neta por metro lineal. Viene en una amplia variedad de colores y perfiles que imitan la madera traslapada. En Latinoamérica, el revestimiento vinílico se utiliza principalmente en Chile, México, Panamá y Costa Rica en proyectos de vivienda con entramado de madera. Las marcas disponibles incluyen CertainTeed, Georgia-Pacific y Royal Building Products. El costo varía entre $150 y $400 MXN por metro cuadrado instalado, significativamente menos que el fibrocemento o la madera natural. Una consideración importante es que el vinilo se dilata y contrae con la temperatura, por lo que debe instalarse con holgura en las molduras de terminación y nunca clavarse al ras.",
+  nextSteps: [
+    { label: "Calculadora de Membrana Hidrófuga", href: "/calculators/exterior-shell/housewrap-calculator/" },
+    { label: "Calculadora de Tapajuntas de Ventana", href: "/calculators/exterior-shell/window-flashing-calculator/" },
+    { label: "Calculadora de Revestimiento de Fibrocemento", href: "/calculators/exterior-shell/hardie-siding-calculator/" },
+  ],
   installationTips: [
     "Instala sobre un sustrato plano y a plomo.",
     "Deja juntas de 6 mm en todos los molduras de terminación para expansión térmica.",
@@ -1655,6 +1808,11 @@ export const hardieSidingCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "El revestimiento de fibrocemento (la marca más conocida es James Hardie HardiePlank) es un material compuesto fabricado con cemite Portland, celulosa reforzada y arena, prensado a alta presión para crear tablas resistentes y duraderas que imitan la apariencia de la madera traslapada. Las tablas estándar tienen un ancho nominal de 15 cm o 20 cm con una exposición efectiva de 10 cm o 13 cm respectivamente. El largo estándar es de 3.66 m (12 pies). El fibrocemento es resistente al fuego (Clase A), resistente a insectos y termitas, dimensionalmente estable y no se pudre con la humedad. En Latinoamérica, el fibrocemento es ampliamente utilizado en países como Chile (marca Volcán y Pizarreño), México (Plycem y James Hardie), Colombia (Eternit) y Perú (Superboard). El costo por metro cuadrado instalado varía entre $300 y $700 MXN, siendo más económico que la madera natural pero más costoso que el vinilo. Requiere pintura cada 7 a 15 años, lo que debe considerarse en el presupuesto de mantenimiento a largo plazo.",
+  nextSteps: [
+    { label: "Calculadora de Membrana Hidrófuga", href: "/calculators/exterior-shell/housewrap-calculator/" },
+    { label: "Calculadora de Tapajuntas de Ventana", href: "/calculators/exterior-shell/window-flashing-calculator/" },
+    { label: "Calculadora de Revestimiento Vinílico", href: "/calculators/exterior-shell/vinyl-siding-calculator/" },
+  ],
   installationTips: [
     "Usa clavos específicos para fibrocemento (galvanizados en caliente o acero inoxidable).",
     "Pinta los extremos cortados con pintura de retoque del mismo color.",
@@ -1709,6 +1867,11 @@ export const windowFlashingCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "La cinta tapajuntas de ventanas es una membrana autoadhesiva flexible que se instala alrededor del vano de cada ventana y puerta exterior para crear un sello hermético que previene la infiltración de agua. Es uno de los componentes más críticos del sistema de impermeabilización del muro exterior, ya que las ventanas y puertas son los puntos más vulnerables a filtraciones. Las cintas tapajuntas vienen en rollos de diferentes anchos (10 cm, 15 cm y 23 cm) y largos (15 m o 23 m). Los materiales incluyen polietileno con adhesivo butílico (el más común), membrana de polipropileno y láminas de aluminio autoadhesivas. En Latinoamérica, las marcas más disponibles son DuPont FlexWrap, 3M All Weather Flashing Tape, Henry Blueskin y Protecto Wrap. El costo por rollo varía entre $300 y $800 MXN dependiendo del ancho y la marca. La instalación debe seguir una secuencia estricta: primero el alféizar (base), luego las jambas (lados) y finalmente el cabezal (parte superior), asegurando que cada capa traslape sobre la anterior como escamas de pescado.",
+  nextSteps: [
+    { label: "Calculadora de Membrana Hidrófuga", href: "/calculators/exterior-shell/housewrap-calculator/" },
+    { label: "Calculadora de Revestimiento Vinílico", href: "/calculators/exterior-shell/vinyl-siding-calculator/" },
+    { label: "Calculadora de Revestimiento de Fibrocemento", href: "/calculators/exterior-shell/hardie-siding-calculator/" },
+  ],
   installationTips: [
     "Instala primero la cinta del alféizar con un doblez de respaldo.",
     "Traslapa la cinta de las jambas sobre la cinta del alféizar.",
@@ -1764,6 +1927,11 @@ export const cavityInsulationCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "Los paneles aislantes de fibra de vidrio o lana mineral se instalan dentro de las cavidades de montantes y viguetas para reducir la transferencia de calor entre el interior y el exterior de la edificación. El valor de aislamiento se mide en valor R — a mayor R, mejor aislamiento. Para muros de 38x89 mm se usan paneles R-13 o R-15 de 89 mm de espesor. Para muros de 38x140 mm se usan paneles R-19 o R-21 de 140 mm. Para cielos y áticos, se recomienda R-30 a R-60 según la zona climática. En Latinoamérica, el aislamiento térmico en viviendas es cada vez más importante debido a las normativas de eficiencia energética que se están implementando en Chile (CEV), México (NOM-020-ENER) y Colombia (Resolución 0549). Las marcas disponibles incluyen Owens Corning, Knauf Insulation, Isover (Saint-Gobain) y Rockwool. El costo varía entre $50 y $150 MXN por metro cuadrado según el tipo y espesor. La lana mineral (como Rockwool) es más costosa pero ofrece mejor aislamiento acústico, resistencia al fuego y al agua que la fibra de vidrio convencional.",
+  nextSteps: [
+    { label: "Calculadora de Láminas de Yeso", href: "/calculators/insulation-drywall/drywall-calculator/" },
+    { label: "Calculadora de Montantes", href: "/calculators/wall-framing/stud-calculator/" },
+    { label: "Calculadora de Membrana Hidrófuga", href: "/calculators/exterior-shell/housewrap-calculator/" },
+  ],
   installationTips: [
     "Llena las cavidades completamente — el aislamiento comprimido o con huecos pierde valor R.",
     "No dejes espacios alrededor de cajas eléctricas y tuberías.",
@@ -1817,6 +1985,11 @@ export const drywallCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "Los paneles de yeso (también conocidos como tablaroca, Sheetrock, placa de yeso, cartón yeso o drywall) son láminas compuestas por un núcleo de yite recubierto por dos caras de cartón especial. El formato estándar es de 1.22 m x 2.44 m (4x8 pies) con un área de 2.98 m² por lámina. Los espesores más comunes son 12.7 mm (1/2\") para muros estándar y 15.9 mm (5/8\") tipo X para ensambles resistentes al fuego y cielos. Existen también versiones especializadas: paneles resistentes a la humedad (placa verde) para baños y cocinas, paneles ultralivianos para facilitar el manejo, y paneles de alta densidad para impacto. En Latinoamérica, las marcas principales son USG (Tablaroca en México), Knauf, Volcán (Chile), Gyplac (Perú, Colombia) y Placo (Saint-Gobain). El costo por lámina estándar de 12.7 mm varía entre $120 y $250 MXN. La construcción con paneles de yeso sobre entramado de madera es el sistema de acabado interior más utilizado mundialmente por su rapidez de instalación, bajo costo y versatilidad.",
+  nextSteps: [
+    { label: "Calculadora de Tornillos para Yeso", href: "/calculators/insulation-drywall/drywall-screw-calculator/" },
+    { label: "Calculadora de Compuesto para Juntas", href: "/calculators/insulation-drywall/joint-compound-calculator/" },
+    { label: "Calculadora de Aislamiento de Cavidad", href: "/calculators/insulation-drywall/cavity-insulation-calculator/" },
+  ],
   installationTips: [
     "Instala primero los cielos, luego los muros.",
     "Alterna las juntas — evita juntas en H.",
@@ -1871,6 +2044,11 @@ export const drywallScrewCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "Los tornillos para paneles de yeso son fijaciones especializadas con cabeza tipo bugle (trompeta) y punta autoperforante diseñadas específicamente para instalar paneles de yeso sobre estructura de madera o metálica. Los dos tipos principales son: rosca gruesa para estructura de madera (los más comunes en construcción con entramado) y rosca fina para perfiles metálicos (para sistemas de steel frame). Las longitudes estándar son 32 mm (1-1/4\") para paneles de una capa en muros, 41 mm (1-5/8\") para cielos (mayor penetración en la vigueta) y 57 mm (2-1/4\") para doble capa. En Latinoamérica, los tornillos se venden en cajas de 500 o 1,000 unidades, con costos entre $80 y $250 MXN por caja de 500 según la longitud y calidad. Las marcas más disponibles incluyen Simpson Strong-Tie, Grip-Rite, Truper y marcas genéricas. Se necesitan aproximadamente 32 tornillos por lámina estándar de 1.22 x 2.44 m. Es importante usar un adaptador de tope de profundidad (dimpler) en el atornillador para hundir cada tornillo 1 mm bajo la superficie sin romper el papel del panel.",
+  nextSteps: [
+    { label: "Calculadora de Láminas de Yeso", href: "/calculators/insulation-drywall/drywall-calculator/" },
+    { label: "Calculadora de Compuesto para Juntas", href: "/calculators/insulation-drywall/joint-compound-calculator/" },
+    { label: "Calculadora de Sellador (Primer)", href: "/calculators/finishing/primer-calculator/" },
+  ],
   installationTips: [
     "Usa un atornillador de alimentación automática o un adaptador de tope de profundidad en un taladro estándar.",
     "Los tornillos deben hundirse 1 mm sin romper el papel del panel.",
@@ -1921,6 +2099,11 @@ export const jointCompoundCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "El compuesto para juntas (también llamado masilla, pasta, enduido o mud) es un material a base de yeso que se aplica sobre las juntas, tornillos y esquinas de los paneles de yeso para crear una superficie lisa y continua lista para pintar. Existen varios tipos: compuesto de uso general (All-Purpose) que sirve para todas las manos, compuesto de encintado (Taping) más adhesivo para la primera mano con cinta, y compuesto liviano (Lightweight o Plus 3) más fácil de lijar para la mano final. La presentación más común es la cubeta de 17 litros (4.5 galones) que cubre aproximadamente 16 láminas en tres manos de aplicación. También existe el compuesto de fraguado rápido (tipo Durabond o Easy Sand) que viene en polvo y fragua químicamente en 20, 45 o 90 minutos — ideal para rellenos profundos y primera mano en reparaciones. En Latinoamérica, las marcas principales son USG Sheetrock (México), Knauf, Volcán (Chile) y marcas locales según el país. El costo por cubeta de 17 litros varía entre $200 y $500 MXN.",
+  nextSteps: [
+    { label: "Calculadora de Láminas de Yeso", href: "/calculators/insulation-drywall/drywall-calculator/" },
+    { label: "Calculadora de Tornillos para Yeso", href: "/calculators/insulation-drywall/drywall-screw-calculator/" },
+    { label: "Calculadora de Sellador (Primer)", href: "/calculators/finishing/primer-calculator/" },
+  ],
   installationTips: [
     "Aplica 3 manos: capa de encintado, segunda mano (más delgada) y mano de acabado.",
     "Lija entre manos cuando esté completamente seco.",
@@ -1975,6 +2158,11 @@ export const framingNailCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "Los clavos de estructura son el fijador principal en la construcción con entramado de madera. Los clavos de 90 mm (3.5 pulgadas) tipo sinker con cabeza de oblea y recubrimiento vinílico son el estándar para clavado directo a través de soleras hacia montantes. Para clavadoras neumáticas (las más utilizadas en obra), los clavos vienen en formatos de tira (strip) o espiral (coil), en calibres de 80 mm a 90 mm. Una caja de 15 kg de clavos de 90 mm contiene aproximadamente 500 clavos. En Latinoamérica, los clavos para estructura se consiguen en ferreterías industriales y distribuidores de materiales de construcción. Las marcas más comunes incluyen Grip-Rite, Paslode, Senco y marcas locales como Truper (México). El costo por caja varía entre $200 y $500 MXN. Es fundamental usar el tipo y tamaño correcto de clavo según la normativa — las conexiones estructurales tienen requisitos específicos de diámetro, longitud y cantidad de clavos que afectan directamente la resistencia de la estructura.",
+  nextSteps: [
+    { label: "Calculadora de Montantes", href: "/calculators/wall-framing/stud-calculator/" },
+    { label: "Calculadora de Conectores de Viguetas", href: "/calculators/hardware/joist-hanger-calculator/" },
+    { label: "Calculadora de Costo de Madera", href: "/calculators/hardware/lumber-cost-calculator/" },
+  ],
   installationTips: [
     "Clava a través de las soleras hacia los montantes (2 clavos por extremo).",
     "Clava a ángulo (toenailing) los montantes adicionales en esquinas y aberturas.",
@@ -2026,6 +2214,11 @@ export const joistHangerCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "Los conectores de viguetas (también llamados estribos, soportes o zapatos de viguetas) son conectores metálicos estampados de acero galvanizado que proporcionan una conexión estructural entre los extremos de las viguetas y las vigas o dinteles donde se apoyan. Las marcas más reconocidas son Simpson Strong-Tie (modelos LUS, LU, HUS) y USP Structural Connectors. Cada modelo está diseñado para una sección específica de madera — un conector para 38x184 mm NO sirve para 38x235 mm. Los conectores vienen en acabado galvanizado estándar para uso interior, galvanizado Z-MAX para exposición moderada, y acero inoxidable para zonas costeras. En Latinoamérica, los conectores Simpson están disponibles en Chile, México, Costa Rica y Panamá a través de distribuidores especializados. También existen fabricantes locales que producen conectores equivalentes a menor costo. El precio unitario varía entre $20 y $80 MXN según el tamaño y acabado. Es fundamental clavar todos los orificios del conector con los clavos especificados — la capacidad de carga nominal asume que todos los orificios están clavados.",
+  nextSteps: [
+    { label: "Calculadora de Viguetas de Piso", href: "/calculators/floor-framing/floor-joist-calculator/" },
+    { label: "Calculadora de Clavos para Estructura", href: "/calculators/hardware/framing-nail-calculator/" },
+    { label: "Calculadora de Amarres Anti-Huracán", href: "/calculators/hardware/hurricane-tie-calculator/" },
+  ],
   installationTips: [
     "Clava todos los orificios del conector — cada clavo importa para la capacidad de carga nominal.",
     "Usa clavos especiales para conectores (38 mm x 10d) — NO uses clavos comunes de 90 mm.",
@@ -2078,6 +2271,11 @@ export const hurricaneTieCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "Los amarres anti-huracán (también llamados clips de techo, conectores de levantamiento o amarres anti-viento) son conectores metálicos galvanizados que crean una conexión estructural entre los cabios o cerchas del techo y la solera superior del muro, resistiendo las fuerzas de levantamiento generadas por el viento. Los modelos más utilizados son los Simpson H2.5A (para resistencia estándar), H10A (servicio pesado) y los conectores de doble cola H1 para cerchas. En Latinoamérica, los amarres anti-huracán son especialmente importantes en las costas del Golfo de México, el Caribe, Centroamérica y las costas colombianas y venezolanas donde los huracanes y tormentas tropicales son frecuentes. La normativa de construcción en estas zonas requiere conexiones certificadas de ruta de carga continua desde la cimentación hasta el techo. Los amarres se venden individualmente o en cajas de 25 o 100 unidades, con costos entre $15 y $60 MXN por unidad según el modelo. En zonas costeras con alta salinidad, usa conectores galvanizados Z-MAX o de acero inoxidable para evitar la corrosión prematura.",
+  nextSteps: [
+    { label: "Calculadora de Cerchas de Techo", href: "/calculators/roofing/truss-calculator/" },
+    { label: "Calculadora de Cabios", href: "/calculators/roofing/rafter-calculator/" },
+    { label: "Calculadora de Conectores de Viguetas", href: "/calculators/hardware/joist-hanger-calculator/" },
+  ],
   installationTips: [
     "Clava todos los orificios especificados con los clavos adecuados de 10d o 16d.",
     "Usa conectores galvanizados o de acero inoxidable en zonas costeras.",
@@ -2134,6 +2332,11 @@ export const lumberCostCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "La madera dimensionada es el material principal para la construcción de entramado ligero (wood-frame) en Norteamérica y cada vez más en proyectos de autoconstrucción en Latinoamérica. Las medidas estándar en pulgadas — 2x4, 2x6, 2x8, 2x10 y 2x12 — son fresadas principalmente de especies de coníferas como pino, abeto y picea (SPF). En Latinoamérica, el pino radiata (Chile), pino de Durango (México) y el pino caribe son las especies más utilizadas para construcción. Las dimensiones reales de una tabla 2x4 son 38 mm x 89 mm (1.5\" x 3.5\") después del cepillado y secado. La madera se vende por pieza en tiendas de materiales y madererías. Los precios varían significativamente según la región — en México, una tabla de pino 2x4x8 cuesta entre $60 y $120 MXN, mientras que en Chile el pino radiata equivalente cuesta entre $1,500 y $3,000 CLP. La madera tratada para contacto con suelo o uso exterior cuesta 50-100% más que la madera sin tratar. Para aplicaciones estructurales, especifica el grado correcto y verifica que el contenido de humedad sea apropiado para tu clima — la madera debe estar seca (menor al 19% de humedad) antes de instalarla.",
+  nextSteps: [
+    { label: "Calculadora de Pies Tabla", href: "/calculators/hardware/board-feet-calculator/" },
+    { label: "Calculadora de Triplay", href: "/calculators/hardware/plywood-calculator/" },
+    { label: "Calculadora de Montantes", href: "/calculators/wall-framing/stud-calculator/" },
+  ],
   installationTips: [
     "Inspecciona cada tabla para detectar combas, torceduras y rajaduras antes de instalar.",
     "Instala las tablas con la comba hacia arriba para viguetas y cabios.",
@@ -2167,6 +2370,11 @@ export const boardFeetCalculator: CalculatorSEOContent = {
   ],
   materialInfo:
     "El pie tabla (PT o BF en inglés) es la unidad estándar de medida de volumen para madera en Norteamérica, y es cada vez más utilizada en el comercio de madera en Latinoamérica, especialmente para maderas duras y maderas importadas. Un pie tabla equivale a una pieza de 1 pulgada de espesor, 12 pulgadas de ancho y 1 pie de largo — o 2,360 cm³ de madera. La fórmula es: Pies Tabla = (Espesor en pulgadas x Ancho en pulgadas x Largo en pies) / 12. Esta medida usa dimensiones nominales, no reales, por lo que una tabla cepillada de 2x6 se calcula como 2 x 6. El pie tabla es esencial para comprar maderas duras como roble, nogal, cerezo y caoba, que se venden casi siempre por pie tabla en vez de por pieza. En México, las maderas duras nacionales como parota, tzalam y primavera se venden entre $80 y $200 MXN por pie tabla. Las maderas importadas como el roble americano cuestan $150 a $300 MXN/PT y el nogal negro $250 a $500 MXN/PT. Al comprar madera bruta para mueblería, agrega un 25-40% adicional al cálculo para compensar el material perdido en el cepillado (se retira 3-6 mm por cara), canteado y corte de defectos.",
+  nextSteps: [
+    { label: "Calculadora de Costo de Madera", href: "/calculators/hardware/lumber-cost-calculator/" },
+    { label: "Calculadora de Triplay", href: "/calculators/hardware/plywood-calculator/" },
+    { label: "Calculadora de Montantes", href: "/calculators/wall-framing/stud-calculator/" },
+  ],
   installationTips: [
     "Usa dimensiones nominales (no reales) al calcular pies tabla.",
     "Agrega 25-40% de factor de desperdicio al comprar madera bruta para proyectos de mueblería.",
@@ -2198,6 +2406,11 @@ export const plywoodCalculatorES: CalculatorSEOContent = {
   ],
   materialInfo:
     "El triplay (también llamado plywood, contrachapado o madera contrachapada) es un panel de madera industrializada fabricado con capas delgadas (chapas) de madera pegadas con adhesivo, con la fibra de cada capa girada 90 grados respecto a la anterior. Esta construcción cruzada le da al triplay resistencia, rigidez y estabilidad dimensional superiores a la madera sólida del mismo espesor. Las hojas estándar miden 1.22 m x 2.44 m (4 x 8 pies, equivalente a 2.97 m²) y están disponibles en espesores desde 6 mm (1/4\") hasta 18 mm (3/4\"). En Latinoamérica, las calidades más comunes son: triplay de pino para construcción (recubrimiento de muros, cimbra, pisos base), triplay de caras lijadas para mueblería y estantería, y triplay marino con adhesivo resistente al agua para aplicaciones exteriores y de alta humedad. Las marcas reconocidas en la región incluyen Masisa, Arauco, Plywood de México y Celta. Los precios en México van desde $200 MXN por hoja de 6 mm hasta $700 MXN por hoja de 18 mm de pino estándar. El triplay de abedul báltico para mueblería cuesta $800 a $1,500 MXN por hoja. Al cortar triplay, usa un disco de dientes finos (80+ dientes) para minimizar el astillado de la cara enchapada.",
+  nextSteps: [
+    { label: "Calculadora de Paneles OSB", href: "/calculators/floor-framing/osb-panel-calculator/" },
+    { label: "Calculadora de Costo de Madera", href: "/calculators/hardware/lumber-cost-calculator/" },
+    { label: "Calculadora de Revestimiento Estructural Exterior", href: "/calculators/wall-framing/exterior-sheathing-calculator/" },
+  ],
   installationTips: [
     "Deja un espacio de 3 mm entre hojas para permitir la expansión por humedad.",
     "Instala con la fibra de la cara perpendicular a los apoyos (viguetas o montantes).",
@@ -2232,6 +2445,11 @@ const paintCoverageCalculatorES: CalculatorSEOContent = {
   ],
   materialInfo:
     "La pintura vinílica (acrílica) es el material de acabado estándar para muros y techos en construcción residencial en Latinoamérica. El rendimiento varía según la calidad y el tipo de pintura — los acabados mate cubren típicamente 10 a 12 m² por litro, mientras que los acabados satinados y semi-brillantes cubren 8 a 10 m² por litro debido a su mayor densidad. Las marcas más utilizadas en la región incluyen Comex (Vinimex, Vinimex Total), Berel (Berelex, Qualitex), Sherwin-Williams (SuperPaint, Kem Tone), y PPG/Glidden. La pintura premium de estas marcas ofrece mejor cubrimiento por mano y mayor durabilidad — una inversión que se recupera al necesitar menos manos y menos repintados a lo largo de los años. En México, un bote de 4 litros de pintura vinílica de calidad media cuesta entre $350 y $600 MXN, mientras que la cubeta de 19 litros cuesta entre $1,200 y $2,800 MXN dependiendo de la marca y línea. Para proyectos grandes, comprar cubetas de 19 litros resulta significativamente más económico por litro y garantiza consistencia de color entre todos los muros.",
+  nextSteps: [
+    { label: "Calculadora de Costo de Pintura", href: "/calculators/finishing/paint-cost-calculator/" },
+    { label: "Calculadora de Sellador (Primer)", href: "/calculators/finishing/primer-calculator/" },
+    { label: "Calculadora de Láminas de Yeso", href: "/calculators/insulation-drywall/drywall-calculator/" },
+  ],
   installationTips: [
     "Usa rodillo de felpa corta (3/8\") para muros lisos, felpa media (1/2\") para textura ligera, y felpa larga (3/4\") para textura pesada o aplanado rústico.",
     "Recorta orillas con brocha angular de 6 cm antes de aplicar con rodillo en las áreas grandes.",
@@ -2265,6 +2483,11 @@ const paintCostCalculatorES: CalculatorSEOContent = {
   ],
   materialInfo:
     "El costo de la pintura varía significativamente por nivel de calidad. La pintura económica ($80 a $150 MXN por litro) como Comex Vinimex básico y Berel Berelex estándar es adecuada para propiedades en renta, techos y áreas donde la apariencia no es crítica — requiere más manos y tiene menor durabilidad. La pintura estándar ($150 a $250 MXN por litro) como Comex Vinimex Plus y Sherwin-Williams SuperPaint ofrece buen rendimiento y durabilidad para la mayoría de aplicaciones residenciales. La pintura premium ($250 a $400 MXN por litro) como Comex Platinum y Sherwin-Williams Duration proporciona superior cubrimiento (frecuentemente una sola mano cubre), excelente lavabilidad y más de 10 años de vida en muros interiores. Las líneas ultra-premium ($400 a $600 MXN por litro) como Sherwin-Williams Emerald y Comex Vinimex Total Cobertura Total ofrecen la máxima carga de pigmentos y tecnología de color avanzada. Además de la pintura, presupuesta insumos: rodillo y repuestos ($80 a $150 MXN), brochas angulares ($60 a $120 MXN cada una), cinta de pintor ($40 a $80 MXN por rollo), plástico protector ($50 a $100 MXN), y charola para pintura ($30 a $60 MXN). Un pintor profesional en México cobra entre $25 y $60 MXN por m² para pintura interior.",
+  nextSteps: [
+    { label: "Calculadora de Rendimiento de Pintura", href: "/calculators/finishing/paint-coverage-calculator/" },
+    { label: "Calculadora de Sellador (Primer)", href: "/calculators/finishing/primer-calculator/" },
+    { label: "Calculadora de Láminas de Yeso", href: "/calculators/insulation-drywall/drywall-calculator/" },
+  ],
   installationTips: [
     "Compra toda tu pintura de una sola vez para asegurar consistencia de color en todo el lote.",
     "Invierte en rodillos y brochas de calidad — hacen una diferencia notable en el acabado final.",
@@ -2296,6 +2519,11 @@ const primerCalculatorES: CalculatorSEOContent = {
   ],
   materialInfo:
     "El sellador (primer) es un recubrimiento preparatorio que se aplica antes de la pintura de acabado para asegurar adhesión adecuada, brillo uniforme y color consistente. Los diferentes tipos de superficie requieren distintas formulaciones de sellador. El sellador vinílico (PVA) es la opción estándar para tablaroca (panel de yeso) nueva — sella la superficie porosa del yeso para que la pintura de acabado no se absorba de forma desigual, lo que causa manchas y brillos irregulares. El sellador vinílico cuesta $100 a $180 MXN por litro y cubre aproximadamente 10 a 12 m² por litro en tablaroca nueva. Para superficies previamente pintadas en buen estado, un sellador de adherencia o una pintura con sellador integrado es suficiente, cubriendo hasta 13 a 14 m² por litro. Las superficies de madera sin tratar requieren un sellador base aceite o base goma laca para sellar la veta y prevenir el sangrado de taninos, especialmente en pino, cedro y maderas resinosas — el rendimiento es menor, aproximadamente 8 a 9 m² por litro. El sellador bloqueador de manchas (base goma laca como Zinsser BIN o base aceite como Kilz Original) es esencial para cubrir manchas de humedad, humo, crayones y marcas difíciles. Las marcas más populares en Latinoamérica incluyen Comex (Sellador 5x1), Berel, Sherwin-Williams (PrepRite) y Kilz. Para mejores resultados, pide que entonen tu sellador en un tono cercano al color final de acabado — la mayoría de las tiendas pueden agregar una pequeña cantidad de colorante al sellador blanco sin costo adicional.",
+  nextSteps: [
+    { label: "Calculadora de Rendimiento de Pintura", href: "/calculators/finishing/paint-coverage-calculator/" },
+    { label: "Calculadora de Costo de Pintura", href: "/calculators/finishing/paint-cost-calculator/" },
+    { label: "Calculadora de Compuesto para Juntas", href: "/calculators/insulation-drywall/joint-compound-calculator/" },
+  ],
   installationTips: [
     "Aplica el sellador con el mismo tipo de rodillo que planeas usar para la pintura de acabado.",
     "Permite que el sellador seque completamente antes de aplicar la pintura — típicamente 1 a 2 horas para sellador vinílico, 24 horas para base aceite.",
@@ -2331,6 +2559,11 @@ const deckBoardCalculatorES: CalculatorSEOContent = {
   ],
   materialInfo:
     "Las tablas de deck son la superficie visible de tu terraza y reciben el mayor desgaste por tráfico peatonal, muebles, clima y exposición al sol. Las opciones de material más comunes son madera tratada a presión, cedro, madera tropical y deck composite.\n\nLa madera tratada a presión (pino radiata o pino patula en Latinoamérica) es la opción más popular para proyectos con presupuesto ajustado. Las tablas estándar de 2.5x15 cm cuestan entre $80 y $180 MXN por metro lineal y están clasificadas para contacto con el suelo cuando se tratan con CCA o ACQ. Las tablas se consiguen en largos comerciales de 2.44, 3.05, 3.66 y 4.88 metros. El tratamiento protege contra pudrición y termitas pero requiere sellado o teñido anual para prevenir el encanecimiento, pandeo y rajaduras. La vida útil esperada es de 10 a 15 años con mantenimiento adecuado.\n\nEl cedro rojo del Pacífico y las maderas tropicales (ipé, cumaru, garapa, tzalam) son naturalmente resistentes a la pudrición. El cedro cuesta entre $200 y $350 MXN por metro lineal, mientras que las maderas tropicales oscilan entre $350 y $800 MXN. Las maderas tropicales como el ipé son extremadamente duras (densidad de 1,050 kg/m³) y duran 25 a 40 años sin tratamiento, lo que las hace populares en climas tropicales de México, Centroamérica y el Caribe.\n\nEl deck composite (Trex, TimberTech, Fiberon, así como marcas regionales como Neodeck y WPC) está fabricado con fibras de madera y plástico reciclado. Los precios varían de $250 a $700 MXN por metro lineal según la línea de producto. Los composites nunca necesitan teñido, resisten la pudrición e insectos, y tienen garantías de 25 a 50 años. Sin embargo, requieren sistemas de fijación específicos, se expanden y contraen con la temperatura, y pueden calentarse mucho bajo el sol directo.\n\nEl espaciado entre tablas es crítico: mantén un espacio de 3 a 6 mm entre tablas para drenaje y ventilación. Para tablas tratadas instaladas húmedas, colócalas juntas - se encogerán al secarse. Para tablas secas y composite, deja el espacio completo durante la instalación.",
+  nextSteps: [
+    { label: "Calculadora de Cimentación para Deck", href: "/calculators/outdoor/deck-footing-calculator/" },
+    { label: "Calculadora de Barandal para Deck", href: "/calculators/outdoor/deck-railing-calculator/" },
+    { label: "Calculadora de Escaleras para Deck", href: "/calculators/outdoor/deck-stair-calculator/" },
+  ],
   installationTips: [
     "Comienza la primera tabla perfectamente recta y a escuadra con la casa - cada tabla subsiguiente sigue esta línea.",
     "Pre-perfora los extremos de las tablas a menos de 5 cm del borde para prevenir rajaduras, especialmente con madera tratada.",
@@ -2384,6 +2617,11 @@ const deckFootingCalculatorES: CalculatorSEOContent = {
   ],
   materialInfo:
     "Las zapatas para deck son pilares de concreto que transfieren el peso de la estructura y sus cargas vivas al suelo por debajo del nivel de desplante. Sin zapatas adecuadas, los ciclos de expansión y contracción del suelo moverán el deck, causando que se desplace, agriete y se separe de la casa.\n\nLos dos métodos más comunes de cimentación son pilares de concreto colados usando tubos de cartón (tipo Sonotube) y bloques prefabricados (solo adecuados para decks a nivel del piso en algunas jurisdicciones). Para cualquier deck elevado o adosado a la casa, se requieren zapatas coladas que se extiendan por debajo del nivel de desplante según el reglamento de construcción.\n\nLas zapatas residenciales estándar usan tubos de 25 o 30 cm de diámetro. La profundidad depende de las condiciones locales del suelo y la normativa - generalmente entre 60 cm y 1.20 m. Cada zapata de 30 cm de diámetro por 1 m de profundidad requiere aproximadamente 0.07 m³ de concreto. Para un deck con 9 zapatas, necesitas unos 0.63 m³ en total - equivalente a aproximadamente 18 bultos de concreto premezclado de 40 kg.\n\nEl espaciado de postes depende del tamaño de la trabe y la especie de madera. Para una trabe doble de 5x20 cm de madera tratada, el espaciado máximo entre postes es de 2.40 m. Para trabes dobles de 5x25 cm, puede aumentarse a 3.0 m. Para trabes dobles de 5x15 cm, mantén el espaciado a 1.80 m o menos.\n\nLas conexiones poste-zapata requieren herraje aprobado. Coloca un perno tipo J o ancla de base en el concreto fresco, luego fija el poste con una base tipo Simpson ABA o ABU. Nunca embebas postes de madera directamente en el concreto - esto atrapa humedad y causa pudrición en la conexión estructural más crítica del deck.\n\nEl concreto para zapatas debe ser de al menos f'c=250 kg/cm² y colarse en condiciones secas. Permite 24 a 48 horas de curado antes de cargar las zapatas con postes y estructura.",
+  nextSteps: [
+    { label: "Calculadora de Tablas para Deck", href: "/calculators/outdoor/deck-board-calculator/" },
+    { label: "Calculadora de Concreto", href: "/calculators/foundation/concrete-calculator/" },
+    { label: "Calculadora de Barandal para Deck", href: "/calculators/outdoor/deck-railing-calculator/" },
+  ],
   installationTips: [
     "Excava los hoyos al menos 15 cm por debajo del nivel de desplante - consulta tu reglamento de construcción local para la profundidad exacta.",
     "Usa tubos de cartón para crear zapatas limpias y redondas con un diámetro consistente.",
@@ -2437,6 +2675,11 @@ const deckRailingCalculatorES: CalculatorSEOContent = {
   ],
   materialInfo:
     "El barandal de deck es un elemento de seguridad crítico requerido por el reglamento de construcción en toda superficie de deck que esté a 75 cm o más sobre el nivel del terreno (60 cm en algunas jurisdicciones). La normativa residencial especifica una altura mínima de barandal de 90 cm para decks residenciales y 107 cm para estructuras comerciales o multifamiliares.\n\nLos sistemas de barandal consisten en cuatro componentes principales: postes, riel superior, riel inferior y balaustres (balaustradas). Los postes son típicamente de madera tratada de 10x10 cm o aluminio, espaciados a no más de 1.80 m (2.40 m máximo en algunos reglamentos). Los postes deben estar firmemente empernados a la estructura del deck - nunca solo atornillados a las tablas de superficie o fascia. Usa pernos de coche de 12 mm o herraje aprobado para montaje de postes.\n\nLos balaustres deben estar espaciados de modo que una esfera de 10 cm no pueda pasar entre ellos. Para balaustres cuadrados estándar de 4 cm, esto significa aproximadamente 10 cm entre centros. La normativa también requiere que el espacio entre la superficie del deck y el riel inferior sea menor a 10 cm.\n\nLos rieles superior e inferior son típicamente de madera tratada de 5x10 cm, kits de barandal composite o perfiles de aluminio. Un remate plano de 5x15 cm sobre los postes crea un pasamanos cómodo para apoyar bebidas. La mayoría de los sistemas de barandal composite vienen en kits con balaustres precortados, secciones de riel y fundas de poste en longitudes de 1.80 m y 2.40 m.\n\nEl costo del barandal de madera es de $600 a $1,200 MXN por metro lineal instalado. Los sistemas composite cuestan de $1,200 a $2,500 MXN por metro lineal. Los sistemas de aluminio y cable van de $2,000 a $4,000 MXN por metro lineal. Para un deck típico de 4x5 m (aproximadamente 12 metros lineales de barandal después de descontar el lado de la casa), el barandal de madera cuesta $7,200 a $14,400 MXN y el composite cuesta $14,400 a $30,000 MXN.\n\nEl barandal es una de las violaciones más comunes al reglamento en decks. Los inspectores frecuentemente señalan fijación insuficiente de postes, espaciado excesivo de balaustres, altura insuficiente y espacios mayores a 10 cm entre la superficie del deck y el riel inferior.",
+  nextSteps: [
+    { label: "Calculadora de Tablas para Deck", href: "/calculators/outdoor/deck-board-calculator/" },
+    { label: "Calculadora de Escaleras para Deck", href: "/calculators/outdoor/deck-stair-calculator/" },
+    { label: "Calculadora de Cimentación para Deck", href: "/calculators/outdoor/deck-footing-calculator/" },
+  ],
   installationTips: [
     "Emperna los postes del barandal a través de la viga perimetral con pernos de coche de 12 mm - nunca fijes postes solo con tornillos o tirafondos.",
     "Usa una guía espaciadora (corta un bloque de madera de 10 cm) para mantener un espaciado consistente de balaustres.",
@@ -2490,6 +2733,11 @@ const deckStairCalculatorES: CalculatorSEOContent = {
   ],
   materialInfo:
     "Las escaleras del deck conectan la superficie de la terraza con el nivel del terreno y son uno de los elementos más críticos estructuralmente y más regulados por el reglamento. La normativa controla estrictamente la altura del peralte, la profundidad de la huella, el ancho de la escalera, la altura libre, los requisitos de pasamanos y las dimensiones del descanso.\n\nLos dos métodos estándar de construcción de escaleras para deck son los largueros recortados y los largueros alojados (ranurados). Los largueros recortados son el método residencial más común - una tabla de 5x30 cm se recorta en patrón de sierra para soportar las huellas y peraltes. Cada corte elimina material de la tabla, por lo que la garganta efectiva (madera restante detrás de los cortes) debe ser de al menos 9 cm para mantener la integridad estructural.\n\nLa normativa especifica una altura máxima de peralte de 20 cm y una profundidad mínima de huella de 25 cm. La escalera residencial ideal tiene un peralte de 18 cm y huella de 28 cm, lo que produce un ángulo cómodo de 33 grados. Todos los peraltes deben tener la misma altura, con una variación máxima de 1 cm entre cualquier dos peraltes del mismo tramo.\n\nEl espaciado de largueros sigue las mismas reglas que el espaciado de viguetas: 40 cm entre centros para cargas estándar. Una escalera de 90 cm de ancho necesita típicamente 3 largueros (uno a cada lado más uno en el centro). Para anchos mayores a 90 cm, agrega un larguero por cada 40 cm adicionales. Los largueros deben ser de madera tratada a presión ya que están en contacto o cerca del suelo.\n\nLas tablas de huella son típicamente dos tablas de deck de 2.5x15 cm o 5x15 cm por escalón, con un espacio de 6 mm entre ellas y una nariz de 2.5 cm al frente. Las tablas de peralte son opcionales por normativa en muchas áreas pero se recomiendan para prevenir que los niños trepen a través de las escaleras. Cuando se usan, los peraltes son típicamente tablas de 2.5x20 cm.\n\nLos largueros deben apoyarse sobre una plataforma de concreto, zapata o base de grava compactada - nunca directamente sobre el suelo. Una plataforma de concreto de 10 cm de espesor, al menos 90 cm de ancho y 90 cm de profundidad (desde el último peralte) proporciona un descanso sólido que cumple con la normativa.",
+  nextSteps: [
+    { label: "Calculadora de Tablas para Deck", href: "/calculators/outdoor/deck-board-calculator/" },
+    { label: "Calculadora de Barandal para Deck", href: "/calculators/outdoor/deck-railing-calculator/" },
+    { label: "Calculadora de Concreto", href: "/calculators/foundation/concrete-calculator/" },
+  ],
   installationTips: [
     "Usa una escuadra de carpintero con topes para marcar cortes consistentes de 18 cm de peralte y 28 cm de huella en el larguero.",
     "Corta los largueros de tablas de 5x30 cm de madera tratada - la garganta restante después de los cortes debe ser de al menos 9 cm.",

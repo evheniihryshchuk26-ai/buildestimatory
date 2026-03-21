@@ -33,6 +33,7 @@ const common: CommonTranslations = {
     quickTipHeading: "Quick Tip",
     quickTipBody:
       "Always add 10% waste factor to your material orders. Construction always produces off-cuts, and running short mid-project is costly.",
+    nextStepsHeading: "Next Steps:",
     calculatorNotFound: "Calculator not found.",
     validationError: (fieldLabel: string) =>
       `Please enter a valid number for "${fieldLabel}".`,

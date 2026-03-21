@@ -54,6 +54,7 @@ export default async function CalculatorPage({
       categorySlug={cat.slug}
       howToUse={config.howToUse}
       materialInfo={config.materialInfo}
+      nextSteps={config.nextSteps}
       installationTips={config.installationTips}
       commonMistakes={config.commonMistakes}
       faqs={config.faqs}

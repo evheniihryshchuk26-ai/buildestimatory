@@ -33,6 +33,7 @@ export interface CalculatorUITranslations {
   faqHeading: string;
   quickTipHeading: string;
   quickTipBody: string;
+  nextStepsHeading: string;
   calculatorNotFound: string;
   validationError: (fieldLabel: string) => string;
 }
