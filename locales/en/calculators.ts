@@ -150,6 +150,81 @@ export const categories: CategoryMeta[] = [
       { slug: "framing-nail-calculator", title: "Framing Nail Calculator", description: "Framing nail calculator: How many pounds of nails for my project? Free tool for 16d & 8d common nails — based on stud count.", category: "Hardware", categorySlug: "hardware" },
       { slug: "joist-hanger-calculator", title: "Joist Hanger Calculator", description: "How many joist hangers do I need? Free calculator for LUS, LU & HU series connectors — covers floor and ceiling joist framing.", category: "Hardware", categorySlug: "hardware" },
       { slug: "hurricane-tie-calculator", title: "Hurricane Tie Calculator", description: "Hurricane tie calculator: Estimate rafter-to-wall connectors for wind resistance. Free tool for H2.5A & H10 Simpson Strong-Tie clips.", category: "Hardware", categorySlug: "hardware" },
+      { slug: "lumber-cost-calculator", title: "Lumber Cost Calculator", description: "How much does lumber cost? Free calculator for 2x4, 2x6, 2x8 & more — estimates total cost by quantity and current prices.", category: "Hardware", categorySlug: "hardware" },
+      { slug: "board-feet-calculator", title: "Board Feet Calculator", description: "Board feet calculator: Convert lumber dimensions to board feet. Free tool for hardwood pricing — instant BF and cost estimate.", category: "Hardware", categorySlug: "hardware" },
+      { slug: "plywood-calculator", title: "Plywood Calculator", description: "How many plywood sheets do I need? Free calculator for 1/4\" to 3/4\" panels — gives sheet count and cost estimate.", category: "Hardware", categorySlug: "hardware" },
+    ],
+  },
+  {
+    slug: "finishing",
+    title: "Finishing Calculators",
+    description:
+      "Calculate paint, primer, stain, and finishing materials for interior and exterior surfaces.",
+    calculators: [
+      {
+        slug: "paint-coverage-calculator",
+        title: "Paint Coverage Calculator",
+        description:
+          "How much paint do I need? Free coverage calculator for walls & ceilings — accounts for coats, gives gallons and bucket count.",
+        category: "Finishing",
+        categorySlug: "finishing",
+      },
+      {
+        slug: "paint-cost-calculator",
+        title: "Paint Cost Calculator",
+        description:
+          "Paint cost calculator: Estimate total project cost by quality level. Free tool for economy to premium — includes supplies estimate.",
+        category: "Finishing",
+        categorySlug: "finishing",
+      },
+      {
+        slug: "primer-calculator",
+        title: "Primer Calculator",
+        description:
+          "How much primer do I need? Free calculator for new drywall, wood & repaints — adjusts coverage by surface type.",
+        category: "Finishing",
+        categorySlug: "finishing",
+      },
+    ],
+  },
+  {
+    slug: "outdoor",
+    title: "Outdoor Calculators",
+    description:
+      "Calculate materials for decks, patios, fences, and outdoor structures.",
+    calculators: [
+      {
+        slug: "deck-board-calculator",
+        title: "Deck Board Calculator",
+        description:
+          "How many deck boards do I need? Free calculator for treated, cedar & composite boards — gives board count, linear feet, and waste factor.",
+        category: "Outdoor",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "deck-footing-calculator",
+        title: "Deck Footing Calculator",
+        description:
+          "Deck footing calculator: How many concrete piers for my deck? Free tool — gives footing count, post layout, and beam spacing.",
+        category: "Outdoor",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "deck-railing-calculator",
+        title: "Deck Railing Calculator",
+        description:
+          "How many railing posts and balusters do I need? Free deck railing calculator — gives post count, baluster total, and rail linear feet.",
+        category: "Outdoor",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "deck-stair-calculator",
+        title: "Deck Stair Calculator",
+        description:
+          "Deck stair calculator: How many steps and stringers? Free tool — enter deck height for step count, stringer quantity, and tread boards.",
+        category: "Outdoor",
+        categorySlug: "outdoor",
+      },
     ],
   },
 ];

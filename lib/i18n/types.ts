@@ -429,6 +429,131 @@ export interface ConcreteCostGuideTranslations {
   faqs: GuideFaq[];
 }
 
+export interface HowMuchPaintGuideTranslations {
+  title: string;
+  metaDescription: string;
+  heroTitle: string;
+  heroSubtitle: string;
+  heroDescription: string;
+  quickAnswerHeading: string;
+  quickAnswerText: string;
+  measuringWallsHeading: string;
+  measuringWallsIntro: string;
+  measuringWallsItems: string[];
+  measuringWallsSummary: string;
+  coverageRatesHeading: string;
+  coverageRatesIntro: string;
+  coverageRatesText1: string;
+  coverageRatesText2: string;
+  coverageRatesText3: string;
+  numberOfCoatsHeading: string;
+  numberOfCoatsIntro: string;
+  numberOfCoatsItems: string[];
+  numberOfCoatsSummary: string;
+  surfacePrepHeading: string;
+  surfacePrepIntro: string;
+  surfacePrepItems: string[];
+  ceilingPaintHeading: string;
+  ceilingPaintIntro: string;
+  ceilingPaintText1: string;
+  ceilingPaintText2: string;
+  trimPaintHeading: string;
+  trimPaintIntro: string;
+  trimPaintText1: string;
+  trimPaintText2: string;
+  costBreakdownHeading: string;
+  costBreakdownIntro: string;
+  costBreakdownText1: string;
+  costBreakdownText2: string;
+  costBreakdownText3: string;
+  calculatorCtaHeading: string;
+  calculatorCtaText: string;
+  calculatorLinks: { label: string; href: string; description: string }[];
+  faqHeading: string;
+  faqs: GuideFaq[];
+}
+
+export interface LumberPricesGuideTranslations {
+  title: string;
+  metaDescription: string;
+  heroTitle: string;
+  heroSubtitle: string;
+  heroDescription: string;
+  quickAnswerHeading: string;
+  quickAnswerText: string;
+  speciesPricingHeading: string;
+  speciesPricingIntro: string;
+  speciesPricingText1: string;
+  speciesPricingText2: string;
+  speciesPricingText3: string;
+  dimensionalVsEngineeredHeading: string;
+  dimensionalVsEngineeredIntro: string;
+  dimensionalVsEngineeredItems: string[];
+  dimensionalVsEngineeredSummary: string;
+  gradeHeading: string;
+  gradeIntro: string;
+  gradeItems: string[];
+  gradeSummary: string;
+  priceTrendsHeading: string;
+  priceTrendsIntro: string;
+  priceTrendsText1: string;
+  priceTrendsText2: string;
+  priceTrendsText3: string;
+  whereToBuyHeading: string;
+  whereToBuyIntro: string;
+  whereToBuyItems: string[];
+  whereToBuySummary: string;
+  bulkDiscountsHeading: string;
+  bulkDiscountsIntro: string;
+  bulkDiscountsItems: string[];
+  bulkDiscountsSummary: string;
+  calculatorCtaHeading: string;
+  calculatorCtaText: string;
+  calculatorLinks: { label: string; href: string; description: string }[];
+  faqHeading: string;
+  faqs: GuideFaq[];
+}
+
+export interface CompositeVsWoodGuideTranslations {
+  title: string;
+  metaDescription: string;
+  heroTitle: string;
+  heroSubtitle: string;
+  heroDescription: string;
+  quickAnswerHeading: string;
+  quickAnswerText: string;
+  whatIsCompositeHeading: string;
+  whatIsCompositeText1: string;
+  whatIsCompositeText2: string;
+  whatIsWoodHeading: string;
+  whatIsWoodText1: string;
+  whatIsWoodText2: string;
+  comparisonHeading: string;
+  comparisonSubheading: string;
+  comparisonCol1: string;
+  comparisonCol2: string;
+  comparisonCol3: string;
+  comparisonRows: { category: string; composite: string; wood: string }[];
+  costHeading: string;
+  costIntro: string;
+  costText1: string;
+  costText2: string;
+  costText3: string;
+  whenCompositeHeading: string;
+  whenCompositeIntro: string;
+  whenCompositeItems: string[];
+  whenCompositeSummary: string;
+  whenWoodHeading: string;
+  whenWoodIntro: string;
+  whenWoodItems: string[];
+  whenWoodSummary: string;
+  calculatorCtaHeading: string;
+  calculatorCtaText: string;
+  calculatorLinks: { label: string; href: string; description: string }[];
+  faqHeading: string;
+  faqs: GuideFaq[];
+}
+
 export interface GuidesTranslations {
   index: GuidesIndexTranslations;
   spacingGuide: SpacingGuideTranslations;
@@ -436,6 +561,9 @@ export interface GuidesTranslations {
   minimumRoofPitch: MinimumRoofPitchGuideTranslations;
   readyMixVsBagged: ReadyMixVsBaggedGuideTranslations;
   concreteCostGuide: ConcreteCostGuideTranslations;
+  howMuchPaint: HowMuchPaintGuideTranslations;
+  lumberPrices: LumberPricesGuideTranslations;
+  compositeVsWood: CompositeVsWoodGuideTranslations;
   breadcrumbGuides: string;
 }
 

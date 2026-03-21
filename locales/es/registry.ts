@@ -2122,6 +2122,416 @@ export const hurricaneTieCalculator: CalculatorSEOContent = {
   ],
 };
 
+// ─── LUMBER (MADERA) ─────────────────────────────────────────────────────────
+
+export const lumberCostCalculator: CalculatorSEOContent = {
+  disclaimer: "Los precios de la madera fluctúan frecuentemente. Confirma precios con tu proveedor local antes de ordenar.",
+  howToUse: [
+    "Selecciona la medida de tabla que necesitas del menú desplegable.",
+    "Ingresa la cantidad de tablas para tu proyecto.",
+    "Opcionalmente ingresa el precio actual por tabla — deja en 0 para usar el estimado por defecto.",
+    "Haz clic en Calcular Materiales para ver costo total, costo por metro lineal y costo por pie tabla.",
+  ],
+  materialInfo:
+    "La madera dimensionada es el material principal para la construcción de entramado ligero (wood-frame) en Norteamérica y cada vez más en proyectos de autoconstrucción en Latinoamérica. Las medidas estándar en pulgadas — 2x4, 2x6, 2x8, 2x10 y 2x12 — son fresadas principalmente de especies de coníferas como pino, abeto y picea (SPF). En Latinoamérica, el pino radiata (Chile), pino de Durango (México) y el pino caribe son las especies más utilizadas para construcción. Las dimensiones reales de una tabla 2x4 son 38 mm x 89 mm (1.5\" x 3.5\") después del cepillado y secado. La madera se vende por pieza en tiendas de materiales y madererías. Los precios varían significativamente según la región — en México, una tabla de pino 2x4x8 cuesta entre $60 y $120 MXN, mientras que en Chile el pino radiata equivalente cuesta entre $1,500 y $3,000 CLP. La madera tratada para contacto con suelo o uso exterior cuesta 50-100% más que la madera sin tratar. Para aplicaciones estructurales, especifica el grado correcto y verifica que el contenido de humedad sea apropiado para tu clima — la madera debe estar seca (menor al 19% de humedad) antes de instalarla.",
+  installationTips: [
+    "Inspecciona cada tabla para detectar combas, torceduras y rajaduras antes de instalar.",
+    "Instala las tablas con la comba hacia arriba para viguetas y cabios.",
+    "Pre-taladra cerca de los extremos para evitar que la madera se raje.",
+    "Almacena la madera plana, separada del suelo y cubierta para evitar deformaciones.",
+  ],
+  commonMistakes: [
+    "No considerar el desperdicio — siempre agrega 10-15% al total de tu pedido.",
+    "Confundir dimensiones nominales y reales (una 2x4 realmente mide 38 mm x 89 mm).",
+    "Comprar madera verde (húmeda) para aplicaciones de acabado — se contraerá y deformará.",
+    "No comparar precios entre tiendas de materiales y madererías especializadas.",
+  ],
+  faqs: [
+    { question: "¿Cuánto cuesta una tabla de 2x4x8 pies?", answer: "En México, una tabla de pino 2x4x8 cuesta entre $60 y $120 MXN dependiendo de la calidad y el proveedor. En Chile, el equivalente en pino radiata cuesta $1,500 a $3,000 CLP. La madera tratada cuesta un 50-100% más. Los precios fluctúan según la temporada y las condiciones del mercado." },
+    { question: "¿Cuál es la diferencia entre madera de primera y de segunda?", answer: "La madera de primera tiene menos nudos, está más recta y tiene mejor apariencia — ideal para aplicaciones visibles y estructurales exigentes. La madera de segunda tiene más nudos y puede presentar ligeras curvaturas, pero es perfectamente funcional para uso estructural oculto como entramado de muros. La diferencia de precio es típicamente del 20-30%." },
+    { question: "¿Por qué los precios de la madera son tan variables?", answer: "Los precios de la madera dependen de la oferta de los aserraderos, la demanda del sector construcción, costos de transporte, tipo de cambio (para madera importada), y factores climáticos que afectan la producción forestal. En mercados volátiles, los precios pueden cambiar semanalmente." },
+    { question: "¿Cuántos pies tabla tiene una tabla de 2x4x8?", answer: "Una tabla de 2x4x8 contiene 5.33 pies tabla (2 x 4 x 8 / 12 = 5.33). El pie tabla mide volumen: un pie tabla equivale a una pieza de 1 pulgada de espesor, 12 pulgadas de ancho y 1 pie de largo." },
+    { question: "¿Dónde comprar madera en Latinoamérica?", answer: "Las fuentes principales son madererías especializadas (mejor precio por volumen y mayor variedad), tiendas de materiales como Home Depot y Sodimac (conveniencia y precio fijo), y aserraderos locales (el mejor precio pero requiere compra mínima). Para proyectos grandes, las madererías ofrecen descuentos del 15-25% sobre precios de mostrador." },
+    { question: "¿Cuánta madera necesito para un muro?", answer: "Para un muro estándar: un montante cada 40 cm (16 pulgadas) más uno extra en cada extremo. Un muro de 6 metros necesita aproximadamente 16 montantes de 2x4. Agrega una solera inferior y doble solera superior (3 piezas del largo del muro). Suma montantes adicionales para esquinas, intersecciones y cada lado de ventanas y puertas." },
+  ],
+};
+
+export const boardFeetCalculator: CalculatorSEOContent = {
+  disclaimer: "Los precios por pie tabla varían ampliamente según la especie y el grado. Maderas blandas promedian $50-80 MXN/PT, maderas duras $80-250 MXN/PT.",
+  howToUse: [
+    "Ingresa el espesor de la tabla en pulgadas (dimensión nominal).",
+    "Ingresa el ancho de la tabla en pulgadas (dimensión nominal).",
+    "Ingresa el largo de la tabla en pies.",
+    "Ingresa la cantidad de piezas.",
+    "Haz clic en Calcular Materiales para obtener el total de pies tabla y costo estimado.",
+  ],
+  materialInfo:
+    "El pie tabla (PT o BF en inglés) es la unidad estándar de medida de volumen para madera en Norteamérica, y es cada vez más utilizada en el comercio de madera en Latinoamérica, especialmente para maderas duras y maderas importadas. Un pie tabla equivale a una pieza de 1 pulgada de espesor, 12 pulgadas de ancho y 1 pie de largo — o 2,360 cm³ de madera. La fórmula es: Pies Tabla = (Espesor en pulgadas x Ancho en pulgadas x Largo en pies) / 12. Esta medida usa dimensiones nominales, no reales, por lo que una tabla cepillada de 2x6 se calcula como 2 x 6. El pie tabla es esencial para comprar maderas duras como roble, nogal, cerezo y caoba, que se venden casi siempre por pie tabla en vez de por pieza. En México, las maderas duras nacionales como parota, tzalam y primavera se venden entre $80 y $200 MXN por pie tabla. Las maderas importadas como el roble americano cuestan $150 a $300 MXN/PT y el nogal negro $250 a $500 MXN/PT. Al comprar madera bruta para mueblería, agrega un 25-40% adicional al cálculo para compensar el material perdido en el cepillado (se retira 3-6 mm por cara), canteado y corte de defectos.",
+  installationTips: [
+    "Usa dimensiones nominales (no reales) al calcular pies tabla.",
+    "Agrega 25-40% de factor de desperdicio al comprar madera bruta para proyectos de mueblería.",
+    "Pide a la maderería que cepille (S2S) las tablas brutas para ahorrar tiempo en el taller.",
+    "Solicita grado FAS o Selecta para proyectos que requieren caras limpias sin defectos.",
+  ],
+  commonMistakes: [
+    "Usar dimensiones reales en vez de nominales — los pies tabla siempre usan medidas nominales.",
+    "No considerar la pérdida por cepillado al comprar madera bruta.",
+    "Olvidar agregar factor de desperdicio por defectos, albura y pérdidas de corte.",
+    "Comparar precios por pie tabla entre especies sin considerar densidad y facilidad de trabajo.",
+  ],
+  faqs: [
+    { question: "¿Qué es un pie tabla?", answer: "Un pie tabla (PT) es una unidad de volumen equivalente a 2,360 cm³ de madera — una pieza de 1 pulgada de espesor, 12 pulgadas de ancho y 1 pie de largo. Es la unidad estándar de precio para madera dura en Norteamérica y se usa cada vez más en Latinoamérica. La fórmula es: PT = (Espesor x Ancho x Largo en pies) / 12." },
+    { question: "¿Cuántos pies tabla tiene una tabla de 2x6x10?", answer: "Una tabla de 2x6x10 contiene 10 pies tabla: (2 x 6 x 10) / 12 = 10 PT. Recuerda usar dimensiones nominales (2 y 6), no las dimensiones reales cepilladas (38 mm y 140 mm)." },
+    { question: "¿Qué significa MBF en precios de madera?", answer: "MBF significa 'mil pies tabla' (M es el número romano para 1,000). La madera al mayoreo se cotiza por MBF. Si la madera se cotiza a $10,000 MXN/MBF, eso equivale a $10 MXN por pie tabla. Los precios por pieza se pueden convertir a MBF para comparar entre proveedores." },
+    { question: "¿Por qué la madera dura se vende por pie tabla en vez de por pieza?", answer: "La madera dura viene en anchos y largos aleatorios porque se asierra de troncos de diferentes tamaños. A diferencia de la madera dimensionada (2x4, 2x6, etc.) que está estandarizada, cada tabla de madera dura es única. El precio por pie tabla normaliza el costo por volumen sin importar las dimensiones individuales de cada tabla." },
+    { question: "¿Cómo convierto metros lineales a pies tabla?", answer: "Primero convierte metros lineales a pies lineales (multiplicar por 3.28). Luego multiplica los pies lineales por el espesor y ancho nominal en pulgadas, y divide entre 12. Ejemplo: 30 metros lineales de 1x6 = 98.4 pies lineales = (1 x 6 x 98.4) / 12 = 49.2 pies tabla." },
+    { question: "¿Cuáles son las maderas duras más económicas en Latinoamérica?", answer: "En México, el pino (como madera blanda) es la más económica a $30-60 MXN/PT. Entre las maderas duras nacionales, la parota y el huanacaxtle son relativamente accesibles a $80-120 MXN/PT. El tzalam y la caoba nacional cuestan $120-200 MXN/PT. Las maderas importadas como roble y arce cuestan $150-300 MXN/PT." },
+  ],
+};
+
+export const plywoodCalculatorES: CalculatorSEOContent = {
+  disclaimer: "Los precios reflejan triplay estándar de pino. Los paneles especiales (marino, abedul báltico, enchapado de madera dura) cuestan más.",
+  howToUse: [
+    "Ingresa el largo y ancho del área a cubrir en pies (o metros multiplicados por 3.28).",
+    "Selecciona el espesor del triplay del menú desplegable.",
+    "Haz clic en Calcular Materiales para ver la cantidad de hojas y costo estimado.",
+  ],
+  materialInfo:
+    "El triplay (también llamado plywood, contrachapado o madera contrachapada) es un panel de madera industrializada fabricado con capas delgadas (chapas) de madera pegadas con adhesivo, con la fibra de cada capa girada 90 grados respecto a la anterior. Esta construcción cruzada le da al triplay resistencia, rigidez y estabilidad dimensional superiores a la madera sólida del mismo espesor. Las hojas estándar miden 1.22 m x 2.44 m (4 x 8 pies, equivalente a 2.97 m²) y están disponibles en espesores desde 6 mm (1/4\") hasta 18 mm (3/4\"). En Latinoamérica, las calidades más comunes son: triplay de pino para construcción (recubrimiento de muros, cimbra, pisos base), triplay de caras lijadas para mueblería y estantería, y triplay marino con adhesivo resistente al agua para aplicaciones exteriores y de alta humedad. Las marcas reconocidas en la región incluyen Masisa, Arauco, Plywood de México y Celta. Los precios en México van desde $200 MXN por hoja de 6 mm hasta $700 MXN por hoja de 18 mm de pino estándar. El triplay de abedul báltico para mueblería cuesta $800 a $1,500 MXN por hoja. Al cortar triplay, usa un disco de dientes finos (80+ dientes) para minimizar el astillado de la cara enchapada.",
+  installationTips: [
+    "Deja un espacio de 3 mm entre hojas para permitir la expansión por humedad.",
+    "Instala con la fibra de la cara perpendicular a los apoyos (viguetas o montantes).",
+    "Usa clavos de 2.5\" o tornillos #8 a 15 cm en bordes y 30 cm en el campo.",
+    "Escalona las juntas entre hiladas para máxima resistencia.",
+  ],
+  commonMistakes: [
+    "No dejar juntas de expansión — las hojas apretadas se pandearán al absorber humedad.",
+    "Instalar las hojas con la fibra paralela a los apoyos en vez de perpendicular.",
+    "Usar triplay de interiores en aplicaciones exteriores o de alta humedad.",
+    "No escalonar las juntas entre hiladas, lo que crea una línea débil.",
+  ],
+  faqs: [
+    { question: "¿Cuántas hojas de triplay necesito?", answer: "Divide el área total en m² entre 2.97 (el área de una hoja estándar de 1.22 x 2.44 m), luego multiplica por 1.10 para agregar un 10% de desperdicio por cortes. Ejemplo: un piso de 30 m² necesita (30 x 1.10) / 2.97 = 12 hojas. Diseños complejos con muchos cortes pueden necesitar 15% de desperdicio." },
+    { question: "¿Qué espesor de triplay para piso base?", answer: "Usa triplay de 18 mm (3/4\") con machimbre para pisos base sobre viguetas espaciadas a 40 cm. Para separación de 60 cm, usa paneles de 22 mm o más gruesos. Los paneles deben ser de grado estructural. Pega y atornilla para un piso sin rechinidos." },
+    { question: "¿Cuál es la diferencia entre triplay de pino y triplay marino?", answer: "El triplay de pino estándar usa adhesivo para interiores y puede tener huecos en las capas internas. El triplay marino usa adhesivo fenólico resistente al agua, no tiene huecos internos y es más resistente a la humedad. El marino cuesta 2 a 3 veces más pero es necesario para aplicaciones exteriores, embarcaciones y áreas de alta humedad." },
+    { question: "¿Cuánto cuesta una hoja de triplay?", answer: "En México, una hoja estándar de 1.22 x 2.44 m de triplay de pino cuesta aproximadamente: 6 mm = $200-280 MXN, 9 mm = $300-400 MXN, 12 mm = $450-550 MXN, 18 mm = $600-750 MXN. Los precios varían por región. El triplay de abedul báltico de 18 mm cuesta $800-1,500 MXN por hoja." },
+    { question: "¿Puedo usar OSB en vez de triplay?", answer: "Sí, para la mayoría de aplicaciones estructurales (techos, muros, pisos base), el OSB está aprobado por norma y cuesta 20-30% menos que el triplay. Sin embargo, el OSB se hincha más cuando se moja y tarda más en secar. Para mueblería, ebanistería y aplicaciones visibles, el triplay es preferible por su superficie más lisa y mejor resistencia a la humedad." },
+    { question: "¿Cómo cortar triplay sin que se astille?", answer: "Usa un disco de dientes finos (80+ dientes en sierra de mesa, 60+ en sierra circular). Marca la línea de corte con un cúter antes de cortar. Coloca la cara buena hacia abajo en sierra circular (el disco corta hacia arriba) o cara buena hacia arriba en sierra de mesa (corta hacia abajo). Coloca cinta de pintor sobre la línea de corte para reducir el astillado." },
+  ],
+};
+
+// ─── FINISHING (ACABADOS) ─────────────────────────────────────────────────────
+
+const paintCoverageCalculatorES: CalculatorSEOContent = {
+  disclaimer: "El rendimiento real varía según la textura de la superficie, la marca de pintura y el método de aplicación. Las superficies rugosas o texturizadas pueden reducir el rendimiento un 20–30%.",
+  howToUse: [
+    "Mide el área total de muros y techos en metros cuadrados (alto x ancho de cada muro, luego súmalos).",
+    "Resta las áreas de ventanas y puertas si lo deseas.",
+    "Selecciona el número de manos — 2 manos es el estándar para la mayoría de los trabajos.",
+    "Haz clic en Calcular Materiales para ver litros, botes y cubetas necesarias.",
+  ],
+  materialInfo:
+    "La pintura vinílica (acrílica) es el material de acabado estándar para muros y techos en construcción residencial en Latinoamérica. El rendimiento varía según la calidad y el tipo de pintura — los acabados mate cubren típicamente 10 a 12 m² por litro, mientras que los acabados satinados y semi-brillantes cubren 8 a 10 m² por litro debido a su mayor densidad. Las marcas más utilizadas en la región incluyen Comex (Vinimex, Vinimex Total), Berel (Berelex, Qualitex), Sherwin-Williams (SuperPaint, Kem Tone), y PPG/Glidden. La pintura premium de estas marcas ofrece mejor cubrimiento por mano y mayor durabilidad — una inversión que se recupera al necesitar menos manos y menos repintados a lo largo de los años. En México, un bote de 4 litros de pintura vinílica de calidad media cuesta entre $350 y $600 MXN, mientras que la cubeta de 19 litros cuesta entre $1,200 y $2,800 MXN dependiendo de la marca y línea. Para proyectos grandes, comprar cubetas de 19 litros resulta significativamente más económico por litro y garantiza consistencia de color entre todos los muros.",
+  installationTips: [
+    "Usa rodillo de felpa corta (3/8\") para muros lisos, felpa media (1/2\") para textura ligera, y felpa larga (3/4\") para textura pesada o aplanado rústico.",
+    "Recorta orillas con brocha angular de 6 cm antes de aplicar con rodillo en las áreas grandes.",
+    "Mantén el borde húmedo — trabaja en secciones de 1 metro y no dejes que la orilla seque antes de continuar.",
+    "Aplica la pintura en patrón de W con el rodillo, luego rellena uniformemente sin levantar el rodillo.",
+  ],
+  commonMistakes: [
+    "No aplicar sellador en tablaroca nueva — la tablaroca sin sellar absorbe la pintura de forma desigual, creando manchas y brillos irregulares.",
+    "Comprar poca pintura — quedarse sin pintura a medio muro causa marcas de traslape visibles donde la pintura húmeda y seca se sobreponen.",
+    "Aplicar manos demasiado rápido — permite 2 a 4 horas entre manos de pintura vinílica para un secado adecuado.",
+    "Usar rodillos baratos — sueltan pelusa y dejan textura no deseada en la película de pintura.",
+  ],
+  faqs: [
+    { question: "¿Cuánta pintura necesito para un cuarto de 3x3 metros?", answer: "Un cuarto de 3x3 m con techos de 2.5 m tiene aproximadamente 30 m² de área de muros (menos unos 4 m² por puerta y ventana, quedando unos 26 m² netos). Con 2 manos a 10 m² por litro, necesitas aproximadamente 5.2 litros — compra un bote de 4 litros más uno de 1 litro, o directamente 2 botes de 4 litros." },
+    { question: "¿Cuántos metros cuadrados cubre un litro de pintura?", answer: "Un litro de pintura vinílica interior cubre de 10 a 12 m² en superficies lisas previamente pintadas. Los acabados mate cubren más área que los satinados. Las superficies porosas como tablaroca nueva, madera sin sellar o aplanado rústico reducen el rendimiento a 7-9 m² por litro." },
+    { question: "¿Conviene comprar botes de 4 litros o cubeta de 19 litros?", answer: "Para habitaciones que necesitan más de 8 litros del mismo color, la cubeta de 19 litros es más económica (típicamente 15-20% menos por litro) y garantiza consistencia perfecta de color. Para muros de acento o áreas pequeñas menores a 8 litros, los botes individuales son más prácticos." },
+    { question: "¿Necesito 2 manos de pintura?", answer: "Sí, dos manos son recomendadas para prácticamente todos los trabajos de pintura. La primera mano sella la superficie y proporciona una base uniforme. La segunda mano entrega la profundidad de color final, el brillo y la durabilidad. La única excepción es un retoque del mismo color exacto sobre una superficie previamente pintada." },
+    { question: "¿Cuánta pintura necesito para una casa de 120 m²?", answer: "Una casa de 120 m² típicamente tiene 300 a 400 m² de área de muros pintables (dependiendo de la altura de techos y número de habitaciones). A 2 manos con 10 m² por litro, necesitas aproximadamente 60 a 80 litros de pintura para muros, más 12 a 15 litros de pintura para techos — equivalente a 4 a 5 cubetas de 19 litros en total." },
+    { question: "¿Qué marcas de pintura son las mejores en México y Latinoamérica?", answer: "Las marcas más reconocidas son Comex (Vinimex Total y Platinum son sus líneas premium), Berel (Berelex Plus y Qualitex), Sherwin-Williams (Duration y SuperPaint), y PPG/Glidden (Diamond y Maestro). Para la mejor relación calidad-precio en uso residencial, las líneas intermedias como Vinimex Plus de Comex o SuperPaint de Sherwin-Williams ofrecen excelente rendimiento y durabilidad." },
+  ],
+};
+
+const paintCostCalculatorES: CalculatorSEOContent = {
+  disclaimer: "Los precios son promedios aproximados del mercado latinoamericano 2024. Los precios reales varían por marca, tienda y región.",
+  howToUse: [
+    "Ingresa el área total de muros y techos que planeas pintar en m².",
+    "Selecciona el número de manos (2 es estándar para la mayoría de proyectos).",
+    "Elige un nivel de calidad de pintura — económica, estándar, premium o ultra-premium.",
+    "Selecciona si necesitas sellador (recomendado para tablaroca nueva y cambios de color).",
+    "Haz clic en Calcular Materiales para un desglose de costos.",
+  ],
+  materialInfo:
+    "El costo de la pintura varía significativamente por nivel de calidad. La pintura económica ($80 a $150 MXN por litro) como Comex Vinimex básico y Berel Berelex estándar es adecuada para propiedades en renta, techos y áreas donde la apariencia no es crítica — requiere más manos y tiene menor durabilidad. La pintura estándar ($150 a $250 MXN por litro) como Comex Vinimex Plus y Sherwin-Williams SuperPaint ofrece buen rendimiento y durabilidad para la mayoría de aplicaciones residenciales. La pintura premium ($250 a $400 MXN por litro) como Comex Platinum y Sherwin-Williams Duration proporciona superior cubrimiento (frecuentemente una sola mano cubre), excelente lavabilidad y más de 10 años de vida en muros interiores. Las líneas ultra-premium ($400 a $600 MXN por litro) como Sherwin-Williams Emerald y Comex Vinimex Total Cobertura Total ofrecen la máxima carga de pigmentos y tecnología de color avanzada. Además de la pintura, presupuesta insumos: rodillo y repuestos ($80 a $150 MXN), brochas angulares ($60 a $120 MXN cada una), cinta de pintor ($40 a $80 MXN por rollo), plástico protector ($50 a $100 MXN), y charola para pintura ($30 a $60 MXN). Un pintor profesional en México cobra entre $25 y $60 MXN por m² para pintura interior.",
+  installationTips: [
+    "Compra toda tu pintura de una sola vez para asegurar consistencia de color en todo el lote.",
+    "Invierte en rodillos y brochas de calidad — hacen una diferencia notable en el acabado final.",
+    "Usa cinta de pintor en molduras, zócalos y líneas de techo para bordes limpios.",
+    "Ten un trapo húmedo a la mano para limpiar goteos inmediatamente antes de que sequen.",
+  ],
+  commonMistakes: [
+    "Elegir la pintura más barata para áreas de alto tráfico — necesitará repintarse en 2 a 3 años en lugar de 7 a 10.",
+    "No presupuestar el sellador — omitir el sellador en tablaroca nueva duplica la cantidad de pintura necesaria.",
+    "No comprar suficiente pintura — igualar un color personalizado después es casi imposible.",
+    "Ignorar la selección de brillo — el mate disimula imperfecciones pero es difícil de limpiar; el satinado es la mejor opción general para muros.",
+  ],
+  faqs: [
+    { question: "¿Cuánto cuesta pintar un cuarto?", answer: "Un cuarto estándar de 3x4 m con techos de 2.5 m cuesta $800 a $2,500 MXN en materiales para un proyecto de bricolaje (8 a 12 litros de pintura a $150-$250 MXN por litro, más $200-$400 MXN en insumos). Contratar un pintor profesional cuesta $2,500 a $5,000 MXN por el mismo cuarto, dependiendo del mercado y la preparación requerida." },
+    { question: "¿Vale la pena la pintura cara?", answer: "Sí, para habitaciones de uso diario. Las pinturas premium ($250-$400 MXN por litro) cubren en menos manos, resisten rayones y manchas, se lavan fácilmente y duran 10 a 15 años. A lo largo de la vida de la pintura, la pintura premium cuesta menos por año que repintar cada 3 a 5 años con pintura económica." },
+    { question: "¿Cuánto cuestan los insumos de pintura?", answer: "Los insumos básicos para pintar un cuarto cuestan $300 a $600 MXN en total: rodillo con mango ($50-$80 MXN), repuestos de felpa ($30-$50 MXN cada uno), brocha angular de 6 cm ($60-$120 MXN), cinta de pintor ($40-$80 MXN por rollo, planea 2 a 3 rollos por cuarto), y plástico protector ($50-$100 MXN)." },
+    { question: "¿Dónde comprar pintura más barata en México?", answer: "Las tiendas de materiales de construcción como Home Depot, Comex y ferreterías locales ofrecen precios competitivos. Las tiendas Comex y Sherwin-Williams frecuentemente tienen promociones de 2x1, 30% de descuento y paquetes especiales. Para pintura premium, espera las ofertas temporales — puedes conseguir pintura de $400 MXN por $250-$280 MXN." },
+    { question: "¿Cuánta pintura necesito para 100 m² de muro?", answer: "A 10 m² por litro con 2 manos, necesitas aproximadamente 20 litros — compra una cubeta de 19 litros más 1 litro adicional. Si necesitas sellador, agrega 8 a 10 litros de sellador. Costo total con pintura estándar: $3,500 a $5,500 MXN incluyendo insumos." },
+    { question: "¿Necesito sellador antes de pintar?", answer: "El sellador es recomendado para tablaroca nueva, áreas reparadas o emparchadas, cambios de color dramáticos (especialmente de oscuro a claro) y cuando pintas sobre manchas de humedad o humo. Las pinturas auto-sellantes (líneas premium y ultra-premium) pueden omitir el sellador en superficies previamente pintadas en buen estado." },
+  ],
+};
+
+const primerCalculatorES: CalculatorSEOContent = {
+  disclaimer: "Las superficies porosas o texturizadas pueden requerir sellador adicional. Siempre sigue las indicaciones de rendimiento del fabricante.",
+  howToUse: [
+    "Ingresa los metros cuadrados totales de muros y techos a sellar.",
+    "Selecciona el tipo de superficie para obtener la tasa de rendimiento correcta.",
+    "Haz clic en Calcular Materiales para ver litros y botes necesarios.",
+  ],
+  materialInfo:
+    "El sellador (primer) es un recubrimiento preparatorio que se aplica antes de la pintura de acabado para asegurar adhesión adecuada, brillo uniforme y color consistente. Los diferentes tipos de superficie requieren distintas formulaciones de sellador. El sellador vinílico (PVA) es la opción estándar para tablaroca (panel de yeso) nueva — sella la superficie porosa del yeso para que la pintura de acabado no se absorba de forma desigual, lo que causa manchas y brillos irregulares. El sellador vinílico cuesta $100 a $180 MXN por litro y cubre aproximadamente 10 a 12 m² por litro en tablaroca nueva. Para superficies previamente pintadas en buen estado, un sellador de adherencia o una pintura con sellador integrado es suficiente, cubriendo hasta 13 a 14 m² por litro. Las superficies de madera sin tratar requieren un sellador base aceite o base goma laca para sellar la veta y prevenir el sangrado de taninos, especialmente en pino, cedro y maderas resinosas — el rendimiento es menor, aproximadamente 8 a 9 m² por litro. El sellador bloqueador de manchas (base goma laca como Zinsser BIN o base aceite como Kilz Original) es esencial para cubrir manchas de humedad, humo, crayones y marcas difíciles. Las marcas más populares en Latinoamérica incluyen Comex (Sellador 5x1), Berel, Sherwin-Williams (PrepRite) y Kilz. Para mejores resultados, pide que entonen tu sellador en un tono cercano al color final de acabado — la mayoría de las tiendas pueden agregar una pequeña cantidad de colorante al sellador blanco sin costo adicional.",
+  installationTips: [
+    "Aplica el sellador con el mismo tipo de rodillo que planeas usar para la pintura de acabado.",
+    "Permite que el sellador seque completamente antes de aplicar la pintura — típicamente 1 a 2 horas para sellador vinílico, 24 horas para base aceite.",
+    "Pide que entonen el sellador en un tono similar al color final para mejor cubrimiento en menos manos.",
+    "Usa brocha para recortar esquinas y bordes, luego rodillo en las áreas grandes.",
+  ],
+  commonMistakes: [
+    "No aplicar sellador en tablaroca nueva — causa brillos irregulares visibles con ciertos ángulos de iluminación.",
+    "Usar sellador vinílico sobre manchas — los selladores base agua no bloquean manchas de taninos, nicotina ni humedad; usa base goma laca o aceite.",
+    "Aplicar sellador demasiado grueso — las capas pesadas tardan más en secar y pueden desprenderse; una capa uniforme es suficiente.",
+    "Sellar sobre polvo y suciedad — siempre limpia o aspira las superficies antes de sellar para una adhesión adecuada.",
+  ],
+  faqs: [
+    { question: "¿Siempre necesito sellador antes de pintar?", answer: "No siempre. El sellador es esencial en tablaroca nueva, madera sin tratar, parches reparados y cuando cubres manchas o haces cambios de color dramáticos. En superficies previamente pintadas en buen estado donde aplicas un color similar, una pintura auto-sellante (común en líneas premium) puede eliminar el paso de sellado por separado." },
+    { question: "¿Qué sellador debo usar en tablaroca nueva?", answer: "Usa un sellador vinílico (PVA) como Comex Sellador 5x1, Kilz PVA o Sherwin-Williams PrepRite. Están formulados específicamente para sellar la superficie porosa del yeso de manera uniforme. Aplica una mano, deja secar, y luego aplica tu pintura de acabado. El sellador PVA cuesta $100 a $180 MXN por litro." },
+    { question: "¿Cuánto sellador necesito por litro?", answer: "El rendimiento varía por tipo de superficie: tablaroca nueva rinde 10-12 m² por litro, muros previamente pintados rinden 13-14 m², madera sin tratar rinde 8-9 m², y sellador bloqueador de manchas rinde solo 6-7 m² por litro. Siempre verifica la etiqueta del producto para la tasa de rendimiento específica del fabricante." },
+    { question: "¿Puedo usar pintura blanca como sellador?", answer: "No. La pintura regular y el sellador tienen funciones diferentes. El sellador está formulado con resinas especiales que se adhieren al sustrato y sellan superficies porosas. Usar pintura regular como sellador en tablaroca nueva resultará en absorción desigual, manchas y mala adherencia. El sellador cuesta menos que la pintura y ahorra dinero al reducir las manos de acabado necesarias." },
+    { question: "¿Debo entonar el sellador?", answer: "Sí, entonar el sellador es recomendable, especialmente cuando la pintura de acabado es un color medio u oscuro. La mayoría de las tiendas pueden agregar una pequeña cantidad de colorante al sellador sin costo extra. Un sellador gris es ideal bajo colores oscuros, mientras que un sellador entonado similar al color final asegura mejor cubrimiento en menos manos." },
+    { question: "¿Qué marcas de sellador son las mejores en México?", answer: "Las marcas más reconocidas son Comex (Sellador 5x1 — el más vendido en México), Berel (Sellador Acrisell), Sherwin-Williams (PrepRite), Kilz (PVA y Original), y Zinsser (1-2-3 y BIN). Para tablaroca nueva, el Comex Sellador 5x1 ofrece la mejor relación calidad-precio. Para manchas difíciles, el Zinsser BIN base goma laca es insuperable." },
+  ],
+};
+
+// ─── OUTDOOR ──────────────────────────────────────────────────────────────────
+
+const deckBoardCalculatorES: CalculatorSEOContent = {
+  disclaimer:
+    "Esta estimación incluye un 10% de factor de desperdicio recomendado para cortes y desperdicios de punta. El desperdicio real varía según la complejidad de la forma del deck, los largos de tabla disponibles y si se escalonan las juntas. Los patrones diagonales aumentan el desperdicio a 15-20%.",
+  howToUse: [
+    "Mide el largo y ancho total de tu deck en metros.",
+    "Ingresa el ancho de la tabla en centímetros - las tablas estándar para deck son de 14 cm (nominal 2x6) o 9 cm (nominal 2x4).",
+    "Ingresa el largo de la tabla - los largos comerciales comunes son 2.44, 3.05, 3.66 y 4.88 metros.",
+    "Haz clic en Calcular Materiales para obtener el número total de tablas, metros lineales y cobertura de área.",
+  ],
+  materialInfo:
+    "Las tablas de deck son la superficie visible de tu terraza y reciben el mayor desgaste por tráfico peatonal, muebles, clima y exposición al sol. Las opciones de material más comunes son madera tratada a presión, cedro, madera tropical y deck composite.\n\nLa madera tratada a presión (pino radiata o pino patula en Latinoamérica) es la opción más popular para proyectos con presupuesto ajustado. Las tablas estándar de 2.5x15 cm cuestan entre $80 y $180 MXN por metro lineal y están clasificadas para contacto con el suelo cuando se tratan con CCA o ACQ. Las tablas se consiguen en largos comerciales de 2.44, 3.05, 3.66 y 4.88 metros. El tratamiento protege contra pudrición y termitas pero requiere sellado o teñido anual para prevenir el encanecimiento, pandeo y rajaduras. La vida útil esperada es de 10 a 15 años con mantenimiento adecuado.\n\nEl cedro rojo del Pacífico y las maderas tropicales (ipé, cumaru, garapa, tzalam) son naturalmente resistentes a la pudrición. El cedro cuesta entre $200 y $350 MXN por metro lineal, mientras que las maderas tropicales oscilan entre $350 y $800 MXN. Las maderas tropicales como el ipé son extremadamente duras (densidad de 1,050 kg/m³) y duran 25 a 40 años sin tratamiento, lo que las hace populares en climas tropicales de México, Centroamérica y el Caribe.\n\nEl deck composite (Trex, TimberTech, Fiberon, así como marcas regionales como Neodeck y WPC) está fabricado con fibras de madera y plástico reciclado. Los precios varían de $250 a $700 MXN por metro lineal según la línea de producto. Los composites nunca necesitan teñido, resisten la pudrición e insectos, y tienen garantías de 25 a 50 años. Sin embargo, requieren sistemas de fijación específicos, se expanden y contraen con la temperatura, y pueden calentarse mucho bajo el sol directo.\n\nEl espaciado entre tablas es crítico: mantén un espacio de 3 a 6 mm entre tablas para drenaje y ventilación. Para tablas tratadas instaladas húmedas, colócalas juntas - se encogerán al secarse. Para tablas secas y composite, deja el espacio completo durante la instalación.",
+  installationTips: [
+    "Comienza la primera tabla perfectamente recta y a escuadra con la casa - cada tabla subsiguiente sigue esta línea.",
+    "Pre-perfora los extremos de las tablas a menos de 5 cm del borde para prevenir rajaduras, especialmente con madera tratada.",
+    "Escalona las juntas a tope por al menos 2 posiciones de tabla para una superficie más fuerte y atractiva.",
+    "Orienta las tablas con la corona hacia arriba (lado de corteza hacia abajo) para que el agua escurra en vez de acumularse.",
+    "Deja un espacio de 6 mm entre la pared de la casa y la primera tabla para drenaje y expansión.",
+  ],
+  commonMistakes: [
+    "No dejar espacio entre tablas - las tablas secas apretadas se pandearán cuando absorban humedad y se expandan.",
+    "Usar tornillos demasiado cortos - los tornillos para deck deben penetrar al menos 4 cm en la vigueta.",
+    "Ignorar la dirección de la veta - instalar tablas con el lado de corteza hacia arriba causa abarquillamiento y acumulación de agua.",
+    "Alinear todas las juntas sobre la misma vigueta - esto crea una línea visible y debilita la estructura; siempre escalona las juntas.",
+    "Omitir el sellador en los extremos cortados - los cortes expuestos absorben agua y se pudren más rápido que las caras tratadas.",
+  ],
+  faqs: [
+    {
+      question: "¿Cuántas tablas de deck necesito para una terraza de 4x5 metros?",
+      answer: "Una terraza de 4x5 m usando tablas estándar de 14 cm de ancho necesita aproximadamente 29 tablas de 5 m de largo, o 37 tablas de 4 m (con juntas a tope). Con 10% de desperdicio, pide 32 o 41 tablas respectivamente. Usar tablas del largo completo de 5 m elimina las juntas a tope, creando una apariencia más limpia.",
+    },
+    {
+      question: "¿Qué medida de tablas debo usar para el deck?",
+      answer: "La tabla más común para deck es de 2.5x15 cm (nominal 1x6). Proporciona un buen equilibrio entre resistencia, apariencia y costo. Para tráfico comercial pesado, las tablas de 5x15 cm (2x6) ofrecen más rigidez. Las tablas composite vienen en anchos de 14 cm y 18 cm. Las tablas más anchas cubren más rápido pero son más propensas al abarquillamiento.",
+    },
+    {
+      question: "¿A qué distancia deben separarse las tablas del deck?",
+      answer: "Deja 3 a 6 mm entre las tablas para drenaje y circulación de aire. Para tablas tratadas instaladas húmedas (recién del aserradero), colócalas juntas - se encogerán al espacio adecuado al secarse en 2 a 4 semanas. Las tablas composite siempre deben espaciarse según las instrucciones del fabricante, típicamente 5 a 6 mm.",
+    },
+    {
+      question: "¿Cuánto duran las tablas de deck?",
+      answer: "Las tablas de pino tratado duran 10 a 15 años con sellado anual. El cedro dura 15 a 20 años con mantenimiento periódico. Las maderas tropicales como ipé duran 25 a 40 años. El deck composite dura 25 a 50 años con mantenimiento mínimo. La madera sin tratamiento puede fallar en tan solo 3 a 5 años en climas húmedos.",
+    },
+    {
+      question: "¿Debo usar tornillos o clavos para las tablas del deck?",
+      answer: "Los tornillos para deck son muy superiores a los clavos. Usa tornillos de acero inoxidable o recubiertos #8 o #10, de 65 a 75 mm de largo, con dos tornillos por tabla en cada vigueta. Los tornillos sujetan mejor con el tiempo, resisten salirse y permiten reemplazar tablas fácilmente. Los sistemas de fijación oculta crean una apariencia sin tornillos visibles.",
+    },
+    {
+      question: "¿Cuánto cuestan las tablas para deck?",
+      answer: "Las tablas de pino tratado cuestan $80 a $180 MXN por metro lineal. El cedro cuesta $200 a $350 MXN. Las maderas tropicales van de $350 a $800 MXN. El composite cuesta $250 a $700 MXN por metro lineal. Para una terraza de 4x5 m, el costo del material solo para las tablas va de unos $12,000 MXN (pino tratado) a $50,000 MXN (composite premium).",
+    },
+  ],
+};
+
+const deckFootingCalculatorES: CalculatorSEOContent = {
+  disclaimer:
+    "La profundidad de la cimentación debe cumplir con los requisitos locales de desplante. Esta calculadora proporciona una estimación de distribución en cuadrícula - la ubicación real depende del diseño del deck, cargas, condiciones del suelo y reglamento de construcción. Siempre consulta con tu autoridad de construcción local.",
+  howToUse: [
+    "Ingresa el largo y ancho de tu deck en metros.",
+    "Establece el espaciado máximo entre postes - 2.40 m es típico para trabes de 5x20 cm, 1.80 m para trabes de 5x15 cm.",
+    "Haz clic en Calcular Materiales para obtener el número de zapatas, postes y trabes necesarias.",
+    "Usa la cantidad de zapatas para estimar el concreto - cada zapata de 30 cm de diámetro por 1 m de profundidad usa aproximadamente 0.07 m³ de concreto.",
+  ],
+  materialInfo:
+    "Las zapatas para deck son pilares de concreto que transfieren el peso de la estructura y sus cargas vivas al suelo por debajo del nivel de desplante. Sin zapatas adecuadas, los ciclos de expansión y contracción del suelo moverán el deck, causando que se desplace, agriete y se separe de la casa.\n\nLos dos métodos más comunes de cimentación son pilares de concreto colados usando tubos de cartón (tipo Sonotube) y bloques prefabricados (solo adecuados para decks a nivel del piso en algunas jurisdicciones). Para cualquier deck elevado o adosado a la casa, se requieren zapatas coladas que se extiendan por debajo del nivel de desplante según el reglamento de construcción.\n\nLas zapatas residenciales estándar usan tubos de 25 o 30 cm de diámetro. La profundidad depende de las condiciones locales del suelo y la normativa - generalmente entre 60 cm y 1.20 m. Cada zapata de 30 cm de diámetro por 1 m de profundidad requiere aproximadamente 0.07 m³ de concreto. Para un deck con 9 zapatas, necesitas unos 0.63 m³ en total - equivalente a aproximadamente 18 bultos de concreto premezclado de 40 kg.\n\nEl espaciado de postes depende del tamaño de la trabe y la especie de madera. Para una trabe doble de 5x20 cm de madera tratada, el espaciado máximo entre postes es de 2.40 m. Para trabes dobles de 5x25 cm, puede aumentarse a 3.0 m. Para trabes dobles de 5x15 cm, mantén el espaciado a 1.80 m o menos.\n\nLas conexiones poste-zapata requieren herraje aprobado. Coloca un perno tipo J o ancla de base en el concreto fresco, luego fija el poste con una base tipo Simpson ABA o ABU. Nunca embebas postes de madera directamente en el concreto - esto atrapa humedad y causa pudrición en la conexión estructural más crítica del deck.\n\nEl concreto para zapatas debe ser de al menos f'c=250 kg/cm² y colarse en condiciones secas. Permite 24 a 48 horas de curado antes de cargar las zapatas con postes y estructura.",
+  installationTips: [
+    "Excava los hoyos al menos 15 cm por debajo del nivel de desplante - consulta tu reglamento de construcción local para la profundidad exacta.",
+    "Usa tubos de cartón para crear zapatas limpias y redondas con un diámetro consistente.",
+    "Coloca anclas tipo J en el concreto fresco antes de que fragüe - usa una plantilla para mantenerlas centradas y a plomo.",
+    "Corona la parte superior de la zapata ligeramente arriba del nivel del terreno para que el agua drene lejos de la base del poste.",
+    "Espera al menos 48 horas antes de fijar los postes a las zapatas para permitir el curado adecuado del concreto.",
+  ],
+  commonMistakes: [
+    "Colocar zapatas demasiado superficiales - las zapatas por encima del nivel de desplante se levantarán, deformando todo el deck.",
+    "Embeber postes de madera directamente en concreto - esto atrapa humedad contra la madera y causa pudrición en 5 a 10 años; usa una base metálica.",
+    "Espaciar los postes demasiado - exceder la capacidad de la trabe causa pandeo, rebote y potencial falla estructural.",
+    "No ampliar la base de la zapata - una base acampanada proporciona más área de apoyo y resiste fuerzas de levantamiento.",
+    "Colar zapatas sobre suelo suelto u orgánico - las zapatas deben apoyarse sobre suelo firme no alterado o compactado para evitar hundimientos.",
+  ],
+  faqs: [
+    {
+      question: "¿Qué profundidad deben tener las zapatas para un deck?",
+      answer: "Las zapatas deben extenderse por debajo del nivel de desplante para prevenir levantamiento. Esta profundidad varía según la zona sísmica y tipo de suelo, generalmente entre 60 cm y 1.20 m. Consulta tu reglamento de construcción local para el requisito exacto. En zonas sísmicas de México, puede requerirse mayor profundidad.",
+    },
+    {
+      question: "¿Cuántas zapatas necesita un deck de 4x5 metros?",
+      answer: "Un deck de 4x5 m con espaciado de postes a 2.40 m necesita típicamente 6 zapatas distribuidas en 2 filas de 3. Si el deck está adosado a la casa con un tablero de apoyo (ledger), el lado de la casa no necesita zapatas. Para un deck independiente, agrega una tercera fila para un total de 9 zapatas.",
+    },
+    {
+      question: "¿Qué diámetro de tubo debo usar para las zapatas del deck?",
+      answer: "Para la mayoría de los decks residenciales, tubos de 25 o 30 cm de diámetro son estándar. Usa tubos de 30 cm para decks de dos niveles, jacuzzis o cargas pesadas. Algunos reglamentos permiten tubos de 20 cm para decks pequeños a nivel del suelo. Diámetros mayores (40 a 60 cm) se usan para estructuras comerciales.",
+    },
+    {
+      question: "¿Puedo usar bloques prefabricados en vez de zapatas coladas?",
+      answer: "Los bloques prefabricados solo se permiten para decks independientes a nivel del suelo en algunas jurisdicciones. Se apoyan en la superficie y no se extienden por debajo del nivel de desplante, por lo que no son adecuados para decks elevados o adosados. Siempre verifica tu reglamento local - muchas áreas requieren zapatas coladas para toda construcción de deck.",
+    },
+    {
+      question: "¿Cuánto concreto necesito por zapata de deck?",
+      answer: "Una zapata estándar de 30 cm de diámetro por 1 m de profundidad requiere unos 0.07 m³ de concreto, equivalente a aproximadamente 2 bultos de concreto premezclado de 40 kg. Una zapata de 25 cm por 1 m usa unos 0.05 m³ (1.5 bultos). Multiplica por el número de zapatas para obtener el concreto total.",
+    },
+    {
+      question: "¿A qué distancia deben estar los postes del deck?",
+      answer: "El espaciado máximo depende del tamaño de la trabe. Para trabe doble de 5x20 cm, máximo 2.40 m. Para trabe doble de 5x25 cm, hasta 3.0 m. Para trabe doble de 5x15 cm, máximo 1.80 m. Estos valores asumen madera tratada de grado estructural. Siempre consulta las tablas de claro para tu especie y grado de madera específicos.",
+    },
+  ],
+};
+
+const deckRailingCalculatorES: CalculatorSEOContent = {
+  disclaimer:
+    "Esta estimación se basa en espaciado estándar de postes a 1.80 m y balaustres a 10 cm según normativa. Los requisitos reales pueden variar por jurisdicción. Siempre verifica la altura del barandal, espaciado de balaustres y especificaciones de postes con tu autoridad de construcción local.",
+  howToUse: [
+    "Mide el perímetro total de tu deck en metros (suma todos los lados).",
+    "Ingresa la longitud del lado adosado a la casa - este lado no necesita barandal.",
+    "Haz clic en Calcular Materiales para obtener cantidad de postes, balaustres y metros lineales de riel.",
+    "La calculadora asume espaciado estándar de postes a 1.80 m y balaustres a 10 cm entre centros.",
+  ],
+  materialInfo:
+    "El barandal de deck es un elemento de seguridad crítico requerido por el reglamento de construcción en toda superficie de deck que esté a 75 cm o más sobre el nivel del terreno (60 cm en algunas jurisdicciones). La normativa residencial especifica una altura mínima de barandal de 90 cm para decks residenciales y 107 cm para estructuras comerciales o multifamiliares.\n\nLos sistemas de barandal consisten en cuatro componentes principales: postes, riel superior, riel inferior y balaustres (balaustradas). Los postes son típicamente de madera tratada de 10x10 cm o aluminio, espaciados a no más de 1.80 m (2.40 m máximo en algunos reglamentos). Los postes deben estar firmemente empernados a la estructura del deck - nunca solo atornillados a las tablas de superficie o fascia. Usa pernos de coche de 12 mm o herraje aprobado para montaje de postes.\n\nLos balaustres deben estar espaciados de modo que una esfera de 10 cm no pueda pasar entre ellos. Para balaustres cuadrados estándar de 4 cm, esto significa aproximadamente 10 cm entre centros. La normativa también requiere que el espacio entre la superficie del deck y el riel inferior sea menor a 10 cm.\n\nLos rieles superior e inferior son típicamente de madera tratada de 5x10 cm, kits de barandal composite o perfiles de aluminio. Un remate plano de 5x15 cm sobre los postes crea un pasamanos cómodo para apoyar bebidas. La mayoría de los sistemas de barandal composite vienen en kits con balaustres precortados, secciones de riel y fundas de poste en longitudes de 1.80 m y 2.40 m.\n\nEl costo del barandal de madera es de $600 a $1,200 MXN por metro lineal instalado. Los sistemas composite cuestan de $1,200 a $2,500 MXN por metro lineal. Los sistemas de aluminio y cable van de $2,000 a $4,000 MXN por metro lineal. Para un deck típico de 4x5 m (aproximadamente 12 metros lineales de barandal después de descontar el lado de la casa), el barandal de madera cuesta $7,200 a $14,400 MXN y el composite cuesta $14,400 a $30,000 MXN.\n\nEl barandal es una de las violaciones más comunes al reglamento en decks. Los inspectores frecuentemente señalan fijación insuficiente de postes, espaciado excesivo de balaustres, altura insuficiente y espacios mayores a 10 cm entre la superficie del deck y el riel inferior.",
+  installationTips: [
+    "Emperna los postes del barandal a través de la viga perimetral con pernos de coche de 12 mm - nunca fijes postes solo con tornillos o tirafondos.",
+    "Usa una guía espaciadora (corta un bloque de madera de 10 cm) para mantener un espaciado consistente de balaustres.",
+    "Pre-ensambla las secciones de barandal en el piso - es mucho más fácil y preciso que construir en su lugar.",
+    "Instala un remate plano de 5x15 cm sobre los postes como pasamanos para apoyar bebidas.",
+    "Ranurar los postes alrededor de la viga perimetral para máxima resistencia en vez de montarlos sobre la fascia exterior.",
+  ],
+  commonMistakes: [
+    "Montar postes solo con tornillos - los postes deben empernarse a través de la viga perimetral o usar herraje aprobado para resistir la fuerza hacia afuera.",
+    "Espaciar balaustres demasiado separados - la norma requiere que una esfera de 10 cm no pueda pasar por ninguna abertura del barandal.",
+    "Hacer el barandal demasiado bajo - mínimo 90 cm desde la superficie del deck hasta la parte superior del riel; mide desde las tablas, no desde las viguetas.",
+    "Dejar más de 10 cm entre la superficie del deck y el riel inferior - este espacio permite que niños pequeños pasen por debajo.",
+    "Usar madera sin tratamiento para postes de barandal - los postes están expuestos al clima por todos lados y se pudrirán en 3 a 5 años sin tratamiento o sellado.",
+  ],
+  faqs: [
+    {
+      question: "¿Qué altura debe tener el barandal de un deck?",
+      answer: "La normativa requiere una altura mínima de 90 cm para decks residenciales. Esto se mide desde la superficie del deck hasta la parte superior del riel. Estructuras comerciales y multifamiliares requieren 107 cm. Algunas normativas locales exceden estos mínimos - siempre verifica con tu autoridad de construcción.",
+    },
+    {
+      question: "¿A qué distancia deben estar los postes del barandal?",
+      answer: "Los postes del barandal deben estar espaciados a no más de 1.80 m para barandales de madera y hasta 2.40 m para barandales reforzados o metálicos, según la normativa local. Los postes deben colocarse en cada esquina, arriba y abajo de las escaleras, y a ambos lados de las aberturas de acceso.",
+    },
+    {
+      question: "¿Cuántos balaustres necesito por metro?",
+      answer: "Con balaustres cuadrados estándar de 4 cm y espaciado máximo de 10 cm según normativa, necesitas aproximadamente 10 balaustres por metro lineal de barandal. Una sección típica de 1.80 m usa 17 a 19 balaustres.",
+    },
+    {
+      question: "¿Cuándo se requiere barandal en un deck?",
+      answer: "El reglamento de construcción requiere barandal cuando la superficie del deck está a 75 cm o más sobre el nivel del terreno adyacente. Algunas jurisdicciones bajan este umbral a 60 cm. Las escaleras con más de 3 peraltes también requieren un pasamanos en al menos un lado. Aunque no sea obligatorio, agregar barandal a un deck bajo mejora la seguridad.",
+    },
+    {
+      question: "¿Cuál es el mejor material para barandal de deck?",
+      answer: "Para durabilidad y bajo mantenimiento, los sistemas de barandal composite o aluminio son la mejor opción a pesar del mayor costo inicial. Nunca necesitan pintura ni sellado y tienen garantías de 20 a 25 años. Para proyectos con presupuesto limitado, el barandal de madera tratada cuesta menos pero requiere mantenimiento anual.",
+    },
+    {
+      question: "¿Puedo instalar barandal horizontal en vez de balaustres verticales?",
+      answer: "El barandal horizontal (con cables o tablas de lado a lado) está permitido en muchas jurisdicciones pero prohibido en algunas áreas porque puede ser escalable por niños. Verifica tu normativa local. Cuando está permitido, los elementos horizontales deben evitar que una esfera de 10 cm pase a través. El barandal de cable típicamente usa cables de acero inoxidable de 5 mm espaciados a 7.5 cm con postes intermedios cada 1.20 m.",
+    },
+  ],
+};
+
+const deckStairCalculatorES: CalculatorSEOContent = {
+  disclaimer:
+    "Esta calculadora usa un peralte estándar de 18 cm y huella de 28 cm por escalón, que cumple con la mayoría de los reglamentos de construcción. El peralte real por escalón puede variar ligeramente según la altura total del deck. El reglamento requiere peralte consistente en toda la escalera - siempre verifica con tu autoridad de construcción local.",
+  howToUse: [
+    "Mide la altura total en centímetros - esta es la distancia vertical desde el piso hasta la superficie del deck.",
+    "Ingresa el ancho deseado de la escalera en metros - 90 cm (0.9 m) es el mínimo del reglamento para decks residenciales.",
+    "Haz clic en Calcular Materiales para obtener el número de escalones, cantidad de largueros, tablas de huella y tablas de peralte.",
+    "Usa el desarrollo total para planear el área de descanso - las escaleras necesitan espacio libre abajo igual al ancho de la escalera.",
+  ],
+  materialInfo:
+    "Las escaleras del deck conectan la superficie de la terraza con el nivel del terreno y son uno de los elementos más críticos estructuralmente y más regulados por el reglamento. La normativa controla estrictamente la altura del peralte, la profundidad de la huella, el ancho de la escalera, la altura libre, los requisitos de pasamanos y las dimensiones del descanso.\n\nLos dos métodos estándar de construcción de escaleras para deck son los largueros recortados y los largueros alojados (ranurados). Los largueros recortados son el método residencial más común - una tabla de 5x30 cm se recorta en patrón de sierra para soportar las huellas y peraltes. Cada corte elimina material de la tabla, por lo que la garganta efectiva (madera restante detrás de los cortes) debe ser de al menos 9 cm para mantener la integridad estructural.\n\nLa normativa especifica una altura máxima de peralte de 20 cm y una profundidad mínima de huella de 25 cm. La escalera residencial ideal tiene un peralte de 18 cm y huella de 28 cm, lo que produce un ángulo cómodo de 33 grados. Todos los peraltes deben tener la misma altura, con una variación máxima de 1 cm entre cualquier dos peraltes del mismo tramo.\n\nEl espaciado de largueros sigue las mismas reglas que el espaciado de viguetas: 40 cm entre centros para cargas estándar. Una escalera de 90 cm de ancho necesita típicamente 3 largueros (uno a cada lado más uno en el centro). Para anchos mayores a 90 cm, agrega un larguero por cada 40 cm adicionales. Los largueros deben ser de madera tratada a presión ya que están en contacto o cerca del suelo.\n\nLas tablas de huella son típicamente dos tablas de deck de 2.5x15 cm o 5x15 cm por escalón, con un espacio de 6 mm entre ellas y una nariz de 2.5 cm al frente. Las tablas de peralte son opcionales por normativa en muchas áreas pero se recomiendan para prevenir que los niños trepen a través de las escaleras. Cuando se usan, los peraltes son típicamente tablas de 2.5x20 cm.\n\nLos largueros deben apoyarse sobre una plataforma de concreto, zapata o base de grava compactada - nunca directamente sobre el suelo. Una plataforma de concreto de 10 cm de espesor, al menos 90 cm de ancho y 90 cm de profundidad (desde el último peralte) proporciona un descanso sólido que cumple con la normativa.",
+  installationTips: [
+    "Usa una escuadra de carpintero con topes para marcar cortes consistentes de 18 cm de peralte y 28 cm de huella en el larguero.",
+    "Corta los largueros de tablas de 5x30 cm de madera tratada - la garganta restante después de los cortes debe ser de al menos 9 cm.",
+    "Fija los largueros a la estructura del deck con un conector aprobado (Simpson LSC o similar), no solo con clavos al sesgo.",
+    "Cola una plataforma de descanso de concreto en la base de las escaleras de al menos 10 cm de espesor y tan ancha como la escalera.",
+    "Verifica todos los escalones con nivel después de la instalación - los peraltes desiguales son un riesgo de tropiezo y una violación al reglamento.",
+  ],
+  commonMistakes: [
+    "Peraltes desiguales - la normativa permite una variación máxima de 1 cm entre peraltes; los peraltes inconsistentes son la causa principal de caídas en escaleras.",
+    "Usar tablas de 5x25 cm para largueros en vez de 5x30 cm - después de los cortes, un larguero de 5x25 no tiene suficiente garganta para seguridad estructural.",
+    "No apoyar la base de los largueros en una plataforma de concreto - los largueros sobre tierra se pudrirán y hundirán en 2 a 3 años.",
+    "Omitir el larguero central en escaleras de más de 90 cm de ancho - sin soporte central, las huellas flexionan y rebotan al pisar.",
+    "Olvidar considerar el espesor de las tablas del deck al calcular la altura total - mide desde la superficie terminada del deck, no desde las viguetas.",
+  ],
+  faqs: [
+    {
+      question: "¿Cómo calculo el número de escalones para mi deck?",
+      answer: "Divide la altura total (distancia vertical del suelo a la superficie del deck) entre la altura objetivo del peralte (18 cm es estándar). Redondea hacia arriba al número entero más cercano. Para una altura total de 120 cm: 120 / 18 = 6.67, entonces necesitas 7 escalones. La altura real del peralte es 120 / 7 = 17.1 cm por escalón. Todos los peraltes deben tener la misma altura con tolerancia de 1 cm.",
+    },
+    {
+      question: "¿Qué ancho deben tener las escaleras del deck?",
+      answer: "El reglamento requiere un ancho mínimo de 90 cm, medido entre los pasamanos (o entre los largueros si no se requieren pasamanos). Para comodidad y tráfico de dos personas, las escaleras de 1.20 m son populares. Escaleras más anchas (1.50 m o más) crean una entrada imponente pero requieren largueros centrales adicionales cada 40 cm.",
+    },
+    {
+      question: "¿Cuántos largueros necesito para las escaleras del deck?",
+      answer: "Para una escalera estándar de 90 cm de ancho, usa 3 largueros - uno a cada lado y uno en el centro. Por cada 40 cm adicionales de ancho, agrega otro larguero. Una escalera de 1.20 m necesita 4 largueros. El espaciado de largueros no debe exceder 40 cm entre centros para prevenir flexión de las huellas.",
+    },
+    {
+      question: "¿Las escaleras del deck necesitan pasamanos?",
+      answer: "Sí. Cualquier tramo de escaleras con 4 o más peraltes requiere un pasamanos asible en al menos un lado según la normativa. Un pasamanos asible debe tener de 3 a 5 cm de diámetro (o perfil asible equivalente) y montarse a 86 a 96 cm sobre la nariz de los escalones. Si la escalera tiene más de 112 cm de ancho, se requieren pasamanos en ambos lados.",
+    },
+    {
+      question: "¿Qué ángulo deben tener las escaleras del deck?",
+      answer: "El ángulo residencial ideal es entre 30 y 37 grados. Usando el peralte estándar de 18 cm y huella de 28 cm se produce un ángulo de 33 grados, cómodo para la mayoría de las personas. Escaleras más empinadas (más de 40 grados) se sienten inseguras y pueden no cumplir con la normativa. Escaleras menos inclinadas (menos de 25 grados) desperdician espacio.",
+    },
+    {
+      question: "¿Necesito una plataforma de descanso al pie de las escaleras del deck?",
+      answer: "Sí. Los largueros deben apoyarse en una superficie sólida, no sobre tierra. Una plataforma de concreto de 10 cm de espesor, al menos 90 cm de ancho (igual al ancho de la escalera) y 90 cm de profundidad es el descanso estándar. Algunos reglamentos también requieren un descanso para escaleras con elevación vertical de más de 3.6 m.",
+    },
+  ],
+};
+
 // ─── REGISTRY MAP ─────────────────────────────────────────────────────────────
 
 export const registryES: Record<string, Record<string, CalculatorSEOContent>> = {
@@ -2177,5 +2587,19 @@ export const registryES: Record<string, Record<string, CalculatorSEOContent>> = 
     "framing-nail-calculator": framingNailCalculator,
     "joist-hanger-calculator": joistHangerCalculator,
     "hurricane-tie-calculator": hurricaneTieCalculator,
+    "lumber-cost-calculator": lumberCostCalculator,
+    "board-feet-calculator": boardFeetCalculator,
+    "plywood-calculator": plywoodCalculatorES,
+  },
+  finishing: {
+    "paint-coverage-calculator": paintCoverageCalculatorES,
+    "paint-cost-calculator": paintCostCalculatorES,
+    "primer-calculator": primerCalculatorES,
+  },
+  outdoor: {
+    "deck-board-calculator": deckBoardCalculatorES,
+    "deck-footing-calculator": deckFootingCalculatorES,
+    "deck-railing-calculator": deckRailingCalculatorES,
+    "deck-stair-calculator": deckStairCalculatorES,
   },
 };

@@ -35,6 +35,28 @@ const clusters: Record<string, ClusterConfig> = {
       { href: "/guides/minimum-roof-pitch-for-shingles/", title: "Minimum Roof Pitch for Shingles" },
     ],
   },
+  "paint-coverage-calculator": {
+    subCalculators: ["paint-cost-calculator", "primer-calculator"],
+    guides: [
+      { href: "/guides/how-much-paint-do-i-need/", title: "How Much Paint Do I Need?" },
+    ],
+  },
+  "lumber-cost-calculator": {
+    subCalculators: ["board-feet-calculator", "plywood-calculator"],
+    guides: [
+      { href: "/guides/lumber-prices-guide/", title: "Lumber Prices Guide" },
+    ],
+  },
+  "deck-board-calculator": {
+    subCalculators: [
+      "deck-footing-calculator",
+      "deck-railing-calculator",
+      "deck-stair-calculator",
+    ],
+    guides: [
+      { href: "/guides/composite-vs-wood-decking/", title: "Composite vs Wood Decking" },
+    ],
+  },
 };
 
 interface ClusterLinksProps {

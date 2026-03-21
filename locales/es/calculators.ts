@@ -383,6 +383,102 @@ export const categories: CategoryMeta[] = [
         category: "Ferretería",
         categorySlug: "hardware",
       },
+      {
+        slug: "lumber-cost-calculator",
+        title: "Calculadora de Costo de Madera",
+        description:
+          "¿Cuánto cuesta la madera? Calculadora gratis para tablas de 2x4, 2x6, 2x8 y más — estima costo total por cantidad y precios actuales.",
+        category: "Ferretería",
+        categorySlug: "hardware",
+      },
+      {
+        slug: "board-feet-calculator",
+        title: "Calculadora de Pies Tabla",
+        description:
+          "Calculadora de pies tabla: Convierte dimensiones de madera a pies tabla. Herramienta gratis para precios de madera dura — cálculo instantáneo de PT y costo.",
+        category: "Ferretería",
+        categorySlug: "hardware",
+      },
+      {
+        slug: "plywood-calculator",
+        title: "Calculadora de Triplay",
+        description:
+          "¿Cuántas hojas de triplay necesito? Calculadora gratis para paneles de 6 mm a 18 mm — da cantidad de hojas y estimado de costo.",
+        category: "Ferretería",
+        categorySlug: "hardware",
+      },
+    ],
+  },
+  {
+    slug: "finishing",
+    title: "Calculadoras de Acabados",
+    description:
+      "Calcula pintura, sellador, tinte y materiales de acabado para superficies interiores y exteriores.",
+    calculators: [
+      {
+        slug: "paint-coverage-calculator",
+        title: "Calculadora de Rendimiento de Pintura",
+        description:
+          "¿Cuánta pintura necesito? Calculadora gratis de rendimiento para muros y techos — considera manos de pintura, da litros y cubetas.",
+        category: "Acabados",
+        categorySlug: "finishing",
+      },
+      {
+        slug: "paint-cost-calculator",
+        title: "Calculadora de Costo de Pintura",
+        description:
+          "Calculadora de costo de pintura: Estima el costo total por nivel de calidad. Herramienta gratis de económica a premium — incluye insumos.",
+        category: "Acabados",
+        categorySlug: "finishing",
+      },
+      {
+        slug: "primer-calculator",
+        title: "Calculadora de Sellador (Primer)",
+        description:
+          "¿Cuánto sellador necesito? Calculadora gratis para tablaroca nueva, madera y repintado — ajusta rendimiento por tipo de superficie.",
+        category: "Acabados",
+        categorySlug: "finishing",
+      },
+    ],
+  },
+  {
+    slug: "outdoor",
+    title: "Calculadoras para Exteriores",
+    description:
+      "Calcula materiales para terrazas de madera, patios, cercas y estructuras exteriores.",
+    calculators: [
+      {
+        slug: "deck-board-calculator",
+        title: "Calculadora de Tablas para Deck",
+        description:
+          "¿Cuántas tablas necesito para mi deck? Calculadora gratis para madera tratada, cedro y composite — cantidad de tablas, metros lineales y desperdicio.",
+        category: "Exteriores",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "deck-footing-calculator",
+        title: "Calculadora de Cimentación para Deck",
+        description:
+          "Calculadora de cimentación para deck: ¿Cuántos pilares de concreto necesito? Herramienta gratis — cantidad de zapatas, postes y trabes.",
+        category: "Exteriores",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "deck-railing-calculator",
+        title: "Calculadora de Barandal para Deck",
+        description:
+          "¿Cuántos postes y balaustres necesito? Calculadora gratis de barandal — da cantidad de postes, balaustres y metros lineales de riel.",
+        category: "Exteriores",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "deck-stair-calculator",
+        title: "Calculadora de Escaleras para Deck",
+        description:
+          "Calculadora de escaleras para deck: ¿Cuántos escalones y largueros? Herramienta gratis — ingresa la altura para obtener escalones, largueros y tablas.",
+        category: "Exteriores",
+        categorySlug: "outdoor",
+      },
     ],
   },
 ];

@@ -41,6 +41,24 @@ const guides: GuidesTranslations = {
           "Concrete costs $125\u2013$160 per cubic yard for ready-mix. Complete price guide covering slabs, footings, driveways, bagged concrete, labor costs, and saving tips.",
         href: "/guides/concrete-cost-guide",
       },
+      {
+        title: "How Much Paint Do I Need? Complete Guide",
+        description:
+          "How much paint for walls, ceilings, and trim? Complete guide covering measurement, coverage rates, coats, surface prep, and cost breakdown with calculator links.",
+        href: "/guides/how-much-paint-do-i-need",
+      },
+      {
+        title: "Lumber Prices Guide: What Does Wood Cost?",
+        description:
+          "Current lumber prices by species, grade, and size. Covers dimensional lumber, engineered wood, plywood, price trends, where to buy, and bulk discounts.",
+        href: "/guides/lumber-prices-guide",
+      },
+      {
+        title: "Composite vs Wood Decking: Which Is Better?",
+        description:
+          "Composite vs wood decking compared: cost, durability, maintenance, appearance, and lifespan. Learn which deck material is best for your project and climate.",
+        href: "/guides/composite-vs-wood-decking",
+      },
     ],
   },
 
@@ -944,6 +962,379 @@ const guides: GuidesTranslations = {
         question: "How much concrete do I need for a project?",
         answer:
           "Concrete is measured in cubic yards. For rectangular slabs: multiply length (ft) \u00d7 width (ft) \u00d7 thickness (ft), then divide by 27 to get cubic yards. A 10\u00d710 ft slab at 4 inches thick = 10 \u00d7 10 \u00d7 0.333 / 27 = 1.23 cubic yards. Always add 5\u201310% for waste, subgrade irregularities, and spillage. Use our free concrete calculator for exact results on slabs, footings, columns, and custom shapes.",
+      },
+    ],
+  },
+
+  howMuchPaint: {
+    title: "How Much Paint Do I Need? Complete Guide",
+    metaDescription:
+      "How much paint do I need? Complete guide covering wall measurement, coverage rates by paint type, number of coats, surface prep, ceiling and trim paint, and cost breakdown.",
+
+    heroTitle: "How Much Paint Do I Need?",
+    heroSubtitle: "Complete Guide",
+    heroDescription:
+      "Everything you need to know to calculate the right amount of paint for walls, ceilings, and trim — avoid buying too much or running out mid-project.",
+
+    quickAnswerHeading: "Quick Answer",
+    quickAnswerText:
+      "One gallon of interior latex paint covers approximately 350 to 400 square feet with one coat. For a standard room (12x12 ft, 8-ft ceilings), you need about 2 gallons for two coats on the walls. Add 1 gallon for the ceiling and 1 quart for trim and doors. Always round up — leftover paint is essential for future touch-ups.",
+
+    measuringWallsHeading: "How to Measure Your Walls",
+    measuringWallsIntro:
+      "Accurate wall measurements are the foundation of any paint estimate. Here is how to measure like a professional painter:",
+    measuringWallsItems: [
+      "Measure the length of each wall in feet and multiply by the ceiling height. A 14-foot wall with 8-foot ceilings = 112 square feet. Repeat for all four walls and add them together.",
+      "For quick whole-room calculations, measure the room perimeter (sum of all wall lengths) and multiply by ceiling height. A 12x14 room has a 52-foot perimeter, times 8-foot ceilings = 416 square feet of wall area.",
+      "Subtract openings: a standard door is approximately 21 square feet (3x7 ft) and a standard window is approximately 15 square feet (3x5 ft). For a room with one door and two windows, subtract about 51 square feet.",
+      "For rooms with vaulted or cathedral ceilings, measure the wall height at the tallest point and the shortest point, average them, and multiply by the wall length.",
+      "Include closet interiors if you plan to paint them — a standard 2x6 ft closet adds about 56 square feet of wall area.",
+      "Record all measurements before going to the paint store. Take photos of the rooms for reference when choosing colors.",
+    ],
+    measuringWallsSummary:
+      "A typical 1,500 sq ft house has 4,000 to 5,000 square feet of paintable wall area, depending on ceiling height, number of rooms, and window/door count.",
+
+    coverageRatesHeading: "Coverage Rates by Paint Type",
+    coverageRatesIntro:
+      "Not all paints cover the same area. Coverage rates vary by finish, quality, and the surface you are painting.",
+    coverageRatesText1:
+      "Flat and matte finishes have the highest coverage rates at 350 to 400 square feet per gallon because they have lower binder content and spread easily. They are ideal for ceilings and low-traffic rooms but show marks and are difficult to clean. Eggshell finish covers 300 to 350 square feet per gallon and is the most popular choice for living rooms, bedrooms, and hallways — it has a subtle sheen that is easy to clean without being too shiny.",
+    coverageRatesText2:
+      "Satin finish covers 300 to 350 square feet per gallon and is excellent for kitchens, bathrooms, and high-traffic areas due to its moisture resistance and washability. Semi-gloss covers 300 to 350 square feet per gallon and is the standard choice for trim, baseboards, doors, and window frames — its reflective surface is highly durable and easy to wipe clean. High-gloss covers 250 to 300 square feet per gallon and is used for accent areas, cabinets, and furniture where maximum durability and reflectivity are desired.",
+    coverageRatesText3:
+      "Premium paints from brands like Benjamin Moore, Sherwin-Williams, and Behr typically achieve the higher end of these coverage ranges due to higher pigment concentration and better leveling properties. Economy paints often fall at the lower end and may require an additional coat to achieve full coverage. Textured, porous, or unpainted surfaces reduce coverage by 20 to 30 percent regardless of paint quality — always prime these surfaces first.",
+
+    numberOfCoatsHeading: "How Many Coats of Paint Do You Need?",
+    numberOfCoatsIntro:
+      "The number of coats directly affects how much paint you need to buy. Here is when to apply one, two, or three coats:",
+    numberOfCoatsItems: [
+      "One coat is sufficient only for touch-ups using the exact same paint color and sheen on a previously painted surface in good condition. Some premium paints advertise one-coat coverage, but professional painters still recommend two coats for best results.",
+      "Two coats is the standard recommendation for virtually all painting projects. The first coat seals and primes the surface, while the second coat provides the final color depth, uniform sheen, and maximum durability. Two coats of quality paint can last 7 to 10 years on interior walls.",
+      "Three coats are necessary when making a dramatic color change — especially going from a dark color (red, navy, forest green) to a light color (white, cream, pastel). The first coat of tinted primer neutralizes the old color, followed by two topcoats for full coverage.",
+      "New, unpainted drywall always requires a coat of primer plus two topcoats (three coats total). The primer seals the porous surface and provides a uniform base for the paint. Skipping primer on new drywall causes flashing — visible differences in sheen where the joint compound and bare paper absorb paint at different rates.",
+      "Textured surfaces like knockdown, orange peel, and popcorn ceilings may require an extra coat because the texture creates peaks and valleys that are difficult to cover evenly with a single pass.",
+    ],
+    numberOfCoatsSummary:
+      "For budgeting purposes, always calculate paint quantity based on two coats. If you need primer, calculate that separately at the primer's coverage rate.",
+
+    surfacePrepHeading: "Surface Preparation",
+    surfacePrepIntro:
+      "Proper surface preparation is the single most important factor in a long-lasting paint job. No amount of expensive paint can compensate for poor prep work.",
+    surfacePrepItems: [
+      "Clean all surfaces before painting. Dust, grease, and cobwebs prevent paint adhesion. Wipe walls with a damp cloth or use TSP (trisodium phosphate) solution for greasy kitchen walls. Allow surfaces to dry completely before painting.",
+      "Fill nail holes, dents, and cracks with lightweight spackling compound. Apply with a putty knife, let it dry, and sand smooth with 150-grit sandpaper. For larger holes (over 1/2 inch), use mesh tape and joint compound, applied in two thin coats.",
+      "Sand glossy surfaces lightly with 150-grit sandpaper to create tooth for the new paint to grip. This is especially important when painting over semi-gloss or high-gloss finishes.",
+      "Remove or sand any loose, peeling, or flaking paint down to a sound surface. Feather the edges of remaining paint with sandpaper to create a smooth transition.",
+      "Apply painter's tape to trim, baseboards, ceiling lines, and any areas you want to protect. Press the tape firmly with a putty knife or credit card to prevent paint from bleeding underneath.",
+      "Protect floors and furniture with drop cloths. Canvas drop cloths grip the floor better than plastic and absorb drips. Move furniture to the center of the room and cover with plastic sheeting.",
+    ],
+
+    ceilingPaintHeading: "Calculating Ceiling Paint",
+    ceilingPaintIntro:
+      "Ceilings require their own calculation since they use a different paint formulation than walls.",
+    ceilingPaintText1:
+      "Ceiling paint is specifically formulated with higher solids content for better spatter resistance when rolling overhead, and it dries to a perfectly flat finish to minimize the appearance of imperfections. Standard ceiling paint covers 350 to 400 square feet per gallon. To calculate the amount needed, multiply the room length by the room width — a 12x15 ft room has 180 square feet of ceiling. At 400 sq ft per gallon, that is about 0.45 gallons — buy 1 gallon for that room.",
+    ceilingPaintText2:
+      "Most ceilings only need one coat if they are being painted the same white color. If you are changing the ceiling color or painting over a stain, apply primer first and then two topcoats. For popcorn or textured ceilings, reduce the coverage rate to 250 to 300 square feet per gallon because the texture absorbs more paint. A whole-house ceiling (1,500 sq ft) typically requires 4 to 5 gallons of ceiling paint.",
+
+    trimPaintHeading: "Calculating Trim and Door Paint",
+    trimPaintIntro:
+      "Trim, baseboards, doors, and window frames are typically painted with a semi-gloss or satin finish for durability and easy cleaning.",
+    trimPaintText1:
+      "Baseboards: Measure the total linear feet of baseboard in the room. Standard baseboards are 3.5 to 5.5 inches tall. A room with 52 linear feet of baseboard has approximately 24 square feet of paintable surface. One quart of trim paint covers about 75 to 100 square feet — enough for an average room's baseboards.",
+    trimPaintText2:
+      "Doors: A standard interior door (both sides) has approximately 40 square feet of paintable surface. Window trim (frame and casing) averages 10 square feet per window. Crown molding adds about 1 square foot per linear foot (both face and edge). For a whole house, plan on 1 to 2 gallons of trim paint for all baseboards, door frames, window trim, and crown molding. Paint doors with a foam roller for the smoothest finish — brush marks are very visible on semi-gloss paint on large flat surfaces.",
+
+    costBreakdownHeading: "Paint Cost Breakdown",
+    costBreakdownIntro:
+      "Understanding the full cost of a painting project helps you budget accurately and choose the right products for your needs.",
+    costBreakdownText1:
+      "Wall paint is the largest cost component. Budget $25 to $70 per gallon depending on quality tier. For a typical room requiring 2 gallons at 2 coats, wall paint costs $50 to $140. For a whole 1,500 sq ft house (approximately 25 gallons needed for walls), paint costs $625 to $1,750. Buying five-gallon buckets saves 15 to 20 percent per gallon compared to individual cans.",
+    costBreakdownText2:
+      "Primer costs $12 to $25 per gallon. New construction (unpainted drywall) requires about 1 gallon per 300 to 400 square feet. For a 1,500 sq ft house, that is 10 to 15 gallons of primer ($120 to $375). Self-priming paints (available in premium lines) eliminate this cost but are more expensive per gallon. For repaints over similar colors, primer is usually unnecessary.",
+    costBreakdownText3:
+      "Supplies for a whole-house interior paint job cost $100 to $200 total: roller frames and covers ($20 to $30), extension pole for ceilings ($15 to $25), angled brushes in 2-inch and 2.5-inch widths ($20 to $30), painter's tape ($25 to $40 for multiple rolls), drop cloths ($15 to $30), paint trays and liners ($10 to $15), sandpaper and spackling ($10 to $15), and rags and cleanup supplies ($5 to $10). Quality tools make a significant difference in the final result — do not skimp on roller covers and brushes.",
+
+    calculatorCtaHeading: "Calculate Your Paint Needs",
+    calculatorCtaText:
+      "Use our free paint calculators to get an instant, accurate estimate for your project.",
+    calculatorLinks: [
+      {
+        label: "Paint Coverage Calculator",
+        href: "/calculators/finishing/paint-coverage-calculator",
+        description: "How many gallons for your wall area — with coat and coverage adjustments.",
+      },
+      {
+        label: "Paint Cost Calculator",
+        href: "/calculators/finishing/paint-cost-calculator",
+        description: "Total project cost by paint quality level — includes supplies estimate.",
+      },
+      {
+        label: "Primer Calculator",
+        href: "/calculators/finishing/primer-calculator",
+        description: "How much primer for your surface type — new drywall, wood, or repaints.",
+      },
+    ],
+
+    faqHeading: "Frequently Asked Questions",
+    faqs: [
+      {
+        question: "How much paint do I need for a 12x12 room?",
+        answer:
+          "A 12x12 room with 8-foot ceilings has about 384 square feet of wall area. Subtract approximately 50 square feet for a door and window, leaving 334 square feet. At 350 sq ft per gallon with 2 coats, you need about 1.9 gallons — buy 2 gallons. Add 1 gallon of ceiling paint for the 144 sq ft ceiling. Total: 2 gallons of wall paint + 1 gallon of ceiling paint.",
+      },
+      {
+        question: "How many square feet does a gallon of paint cover?",
+        answer:
+          "A gallon of interior latex paint covers 350 to 400 square feet on smooth, previously painted surfaces with one coat. Flat finishes cover closer to 400 sq ft, while satin and semi-gloss cover about 300 to 350 sq ft. On porous or textured surfaces like new drywall or stucco, expect only 250 to 300 sq ft per gallon.",
+      },
+      {
+        question: "Should I buy 1-gallon cans or 5-gallon buckets?",
+        answer:
+          "Five-gallon buckets are 15 to 20 percent cheaper per gallon and guarantee color consistency across all walls. Buy buckets when you need 3 or more gallons of the same color. For accent walls or rooms requiring less than 2 gallons, individual cans are more practical. Many stores also sell quarts for small touch-up projects.",
+      },
+      {
+        question: "How much does it cost to paint a room yourself?",
+        answer:
+          "A DIY room painting project costs $80 to $200 in materials: 2 gallons of paint ($50 to $140), supplies ($30 to $50), and optional primer ($12 to $25 per gallon). A professional painter charges $300 to $700 for the same room. For a whole house interior, DIY costs $700 to $2,000 in materials vs $3,000 to $8,000 for a professional crew.",
+      },
+      {
+        question: "Do I need primer before painting?",
+        answer:
+          "Primer is necessary on new drywall, bare wood, repaired or patched areas, and when making dramatic color changes (dark to light). On previously painted surfaces in good condition with a similar color, you can skip primer — especially with self-priming premium paints. When in doubt, prime — it costs $12 to $25 per gallon and saves on topcoat coverage.",
+      },
+      {
+        question: "What is the best paint for interior walls?",
+        answer:
+          "For most interior walls, an eggshell or satin finish in a mid-range to premium quality provides the best balance of appearance, durability, and washability. Top-rated brands include Benjamin Moore Regal Select, Sherwin-Williams Duration, and Behr Marquee. Use flat finish only on ceilings and low-traffic rooms. Use semi-gloss on trim, doors, and high-moisture areas like bathrooms.",
+      },
+    ],
+  },
+  lumberPrices: {
+    title: "Lumber Prices Guide: What Does Wood Cost?",
+    metaDescription:
+      "Current lumber prices by species, grade, and size. Covers dimensional lumber, engineered wood, plywood, price trends, where to buy, and bulk discounts for builders and DIYers.",
+    heroTitle: "Lumber Prices Guide",
+    heroSubtitle: "What Does Wood Cost?",
+    heroDescription:
+      "A comprehensive guide to lumber pricing in the US and Canada — from framing studs to hardwood boards — so you can budget accurately for your next building project.",
+
+    quickAnswerHeading: "Quick Answer",
+    quickAnswerText:
+      "A standard SPF 2x4x8 stud costs $3 to $6 at retail home centers. Framing lumber (SPF #2) averages $400 to $700 per thousand board feet (MBF) wholesale. Hardwood lumber ranges from $3 to $15+ per board foot depending on species. Plywood runs $15 to $60 per 4x8 sheet depending on thickness and grade. Prices fluctuate with market conditions, so always get current quotes from your supplier before ordering for a project.",
+
+    speciesPricingHeading: "Lumber Prices by Species",
+    speciesPricingIntro:
+      "Wood species is the single biggest factor in lumber pricing. Here is what common species cost in the current market:",
+    speciesPricingText1:
+      "Softwood framing lumber — spruce, pine, and fir (SPF) — is the most affordable option and the backbone of residential construction. A 2x4x8 SPF stud costs $3 to $6 retail, while longer boards like 2x10x12 and 2x12x16 run $15 to $35 each. Douglas fir, used for heavy structural applications, commands a 20-40% premium over SPF. Southern yellow pine (SYP) is priced between SPF and Doug fir and is the standard species for pressure-treated lumber. Cedar, prized for its natural rot resistance and beauty, costs $8 to $15 per board for 2x4x8 deck/fence grade — roughly 2 to 3 times the price of SPF.",
+    speciesPricingText2:
+      "Domestic hardwoods span a wide price range measured in board feet (BF). Poplar, the most affordable hardwood, runs $3 to $5/BF. Red oak, the most commonly used cabinet and furniture wood, costs $4 to $7/BF. White oak has surged in popularity (driven by white oak flooring and bourbon barrel demand) to $5 to $9/BF. Hard maple costs $5 to $8/BF, cherry $6 to $10/BF, and walnut — the premium domestic hardwood — runs $8 to $15/BF depending on width and grade. These prices assume rough-sawn (RS) or surfaced two sides (S2S) boards at a retail hardwood dealer.",
+    speciesPricingText3:
+      "Exotic and imported species sit at the top of the price scale. Ipe (Brazilian walnut), the gold standard for outdoor decking, costs $3 to $6 per linear foot for 5/4x6 decking — equivalent to $15 to $25/BF. Genuine mahogany (Swietenia) runs $10 to $20/BF. Teak, used for outdoor furniture and marine applications, costs $15 to $30/BF. Cumaru, sapele, and other popular exotics fall in the $8 to $18/BF range. Import tariffs, shipping costs, and sustainability certifications (FSC) all affect exotic lumber pricing.",
+
+    dimensionalVsEngineeredHeading: "Dimensional Lumber vs Engineered Wood",
+    dimensionalVsEngineeredIntro:
+      "Modern construction increasingly uses engineered wood products alongside traditional sawn lumber. Understanding the cost differences helps you choose the right product for each application:",
+    dimensionalVsEngineeredItems: [
+      "Dimensional lumber (2x4, 2x6, 2x10, etc.) is sawn directly from logs and is the default choice for wall framing, roof framing, and short-span floor joists. It is the cheapest option per lineal foot for spans under 16 feet.",
+      "Laminated veneer lumber (LVL) beams cost $3 to $6 per lineal foot for a 1-3/4 x 9-1/2 inch beam — roughly 3 to 5 times the cost of a comparable 2x10. LVLs are used for headers, ridge beams, and long spans where dimensional lumber would require oversized members.",
+      "I-joists (TJI, BCI) cost $3 to $7 per lineal foot depending on depth and series. They replace 2x10 and 2x12 floor joists for spans over 14 feet, offering lighter weight, no crowning issues, and pre-punched knockouts for plumbing and wiring.",
+      "Glulam beams cost $6 to $15 per lineal foot depending on size. They are used for exposed structural beams, long-span garage door headers, and custom architectural elements.",
+      "Parallel strand lumber (PSL) like Parallam costs $8 to $20 per lineal foot and is used for heavy-load columns and beams where maximum strength is needed in the smallest cross-section.",
+    ],
+    dimensionalVsEngineeredSummary:
+      "For most residential framing, dimensional lumber remains the most cost-effective choice. Engineered wood products make economic sense when you need longer spans, heavier loads, or more predictable performance than sawn lumber can provide.",
+
+    gradeHeading: "Understanding Lumber Grades and Their Impact on Price",
+    gradeIntro:
+      "Lumber grade directly affects price — higher grades cost more because they have fewer defects and more consistent structural properties:",
+    gradeItems: [
+      "Stud grade — the most economical structural grade, suitable only for vertical load-bearing members (wall studs) up to 10 feet long. Typically $0.50 to $1.00 less per piece than #2 grade.",
+      "#2 and Better (No. 2) — the standard structural grade for joists, rafters, headers, and general framing. This is what most lumberyards stock as their default framing lumber.",
+      "#1 grade — fewer knots and higher strength values than #2. Used when engineering calculations require higher allowable stress values. Costs 10-20% more than #2 and may need to be special-ordered.",
+      "Select Structural — the highest structural grade with the fewest defects. Required for some engineered designs and heavy timber applications. Costs 25-50% more than #2.",
+      "Appearance grades (C&Better, D Select) — used for finish carpentry, trim, and exposed applications where looks matter. Priced 50-100% above structural grades.",
+      "FAS (First and Seconds) — the top hardwood grade, requiring large clear-face cuttings. The most expensive hardwood grade, typically 30-50% more than #1 Common.",
+    ],
+    gradeSummary:
+      "For framing, #2 grade is the standard and most economical choice. Only specify higher grades when engineering or appearance requirements demand it — you will pay significantly more for marginal improvements in strength.",
+
+    priceTrendsHeading: "Lumber Price Trends and Forecasting",
+    priceTrendsIntro:
+      "Lumber prices are notoriously volatile, and understanding the market cycle helps you time your purchases:",
+    priceTrendsText1:
+      "The lumber futures market hit an all-time high of $1,711 per thousand board feet in May 2021, driven by pandemic-fueled DIY demand and temporary mill shutdowns. By late 2022, prices had crashed back to $350/MBF before stabilizing in the $400 to $600/MBF range through 2023-2024. A standard 2x4x8 that cost $9 to $12 at the peak can now be found for $3 to $5. These dramatic swings underscore the importance of getting current prices rather than relying on historical estimates.",
+    priceTrendsText2:
+      "Seasonal patterns are predictable: lumber prices typically peak in spring and early summer (March through June) when building season drives demand, and bottom out in late fall and winter (October through January) when construction slows. Buying framing packages in November or December can save 10-20% compared to May pricing. However, you need dry, covered storage to protect lumber purchased months before your project start date.",
+    priceTrendsText3:
+      "Long-term factors affecting lumber prices include US housing starts (the primary demand driver), Canadian softwood lumber tariffs (currently 8-15% on most Canadian imports), mill capacity investments, environmental regulations on timber harvesting, and natural disasters (wildfires, beetle kill) that reduce timber supply. The US-Canada softwood lumber trade dispute has added $1,000 to $4,000 to the cost of a typical new home depending on market conditions.",
+
+    whereToBuyHeading: "Where to Buy Lumber: Retail vs Wholesale",
+    whereToBuyIntro:
+      "Where you buy lumber significantly affects your total project cost. Here are the main channels, ranked from most to least expensive per board:",
+    whereToBuyItems: [
+      "Home centers (Home Depot, Lowe's, Menards): Most convenient for small projects and individual boards. Prices are consistent and posted, returns are easy, and inventory is immediately available. However, pricing is 15-30% above lumberyard pricing for the same species and grade. Best for: homeowners, small repairs, and projects under $500 in lumber.",
+      "Local lumberyards: Better quality control (hand-picked boards), wider species and grade selection, knowledgeable staff, and volume pricing. Most offer delivery for orders over $500. Expect 10-25% savings over home center pricing on comparable materials. Best for: contractors, large DIY projects, and anyone who values quality over convenience.",
+      "Wholesale/direct from mill: The lowest pricing, typically 30-50% below retail, but requires large minimum orders (often 1,000+ board feet or full units). Some mills sell direct to the public, especially in lumber-producing regions (Pacific Northwest, Southeast). Best for: house framing packages, commercial projects, and builder accounts.",
+      "Online specialty retailers (Woodcraft, Bell Forest, Rockler): Best source for exotic species, specialty hardwoods, and turning blanks. Pricing includes a premium for selection, grading, and shipping. Best for: woodworkers needing specific species, sizes, or figured wood.",
+      "Sawmill direct / Wood-Mizer owners: Rough-sawn local lumber at the lowest possible prices ($0.25 to $1.00/BF for common softwoods, $2 to $5/BF for hardwoods). Requires air-drying or kiln access and surfacing equipment. Best for: rural builders, woodworkers with shop equipment, and timber-frame projects.",
+    ],
+    whereToBuySummary:
+      "For projects over $1,000 in lumber cost, always get a quote from at least one lumberyard in addition to checking home center prices. The savings on a framing package can easily reach $500 to $2,000.",
+
+    bulkDiscountsHeading: "Bulk Buying and Volume Discounts",
+    bulkDiscountsIntro:
+      "Buying lumber in volume unlocks significant savings. Here is how bulk pricing works at each level:",
+    bulkDiscountsItems: [
+      "Unit pricing: Framing lumber sold by the unit (a banded stack, typically 200-300 pieces of the same size) costs 10-20% less than individual piece pricing. A unit of 2x4x8 studs contains 294 pieces and costs $800 to $1,500 depending on market conditions — roughly $2.70 to $5.10 per stud versus $3.50 to $6.00 individually.",
+      "Framing packages: Many lumberyards will quote your entire framing material list as a package deal, including studs, plates, headers, joists, rafters, sheathing, and hardware. Package pricing is typically 15-25% below the sum of individual retail prices. Submit your framing plans and get at least two quotes.",
+      "Contractor accounts: Builders who purchase regularly can set up contractor accounts with lumberyards for an additional 5-15% discount below package pricing. Most require a business license and a track record of purchases.",
+      "Pallet pricing for plywood/OSB: Buying a full pallet of plywood (60-75 sheets for 3/4 inch, more for thinner panels) saves 10-15% over individual sheet pricing. A pallet of 3/4\" CDX at $42/sheet versus $50/sheet saves $480 to $600.",
+      "Seasonal promotions: Home centers run major lumber sales during spring (to capture building season demand) and fall (to clear inventory). Watch for 10-15% off framing lumber, buy-one-get-one deals on treated lumber, and contractor pack pricing on fasteners and hardware.",
+    ],
+    bulkDiscountsSummary:
+      "The biggest single savings opportunity is getting a complete framing package quote from a lumberyard. For a typical 1,500 sq ft house frame, the difference between retail piece pricing and a lumberyard package can be $3,000 to $8,000.",
+
+    calculatorCtaHeading: "Calculate Your Lumber Costs",
+    calculatorCtaText:
+      "Use our free lumber calculators to estimate the exact cost of your project — from framing studs to hardwood board feet to plywood sheets.",
+    calculatorLinks: [
+      { label: "Lumber Cost Calculator", href: "/calculators/hardware/lumber-cost-calculator", description: "Estimate total cost for dimensional lumber by size and quantity." },
+      { label: "Board Feet Calculator", href: "/calculators/hardware/board-feet-calculator", description: "Convert lumber dimensions to board feet with cost estimates." },
+      { label: "Plywood Calculator", href: "/calculators/hardware/plywood-calculator", description: "Calculate plywood sheets needed and total cost by thickness." },
+    ],
+
+    faqHeading: "Frequently Asked Questions",
+    faqs: [
+      { question: "How much does a 2x4 cost right now?", answer: "As of 2024-2025, a standard SPF 2x4x8 stud costs $3 to $6 at retail home centers like Home Depot and Lowe's. Prices vary by region, with higher costs on the coasts and lower prices in the Midwest and Southeast. Premium species like Douglas fir and cedar cost $6 to $15 for the same 2x4x8 size. Check your local store's website for current pricing — lumber prices can change weekly." },
+      { question: "Why is lumber so expensive compared to 5 years ago?", answer: "Lumber prices spiked 300-400% during 2020-2021 due to pandemic-driven DIY demand, temporary mill shutdowns, and supply chain disruptions. While prices have fallen significantly from the $1,700/MBF peak, they remain 30-50% above pre-2020 levels due to higher mill operating costs, transportation costs, Canadian import tariffs, and increased demand from a structural housing shortage. The market has normalized but at a higher baseline than the $300-$400/MBF levels of the 2010s." },
+      { question: "What is the best time of year to buy lumber?", answer: "Late fall and winter (October through January) typically offers the lowest lumber prices because construction activity slows and suppliers discount inventory. You can save 10-20% compared to spring and summer peak pricing. If you have dry, covered storage, buying your framing package in November for a spring build can yield significant savings. Watch for holiday sales at home centers (Black Friday, Labor Day) for additional discounts." },
+      { question: "Is pressure-treated lumber worth the extra cost?", answer: "Yes, for any wood in ground contact, within 6 inches of soil, or exposed to persistent moisture. Pressure-treated lumber costs 50-100% more than untreated SPF but lasts 20-40 years versus 3-5 years for untreated wood in ground contact. It is required by code for sill plates, deck substructure, and any structural member near grade. The most common treatment is MCA (micronized copper azole), which replaced CCA (chromated copper arsenate) for residential use." },
+      { question: "How much lumber do I need to frame a house?", answer: "A typical 1,500 sq ft single-story house requires approximately 12,000 to 16,000 board feet of lumber for the complete frame (walls, floor, and roof). This translates to roughly 400-500 studs, 40-60 sheets of sheathing, plus joists, rafters/trusses, plates, and headers. At current pricing, the framing lumber package for a 1,500 sq ft house costs $8,000 to $15,000 depending on species, market conditions, and where you buy." },
+      { question: "What is the difference between KD, S-DRY, and green lumber?", answer: "KD (kiln-dried) lumber has been dried in a kiln to 19% moisture content or below, making it more stable and less likely to warp or shrink. S-DRY (surfaced dry) meets the same 19% MC standard but may have been air-dried rather than kiln-dried. Green lumber exceeds 19% MC and will shrink as it dries — it costs less but should only be used where shrinkage is acceptable (heavy timber, temporary structures). For framing, always use KD or S-DRY lumber to minimize drywall cracks and finish problems caused by wood shrinkage." },
+    ],
+  },
+
+  compositeVsWood: {
+    title: "Composite vs Wood Decking: Which Is Better?",
+    metaDescription:
+      "Composite vs wood decking compared: upfront cost, long-term value, durability, maintenance, appearance, lifespan, and environmental impact. Complete guide for choosing the right deck material.",
+
+    heroTitle: "Composite vs Wood Decking",
+    heroSubtitle: "Which Is Better?",
+    heroDescription:
+      "A comprehensive comparison of composite and wood decking materials to help you choose the right option for your budget, climate, and lifestyle.",
+
+    quickAnswerHeading: "Quick Answer",
+    quickAnswerText:
+      "Choose composite decking if you want minimal maintenance, 25-50 year lifespan, and consistent appearance over time. Choose wood (pressure-treated or cedar) if upfront budget is your primary concern, you enjoy the natural look and feel of real wood, and you are willing to maintain it annually. Composite costs 2-4x more upfront but saves money over 20+ years when you factor in staining, sealing, and replacement costs for wood.",
+
+    whatIsCompositeHeading: "What Is Composite Decking?",
+    whatIsCompositeText1:
+      "Composite decking is an engineered building material made from a combination of wood fibers (sawdust, wood flour) and plastic polymers (typically polyethylene or polypropylene). The wood fibers provide structural rigidity and a natural appearance, while the plastic component delivers moisture resistance and durability. Most modern composite boards feature a protective polymer cap (shell) on all four sides that resists staining, fading, mold, and scratching.",
+    whatIsCompositeText2:
+      "Major composite decking brands include Trex (the market leader, using 95% recycled materials), TimberTech/AZEK (offering both composite and PVC options), Fiberon, Deckorators, and MoistureShield. Prices range from $4 to $12 per linear foot for the boards alone, with most homeowners choosing mid-range products at $6 to $8 per linear foot. Composite boards are typically available in 12, 16, and 20-foot lengths and 5.5-inch or 7.25-inch widths.",
+
+    whatIsWoodHeading: "What Is Wood Decking?",
+    whatIsWoodText1:
+      "Wood decking uses natural lumber boards as the deck surface. The three most common wood species for decking are pressure-treated southern yellow pine (the most affordable and widely available), western red cedar (naturally rot-resistant with a warm tone), and tropical hardwoods like ipe, cumaru, and tigerwood (the most durable but most expensive). Pressure-treated pine accounts for roughly 75% of all wood decks built in the United States.",
+    whatIsWoodText2:
+      "Pressure-treated deck boards cost $1.50 to $3.00 per linear foot, making them the most budget-friendly decking option. Cedar ranges from $3.00 to $5.00 per linear foot, while tropical hardwoods run $5.00 to $12.00 per linear foot. Wood deck boards are available in 8, 10, 12, 16, and 20-foot lengths. The standard deck board is a 5/4x6 (actual 1 inch thick by 5.5 inches wide), which provides good stiffness and comfort underfoot.",
+
+    comparisonHeading: "Composite vs Wood: Side-by-Side Comparison",
+    comparisonSubheading: "How the two materials stack up across every important category.",
+    comparisonCol1: "Category",
+    comparisonCol2: "Composite Decking",
+    comparisonCol3: "Wood Decking",
+    comparisonRows: [
+      { category: "Upfront Cost (per sq ft)", composite: "$8-$22 installed", wood: "$4-$12 installed" },
+      { category: "Lifespan", composite: "25-50 years", wood: "10-30 years (varies by species)" },
+      { category: "Annual Maintenance", composite: "Soap and water wash", wood: "Stain/seal every 1-2 years" },
+      { category: "Maintenance Cost (20 yr)", composite: "$0-$200 total", wood: "$2,000-$5,000 total" },
+      { category: "Appearance", composite: "Consistent, manufactured look", wood: "Natural grain, ages to gray" },
+      { category: "Heat Retention", composite: "Gets very hot in sun", wood: "Stays cooler underfoot" },
+      { category: "Scratch Resistance", composite: "Good (capped products)", wood: "Varies by species" },
+      { category: "Fade Resistance", composite: "Excellent (25-yr warranty)", wood: "Grays without maintenance" },
+      { category: "Environmental Impact", composite: "Recycled content, long life", wood: "Renewable, shorter life" },
+      { category: "DIY Difficulty", composite: "Moderate (special fasteners)", wood: "Easy (standard screws)" },
+    ],
+
+    costHeading: "Cost Comparison: The Full Picture",
+    costIntro: "The upfront price difference between composite and wood is significant, but the total cost of ownership over the deck's lifetime tells a different story.",
+    costText1:
+      "For a typical 12x16-foot deck (192 sq ft), pressure-treated wood decking material costs $600 to $900 for the boards alone. The same deck in mid-range composite (Trex Select or TimberTech Edge) costs $1,500 to $2,400 for boards. Including the substructure, fasteners, and installation labor, the total installed cost is approximately $3,000 to $5,000 for wood and $5,500 to $9,000 for composite.",
+    costText2:
+      "However, wood decks require annual maintenance. Staining and sealing a 192 sq ft deck costs $150 to $400 per year in materials (quality exterior stain plus application supplies). Over 20 years, that is $3,000 to $8,000 in maintenance costs alone. A pressure-treated deck also typically needs board replacement after 12 to 15 years ($1,000 to $2,000). Composite decks need only occasional soap-and-water cleaning.",
+    costText3:
+      "Over a 25-year period, the total cost of ownership for a 12x16 wood deck is approximately $7,000 to $15,000 (initial build plus maintenance and partial replacement). The same composite deck costs $5,500 to $9,000 total with virtually zero maintenance expense. At the 15 to 20-year mark, composite becomes the more economical choice.",
+
+    whenCompositeHeading: "When to Choose Composite Decking",
+    whenCompositeIntro: "Composite decking is the better choice in these situations:",
+    whenCompositeItems: [
+      "You want a low-maintenance deck that never needs staining, sealing, or painting.",
+      "You live in a humid, rainy, or coastal climate where wood decays quickly.",
+      "You plan to stay in the home for 10+ years and want long-term value.",
+      "You prefer a consistent, uniform appearance that will not change over time.",
+      "You want a 25 to 50-year manufacturer warranty for peace of mind.",
+      "You are building a second-story or hard-to-access deck where maintenance would be difficult.",
+    ],
+    whenCompositeSummary:
+      "Composite is the best all-around choice for homeowners who prioritize convenience, durability, and long-term savings over the lowest possible upfront cost.",
+
+    whenWoodHeading: "When to Choose Wood Decking",
+    whenWoodIntro: "Wood decking makes more sense in these situations:",
+    whenWoodItems: [
+      "Your upfront budget is limited and you need to minimize initial construction cost.",
+      "You love the natural look, feel, and scent of real wood and are willing to maintain it.",
+      "You live in an extremely hot climate where composite would be uncomfortably hot underfoot.",
+      "You are building a temporary or short-term structure (5 to 10 year horizon).",
+      "You enjoy DIY maintenance projects and view annual staining as a satisfying ritual.",
+      "You want a tropical hardwood deck (ipe, cumaru) that offers both natural beauty and 25+ year durability.",
+    ],
+    whenWoodSummary:
+      "Wood is ideal for budget-conscious builders, natural-wood enthusiasts, and projects where the warmth and character of real wood outweigh the maintenance commitment.",
+
+    calculatorCtaHeading: "Calculate Your Deck Materials",
+    calculatorCtaText: "Use our free deck calculators to estimate boards, footings, railing, and stairs for your project.",
+    calculatorLinks: [
+      { label: "Deck Board Calculator", href: "/calculators/outdoor/deck-board-calculator", description: "Estimate deck boards needed for any size deck." },
+      { label: "Deck Footing Calculator", href: "/calculators/outdoor/deck-footing-calculator", description: "Calculate concrete footings and post layout." },
+      { label: "Deck Railing Calculator", href: "/calculators/outdoor/deck-railing-calculator", description: "Get post, baluster, and rail quantities." },
+      { label: "Deck Stair Calculator", href: "/calculators/outdoor/deck-stair-calculator", description: "Find step count, stringers, and tread boards." },
+    ],
+
+    faqHeading: "Frequently Asked Questions",
+    faqs: [
+      {
+        question: "Is composite decking worth the extra cost?",
+        answer:
+          "Yes, for most homeowners. While composite costs 2-4x more upfront, it eliminates $3,000 to $8,000 in maintenance costs over 20 years and lasts 25-50 years versus 10-15 for treated wood. The break-even point is typically 12 to 15 years. If you plan to stay in your home long-term, composite is almost always the better financial decision when you account for total cost of ownership.",
+      },
+      {
+        question: "Does composite decking get too hot to walk on?",
+        answer:
+          "Composite decking does absorb more heat than wood, especially darker colors. On a 90-degree day in direct sun, dark composite can reach 140-170 degrees Fahrenheit, which is uncomfortable for bare feet. Lighter colors stay 20-30 degrees cooler. Mitigation strategies include choosing lighter board colors, adding shade structures, applying composite deck cooling products, or using outdoor rugs in bare-foot areas. Wood decking stays 10-20 degrees cooler than composite in the same conditions.",
+      },
+      {
+        question: "How long does composite decking last?",
+        answer:
+          "Quality composite decking from major manufacturers (Trex, TimberTech, Fiberon) lasts 25 to 50 years with minimal maintenance. Most carry 25-year structural warranties and 25 to 50-year fade and stain warranties. First-generation composites from the early 2000s had mold and fading issues, but modern capped composites have largely solved these problems. The substructure (pressure-treated joists and beams) may need replacement before the composite boards.",
+      },
+      {
+        question: "Can you paint or stain composite decking?",
+        answer:
+          "Capped composite decking should not be painted or stained because the polymer cap prevents adhesion, and paint will peel within 1-2 seasons. Uncapped or older composite boards can be painted with a solid-color exterior paint after thorough cleaning and priming with a bonding primer. If you want to change the color of a composite deck, consider composite-specific deck coatings like Rust-Oleum RockSolid or contact the manufacturer for approved finishing products.",
+      },
+      {
+        question: "Which is more eco-friendly: composite or wood?",
+        answer:
+          "Both have environmental trade-offs. Composite decking uses recycled materials (Trex uses 95% recycled content) and its long lifespan means fewer replacements over time. However, composite is not biodegradable and difficult to recycle at end of life. Wood is a renewable, biodegradable resource that sequesters carbon, but treated wood contains chemical preservatives and has a shorter lifespan requiring more frequent harvesting. Sustainably harvested wood (FSC certified) has the lowest environmental impact, while composite wins on longevity and recycled content.",
+      },
+      {
+        question: "Can I mix composite and wood on the same deck?",
+        answer:
+          "Yes, many builders use a pressure-treated wood substructure (posts, beams, joists) with composite deck boards and railing on top. This is actually the standard approach since composite boards are designed as a decking surface, not structural members. The treated wood frame provides the structural support at a lower cost than an all-composite system, while the composite surface delivers the low-maintenance benefits where you see and touch the deck.",
       },
     ],
   },

@@ -62,7 +62,23 @@ import {
   calculateJoistHangers,
   calculateHurricaneTies,
   calculateCaulk,
+  calculateLumberCost,
+  BOARD_TYPES,
+  calculateBoardFeet,
+  calculatePlywood,
+  PLYWOOD_TYPES,
 } from "./calculations/hardwareCalculations";
+import {
+  calculateDeckBoards,
+  calculateDeckFootings,
+  calculateDeckRailing,
+  calculateDeckStairs,
+} from "./calculations/outdoorCalculations";
+import {
+  calculatePaintCoverage,
+  calculatePaintCost,
+  calculatePrimer,
+} from "./calculations/finishingCalculations";
 
 export interface CalculatorConfig {
   fields: FieldConfig[];
@@ -1880,6 +1896,642 @@ const hurricaneTieCalculator: CalculatorConfig = {
   ],
 };
 
+// ─── FINISHING ────────────────────────────────────────────────────────────────
+
+const paintCoverageCalculator: CalculatorConfig = {
+  fields: [
+    { id: "wallArea", label: "Total Wall & Ceiling Area", unit: "sq ft", placeholder: "1500" },
+    {
+      id: "coats",
+      label: "Number of Coats",
+      type: "select",
+      options: [
+        { label: "1 coat (touch-up)", value: "1" },
+        { label: "2 coats (standard)", value: "2" },
+        { label: "3 coats (dark-to-light color change)", value: "3" },
+      ],
+      defaultValue: "2",
+    },
+    { id: "coveragePerGallon", label: "Coverage Per Gallon", unit: "sq ft", placeholder: "350" },
+  ],
+  calculate: (v) => {
+    const coats = parseInt(v.coats as string, 10);
+    const r = calculatePaintCoverage(v.wallArea as number, coats, v.coveragePerGallon as number || 350);
+    const results: ResultItem[] = [
+      { label: r.label },
+    ];
+    if (r.quarts > 0) {
+      results.push({ label: `Or buy ${r.quarts} quart${r.quarts > 1 ? "s" : ""} (less than 1 gallon needed)` });
+    }
+    results.push({ label: `Buy: ${r.oneGallonCans} one-gallon can${r.oneGallonCans > 1 ? "s" : ""}` });
+    if (r.fiveGallonBuckets > 0) {
+      results.push({ label: `Or: ${r.fiveGallonBuckets} five-gallon bucket${r.fiveGallonBuckets > 1 ? "s" : ""} + ${r.remainderGallons} gallon can${r.remainderGallons !== 1 ? "s" : ""}` });
+    }
+    return results;
+  },
+  disclaimer: "Actual coverage varies by surface texture, paint brand, and application method. Rough or textured surfaces may reduce coverage by 20-30%.",
+  howToUse: [
+    "Measure total wall and ceiling area in square feet (height x width for each wall, then add them up).",
+    "Subtract window and door areas if desired.",
+    "Select the number of coats — 2 coats is standard for most jobs.",
+    "Enter the coverage per gallon from your paint can label (default 350 sq ft).",
+    "Click Calculate Materials to see gallons, cans, and bucket options.",
+  ],
+  materialInfo:
+    "Interior latex paint is the standard finish material for walls and ceilings in residential construction. Coverage rates vary by paint quality and type — flat/matte finishes typically cover 350 to 400 square feet per gallon, while satin, semi-gloss, and high-gloss finishes cover 300 to 350 square feet per gallon due to their thicker consistency. Premium paints from brands like Benjamin Moore Regal Select, Sherwin-Williams Duration, and Behr Marquee often advertise one-coat coverage, but most professional painters recommend two coats for even color and full hide, especially when changing colors. A gallon of paint weighs approximately 10 to 12 pounds when wet. Standard one-gallon cans cost $25 to $70 depending on quality tier, while five-gallon buckets offer significant savings per gallon (typically 15-20% less per gallon). For large projects, buying five-gallon buckets also ensures color consistency across all walls — even within the same color code, individual gallon cans can vary slightly in hue. Ceiling paint is usually a flat white formulated with higher solids for better spatter resistance when rolling overhead. Primer is strongly recommended before the topcoat on new drywall, repaired surfaces, and when making dramatic color changes.",
+  installationTips: [
+    "Use a 3/8\" nap roller for smooth walls, 1/2\" nap for light texture, and 3/4\" nap for heavy texture or stucco.",
+    "Cut in edges with a 2.5\" angled brush before rolling the field.",
+    "Maintain a wet edge — work in 4-foot sections and do not let the edge dry before continuing.",
+    "Apply paint in a W-pattern with the roller, then fill in evenly without lifting the roller.",
+  ],
+  commonMistakes: [
+    "Skipping primer on new drywall — bare drywall absorbs paint unevenly, creating flashing and blotchy coverage.",
+    "Buying too little paint — running out mid-wall causes visible lap marks where wet and dry paint overlap.",
+    "Applying coats too quickly — allow 2 to 4 hours between latex coats for proper drying.",
+    "Using cheap rollers — they shed lint and leave texture in the paint film.",
+  ],
+  faqs: [
+    { question: "How much paint do I need for a 12x12 room?", answer: "A 12x12 room with 8-foot ceilings has approximately 384 square feet of wall area (minus about 50 sq ft for doors and windows, so about 334 sq ft net). With 2 coats at 350 sq ft per gallon, you need about 1.9 gallons — buy 2 gallons. If you are also painting the 144 sq ft ceiling, add another gallon of ceiling paint." },
+    { question: "How many square feet does a gallon of paint cover?", answer: "A gallon of interior latex paint covers 350 to 400 square feet on smooth, previously painted surfaces. Flat and matte finishes tend to cover closer to 400 sq ft, while satin and semi-gloss cover about 350 sq ft. Porous or textured surfaces like new drywall, rough-sawn wood, or stucco may reduce coverage to 250 to 300 sq ft per gallon." },
+    { question: "Should I buy 1-gallon cans or a 5-gallon bucket?", answer: "For rooms requiring 3 or more gallons of the same color, a 5-gallon bucket is more economical (typically 15-20% cheaper per gallon) and ensures perfect color consistency. For accent walls or small areas under 2 gallons, individual cans are more practical. Many paint stores also offer quart sizes for small touch-up projects." },
+    { question: "How do I calculate paint for ceilings?", answer: "Multiply ceiling length by ceiling width to get the square footage. Ceilings typically require one coat of ceiling paint (which is formulated with higher coverage). At 400 sq ft per gallon for ceiling paint, a 12x15 room ceiling (180 sq ft) needs about half a gallon — buy 1 gallon to have extra for touch-ups." },
+    { question: "Do I need 2 coats of paint?", answer: "Yes, two coats are recommended for virtually all painting projects. The first coat seals the surface and provides a uniform base. The second coat delivers the final color depth, sheen, and durability. The only exception is a touch-up of the exact same color on a previously painted surface, where one coat may suffice." },
+    { question: "How much paint do I need for a 1,500 sq ft house interior?", answer: "A 1,500 sq ft house typically has 4,000 to 5,000 square feet of paintable wall area (depending on ceiling height and number of rooms). At 2 coats with 350 sq ft per gallon, you need approximately 23 to 29 gallons of wall paint, plus 4 to 5 gallons of ceiling paint. This equates to about 5 to 6 five-gallon buckets total." },
+  ],
+};
+
+const paintCostCalculator: CalculatorConfig = {
+  fields: [
+    { id: "wallArea", label: "Total Wall & Ceiling Area", unit: "sq ft", placeholder: "1500" },
+    {
+      id: "coats",
+      label: "Number of Coats",
+      type: "select",
+      options: [
+        { label: "1 coat", value: "1" },
+        { label: "2 coats (standard)", value: "2" },
+        { label: "3 coats", value: "3" },
+      ],
+      defaultValue: "2",
+    },
+    {
+      id: "paintQuality",
+      label: "Paint Quality",
+      type: "select",
+      options: [
+        { label: "Economy ($25/gal)", value: "economy" },
+        { label: "Standard ($35/gal)", value: "standard" },
+        { label: "Premium ($50/gal)", value: "premium" },
+        { label: "Ultra-Premium ($70/gal)", value: "ultra-premium" },
+      ],
+      defaultValue: "standard",
+    },
+    {
+      id: "includePrimer",
+      label: "Include Primer?",
+      type: "select",
+      options: [
+        { label: "Yes — new drywall or color change", value: "yes" },
+        { label: "No — repainting same color", value: "no" },
+      ],
+      defaultValue: "yes",
+    },
+  ],
+  calculate: (v) => {
+    const coats = parseInt(v.coats as string, 10);
+    const r = calculatePaintCost(v.wallArea as number, coats, v.paintQuality as string, v.includePrimer === "yes");
+    const results: ResultItem[] = [
+      { label: `${r.gallons} gallons of ${v.paintQuality} paint` },
+      { label: `Paint cost: $${r.paintCost}` },
+    ];
+    if (r.primerGallons > 0) {
+      results.push({ label: `Primer: ${r.primerGallons} gallon${r.primerGallons > 1 ? "s" : ""} — $${r.primerCost}` });
+    }
+    results.push({ label: `Supplies (rollers, brushes, tape, drop cloths): $${r.suppliesCost}` });
+    results.push({ label: `Estimated total project cost: $${r.totalCost}` });
+    return results;
+  },
+  disclaimer: "Prices are approximate 2024 US national averages. Actual prices vary by brand, retailer, and region.",
+  howToUse: [
+    "Enter the total wall and ceiling area you plan to paint.",
+    "Select the number of coats (2 is standard for most projects).",
+    "Choose a paint quality level — economy, standard, premium, or ultra-premium.",
+    "Select whether you need primer (recommended for new drywall and color changes).",
+    "Click Calculate Materials for a cost breakdown.",
+  ],
+  materialInfo:
+    "Paint cost varies significantly by quality tier. Economy paints ($20 to $30 per gallon) like Behr Flat and Glidden Essentials are suitable for rental properties, ceilings, and areas where appearance is not critical — they require more coats and have shorter lifespans. Standard paints ($30 to $40 per gallon) like Behr Premium Plus, Valspar Signature, and Sherwin-Williams SuperPaint offer good coverage and durability for most residential applications. Premium paints ($45 to $55 per gallon) like Benjamin Moore Regal Select and Sherwin-Williams Duration provide superior coverage (often true one-coat hide), excellent washability, and a 15+ year lifespan on interior walls. Ultra-premium lines ($60 to $80 per gallon) like Benjamin Moore Aura and Sherwin-Williams Emerald feature the highest pigment loads, self-priming formulas, and advanced color technology for the most demanding applications. Beyond paint, budget for supplies: a quality roller frame and covers ($10 to $15), angled brushes ($8 to $12 each), painter's tape ($5 to $8 per roll), drop cloths ($8 to $15), paint tray liners ($5), and extension poles for ceilings ($15 to $25). Professional painters typically charge $2 to $6 per square foot for interior painting, which includes labor, paint, and supplies.",
+  installationTips: [
+    "Buy all your paint at once to ensure color consistency across the batch.",
+    "Invest in quality rollers and brushes — they make a noticeable difference in finish quality.",
+    "Use painter's tape on trim, baseboards, and ceiling lines for clean edges.",
+    "Keep a wet rag handy to wipe drips immediately before they dry.",
+  ],
+  commonMistakes: [
+    "Choosing the cheapest paint for high-traffic areas — it will need repainting in 2 to 3 years instead of 7 to 10.",
+    "Forgetting to budget for primer — skipping primer on new drywall doubles the topcoat needed.",
+    "Not buying enough paint — matching a custom color later is nearly impossible.",
+    "Ignoring sheen selection — flat hides imperfections but is hard to clean; satin and eggshell are the best all-around choices for walls.",
+  ],
+  faqs: [
+    { question: "How much does it cost to paint a room?", answer: "A standard 12x12 room with 8-foot ceilings costs $80 to $200 in materials for a DIY project (2 gallons of paint at $35 to $50 each, plus $10 to $45 in supplies). Hiring a professional painter costs $300 to $700 for the same room, depending on your market and the prep work required." },
+    { question: "Is expensive paint worth it?", answer: "Yes, for rooms you use daily. Premium paints ($45 to $55 per gallon) cover in fewer coats, resist scuffing and staining, wash easily, and last 10 to 15 years. Over the paint's lifetime, premium paint costs less per year than repainting every 3 to 5 years with economy paint. For ceilings, closets, and rental units, standard paint is perfectly adequate." },
+    { question: "How much do painting supplies cost?", answer: "Basic painting supplies for a room cost $30 to $50 total: roller frame ($5 to $8), roller covers ($3 to $5 each), 2.5-inch angled brush ($8 to $12), painter's tape ($5 to $8 per roll, plan on 2 to 3 rolls per room), and drop cloths ($8 to $15). Buy a paint tray ($3 to $5) or use tray liners for easy cleanup." },
+    { question: "Should I buy paint at Home Depot or a paint store?", answer: "Big-box stores (Home Depot, Lowe's) offer competitive prices on mid-range brands like Behr and Valspar. Dedicated paint stores (Sherwin-Williams, Benjamin Moore dealers) carry professional-grade lines, offer expert color matching, and frequently run 30 to 40% off sales. For premium paint, wait for a paint store sale — you can get $70 paint for $42 to $49." },
+    { question: "How much paint do I need for 1,000 square feet of wall?", answer: "At 350 sq ft per gallon with 2 coats, you need approximately 5.7 gallons — buy 6 gallons (or one 5-gallon bucket plus 1 gallon). If primer is needed, add 2.5 to 3 gallons of primer. Total material cost with standard paint: $280 to $350 including supplies." },
+    { question: "Do I need primer before painting?", answer: "Primer is recommended for new drywall, patched or repaired areas, dramatic color changes (especially dark to light), and when painting over stains, smoke damage, or water marks. Self-priming paints (premium and ultra-premium lines) can skip the separate primer step on previously painted surfaces in good condition." },
+  ],
+};
+
+const primerCalculator: CalculatorConfig = {
+  fields: [
+    { id: "wallArea", label: "Total Wall & Ceiling Area", unit: "sq ft", placeholder: "1500" },
+    {
+      id: "surfaceType",
+      label: "Surface Type",
+      type: "select",
+      options: [
+        { label: "New drywall (300 sq ft/gal)", value: "new-drywall" },
+        { label: "Previously painted (400 sq ft/gal)", value: "previously-painted" },
+        { label: "Bare wood (250 sq ft/gal)", value: "wood" },
+        { label: "Stain-blocking (200 sq ft/gal)", value: "stain-blocking" },
+      ],
+      defaultValue: "new-drywall",
+    },
+  ],
+  calculate: (v) => {
+    const r = calculatePrimer(v.wallArea as number, v.surfaceType as string);
+    return [
+      { label: r.label },
+      { label: `Coverage rate: ${v.surfaceType === "new-drywall" ? "300" : v.surfaceType === "previously-painted" ? "400" : v.surfaceType === "wood" ? "250" : "200"} sq ft per gallon` },
+      { label: `With 10% extra: buy ${Math.ceil(r.cans * 1.1)} can${Math.ceil(r.cans * 1.1) > 1 ? "s" : ""}` },
+    ];
+  },
+  disclaimer: "Porous or textured surfaces may require additional primer. Always follow the manufacturer's coverage guidelines.",
+  howToUse: [
+    "Enter total square footage of walls and ceilings to be primed.",
+    "Select the surface type to get the correct coverage rate.",
+    "Click Calculate Materials for gallons and can count.",
+  ],
+  materialInfo:
+    "Primer is a preparatory coating applied before the topcoat paint to ensure proper adhesion, uniform sheen, and consistent color. Different surface types require different primer formulations. PVA (polyvinyl acetate) primer is the standard choice for new, unpainted drywall — it seals the porous gypsum surface so the topcoat does not absorb unevenly, which causes a blotchy appearance called flashing. PVA primer costs $12 to $18 per gallon and covers approximately 300 square feet per gallon on new drywall. For previously painted surfaces in good condition, a bonding primer or a paint-and-primer-in-one product is sufficient, covering up to 400 square feet per gallon. Bare wood surfaces require an oil-based or shellac-based primer to seal the grain and prevent tannin bleed-through, especially on knotty pine, cedar, and redwood — coverage is lower at around 250 square feet per gallon due to wood's absorbency. Stain-blocking primer (shellac-based like Zinsser BIN or oil-based like Kilz Original) is essential for covering water stains, smoke damage, crayon marks, and ink — these specialty primers have the lowest coverage at approximately 200 square feet per gallon but provide unmatched stain sealing. Popular primer brands include Kilz (Masterchem), Zinsser (Rust-Oleum), and Sherwin-Williams PrepRite. For best results, tint your primer close to the final topcoat color — most paint stores can add a small amount of colorant to white primer at no extra charge.",
+  installationTips: [
+    "Apply primer with the same roller nap you plan to use for the topcoat.",
+    "Allow primer to dry completely before topcoating — typically 1 to 2 hours for latex, 24 hours for oil-based.",
+    "Tint the primer to match or approximate the topcoat color for better hide in fewer coats.",
+    "Use a brush to cut in corners and edges, then roll the field areas.",
+  ],
+  commonMistakes: [
+    "Skipping primer on new drywall — causes flashing (uneven sheen) that is visible in certain lighting angles.",
+    "Using latex primer on stains — water-based primers cannot block tannin, nicotine, or water stains; use shellac or oil-based.",
+    "Applying primer too thick — heavy coats take longer to dry and may peel; one even coat is sufficient.",
+    "Priming over dust and debris — always wipe or vacuum surfaces before priming for proper adhesion.",
+  ],
+  faqs: [
+    { question: "Do I always need primer before painting?", answer: "Not always. Primer is essential on new drywall, bare wood, repaired patches, and when covering stains or making dramatic color changes. On previously painted surfaces in good condition where you are applying a similar color, a self-priming paint (common in premium lines) can eliminate the separate primer step." },
+    { question: "What primer should I use on new drywall?", answer: "Use a PVA (polyvinyl acetate) drywall primer like Kilz PVA, Zinsser Drywall 1-2-3, or Sherwin-Williams Drywall Primer. These are specifically formulated to seal the porous gypsum surface evenly. Apply one coat, let it dry, then apply your topcoat paint. PVA primer costs $12 to $18 per gallon and covers about 300 sq ft." },
+    { question: "How much primer do I need per gallon?", answer: "Coverage varies by surface type: new drywall gets about 300 sq ft per gallon, previously painted walls get 400 sq ft, bare wood gets 250 sq ft, and stain-blocking primer covers only 200 sq ft per gallon. Always check the product label for the manufacturer's specific coverage rate." },
+    { question: "Can I use white paint as primer?", answer: "No. Regular paint and primer serve different purposes. Primer is formulated with special resins that bond to the substrate and seal porous surfaces. Using regular paint as primer on new drywall will result in uneven absorption, flashing, and poor adhesion. Primer costs less than paint and saves money by reducing the number of topcoats needed." },
+    { question: "Should I tint my primer?", answer: "Yes, tinting primer is recommended, especially when the topcoat is a medium or dark color. Most paint stores can add a small amount of colorant to primer at no extra charge. Gray-tinted primer is ideal under dark colors, while a primer tinted close to the topcoat color ensures better hide in fewer coats. White primer is fine under light or white topcoats." },
+    { question: "What is the difference between PVA primer and stain-blocking primer?", answer: "PVA primer is a water-based primer designed to seal new drywall and joint compound. It is inexpensive ($12 to $18 per gallon) and odorless. Stain-blocking primer (like Zinsser BIN shellac or Kilz Original oil-based) is a specialty product that seals stains from water damage, smoke, nicotine, ink, and tannin bleed. Stain blockers cost $20 to $35 per gallon and have a strong odor during application but are essential when stains are present." },
+  ],
+};
+
+// ─── LUMBER ──────────────────────────────────────────────────────────────────
+
+const lumberCostCalculator: CalculatorConfig = {
+  fields: [
+    {
+      id: "boardType",
+      label: "Board Size",
+      type: "select",
+      options: Object.entries(BOARD_TYPES).map(([value, info]) => ({
+        label: info.label,
+        value,
+      })),
+    },
+    { id: "quantity", label: "Number of Boards", unit: "count", placeholder: "20", step: 1 },
+    { id: "pricePerBoard", label: "Price per Board (optional)", unit: "$", placeholder: "0", step: 0.01, min: 0 },
+  ],
+  calculate: (v) => {
+    const r = calculateLumberCost(v.boardType as string, v.quantity as number, v.pricePerBoard as number);
+    return [
+      { label: `${r.quantity} × ${r.boardLabel} @ $${r.pricePerBoard.toFixed(2)} each` },
+      { label: `Total cost: $${r.totalCost.toFixed(2)}` },
+      { label: `Total linear feet: ${r.totalLinearFeet} LF` },
+      { label: `Cost per linear foot: $${r.costPerLinearFoot.toFixed(2)}/LF` },
+      { label: `Total board feet: ${r.totalBoardFeet.toFixed(1)} BF` },
+      { label: `Cost per board foot: $${r.costPerBoardFoot.toFixed(2)}/BF` },
+    ];
+  },
+  disclaimer: "Lumber prices fluctuate frequently. Confirm pricing with your local supplier before ordering.",
+  howToUse: [
+    "Select the board size you need from the dropdown.",
+    "Enter the number of boards for your project.",
+    "Optionally enter the current price per board — leave at 0 to use the default estimate.",
+    "Click Calculate to see total cost, cost per linear foot, and cost per board foot.",
+  ],
+  materialInfo:
+    "Dimensional lumber is the backbone of residential wood-frame construction in North America. Standard sizes like 2x4, 2x6, 2x8, 2x10, and 2x12 are milled from softwood species — primarily spruce, pine, and fir (SPF) — and graded for structural use. The actual dimensions of a 2x4 are 1.5 inches by 3.5 inches after surfacing and drying, and standard lengths run 8, 10, 12, 14, and 16 feet. Lumber is sold by the piece at retail home centers and by the thousand board feet (MBF) at wholesale lumberyards. Prices vary significantly by region, species, grade, and market conditions — the 2021-2022 lumber price spike saw 2x4x8 studs reach $12 or more per board, compared to the historical average of $3 to $5. When estimating lumber costs, always add 10-15% for waste, defective boards, and cutting losses. Pressure-treated lumber for ground contact or exterior use costs 50-100% more than untreated SPF. For structural applications, specify the correct grade (No. 2 and Better is standard for most framing) and verify the moisture content is appropriate for your climate. Lumber is typically stocked at nominal 15% MC (KD-HT) for interior framing use.",
+  installationTips: [
+    "Inspect every board for crown, twist, and splits before installing.",
+    "Install boards crown-up for joists and rafters.",
+    "Pre-drill near board ends to prevent splitting.",
+    "Store lumber flat and off the ground, covered to prevent warping.",
+  ],
+  commonMistakes: [
+    "Not accounting for waste — always add 10-15% to your total order.",
+    "Confusing nominal and actual dimensions (a 2x4 is actually 1.5\" x 3.5\").",
+    "Buying green (wet) lumber for finish applications — it will shrink and warp.",
+    "Not price-comparing between home centers and local lumberyards.",
+  ],
+  faqs: [
+    { question: "How much does a 2x4x8 cost?", answer: "A standard SPF 2x4x8 stud costs $3 to $6 at most home centers as of 2024-2025. Prices fluctuate based on market conditions, season, and region. Pressure-treated 2x4x8 costs $5 to $9. Check prices at your local Home Depot, Lowe's, or lumberyard for the most current pricing." },
+    { question: "What is the difference between #2 and Stud grade lumber?", answer: "No. 2 grade lumber is graded for general structural use and can be used for joists, rafters, headers, and beams in any length. Stud grade is specifically graded for vertical load-bearing applications (wall studs) and is only available in lengths up to 10 feet. Stud grade is typically less expensive than No. 2 for 8-foot lengths because the grading criteria are less restrictive for vertical use." },
+    { question: "Why are lumber prices so volatile?", answer: "Lumber prices are driven by housing starts, mill capacity, transportation costs, tariffs on Canadian imports, and natural disasters like wildfires and beetle infestations that reduce timber supply. The 2021 price spike was caused by pandemic-driven demand combined with temporary mill shutdowns. Futures markets and speculative trading also amplify price swings." },
+    { question: "How many board feet are in a 2x4x8?", answer: "A 2x4x8 contains 5.33 board feet (2 x 4 x 8 / 12 = 5.33). Board feet measure volume: one board foot equals a piece 1 inch thick, 12 inches wide, and 1 foot long (144 cubic inches). Note this uses nominal dimensions, not actual dimensions." },
+    { question: "Should I buy lumber from a home center or a lumberyard?", answer: "Home centers (Home Depot, Lowe's) offer convenience, consistent pricing, and easy returns. Lumberyards offer better quality, wider selection of species and grades, volume discounts, and delivery. For large projects (framing a house, deck over 200 sq ft), a lumberyard typically saves 15-25% versus retail pricing." },
+    { question: "How do I calculate how much lumber I need for a wall?", answer: "For a standard wall: count one stud every 16 inches on center plus one extra for each end. A 20-foot wall needs about 16 studs. Add a bottom plate (one 2x4 the wall length) and double top plate (two 2x4s the wall length). Add extra studs for corners, intersections, and each side of windows and doors. Use our calculator to price out the total." },
+  ],
+};
+
+const boardFeetCalculator: CalculatorConfig = {
+  fields: [
+    { id: "thickness", label: "Thickness", unit: "inches", placeholder: "2", step: 0.25, min: 0.25 },
+    { id: "width", label: "Width", unit: "inches", placeholder: "6", step: 0.25, min: 0.25 },
+    { id: "length", label: "Length", unit: "feet", placeholder: "8", step: 1, min: 1 },
+    { id: "quantity", label: "Number of Pieces", unit: "count", placeholder: "10", step: 1, min: 1 },
+  ],
+  calculate: (v) => {
+    const r = calculateBoardFeet(v.thickness as number, v.width as number, v.length as number, v.quantity as number);
+    return [
+      { label: `Board feet per piece: ${r.bfPerPiece.toFixed(2)} BF` },
+      { label: `Total board feet: ${r.totalBF.toFixed(2)} BF` },
+      { label: `Estimated cost (softwood): $${r.estimatedCostLow.toFixed(2)}` },
+      { label: `Estimated cost (hardwood): $${r.estimatedCostHigh.toFixed(2)}` },
+    ];
+  },
+  disclaimer: "Board foot pricing varies widely by species and grade. Softwoods average $3-5/BF, hardwoods $5-15/BF.",
+  howToUse: [
+    "Enter the board thickness in inches (nominal dimension).",
+    "Enter the board width in inches (nominal dimension).",
+    "Enter the board length in feet.",
+    "Enter the number of pieces.",
+    "Click Calculate to get total board feet and estimated cost.",
+  ],
+  materialInfo:
+    "A board foot (BF) is the standard unit of volume measurement for lumber in North America. One board foot equals a piece of wood 1 inch thick, 12 inches wide, and 1 foot long — or 144 cubic inches of wood. The formula is: Board Feet = (Thickness in inches x Width in inches x Length in feet) / 12. Board feet use nominal (not actual) dimensions, so a surfaced 2x6 is calculated as 2 x 6, not 1.5 x 5.5. This measurement is essential for purchasing hardwood lumber, which is almost always sold by the board foot rather than by the piece. Softwood framing lumber at retail stores is typically sold by the piece, but wholesale lumberyards and sawmills price it by the thousand board feet (MBF). Common hardwood prices per board foot: red oak $4-7, white oak $5-9, maple $5-8, cherry $6-10, walnut $8-15, and exotic species $10-25+. When buying rough-sawn hardwood for furniture or cabinetry, account for waste from surfacing (planing removes 1/8 to 1/4 inch per face), edge jointing, and defect cutting — add 25-40% to your calculated board footage to arrive at the purchase quantity.",
+  installationTips: [
+    "Use nominal (not actual) dimensions when calculating board feet.",
+    "Add 25-40% waste factor when buying rough-sawn hardwood for furniture projects.",
+    "Ask the lumberyard to surface (S2S) rough-sawn boards to save shop time.",
+    "Request FAS or Select grade hardwood for projects requiring clear, defect-free faces.",
+  ],
+  commonMistakes: [
+    "Using actual dimensions instead of nominal — board feet always use nominal sizes.",
+    "Not accounting for surfacing loss when buying rough-sawn lumber.",
+    "Forgetting to add waste factor for defects, sapwood, and cutting losses.",
+    "Comparing board foot prices across species without accounting for density and workability.",
+  ],
+  faqs: [
+    { question: "What is a board foot?", answer: "A board foot (BF) is a unit of volume equal to 144 cubic inches of wood — equivalent to a board 1 inch thick, 12 inches wide, and 1 foot long. It is the standard pricing unit for hardwood lumber in North America. The formula is: BF = (Thickness x Width x Length in feet) / 12, using nominal dimensions." },
+    { question: "How many board feet in a 2x6x10?", answer: "A 2x6x10 contains 10 board feet: (2 x 6 x 10) / 12 = 10 BF. Remember to use nominal dimensions (2 and 6), not the actual surfaced dimensions (1.5 and 5.5)." },
+    { question: "What does MBF mean in lumber pricing?", answer: "MBF stands for 'thousand board feet' (M is the Roman numeral for 1,000). Wholesale lumber is priced per MBF. If lumber is quoted at $600/MBF, that equals $0.60 per board foot. Retail pricing per piece can be converted to MBF for comparison shopping." },
+    { question: "Why is hardwood sold by the board foot instead of by the piece?", answer: "Hardwood lumber comes in random widths and lengths because it is sawn from logs of varying sizes. Unlike dimensional softwood lumber which is standardized (2x4, 2x6, etc.), each hardwood board is unique. Board foot pricing normalizes the cost by volume regardless of individual board dimensions." },
+    { question: "How do I convert linear feet to board feet?", answer: "Multiply linear feet by the nominal thickness and width in inches, then divide by 12. Example: 100 linear feet of 1x6 = (1 x 6 x 100) / 12 = 50 board feet. For 2x4: (2 x 4 x 100) / 12 = 66.67 board feet." },
+    { question: "What is the cheapest hardwood per board foot?", answer: "Poplar is typically the least expensive domestic hardwood at $3-5 per board foot, followed by soft maple ($4-6) and red oak ($4-7). Alder is affordable on the West Coast. For outdoor projects, white oak ($5-9/BF) is the most cost-effective rot-resistant hardwood. Exotic species like ipe, teak, and mahogany range from $10-25+/BF." },
+  ],
+};
+
+const plywoodCalculator: CalculatorConfig = {
+  fields: [
+    { id: "length", label: "Area Length", unit: "ft", placeholder: "20", step: 0.5, min: 0.5 },
+    { id: "width", label: "Area Width", unit: "ft", placeholder: "12", step: 0.5, min: 0.5 },
+    {
+      id: "sheetType",
+      label: "Plywood Thickness",
+      type: "select",
+      options: [
+        { label: '1/4" (6 mm)', value: "1/4" },
+        { label: '3/8" (9 mm)', value: "3/8" },
+        { label: '1/2" (12 mm)', value: "1/2" },
+        { label: '3/4" (18 mm)', value: "3/4" },
+      ],
+    },
+  ],
+  calculate: (v) => {
+    const r = calculatePlywood(v.length as number, v.width as number, v.sheetType as string);
+    return [
+      { label: `Coverage area: ${r.area.toFixed(0)} sq ft` },
+      { label: `Sheets needed (with 10% waste): ${r.sheets} sheets` },
+      { label: `Sheet type: ${r.sheetLabel}` },
+      { label: `Price per sheet: $${r.pricePerSheet.toFixed(2)}` },
+      { label: `Total cost estimate: $${r.totalCost.toFixed(2)}` },
+    ];
+  },
+  disclaimer: "Prices reflect standard CDX/BC sanded plywood. Specialty panels (marine, Baltic birch, hardwood veneer) cost more.",
+  howToUse: [
+    "Enter the length and width of the area to cover in feet.",
+    "Select the plywood thickness from the dropdown.",
+    "Click Calculate to see sheet count and cost estimate.",
+  ],
+  materialInfo:
+    "Plywood is an engineered wood panel made from thin layers (plies or veneers) of wood glued together with adjacent layers having their grain rotated 90 degrees. This cross-laminated construction gives plywood superior strength, stiffness, and dimensional stability compared to solid wood of the same thickness. Standard plywood sheets measure 4 feet by 8 feet (32 square feet) and are available in thicknesses from 1/4 inch to 3/4 inch. Common grades include CDX (construction grade, suitable for sheathing and subflooring), BC sanded (one smooth face for cabinetry and shelving), AC (one premium face), and marine grade (waterproof glue, no voids). Plywood is used extensively in residential construction for roof sheathing, wall sheathing, subflooring, cabinet boxes, furniture, and finish applications. For structural applications, use panels stamped with the APA (Engineered Wood Association) grade mark. The most common structural plywood is 1/2-inch CDX for wall sheathing and 3/4-inch tongue-and-groove for subflooring. Always store plywood flat and indoors — panels stored on edge or exposed to moisture will warp permanently. When cutting, use a fine-tooth blade (80-tooth for table saw) to minimize tear-out on the veneer face.",
+  installationTips: [
+    "Leave a 1/8-inch gap between sheets to allow for thermal expansion.",
+    "Install with the face grain perpendicular to supports (joists or studs).",
+    "Use 8d nails or #8 screws at 6\" on center at edges, 12\" in the field.",
+    "Stagger joints between rows for maximum strength.",
+  ],
+  commonMistakes: [
+    "Not leaving expansion gaps — tight-butted panels will buckle when they absorb moisture.",
+    "Installing sheets with grain parallel to supports instead of perpendicular.",
+    "Using interior-grade plywood in exterior or high-moisture applications.",
+    "Not staggering seams between courses, which creates a weak line.",
+  ],
+  faqs: [
+    { question: "How many sheets of plywood do I need?", answer: "Divide the total area in square feet by 32 (the area of a standard 4x8 sheet), then multiply by 1.10 to add a 10% waste factor for cuts. For example, a 320 sq ft floor needs (320 x 1.10) / 32 = 11 sheets. Complex layouts with many cuts may need 15% waste instead of 10%." },
+    { question: "What thickness plywood for subfloor?", answer: "Use 3/4-inch (23/32\") tongue-and-groove plywood for subflooring over joists spaced 16 inches on center. For 24-inch joist spacing, use 7/8-inch or 1-1/8-inch panels. The panels should be APA-rated Sturd-I-Floor or equivalent. Glue and screw for a squeak-free floor." },
+    { question: "What is the difference between CDX and BCX plywood?", answer: "CDX has a C-grade face (tight knots, small splits allowed), D-grade back (larger knots and defects allowed), and exterior-rated glue (X). It is the standard for roof and wall sheathing. BCX has a B-grade face (smooth, patched) and C-grade back, making it suitable for cabinetry backs and underlayment where one smooth face is needed." },
+    { question: "How much does a sheet of plywood cost?", answer: "Standard 4x8 CDX plywood costs approximately: 1/4\" = $15-22, 3/8\" = $22-30, 1/2\" = $30-42, 3/4\" = $45-60. Prices vary by region and market conditions. Specialty panels cost more: 3/4\" Baltic birch runs $60-90, marine grade $70-120, and hardwood veneer panels $50-100+ per sheet." },
+    { question: "Can I use OSB instead of plywood?", answer: "Yes, for most structural sheathing applications (roof, walls, subfloor), OSB is code-approved and costs 20-30% less than plywood. However, OSB swells more when wet and is slower to dry. For cabinetry, furniture, and visible applications, plywood is preferred for its smoother surface, better screw-holding, and superior moisture resistance." },
+    { question: "How do I cut plywood without splintering?", answer: "Use a fine-tooth blade (80+ teeth for table saw, 60+ teeth for circular saw). Score the cut line with a utility knife before cutting. Place the good face down when cutting with a circular saw (blade cuts upward), or good face up on a table saw (blade cuts downward). Use painter's tape along the cut line to further reduce tear-out." },
+  ],
+};
+
+// ─── OUTDOOR ──────────────────────────────────────────────────────────────────
+
+const deckBoardCalculator: CalculatorConfig = {
+  fields: [
+    { id: "length", label: "Deck Length", unit: "ft", placeholder: "20" },
+    { id: "width", label: "Deck Width", unit: "ft", placeholder: "12" },
+    { id: "boardWidth", label: "Board Width", unit: "in", defaultValue: 5.5, placeholder: "5.5" },
+    { id: "boardLength", label: "Board Length", unit: "ft", defaultValue: 12, placeholder: "12" },
+  ],
+  calculate: (v) => {
+    const r = calculateDeckBoards(v.length as number, v.width as number, v.boardWidth as number, v.boardLength as number);
+    const withWaste = Math.ceil(r.boardCount * 1.1);
+    return [
+      { label: `${r.boardCount} deck boards needed (before waste)` },
+      { label: `${withWaste} deck boards recommended (includes 10% waste)` },
+      { label: `${r.totalLinearFeet} total linear feet of decking` },
+      { label: `${r.areaSqFt} sq ft of deck area` },
+    ];
+  },
+  disclaimer:
+    "This estimate includes a recommended 10% waste factor for cuts and end waste. Actual waste varies with deck shape complexity, board lengths available, and whether you stagger joints. Diagonal and herringbone patterns increase waste to 15-20%.",
+  howToUse: [
+    "Measure the total length and width of your deck in feet.",
+    "Enter the board width in inches - standard deck boards are 5.5 inches (nominal 2x6) or 3.5 inches (nominal 2x4).",
+    "Enter the board length - common lengths are 8, 10, 12, 16, and 20 feet.",
+    "Click Calculate to get the total number of boards, linear footage, and area coverage.",
+  ],
+  materialInfo:
+    "Deck boards are the visible surface of your deck and take the most wear from foot traffic, furniture, weather, and UV exposure. The most common material choices are pressure-treated lumber, cedar, redwood, and composite decking.\n\nPressure-treated southern yellow pine (SYP) is the most popular choice for budget-conscious projects. Standard 5/4x6 (1 inch thick by 5.5 inches wide) deck boards cost $1.50 to $3.00 per linear foot and are rated for ground contact when treated to 0.40 pcf retention. Boards are available in 8, 10, 12, 16, and 20-foot lengths. The treatment protects against rot and termites but requires annual sealing or staining to prevent graying, warping, and splitting. Expect a 10 to 15-year lifespan with proper maintenance.\n\nCedar and redwood are naturally rot-resistant softwoods prized for their appearance. Western red cedar deck boards run $3.00 to $5.00 per linear foot, while redwood ranges from $5.00 to $8.00. Both species are softer than treated pine and dent more easily, but they are dimensionally stable and less prone to warping. Cedar decks last 15 to 20 years with periodic sealing.\n\nComposite decking (Trex, TimberTech, Fiberon) is made from wood fibers and recycled plastic. Prices range from $4.00 to $12.00 per linear foot depending on the product line. Composites never need staining, resist rot and insects, and carry 25 to 50-year warranties. However, they require specific fastening systems, expand and contract with temperature, and can get very hot in direct sunlight. Most composite boards are 12, 16, or 20 feet long.\n\nBoard spacing is critical: maintain a 1/8 to 1/4-inch gap between boards for drainage and ventilation. For pressure-treated boards installed wet, butt the boards tight - they will shrink as they dry. For kiln-dried and composite boards, leave the full gap during installation.",
+  installationTips: [
+    "Start the first board perfectly straight and square to the house - every subsequent board follows this line.",
+    "Pre-drill the ends of boards within 2 inches of the edge to prevent splitting, especially with treated lumber.",
+    "Stagger butt joints by at least 2 board positions for a stronger, more attractive deck surface.",
+    "Crown boards upward (the bark side down) so water runs off rather than pooling on the surface.",
+    "Leave a 1/4-inch gap between the house wall and the first deck board for drainage and expansion.",
+  ],
+  commonMistakes: [
+    "Not leaving gaps between boards - tight-butted dry boards will buckle when they absorb moisture and expand.",
+    "Using too-short screws - deck screws should penetrate at least 1.5 inches into the joist for proper holding power.",
+    "Ignoring grain direction - installing boards bark-side up causes cupping and water pooling on the surface.",
+    "Running all butt joints over the same joist - this creates a visible line and weakens the deck structure; always stagger joints.",
+    "Skipping end sealer on cut ends - untreated cut ends absorb water and rot faster than the treated faces of the board.",
+  ],
+  faqs: [
+    {
+      question: "How many deck boards do I need for a 12x16 deck?",
+      answer: "A 12x16-foot deck using standard 5/4x6 (5.5-inch wide) boards needs approximately 35 boards at 16-foot lengths, or 53 boards at 12-foot lengths (with butt joints). With 10% waste, order 39 or 58 boards respectively. Using 16-foot boards eliminates butt joints on the 16-foot dimension, creating a cleaner look.",
+    },
+    {
+      question: "What size deck boards should I use?",
+      answer: "The most common deck board is 5/4x6 (actual 1 inch x 5.5 inches). This provides a good balance of strength, appearance, and cost. For heavy commercial traffic, 2x6 boards (1.5 x 5.5 inches actual) offer more stiffness. Composite boards come in 5.5-inch and 7.25-inch widths. Wider boards cover area faster but are more prone to cupping.",
+    },
+    {
+      question: "How far apart should deck boards be spaced?",
+      answer: "Leave 1/8 to 1/4 inch between deck boards for drainage and airflow. For pressure-treated boards installed wet (fresh from the lumberyard), butt them tightly together - they will shrink to the proper gap as they dry over 2 to 4 weeks. Composite boards should always be gapped per the manufacturer's instructions, typically 3/16 to 1/4 inch.",
+    },
+    {
+      question: "How long do deck boards last?",
+      answer: "Pressure-treated pine deck boards last 10 to 15 years with annual sealing. Cedar lasts 15 to 20 years with periodic maintenance. Composite decking lasts 25 to 50 years with minimal maintenance. Untreated wood decking can fail in as little as 3 to 5 years in wet climates. The substructure (joists and beams) typically outlasts the deck boards if properly built with treated lumber.",
+    },
+    {
+      question: "Should I use screws or nails for deck boards?",
+      answer: "Deck screws are strongly preferred over nails. Use #8 or #10 coated deck screws, 2.5 to 3 inches long, with two screws per board at each joist. Screws hold better over time, resist popping, and allow easy board replacement. Hidden fastener systems (like Camo or Tiger Claw) create a screw-free surface appearance.",
+    },
+    {
+      question: "How much does deck board material cost?",
+      answer: "Pressure-treated 5/4x6 deck boards cost $1.50 to $3.00 per linear foot ($18 to $36 per 12-foot board). Cedar runs $3.00 to $5.00 per linear foot. Composite ranges from $4.00 to $12.00 per linear foot. For a 12x16-foot deck, material cost for the deck boards alone ranges from about $600 (treated pine) to $2,400 (premium composite).",
+    },
+  ],
+};
+
+const deckFootingCalculator: CalculatorConfig = {
+  fields: [
+    { id: "deckLength", label: "Deck Length", unit: "ft", placeholder: "20" },
+    { id: "deckWidth", label: "Deck Width", unit: "ft", placeholder: "12" },
+    { id: "maxSpan", label: "Max Post Spacing", unit: "ft", defaultValue: 8, placeholder: "8" },
+  ],
+  calculate: (v) => {
+    const r = calculateDeckFootings(v.deckLength as number, v.deckWidth as number, v.maxSpan as number);
+    return [
+      { label: `${r.footingCount} concrete footings needed` },
+      { label: `${r.postCount} support posts required` },
+      { label: `${r.beamCount} beams needed (running across deck width)` },
+      { label: "Tip: Each footing should be at least 12 inches in diameter and extend below the frost line." },
+    ];
+  },
+  disclaimer:
+    "Footing depth must meet local frost line requirements. This calculator provides a grid layout estimate - actual footing placement depends on deck design, loads, soil conditions, and building code. Always consult your local building department for footing specifications.",
+  howToUse: [
+    "Enter your deck length and width in feet.",
+    "Set the maximum post spacing - 8 feet is typical for 2x8 beams, 6 feet for 2x6 beams.",
+    "Click Calculate to get the number of footings, posts, and beams needed.",
+    "Use the footing count to estimate concrete - each 12-inch diameter by 42-inch deep footing uses about 2.3 cubic feet of concrete.",
+  ],
+  materialInfo:
+    "Deck footings are concrete piers that transfer the weight of the deck structure and its live loads to the ground below the frost line. Without proper footings, freeze-thaw cycles will heave the deck, causing it to shift, crack, and separate from the house.\n\nThe two most common footing methods are poured concrete piers using Sonotubes (cardboard form tubes) and precast concrete deck blocks (only suitable for freestanding ground-level decks in some jurisdictions). For any elevated or attached deck, poured footings extending below the frost line are required by building code.\n\nStandard residential deck footings use 10-inch or 12-inch diameter Sonotubes. The depth depends on the local frost line - 36 to 48 inches in northern states, 12 to 24 inches in the south. Each 12-inch diameter by 42-inch deep footing requires approximately 2.3 cubic feet (0.085 cubic yards) of concrete. For a deck with 9 footings, you need about 0.8 cubic yards total - roughly 35 bags of 80 lb concrete mix.\n\nPost spacing depends on beam size and species. For a standard 2-ply 2x8 treated beam, maximum post spacing is 8 feet. For 2-ply 2x10 beams, spacing can increase to 10 feet. For 2-ply 2x6 beams, keep spacing at 6 feet or less. Beam rows (running perpendicular to joists) are typically spaced 6 to 8 feet apart depending on joist size and span tables.\n\nPost-to-footing connections require approved hardware. Set a J-bolt or post base anchor in the wet concrete, then attach the post with a Simpson ABA or ABU post base. Never embed wood posts directly in concrete - this traps moisture and causes rot at the most critical structural connection in the deck.\n\nFooting concrete should be at least 3,500 PSI and be poured in dry conditions. Allow 24 to 48 hours of cure time before loading footings with posts and framing.",
+  installationTips: [
+    "Dig footing holes at least 6 inches below the frost line - check your local building code for the exact depth required.",
+    "Use Sonotubes (cardboard form tubes) to create clean, round footings with a consistent diameter.",
+    "Set J-bolt anchors in the wet concrete before it cures - use a template to keep them centered and plumb.",
+    "Crown the top of the footing slightly above grade so water drains away from the post base.",
+    "Wait at least 48 hours before attaching posts to the footings to allow proper concrete curing.",
+  ],
+  commonMistakes: [
+    "Placing footings too shallow - footings above the frost line will heave in winter, lifting and distorting the entire deck.",
+    "Embedding wood posts directly in concrete - this traps moisture against the wood and causes rot within 5 to 10 years; use a metal post base instead.",
+    "Spacing posts too far apart - exceeding the beam span rating leads to sagging, bouncing, and potential structural failure.",
+    "Not flaring the footing base - a bell-shaped bottom provides more bearing area on the soil and resists uplift forces.",
+    "Pouring footings on loose or organic soil - footings must bear on undisturbed or compacted mineral soil to prevent settling.",
+  ],
+  faqs: [
+    {
+      question: "How deep should deck footings be?",
+      answer: "Deck footings must extend below the local frost line to prevent heaving. This depth ranges from 12 inches in southern states to 48 inches or more in northern regions. Check your local building code for the exact frost depth requirement. In general, 42 inches is a safe depth for most of the northern United States.",
+    },
+    {
+      question: "How many footings does a 12x16 deck need?",
+      answer: "A 12x16-foot deck with 8-foot post spacing typically needs 6 footings arranged in 2 rows of 3. If the deck is attached to the house with a ledger board, the house side does not need footings. For a freestanding deck, add a third row for 9 total footings.",
+    },
+    {
+      question: "What diameter Sonotube should I use for deck footings?",
+      answer: "For most residential decks, 10-inch or 12-inch diameter Sonotubes are standard. Use 12-inch tubes for two-story decks, hot tubs, or heavy load applications. Some codes allow 8-inch tubes for small ground-level decks. Larger diameters (16 to 24 inches) are used for commercial or multi-story structures.",
+    },
+    {
+      question: "Can I use precast concrete blocks instead of poured footings?",
+      answer: "Precast deck blocks (like Dek-Block) are only allowed for freestanding, ground-level decks in some jurisdictions. They sit on the surface and do not extend below the frost line, so they are not suitable for attached or elevated decks. Always check your local building code - many areas require poured footings for all deck construction.",
+    },
+    {
+      question: "How much concrete do I need per deck footing?",
+      answer: "A standard 12-inch diameter by 42-inch deep footing requires about 2.3 cubic feet of concrete, which equals approximately 4 bags of 80 lb pre-mixed concrete. A 10-inch diameter by 42-inch deep footing uses about 1.6 cubic feet (roughly 3 bags). Multiply by the number of footings to get your total concrete needed.",
+    },
+    {
+      question: "How far apart should deck posts be?",
+      answer: "Maximum post spacing depends on the beam size. For a doubled 2x8 beam, maximum spacing is 8 feet. For doubled 2x10 beams, up to 10 feet. For doubled 2x6 beams, keep spacing at 6 feet or less. These values assume standard pressure-treated southern yellow pine (No. 2 grade). Always consult span tables for your specific lumber species and grade.",
+    },
+  ],
+};
+
+const deckRailingCalculator: CalculatorConfig = {
+  fields: [
+    { id: "perimeter", label: "Deck Perimeter", unit: "ft", placeholder: "56" },
+    { id: "openingSide", label: "House Side Length (no railing)", unit: "ft", placeholder: "16" },
+  ],
+  calculate: (v) => {
+    const r = calculateDeckRailing(v.perimeter as number, v.openingSide as number);
+    return [
+      { label: `${r.postCount} railing posts needed` },
+      { label: `${r.balusterCount} balusters needed` },
+      { label: `${r.railLinearFeet} linear feet of top and bottom rail` },
+      { label: "Tip: Building code requires a 36-inch minimum railing height for residential decks and 42 inches for commercial." },
+    ];
+  },
+  disclaimer:
+    "This estimate is based on standard 6-foot post spacing and 4-inch baluster spacing per IRC building code. Actual requirements may vary by jurisdiction. Always verify railing height, baluster spacing, and post specifications with your local building department.",
+  howToUse: [
+    "Measure the total perimeter of your deck in feet (add up all sides).",
+    "Enter the length of the side attached to the house - this side does not need railing.",
+    "Click Calculate to get post count, baluster count, and rail linear footage.",
+    "The calculator assumes standard 6-foot post spacing and 4-inch on-center baluster spacing.",
+  ],
+  materialInfo:
+    "Deck railing is a critical safety feature required by building code on any deck surface 30 inches or more above grade (24 inches in some jurisdictions). The International Residential Code (IRC) specifies a minimum railing height of 36 inches for residential decks and 42 inches for commercial or multi-family structures.\n\nRailing systems consist of four main components: posts, top rail, bottom rail, and balusters (spindles). Posts are typically 4x4 pressure-treated lumber or aluminum, spaced no more than 6 feet apart (8 feet maximum in some codes). Posts must be securely bolted to the deck frame - never just screwed to the deck boards or fascia. Use 1/2-inch carriage bolts or approved post-mount hardware like Simpson DTT2Z tension ties.\n\nBalusters must be spaced so that a 4-inch sphere cannot pass between them. For standard 1.5-inch square balusters, this means roughly 4 inches on center. The IRC also requires that the gap between the deck surface and the bottom rail be less than 4 inches, and that no opening in the railing allows a 4-inch sphere to pass through at any point.\n\nTop and bottom rails are typically made from 2x4 pressure-treated lumber, composite rail kits, or aluminum extrusions. A 2x6 flat cap on top of the posts creates a comfortable drink rail. Most composite railing systems (Trex, TimberTech, Deckorators) come as kits with pre-cut balusters, rail sections, and post sleeves in 6-foot and 8-foot lengths.\n\nWood railing materials cost $15 to $30 per linear foot installed. Composite railing systems run $30 to $60 per linear foot. Aluminum and cable railing systems range from $50 to $100 per linear foot. For a typical 12x16-foot deck (approximately 40 linear feet of railing after subtracting the house side), wood railing costs $600 to $1,200 and composite costs $1,200 to $2,400.\n\nRailing is one of the most common deck code violations. Inspectors frequently flag insufficient post attachment, excessive baluster spacing, below-minimum railing height, and gaps exceeding 4 inches between the deck surface and bottom rail.",
+  installationTips: [
+    "Bolt railing posts through the rim joist or deck frame with 1/2-inch carriage bolts - never attach posts with screws or lag bolts alone.",
+    "Use a spacer jig (cut a 4-inch block of wood) to maintain consistent baluster spacing across all sections.",
+    "Pre-assemble railing sections on the ground - it is much easier and more accurate than building in place.",
+    "Install a 2x6 flat cap rail on top for a comfortable drink rail that guests will appreciate.",
+    "Notch posts around the rim joist for maximum strength rather than face-mounting them to the outside of the fascia.",
+  ],
+  commonMistakes: [
+    "Face-mounting posts with screws only - posts must be bolted through the rim joist or use approved post-mount hardware to resist outward force.",
+    "Spacing balusters too far apart - code requires that a 4-inch sphere cannot pass through any opening in the railing.",
+    "Making railing too short - 36 inches minimum from the deck surface to the top of the rail; measure from the deck boards, not the joist tops.",
+    "Leaving more than 4 inches between the deck surface and the bottom rail - this gap allows small children to roll underneath.",
+    "Using untreated lumber for railing posts - posts are exposed to weather on all sides and will rot in 3 to 5 years without treatment or sealing.",
+  ],
+  faqs: [
+    {
+      question: "How tall does a deck railing need to be?",
+      answer: "The IRC requires a minimum railing height of 36 inches for residential decks. This is measured from the deck surface to the top of the rail. Commercial and multi-family structures require 42 inches. Some local codes exceed these minimums - always check with your building department. For decks higher than 8 feet above grade, some jurisdictions require 42-inch residential railings.",
+    },
+    {
+      question: "How far apart should railing posts be?",
+      answer: "Railing posts should be spaced no more than 6 feet apart for wood railings and up to 8 feet for reinforced or metal railings, depending on local code. Posts must be placed at every corner, at the top and bottom of stairs, and at both sides of gate openings. Closer spacing (4 feet) may be required for heavy drink-rail applications.",
+    },
+    {
+      question: "How many balusters do I need per foot?",
+      answer: "With standard 1.5-inch square balusters and 4-inch code maximum spacing, you need approximately 3 balusters per linear foot of railing. For round 3/4-inch balusters, the count is similar since the spacing is measured between the balusters. A typical 6-foot railing section uses 17 to 19 balusters.",
+    },
+    {
+      question: "When is a deck railing required?",
+      answer: "Building code requires a railing (guard) when the deck surface is 30 inches or more above the adjacent grade. Some jurisdictions lower this threshold to 24 inches. Stairs with more than 3 risers also require a graspable handrail (different from a guard rail) on at least one side. Even if not required by code, adding a railing to a low deck improves safety.",
+    },
+    {
+      question: "What is the best material for deck railing?",
+      answer: "For durability and low maintenance, composite or aluminum railing systems are the best choice despite higher upfront cost. They never need painting or staining and carry 20 to 25-year warranties. For budget projects, pressure-treated wood railing costs less but requires annual maintenance. Cable railing offers a modern, view-preserving look but is the most expensive option at $60 to $100 per linear foot.",
+    },
+    {
+      question: "Can I install horizontal railing instead of vertical balusters?",
+      answer: "Horizontal railing (with cables or boards running side to side) is allowed in many jurisdictions but prohibited in some areas because it can be climbable by children. Check your local code. When allowed, horizontal members must still prevent a 4-inch sphere from passing through. Cable railing typically uses 3/16-inch stainless steel cables spaced 3 inches apart with intermediate posts every 4 feet to prevent cable deflection.",
+    },
+  ],
+};
+
+const deckStairCalculator: CalculatorConfig = {
+  fields: [
+    { id: "totalRise", label: "Total Rise (deck height)", unit: "in", placeholder: "48" },
+    { id: "stairWidth", label: "Stair Width", unit: "ft", defaultValue: 3, placeholder: "3" },
+  ],
+  calculate: (v) => {
+    const r = calculateDeckStairs(v.totalRise as number, v.stairWidth as number);
+    const totalRunFt = Math.round(r.totalRunInches / 12 * 10) / 10;
+    return [
+      { label: `${r.numberOfSteps} steps (7-inch rise, 11-inch run each)` },
+      { label: `${r.stringerCount} stair stringers needed (16" OC spacing)` },
+      { label: `${r.treadBoardCount} tread boards (2 per step)` },
+      { label: `${r.riserBoardCount} riser boards` },
+      { label: `${totalRunFt} ft total stair run (horizontal distance)` },
+    ];
+  },
+  disclaimer:
+    "This calculator uses standard 7-inch rise and 11-inch run per step, which meets most building codes. Actual rise per step may vary slightly based on total deck height. Building code requires consistent riser height throughout the staircase - always verify with your local building department.",
+  howToUse: [
+    "Measure the total rise in inches - this is the vertical distance from the ground to the top of the deck surface.",
+    "Enter the desired stair width in feet - 36 inches (3 feet) is the code minimum for residential decks.",
+    "Click Calculate to get the number of steps, stringer count, tread boards, and riser boards needed.",
+    "Use the total run to plan the landing area - stairs need clear space at the bottom equal to the stair width.",
+  ],
+  materialInfo:
+    "Deck stairs connect the deck surface to the ground and are one of the most structurally critical and code-regulated elements of a deck. Building code strictly governs riser height, tread depth, stairway width, headroom, handrail requirements, and landing dimensions.\n\nThe two standard approaches to deck stair construction are cut stringers and housed (routed) stringers. Cut stringers are the most common residential method - a 2x12 board is notched in a sawtooth pattern to support the treads and risers. Each cut removes material from the board, so the effective throat (remaining wood behind the cuts) must be at least 3.5 inches to maintain structural integrity.\n\nThe IRC specifies a maximum riser height of 7-3/4 inches and a minimum tread depth of 10 inches. The ideal residential stair has a 7-inch rise and 11-inch run, which produces a comfortable 37-degree angle. All risers must be the same height, with a maximum 3/8-inch variation between any two risers in the same flight. This means you cannot simply divide the deck height by a convenient number - you must calculate the exact rise per step.\n\nStringer spacing follows the same rules as joist spacing: 16 inches on center for standard loads. A 36-inch wide stair typically needs 3 stringers (one on each side plus one in the center). For stair widths over 36 inches, add a stringer for each additional 16 inches. Stringers must be made from pressure-treated lumber since they rest on or near the ground.\n\nTread boards are typically two 5/4x6 or 2x6 deck boards per step, with a 1/4-inch gap between them and a 1-inch nosing overhang at the front. Riser boards are optional by code in many areas but recommended to prevent children from climbing through the stairs. When used, risers are typically 1x8 boards.\n\nStair stringers must land on a concrete pad, footing, or compacted gravel base - never directly on soil. A 4-inch concrete pad at least 36 inches wide and 36 inches deep (from the bottom riser) provides a solid, code-compliant landing. The landing must be level and extend at least the width of the stairs in the direction of travel.",
+  installationTips: [
+    "Use a framing square with stair gauges to mark consistent 7-inch rise and 11-inch run cuts on the stringer.",
+    "Cut stringers from 2x12 pressure-treated lumber - the remaining throat after cuts must be at least 3.5 inches.",
+    "Attach stringers to the deck frame with an approved stair stringer connector (Simpson LSC or similar), not just toenails.",
+    "Pour a concrete landing pad at the base of the stairs at least 4 inches thick and as wide as the stairway.",
+    "Test all steps with a level after installation - uneven risers are a tripping hazard and a code violation.",
+  ],
+  commonMistakes: [
+    "Uneven riser heights - code allows a maximum 3/8-inch variation between risers; inconsistent risers are the leading cause of stair falls.",
+    "Using 2x10 lumber for stringers instead of 2x12 - after cutting, a 2x10 stringer does not have enough throat depth for structural safety.",
+    "Not supporting the bottom of the stringers on a concrete pad - stringers resting on soil will rot and sink within 2 to 3 years.",
+    "Omitting a center stringer on stairs wider than 36 inches - without center support, treads flex and bounce underfoot.",
+    "Forgetting to account for the deck board thickness when calculating total rise - measure from the finished deck surface, not the joist tops.",
+  ],
+  faqs: [
+    {
+      question: "How do I calculate the number of deck steps?",
+      answer: "Divide the total rise (vertical distance from ground to deck surface) by the target riser height (7 inches is standard). Round up to a whole number. For a 48-inch total rise: 48 / 7 = 6.86, so you need 7 steps. The actual riser height is 48 / 7 = 6.86 inches per step. All risers must be the same height within 3/8-inch tolerance.",
+    },
+    {
+      question: "How wide do deck stairs need to be?",
+      answer: "Building code requires a minimum stairway width of 36 inches, measured between the handrails (or between the stringers if no handrails are required). For comfort and two-person traffic, 48-inch stairs are popular. Wider stairs (60 inches or more) create a grand entrance but require additional center stringers every 16 inches.",
+    },
+    {
+      question: "How many stringers do I need for deck stairs?",
+      answer: "For a standard 36-inch wide stairway, use 3 stringers - one on each side and one in the center. For every additional 16 inches of width, add another stringer. A 48-inch stair needs 4 stringers. Stringer spacing should not exceed 16 inches on center to prevent tread flex.",
+    },
+    {
+      question: "Do deck stairs need a handrail?",
+      answer: "Yes. Any flight of stairs with 4 or more risers requires a graspable handrail on at least one side per the IRC. A graspable handrail must be 1.25 to 2 inches in diameter (or equivalent graspable profile) and mounted 34 to 38 inches above the stair nosings. If the stairway is wider than 44 inches, handrails are required on both sides.",
+    },
+    {
+      question: "What angle should deck stairs be?",
+      answer: "The ideal residential stair angle is between 30 and 37 degrees. Using the standard 7-inch rise and 11-inch run produces a 32.5-degree angle, which is comfortable for most people. Steeper stairs (over 40 degrees) feel unsafe and may not meet code. Shallower stairs (under 25 degrees) waste space and feel awkward to climb.",
+    },
+    {
+      question: "Do I need a landing pad at the bottom of deck stairs?",
+      answer: "Yes. Stair stringers must rest on a solid surface, not bare soil. A 4-inch thick concrete pad at least 36 inches wide (matching the stair width) and 36 inches deep is the standard landing. Some codes also require a landing for stairways with a vertical rise of more than 12 feet - the landing must be as wide as the stairs and at least 36 inches in the direction of travel.",
+    },
+  ],
+};
+
 // ─── REGISTRY MAP ─────────────────────────────────────────────────────────────
 
 export const calculatorRegistry: Record<string, Record<string, CalculatorConfig>> = {
@@ -1935,5 +2587,19 @@ export const calculatorRegistry: Record<string, Record<string, CalculatorConfig>
     "framing-nail-calculator": framingNailCalculator,
     "joist-hanger-calculator": joistHangerCalculator,
     "hurricane-tie-calculator": hurricaneTieCalculator,
+    "lumber-cost-calculator": lumberCostCalculator,
+    "board-feet-calculator": boardFeetCalculator,
+    "plywood-calculator": plywoodCalculator,
+  },
+  finishing: {
+    "paint-coverage-calculator": paintCoverageCalculator,
+    "paint-cost-calculator": paintCostCalculator,
+    "primer-calculator": primerCalculator,
+  },
+  outdoor: {
+    "deck-board-calculator": deckBoardCalculator,
+    "deck-footing-calculator": deckFootingCalculator,
+    "deck-railing-calculator": deckRailingCalculator,
+    "deck-stair-calculator": deckStairCalculator,
   },
 };

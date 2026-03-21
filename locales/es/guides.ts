@@ -41,6 +41,24 @@ const guides: GuidesTranslations = {
           "El concreto premezclado cuesta $2,500\u2013$3,500 MXN por metro c\u00fabico. Gu\u00eda completa de precios para losas, cimentaciones, cocheras, concreto en bultos y costos de mano de obra.",
         href: "/guides/concrete-cost-guide",
       },
+      {
+        title: "\u00bfCu\u00e1nta Pintura Necesito? Gu\u00eda Completa",
+        description:
+          "\u00bfCu\u00e1nta pintura para muros, techos y molduras? Gu\u00eda completa de medici\u00f3n, rendimiento, manos, preparaci\u00f3n de superficies y desglose de costos con enlaces a calculadoras.",
+        href: "/guides/how-much-paint-do-i-need",
+      },
+      {
+        title: "Guia de Precios de Madera: ¿Cuánto Cuesta?",
+        description:
+          "Precios actuales de madera por especie, grado y medida. Cubre madera dimensionada, madera industrializada, triplay, tendencias de precios, dónde comprar y descuentos por volumen.",
+        href: "/guides/lumber-prices-guide",
+      },
+      {
+        title: "Deck Composite vs Madera: ¿Cuál Es Mejor?",
+        description:
+          "Deck composite vs madera comparado: costo, durabilidad, mantenimiento, apariencia y vida útil. Aprende qué material es mejor para tu proyecto y clima.",
+        href: "/guides/composite-vs-wood-decking",
+      },
     ],
   },
 
@@ -945,6 +963,379 @@ const guides: GuidesTranslations = {
         question: "\u00bfCu\u00e1nto concreto necesito para un proyecto?",
         answer:
           "El concreto se mide en metros c\u00fabicos. Para losas rectangulares: multiplica largo (m) \u00d7 ancho (m) \u00d7 espesor (m) para obtener metros c\u00fabicos. Una losa de 3\u00d73 m con 10 cm de espesor = 3 \u00d7 3 \u00d7 0.10 = 0.9 metros c\u00fabicos. Siempre agrega 5\u201310% por desperdicio e irregularidades del terreno. Usa nuestra calculadora de concreto gratuita para resultados exactos en losas, zapatas, columnas y formas personalizadas.",
+      },
+    ],
+  },
+
+  howMuchPaint: {
+    title: "\u00bfCu\u00e1nta Pintura Necesito? Gu\u00eda Completa",
+    metaDescription:
+      "\u00bfCu\u00e1nta pintura necesito? Gu\u00eda completa sobre medici\u00f3n de muros, rendimiento por tipo de pintura, n\u00famero de manos, preparaci\u00f3n de superficies, pintura para techos y molduras, y desglose de costos.",
+
+    heroTitle: "\u00bfCu\u00e1nta Pintura Necesito?",
+    heroSubtitle: "Gu\u00eda Completa",
+    heroDescription:
+      "Todo lo que necesitas saber para calcular la cantidad correcta de pintura para muros, techos y molduras \u2014 evita comprar de m\u00e1s o quedarte corto a mitad del proyecto.",
+
+    quickAnswerHeading: "Respuesta R\u00e1pida",
+    quickAnswerText:
+      "Un litro de pintura vin\u00edlica interior cubre aproximadamente 10 a 12 metros cuadrados por mano. Para un cuarto est\u00e1ndar (3x3 m, techos de 2.5 m), necesitas entre 5 y 6 litros para dos manos en los muros. Agrega 2 litros para el techo y 1 litro para molduras y puertas. Siempre redondea hacia arriba \u2014 la pintura sobrante es esencial para futuros retoques.",
+
+    measuringWallsHeading: "C\u00f3mo Medir Tus Muros",
+    measuringWallsIntro:
+      "Las mediciones precisas de muros son la base de cualquier estimado de pintura. As\u00ed es como medir como un pintor profesional:",
+    measuringWallsItems: [
+      "Mide el largo de cada muro en metros y mult\u00edplica por la altura del techo. Un muro de 4 metros con techos de 2.5 m = 10 metros cuadrados. Repite para los cuatro muros y s\u00famalos.",
+      "Para c\u00e1lculos r\u00e1pidos del cuarto completo, mide el per\u00edmetro (suma de todos los largos de muro) y mult\u00edplica por la altura del techo. Un cuarto de 3x4 m tiene un per\u00edmetro de 14 m, por techos de 2.5 m = 35 m\u00b2 de \u00e1rea de muros.",
+      "Resta aberturas: una puerta est\u00e1ndar es aproximadamente 1.7 m\u00b2 (0.80x2.10 m) y una ventana est\u00e1ndar es aproximadamente 1.5 m\u00b2 (1.0x1.5 m). Para un cuarto con una puerta y dos ventanas, resta unos 4.7 m\u00b2.",
+      "Para cuartos con techos inclinados o a dos aguas, mide la altura del muro en el punto m\u00e1s alto y m\u00e1s bajo, saca el promedio y mult\u00edplica por el largo del muro.",
+      "Incluye el interior de cl\u00f3sets si planeas pintarlos \u2014 un cl\u00f3set est\u00e1ndar de 0.60x1.80 m agrega unos 5 m\u00b2 de \u00e1rea de muros.",
+      "Anota todas las medidas antes de ir a la tienda de pinturas. Toma fotos de los cuartos como referencia al elegir colores.",
+    ],
+    measuringWallsSummary:
+      "Una casa t\u00edpica de 120 m\u00b2 tiene de 300 a 400 metros cuadrados de \u00e1rea de muros pintables, dependiendo de la altura de techos, n\u00famero de cuartos y cantidad de ventanas y puertas.",
+
+    coverageRatesHeading: "Rendimiento por Tipo de Pintura",
+    coverageRatesIntro:
+      "No todas las pinturas cubren la misma superficie. El rendimiento var\u00eda seg\u00fan el acabado, la calidad y la superficie que est\u00e1s pintando.",
+    coverageRatesText1:
+      "Los acabados mate tienen el mayor rendimiento con 10 a 12 m\u00b2 por litro porque tienen menor contenido de ligante y se extienden f\u00e1cilmente. Son ideales para techos y cuartos de poco tr\u00e1nsito pero se marcan f\u00e1cilmente y son dif\u00edciles de limpiar. El acabado satinado mate cubre 9 a 11 m\u00b2 por litro y es la opci\u00f3n m\u00e1s popular para salas, rec\u00e1maras y pasillos \u2014 tiene un brillo sutil que es f\u00e1cil de limpiar sin ser demasiado brillante.",
+    coverageRatesText2:
+      "El acabado satinado cubre 9 a 11 m\u00b2 por litro y es excelente para cocinas, ba\u00f1os y \u00e1reas de alto tr\u00e1nsito debido a su resistencia a la humedad y lavabilidad. El semi-brillante cubre 8 a 10 m\u00b2 por litro y es la opci\u00f3n est\u00e1ndar para molduras, z\u00f3calos, puertas y marcos de ventanas \u2014 su superficie reflectiva es altamente durable y f\u00e1cil de limpiar. El alto brillo cubre 7 a 9 m\u00b2 por litro y se usa para \u00e1reas de acento, gabinetes y muebles donde se desea m\u00e1xima durabilidad.",
+    coverageRatesText3:
+      "Las pinturas premium de marcas como Comex (Vinimex Total), Sherwin-Williams (Duration) y Berel (Qualitex Premium) logran el extremo superior de estos rangos de rendimiento gracias a su mayor concentraci\u00f3n de pigmento. Las pinturas econ\u00f3micas generalmente quedan en el extremo inferior y pueden requerir una mano adicional. Las superficies texturizadas, porosas o sin pintar reducen el rendimiento un 20 a 30 por ciento \u2014 siempre sella estas superficies primero.",
+
+    numberOfCoatsHeading: "\u00bfCu\u00e1ntas Manos de Pintura Necesitas?",
+    numberOfCoatsIntro:
+      "El n\u00famero de manos afecta directamente cu\u00e1nta pintura necesitas comprar. Aqu\u00ed es cu\u00e1ndo aplicar una, dos o tres manos:",
+    numberOfCoatsItems: [
+      "Una mano es suficiente solo para retoques usando exactamente la misma pintura sobre una superficie previamente pintada en buen estado. Algunas pinturas premium anuncian cubrimiento en una mano, pero los pintores profesionales recomiendan dos manos para mejores resultados.",
+      "Dos manos es la recomendaci\u00f3n est\u00e1ndar para pr\u00e1cticamente todos los proyectos de pintura. La primera mano sella y prepara la superficie, mientras que la segunda proporciona la profundidad de color final, brillo uniforme y m\u00e1xima durabilidad.",
+      "Tres manos son necesarias al hacer un cambio de color dram\u00e1tico \u2014 especialmente al pasar de un color oscuro (rojo, azul marino, verde bosque) a uno claro (blanco, crema, pastel). La primera mano de sellador entintado neutraliza el color anterior, seguida de dos manos de acabado.",
+      "La tablaroca nueva siempre requiere una mano de sellador m\u00e1s dos manos de acabado (tres manos en total). El sellador sella la superficie porosa y proporciona una base uniforme. Omitir el sellador causa brillos irregulares \u2014 diferencias visibles de brillo donde la pasta para juntas y el papel absorben pintura a ritmos diferentes.",
+      "Las superficies texturizadas como acabado tipo gota, c\u00e1scara de naranja y techos con textura pueden requerir una mano extra porque la textura crea picos y valles dif\u00edciles de cubrir uniformemente.",
+    ],
+    numberOfCoatsSummary:
+      "Para presupuestar, siempre calcula la cantidad de pintura basada en dos manos. Si necesitas sellador, calc\u00falalo por separado al rendimiento del sellador.",
+
+    surfacePrepHeading: "Preparaci\u00f3n de Superficies",
+    surfacePrepIntro:
+      "La preparaci\u00f3n adecuada de la superficie es el factor m\u00e1s importante para un trabajo de pintura duradero. Ninguna cantidad de pintura cara puede compensar una mala preparaci\u00f3n.",
+    surfacePrepItems: [
+      "Limpia todas las superficies antes de pintar. El polvo, la grasa y las telara\u00f1as impiden la adherencia de la pintura. Limpia los muros con un trapo h\u00famedo o usa soluci\u00f3n desengrasante para muros de cocina grasosos. Permite que las superficies sequen completamente antes de pintar.",
+      "Rellena agujeros de clavos, abolladuras y grietas con masilla ligera para resanar. Aplica con esp\u00e1tula, deja secar y lija suavemente con lija del n\u00famero 150. Para agujeros m\u00e1s grandes (m\u00e1s de 1 cm), usa cinta malla y pasta para juntas en dos capas delgadas.",
+      "Lija ligeramente las superficies brillantes con lija del 150 para crear mordiente para la nueva pintura. Esto es especialmente importante al pintar sobre acabados semi-brillantes o de alto brillo.",
+      "Retira o lija cualquier pintura suelta, descarapelada o desprendida hasta llegar a una superficie s\u00f3lida. Emparea las orillas de la pintura restante con lija para crear una transici\u00f3n suave.",
+      "Aplica cinta de pintor en molduras, z\u00f3calos, l\u00edneas de techo y cualquier \u00e1rea que quieras proteger. Presiona firmemente la cinta con una esp\u00e1tula o tarjeta para evitar que la pintura se cuele por debajo.",
+      "Protege pisos y muebles con pl\u00e1stico protector o mantas de lona. Las mantas de lona se adhieren mejor al piso y absorben goteos. Mueve los muebles al centro del cuarto y c\u00fabrelos con pl\u00e1stico.",
+    ],
+
+    ceilingPaintHeading: "C\u00e1lculo de Pintura para Techos",
+    ceilingPaintIntro:
+      "Los techos requieren su propio c\u00e1lculo ya que usan una formulaci\u00f3n de pintura diferente a los muros.",
+    ceilingPaintText1:
+      "La pintura para techos est\u00e1 formulada espec\u00edficamente con mayor contenido de s\u00f3lidos para mejor resistencia al salpicado al rodar en posici\u00f3n vertical, y seca con un acabado perfectamente mate para minimizar la apariencia de imperfecciones. La pintura est\u00e1ndar para techos cubre de 10 a 12 m\u00b2 por litro. Para calcular la cantidad necesaria, multiplica el largo del cuarto por el ancho \u2014 un cuarto de 3x4 m tiene 12 m\u00b2 de techo. A 11 m\u00b2 por litro, eso es aproximadamente 1.1 litros \u2014 compra 2 litros para ese cuarto.",
+    ceilingPaintText2:
+      "La mayor\u00eda de los techos solo necesitan una mano si se est\u00e1n pintando del mismo color blanco. Si cambias el color del techo o pintas sobre una mancha, aplica sellador primero y luego dos manos de acabado. Para techos con textura tipo palomita o gota, reduce el rendimiento a 7-9 m\u00b2 por litro porque la textura absorbe m\u00e1s pintura. Para toda una casa de 120 m\u00b2, necesitas t\u00edpicamente 12 a 16 litros de pintura para techos.",
+
+    trimPaintHeading: "C\u00e1lculo de Pintura para Molduras y Puertas",
+    trimPaintIntro:
+      "Las molduras, z\u00f3calos, puertas y marcos de ventanas t\u00edpicamente se pintan con acabado semi-brillante o satinado por su durabilidad y facilidad de limpieza.",
+    trimPaintText1:
+      "Z\u00f3calos: Mide los metros lineales totales de z\u00f3calo en el cuarto. Los z\u00f3calos est\u00e1ndar miden de 8 a 14 cm de alto. Un cuarto con 14 metros lineales de z\u00f3calo tiene aproximadamente 1.7 m\u00b2 de superficie pintable. Un litro de pintura para molduras cubre unos 10 a 12 m\u00b2 \u2014 suficiente para los z\u00f3calos de varios cuartos.",
+    trimPaintText2:
+      "Puertas: Una puerta interior est\u00e1ndar (ambas caras) tiene aproximadamente 3.4 m\u00b2 de superficie pintable. Las molduras de ventana (marco y chambrana) promedian 0.8 m\u00b2 por ventana. La moldura de corona agrega aproximadamente 0.1 m\u00b2 por metro lineal. Para toda una casa, planifica 4 a 8 litros de pintura para molduras para todos los z\u00f3calos, marcos de puertas, molduras de ventanas y coronas. Pinta las puertas con rodillo de espuma para el acabado m\u00e1s liso \u2014 las marcas de brocha son muy visibles en pintura semi-brillante sobre superficies planas grandes.",
+
+    costBreakdownHeading: "Desglose de Costos de Pintura",
+    costBreakdownIntro:
+      "Entender el costo total de un proyecto de pintura te ayuda a presupuestar con precisi\u00f3n y elegir los productos correctos para tus necesidades.",
+    costBreakdownText1:
+      "La pintura para muros es el componente de mayor costo. Presupuesta $80 a $400 MXN por litro dependiendo del nivel de calidad. Para un cuarto t\u00edpico que requiere 6 litros a 2 manos, la pintura cuesta $480 a $2,400 MXN. Para una casa completa de 120 m\u00b2 (aproximadamente 65 litros para muros), la pintura cuesta $5,200 a $26,000 MXN. Comprar cubetas de 19 litros ahorra 15 a 20 por ciento por litro comparado con botes individuales.",
+    costBreakdownText2:
+      "El sellador cuesta $100 a $200 MXN por litro. La construcci\u00f3n nueva (tablaroca sin pintar) requiere aproximadamente 1 litro por cada 10-12 m\u00b2. Para una casa de 120 m\u00b2, eso es 25 a 35 litros de sellador ($2,500 a $7,000 MXN). Las pinturas auto-sellantes (disponibles en l\u00edneas premium) eliminan este costo pero son m\u00e1s caras por litro.",
+    costBreakdownText3:
+      "Los insumos para pintar el interior de toda una casa cuestan $800 a $2,000 MXN en total: rodillos y repuestos ($150 a $250 MXN), extensi\u00f3n telesc\u00f3pica para techos ($100 a $200 MXN), brochas angulares de 5 cm y 6 cm ($120 a $200 MXN), cinta de pintor ($200 a $400 MXN por varios rollos), pl\u00e1stico protector ($100 a $200 MXN), charolas y forros ($60 a $100 MXN), lija y masilla ($60 a $100 MXN), y trapos y materiales de limpieza ($30 a $60 MXN). Las herramientas de calidad hacen una diferencia significativa en el resultado final.",
+
+    calculatorCtaHeading: "Calcula Tus Necesidades de Pintura",
+    calculatorCtaText:
+      "Usa nuestras calculadoras gratis de pintura para obtener un estimado instant\u00e1neo y preciso para tu proyecto.",
+    calculatorLinks: [
+      {
+        label: "Calculadora de Rendimiento de Pintura",
+        href: "/calculators/finishing/paint-coverage-calculator",
+        description: "Cu\u00e1ntos litros para tu \u00e1rea de muros \u2014 con ajustes de manos y rendimiento.",
+      },
+      {
+        label: "Calculadora de Costo de Pintura",
+        href: "/calculators/finishing/paint-cost-calculator",
+        description: "Costo total del proyecto por nivel de calidad \u2014 incluye estimado de insumos.",
+      },
+      {
+        label: "Calculadora de Sellador",
+        href: "/calculators/finishing/primer-calculator",
+        description: "Cu\u00e1nto sellador para tu tipo de superficie \u2014 tablaroca nueva, madera o repintado.",
+      },
+    ],
+
+    faqHeading: "Preguntas Frecuentes",
+    faqs: [
+      {
+        question: "\u00bfCu\u00e1nta pintura necesito para un cuarto de 3x3 metros?",
+        answer:
+          "Un cuarto de 3x3 m con techos de 2.5 m tiene aproximadamente 30 m\u00b2 de \u00e1rea de muros. Resta unos 4 m\u00b2 por puerta y ventana, quedando 26 m\u00b2 netos. A 10 m\u00b2 por litro con 2 manos, necesitas unos 5.2 litros \u2014 compra 6 litros (un bote de 4 + uno de 1 litro). Agrega 2 litros de pintura para el techo de 9 m\u00b2.",
+      },
+      {
+        question: "\u00bfCu\u00e1ntos metros cuadrados cubre un litro de pintura?",
+        answer:
+          "Un litro de pintura vin\u00edlica interior cubre de 10 a 12 m\u00b2 en superficies lisas previamente pintadas con una mano. Los acabados mate cubren m\u00e1s cerca de 12 m\u00b2, mientras que los satinados y semi-brillantes cubren unos 9 a 11 m\u00b2. En superficies porosas o texturizadas como tablaroca nueva o aplanado r\u00fastico, espera solo 7 a 9 m\u00b2 por litro.",
+      },
+      {
+        question: "\u00bfConviene comprar botes individuales o cubeta de 19 litros?",
+        answer:
+          "Las cubetas de 19 litros son 15 a 20 por ciento m\u00e1s baratas por litro y garantizan consistencia de color en todos los muros. Compra cubetas cuando necesites 8 o m\u00e1s litros del mismo color. Para muros de acento o cuartos que necesiten menos de 6 litros, los botes individuales son m\u00e1s pr\u00e1cticos.",
+      },
+      {
+        question: "\u00bfCu\u00e1nto cuesta pintar un cuarto t\u00fa mismo?",
+        answer:
+          "Un proyecto de pintura de cuarto de bricolaje cuesta $800 a $2,500 MXN en materiales: 6 a 10 litros de pintura ($400 a $1,500 MXN), insumos ($200 a $500 MXN), y sellador opcional ($100 a $200 MXN por litro). Un pintor profesional cobra $2,500 a $5,000 MXN por el mismo cuarto. Para el interior de toda una casa, los costos de bricolaje son $5,000 a $15,000 MXN en materiales vs $20,000 a $60,000 MXN para un equipo profesional.",
+      },
+      {
+        question: "\u00bfNecesito sellador antes de pintar?",
+        answer:
+          "El sellador es necesario en tablaroca nueva, madera sin tratar, parches reparados y al hacer cambios de color dram\u00e1ticos (oscuro a claro). En superficies previamente pintadas en buen estado con un color similar, puedes omitir el sellador \u2014 especialmente con pinturas auto-sellantes premium. En caso de duda, sella \u2014 cuesta $100 a $200 MXN por litro y ahorra en manos de acabado.",
+      },
+      {
+        question: "\u00bfCu\u00e1l es la mejor pintura para muros interiores en M\u00e9xico?",
+        answer:
+          "Para la mayor\u00eda de los muros interiores, un acabado satinado mate en calidad media a premium ofrece el mejor balance de apariencia, durabilidad y lavabilidad. Las marcas m\u00e1s recomendadas incluyen Comex Vinimex Total, Sherwin-Williams Duration y Berel Qualitex Premium. Usa acabado mate solo en techos y cuartos de poco tr\u00e1nsito. Usa semi-brillante en molduras, puertas y \u00e1reas de alta humedad como ba\u00f1os.",
+      },
+    ],
+  },
+  lumberPrices: {
+    title: "Guía de Precios de Madera: ¿Cuánto Cuesta?",
+    metaDescription:
+      "Precios actuales de madera por especie, grado y medida. Cubre madera dimensionada, madera industrializada, triplay, tendencias de precios, dónde comprar y descuentos por volumen.",
+    heroTitle: "Guía de Precios de Madera",
+    heroSubtitle: "¿Cuánto Cuesta la Madera?",
+    heroDescription:
+      "Una guía completa de precios de madera en México y Latinoamérica — desde tablas para estructura hasta maderas duras para mueblería — para que presupuestes con precisión tu próximo proyecto.",
+
+    quickAnswerHeading: "Respuesta Rápida",
+    quickAnswerText:
+      "Una tabla estándar de pino 2x4x8 pies cuesta entre $60 y $120 MXN en tiendas de materiales. La madera de pino para estructura promedia $6,000 a $10,000 MXN por millar de pies tabla (MBF) al mayoreo. Las maderas duras van de $80 a $300+ MXN por pie tabla según la especie. El triplay va de $200 a $750 MXN por hoja de 1.22 x 2.44 m según espesor y calidad. Los precios fluctúan con las condiciones del mercado, así que siempre cotiza con tu proveedor antes de comprar.",
+
+    speciesPricingHeading: "Precios de Madera por Especie",
+    speciesPricingIntro:
+      "La especie de madera es el factor principal en el precio. Estos son los costos actuales por las especies más comunes en la región:",
+    speciesPricingText1:
+      "La madera blanda para estructura — pino, abeto y picea — es la opción más accesible y el material base de la construcción residencial con entramado ligero. En México, una tabla de pino de 2x4x8 pies cuesta $60 a $120 MXN. Las tablas más grandes como 2x10x12 y 2x12x16 cuestan $250 a $600 MXN cada una. El pino radiata de Chile, ampliamente exportado a toda Latinoamérica, ofrece buena relación calidad-precio para uso estructural. El cedro rojo, apreciado por su resistencia natural a la pudrición, cuesta 2 a 3 veces más que el pino estándar — entre $150 y $300 MXN por tabla de 2x4x8.",
+    speciesPricingText2:
+      "Las maderas duras nacionales en México abarcan un amplio rango de precios medidos en pies tabla (PT). La parota (huanacaxtle), una de las más accesibles y populares para mueblería, cuesta $80 a $120 MXN/PT. El tzalam, muy usado en pisos y muebles, cuesta $120 a $180 MXN/PT. La caoba (Swietenia macrophylla), regulada por CITES, cuesta $150 a $250 MXN/PT cuando está disponible legalmente. Las maderas importadas como roble americano cuestan $150 a $300 MXN/PT, arce $180 a $350 MXN/PT y nogal negro $250 a $500 MXN/PT.",
+    speciesPricingText3:
+      "Las maderas exóticas e importadas están en el rango más alto de precio. El ipe (lapacho), el estándar para decks exteriores de alta gama, cuesta $300 a $600 MXN por metro lineal en tablas de deck — equivalente a $250 a $500 MXN/PT. La teca, usada para muebles exteriores y aplicaciones marinas, cuesta $300 a $600 MXN/PT. Otras opciones populares como cumaru, sapele y granadillo caen en el rango de $150 a $350 MXN/PT. Los costos de importación, aranceles y certificaciones de sustentabilidad (FSC) afectan significativamente los precios de maderas exóticas.",
+
+    dimensionalVsEngineeredHeading: "Madera Dimensionada vs Madera Industrializada",
+    dimensionalVsEngineeredIntro:
+      "La construcción moderna utiliza cada vez más productos de madera industrializada junto con la madera aserrada tradicional. Entender las diferencias de costo ayuda a elegir el producto correcto:",
+    dimensionalVsEngineeredItems: [
+      "La madera dimensionada (2x4, 2x6, 2x10, etc.) se asierra directamente de troncos y es la opción predeterminada para entramado de muros, techos y viguetas de tramos cortos. Es la opción más económica por metro lineal para tramos menores a 5 metros.",
+      "Las vigas LVL (madera laminada con chapa) cuestan $50 a $100 MXN por metro lineal para una viga de 45 x 240 mm — aproximadamente 3 a 5 veces el costo de una tabla 2x10 comparable. Se usan para dinteles, vigas de cumbrera y tramos largos.",
+      "Las viguetas prefabricadas tipo I (TJI) cuestan $50 a $120 MXN por metro lineal según la altura. Reemplazan viguetas de 2x10 y 2x12 para tramos mayores a 4 metros, ofreciendo menor peso y perforaciones prehechas para plomería y cableado.",
+      "Las vigas Glulam cuestan $100 a $250 MXN por metro lineal según la sección. Se usan para vigas expuestas, dinteles de cochera de tramo largo y elementos arquitectónicos personalizados.",
+      "La madera de hebras paralelas (PSL) como Parallam cuesta $150 a $350 MXN por metro lineal y se usa para columnas y vigas de alta carga donde se necesita máxima resistencia en la mínima sección transversal.",
+    ],
+    dimensionalVsEngineeredSummary:
+      "Para la mayoría del entramado residencial, la madera dimensionada sigue siendo la opción más rentable. Los productos de madera industrializada tienen sentido económico cuando se necesitan tramos más largos, cargas más pesadas o un rendimiento más predecible.",
+
+    gradeHeading: "Grados de Madera y su Impacto en el Precio",
+    gradeIntro:
+      "El grado de la madera afecta directamente el precio — grados más altos cuestan más porque tienen menos defectos y propiedades estructurales más consistentes:",
+    gradeItems: [
+      "Grado para montantes (Stud grade) — el grado estructural más económico, adecuado solo para elementos verticales (montantes de muro) de hasta 3 metros. Típicamente $10 a $20 MXN menos por pieza que el grado #2.",
+      "Grado #2 y Mejor (No. 2) — el grado estructural estándar para viguetas, cabios, dinteles y entramado general. Es lo que la mayoría de las madererías manejan como su madera de estructura por defecto.",
+      "Grado #1 — menos nudos y valores de resistencia más altos que el #2. Se usa cuando los cálculos de ingeniería requieren esfuerzos admisibles mayores. Cuesta 10-20% más que el #2.",
+      "Select Structural — el grado estructural más alto con menos defectos. Requerido para algunos diseños de ingeniería y aplicaciones de madera pesada. Cuesta 25-50% más que el #2.",
+      "Grados de apariencia (C&Better, D Select) — para carpintería de acabado, molduras y aplicaciones expuestas donde la estética importa. Precios 50-100% por encima de los grados estructurales.",
+      "FAS (First and Seconds) — el grado más alto para maderas duras, requiere secciones grandes libres de defectos. El grado más caro, típicamente 30-50% más que #1 Common.",
+    ],
+    gradeSummary:
+      "Para estructura, el grado #2 es el estándar y la opción más económica. Solo especifica grados superiores cuando los requisitos de ingeniería o apariencia lo exijan — pagarás significativamente más por mejoras marginales en resistencia.",
+
+    priceTrendsHeading: "Tendencias y Pronósticos de Precios de Madera",
+    priceTrendsIntro:
+      "Los precios de la madera son notoriamente volátiles, y entender el ciclo del mercado te ayuda a programar tus compras:",
+    priceTrendsText1:
+      "El mercado de futuros de madera alcanzó un máximo histórico de $1,711 USD por millar de pies tabla en mayo de 2021, impulsado por la demanda de proyectos caseros durante la pandemia y el cierre temporal de aserraderos. Para finales de 2022, los precios habían caído a $350/MBF antes de estabilizarse en el rango de $400 a $600/MBF durante 2023-2024. En México, esto se reflejó en tablas de 2x4x8 que llegaron a costar $200+ MXN en el pico y que ahora se encuentran en $60 a $120 MXN.",
+    priceTrendsText2:
+      "Los patrones estacionales son predecibles: los precios de la madera típicamente alcanzan su pico en primavera y principios de verano (marzo a junio) cuando la temporada de construcción impulsa la demanda, y tocan fondo en otoño e invierno (octubre a enero) cuando la construcción se desacelera. Comprar tu paquete de estructura en noviembre o diciembre puede ahorrarte 10-20% comparado con precios de mayo.",
+    priceTrendsText3:
+      "En Latinoamérica, factores adicionales afectan los precios: el tipo de cambio del dólar (la madera importada sube cuando el peso se deprecia), la disponibilidad de madera nacional certificada, los costos de transporte desde zonas productoras, y la competencia de materiales alternativos como el block y el acero estructural. Los constructores mexicanos que usan entramado ligero de madera están sujetos a la volatilidad tanto del mercado nacional como del internacional.",
+
+    whereToBuyHeading: "Dónde Comprar Madera: Opciones y Precios",
+    whereToBuyIntro:
+      "Dónde compras la madera afecta significativamente el costo total. Estas son las principales opciones, ordenadas de mayor a menor costo por tabla:",
+    whereToBuyItems: [
+      "Tiendas de autoservicio (Home Depot, Sodimac, Coppel): Convenientes para proyectos pequeños y tablas individuales. Precios fijos y publicados, devoluciones fáciles e inventario inmediato. Sin embargo, los precios son 15-30% más altos que en madererías. Ideal para: propietarios, reparaciones pequeñas y proyectos menores a $5,000 MXN en madera.",
+      "Madererías locales: Mejor control de calidad (tablas seleccionadas a mano), mayor variedad de especies y grados, personal conocedor y precios por volumen. La mayoría ofrece entrega para pedidos mayores a $5,000 MXN. Espera 10-25% de ahorro sobre precios de autoservicio. Ideal para: contratistas, proyectos grandes de autoconstrucción.",
+      "Mayoreo / directo del aserradero: Los precios más bajos, típicamente 30-50% por debajo del menudeo, pero requiere pedidos mínimos grandes (a menudo 1,000+ pies tabla o unidades completas). Algunos aserraderos venden directo al público, especialmente en zonas productoras como Durango, Chihuahua y Michoacán en México. Ideal para: paquetes de estructura completos y proyectos comerciales.",
+      "Tiendas especializadas en maderas finas: Mejor fuente para especies exóticas, maderas duras especiales y blanks para tornería. Los precios incluyen una prima por selección, clasificación y envío. Ideal para: carpinteros y ebanistas que necesitan especies, medidas o figuras específicas.",
+      "Aserradero local / tablas rústicas: Madera bruta local a los precios más bajos posibles ($500 a $2,000 MXN por pie tabla para pinos, $1,500 a $5,000 MXN/PT para maderas duras). Requiere secado y cepillado por cuenta propia. Ideal para: constructores rurales, carpinteros con equipo de taller.",
+    ],
+    whereToBuySummary:
+      "Para proyectos mayores a $10,000 MXN en madera, siempre cotiza con al menos una maderería además de revisar precios en tiendas de autoservicio. El ahorro en un paquete de estructura puede fácilmente alcanzar $5,000 a $20,000 MXN.",
+
+    bulkDiscountsHeading: "Compra por Volumen y Descuentos",
+    bulkDiscountsIntro:
+      "Comprar madera por volumen desbloquea ahorros significativos. Así funciona el precio por volumen en cada nivel:",
+    bulkDiscountsItems: [
+      "Precio por paquete: La madera de estructura vendida por paquete completo (un atado flejado, típicamente 200-300 piezas del mismo tamaño) cuesta 10-20% menos que el precio por pieza individual. Un paquete de tablas 2x4x8 contiene 200-300 piezas con un ahorro significativo por tabla.",
+      "Paquetes de estructura: Muchas madererías cotizan tu lista completa de materiales de estructura como un paquete con precio especial, incluyendo montantes, soleras, dinteles, viguetas, cabios, triplay y ferretería. El precio del paquete es típicamente 15-25% menor que la suma de precios individuales. Presenta tus planos y obtén al menos dos cotizaciones.",
+      "Cuentas de contratista: Los constructores que compran regularmente pueden abrir cuentas de contratista en madererías para un descuento adicional del 5-15% por debajo del precio de paquete.",
+      "Precio por tarima de triplay: Comprar una tarima completa de triplay (60-75 hojas para 18 mm) ahorra 10-15% sobre el precio por hoja individual.",
+      "Promociones de temporada: Las tiendas de materiales tienen promociones importantes durante la primavera y el otoño. Busca descuentos de 10-15% en madera de estructura, ofertas en madera tratada y precios de paquete para contratista en ferretería y clavos.",
+    ],
+    bulkDiscountsSummary:
+      "La mayor oportunidad de ahorro es obtener una cotización de paquete de estructura completo de una maderería. Para una casa típica de 120 m², la diferencia entre precios por pieza y un paquete de maderería puede ser de $30,000 a $80,000 MXN.",
+
+    calculatorCtaHeading: "Calcula tus Costos de Madera",
+    calculatorCtaText:
+      "Usa nuestras calculadoras gratuitas de madera para estimar el costo exacto de tu proyecto — desde tablas de estructura hasta pies tabla de madera dura y hojas de triplay.",
+    calculatorLinks: [
+      { label: "Calculadora de Costo de Madera", href: "/calculators/hardware/lumber-cost-calculator", description: "Estima costo total de madera dimensionada por medida y cantidad." },
+      { label: "Calculadora de Pies Tabla", href: "/calculators/hardware/board-feet-calculator", description: "Convierte dimensiones de madera a pies tabla con estimado de costo." },
+      { label: "Calculadora de Triplay", href: "/calculators/hardware/plywood-calculator", description: "Calcula hojas de triplay necesarias y costo total por espesor." },
+    ],
+
+    faqHeading: "Preguntas Frecuentes",
+    faqs: [
+      { question: "¿Cuánto cuesta una tabla de 2x4 actualmente?", answer: "En 2024-2025, una tabla estándar de pino 2x4x8 pies cuesta $60 a $120 MXN en tiendas como Home Depot México y madererías. Los precios varían por región, con costos más altos en las grandes ciudades y menores en zonas productoras de madera. Las tablas de cedro del mismo tamaño cuestan $150 a $300 MXN. Consulta precios actuales en tu tienda local — pueden cambiar semanalmente." },
+      { question: "¿Por qué la madera es tan cara comparada con hace 5 años?", answer: "Los precios de la madera se dispararon 300-400% durante 2020-2021 por la demanda de proyectos caseros durante la pandemia y el cierre de aserraderos. Aunque han bajado significativamente desde el pico, siguen siendo 30-50% más altos que antes de 2020 por mayores costos de operación, transporte, aranceles y una escasez estructural de vivienda. El tipo de cambio también afecta la madera importada en México." },
+      { question: "¿Cuál es la mejor época del año para comprar madera?", answer: "Otoño e invierno (octubre a enero) típicamente ofrecen los precios más bajos porque la actividad de construcción se desacelera. Puedes ahorrar 10-20% comparado con precios pico de primavera y verano. Si tienes almacenamiento seco y cubierto, comprar tu paquete de estructura en noviembre para una obra en primavera puede generar ahorros significativos." },
+      { question: "¿Cuánta madera necesito para construir una casa de 120 m²?", answer: "Una casa típica de 120 m² con entramado ligero de madera requiere aproximadamente 10,000 a 14,000 pies tabla de madera para la estructura completa (muros, piso y techo). Esto se traduce en aproximadamente 350-450 montantes, 35-50 hojas de triplay, más viguetas, cabios/cerchas, soleras y dinteles. A precios actuales, el paquete de madera para estructura cuesta $80,000 a $150,000 MXN." },
+      { question: "¿Vale la pena la madera tratada?", answer: "Sí, para cualquier madera en contacto con el suelo, a menos de 15 cm del terreno, o expuesta a humedad persistente. La madera tratada cuesta 50-100% más que la madera sin tratar pero dura 20-40 años versus 3-5 años para madera sin tratar en contacto con el suelo. Es requerida por norma para soleras inferiores, estructura de decks y cualquier miembro estructural cerca del nivel del terreno." },
+      { question: "¿Qué diferencia hay entre madera verde y madera seca?", answer: "La madera seca (KD, secada al horno) tiene un contenido de humedad menor al 19%, haciéndola más estable y menos propensa a deformarse. La madera verde excede 19% de humedad y se contraerá al secar — cuesta menos pero solo debe usarse donde la contracción sea aceptable. Para estructura, siempre usa madera seca para minimizar problemas de asentamiento y grietas en acabados." },
+    ],
+  },
+
+  compositeVsWood: {
+    title: "Deck Composite vs Madera: ¿Cuál Es Mejor?",
+    metaDescription:
+      "Deck composite vs madera comparado: costo inicial, valor a largo plazo, durabilidad, mantenimiento, apariencia, vida útil e impacto ambiental. Guía completa para elegir el material correcto para tu terraza.",
+
+    heroTitle: "Deck Composite vs Madera",
+    heroSubtitle: "¿Cuál Es Mejor?",
+    heroDescription:
+      "Una comparación completa de materiales para deck composite y madera para ayudarte a elegir la opción correcta según tu presupuesto, clima y estilo de vida.",
+
+    quickAnswerHeading: "Respuesta Rápida",
+    quickAnswerText:
+      "Elige deck composite si quieres mantenimiento mínimo, vida útil de 25-50 años y apariencia consistente a lo largo del tiempo. Elige madera (tratada o cedro) si el presupuesto inicial es tu principal preocupación, disfrutas la apariencia y sensación natural de la madera real, y estás dispuesto a darle mantenimiento anual. El composite cuesta 2-4 veces más al inicio pero ahorra dinero a más de 20 años cuando consideras los costos de teñido, sellado y reemplazo de la madera.",
+
+    whatIsCompositeHeading: "¿Qué Es el Deck Composite?",
+    whatIsCompositeText1:
+      "El deck composite es un material de construcción industrializado hecho de una combinación de fibras de madera (aserrín, harina de madera) y polímeros plásticos (típicamente polietileno o polipropileno). Las fibras de madera proporcionan rigidez estructural y apariencia natural, mientras que el componente plástico brinda resistencia a la humedad y durabilidad. La mayoría de las tablas composite modernas cuentan con una capa protectora de polímero (cáscara) en los cuatro lados que resiste manchas, decoloración, moho y rayones.",
+    whatIsCompositeText2:
+      "Las marcas principales de deck composite incluyen Trex (líder del mercado, usando 95% de materiales reciclados), TimberTech/AZEK (ofreciendo opciones composite y PVC), Fiberon, Deckorators y MoistureShield. En Latinoamérica también se consiguen marcas regionales como Neodeck, WPC y Duradek. Los precios van de $250 a $700 MXN por metro lineal solo por las tablas, siendo las opciones de gama media de $350 a $500 MXN las más populares. Las tablas composite están disponibles en largos de 3.66, 4.88 y 6.10 metros y anchos de 14 cm o 18 cm.",
+
+    whatIsWoodHeading: "¿Qué Es el Deck de Madera?",
+    whatIsWoodText1:
+      "El deck de madera usa tablas de madera natural como superficie de la terraza. Las tres opciones más comunes son madera tratada a presión (pino radiata, pino patula o pino del sur en EE.UU. — la más económica y disponible), cedro rojo del Pacífico (naturalmente resistente a la pudrición con tono cálido), y maderas tropicales como ipé, cumaru, tzalam y teca (las más durables pero más costosas). La madera tratada representa aproximadamente el 75% de todos los decks de madera construidos.",
+    whatIsWoodText2:
+      "Las tablas de deck de pino tratado cuestan $80 a $180 MXN por metro lineal, siendo la opción más económica. El cedro va de $200 a $350 MXN por metro lineal, mientras que las maderas tropicales cuestan de $350 a $800 MXN por metro lineal. Las tablas se consiguen en largos comerciales de 2.44, 3.05, 3.66 y 4.88 metros. La tabla estándar es de 2.5x15 cm (1 pulgada por 5.5 pulgadas), que proporciona buena rigidez y comodidad al caminar.",
+
+    comparisonHeading: "Composite vs Madera: Comparación Lado a Lado",
+    comparisonSubheading: "Cómo se comparan los dos materiales en cada categoría importante.",
+    comparisonCol1: "Categoría",
+    comparisonCol2: "Deck Composite",
+    comparisonCol3: "Deck de Madera",
+    comparisonRows: [
+      { category: "Costo Inicial (por m²)", composite: "$1,500-$4,500 MXN instalado", wood: "$800-$2,400 MXN instalado" },
+      { category: "Vida Útil", composite: "25-50 años", wood: "10-30 años (varía por especie)" },
+      { category: "Mantenimiento Anual", composite: "Lavado con agua y jabón", wood: "Teñir/sellar cada 1-2 años" },
+      { category: "Costo Mantenimiento (20 años)", composite: "$0-$4,000 MXN total", wood: "$30,000-$80,000 MXN total" },
+      { category: "Apariencia", composite: "Consistente, aspecto fabricado", wood: "Veta natural, se torna gris" },
+      { category: "Retención de Calor", composite: "Se calienta mucho al sol", wood: "Se mantiene más fresco" },
+      { category: "Resistencia a Rayones", composite: "Buena (productos con capa)", wood: "Varía por especie" },
+      { category: "Resistencia a Decoloración", composite: "Excelente (garantía 25 años)", wood: "Se vuelve gris sin mantenimiento" },
+      { category: "Impacto Ambiental", composite: "Contenido reciclado, larga vida", wood: "Renovable, vida más corta" },
+      { category: "Dificultad de Instalación", composite: "Moderada (fijación especial)", wood: "Fácil (tornillos estándar)" },
+    ],
+
+    costHeading: "Comparación de Costos: El Panorama Completo",
+    costIntro: "La diferencia de precio inicial entre composite y madera es significativa, pero el costo total de propiedad a lo largo de la vida del deck cuenta una historia diferente.",
+    costText1:
+      "Para un deck típico de 4x5 metros (20 m²), las tablas de madera tratada cuestan de $6,000 a $12,000 MXN solo por las tablas. El mismo deck en composite de gama media cuesta $14,000 a $28,000 MXN por las tablas. Incluyendo la estructura, tornillería e instalación, el costo total instalado es de $30,000 a $50,000 MXN para madera y $55,000 a $90,000 MXN para composite.",
+    costText2:
+      "Sin embargo, los decks de madera requieren mantenimiento anual. Teñir y sellar un deck de 20 m² cuesta $2,000 a $5,000 MXN por año en materiales (tinte exterior de calidad más insumos de aplicación). En 20 años, son $40,000 a $100,000 MXN solo en costos de mantenimiento. Un deck de madera tratada también necesita reemplazo de tablas después de 12 a 15 años ($10,000 a $20,000 MXN). Los decks composite solo necesitan lavado ocasional con agua y jabón.",
+    costText3:
+      "En un periodo de 25 años, el costo total de propiedad de un deck de madera de 4x5 m es de aproximadamente $80,000 a $170,000 MXN (construcción inicial más mantenimiento y reemplazo parcial). El mismo deck composite cuesta $55,000 a $90,000 MXN total con prácticamente cero gastos de mantenimiento. A partir de los 15 a 20 años, el composite se convierte en la opción más económica.",
+
+    whenCompositeHeading: "Cuándo Elegir Deck Composite",
+    whenCompositeIntro: "El deck composite es la mejor opción en estas situaciones:",
+    whenCompositeItems: [
+      "Quieres un deck de bajo mantenimiento que nunca necesite teñido, sellado ni pintura.",
+      "Vives en un clima húmedo, lluvioso o costero donde la madera se deteriora rápidamente.",
+      "Planeas quedarte en la casa más de 10 años y quieres valor a largo plazo.",
+      "Prefieres una apariencia consistente y uniforme que no cambie con el tiempo.",
+      "Quieres una garantía del fabricante de 25 a 50 años para tranquilidad.",
+      "Estás construyendo un deck de segundo piso o de difícil acceso donde el mantenimiento sería complicado.",
+    ],
+    whenCompositeSummary:
+      "El composite es la mejor opción general para propietarios que priorizan la conveniencia, durabilidad y ahorro a largo plazo sobre el menor costo inicial posible.",
+
+    whenWoodHeading: "Cuándo Elegir Deck de Madera",
+    whenWoodIntro: "El deck de madera tiene más sentido en estas situaciones:",
+    whenWoodItems: [
+      "Tu presupuesto inicial es limitado y necesitas minimizar el costo de construcción.",
+      "Te encanta la apariencia, sensación y aroma de la madera real y estás dispuesto a darle mantenimiento.",
+      "Vives en un clima extremadamente caluroso donde el composite sería incómodamente caliente al caminar descalzo.",
+      "Estás construyendo una estructura temporal o de corto plazo (horizonte de 5 a 10 años).",
+      "Disfrutas los proyectos de mantenimiento y ves el teñido anual como una actividad satisfactoria.",
+      "Quieres un deck de madera tropical (ipé, cumaru, tzalam) que ofrece belleza natural y durabilidad de 25+ años.",
+    ],
+    whenWoodSummary:
+      "La madera es ideal para constructores con presupuesto limitado, amantes de la madera natural, y proyectos donde la calidez y carácter de la madera real superen el compromiso de mantenimiento.",
+
+    calculatorCtaHeading: "Calcula tus Materiales para Deck",
+    calculatorCtaText: "Usa nuestras calculadoras gratuitas para estimar tablas, cimentación, barandal y escaleras para tu proyecto.",
+    calculatorLinks: [
+      { label: "Calculadora de Tablas para Deck", href: "/calculators/outdoor/deck-board-calculator", description: "Estima las tablas necesarias para cualquier tamaño de deck." },
+      { label: "Calculadora de Cimentación para Deck", href: "/calculators/outdoor/deck-footing-calculator", description: "Calcula zapatas de concreto y distribución de postes." },
+      { label: "Calculadora de Barandal para Deck", href: "/calculators/outdoor/deck-railing-calculator", description: "Obtén cantidades de postes, balaustres y riel." },
+      { label: "Calculadora de Escaleras para Deck", href: "/calculators/outdoor/deck-stair-calculator", description: "Calcula escalones, largueros y tablas de huella." },
+    ],
+
+    faqHeading: "Preguntas Frecuentes",
+    faqs: [
+      {
+        question: "¿Vale la pena el costo extra del deck composite?",
+        answer:
+          "Sí, para la mayoría de los propietarios. Aunque el composite cuesta 2-4 veces más al inicio, elimina $30,000 a $80,000 MXN en costos de mantenimiento en 20 años y dura 25-50 años versus 10-15 para madera tratada. El punto de equilibrio es típicamente entre 12 y 15 años. Si planeas quedarte en tu casa a largo plazo, el composite es casi siempre la mejor decisión financiera considerando el costo total de propiedad.",
+      },
+      {
+        question: "¿El deck composite se calienta demasiado para caminar?",
+        answer:
+          "El deck composite absorbe más calor que la madera, especialmente los colores oscuros. En un día de 35°C bajo sol directo, el composite oscuro puede alcanzar 60-75°C, lo cual es incómodo para pies descalzos. Los colores claros se mantienen 10-15°C más frescos. Las estrategias para mitigar el calor incluyen elegir colores claros, agregar estructuras de sombra, y usar tapetes exteriores en áreas de pies descalzos. La madera se mantiene 5-10°C más fresca que el composite en las mismas condiciones.",
+      },
+      {
+        question: "¿Cuánto dura el deck composite?",
+        answer:
+          "El deck composite de calidad de fabricantes principales (Trex, TimberTech, Fiberon) dura 25 a 50 años con mantenimiento mínimo. La mayoría tienen garantías estructurales de 25 años y garantías de decoloración y manchas de 25 a 50 años. Los composites modernos con capa protectora han resuelto en gran medida los problemas de moho y decoloración que tenían los productos de primera generación.",
+      },
+      {
+        question: "¿Se puede pintar o teñir el deck composite?",
+        answer:
+          "El deck composite con capa protectora no debe pintarse ni teñirse porque la capa de polímero impide la adhesión, y la pintura se despegará en 1-2 temporadas. Las tablas composite sin capa o más antiguas pueden pintarse con pintura exterior de color sólido después de limpieza profunda y aplicación de sellador de adherencia. Si quieres cambiar el color de un deck composite, busca recubrimientos específicos para composite.",
+      },
+      {
+        question: "¿Qué es más ecológico: composite o madera?",
+        answer:
+          "Ambos tienen pros y contras ambientales. El composite usa materiales reciclados (Trex usa 95% de contenido reciclado) y su larga vida útil significa menos reemplazos. Sin embargo, no es biodegradable y es difícil de reciclar al final de su vida. La madera es un recurso renovable y biodegradable que captura carbono, pero la madera tratada contiene conservantes químicos y tiene vida útil más corta. La madera certificada FSC de cosecha sustentable tiene el menor impacto ambiental, mientras que el composite gana en longevidad y contenido reciclado.",
+      },
+      {
+        question: "¿Puedo combinar composite y madera en el mismo deck?",
+        answer:
+          "Sí, muchos constructores usan una estructura de madera tratada (postes, trabes, viguetas) con tablas composite y barandal encima. Este es el enfoque estándar ya que las tablas composite están diseñadas como superficie, no como miembros estructurales. La estructura de madera tratada proporciona el soporte estructural a menor costo, mientras que la superficie composite brinda los beneficios de bajo mantenimiento donde ves y tocas el deck.",
       },
     ],
   },
