@@ -100,8 +100,6 @@ export default function CalculatorShell({
           {/* Calculator widget */}
           <div className="mb-8">{children}</div>
 
-          <AdBlock slot="after-results" className="mb-8" />
-
           <ClusterLinks calculatorSlug={slug} categorySlug={categorySlug} />
 
           {/* How to use */}

@@ -206,7 +206,6 @@ export default function HowMuchPaintGuidePage() {
         </div>
       </section>
 
-      <AdBlock slot="after-results" className="mb-10" />
 
       {/* Trim Paint */}
       <section className="mb-10">

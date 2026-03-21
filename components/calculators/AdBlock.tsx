@@ -1,12 +1,11 @@
 interface AdBlockProps {
-  slot: "hero" | "middle" | "after-results" | "sidebar";
+  slot: "hero" | "middle" | "sidebar";
   className?: string;
 }
 
 const slotSizes: Record<AdBlockProps["slot"], { label: string; height: string }> = {
   hero: { label: "728x90 — Leaderboard", height: "h-24" },
   middle: { label: "728x90 — Mid-Page", height: "h-24" },
-  "after-results": { label: "336x280 — Rectangle", height: "h-28" },
   sidebar: { label: "300x250 — Sidebar Rectangle", height: "h-64" },
 };
 

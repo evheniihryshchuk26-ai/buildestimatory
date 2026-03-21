@@ -234,7 +234,6 @@ export default function MinimumRoofPitchGuidePage() {
         </p>
       </section>
 
-      <AdBlock slot="after-results" className="mb-10" />
 
       {/* Solutions for Low-Slope Roofs */}
       <section className="mb-10">

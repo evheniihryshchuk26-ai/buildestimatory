@@ -224,7 +224,6 @@ export default function ConcreteCostGuidePage() {
         </div>
       </section>
 
-      <AdBlock slot="after-results" className="mb-10" />
 
       {/* Cost-Saving Tips */}
       <section className="mb-10">

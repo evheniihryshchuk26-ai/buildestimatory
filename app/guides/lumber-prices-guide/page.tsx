@@ -212,7 +212,6 @@ export default function LumberPricesGuidePage() {
         </p>
       </section>
 
-      <AdBlock slot="after-results" className="mb-10" />
 
       {/* Bulk Discounts */}
       <section className="mb-10">

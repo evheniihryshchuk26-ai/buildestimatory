@@ -240,7 +240,6 @@ export default function SpacingGuidePage() {
         </p>
       </section>
 
-      <AdBlock slot="after-results" className="mb-10" />
 
       {/* Cost Comparison */}
       <section className="mb-10">

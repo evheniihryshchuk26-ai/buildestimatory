@@ -244,7 +244,6 @@ export default function CompositeVsWoodDeckingPage() {
         </p>
       </section>
 
-      <AdBlock slot="after-results" className="mb-10" />
 
       {/* Calculator CTA */}
       <section className="mb-10 bg-orange-50 border border-orange-200 rounded-xl p-6">

@@ -277,7 +277,6 @@ export default function RoofPitchChartGuidePage() {
         </ul>
       </section>
 
-      <AdBlock slot="after-results" className="mb-10" />
 
       {/* Pitch by Climate */}
       <section className="mb-10">
