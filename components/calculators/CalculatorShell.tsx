@@ -2,7 +2,11 @@ import { ReactNode } from "react";
 import Breadcrumb from "@/components/layout/Breadcrumb";
 import AdBlock from "@/components/calculators/AdBlock";
 import FAQSection from "@/components/calculators/FAQSection";
-import { breadcrumbSchema, howToSchema } from "@/lib/seo/schemas";
+import RelatedCalculators from "@/components/calculators/RelatedCalculators";
+import { breadcrumbSchema, howToSchema, webApplicationSchema } from "@/lib/seo/schemas";
+import { getCommonTranslations } from "@/lib/i18n/translations";
+
+const t = getCommonTranslations();
 
 interface FAQ {
   question: string;
@@ -37,8 +41,8 @@ export default function CalculatorShell({
   children,
 }: CalculatorShellProps) {
   const crumbs = breadcrumbSchema([
-    { name: "Home", url: "/" },
-    { name: "Calculators", url: "/calculators/" },
+    { name: t.breadcrumb.home, url: "/" },
+    { name: t.breadcrumb.calculators, url: "/calculators/" },
     { name: categoryLabel, url: `/calculators/${categorySlug}/` },
     { name: title, url: `/calculators/${categorySlug}/${slug}/` },
   ]);
@@ -62,10 +66,23 @@ export default function CalculatorShell({
           ),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            webApplicationSchema({
+              name: title,
+              description,
+              categorySlug,
+              slug,
+            })
+          ),
+        }}
+      />
 
       <Breadcrumb
         items={[
-          { label: "Calculators", href: "/calculators" },
+          { label: t.breadcrumb.calculators, href: "/calculators" },
           { label: categoryLabel, href: `/calculators/${categorySlug}` },
           { label: title },
         ]}
@@ -86,7 +103,7 @@ export default function CalculatorShell({
 
           {/* How to use */}
           <section className="mb-10">
-            <h2 className="text-xl font-bold text-gray-900 mb-4">How to Use This Calculator</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-4">{t.calculator.howToUseHeading}</h2>
             <ol className="space-y-2">
               {howToUse.map((step, i) => (
                 <li key={i} className="flex gap-3 text-gray-600">
@@ -103,17 +120,17 @@ export default function CalculatorShell({
 
           {/* Material info */}
           <section className="mb-10">
-            <h2 className="text-xl font-bold text-gray-900 mb-3">About This Material</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-3">{t.calculator.aboutMaterialHeading}</h2>
             <p className="text-gray-600 leading-relaxed">{materialInfo}</p>
           </section>
 
           {/* Installation tips */}
           <section className="mb-10">
-            <h2 className="text-lg font-bold text-gray-900 mb-3">Installation Tips</h2>
+            <h2 className="text-lg font-bold text-gray-900 mb-3">{t.calculator.installationTipsHeading}</h2>
             <ul className="space-y-2">
               {installationTips.map((tip, i) => (
                 <li key={i} className="flex gap-2 text-gray-600">
-                  <span className="text-orange-500 mt-1">•</span>
+                  <span className="text-orange-500 mt-1">{"\u2022"}</span>
                   {tip}
                 </li>
               ))}
@@ -122,18 +139,23 @@ export default function CalculatorShell({
 
           {/* Common mistakes */}
           <section className="mb-10">
-            <h2 className="text-lg font-bold text-gray-900 mb-3">Common Mistakes to Avoid</h2>
+            <h2 className="text-lg font-bold text-gray-900 mb-3">{t.calculator.commonMistakesHeading}</h2>
             <ul className="space-y-2">
               {commonMistakes.map((mistake, i) => (
                 <li key={i} className="flex gap-2 text-gray-600">
-                  <span className="text-red-400 mt-1" aria-hidden="true">⚠</span>
+                  <span className="text-red-400 mt-1" aria-hidden="true">{"\u26A0"}</span>
                   {mistake}
                 </li>
               ))}
             </ul>
           </section>
 
-          <FAQSection faqs={faqs} />
+          <FAQSection faqs={faqs} title={t.calculator.faqHeading} />
+
+          <RelatedCalculators
+            categorySlug={categorySlug}
+            currentCalculatorSlug={slug}
+          />
         </div>
 
         {/* Sidebar */}
@@ -141,10 +163,9 @@ export default function CalculatorShell({
           <div className="sticky top-24 space-y-6">
             <AdBlock slot="sidebar" />
             <div className="bg-orange-50 border border-orange-200 rounded-xl p-5">
-              <h3 className="font-bold text-orange-800 mb-3">Quick Tip</h3>
+              <h3 className="font-bold text-orange-800 mb-3">{t.calculator.quickTipHeading}</h3>
               <p className="text-sm text-orange-700 leading-relaxed">
-                Always add 10% waste factor to your material orders. Construction always
-                produces off-cuts, and running short mid-project is costly.
+                {t.calculator.quickTipBody}
               </p>
             </div>
           </div>

@@ -6,6 +6,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import ResultCard, { ResultItem } from "@/components/calculators/ResultCard";
+import { getCommonTranslations } from "@/lib/i18n/translations";
+
+const t = getCommonTranslations();
 
 export interface FieldConfig {
   id: string;
@@ -46,7 +49,7 @@ export default function CalculatorForm({ fields, onCalculate, disclaimer }: Calc
       } else {
         const n = parseFloat(values[field.id]);
         if (isNaN(n) || n < 0) {
-          setError(`Please enter a valid number for "${field.label}".`);
+          setError(t.calculator.validationError(field.label));
           return;
         }
         parsed[field.id] = n;
@@ -61,7 +64,7 @@ export default function CalculatorForm({ fields, onCalculate, disclaimer }: Calc
     <div className="space-y-6">
       <Card>
         <CardHeader>
-          <CardTitle className="text-lg">Enter Your Measurements</CardTitle>
+          <CardTitle className="text-lg">{t.calculator.enterMeasurements}</CardTitle>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -114,7 +117,7 @@ export default function CalculatorForm({ fields, onCalculate, disclaimer }: Calc
               type="submit"
               className="w-full bg-orange-500 hover:bg-orange-600 text-white"
             >
-              Calculate Materials
+              {t.calculator.calculateMaterials}
             </Button>
           </form>
         </CardContent>

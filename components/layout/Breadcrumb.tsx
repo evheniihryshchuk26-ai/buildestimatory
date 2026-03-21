@@ -1,4 +1,7 @@
 import Link from "next/link";
+import { getCommonTranslations } from "@/lib/i18n/translations";
+
+const t = getCommonTranslations();
 
 interface BreadcrumbItem {
   label: string;
@@ -11,7 +14,7 @@ export default function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
       <ol className="flex items-center flex-wrap gap-1">
         <li>
           <Link href="/" className="hover:text-orange-500 transition-colors">
-            Home
+            {t.breadcrumb.home}
           </Link>
         </li>
         {items.map((item, i) => (

@@ -6,6 +6,7 @@ import Breadcrumb from "@/components/layout/Breadcrumb";
 import MaterialCard from "@/components/calculators/MaterialCard";
 import AdBlock from "@/components/calculators/AdBlock";
 import { breadcrumbSchema } from "@/lib/seo/schemas";
+import { getCommonTranslations } from "@/lib/i18n/translations";
 
 const categoryIcons: Record<string, string> = {
   foundation: "🏛️",
@@ -45,9 +46,11 @@ export default async function CategoryPage({
   const cat = getCategoryBySlug(category);
   if (!cat) notFound();
 
+  const t = getCommonTranslations();
+
   const crumbSchema = breadcrumbSchema([
-    { name: "Home", url: "/" },
-    { name: "Calculators", url: "/calculators" },
+    { name: t.breadcrumb.home, url: "/" },
+    { name: t.breadcrumb.calculators, url: "/calculators" },
     { name: cat.title, url: `/calculators/${cat.slug}` },
   ]);
 
@@ -60,7 +63,7 @@ export default async function CategoryPage({
 
       <Breadcrumb
         items={[
-          { label: "Calculators", href: "/calculators" },
+          { label: t.breadcrumb.calculators, href: "/calculators" },
           { label: cat.title },
         ]}
       />
@@ -89,7 +92,7 @@ export default async function CategoryPage({
       {/* Internal links to other categories */}
       <section className="mt-16">
         <h2 className="text-xl font-bold text-gray-900 mb-4">
-          Other Calculator Categories
+          {t.categoryPage.otherCategories}
         </h2>
         <div className="flex flex-wrap gap-3">
           {categories

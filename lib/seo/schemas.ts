@@ -79,3 +79,30 @@ export function howToSchema({
     })),
   };
 }
+
+export function webApplicationSchema({
+  name,
+  description,
+  categorySlug,
+  slug,
+}: {
+  name: string;
+  description: string;
+  categorySlug: string;
+  slug: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name,
+    description,
+    url: `${siteConfig.url}/calculators/${categorySlug}/${slug}/`,
+    applicationCategory: "UtilityApplication",
+    operatingSystem: "Any",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+    },
+  };
+}

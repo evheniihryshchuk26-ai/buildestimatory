@@ -11,6 +11,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     { url: `${baseUrl}/`, lastModified, changeFrequency: "weekly", priority: 1 },
     { url: `${baseUrl}/calculators/`, lastModified, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${baseUrl}/guides/`, lastModified, changeFrequency: "weekly", priority: 0.8 },
+  ];
+
+  const guidePages: MetadataRoute.Sitemap = [
+    { url: `${baseUrl}/guides/16-vs-24-on-center-spacing/`, lastModified, changeFrequency: "monthly", priority: 0.8 },
   ];
 
   const categoryPages: MetadataRoute.Sitemap = categories.map((cat) => ({
@@ -29,5 +34,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
-  return [...staticPages, ...categoryPages, ...calculatorPages];
+  return [...staticPages, ...guidePages, ...categoryPages, ...calculatorPages];
 }

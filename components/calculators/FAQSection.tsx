@@ -2,14 +2,19 @@
 
 import { useState } from "react";
 import { faqSchema } from "@/lib/seo/schemas";
+import { getCommonTranslations } from "@/lib/i18n/translations";
+
+const t = getCommonTranslations();
 
 interface FAQ {
   question: string;
   answer: string;
 }
 
-export default function FAQSection({ faqs, title = "Frequently Asked Questions" }: { faqs: FAQ[]; title?: string }) {
+export default function FAQSection({ faqs, title }: { faqs: FAQ[]; title?: string }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const heading = title ?? t.calculator.faqHeading;
 
   return (
     <section className="mt-12">
@@ -17,7 +22,7 @@ export default function FAQSection({ faqs, title = "Frequently Asked Questions" 
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }}
       />
-      <h2 className="text-2xl font-bold text-gray-900 mb-6">{title}</h2>
+      <h2 className="text-2xl font-bold text-gray-900 mb-6">{heading}</h2>
       <div className="space-y-3">
         {faqs.map((faq, i) => (
           <div
@@ -31,7 +36,7 @@ export default function FAQSection({ faqs, title = "Frequently Asked Questions" 
             >
               <span className="font-medium text-gray-900 pr-4">{faq.question}</span>
               <span className="text-gray-600 shrink-0 text-lg" aria-hidden="true">
-                {openIndex === i ? "−" : "+"}
+                {openIndex === i ? "\u2212" : "+"}
               </span>
             </button>
             {openIndex === i && (

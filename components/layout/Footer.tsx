@@ -1,5 +1,9 @@
 import Link from "next/link";
 import { categories } from "@/content/calculators";
+import { getCommonTranslations, getGuidesTranslations } from "@/lib/i18n/translations";
+
+const t = getCommonTranslations();
+const g = getGuidesTranslations();
 
 export default function Footer() {
   return (
@@ -8,19 +12,18 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <span className="text-xl" aria-hidden="true">🏗️</span>
+              <span className="text-xl" aria-hidden="true">{"\uD83C\uDFD7\uFE0F"}</span>
               <span className="font-bold text-white">
                 Build<span className="text-orange-400">Estimatory</span>
               </span>
             </Link>
             <p className="text-sm leading-relaxed">
-              Free construction material calculators for US builders, contractors,
-              and DIY home builders.
+              {t.footer.tagline}
             </p>
           </div>
 
           <div>
-            <h3 className="text-white font-semibold mb-3">Calculators</h3>
+            <h3 className="text-white font-semibold mb-3">{t.footer.calculatorsHeading}</h3>
             <ul className="space-y-2 text-sm">
               {categories.slice(0, 4).map((cat) => (
                 <li key={cat.slug}>
@@ -36,7 +39,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-white font-semibold mb-3">More Tools</h3>
+            <h3 className="text-white font-semibold mb-3">{t.footer.moreToolsHeading}</h3>
             <ul className="space-y-2 text-sm">
               {categories.slice(4).map((cat) => (
                 <li key={cat.slug}>
@@ -52,16 +55,21 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-white font-semibold mb-3">Site</h3>
+            <h3 className="text-white font-semibold mb-3">{t.footer.siteHeading}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/" className="hover:text-orange-400 transition-colors">
-                  Home
+                  {t.nav.home}
                 </Link>
               </li>
               <li>
                 <Link href="/calculators" className="hover:text-orange-400 transition-colors">
-                  All Calculators
+                  {t.nav.allCalculators}
+                </Link>
+              </li>
+              <li>
+                <Link href="/guides" className="hover:text-orange-400 transition-colors">
+                  {g.breadcrumbGuides}
                 </Link>
               </li>
             </ul>
@@ -70,10 +78,10 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
           <p>
-            &copy; {new Date().getFullYear()} BuildEstimatory.com — Free construction calculators for US builders.
+            {t.footer.copyright.replace("{year}", String(new Date().getFullYear()))}
           </p>
           <p className="mt-1 text-sm text-gray-600">
-            Results are estimates. Always verify with a licensed contractor.
+            {t.footer.disclaimer}
           </p>
         </div>
       </div>

@@ -1,11 +1,27 @@
 import { Metadata } from "next";
+import { getLocaleConfig, locales, localeList } from "@/lib/i18n/config";
+import { getCommonTranslations } from "@/lib/i18n/translations";
 
-export const siteConfig = {
-  name: "BuildEstimatory",
-  url: "https://buildestimatory.com",
-  description:
-    "Free construction material calculators for US builders and contractors. Get accurate material estimates for framing, roofing, foundation, and more.",
-};
+function getSiteConfig() {
+  const config = getLocaleConfig();
+  const t = getCommonTranslations();
+  return {
+    name: "BuildEstimatory",
+    url: config.siteUrl,
+    description: t.layout.defaultDescription,
+  };
+}
+
+export const siteConfig = getSiteConfig();
+
+function buildHreflang(path: string): Record<string, string> {
+  const languages: Record<string, string> = {};
+  for (const locale of localeList) {
+    languages[locales[locale].lang] = `${locales[locale].siteUrl}${path}`;
+  }
+  languages["x-default"] = `${locales.en.siteUrl}${path}`;
+  return languages;
+}
 
 export function generateCalculatorMetadata({
   title,
@@ -19,7 +35,8 @@ export function generateCalculatorMetadata({
   category: string;
 }): Metadata {
   const fullTitle = `${title} | BuildEstimatory`;
-  const url = `${siteConfig.url}/calculators/${category}/${slug}/`;
+  const path = `/calculators/${category}/${slug}/`;
+  const url = `${siteConfig.url}${path}`;
 
   return {
     title: fullTitle,
@@ -47,6 +64,7 @@ export function generateCalculatorMetadata({
     },
     alternates: {
       canonical: url,
+      languages: buildHreflang(path),
     },
   };
 }
@@ -61,7 +79,8 @@ export function generateCategoryMetadata({
   category: string;
 }): Metadata {
   const fullTitle = `${title} | BuildEstimatory`;
-  const url = `${siteConfig.url}/calculators/${category}/`;
+  const path = `/calculators/${category}/`;
+  const url = `${siteConfig.url}${path}`;
 
   return {
     title: fullTitle,
@@ -89,6 +108,7 @@ export function generateCategoryMetadata({
     },
     alternates: {
       canonical: url,
+      languages: buildHreflang(path),
     },
   };
 }

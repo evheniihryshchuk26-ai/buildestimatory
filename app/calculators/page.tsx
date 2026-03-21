@@ -6,15 +6,16 @@ import AdBlock from "@/components/calculators/AdBlock";
 import MaterialCard from "@/components/calculators/MaterialCard";
 import { siteConfig } from "@/lib/seo/metadata";
 import { breadcrumbSchema } from "@/lib/seo/schemas";
+import { getCommonTranslations } from "@/lib/i18n/translations";
+
+const t = getCommonTranslations();
 
 export const metadata: Metadata = {
-  title: "Construction Material Calculators | BuildEstimatory",
-  description:
-    "Browse all free construction material calculators for US builders. Foundation, framing, roofing, siding, insulation, drywall, and hardware estimates.",
+  title: `${t.calculatorsIndex.title} | BuildEstimatory`,
+  description: t.layout.defaultDescription,
   openGraph: {
-    title: "Construction Material Calculators | BuildEstimatory",
-    description:
-      "Browse all free construction material calculators for US builders. Foundation, framing, roofing, siding, insulation, drywall, and hardware estimates.",
+    title: `${t.calculatorsIndex.title} | BuildEstimatory`,
+    description: t.layout.defaultDescription,
     url: `${siteConfig.url}/calculators/`,
     siteName: siteConfig.name,
     type: "website",
@@ -23,15 +24,14 @@ export const metadata: Metadata = {
         url: `${siteConfig.url}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: "Construction Material Calculators",
+        alt: t.calculatorsIndex.title,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Construction Material Calculators | BuildEstimatory",
-    description:
-      "Browse all free construction material calculators for US builders. Foundation, framing, roofing, siding, insulation, drywall, and hardware estimates.",
+    title: `${t.calculatorsIndex.title} | BuildEstimatory`,
+    description: t.layout.defaultDescription,
     images: [`${siteConfig.url}/og-image.png`],
   },
   alternates: {
@@ -40,27 +40,26 @@ export const metadata: Metadata = {
 };
 
 const categoryIcons: Record<string, string> = {
-  foundation: "🏛️",
-  "floor-framing": "🪵",
-  "wall-framing": "🔨",
-  roofing: "🏠",
-  "exterior-shell": "🧱",
-  "insulation-drywall": "🔩",
-  hardware: "🔧",
+  foundation: "\uD83C\uDFDB\uFE0F",
+  "floor-framing": "\uD83E\uDEB5",
+  "wall-framing": "\uD83D\uDD28",
+  roofing: "\uD83C\uDFE0",
+  "exterior-shell": "\uD83E\uDDF1",
+  "insulation-drywall": "\uD83D\uDD29",
+  hardware: "\uD83D\uDD27",
 };
 
 export default function CalculatorsPage() {
   const breadcrumbJsonLd = breadcrumbSchema([
-    { name: "Home", url: "/" },
-    { name: "Calculators", url: "/calculators/" },
+    { name: t.breadcrumb.home, url: "/" },
+    { name: t.breadcrumb.calculators, url: "/calculators/" },
   ]);
 
   const collectionJsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: "Construction Material Calculators",
-    description:
-      "Browse all free construction material calculators for US builders.",
+    name: t.calculatorsIndex.title,
+    description: t.layout.defaultDescription,
     url: `${siteConfig.url}/calculators/`,
     mainEntity: {
       "@type": "ItemList",
@@ -86,13 +85,13 @@ export default function CalculatorsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}
       />
-      <Breadcrumb items={[{ label: "Calculators" }]} />
+      <Breadcrumb items={[{ label: t.breadcrumb.calculators }]} />
 
       <h1 className="text-3xl font-extrabold text-gray-900 mb-3">
-        All Construction Calculators
+        {t.calculatorsIndex.title}
       </h1>
       <p className="text-gray-500 text-lg mb-8">
-        {categories.reduce((sum, c) => sum + c.calculators.length, 0)} free calculators covering every phase of timber-frame construction.
+        {t.calculatorsIndex.freeCalculatorsCount(categories.reduce((sum, c) => sum + c.calculators.length, 0))}
       </p>
 
       <AdBlock slot="hero" className="mb-10" />
@@ -102,14 +101,14 @@ export default function CalculatorsPage() {
           <section key={cat.slug}>
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-xl font-bold text-gray-900 flex items-center gap-2">
-                <span>{categoryIcons[cat.slug] ?? "📐"}</span>
+                <span>{categoryIcons[cat.slug] ?? "\uD83D\uDCD0"}</span>
                 {cat.title}
               </h2>
               <Link
                 href={`/calculators/${cat.slug}`}
                 className="text-sm text-orange-500 hover:text-orange-600 font-medium"
               >
-                View all →
+                {t.calculatorsIndex.viewAll}
               </Link>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">

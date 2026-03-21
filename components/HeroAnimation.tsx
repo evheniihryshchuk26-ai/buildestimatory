@@ -1,37 +1,41 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef } from "react";
+import { getCommonTranslations } from "@/lib/i18n/translations";
 
-/* ── animation data ─────────────────────────────────────────────── */
+const t = getCommonTranslations();
+const ha = t.heroAnimation;
+
+/* -- animation data ------------------------------------------------- */
 
 const CATEGORIES = [
-  { slug: "foundation", icon: "🏛️", label: "Foundation" },
-  { slug: "floor-framing", icon: "🪵", label: "Floor Framing" },
-  { slug: "wall-framing", icon: "🔨", label: "Wall Framing" },
-  { slug: "roofing", icon: "🏠", label: "Roofing" },
-  { slug: "exterior-shell", icon: "🧱", label: "Exterior Shell" },
-  { slug: "insulation-drywall", icon: "🔩", label: "Insulation & Drywall" },
-  { slug: "hardware", icon: "🔧", label: "Hardware" },
+  { slug: "foundation", icon: "\uD83C\uDFDB\uFE0F", label: ha.categoryFoundation },
+  { slug: "floor-framing", icon: "\uD83E\uDEB5", label: ha.categoryFloorFraming },
+  { slug: "wall-framing", icon: "\uD83D\uDD28", label: ha.categoryWallFraming },
+  { slug: "roofing", icon: "\uD83C\uDFE0", label: ha.categoryRoofing },
+  { slug: "exterior-shell", icon: "\uD83E\uDDF1", label: ha.categoryExteriorShell },
+  { slug: "insulation-drywall", icon: "\uD83D\uDD29", label: ha.categoryInsulationDrywall },
+  { slug: "hardware", icon: "\uD83D\uDD27", label: ha.categoryHardware },
 ];
 
 const CALCULATORS = [
-  { slug: "anchor-bolt", label: "Anchor Bolt Calculator" },
-  { slug: "sill-seal", label: "Sill Seal Calculator" },
-  { slug: "sill-plate", label: "Pressure Treated Sill Plate Calculator" },
+  { slug: "anchor-bolt", label: ha.calcAnchorBolt },
+  { slug: "sill-seal", label: ha.calcSillSeal },
+  { slug: "sill-plate", label: ha.calcSillPlate },
 ];
 
 const FIELDS = [
-  { id: "perimeter", label: "Foundation Perimeter", unit: "ft", value: "123" },
-  { id: "spacing", label: "Bolt Spacing", unit: "ft", value: "10" },
+  { id: "perimeter", label: ha.foundationPerimeter, unit: ha.foundationPerimeterUnit, value: "123" },
+  { id: "spacing", label: ha.boltSpacing, unit: ha.boltSpacingUnit, value: "10" },
 ];
 
 const RESULTS = [
-  { label: "13 anchor bolts (10 ft spacing)", icon: "✓" },
+  { label: ha.anchorBoltResult, icon: "\u2713" },
 ];
 
-const DISCLAIMER = "Add 10–15% to your order as a waste factor for cuts and mistakes.";
+const DISCLAIMER = ha.disclaimer;
 
-/* ── timing constants (ms) ──────────────────────────────────────── */
+/* -- timing constants (ms) ------------------------------------------ */
 
 const PAUSE_BEFORE_START = 800;
 const CURSOR_MOVE_DURATION = 600;
@@ -43,7 +47,7 @@ const PAUSE_BETWEEN_FIELDS = 300;
 const RESULT_DISPLAY = 3000;
 const PAUSE_BEFORE_RESET = 1500;
 
-/* ── component ──────────────────────────────────────────────────── */
+/* -- component ------------------------------------------------------ */
 
 type Phase =
   | "idle"
@@ -102,7 +106,7 @@ export default function HeroAnimation() {
     [wait]
   );
 
-  /* ── main animation loop ────────────────────────────────────── */
+  /* -- main animation loop ---------------------------------------- */
 
   const runAnimation = useCallback(async () => {
     if (!mountedRef.current) return;
@@ -225,7 +229,7 @@ export default function HeroAnimation() {
     setShowResults(true);
     await wait(RESULT_DISPLAY);
 
-    // Done — pause then restart
+    // Done -- pause then restart
     setPhase("done");
     await wait(PAUSE_BEFORE_RESET);
 
@@ -243,7 +247,7 @@ export default function HeroAnimation() {
     };
   }, [runAnimation]);
 
-  /* ── render ─────────────────────────────────────────────────── */
+  /* -- render ----------------------------------------------------- */
 
   return (
     <div className="relative w-full select-none pointer-events-none">
@@ -251,9 +255,9 @@ export default function HeroAnimation() {
         {/* Header */}
         <div className="bg-gray-50 border-b border-gray-200 px-5 py-3 flex items-center gap-2">
           <span className="text-orange-500 text-lg" aria-hidden="true">
-            📐
+            {"\uD83D\uDCD0"}
           </span>
-          <span className="font-semibold text-gray-700 text-sm">Quick Calculator</span>
+          <span className="font-semibold text-gray-700 text-sm">{ha.quickCalculator}</span>
         </div>
 
         <div className="p-5 space-y-4">
@@ -264,7 +268,7 @@ export default function HeroAnimation() {
               style={{ opacity: currentStep === 1 ? 1 : 0 }}
             >
               <p className="block text-sm font-medium text-gray-600 mb-2 uppercase tracking-wide">
-                1. Choose Category
+                {ha.chooseCategory}
               </p>
               <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
                 {CATEGORIES.map((cat) => (
@@ -293,11 +297,11 @@ export default function HeroAnimation() {
             <div className="animate-fade-in">
               <div className="flex items-center gap-2 mb-3">
                 <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-orange-100 text-orange-700 text-xs font-medium">
-                  🏛️ Foundation
+                  {"\uD83C\uDFDB\uFE0F"} {ha.foundation}
                 </span>
               </div>
               <p className="block text-sm font-medium text-gray-600 mb-2 uppercase tracking-wide">
-                2. Select Calculator
+                {ha.selectCalculator}
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {CALCULATORS.map((calc) => (
@@ -323,16 +327,16 @@ export default function HeroAnimation() {
             <div className="animate-fade-in space-y-4">
               <div className="flex items-center gap-2 mb-1">
                 <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-orange-100 text-orange-700 text-xs font-medium">
-                  🏛️ Foundation
+                  {"\uD83C\uDFDB\uFE0F"} {ha.foundation}
                 </span>
-                <span className="text-gray-400">→</span>
+                <span className="text-gray-400">{"\u2192"}</span>
                 <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-orange-100 text-orange-700 text-xs font-medium">
-                  Anchor Bolt
+                  {ha.anchorBolt}
                 </span>
               </div>
               <div>
                 <p className="block text-sm font-medium text-gray-600 mb-2 uppercase tracking-wide">
-                  3. Enter Measurements
+                  {ha.enterMeasurements}
                 </p>
                 <div className="grid grid-cols-2 gap-3">
                   {FIELDS.map((field) => (
@@ -365,7 +369,7 @@ export default function HeroAnimation() {
                   buttonHovered ? "bg-orange-600 shadow-md" : "bg-orange-500"
                 }`}
               >
-                Calculate Materials
+                {ha.calculateMaterials}
               </div>
             </div>
           )}
@@ -375,18 +379,18 @@ export default function HeroAnimation() {
             <div className="animate-fade-in space-y-4">
               <div className="flex items-center gap-2 mb-1">
                 <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-orange-100 text-orange-700 text-xs font-medium">
-                  🏛️ Foundation
+                  {"\uD83C\uDFDB\uFE0F"} {ha.foundation}
                 </span>
-                <span className="text-gray-400">→</span>
+                <span className="text-gray-400">{"\u2192"}</span>
                 <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-orange-100 text-orange-700 text-xs font-medium">
-                  Anchor Bolt
+                  {ha.anchorBolt}
                 </span>
               </div>
               <div className="bg-orange-50 border border-orange-200 rounded-xl p-4">
                 <div className="flex items-center gap-2 mb-3">
-                  <span aria-hidden="true">🛒</span>
-                  <span className="font-semibold text-orange-800 text-sm">Your Shopping List</span>
-                  <span className="text-sm text-gray-600 ml-auto">Anchor Bolt Calculator</span>
+                  <span aria-hidden="true">{"\uD83D\uDED2"}</span>
+                  <span className="font-semibold text-orange-800 text-sm">{ha.yourShoppingList}</span>
+                  <span className="text-sm text-gray-600 ml-auto">{ha.anchorBoltCalculator}</span>
                 </div>
                 <ul className="space-y-2">
                   {RESULTS.map((item, i) => (
@@ -396,14 +400,14 @@ export default function HeroAnimation() {
                       style={{ animationDelay: `${i * 150}ms` }}
                     >
                       <span className="inline-flex items-center justify-center h-5 w-5 rounded bg-orange-500 text-white text-xs shrink-0 mt-0.5">
-                        ✓
+                        {"\u2713"}
                       </span>
                       <span className="text-gray-800 text-sm font-medium">{item.label}</span>
                     </li>
                   ))}
                 </ul>
                 <p className="mt-3 text-sm text-gray-600 bg-white rounded p-2 border border-gray-200 animate-fade-in" style={{ animationDelay: "300ms" }}>
-                  ⚠️ {DISCLAIMER}
+                  {"\u26A0\uFE0F"} {DISCLAIMER}
                 </p>
               </div>
             </div>

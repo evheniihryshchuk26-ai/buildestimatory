@@ -5,15 +5,19 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { siteConfig } from "@/lib/seo/metadata";
 import { organizationSchema, webSiteSchema } from "@/lib/seo/schemas";
+import { getLocaleConfig } from "@/lib/i18n/config";
+import { getCommonTranslations } from "@/lib/i18n/translations";
 
 const geist = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
+const t = getCommonTranslations();
+
 export const metadata: Metadata = {
   title: {
-    default: "BuildEstimatory — Free Construction Material Calculators",
+    default: t.layout.defaultTitle,
     template: "%s | BuildEstimatory",
   },
   description: siteConfig.description,
@@ -21,13 +25,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: siteConfig.name,
-    locale: "en_US",
+    locale: getLocaleConfig().ogLocale,
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "BuildEstimatory — Free Construction Material Calculators",
+        alt: t.layout.ogImageAlt,
       },
     ],
   },
@@ -54,7 +58,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang={getLocaleConfig().lang}>
       <head>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-149E28B56S" />
         <script
