@@ -1429,3 +1429,589 @@ export const jointCompoundCalculator: CalculatorSEOContent = {
     { question: "Quanto costa lo stucco per giunti?", answer: "Un secchio da 25 kg di stucco premiscelato costa 10–30 € a seconda del marchio. Lo stucco a presa costa 6–18 € per sacco da 5 kg. Il nastro per giunti costa 3–6 € per rotolo da 75 m. Per un'intera casa preventivare 60–250 € per i materiali di stuccatura." },
   ],
 };
+
+// ─── FERRAMENTA ─────────────────────────────────────────────────────────────
+
+export const framingNailCalculator: CalculatorSEOContent = {
+  disclaimer: WASTE_DISCLAIMER,
+  howToUse: [
+    "Inserire il numero di montanti o elementi strutturali.",
+    "Selezionare il tipo e la dimensione del chiodo.",
+    "Specificare il metodo di fissaggio (chiodatura passante o inclinata).",
+    "Fare clic su Calcola Materiali per ottenere il conteggio totale dei chiodi e il peso in chilogrammi.",
+  ],
+  materialInfo:
+    "I chiodi da carpenteria sono utilizzati per assemblare la struttura in legno, fissando montanti ai correnti, travetti alle travi e rivestimento alla struttura. Nell'edilizia italiana i chiodi da carpenteria più comuni sono i chiodi tondi a gambo liscio o ad anello da 75 mm e 90 mm, zincati o lucidi, utilizzati con pistola sparachiodi o martello. Una tipica casa a telaio in legno utilizza 15–25 kg di chiodi da carpenteria. Le pistole sparachiodi utilizzano chiodi in stecca o in rotolo — le dimensioni comuni sono 75 mm × 3,1 mm per i collegamenti montante-corrente e 90 mm × 3,1 mm per i collegamenti corrente-corrente e travetto. I chiodi sfusi costano 4–10 € al kg presso i rivenditori edili. I chiodi in stecca per pistola costano 25–70 € per scatola da 2.000–3.000 chiodi. I chiodi ad anello (a gambo zigrinato) offrono migliore resistenza all'estrazione rispetto ai chiodi lisci e sono specificati per il rivestimento e i collegamenti critici. I chiodi zincati vanno utilizzati per qualsiasi applicazione esterna o con legno trattato per prevenire la corrosione. Per i collegamenti conformi all'Eurocodice 5 (UNI EN 1995-1-1), dimensione, interasse e distanze dai bordi dei chiodi devono rispettare le specifiche.",
+  nextSteps: [
+    { label: "Calcolatore Montanti", href: "/calculators/wall-framing/stud-calculator/" },
+    { label: "Calcolatore Staffe per Travetti", href: "/calculators/hardware/joist-hanger-calculator/" },
+    { label: "Calcolatore Viti per Cartongesso", href: "/calculators/insulation-drywall/drywall-screw-calculator/" },
+  ],
+  installationTips: [
+    "Utilizzare una pistola sparachiodi per velocità e uniformità nei grandi progetti di carpenteria.",
+    "Seguire lo schema di chiodatura specificato dall'ingegnere strutturista per ogni tipo di collegamento.",
+    "Pre-forare in prossimità delle teste del legno per prevenire le spaccature.",
+    "Utilizzare chiodi zincati per legno trattato e applicazioni esterne.",
+    "In zona sismica rispettare scrupolosamente gli schemi di chiodatura prescritti dal progettista.",
+  ],
+  commonMistakes: [
+    "Utilizzare chiodi lisci dove sono specificati chiodi ad anello — i chiodi lisci hanno resistenza all'estrazione molto inferiore.",
+    "Sovra-chiodare o sotto-chiodare il rivestimento — seguire l'interasse specificato per l'adeguatezza strutturale.",
+    "Utilizzare chiodi lucidi (non zincati) su legno trattato, dove i sali di trattamento accelerano la corrosione.",
+    "Non rispettare le distanze minime dai bordi del legno, causando spaccature.",
+    "Utilizzare una pistola sparachiodi con pressione eccessiva, affondando troppo i chiodi nel legno.",
+  ],
+  faqs: [
+    { question: "Quale dimensione di chiodi per la carpenteria in legno?", answer: "Utilizzare chiodi da 75 mm per collegamenti montante-corrente e da 90 mm per collegamenti corrente-corrente e travetto. Per il rivestimento usare chiodi ad anello da 50 mm o 63 mm. Seguire sempre le specifiche strutturali." },
+    { question: "Quanti chiodi per montante?", answer: "Ogni montante richiede 4 chiodi (2 a ogni estremità) per la chiodatura passante attraverso il corrente. La chiodatura inclinata richiede 3 chiodi per collegamento (2 da un lato, 1 dall'altro)." },
+    { question: "Chiodi ad anello o lisci?", answer: "I chiodi ad anello sono specificati per il rivestimento, il sottopavimento e altri collegamenti che richiedono alta resistenza all'estrazione. I chiodi lisci sono usati per la carpenteria generale dove il carico è principalmente a taglio." },
+    { question: "Quanto costano i chiodi da carpenteria in Italia?", answer: "I chiodi sfusi costano 4–10 € al kg. I chiodi in stecca per pistola sparachiodi costano 25–70 € per scatola (2.000–3.000 chiodi). Per una casa tipo preventivare 120–350 € per tutti i chiodi da carpenteria." },
+    { question: "Servono chiodi zincati?", answer: "Sì, per qualsiasi collegamento con legno trattato, applicazioni esterne o zone esposte all'umidità. I chiodi lucidi (non zincati) sono accettabili solo per collegamenti interni con legno non trattato." },
+    { question: "Dove si acquistano i chiodi da carpenteria in Italia?", answer: "I chiodi da carpenteria sono disponibili presso Würth, Bricoman, Leroy Merlin, ferramenta e rivenditori edili. I chiodi in stecca per pistole specifiche (Paslode, DeWalt, Hitachi/Hikoki) sono stoccati da tutti i principali fornitori di utensili." },
+  ],
+};
+
+export const joistHangerCalculator: CalculatorSEOContent = {
+  disclaimer: WASTE_DISCLAIMER,
+  howToUse: [
+    "Inserire il numero di travetti del solaio.",
+    "Selezionare il tipo di staffa per la dimensione del travetto.",
+    "Specificare se servono staffe su una o entrambe le estremità.",
+    "Fare clic su Calcola Materiali per ottenere il conteggio delle staffe.",
+  ],
+  materialInfo:
+    "Le staffe per travetti sono connettori in acciaio zincato che sostengono l'estremità di un travetto del solaio o di un rompitratta dove incontra una trave, una parete o un architrave. Forniscono un collegamento robusto e affidabile senza la necessità di inserire il travetto nella muratura. Nell'edilizia italiana le staffe per travetti sono specificate per conformarsi alla UNI EN 14545 e sono prodotte da Simpson Strong-Tie, Rothoblaas e altri. I tipi standard includono staffe a fissaggio frontale (chiodate sulla faccia dell'elemento portante), staffe da muratura (murate nella malta) e staffe nascoste. Le staffe sono dimensionate per la sezione del travetto: le misure comuni sono 6×20 cm, 6×22 cm e 6×25 cm per travetti domestici standard. Ogni staffa costa 3–8 € presso Würth, Bricoman o rivenditori edili. Le staffe devono essere fissate con i chiodi o le viti specificati dal produttore — non usare mai chiodi ordinari che non hanno la resistenza a taglio richiesta. Ogni travetto necessita tipicamente di una staffa a ogni estremità, quindi il conteggio totale è il doppio del numero di travetti.",
+  nextSteps: [
+    { label: "Calcolatore Travetti Solaio", href: "/calculators/floor-framing/floor-joist-calculator/" },
+    { label: "Calcolatore Squadrette Antisismiche", href: "/calculators/hardware/hurricane-tie-calculator/" },
+    { label: "Calcolatore Chiodi da Carpenteria", href: "/calculators/hardware/framing-nail-calculator/" },
+  ],
+  installationTips: [
+    "Utilizzare la staffa della dimensione corretta per il travetto — il travetto deve inserirsi perfettamente nella staffa.",
+    "Fissare con i chiodi specificati dal produttore (tipicamente 30 mm × 3,75 mm o 40 mm × 4 mm zincati).",
+    "Riempire ogni foro della staffa — i fori vuoti riducono la resistenza del collegamento.",
+    "Verificare che la staffa sia in bolla e il travetto sia completamente appoggiato sulla sede della staffa.",
+    "Per i travetti ingegnerizzati (a I) utilizzare le staffe specifiche del produttore.",
+  ],
+  commonMistakes: [
+    "Utilizzare una staffa della dimensione sbagliata per il travetto, permettendo al travetto di inserirsi in modo allentato o non completamente supportato.",
+    "Non riempire tutti i fori per i chiodi — ogni foro vuoto riduce la capacità portante del collegamento.",
+    "Utilizzare chiodi ordinari al posto dei chiodi specifici del produttore.",
+    "Non verificare che il travetto sia completamente appoggiato sulla sede della staffa.",
+    "Omettere le staffe su un lato del travetto quando entrambe le estremità necessitano di supporto.",
+  ],
+  faqs: [
+    { question: "Quante staffe per travetto?", answer: "Ogni travetto necessita tipicamente di una staffa a ogni estremità supportata. Se entrambe le estremità sono supportate da pareti in muratura o travi, servono 2 staffe per travetto. Se un'estremità è murata nella parete, serve 1 staffa." },
+    { question: "Quali chiodi per le staffe?", answer: "Utilizzare solo i chiodi specificati dal produttore. Simpson Strong-Tie specifica chiodi da 30 mm × 3,75 mm o 40 mm × 4 mm zincati per le proprie staffe. L'uso di chiodi ordinari invalida la capacità nominale." },
+    { question: "Servono staffe per ogni travetto?", answer: "Le staffe sono necessarie ovunque un travetto incontra una parete, una trave o un architrave portante e non può essere murato o appoggiato sulla sommità del supporto. Nelle costruzioni in legno le staffe sono utilizzate in praticamente ogni collegamento di travetto." },
+    { question: "Quanto costano le staffe in Italia?", answer: "Le staffe zincate standard costano 3–8 € ciascuna presso i rivenditori edili italiani. Le staffe nascoste o per carichi pesanti costano 10–25 €. Per una casa tipo preventivare 120–350 € per le staffe." },
+    { question: "Si possono usare viti al posto dei chiodi nelle staffe?", answer: "Solo se il produttore specifica le viti per quella staffa. La maggior parte delle staffe è progettata per chiodi. Se le viti sono consentite, utilizzare viti strutturali (come Simpson SDS) con il diametro e la lunghezza specificati." },
+    { question: "Dove si acquistano le staffe in Italia?", answer: "Le staffe per travetti sono disponibili presso Würth, Bricoman, Leroy Merlin, ferramenta e rivenditori edili. Simpson Strong-Tie e Rothoblaas sono i marchi più diffusi in Italia." },
+  ],
+};
+
+export const hurricaneTieCalculator: CalculatorSEOContent = {
+  disclaimer: WASTE_DISCLAIMER,
+  howToUse: [
+    "Inserire il numero di capriate o puntoni.",
+    "Selezionare il tipo di squadretta.",
+    "Specificare la zona sismica dell'edificio.",
+    "Fare clic su Calcola Materiali per ottenere il conteggio delle squadrette.",
+  ],
+  materialInfo:
+    "Le squadrette antisismiche (o connettori capriata-parete) sono connettori in acciaio zincato che fissano le capriate o i puntoni al dormiente della parete sottostante. Resistono alle forze di sollevamento del vento e alle azioni sismiche che potrebbero sollevare il tetto dall'edificio. In Italia le squadrette sono richieste dalle NTC 2018 (cap. 7 per le costruzioni in zona sismica) e dall'Eurocodice 5 (UNI EN 1995-1-1) per fornire un collegamento positivo che resista al carico di sollevamento di progetto. Ogni capriata o puntone deve avere una squadretta a ogni punto di appoggio sul dormiente. Le squadrette standard (come Simpson Strong-Tie A35 o Rothoblaas equivalenti) costano 0,60–2,50 € ciascuna e sono fissate con chiodi da 30 mm × 3,75 mm zincati. Ogni squadretta richiede 4–6 chiodi per la piena capacità nominale. Nelle zone sismiche 1 e 2 (alta sismicità — Italia centro-meridionale, Friuli, Sicilia orientale) l'ingegnere strutturista può specificare squadrette rinforzate o reggette metalliche. Le reggette in acciaio zincato (30 mm × 5 mm) rappresentano un'alternativa, tirate dal puntone, sopra il dormiente e lungo la faccia interna della parete, fissate con chiodi a ogni punto di contatto con il legno.",
+  nextSteps: [
+    { label: "Calcolatore Capriate", href: "/calculators/roofing/truss-calculator/" },
+    { label: "Calcolatore Puntoni", href: "/calculators/roofing/rafter-calculator/" },
+    { label: "Calcolatore Staffe per Travetti", href: "/calculators/hardware/joist-hanger-calculator/" },
+  ],
+  installationTips: [
+    "Fissare una squadretta a ogni punto di appoggio della capriata o del puntone sul dormiente.",
+    "Utilizzare i chiodi specificati dal produttore e riempire ogni foro per la piena capacità nominale.",
+    "Installare le squadrette prima che il tetto sia caricato (prima della posa delle tegole) in modo che la capriata appoggi saldamente sul dormiente.",
+    "Nelle zone sismiche 1-2 combinare le squadrette con le reggette metalliche per una resistenza migliorata.",
+    "Verificare che il tipo di squadretta sia conforme alle prescrizioni del progettista strutturale.",
+  ],
+  commonMistakes: [
+    "Omettere le squadrette su alcune capriate — ogni capriata e puntone deve essere collegato al dormiente.",
+    "Non riempire tutti i fori per i chiodi, riducendo la resistenza al sollevamento sotto il valore di progetto.",
+    "Utilizzare squadrette inadeguate nelle zone sismiche dove sono necessari connettori rinforzati o reggette.",
+    "Utilizzare chiodi ordinari o viti al posto dei chiodi specifici del produttore.",
+    "Non verificare la zona sismica dell'edificio e i relativi requisiti di collegamento.",
+  ],
+  faqs: [
+    { question: "Le squadrette antisismiche sono obbligatorie per legge?", answer: "Sì. Le NTC 2018 richiedono che la struttura del tetto sia adeguatamente collegata alla struttura sottostante per resistere al sollevamento del vento e alle azioni sismiche. Le squadrette forniscono il metodo più comune ed economico per soddisfare questo requisito." },
+    { question: "Quante squadrette per capriata?", answer: "Ogni capriata necessita di una squadretta a ogni punto di appoggio sul dormiente — tipicamente 2 squadrette per capriata (una per lato). Se la capriata appoggia anche su una parete interna aggiungere un'altra squadretta in quel punto." },
+    { question: "Quali chiodi per le squadrette?", answer: "Utilizzare chiodi da 30 mm × 3,75 mm zincati come specificato dal produttore della squadretta. L'uso di chiodi ordinari o viti invalida la capacità nominale." },
+    { question: "Servono anche le reggette oltre alle squadrette?", answer: "Nelle zone sismiche 1-2 (alta sismicità) e nelle zone ventose il progettista strutturale può specificare reggette in acciaio zincato dal puntone, sopra il dormiente e lungo la parete interna, in aggiunta alle squadrette. In zona 3-4 le squadrette da sole sono generalmente sufficienti." },
+    { question: "Quanto costano le squadrette antisismiche?", answer: "Le squadrette standard costano 0,60–2,50 € ciascuna. Per una casa tipo con 30 capriate, preventivare 60 squadrette a 35–150 € in totale. Questo è trascurabile rispetto al costo della struttura del tetto." },
+    { question: "Dove si acquistano le squadrette in Italia?", answer: "Le squadrette antisismiche sono disponibili presso Würth, Bricoman, Leroy Merlin, ferramenta e rivenditori edili. Simpson Strong-Tie e Rothoblaas sono i principali marchi in Italia." },
+  ],
+};
+
+export const lumberCostCalculator: CalculatorSEOContent = {
+  disclaimer: "I prezzi sono medie italiane approssimative. I prezzi effettivi variano per regione, fornitore e condizioni di mercato.",
+  howToUse: [
+    "Selezionare la sezione del legname dal menu a tendina.",
+    "Inserire la quantità (numero di pezzi).",
+    "Inserire la lunghezza per pezzo in metri.",
+    "Fare clic su Calcola Materiali per ottenere la stima del costo totale in €.",
+  ],
+  materialInfo:
+    "Il legname strutturale di conifera (principalmente abete rosso, pino e larice) è il materiale fondamentale per le costruzioni in legno italiane. Il legname è classificato C16 o C24 secondo UNI EN 338, con C24 la classificazione a resistenza maggiore preferita per le applicazioni strutturali. Le sezioni comuni includono 4×9 cm, 6×14 cm, 6×16 cm, 6×20 cm e 6×25 cm, fornite in lunghezze standard di 2,40 m, 3,00 m, 3,60 m, 4,20 m e 4,80 m. I prezzi del legname in Italia fluttuano con i mercati globali, la domanda interna e le condizioni della catena di fornitura. I prezzi tipici presso i rivenditori edili sono 2–5 € al metro per 4×9 cm C16, 5–9 € al metro per 6×20 cm C24 e 7–14 € al metro per 6×25 cm C24. L'acquisto in pacchi completi o carichi completi da segherie locali, Bricoman o centri legno specializzati garantisce risparmi del 10–20 % rispetto all'acquisto al pezzo. Il legno trattato in autoclave costa il 15–25 % in più del non trattato. Il legname essiccato in forno (KD) è preferito al legno verde perché è dimensionalmente stabile e meno soggetto a deformazione e ritiro. In Italia il legname strutturale proviene principalmente dall'Austria, dalla Germania, dalla Scandinavia e dalle foreste alpine italiane (Trentino, Alto Adige).",
+  nextSteps: [
+    { label: "Calcolatore Montanti", href: "/calculators/wall-framing/stud-calculator/" },
+    { label: "Calcolatore Travetti Solaio", href: "/calculators/floor-framing/floor-joist-calculator/" },
+    { label: "Calcolatore Piedi Tavola", href: "/calculators/hardware/board-feet-calculator/" },
+  ],
+  installationTips: [
+    "Ispezionare il legname alla consegna per rettilineità, spaccature e marchi di classificazione — rifiutare i pezzi scadenti.",
+    "Stoccare il legname sollevato da terra su sostegni, coperto con telo traspirante per prevenire l'assorbimento di umidità.",
+    "Utilizzare legname essiccato in forno per la carpenteria interna per minimizzare ritiro e movimento.",
+    "Ordinare il 5–10 % in più per lo sfrido di taglio e i pezzi scartati.",
+    "Verificare la marcatura CE e la classificazione su ogni pezzo prima della posa.",
+  ],
+  commonMistakes: [
+    "Ordinare senza verificare i prezzi correnti — i prezzi del legname possono variare significativamente di mese in mese.",
+    "Utilizzare C16 dove è specificato C24 — il C16 ha resistenza inferiore e capacità di luce minore.",
+    "Non considerare lo sfrido — il 5–10 % di sfrido da taglio è normale in qualsiasi progetto di carpenteria.",
+    "Non verificare la provenienza e la certificazione del legname (PEFC, FSC).",
+    "Acquistare legno verde dove serve essiccato in forno, causando ritiri e deformazioni post-posa.",
+  ],
+  faqs: [
+    { question: "Qual è la differenza tra legname C16 e C24?", answer: "C16 e C24 sono classi di resistenza secondo UNI EN 338. Il C24 ha resistenza a flessione maggiore (24 N/mm² vs 16 N/mm²), rigidezza superiore e densità più alta. Il C24 si usa per applicazioni strutturali dove servono prestazioni maggiori. Il C24 costa il 10–20 % in più del C16." },
+    { question: "Dove si compra legname al miglior prezzo?", answer: "I rivenditori edili (Bricoman, centri legno specializzati) offrono prezzi da professionista, specialmente per ordini in volume. Il legname diretto da segherie (trentine, altoatesine, austriache) è il più economico per grandi quantità. Leroy Merlin e Obi sono più costosi ma comodi per piccole quantità." },
+    { question: "Quanto costa il legname al metro?", answer: "Come guida approssimativa: 4×9 cm C16 = 2–5 €/m, 6×20 cm C24 = 5–9 €/m, 6×25 cm C24 = 7–14 €/m. Il legname trattato aggiunge il 15–25 %. I prezzi variano per regione e fornitore." },
+    { question: "Meglio legno trattato o non trattato?", answer: "Utilizzare legno trattato in autoclave ovunque sia a contatto con calcestruzzo, muratura o terreno, o dove è esposto all'umidità. La carpenteria interna sopra il livello del suolo di solito non richiede trattamento." },
+    { question: "Qual è la differenza tra legno segato e piallato?", answer: "Il legno segato (grezzo) è tagliato alle dimensioni nominali e ha una superficie ruvida. Il legno piallato (PAR) è lavorato a macchina e tipicamente 3–5 mm più piccolo della dimensione nominale del segato. La carpenteria strutturale usa legno segato; il legno a vista usa legno piallato." },
+    { question: "Come si stima il legname per un'intera casa?", answer: "Una tipica villetta a 3 camere a telaio in legno utilizza circa 15–25 m³ di legname strutturale di conifera. Ai prezzi correnti italiani questo rappresenta 6.000–18.000 € per il solo legname, a seconda delle specifiche e delle condizioni di mercato." },
+  ],
+};
+
+export const boardFeetCalculator: CalculatorSEOContent = {
+  disclaimer: "I prezzi in piedi tavola si applicano principalmente ai legni duri. Il legno dolce è tipicamente venduto al metro lineare in Italia.",
+  howToUse: [
+    "Inserire spessore, larghezza e lunghezza del legname.",
+    "Inserire il prezzo per piede tavola.",
+    "Selezionare l'unità di misura di input.",
+    "Fare clic su Calcola Materiali per ottenere i piedi tavola totali e il costo.",
+  ],
+  materialInfo:
+    "Un piede tavola (board foot, BF) è un'unità di volume pari a 144 pollici cubici (un pezzo da 1 pollice di spessore × 12 pollici di larghezza × 12 pollici di lunghezza). È l'unità di prezzo standard per i legni duri in Nord America ed è utilizzata dai fornitori italiani di legno duro che importano da segherie nordamericane. La formula è: Piedi Tavola = (Spessore in pollici × Larghezza in pollici × Lunghezza in piedi) / 12. Si utilizzano le dimensioni nominali (non effettive). In Italia i legni duri sono anche venduti al metro cubo, con 1 m³ = 423,8 piedi tavola. I legni duri comuni disponibili presso i fornitori italiani includono rovere americano (da 22–45 € per BF), noce americano (38–65 € per BF), rovere europeo (28–55 € per BF), frassino (12–22 € per BF) e acero (16–35 € per BF). I rivenditori italiani di legno duro come Compensati Toro, Basso Legnami e rivenditori specializzati vendono sia a piede tavola che a metro cubo. Il legno duro è tipicamente venduto in larghezze e lunghezze casuali, quindi il sistema del piede tavola normalizza il prezzo indipendentemente dalle dimensioni del singolo pezzo.",
+  nextSteps: [
+    { label: "Calcolatore Costo Legname", href: "/calculators/hardware/lumber-cost-calculator/" },
+    { label: "Calcolatore Compensato", href: "/calculators/hardware/plywood-calculator/" },
+    { label: "Calcolatore Tavole per Terrazza", href: "/calculators/outdoor/deck-board-calculator/" },
+  ],
+  installationTips: [
+    "Aggiungere il 25–40 % di fattore di sfrido quando si acquista legno duro grezzo per progetti di falegnameria.",
+    "Chiedere al rivenditore di piallare le tavole per risparmiare tempo in laboratorio.",
+    "Specificare il grado FAS (First and Seconds) per progetti che richiedono facce pulite e prive di difetti.",
+    "Verificare il contenuto di umidità con un igrometro prima della lavorazione.",
+    "Acclimatare il legno duro nell'ambiente di destinazione per almeno 2 settimane prima della lavorazione.",
+  ],
+  commonMistakes: [
+    "Utilizzare le dimensioni effettive invece di quelle nominali — i piedi tavola si calcolano sempre con le misure nominali.",
+    "Non prevedere lo sfrido per piallatura, difetti e scarti.",
+    "Confrontare i prezzi per piede tavola tra specie diverse senza considerare densità e lavorabilità.",
+    "Non verificare il grado e la qualità del legno prima dell'acquisto.",
+    "Acquistare legno duro con contenuto di umidità troppo alto per l'uso previsto.",
+  ],
+  faqs: [
+    { question: "Cos'è un piede tavola?", answer: "Un piede tavola (BF) è un'unità di volume pari a 144 pollici cubici — un pezzo da 1 pollice di spessore, 12 pollici di larghezza e 1 piede di lunghezza. È l'unità di prezzo standard per il legno duro in Nord America e viene utilizzata anche da molti fornitori italiani di legno duro." },
+    { question: "Come si convertono i piedi tavola in metri cubi?", answer: "1 metro cubo = 423,8 piedi tavola. Per convertire BF in m³, dividere per 423,8. Ad esempio, 100 BF = 0,236 m³." },
+    { question: "Perché il legno duro è venduto a piede tavola?", answer: "Il legno duro viene fornito in larghezze e lunghezze casuali perché è segato da tronchi di dimensioni variabili. Il sistema del piede tavola normalizza il prezzo in base al volume indipendentemente dalle dimensioni del singolo pezzo." },
+    { question: "Dove si acquista il legno duro in Italia?", answer: "I rivenditori italiani di legno duro includono Compensati Toro, Basso Legnami, Garavini Legno e rivenditori specializzati. Molti vendono online con consegna. Le falegnamerie locali e i rivenditori di legname offrono anche scorte di legno duro." },
+    { question: "Quanto costa il legno duro in Italia?", answer: "Prezzi per piede tavola: frassino 12–22 €, rovere americano 22–45 €, rovere europeo 28–55 €, noce 38–65 €, acero 16–35 €. Le specie esotiche (teak, sapele, iroko) vanno da 35 € a 90 € per BF." },
+    { question: "Cos'è il grado FAS?", answer: "FAS (First and Seconds) è il grado standard più alto per il legno duro segato, che richiede almeno l'83 % di legno pulito (privo di difetti) sulla faccia. È il grado da specificare per mobili, falegnameria e qualsiasi progetto dove l'estetica conta." },
+  ],
+};
+
+export const plywoodCalculator: CalculatorSEOContent = {
+  disclaimer: "I prezzi si riferiscono al compensato standard in conifera. I pannelli speciali (marino, betulla, con faccia in legno duro) costano di più.",
+  howToUse: [
+    "Inserire l'area da coprire in metri quadrati.",
+    "Selezionare lo spessore del compensato.",
+    "Specificare il tipo di compensato (strutturale, marino, betulla).",
+    "Fare clic su Calcola Materiali per ottenere il conteggio dei pannelli e il costo stimato in €.",
+  ],
+  materialInfo:
+    "Il compensato è un pannello in legno ingegnerizzato composto da strati sottili (piallacci) di legno incollati con direzioni delle fibre alternate. Questa costruzione a fibre incrociate conferisce al compensato resistenza, rigidità e stabilità dimensionale superiori rispetto al legno massello dello stesso spessore. I pannelli standard misurano 125×250 cm (alcuni fornitori offrono anche 122×244 cm), con spessori comuni da 4 mm a 25 mm. I tipi comuni in Italia includono: compensato strutturale in conifera (per rivestimento, pavimentazione e copertura), compensato con faccia in legno duro (per mobili e falegnameria), compensato marino (UNI EN 636 — per nautica e ambienti umidi) e compensato in betulla (per mobili e lavorazione CNC). I prezzi presso i rivenditori edili italiani variano da 12 € per il 6 mm in conifera a 50+ € per il 18 mm con faccia in legno duro. Il compensato marino costa 60–120+ € per pannello. Il compensato in betulla costa 35–70 € per il 18 mm. Per il taglio del compensato utilizzare una lama a denti fini (80+ denti su sega circolare) per minimizzare le scheggiature sulla faccia. Stoccare sempre il compensato in piano su una superficie piana per prevenire la deformazione. Marchi di riferimento: UPM, Metsä Wood, Latvian Plywood.",
+  nextSteps: [
+    { label: "Calcolatore Pannelli OSB", href: "/calculators/floor-framing/osb-panel-calculator/" },
+    { label: "Calcolatore Costo Legname", href: "/calculators/hardware/lumber-cost-calculator/" },
+    { label: "Calcolatore Rivestimento Strutturale Esterno", href: "/calculators/wall-framing/exterior-sheathing-calculator/" },
+  ],
+  installationTips: [
+    "Lasciare uno spazio di dilatazione di 3 mm tra i pannelli per il movimento igroscopico.",
+    "Installare con la direzione delle fibre della faccia perpendicolare ai supporti per la massima resistenza.",
+    "Utilizzare fissaggi in acciaio inox o zincato per applicazioni esterne.",
+    "Sfalsare i giunti tra le file per un'installazione più resistente.",
+    "Proteggere i bordi tagliati con sigillante o vernice per prevenire l'assorbimento di umidità.",
+  ],
+  commonMistakes: [
+    "Non lasciare spazi di dilatazione — i pannelli serrati si imbarcano quando assorbono umidità.",
+    "Utilizzare compensato per interni all'esterno — si delaminerà se esposto alla pioggia.",
+    "Tagliare con una lama a denti grossi che strappa il piallaccio della faccia e produce un bordo ruvido.",
+    "Non verificare la classe di incollaggio del compensato per l'applicazione prevista.",
+    "Stoccare il compensato in verticale appoggiato a una parete, causando deformazione permanente.",
+  ],
+  faqs: [
+    { question: "Quanti pannelli di compensato per m²?", answer: "Ogni pannello standard 125×250 cm copre 3,13 m². Dividere l'area totale per 3,13 e aggiungere il 10 % per lo sfrido. Per 30 m² servono (30 × 1,10) / 3,13 = 11 pannelli." },
+    { question: "Qual è la differenza tra compensato e OSB?", answer: "Il compensato è fatto da piallacci sfogliati incollati a strati. L'OSB è fatto da grandi scaglie di legno pressate con adesivo. Il compensato è più resistente, più resistente all'umidità e ha una superficie più liscia. L'OSB è più economico e adeguato per la maggior parte delle applicazioni strutturali." },
+    { question: "Cos'è il compensato marino?", answer: "Il compensato marino (UNI EN 636 classe 3) è fatto con adesivo impermeabile e piallacci privi di vuoti. È progettato per esposizione permanente all'umidità (nautica, ambienti umidi). Costa 2–3 volte più del compensato standard ma è essenziale per ambienti continuamente bagnati." },
+    { question: "Quanto costa il compensato in Italia?", answer: "Compensato standard in conifera 125×250 cm: 6 mm = 12–18 €, 12 mm = 20–30 €, 18 mm = 28–45 €. Compensato in betulla 18 mm = 35–70 €. Compensato marino 18 mm = 60–120+ €. Prezzi da Bricoman, Leroy Merlin o rivenditori edili." },
+    { question: "Si può usare il compensato per un tetto piano?", answer: "Sì. Il compensato per esterni (classe di incollaggio 3 — resistente alle intemperie) è adatto per il tavolato dei tetti piani. Utilizzare 18 mm di spessore su travetti a interasse di 40 cm. Il compensato deve essere coperto con una membrana impermeabilizzante e non deve essere lasciato esposto." },
+    { question: "Compensato o MDF per i ripiani?", answer: "Il compensato è più resistente e più resistente all'umidità del MDF, rendendolo migliore per ripiani portanti e ambienti umidi. Il MDF fornisce una superficie più liscia per la verniciatura ed è più economico. Per ripiani verniciati con carichi moderati entrambi funzionano. Per carichi pesanti o cucine/bagni usare compensato." },
+  ],
+};
+
+// ─── FINITURE ───────────────────────────────────────────────────────────────
+
+export const paintCoverageCalculator: CalculatorSEOContent = {
+  disclaimer: "La resa effettiva varia con la texture della superficie, la marca della pittura e il metodo di applicazione. Superfici ruvide o texturizzate possono ridurre la resa del 20–30 %.",
+  howToUse: [
+    "Inserire la superficie totale di pareti e soffitti in metri quadrati.",
+    "Sottrarre le aree di finestre e porte se desiderato.",
+    "Selezionare il numero di mani (2 è standard).",
+    "Fare clic su Calcola Materiali per ottenere litri, latte e resa.",
+  ],
+  materialInfo:
+    "La resa della pittura in Italia è misurata in metri quadrati per litro. La pittura lavabile standard copre 10–14 m² per litro su superfici lisce precedentemente tinteggiate. Le pitture opache coprono tipicamente più delle finiture satinate o lucide per il minor contenuto di solidi. Le pitture premium di marchi come Boero, San Marco, Sikkens, Farrow & Ball e Caparol offrono spesso una migliore copertura in una mano grazie a carichi pigmentari superiori. La pittura è venduta in latte da 1 L, 2,5 L, 5 L e 14 L. Una latta da 2,5 L copre circa 25–35 m² per mano. Per una stanza standard (30 m² pareti + 12 m² soffitto = 42 m²), due mani richiedono circa 6–8 litri — acquistare 2 latte da 2,5 L o 1 latta da 5 L. I prezzi variano da 8–18 € per 2,5 L per pitture professionali (Boero, San Marco, Sikkens Professional) a 45–100 € per 2,5 L di marchi premium (Farrow & Ball, Little Greene). Il cartongesso o l'intonaco nuovo richiedono una mano di fondo (pittura diluita 70:30 con acqua) o un fondo dedicato prima delle mani di finitura.",
+  nextSteps: [
+    { label: "Calcolatore Costo Pittura", href: "/calculators/finishing/paint-cost-calculator/" },
+    { label: "Calcolatore Fondo / Primer", href: "/calculators/finishing/primer-calculator/" },
+    { label: "Calcolatore Lastre di Cartongesso", href: "/calculators/insulation-drywall/drywall-calculator/" },
+  ],
+  installationTips: [
+    "Utilizzare un rullo a pelo corto (5–10 mm) per pareti lisce, a pelo medio (10–15 mm) per texture leggera.",
+    "Rifilare bordi e angoli con un pennello angolato prima di rullo la superficie principale.",
+    "Mantenere un bordo umido — lavorare a sezioni e non lasciare asciugare il bordo prima di continuare.",
+    "Applicare con schema a W con il rullo, poi riempire uniformemente senza sollevare.",
+    "Ventilare bene l'ambiente durante e dopo la tinteggiatura per accelerare l'asciugatura.",
+  ],
+  commonMistakes: [
+    "Non applicare la mano di fondo sull'intonaco nuovo — la pittura si scrostarà o presenterà un'assorbenza irregolare.",
+    "Comprare troppo poca pittura — esaurirsi a metà parete crea segni di ripresa visibili.",
+    "Applicare la seconda mano troppo presto — attendere 2–4 ore tra le mani di idropittura.",
+    "Utilizzare rulli economici che rilasciano fibre nella finitura.",
+    "Non mescolare bene la pittura prima dell'uso, causando variazioni di colore.",
+  ],
+  faqs: [
+    { question: "Quanta pittura per una stanza?", answer: "Una tipica stanza da 3×4 m con soffitti da 2,70 m ha circa 42 m² di superficie tinteggiabile. A 12 m² per litro con 2 mani servono circa 7 litri. Acquistare una latta da 5 L più una da 2,5 L, o 2 latte da 5 L per avere riserva per i ritocchi." },
+    { question: "Quanti metri quadrati per litro?", answer: "L'idropittura standard copre 10–14 m² per litro su superfici lisce precedentemente tinteggiate. Superfici ruvide o assorbenti riducono la resa a 8–10 m². Le pitture premium possono coprire fino a 16 m² per litro." },
+    { question: "Meglio latte da 2,5 L o 5 L?", answer: "Per una singola stanza le latte da 2,5 L sono pratiche. Per più stanze dello stesso colore le latte da 5 L o 14 L sono più economiche (15–25 % meno per litro) e assicurano uniformità di colore." },
+    { question: "Servono 2 mani di pittura?", answer: "Sì. Due mani sono raccomandate per praticamente tutti i lavori di tinteggiatura. La prima mano sigilla e fornisce una base uniforme. La seconda mano garantisce la profondità di colore, la lucentezza e la durabilità finali." },
+    { question: "Quanta pittura per un'intera casa?", answer: "Una tipica villetta a 3 camere ha 250–350 m² di pareti e soffitti tinteggiabili. A 2 mani con 12 m² per litro servono 40–60 litri — circa 4–6 latte da 14 L o 8–12 latte da 5 L." },
+    { question: "Quali marchi di pittura sono migliori in Italia?", answer: "Professionali: Boero, San Marco e Sikkens Professional offrono la migliore copertura e durabilità per il prezzo. Premium: Farrow & Ball e Little Greene forniscono profondità di colore eccezionale. Fascia media: Boero, San Marco e Max Meyer offrono buona qualità per il fai-da-te." },
+  ],
+};
+
+export const paintCostCalculator: CalculatorSEOContent = {
+  disclaimer: "I prezzi sono medie italiane approssimative. I prezzi effettivi variano per marca, rivenditore e regione.",
+  howToUse: [
+    "Inserire l'area totale da tinteggiare in metri quadrati.",
+    "Selezionare il numero di mani.",
+    "Scegliere un livello di qualità: professionale, fascia media o premium.",
+    "Specificare se serve il fondo.",
+    "Fare clic su Calcola Materiali per ottenere un dettaglio dei costi in €.",
+  ],
+  materialInfo:
+    "Il costo di un progetto di tinteggiatura dipende dalla qualità della pittura, dalla superficie, dal numero di mani e dall'eventuale coinvolgimento di manodopera professionale. La pittura professionale (8–18 € per 2,5 L) come Boero, San Marco e Sikkens Professional è lo standard per gli imbianchini e offre eccellente copertura e durabilità. La pittura di fascia media (18–30 € per 2,5 L) come le linee retail di Boero e Max Meyer è pensata per il fai-da-te ed è disponibile presso Leroy Merlin, Bricoman e Obi. La pittura premium (45–100 € per 2,5 L) come Farrow & Ball, Little Greene e Sikkens Superdec offre profondità di colore, copertura e finitura superiori ma a 3–5 volte il costo. Oltre alla pittura, preventivare gli accessori: set rullo (5–18 €), pennelli (4–12 € ciascuno), nastro adesivo (3–6 € per rotolo), teli protettivi (6–18 €) e fondo (10–18 € per 2,5 L). Gli imbianchini professionisti in Italia fatturano 150–400 € per stanza o 14–30 € per m², inclusa pittura e preparazione.",
+  nextSteps: [
+    { label: "Calcolatore Resa Pittura", href: "/calculators/finishing/paint-coverage-calculator/" },
+    { label: "Calcolatore Fondo / Primer", href: "/calculators/finishing/primer-calculator/" },
+    { label: "Calcolatore Lastre di Cartongesso", href: "/calculators/insulation-drywall/drywall-calculator/" },
+  ],
+  installationTips: [
+    "Acquistare tutta la pittura in una volta per assicurare uniformità di lotto — i colori possono variare tra lotti.",
+    "Investire in rulli e pennelli di qualità — fanno una differenza notevole sulla finitura.",
+    "Utilizzare nastro adesivo su battiscopa, stipiti e linee del soffitto per bordi puliti.",
+    "Tenere a portata un panno umido per pulire immediatamente le gocce.",
+    "Conservare un po' di pittura per ritocchi futuri — sigillare bene la latta per la conservazione.",
+  ],
+  commonMistakes: [
+    "Scegliere la pittura più economica per zone ad alto traffico — necessiterà di ritinteggiatura in 2–3 anni invece di 7–10.",
+    "Non preventivare il fondo — saltare il fondo sull'intonaco nuovo raddoppia il consumo di pittura.",
+    "Non comprare abbastanza pittura — riprodurre un colore personalizzato dopo è quasi impossibile.",
+    "Ignorare la scelta della finitura — l'opaco nasconde le imperfezioni ma si macchia facilmente; il satinato è il miglior compromesso.",
+    "Non preparare adeguatamente le superfici (stuccatura, carteggiatura, spolveratura) prima di tinteggiare.",
+  ],
+  faqs: [
+    { question: "Quanto costa tinteggiare una stanza?", answer: "Una stanza standard da 3×4 m costa 35–90 € in materiali per un progetto fai-da-te (7–8 litri di pittura più accessori). Un imbianchino professionista costa 150–400 € per stanza inclusa pittura e preparazione." },
+    { question: "La pittura premium vale la pena?", answer: "Per le stanze che si usano quotidianamente, sì. Le pitture premium (45–100 € per 2,5 L) offrono migliore copertura (a volte in una mano), lavabilità superiore e durano 10–15 anni. Nel corso della vita della pittura costano meno per anno rispetto alla ritinteggiatura ogni 3–5 anni con pittura economica." },
+    { question: "Quanto costano gli accessori per tinteggiare?", answer: "Gli accessori base per una stanza costano 18–45 €: set rullo e vaschetta (5–18 €), 2 pennelli (8–24 €), nastro adesivo (3–6 € per rotolo, 2–3 rotoli) e teli protettivi (6–18 €)." },
+    { question: "Dove si compra la pittura al miglior prezzo?", answer: "La pittura professionale dai rivenditori edili (colorifici, centri edili) è il miglior rapporto qualità-prezzo. Per marchi fai-da-te, Leroy Merlin, Bricoman e Obi hanno promozioni regolari. I rivenditori online a volte battono i prezzi dei negozi." },
+    { question: "Quanta pittura per 100 m²?", answer: "A 12 m² per litro con 2 mani, 100 m² richiedono circa 17 litri. Acquistare 2 latte da 14 L per 65–130 € (professionale) o 130–220 € (fascia media)." },
+    { question: "Serve il fondo prima di tinteggiare?", answer: "Il fondo è raccomandato per cartongesso nuovo (mano di fondo), legno a vista, zone stuccate/stuccate, cambi di colore drastici e blocco macchie. Su superfici precedentemente tinteggiate in buone condizioni con colore simile un fondo dedicato non è di solito necessario." },
+  ],
+};
+
+export const primerCalculator: CalculatorSEOContent = {
+  disclaimer: "Le superfici porose o texturizzate possono richiedere fondo aggiuntivo. Seguire sempre la resa indicata dal produttore.",
+  howToUse: [
+    "Inserire l'area totale in metri quadrati.",
+    "Selezionare il tipo di superficie per la resa corretta.",
+    "Specificare il tipo di fondo desiderato.",
+    "Fare clic su Calcola Materiali per ottenere litri e conteggio latte.",
+  ],
+  materialInfo:
+    "Il fondo (o primer/aggrappante) è un rivestimento preparatorio applicato prima della pittura di finitura per assicurare corretta aderenza, lucentezza uniforme e colore consistente. Superfici diverse richiedono formulazioni diverse di fondo. Per il cartongesso nuovo una mano di fondo (idropittura diluita 70:30 con acqua) è l'approccio tradizionale, anche se i fondi dedicati per cartongesso (come Boero Jollyprimer o San Marco Fondofix) forniscono un risultato più uniforme e sono preferiti dai professionisti. Il legno nuovo a vista richiede un fondo per legno (acrilico o a solvente) per sigillare la fibra e prevenire la fuoriuscita di tannini, specialmente su conifere come pino e abete. Per il blocco macchie (macchie d'acqua, fumo, pennarello o fuoriuscita di tannini) i fondi a base di gommalacca come Zinsser BIN sono insuperabili. Le rese variano: il fondo per cartongesso copre 10–14 m² per litro, il fondo per legno copre 8–10 m² per litro e il fondo blocca-macchie copre 6–8 m² per litro. I prezzi variano da 10 € a 25 € per litro presso i rivenditori italiani. Zinsser, Boero, San Marco e Sikkens sono i marchi di fondo di riferimento in Italia.",
+  nextSteps: [
+    { label: "Calcolatore Resa Pittura", href: "/calculators/finishing/paint-coverage-calculator/" },
+    { label: "Calcolatore Costo Pittura", href: "/calculators/finishing/paint-cost-calculator/" },
+    { label: "Calcolatore Stucco per Giunti", href: "/calculators/insulation-drywall/joint-compound-calculator/" },
+  ],
+  installationTips: [
+    "Applicare il fondo con lo stesso tipo di rullo o pennello che si userà per la finitura.",
+    "Lasciare asciugare completamente il fondo prima della mano di finitura — tipicamente 1–2 ore per l'acrilico, 16–24 ore per il solvente.",
+    "Chiedere al rivenditore di tintare il fondo verso il colore della finitura per una migliore copertura.",
+    "Utilizzare un pennello per la rifilatura e un rullo per le grandi superfici.",
+    "Ventilare bene l'ambiente quando si usano fondi a solvente o a base di gommalacca.",
+  ],
+  commonMistakes: [
+    "Non dare il fondo al cartongesso nuovo — causa 'flashing' (lucentezza irregolare) visibile sotto certe illuminazioni.",
+    "Utilizzare fondo all'acqua sulle macchie — i fondi all'acqua non bloccano tannini, nicotina o macchie d'acqua; usare Zinsser BIN a base di gommalacca.",
+    "Applicare il fondo troppo spesso — una mano uniforme è sufficiente; strati spessi asciugano più lentamente e possono scrostarsi.",
+    "Dare il fondo su polvere e sporco — pulire o aspirare sempre le superfici prima della mano di fondo.",
+    "Non utilizzare il fondo specifico per il tipo di superficie (legno, cartongesso, intonaco vecchio).",
+  ],
+  faqs: [
+    { question: "Il fondo è sempre necessario prima di tinteggiare?", answer: "Il fondo è essenziale su cartongesso nuovo, legno a vista, zone riparate e quando si bloccano macchie o si fanno cambi di colore drastici. Su superfici precedentemente tinteggiate in buone condizioni con colore simile, una pittura autoaggrappante può essere sufficiente." },
+    { question: "Quale fondo per il cartongesso nuovo?", answer: "Utilizzare una mano di fondo (idropittura diluita 70:30 con acqua) o un fondo dedicato per cartongesso (Boero Jollyprimer, San Marco Fondofix). Il fondo sigilla la superficie assorbente per una finitura uniforme." },
+    { question: "Quanta resa per litro di fondo?", answer: "La resa varia per superficie: cartongesso 10–14 m²/L, pareti precedentemente tinteggiate 12–16 m²/L, legno a vista 8–10 m²/L, fondo blocca-macchie 6–8 m²/L. Verificare sempre la scheda tecnica del prodotto." },
+    { question: "Si può usare pittura bianca come fondo?", answer: "No. La pittura normale e il fondo hanno funzioni diverse. Il fondo ha resine speciali per l'aderenza e la sigillatura. Usare pittura come fondo su cartongesso nuovo causa assorbimento irregolare, flashing e scarsa aderenza." },
+    { question: "Conviene tintare il fondo?", answer: "Sì, quando la finitura è di colore medio o scuro. Il fondo tintato riduce il numero di mani di finitura necessarie per la piena copertura. La maggior parte dei rivenditori può aggiungere una piccola quantità di colorante al fondo senza costo aggiuntivo." },
+    { question: "Quali sono i migliori marchi di fondo in Italia?", answer: "Zinsser (BIN per blocco macchie, Gardz per cartongesso, Bulls Eye 1-2-3 per uso universale) è lo standard professionale. Boero Jollyprimer e San Marco Fondofix sono eccellenti tuttofare. Per il fai-da-te Boero e Max Meyer offrono fondi di buona qualità." },
+  ],
+};
+
+// ─── ESTERNI ────────────────────────────────────────────────────────────────
+
+export const deckBoardCalculator: CalculatorSEOContent = {
+  disclaimer: "Questa stima include un fattore di sfrido del 10 %. Lo sfrido effettivo varia con la forma della terrazza e la lunghezza delle tavole. I disegni diagonali aumentano lo sfrido al 15–20 %.",
+  howToUse: [
+    "Inserire lunghezza e larghezza della terrazza in metri.",
+    "Inserire la larghezza della tavola in centimetri (14 cm per tavole standard).",
+    "Inserire la lunghezza della tavola (lunghezze comuni: 2,40 m, 3,00 m, 3,60 m, 4,80 m).",
+    "Fare clic su Calcola Materiali per ottenere conteggio tavole, metri lineari e copertura superficiale.",
+  ],
+  materialInfo:
+    "Le tavole per terrazza sono la superficie visibile della terrazza e subiscono la maggiore usura dal calpestio, dagli arredi, dagli agenti atmosferici e dai raggi UV. I materiali più comuni in Italia sono il legno di conifera trattato in autoclave (l'opzione più economica), il larice siberiano, i legni duri tropicali (iroko, ipè, teak) e il decking composito (WPC).\n\nIl legno di conifera trattato in autoclave (tipicamente pino nordico o abete, trattato in classe d'uso 3 o 4) è la scelta più popolare per le terrazze italiane. Le tavole standard misurano 3,2×14 cm, con profilo zigrinato antiscivolo su una faccia. I prezzi variano da 4 € a 10 € al metro presso Bricoman, Leroy Merlin, Obi o centri legno. Il legno trattato dura 10–15 anni con trattamento annuale con olio o impregnante per terrazze.\n\nIl larice siberiano è naturalmente resistente al marciume e invecchia con un attraente grigio argento. Costa 9–18 € al metro e dura 15–20 anni senza trattamento chimico.\n\nI legni duri tropicali (iroko, ipè, teak, cumaru) sono estremamente durevoli e naturalmente resistenti a marciume e insetti. I prezzi variano da 14 € a 30 € al metro. Durano 25–40+ anni con manutenzione minima.\n\nIl decking composito WPC (Trex, Silvadec, Eva-Last, Millboard) è fatto di fibre di legno e plastica riciclata. Non necessita mai di impregnatura, non marcisce e viene fornito con garanzie di 25–50 anni. I prezzi variano da 12 € a 35 € al metro. Il composito richiede fissaggi specifici e una sottostruttura ventilata.\n\nLo spazio tra le tavole è critico: lasciare 5–8 mm per il drenaggio. Per le tavole in legno trattato posate umide accostare — si ritireranno asciugando.",
+  nextSteps: [
+    { label: "Calcolatore Plinti per Terrazza", href: "/calculators/outdoor/deck-footing-calculator/" },
+    { label: "Calcolatore Parapetto Terrazza", href: "/calculators/outdoor/deck-railing-calculator/" },
+    { label: "Calcolatore Scale Terrazza", href: "/calculators/outdoor/deck-stair-calculator/" },
+  ],
+  installationTips: [
+    "Iniziare con la prima tavola perfettamente diritta e a squadra con la casa — ogni tavola successiva segue questa linea.",
+    "Pre-forare in prossimità delle teste delle tavole per prevenire le spaccature, specialmente con i legni duri.",
+    "Sfalsare i giunti di testa di almeno 2 campate tra i travetti per resistenza e aspetto.",
+    "Orientare le tavole con il lato corteccia verso l'alto (anelli di crescita rivolti verso il basso) in modo che l'acqua scorra anziché ristagnare.",
+    "Lasciare uno spazio di 10 mm tra la parete della casa e la prima tavola per il drenaggio.",
+  ],
+  commonMistakes: [
+    "Non lasciare spazi tra le tavole — le tavole asciutte serrate si imbarceranno quando assorbiranno umidità.",
+    "Utilizzare viti troppo corte — le viti per terrazza devono penetrare almeno 40 mm nel travetto.",
+    "Allineare tutti i giunti di testa sullo stesso travetto — sfalsare per resistenza e aspetto professionale.",
+    "Non sigillare le teste tagliate — il legno di testa scoperto assorbe acqua e marcisce più velocemente delle superfici trattate.",
+    "Non prevedere la pendenza di drenaggio della terrazza (1–2 % dalla casa).",
+  ],
+  faqs: [
+    { question: "Quante tavole per una terrazza da 4×5 m?", answer: "Una terrazza da 4×5 m con tavole standard da 15 cm di larghezza necessita di circa 27 tavole da 5 m di lunghezza. Con il 10 % di sfrido ordinare 30 tavole. Con tavole più corte e giunti di testa serviranno più tavole per lo sfrido ai giunti." },
+    { question: "Quale dimensione di tavole per la terrazza?", answer: "La tavola più comune per terrazza in Italia è 3,2×14 cm (dimensioni effettive dopo piallatura). Offre un buon equilibrio di resistenza, aspetto e costo. Tavole da 2,8×12 cm sono disponibili per applicazioni più leggere." },
+    { question: "Quale distanza tra le tavole della terrazza?", answer: "Lasciare 5–8 mm tra le tavole per drenaggio e ventilazione. Le tavole in legno trattato posate umide vanno accostate — si ritireranno asciugando. Le tavole in composito devono essere distanziate secondo le istruzioni del produttore, tipicamente 5–6 mm." },
+    { question: "Quanto durano le tavole della terrazza?", answer: "Legno trattato: 10–15 anni con oliatura annuale. Larice: 15–20 anni. Legni duri tropicali: 25–40+ anni. Composito: 25–50 anni con garanzia del produttore. Legno non trattato: 3–5 anni." },
+    { question: "Viti o chiodi per la terrazza?", answer: "Le viti in acciaio inox sono il fissaggio migliore per le tavole della terrazza. Utilizzare viti da 65–75 mm in acciaio inox con 2 viti per tavola a ogni travetto. I chiodi sono meno affidabili e tendono ad allentarsi nel tempo." },
+    { question: "Quanto costa la terrazza in Italia?", answer: "Legno trattato: 4–10 €/m. Larice: 9–18 €/m. Legni duri: 14–30 €/m. Composito: 12–35 €/m. Per una terrazza da 4×5 m, il costo delle sole tavole varia da circa 550 € (legno trattato) a 3.500 € (composito premium)." },
+  ],
+};
+
+export const deckFootingCalculator: CalculatorSEOContent = {
+  disclaimer: "Le profondità dei plinti devono soddisfare i requisiti locali. Questo calcolatore fornisce una stima di disposizione — le posizioni effettive dipendono dal progetto della terrazza, dai carichi e dalle condizioni del terreno.",
+  howToUse: [
+    "Inserire lunghezza e larghezza della terrazza in metri.",
+    "Impostare l'interasse massimo dei pali (tipicamente 1,80 m per travi 16×5 cm, 2,40 m per travi 20×5 cm).",
+    "Specificare il tipo di plinto desiderato.",
+    "Fare clic su Calcola Materiali per ottenere conteggio plinti, conteggio pali e requisiti delle travi.",
+  ],
+  materialInfo:
+    "I plinti per terrazza sono piedini in calcestruzzo che trasferiscono il peso della terrazza e dei suoi carichi al terreno. Senza plinti adeguati la terrazza cederà, si sposterà o si solleverà con il movimento del terreno. I due metodi comuni sono i casseri cilindrici in cartone riempiti di calcestruzzo (posti in fori scavati) e le fondazioni a dado in calcestruzzo.\n\nPer la maggior parte delle terrazze da giardino italiane i casseri cilindrici da 25 cm o 30 cm di diametro riempiti di calcestruzzo sono l'approccio standard. Ogni plinto da 25 cm × 60 cm di profondità utilizza circa 0,029 m³ di calcestruzzo (circa 3 sacchi da 25 kg). I plinti devono estendersi almeno 45 cm sotto il livello del terreno per raggiungere terreno stabile sotto lo strato vegetale. Nelle zone con terreno argilloso soggetto a rigonfiamento possono essere necessari plinti più profondi (60–90 cm).\n\nL'interasse dei pali dipende dalla sezione della trave e dalla classificazione del legname. Per una doppia trave da 6×20 cm C24 l'interasse massimo dei pali è circa 2,40 m. Per una doppia trave da 6×16 cm ridurre a 1,80 m. I pali sono tipicamente 10×10 cm in legno trattato, collegati al plinto con una base metallica zincata (scarpa porta-palo) anziché annegati nel calcestruzzo.\n\nIl calcestruzzo per i plinti deve essere almeno C20/25. Attendere 24–48 ore di stagionatura prima del caricamento. Una tipica terrazza da 4×5 m attaccata alla casa richiede 4–6 plinti.",
+  nextSteps: [
+    { label: "Calcolatore Tavole per Terrazza", href: "/calculators/outdoor/deck-board-calculator/" },
+    { label: "Calcolatore Calcestruzzo", href: "/calculators/foundation/concrete-calculator/" },
+    { label: "Calcolatore Parapetto Terrazza", href: "/calculators/outdoor/deck-railing-calculator/" },
+  ],
+  installationTips: [
+    "Scavare i fori almeno 45 cm nel terreno sodo e indisturbato.",
+    "Utilizzare casseri cilindrici per plinti puliti e uniformi.",
+    "Annegare i bulloni della base porta-palo nel calcestruzzo fresco e verificare che siano centrati e in piombo.",
+    "Coronare la sommità di ogni plinto sopra il livello del terreno in modo che l'acqua defluisca dalla base del palo.",
+    "Attendere almeno 48 ore prima di fissare i pali per consentire la stagionatura del calcestruzzo.",
+  ],
+  commonMistakes: [
+    "Plinti troppo poco profondi — devono raggiungere terreno sodo sotto lo strato vegetale.",
+    "Annegare i pali nel calcestruzzo — questo intrappola l'umidità e causa il marciume; usare sempre una base metallica.",
+    "Interasse dei pali troppo grande, sovraccaricando le travi e causando l'inflessione.",
+    "Non verificare l'allineamento e il livello di tutti i plinti prima dell'indurimento.",
+    "Non prevedere la pendenza di drenaggio della terrazza (1–2 % dalla casa).",
+  ],
+  faqs: [
+    { question: "A quale profondità devono arrivare i plinti della terrazza in Italia?", answer: "I plinti devono estendersi almeno 45 cm sotto il livello del terreno nel terreno sodo e indisturbato. Nei terreni argillosi sono raccomandati 60–90 cm. Verificare con il tecnico comunale se non si è sicuri delle condizioni del terreno." },
+    { question: "Quanti plinti per una terrazza da 4×5 m?", answer: "Una terrazza da 4×5 m con interasse pali di 2,40 m necessita di circa 4–6 plinti in 2 file. Se la terrazza è attaccata alla casa con un corrente a muro, il lato verso la casa non necessita di plinti." },
+    { question: "La terrazza richiede permesso edilizio?", answer: "In Italia una terrazza sotto 30 cm dal livello del terreno rientra generalmente nell'edilizia libera. Le terrazze sopraelevate (sopra 30 cm) possono richiedere una CILA o SCIA a seconda del Comune, delle dimensioni e della vicinanza ai confini. Verificare con il proprio Comune." },
+    { question: "Quale calcestruzzo per i plinti della terrazza?", answer: "Utilizzare calcestruzzo C20/25 o più resistente. Il calcestruzzo a presa rapida (tipo Postfix) è adatto per pali di recinzione e terrazze leggere. Per terrazze più grandi o sopraelevate utilizzare calcestruzzo standard per maggiore resistenza." },
+    { question: "Quanto calcestruzzo per plinto?", answer: "Un plinto da 25 cm di diametro × 60 cm di profondità richiede circa 0,029 m³ di calcestruzzo (circa 3 sacchi da 25 kg). Un plinto da 30 cm × 60 cm richiede circa 0,042 m³ (4 sacchi)." },
+    { question: "Si possono usare blocchi prefabbricati al posto dei plinti in calcestruzzo?", answer: "I blocchi prefabbricati per terrazza possono essere usati per terrazze basse e autoportanti su terreno stabile. Poggiano sulla superficie e non richiedono scavo. Tuttavia non sono adatti per terrazze sopraelevate o terrazze attaccate a edifici." },
+  ],
+};
+
+export const deckRailingCalculator: CalculatorSEOContent = {
+  disclaimer: "Questa stima utilizza interassi standard. Verificare sempre altezza, interasse balaustri e fissaggio montanti con le normative locali e il DM 236/89.",
+  howToUse: [
+    "Inserire il perimetro totale della terrazza in metri.",
+    "Sottrarre la lunghezza del lato verso la casa (nessun parapetto necessario).",
+    "Specificare il tipo di parapetto desiderato.",
+    "Fare clic su Calcola Materiali per ottenere conteggio montanti, conteggio balaustri e metri lineari di corrimano.",
+  ],
+  materialInfo:
+    "Il parapetto è un elemento di sicurezza obbligatorio secondo il DM 236/89 su qualsiasi superficie della terrazza a 60 cm o più dal livello del terreno adiacente. L'altezza minima del parapetto è 100 cm per terrazze residenziali e 110 cm per accesso commerciale o pubblico. I balaustri devono essere distanziati in modo che una sfera da 10 cm non possa passare tra di essi.\n\nI sistemi di parapetto sono composti da montanti, corrimano superiore, corrente inferiore, balaustri (stecche) e opzionalmente un corrente piatto di copertura. I montanti sono tipicamente 10×10 cm in legno trattato o rivestimenti in composito su legno, con interasse massimo di 1,80 m. Devono essere bullonati alla sottostruttura della terrazza con bulloni a testa tonda o staffe proprietarie — mai solo avvitati alle tavole della terrazza.\n\nI balaustri sono tipicamente stecche da 4×4 cm o 3×3 cm in legno, o equivalenti in metallo/composito. Con interasse standard servono circa 10 balaustri per metro di parapetto. Il corrimano superiore e inferiore è tipicamente in legno da 6×10 cm.\n\nIl parapetto in legno costa circa 35–70 € al metro installato. I sistemi in composito costano 70–140 € al metro. I pannelli in vetro costano 120–280 € al metro. Il cavo in acciaio inox costa 90–220 € al metro.\n\nIl parapetto è uno dei problemi più comuni verificati dai tecnici comunali. Controllano la resistenza del fissaggio dei montanti, l'interasse dei balaustri, l'altezza e lo spazio sotto il corrente inferiore (deve essere inferiore a 10 cm).",
+  nextSteps: [
+    { label: "Calcolatore Tavole per Terrazza", href: "/calculators/outdoor/deck-board-calculator/" },
+    { label: "Calcolatore Scale Terrazza", href: "/calculators/outdoor/deck-stair-calculator/" },
+    { label: "Calcolatore Plinti per Terrazza", href: "/calculators/outdoor/deck-footing-calculator/" },
+  ],
+  installationTips: [
+    "Bullonare i montanti alla sottostruttura della terrazza con bulloni M10 o M12 attraverso il travetto perimetrale o la trave.",
+    "Distanziare i balaustri in modo che una sfera da 10 cm non possa passare tra di essi.",
+    "Assicurarsi che lo spazio tra la superficie della terrazza e il corrente inferiore sia inferiore a 10 cm.",
+    "Utilizzare un corrente piatto di copertura (6×16 cm) sopra i montanti per un corrimano confortevole.",
+    "Applicare prodotto preservante su tutti i tagli e le forature in opera.",
+  ],
+  commonMistakes: [
+    "Fissare i montanti solo alle tavole della terrazza — devono essere bullonati alla sottostruttura.",
+    "Distanziare troppo i balaustri — il test della sfera da 10 cm deve essere superato in ogni punto.",
+    "Parapetto troppo basso — minimo 100 cm dalla superficie della terrazza alla sommità del parapetto.",
+    "Non prevedere la manutenzione del legno del parapetto (oliatura annuale per legno trattato).",
+    "Utilizzare fissaggi inadeguati per i montanti che non resistono ai carichi orizzontali.",
+  ],
+  faqs: [
+    { question: "Quando serve il parapetto della terrazza?", answer: "Il DM 236/89 e le normative edilizie locali richiedono il parapetto su qualsiasi superficie della terrazza a 60 cm o più dal livello del terreno adiacente. Questo include terrazze sopraelevate, terrazze a più livelli e qualsiasi bordo dove c'è un dislivello." },
+    { question: "Quale altezza deve avere il parapetto?", answer: "Minimo 100 cm dalla superficie della terrazza alla sommità del parapetto per terrazze residenziali. 110 cm per terrazze commerciali o ad accesso pubblico." },
+    { question: "Quanti balaustri per metro?", answer: "Per balaustri da 3 cm con spazi massimi di 10 cm servono circa 8 balaustri per metro. Per balaustri da 4 cm circa 7 per metro. Il conteggio esatto dipende dalla larghezza del balaustro e dal test della sfera da 10 cm." },
+    { question: "Quanto costa il parapetto della terrazza?", answer: "Parapetto in legno: 35–70 €/m installato. Composito: 70–140 €/m. Pannelli in vetro: 120–280 €/m. Per un tipico sviluppo di parapetto da 12 m, preventivare 420–840 € (legno) o 840–1.680 € (composito)." },
+    { question: "Serve il corrimano sulle scale della terrazza?", answer: "Sì, se la scala ha 2 o più alzate. Il corrimano è richiesto su almeno un lato, ad altezza di 90–100 cm misurata dalla linea del naso dei gradini. Per scale più larghe di 1,0 m il corrimano è raccomandato su entrambi i lati." },
+    { question: "Si possono usare pannelli in vetro per il parapetto?", answer: "Sì. I pannelli in vetro temperato di sicurezza (10 mm o 12 mm) sono sempre più popolari per il loro aspetto pulito e la vista libera. Devono essere conformi alla UNI EN 12150 per il vetro di sicurezza ed essere fissati con morsetti o canali approvati." },
+  ],
+};
+
+export const deckStairCalculator: CalculatorSEOContent = {
+  disclaimer: "Le dimensioni dei gradini devono essere conformi al DM 236/89. Verificare sempre alzata e pedata.",
+  howToUse: [
+    "Inserire l'altezza totale dal terreno alla superficie della terrazza in centimetri.",
+    "Il calcolatore determina il numero di gradini, la lunghezza dei cosciali e le tavole di pedata.",
+    "Specificare la larghezza desiderata della scala.",
+    "Fare clic su Calcola Materiali per un dettaglio completo dei gradini.",
+  ],
+  materialInfo:
+    "Le scale della terrazza forniscono l'accesso tra il livello del terreno e una terrazza sopraelevata. Il DM 236/89 specifica dimensioni massime per i gradini esterni: alzate tra 10 cm e 17,5 cm, pedate minimo 30 cm, e tutte le alzate uniformi entro 5 mm. Le dimensioni più confortevoli per scale esterne sono alzata di 15–17 cm con pedata di 30–33 cm (regola: 2 × alzata + pedata = 62–64 cm).\n\nI cosciali sono le tavole diagonali di supporto su ogni lato (e al centro per scale larghe) della scala. Sono tipicamente tagliati da legname C24 da 6×25 cm o 6×30 cm trattato in autoclave, con intagli triangolari per sostenere le pedate. Una scala più larga di 90 cm richiede un cosciale centrale. Le pedate sono tipicamente 2 tavole da terrazza (3,2×14 cm) per gradino, avvitate ai cosciali intagliati.\n\nPer una tipica terrazza alta 90 cm con alzate da 17,5 cm servono 5 gradini, 2 cosciali da circa 1,5 m ciascuno e 10 tavole di pedata. Un pianerottolo in calcestruzzo (almeno 10 cm di spessore, 90×90 cm) è necessario alla base. Il corrimano è obbligatorio su almeno un lato se ci sono 2 o più alzate.\n\nIl legname per le scale della terrazza deve essere trattato in autoclave in classe d'uso 3 o 4 e fissato con viti in acciaio inox. La base dei cosciali deve poggiare su una staffa metallica sul pianerottolo in calcestruzzo, non direttamente sul terreno. Il costo totale dei materiali per una scala da 5 gradini è tipicamente 120–300 € più 60–120 € per il pianerottolo.",
+  nextSteps: [
+    { label: "Calcolatore Tavole per Terrazza", href: "/calculators/outdoor/deck-board-calculator/" },
+    { label: "Calcolatore Parapetto Terrazza", href: "/calculators/outdoor/deck-railing-calculator/" },
+    { label: "Calcolatore Scale in Calcestruzzo", href: "/calculators/foundation/concrete-steps-calculator/" },
+  ],
+  installationTips: [
+    "Calcolare l'altezza esatta dell'alzata dividendo l'altezza totale per il numero di gradini — tutte le alzate devono essere uguali.",
+    "Tagliare un cosciale campione e provarlo in opera prima di tagliare gli altri.",
+    "Fissare la sommità dei cosciali al travetto perimetrale della terrazza con staffe metalliche zincate o squadrette per scale.",
+    "Appoggiare la base dei cosciali su un pianerottolo in calcestruzzo, non direttamente sul terreno o sull'erba.",
+    "Prevedere il fissaggio per il corrimano prima dell'assemblaggio dei cosciali.",
+  ],
+  commonMistakes: [
+    "Alzate irregolari — tutte le alzate devono essere entro 5 mm l'una dall'altra secondo il DM 236/89.",
+    "Non prevedere un pianerottolo solido alla base — i cosciali sul terreno marciscono e cedono.",
+    "Intagli troppo profondi nei cosciali, indebolendoli strutturalmente.",
+    "Dimenticare il corrimano — obbligatorio con 2 o più alzate.",
+    "Non trattare il legno dei cosciali con prodotto preservante sulle superfici tagliate.",
+  ],
+  faqs: [
+    { question: "Quali sono le normative per le scale della terrazza?", answer: "DM 236/89: alzata massima 17,5 cm, pedata minima 30 cm, alzate uniformi entro 5 mm, corrimano obbligatorio con 2+ alzate. Altezza corrimano 90–100 cm dalla linea del naso dei gradini." },
+    { question: "Quanti gradini per una terrazza alta 90 cm?", answer: "Dividendo 90 cm per un'alzata confortevole di 17,5 cm si ottengono circa 5 gradini (5 × 18 cm = 90 cm). Regolare l'alzata esatta per ottenere gradini uguali: 90 / 5 = 18 cm di alzata." },
+    { question: "Quanto deve essere larga la scala della terrazza?", answer: "Minimo 60 cm per accesso di servizio, 90 cm per accesso singolo confortevole, e 120 cm per il passaggio di due persone. Scale più larghe di 90 cm necessitano di un cosciale centrale." },
+    { question: "Serve un pianerottolo alla base?", answer: "Sì. I cosciali devono poggiare su una superficie solida. Un pianerottolo in calcestruzzo di almeno 10 cm di spessore e almeno largo quanto la scala è standard. Alcune terrazze utilizzano una soletta prefabbricata o masselli autobloccanti." },
+    { question: "Quale legname per i cosciali?", answer: "Utilizzare legname C24 da 6×25 cm o 6×30 cm trattato in autoclave. Dopo il taglio degli intagli, l'altezza residua del legno deve essere almeno 9 cm. Sezioni maggiori o legno duro possono essere necessari per scale larghe." },
+    { question: "Si possono costruire scale per terrazza senza cosciali intagliati?", answer: "Sì. Le squadrette metalliche per gradini (supporti per pedate) si bullonano al lato di cosciali non intagliati. Sono più facili per il fai-da-te, producono un aspetto pulito e non indeboliscono il cosciale. Disponibili presso ferramenta e rivenditori specializzati." },
+  ],
+};
+
+// ─── MAPPA REGISTRO ─────────────────────────────────────────────────────────
+
+export const registryIT: Record<string, Record<string, CalculatorSEOContent>> = {
+  foundation: {
+    "anchor-bolt-calculator": anchorBoltCalculator,
+    "sill-seal-calculator": sillSealCalculator,
+    "sill-plate-calculator": sillPlateCalculator,
+    "concrete-calculator": concreteCalculator,
+    "concrete-slab-calculator": concreteSlabCalculator,
+    "concrete-footing-calculator": concreteFootingCalculator,
+    "concrete-column-calculator": concreteColumnCalculator,
+    "concrete-steps-calculator": concreteStepsCalculator,
+  },
+  "floor-framing": {
+    "rim-joist-calculator": rimJoistCalculator,
+    "floor-joist-calculator": floorJoistCalculator,
+    "bridging-calculator": bridgingCalculator,
+    "subfloor-adhesive-calculator": subfloorAdhesiveCalculator,
+    "osb-panel-calculator": osbPanelCalculator,
+  },
+  "wall-framing": {
+    "stud-calculator": studCalculator,
+    "bottom-plate-calculator": bottomPlateCalculator,
+    "top-plate-calculator": topPlateCalculator,
+    "header-calculator": headerCalculator,
+    "exterior-sheathing-calculator": exteriorSheathingCalculator,
+  },
+  roofing: {
+    "truss-calculator": trussCalculator,
+    "rafter-calculator": rafterCalculator,
+    "ridge-board-calculator": ridgeBoardCalculator,
+    "roof-sheathing-calculator": roofSheathingCalculator,
+    "shingle-calculator": shingleCalculator,
+    "underlayment-calculator": underlaymentCalculator,
+    "drip-edge-calculator": dripEdgeCalculator,
+    "roof-pitch-calculator": roofPitchCalculator,
+    "roof-area-calculator": roofAreaCalculator,
+    "roof-slope-calculator": roofSlopeCalculator,
+  },
+  "exterior-shell": {
+    "housewrap-calculator": housewrapCalculator,
+    "vinyl-siding-calculator": vinylSidingCalculator,
+    "hardie-siding-calculator": hardieSidingCalculator,
+    "window-flashing-calculator": windowFlashingCalculator,
+  },
+  "insulation-drywall": {
+    "cavity-insulation-calculator": cavityInsulationCalculator,
+    "drywall-calculator": drywallCalculator,
+    "drywall-screw-calculator": drywallScrewCalculator,
+    "joint-compound-calculator": jointCompoundCalculator,
+  },
+  hardware: {
+    "framing-nail-calculator": framingNailCalculator,
+    "joist-hanger-calculator": joistHangerCalculator,
+    "hurricane-tie-calculator": hurricaneTieCalculator,
+    "lumber-cost-calculator": lumberCostCalculator,
+    "board-feet-calculator": boardFeetCalculator,
+    "plywood-calculator": plywoodCalculator,
+  },
+  finishing: {
+    "paint-coverage-calculator": paintCoverageCalculator,
+    "paint-cost-calculator": paintCostCalculator,
+    "primer-calculator": primerCalculator,
+  },
+  outdoor: {
+    "deck-board-calculator": deckBoardCalculator,
+    "deck-footing-calculator": deckFootingCalculator,
+    "deck-railing-calculator": deckRailingCalculator,
+    "deck-stair-calculator": deckStairCalculator,
+  },
+};
