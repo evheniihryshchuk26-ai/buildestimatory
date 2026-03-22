@@ -13,8 +13,7 @@
     "build:pt-br": "NEXT_PUBLIC_LOCALE=pt-br next build",
     "build:en-gb": "NEXT_PUBLIC_LOCALE=en-gb next build",
     "build:en-ca": "NEXT_PUBLIC_LOCALE=en-ca next build",
-    "build:tr": "NEXT_PUBLIC_LOCALE=tr next build",
-    "build:pl": "NEXT_PUBLIC_LOCALE=pl next build",
+"build:pl": "NEXT_PUBLIC_LOCALE=pl next build",
     "build:it": "NEXT_PUBLIC_LOCALE=it next build",
     "start": "next start"
   },

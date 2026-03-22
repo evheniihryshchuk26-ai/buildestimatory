@@ -1,4 +1,4 @@
-export type Locale = "en" | "es" | "de" | "fr" | "pt-br" | "en-gb" | "en-ca" | "tr" | "pl" | "it";
+export type Locale = "en" | "es" | "de" | "fr" | "pt-br" | "en-gb" | "en-ca" | "pl" | "it";
 
 export interface LocaleConfig {
   code: Locale;
@@ -81,16 +81,6 @@ export const locales: Record<Locale, LocaleConfig> = {
     unitSystem: "metric",
     siteUrl: "https://ca.buildestimatory.com",
     currency: "CAD",
-  },
-  tr: {
-    code: "tr",
-    lang: "tr",
-    label: "T\u00fcrk\u00e7e",
-    flag: "\u{1F1F9}\u{1F1F7}",
-    ogLocale: "tr_TR",
-    unitSystem: "metric",
-    siteUrl: "https://tr.buildestimatory.com",
-    currency: "TRY",
   },
   pl: {
     code: "pl",

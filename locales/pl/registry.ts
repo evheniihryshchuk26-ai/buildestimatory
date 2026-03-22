@@ -1117,3 +1117,905 @@ export const roofSlopeCalculator: CalculatorSEOContent = {
     { question: "Jaki kąt na maksymalną przestrzeń poddasza?", answer: "Kąt 45° daje maksymalną użytkową objętość dla danego rzutu. Bardziej strome kąty dodają wysokość, ale nie szerokość. Dla adaptacji poddaszy 40–45° jest idealne, zapewniając 2,2 m+ wysokości na użytkowej powierzchni podłogi." },
   ],
 };
+
+// ─── EXTERIOR SHELL ─────────────────────────────────────────────────────────
+
+export const housewrapCalculator: CalculatorSEOContent = {
+  disclaimer: WASTE_DISCLAIMER,
+  howToUse: [
+    "Wprowadź całkowitą powierzchnię ścian zewnętrznych w metrach kwadratowych.",
+    "Wybierz szerokość rolki (1,5 m lub 3,0 m).",
+    "Podaj typ membrany (HPV paroprzepuszczalna).",
+    "Kliknij Oblicz materiały, aby otrzymać liczbę rolek z uwzględnieniem zakładów.",
+  ],
+  materialInfo:
+    "Folia wiatroizolacyjna (membrana paroprzepuszczalna, HPV) to bariera odporna na wiatr i deszcz, ale przepuszczalna dla pary wodnej, montowana na zewnątrz ścian szkieletowych pod okładziną. Jej zadaniem jest umożliwienie ucieczki pary wodnej ze struktury ściany, jednocześnie chroniąc przed deszczem napędzanym wiatrem. W polskim budownictwie szkieletowym folia wiatroizolacyjna jest krytycznym komponentem wymaganym przez warunki techniczne (WT) dla ochrony przed wilgocią i efektywności energetycznej. Popularne marki w Polsce to Strotex, Dorken Delta (Fassade, Vent S), Tyvek (DuPont), Fakro Eurotop i Foliarex. Membranę zszywkuje się do poszycia lub słupków z zakładami min. 10 cm poziomo i 15 cm pionowo, ze złączami uszczelnionymi taśmą producenta dla szczelności powietrznej. Rozmiary rolek: typowe szerokości to 1,5 m i 3,0 m, długości 50 m lub 100 m. Ceny to 100–400 zł za rolkę w zależności od jakości i rozmiaru. Dla budynków pasywnych i niskoenergetycznych folia wiatroizolacyjna jest często łączona ze strategią taśmowania szczelności powietrznej, aby spełnić surowe normy przepuszczalności powietrznej.",
+  nextSteps: [
+    { label: "Kalkulator Sidingu Winylowego", href: "/calculators/exterior-shell/vinyl-siding-calculator/" },
+    { label: "Kalkulator Okładziny Włóknisto-Cementowej", href: "/calculators/exterior-shell/hardie-siding-calculator/" },
+    { label: "Kalkulator Obróbek Okiennych", href: "/calculators/exterior-shell/window-flashing-calculator/" },
+  ],
+  installationTips: [
+    "Zacznij od dołu ściany i pracuj w górę, aby górne rzędy zachodziły na dolne.",
+    "Zakłady poziome min. 10 cm, pionowe min. 15 cm.",
+    "Taśmuj wszystkie złącza taśmą kompatybilną z membraną producenta dla szczelności powietrznej.",
+    "Zawiń membranę w otwory okienne i drzwiowe na min. 10 cm.",
+    "Nie pozostawiaj membrany eksponowanej na UV dłużej niż 2–4 miesiące przed montażem okładziny.",
+  ],
+  commonMistakes: [
+    "Montaż membrany odwrotną stroną — sprawdź instrukcję producenta, która strona jest zewnętrzna.",
+    "Zbyt długa ekspozycja na UV przed okładziną — degraduje większość produktów w 2–4 miesiące.",
+    "Brak taśmowania złączy, co kompromituje szczelność powietrzną wymaganą przez WT.",
+    "Stosowanie membrany niekompatybilnej z typem poszycia (OSB vs. płyta bitumiczna).",
+    "Brak zawinięcia membrany w otwory okienne i drzwiowe.",
+  ],
+  faqs: [
+    { question: "Czy folia wiatroizolacyjna jest wymagana przepisami?", answer: "Tak. Warunki techniczne wymagają ochrony przed wilgocią i szczelnej powłoki budynku. Folia wiatroizolacyjna spełnia oba wymagania w budownictwie szkieletowym i jest oczekiwana przez nadzór budowlany." },
+    { question: "Jaka jest różnica między Tyvek a Strotex?", answer: "Tyvek (DuPont) to spunbondowany polietylen o doskonałej paroprzepuszczalności i trwałości. Strotex to polska marka membran polipropylenowych szeroko stosowanych w budownictwie szkieletowym i z SIP. Oba spełniają normy PN-EN." },
+    { question: "Jak długo folia może być eksponowana?", answer: "Większość membran powinna być pokryta okładziną w ciągu 2–4 miesięcy. Niektóre produkty (Tyvek UV Facade, Dorken Delta Fassade) są przystosowane do długotrwałej ekspozycji UV za okładziną z otwartymi fugami." },
+    { question: "Czy muszę taśmować złącza?", answer: "Tak, dla szczelności powietrznej wg WT. Stosuj taśmę zalecaną przez producenta membrany. Generyczne taśmy mogą się nie klejić prawidłowo i mogą zawieść z czasem." },
+    { question: "Ile kosztuje folia wiatroizolacyjna?", answer: "Ceny od 100 zł za produkty budżetowe (Strotex Basic) do 400+ zł za premium (Tyvek Supro, Dorken Delta Maxx) za rolkę (50–75 m²). Dla typowego domu z 150 m² ścian zewnętrznych folia kosztuje 200–1000 zł." },
+    { question: "Czy mogę użyć folii wiatroizolacyjnej na ścianach murowanych?", answer: "Folia wiatroizolacyjna jest przeznaczona do budownictwa szkieletowego i SIP. Ściany murowane stosują inną strategię zarządzania wilgocią (ściana z szczeliną wentylacyjną). Membranę można jednak stosować za okładziną wentylowaną na murze." },
+  ],
+};
+
+export const vinylSidingCalculator: CalculatorSEOContent = {
+  disclaimer: WASTE_DISCLAIMER,
+  howToUse: [
+    "Wprowadź całkowitą powierzchnię ścian w metrach kwadratowych.",
+    "Odejmij powierzchnię okien i drzwi.",
+    "Wybierz profil panelu (deskówka, szalówka).",
+    "Kliknij Oblicz materiały, aby otrzymać liczbę paneli i opakowań.",
+  ],
+  materialInfo:
+    "Siding winylowy (okładzina PCV) to niskoobsługowa elewacja popularna ze względu na trwałość, odporność na warunki atmosferyczne i bogaty wybór kolorów i profili. W Polsce siding winylowy dostępny jest w profilach deskówki poziomej i szalówki, z długościami paneli zwykle 3,0–5,0 m. Pokrycie na panel zależy od szerokości ekspozycji — standardowy panel 200 mm × 5,0 m pokrywa ok. 1,0 m². Panele sprzedawane są w opakowaniach, w cenach 20–60 zł/m² w zależności od jakości i wykończenia. Akcesoria obejmują listwy startowe, profile J, narożniki i podbitki. Montaż wymaga wentylowanej szczeliny (min. 25 mm) za okładziną dla zarządzania wilgocią. Marki dostępne w Polsce to VOX, Mitten (Ply Gem), Georgia-Pacific i Kaycan. Siding winylowy nie wymaga malowania, bejcowania ani uszczelniania i ma żywotność 20–30+ lat. Jest lekki, co sprawdza się w budownictwie szkieletowym i termomodernizacjach. W polskim klimacie z mrozami do -30°C i upałami do 35°C ważne jest stosowanie paneli z odpowiednimi dylatacjami temperaturowymi.",
+  nextSteps: [
+    { label: "Kalkulator Folii Wiatroizolacyjnej", href: "/calculators/exterior-shell/housewrap-calculator/" },
+    { label: "Kalkulator Okładziny Włóknisto-Cementowej", href: "/calculators/exterior-shell/hardie-siding-calculator/" },
+    { label: "Kalkulator Obróbek Okiennych", href: "/calculators/exterior-shell/window-flashing-calculator/" },
+  ],
+  installationTips: [
+    "Zamontuj listwę startową u podstawy i pracuj w górę, zatrzaskując każdy panel w poprzedni.",
+    "Zostaw 6 mm szczeliny dylatacyjnej na każdym końcu panelu — winyl rozszerza się znacząco z temperaturą.",
+    "Nie przybijaj paneli na ciasno — zostaw gwoździe lekko luźne, aby umożliwić ruch termiczny.",
+    "Stosuj gwoździe nierdzewne lub aluminiowe, aby zapobiec rdzawym plamom.",
+    "W polskim klimacie montuj panele w temperaturze powyżej 5°C — zimny winyl jest kruchy.",
+  ],
+  commonMistakes: [
+    "Przybijanie paneli za ciasno, co uniemożliwia rozszerzalność termiczną i powoduje wybrzuszenia w upały.",
+    "Brak szczelin dylatacyjnych przy akcesoriach i listwach, co powoduje paczenie się paneli.",
+    "Brak wentylowanej szczeliny za okładziną, co zatrzymuje wilgoć przy ścianie.",
+    "Montaż w temperaturze poniżej 0°C, gdy winyl jest kruchy i łatwo pęka.",
+    "Stosowanie gwoździ stalowych niepowlekanych, które rdzewieją i plamią elewację.",
+  ],
+  faqs: [
+    { question: "Czy siding winylowy nadaje się na polski klimat?", answer: "Tak. Siding winylowy jest zaprojektowany, aby wytrzymać deszcz, wiatr, mróz i promieniowanie UV. Jakościowe produkty (VOX, Mitten) są testowane wg norm PN-EN i mają gwarancje 10–25 lat. Ważne jest zachowanie dylatacji temperaturowych." },
+    { question: "Czy potrzebuję pozwolenia na siding?", answer: "W większości przypadków wymiana lub dodanie okładziny na domu jest robotą budowlaną wymagającą co najmniej zgłoszenia. W przypadku budynków zabytkowych lub w strefie konserwatorskiej wymagane jest pozwolenie. Sprawdź z urzędem gminy." },
+    { question: "Jak długo wytrzymuje siding winylowy?", answer: "Jakościowy siding winylowy wytrzymuje 20–30+ lat przy minimalnej konserwacji. Blaknięcie koloru jest głównym problemem — produkty premium mają stabilizatory UV redukujące blaknięcie." },
+    { question: "Ile kosztuje siding winylowy w Polsce?", answer: "Materiały: 20–60 zł/m², plus akcesoria (300–1000 zł na dom za listwy, narożniki, podbitki). Profesjonalny montaż: 60–120 zł/m². Typowy dom: 8000–20 000 zł za materiały lub 20 000–45 000 zł z montażem." },
+    { question: "Czy siding winylowy jest ognioodporny?", answer: "Nie. Siding winylowy jest palny i podlega ograniczeniom przepisów p.poż. na budynkach powyżej 25 m (nowa zabudowa). Dla budownictwa jednorodzinnego jest dopuszczony z zachowaniem wymagań rozprzestrzeniania ognia wg PN-EN 13501." },
+    { question: "Czy mogę zamontować siding na istniejący tynk?", answer: "Tak, pod warunkiem, że tynk jest zdrowy i ściana jest konstrukcyjnie stabilna. Zamocuj łaty drewniane impregnowane na tynku, aby stworzyć szczelinę wentylacyjną i powierzchnię montażową dla okładziny." },
+  ],
+};
+
+export const hardieSidingCalculator: CalculatorSEOContent = {
+  disclaimer: WASTE_DISCLAIMER,
+  howToUse: [
+    "Wprowadź całkowitą powierzchnię ścian w metrach kwadratowych.",
+    "Odejmij powierzchnię okien i drzwi.",
+    "Wybierz szerokość ekspozycji desek.",
+    "Kliknij Oblicz materiały, aby otrzymać liczbę desek.",
+  ],
+  materialInfo:
+    "Okładzina włóknisto-cementowa (typu HardiePlank, Cedral, Eternit) to jedna z najpopularniejszych opcji elewacyjnych premium w Polsce, oferująca wygląd deskówki drewnianej z trwałością włóknocementu. Deski włóknisto-cementowe są niepalne (klasa ogniowa A2), odporne na gnicie, owady i stabilne w UV. Standardowe wymiary desek to 3600 mm × 190 mm (z ekspozycją 152 mm po nałożeniu zakładki). Każda deska pokrywa ok. 0,55 m² powierzchni ściany. Deski dostępne są w szerokim zakresie kolorów fabrycznych z 15-letnią gwarancją na kolor. Ceny to ok. 30–65 zł za deskę (55–120 zł/m²) u polskich dystrybutorów, w Castoramie i hurtowniach budowlanych. Montaż wymaga szczeliny wentylacyjnej za deskami, gwoździ lub wkrętów nierdzewnych i kompatybilnych obróbek na wszystkich połączeniach. Okładzina włóknisto-cementowa jest dopuszczona na budynkach o dowolnej wysokości ze względu na klasyfikację niepalną, co czyni ją preferowanym wyborem w kontekście zaostrzonych przepisów p.poż. Marki popularne w Polsce: Cedral (Etex/Eternit), HardiePlank (James Hardie), Equitone.",
+  nextSteps: [
+    { label: "Kalkulator Folii Wiatroizolacyjnej", href: "/calculators/exterior-shell/housewrap-calculator/" },
+    { label: "Kalkulator Obróbek Okiennych", href: "/calculators/exterior-shell/window-flashing-calculator/" },
+    { label: "Kalkulator Słupków Ściennych", href: "/calculators/wall-framing/stud-calculator/" },
+  ],
+  installationTips: [
+    "Stosuj gwoździe nierdzewne pierścieniowe lub wkręty nierdzewne — zwykła stal zardzewieje i poplamię deski.",
+    "Zachowaj minimalną zakładkę 30 mm między rzędami.",
+    "Zostaw 6 mm szczelinę między końcami desek na złączach, uszczelnioną elastycznym silikonem w kolorze.",
+    "Zamontuj listwę startową u podstawy, aby ustawić kąt pierwszego rzędu.",
+    "Przycinaj piłą z odkurzaniem — pył włóknisto-cementowy jest szkodliwy; noś maskę FFP3.",
+  ],
+  commonMistakes: [
+    "Stosowanie mocowań niestopowych, które rdzewieją i plamią okładzinę w ciągu miesięcy.",
+    "Cięcie bez odpowiedniego odpylania — pył włóknisto-cementowy jest niebezpieczny; używaj piły z odciągiem.",
+    "Brak zabezpieczenia ciętych krawędzi farbą retuszową producenta, co naraża surowy włóknocement na wilgoć.",
+    "Montaż bez szczeliny wentylacyjnej za deskami — wilgoć nie może uciec i powoduje problemy.",
+    "Nieuwzględnienie ciężaru desek — włóknocement jest cięższy niż siding winylowy i wymaga odpowiedniego podkładu.",
+  ],
+  faqs: [
+    { question: "Czy okładzina włóknisto-cementowa jest ognioodporna?", answer: "Tak. Deski włóknisto-cementowe (Cedral, HardiePlank) są klasyfikowane jako niepalne (Euroklasa A2-s1, d0) i spełniają wymagania przepisów p.poż. do stosowania na budynkach o dowolnej wysokości." },
+    { question: "Jak długo wytrzymuje okładzina włóknisto-cementowa?", answer: "Produkty mają 10-letnią gwarancję na produkt i 15-letnią na kolor. W praktyce prawidłowo zamontowana okładzina włóknisto-cementowa wytrzymuje 30–50+ lat przy minimalnej konserwacji." },
+    { question: "Czy mogę pomalować deski włóknisto-cementowe?", answer: "Deski mają fabryczne wykończenie kolorystyczne. Można je przemalować farbą elewacyjną, jeśli chcesz zmienić kolor. Wykończenie fabryczne jest trwalsze niż farba nakładana na budowie." },
+    { question: "Ile kosztuje okładzina włóknisto-cementowa w Polsce?", answer: "Materiały: 55–120 zł/m² za deski plus akcesoria (listwy startowe, narożniki, obróbki). Profesjonalny montaż: 100–180 zł/m². Typowy dom: 15 000–35 000 zł za materiały lub 35 000–60 000 zł z montażem." },
+    { question: "Czy potrzebuję szczeliny wentylacyjnej za deskami?", answer: "Tak. Minimalna szczelina 25 mm jest wymagana między folią wiatroizolacyjną a tyłem okładziny. Tworzy się ją za pomocą łat impregnowanych mocowanych pionowo do słupków lub poszycia." },
+    { question: "Czy okładzina nadaje się na cały klimat Polski?", answer: "Tak. Okładzina włóknisto-cementowa jest testowana na surowe warunki ekspozycji i sprawdza się we wszystkich regionach Polski, włączając wybrzeże Bałtyku, tereny górskie i regiony z mroźnymi zimami." },
+  ],
+};
+
+export const windowFlashingCalculator: CalculatorSEOContent = {
+  disclaimer: WASTE_DISCLAIMER,
+  howToUse: [
+    "Wprowadź liczbę okien i drzwi.",
+    "Wprowadź średni obwód okna/drzwi w metrach.",
+    "Wybierz szerokość taśmy uszczelniającej (100, 150 lub 225 mm).",
+    "Kliknij Oblicz materiały, aby otrzymać metry bieżące i liczbę rolek.",
+  ],
+  materialInfo:
+    "Taśma uszczelniająca okna to samoprzylepna membrana nakładana wokół otworów okiennych i drzwiowych, tworząca szczelne połączenie między ramą a strukturą ściany. Zapobiega przenikaniu wody za okładzinę w otworach, które są najbardziej wrażliwymi punktami powłoki budynku. W polskim budownictwie szkieletowym taśmę nakłada się na poszycie lub słupki wokół każdego otworu przed montażem okna, zachodzą na folię wiatroizolacyjną w określonej kolejności: parapet najpierw, potem ościeżnice boczne, na końcu nadproże. Taśma musi być paroprzepuszczalna po stronie zewnętrznej i wodoszczelna. Typowe szerokości to 100 mm, 150 mm i 225 mm, z 150 mm jako najbardziej uniwersalną. Popularne produkty w Polsce to Soudal Window Tape, Illbruck ME500, Pro Clima Tescon Vana, Airstop Flex i Foliarex. Ceny od 30 do 120 zł za rolkę 25 m w zależności od szerokości i marki. Prawidłowe obróbki okienne są kluczowe dla szczelności powietrznej wg WT i ochrony przed wilgocią. Awarie obróbek okiennych to jedna z najczęstszych przyczyn uszkodzeń wodnych w budynkach szkieletowych.",
+  nextSteps: [
+    { label: "Kalkulator Folii Wiatroizolacyjnej", href: "/calculators/exterior-shell/housewrap-calculator/" },
+    { label: "Kalkulator Poszycia Zewnętrznego", href: "/calculators/wall-framing/exterior-sheathing-calculator/" },
+    { label: "Kalkulator Słupków Ściennych", href: "/calculators/wall-framing/stud-calculator/" },
+  ],
+  installationTips: [
+    "Obróbki wykonuj w kolejności: parapet najpierw, potem boki (zachodzące na parapet), na końcu nadproże (zachodzące na boki).",
+    "Upewnij się, że taśma przylega mocno do czystych, suchych powierzchni — dociśnij wałkiem.",
+    "Zewnętrzna krawędź taśmy musi zachodzić na folię wiatroizolacyjną, aby kierować wodę na zewnątrz.",
+    "Na wszystkich czterech narożnikach otworu użyj narożnikowych łatek dla pełnego pokrycia.",
+    "W polskim klimacie z mrozami stosuj taśmy odporne na niskie temperatury — montaż w mrozie pogarsza przyczepność.",
+  ],
+  commonMistakes: [
+    "Nakładanie obróbki nadproża przed bokami, co pozwala wodzie spływać za taśmę.",
+    "Niedociśnięcie taśmy, co pozostawia pęcherzyki powietrza, gdzie przyczepność zawodzi.",
+    "Stosowanie taśmy niekompatybilnej z folią wiatroizolacyjną — sprawdź kompatybilność producenta.",
+    "Pominięcie narożnikowych łatek, co pozostawia wrażliwe punkty bez ochrony.",
+    "Montaż na mokrej lub brudnej powierzchni, co uniemożliwia prawidłowe klejenie.",
+  ],
+  faqs: [
+    { question: "Czy potrzebuję taśmy uszczelniającej przy każdym oknie?", answer: "Tak. Każdy otwór okienny i drzwiowy w ścianie szkieletowej musi być uszczelniony taśmą, aby zapobiec wnikaniu wody. Otwory są najbardziej wrażliwym punktem powłoki budynku i wymagają ciągłych, prawidłowo zakładkowanych obróbek." },
+    { question: "Jaką szerokość taśmy wybrać?", answer: "150 mm jest najuniwerszalniejsza, zapewniając odpowiednie pokrycie dla standardowych otworów. 100 mm stosuje się na wąskie ościeża. 225 mm na głębokie ościeża lub jako parapetnik." },
+    { question: "Jaka jest prawidłowa kolejność obróbek?", answer: "Parapet najpierw, potem boki (zachodzące na taśmę parapetową), na końcu nadproże (zachodzące na taśmy boczne). Ta kaskadowa kolejność zapewnia, że woda zawsze spływa na zewnątrz i w dół, nigdy za taśmę." },
+    { question: "Czy mogę użyć dowolnej taśmy samoprzylepnej?", answer: "Nie. Stosuj produkt specjalnie przeznaczony do obróbek okiennych, kompatybilny z folią wiatroizolacyjną. Generyczne taśmy klejące, taśma izolacyjna i taśma do gładzi nie zapewniają odpowiedniej przyczepności i odporności na warunki atmosferyczne." },
+    { question: "Ile taśmy na jedno okno?", answer: "Standardowy otwór okienny (1200×1200 mm) wymaga ok. 5 m taśmy (obwód plus zakłady). Typowy dom z 10–15 oknami wymaga 50–75 m taśmy, czyli 2–3 rolki po 25 m." },
+    { question: "Czy taśma obróbkowa przyczynia się do szczelności powietrznej?", answer: "Tak. Taśma obróbkowa okien jest kluczowym elementem warstwy szczelności powietrznej w budownictwie szkieletowym. Łączy szczelinę między ramą okna a folią wiatroizolacyjną/paroizolacją, zapobiegając wyciekom powietrza przez otwory." },
+  ],
+};
+
+// ─── INSULATION & DRYWALL ───────────────────────────────────────────────────
+
+export const cavityInsulationCalculator: CalculatorSEOContent = {
+  disclaimer: WASTE_DISCLAIMER,
+  howToUse: [
+    "Wprowadź całkowitą powierzchnię ścian w metrach kwadratowych.",
+    "Odejmij powierzchnię okien i drzwi.",
+    "Wybierz typ i grubość izolacji (wełna mineralna, PIR).",
+    "Kliknij Oblicz materiały, aby otrzymać liczbę mat, rolek lub płyt.",
+  ],
+  materialInfo:
+    "Izolacja ścian wypełnia przestrzeń między słupkami lub w ścianie murowanej dwuwarstwowej, redukując straty ciepła i spełniając wymagania cieplne warunków technicznych (WT 2021). W polskim budownictwie szkieletowym najczęstsze typy izolacji to maty z wełny mineralnej (Rockwool, Knauf Insulation, Isover), sztywne płyty PIR (Recticel, Bauder, Puren) i izolacja z włókien naturalnych (wełna drzewna Steico). Dla ścian 90 mm z wełną mineralną 90 mm uzyskuje się R ≈ 2,5 m²K/W. Dla ścian 140 mm z wełną 140 mm: R ≈ 3,5 m²K/W. Izolacja PIR osiąga wyższy opór cieplny na jednostkę grubości: 100 mm PIR daje R ≈ 4,55 m²K/W. WT 2021 wymaga współczynnika U ścian ≤ 0,20 W/m²K dla nowych budynków, co zwykle wymaga 150–200 mm wełny mineralnej lub 100–120 mm PIR. Maty wełny mineralnej sprzedawane są w paczkach pokrywających 3–6 m² w cenach 60–150 zł za paczkę w Castoramie, Leroy Merlin i PSB Mrówka. Płyty PIR kosztują 60–120 zł za płytę (1200×2400 mm). Folia paroizolacyjna musi być zamontowana po ciepłej stronie izolacji, aby zapobiec kondensacji wewnątrz przegrody wg PN-EN ISO 13788.",
+  nextSteps: [
+    { label: "Kalkulator Płyt Gipsowo-Kartonowych", href: "/calculators/insulation-drywall/drywall-calculator/" },
+    { label: "Kalkulator Wkrętów do Płyt G-K", href: "/calculators/insulation-drywall/drywall-screw-calculator/" },
+    { label: "Kalkulator Słupków Ściennych", href: "/calculators/wall-framing/stud-calculator/" },
+  ],
+  installationTips: [
+    "Przycinaj maty izolacyjne z lekkim naddatkiem (5–10 mm) na wcisk między słupki.",
+    "Wypełnij wszystkie szczeliny, narożniki i przestrzenie wokół instalacji — nawet małe szczeliny powodują znaczne straty ciepła.",
+    "Zamontuj ciągłą folię paroizolacyjną po ciepłej stronie z taśmowaniem wszystkich złączy.",
+    "Nie ściskaj izolacji — ściśnięte maty tracą parametry cieplne.",
+    "W polskim klimacie (strefa klimatyczna III wg PN-EN) rozważ dodatkową warstwę izolacji na zewnątrz słupków dla eliminacji mostków cieplnych.",
+  ],
+  commonMistakes: [
+    "Pozostawianie szczelin wokół instalacji, rur i kabli — tworzą mostki cieplne i ścieżki wycieku powietrza.",
+    "Pominięcie folii paroizolacyjnej, co prowadzi do kondensacji międzywarstwowej i potencjalnego gnicia.",
+    "Ściskanie mat do mniejszej grubości, co dramatycznie obniża ich opór cieplny.",
+    "Stosowanie izolacji o niewystarczającej grubości — WT 2021 wymaga U ≤ 0,20 W/m²K.",
+    "Brak uwzględnienia mostków cieplnych przez słupki — drewno ma 4× gorszy opór cieplny niż wełna.",
+  ],
+  faqs: [
+    { question: "Jakie U wymagane jest dla ścian wg WT 2021?", answer: "Warunki techniczne (WT 2021) wymagają współczynnika U ścian ≤ 0,20 W/m²K dla nowych budynków mieszkalnych. Wymaga to zwykle 150–200 mm wełny mineralnej lub 100–120 mm PIR w ścianie, plus ewentualną dodatkową izolację zewnętrzną." },
+    { question: "Wełna mineralna czy PIR na ściany szkieletowe?", answer: "Oba się nadają. Wełna mineralna (Rockwool, Knauf) jest tańsza, ognioodporna i dobrze tłumi dźwięk. PIR jest cieńszy przy tym samym oporze cieplnym, bardziej odporny na wilgoć i daje sztywniejszy montaż. Wielu budowniczych łączy wełnę między słupkami z PIR na wewnętrznej stronie." },
+    { question: "Czy potrzebuję folii paroizolacyjnej?", answer: "Tak. Folia paroizolacyjna (np. PE 0,2 mm lub membrana Strotex, Dorken) musi być zamontowana po ciepłej stronie izolacji wg PN-EN ISO 13788 i WT. Wszystkie złącza muszą być taśmowane kompatybilną taśmą dla szczelności powietrznej." },
+    { question: "Ile kosztuje izolacja ścian w Polsce?", answer: "Wełna mineralna: ok. 15–35 zł/m² dla grubości 100–150 mm. PIR: 30–55 zł/m² dla 100 mm. Dla typowego domu z 100 m² ścian zewnętrznych izolacja kosztuje 1500–5500 zł w zależności od typu i grubości." },
+    { question: "Czy mogę użyć naturalnych materiałów izolacyjnych?", answer: "Tak. Wełna drzewna (Steico Flex), wełna owcza (Thermafleece) i konopie są dostępne w Polsce. Kosztują 20–50% więcej niż wełna mineralna, ale mają niższy ślad węglowy, lepsze buforowanie wilgoci i są przyjemne w montażu." },
+    { question: "A co z izolacją akustyczną?", answer: "Wełna mineralna (min. 50 mm, najlepiej 100 mm) między słupkami w ścianach działowych i międzylokalowych zapewnia doskonałą izolację akustyczną. Dla spełnienia wymagań PN-EN ISO 717 w ścianach między lokalami odnieś się do rozwiązań systemowych producenta." },
+  ],
+};
+
+export const drywallCalculator: CalculatorSEOContent = {
+  disclaimer: WASTE_DISCLAIMER,
+  howToUse: [
+    "Wprowadź całkowitą powierzchnię ścian i/lub sufitu w metrach kwadratowych.",
+    "Odejmij powierzchnię okien i drzwi.",
+    "Wybierz rozmiar płyty (1200×2600 mm to standard w Polsce).",
+    "Kliknij Oblicz materiały, aby otrzymać liczbę płyt.",
+  ],
+  materialInfo:
+    "Płyta gipsowo-kartonowa (g-k) jest standardowym wykończeniem ścian i sufitów w polskim budownictwie. Standardowe arkusze mają rozmiar 1200×2600 mm (3,12 m²), z grubością 12,5 mm na ściany i 12,5 mm lub 15 mm na sufity (15 mm zapobiega ugięciu przy rozstawie 60 cm). Dla podwyższonej odporności ogniowej stosuj Rigips RF (różowa) lub Knauf Fireboard, zapewniające 30 lub 60 minut ochrony. Dla pomieszczeń wilgotnych (łazienki, kuchnie) stosuj płyty wodoodporne Rigips RBI (zielona) lub Knauf H2. Płyty mocuje się do słupków lub belek wkrętami 25 mm (Rapid) co 15 cm na krawędziach i co 25 cm w polu. Każda płyta 1200×2600 mm pokrywa 3,12 m². Ceny od 18 do 55 zł za płytę w zależności od typu i grubości, dostępne w Castoramie, Leroy Merlin, OBI i PSB Mrówka. Rigips (Saint-Gobain) i Knauf to dwaj główni producenci w Polsce. Po zamontowaniu złącza taśmuje się i szpachluje masą szpachlową (Cekol, Rigips, Knauf) dla uzyskania gładkiej, bezszwowej powierzchni pod malowanie.",
+  nextSteps: [
+    { label: "Kalkulator Wkrętów do Płyt G-K", href: "/calculators/insulation-drywall/drywall-screw-calculator/" },
+    { label: "Kalkulator Masy Szpachlowej", href: "/calculators/insulation-drywall/joint-compound-calculator/" },
+    { label: "Kalkulator Izolacji Ścian", href: "/calculators/insulation-drywall/cavity-insulation-calculator/" },
+  ],
+  installationTips: [
+    "Mocuj płyty dłuższą krawędzią poziomo (krajobrazowo) na ścianach i prostopadle do belek na sufitach.",
+    "Przesuwaj złącza między rzędami oraz między płytami ściennymi i sufitowymi.",
+    "Zostaw 10 mm szczelinę przy podłodze — przykryje ją listwa przypodłogowa.",
+    "Na sufitach przy rozstawie belek 60 cm stosuj płyty 15 mm, aby zapobiec ugięciu.",
+    "Stosuj podnośnik do płyt g-k na sufity — jeden człowiek nie utrzyma płyty i nie przykręci jednocześnie.",
+  ],
+  commonMistakes: [
+    "Stosowanie 12,5 mm na sufitach przy rozstawie 60 cm — ugnie się z czasem; stosuj 15 mm.",
+    "Brak przesunięcia złączy, co tworzy widoczną linię pęknięcia przez ścianę.",
+    "Zbyt głębokie wkręcanie wkrętów, co przebija papier ochronny i traci siłę trzymania.",
+    "Pominięcie taśmy na złączach — sama masa szpachlowa pęknie bez taśmy wzmacniającej.",
+    "Montaż płyt na mokre drewno — skurcz drewna spowoduje pęknięcia i wypchnięcie wkrętów.",
+  ],
+  faqs: [
+    { question: "12,5 mm czy 15 mm?", answer: "12,5 mm na ściany i sufity przy rozstawie 40 cm. 15 mm na sufity przy rozstawie 60 cm. Przepisy p.poż. mogą wymagać dodatkowych warstw lub płyt ognioodpornych niezależnie od rozstawu." },
+    { question: "Ile płyt na pokój?", answer: "Typowy pokój 3×4 m o wys. 2,6 m ma ok. 33 m² ścian (minus 4 m² na drzwi/okno = 29 m²). Przy 3,12 m²/płytę potrzebujesz ok. 10 płyt na ściany plus 4 na sufit (12 m²) = 14 płyt." },
+    { question: "Czy potrzebuję ognioodpornych płyt g-k?", answer: "Przepisy p.poż. wymagają płyt ognioodpornych w ścianach międzylokalowych (30 lub 60 min), wokół klatek schodowych i w określonych innych lokalizacjach. Rigips RF (różowa) lub Knauf Fireboard zapewniają odporność ogniową." },
+    { question: "Jakie płyty do łazienki?", answer: "Stosuj wodoodporne płyty g-k (Rigips RBI zielona, Knauf H2) w łazienkach i kuchniach. W strefach bezpośrednio za wannami i prysznicami użyj płyty cementowej (tile backer) dla maksymalnej ochrony przed wilgocią." },
+    { question: "Ile kosztują płyty g-k w Polsce?", answer: "Standardowe 12,5 mm: 18–30 zł/płytę (1200×2600 mm). 15 mm: 22–38 zł. Ognioodporne: 30–50 zł. Wodoodporne: 28–45 zł. Zakup hurtowy (pełne palety) z hurtowni daje najlepszą cenę." },
+    { question: "Szpachla czy tynk na płyty g-k?", answer: "Płyty g-k można albo taśmować i szpachlować (suchy montaż — szybszy), albo pokryć 2–3 mm gładzi tynkarskiej (Cekol GS-200, Knauf Multi-Finish). Gładź daje gładszą, twardszą powierzchnię, ale dodaje koszt i czas schnięcia." },
+  ],
+};
+
+export const drywallScrewCalculator: CalculatorSEOContent = {
+  disclaimer: WASTE_DISCLAIMER,
+  howToUse: [
+    "Wprowadź liczbę płyt gipsowo-kartonowych.",
+    "Wybierz długość wkrętu (25 mm lub 35 mm na pojedynczą warstwę, 45 mm na podwójną).",
+    "Podaj rozstaw słupków (40 cm lub 60 cm).",
+    "Kliknij Oblicz materiały, aby otrzymać liczbę wkrętów i opakowań.",
+  ],
+  materialInfo:
+    "Wkręty do płyt g-k (wkręty Rapid) to wkręty samogwintujące z drobnym gwintem, zaprojektowane specjalnie do mocowania płyt gipsowo-kartonowych do drewnianych lub metalowych profili. Mają główkę talerzową, która zagłębia się równo z powierzchnią płyty bez rozrywania papieru ochronnego. Standardowe długości to 25 mm i 35 mm dla pojedynczej warstwy 12,5 mm na drewnianych słupkach, i 45 mm dla płyt 15 mm lub montażu dwuwarstwowego. Standardowy schemat mocowania: co 15 cm na krawędziach płyty i co 25 cm w polu (słupki pośrednie). Standardowa płyta 1200×2600 mm wymaga ok. 28–32 wkrętów. Wkręty sprzedawane są w opakowaniach po 200, 500 lub 1000 sztuk. Ceny od 10 do 40 zł za opakowanie w zależności od ilości i rozmiaru. Popularne marki w Polsce to Rigips, Knauf, Heco, Koelner i Wkręt-Met. Używaj wkrętaka z regulowaną głębokością wkręcania, aby wkręty zagłębiały się prawidłowo — główka powinna lekko wcisnąć papier bez przebicia.",
+  nextSteps: [
+    { label: "Kalkulator Płyt Gipsowo-Kartonowych", href: "/calculators/insulation-drywall/drywall-calculator/" },
+    { label: "Kalkulator Masy Szpachlowej", href: "/calculators/insulation-drywall/joint-compound-calculator/" },
+    { label: "Kalkulator Słupków Ściennych", href: "/calculators/wall-framing/stud-calculator/" },
+  ],
+  installationTips: [
+    "Używaj wkrętaka do g-k z regulowaną głębokością wkręcania dla konsystentnej głębokości.",
+    "Wkręcaj tak, aby główka lekko wcisnęła papier ochronny bez przebicia.",
+    "Mocuj co 15 cm na krawędziach i co 25 cm w polu.",
+    "Zacznij wkręty co najmniej 10 mm od krawędzi płyty, aby uniknąć wykruszenia.",
+    "Na profile metalowe stosuj wkręty z ostrym zakończeniem (TN), na drewno — z wiertłem (TB).",
+  ],
+  commonMistakes: [
+    "Zbyt głębokie wkręcenie, przebijające papier ochronny — wkręt traci siłę trzymania i wymaga drugiego obok.",
+    "Zbyt płytkie wkręcenie — wystający wkręt będzie widoczny przez szpachlę lub gładź.",
+    "Za mało wkrętów — płyta może się ugiąć, pękać na złączach lub odstawać od słupków.",
+    "Stosowanie wkrętów do metalu na drewnianych słupkach (lub odwrotnie) — różne gwinty.",
+    "Wkręcanie pod kątem zamiast prostopadle do płyty, co powoduje nierówne zagłębienie.",
+  ],
+  faqs: [
+    { question: "Ile wkrętów na jedną płytę g-k?", answer: "Standardowa płyta 1200×2600 mm mocowana co 15 cm na krawędziach i co 25 cm w polu wymaga ok. 28–32 wkrętów, w zależności od liczby słupków pośrednich." },
+    { question: "Jaką długość wkrętów na płyty g-k?", answer: "25 mm lub 35 mm na pojedynczą warstwę 12,5 mm. 45 mm na 15 mm lub podwójną warstwę. Wkręt musi wchodzić w drewniany słupek na min. 22 mm." },
+    { question: "Czy mogę użyć gwoździ zamiast wkrętów?", answer: "Gwoździe do g-k istnieją, ale są mniej popularne niż wkręty. Wkręty dają lepszą siłę trzymania, mniej się cofają i łatwiej kontrolować głębokość. Na sufit gwoździ nigdy nie stosuje się." },
+    { question: "Ile opakowań wkrętów na pokój?", answer: "Typowy pokój wymaga 14 płyt (ściany + sufit), zużywając ok. 420 wkrętów. Jedno opakowanie 500 szt. wystarczy na jeden pokój. Na cały dom budżetuj 3000–5000 wkrętów (6–10 opakowań po 500)." },
+    { question: "Co to jest 'wypchnięcie wkrętu'?", answer: "Wypchnięcie wkrętu to sytuacja, gdy główka wkrętu wypycha się przez szpachlę w miarę schnięcia i kurczenia się drewna. Zapobiega mu stosowanie drewna suszonego komorowo, prawidłowa głębokość wkręcania i stosowanie wkrętów (nie gwoździ)." },
+    { question: "Gdzie kupić wkręty do g-k w Polsce?", answer: "Wkręty dostępne są w Castoramie, Leroy Merlin, OBI, Bricomarché, PSB Mrówka i hurtowniach budowlanych. Dla najlepszej wartości kupuj opakowania 1000 szt. — 15–40 zł za opakowanie." },
+  ],
+};
+
+export const jointCompoundCalculator: CalculatorSEOContent = {
+  disclaimer: WASTE_DISCLAIMER,
+  howToUse: [
+    "Wprowadź całkowitą powierzchnię płyt g-k w metrach kwadratowych.",
+    "Wybierz metodę: taśmowanie i szpachlowanie lub gładź na całość.",
+    "Podaj liczbę warstw.",
+    "Kliknij Oblicz materiały, aby otrzymać ilość w kilogramach lub wiadrach.",
+  ],
+  materialInfo:
+    "Masa szpachlowa służy do wypełniania i wygładzania złączy między płytami gipsowo-kartonowymi, tworząc gładką, bezszwową powierzchnię gotową do malowania. Proces obejmuje trzy główne etapy: osadzanie (wciśnięcie taśmy w warstwę masy), wypełnianie (druga warstwa pokrywająca taśmę i wyrównująca złącze) i wykończenie (cienka warstwa wygładzająca krawędzie). Gotowa masa szpachlowa (np. Cekol GS-200, Rigips Vario, Knauf Uniflot, Knauf Fugenfuller) sprzedawana jest w wiadrach 5 kg, 12 kg i 25 kg. Pokrycie zależy od zastosowania: ok. 0,4–0,6 kg/m² płyty g-k na taśmowanie i szpachlowanie. Wiadro 25 kg pokrywa ok. 40–60 m². Ceny od 25 do 80 zł za wiadro 25 kg w polskich marketach budowlanych. Na gładź całopowierzchniową (cienka warstwa tynku na całą płytę) stosuj Cekol GS-200, Knauf Multi-Finish lub Rigips Rimano przy zużyciu ok. 1,5–2,0 kg/m², co wymaga znacznie więcej materiału. Taśma papierowa kosztuje ok. 10–15 zł za rolkę 75 m. Siatka zbrojeniowa samoprzylepna jest nieco droższa, ale łatwiejsza dla amatorów.",
+  nextSteps: [
+    { label: "Kalkulator Płyt Gipsowo-Kartonowych", href: "/calculators/insulation-drywall/drywall-calculator/" },
+    { label: "Kalkulator Wkrętów do Płyt G-K", href: "/calculators/insulation-drywall/drywall-screw-calculator/" },
+    { label: "Kalkulator Gruntu", href: "/calculators/finishing/primer-calculator/" },
+  ],
+  installationTips: [
+    "Nałóż cienką warstwę osadzającą, wciśnij taśmę i wygładź nadmiar masy.",
+    "Poczekaj na pełne wyschnięcie każdej warstwy (zwykle 4–24 godziny) przed nałożeniem kolejnej.",
+    "Każdą kolejną warstwę rozcieraj szerzej niż poprzednią dla niewidocznego wykończenia.",
+    "Szlifuj lekko między warstwami papierem ściernym 120 dla gładkiego efektu.",
+    "Na duże powierzchnie rozważ gładź maszynową — szybsza i bardziej równomierna.",
+  ],
+  commonMistakes: [
+    "Nakładanie zbyt grubej warstwy — lepsze są wielokrotne cienkie warstwy, gruba pęka.",
+    "Brak wystarczającego czasu schnięcia między warstwami, co powoduje bąblowanie i pękanie.",
+    "Pominięcie szlifowania, co zostawia widoczne nierówności pod farbą.",
+    "Stosowanie masy szpachlowej jako gładzi — to różne produkty o różnym przeznaczeniu.",
+    "Praca w zbyt zimnym pomieszczeniu (poniżej 10°C), co spowalnia schnięcie i pogarsza przyczepność.",
+  ],
+  faqs: [
+    { question: "Ile masy szpachlowej na metr kwadratowy?", answer: "Na taśmowanie i szpachlowanie budżetuj 0,4–0,6 kg/m² płyty g-k. Wiadro 25 kg pokrywa ok. 40–60 m². Na typowy pokój (33 m² ścian i sufitu) jedno wiadro 25 kg zwykle wystarcza." },
+    { question: "Taśmowanie i szpachlowanie czy gładź?", answer: "Taśmowanie i szpachlowanie (suchy montaż) jest szybsze i odpowiednie dla większości zastosowań domowych. Gładź tynkarska daje twardszą, gładszą powierzchnię preferowaną przez niektórych malarzy. Taśmowanie jest standardem w budownictwie szkieletowym." },
+    { question: "Jaką taśmę stosować?", answer: "Taśma papierowa (Rigips, Knauf) daje najsilniejsze złącze i jest preferowana przez profesjonalistów. Siatka zbrojeniowa samoprzylepna jest łatwiejsza dla amatorów, ale daje nieco słabsze złącze i wymaga więcej masy do wyrównania." },
+    { question: "Ile warstw masy szpachlowej?", answer: "Trzy warstwy to standard: warstwa osadzająca (do wciśnięcia taśmy), warstwa wypełniająca (pokrycie taśmy) i warstwa wykończeniowa (wygładzenie krawędzi). Niektóre produkty łączą funkcje pierwszych dwóch warstw." },
+    { question: "Jak długo schnie masa szpachlowa?", answer: "Gotowa masa schnie 4–24 godzin na warstwę, w zależności od grubości, temperatury i wilgotności. Masy szybkowiążące (proszkowe, np. Knauf Uniflot) wiążą chemicznie w 20–90 minut i można je szybciej pokrywać kolejną warstwą." },
+    { question: "Ile kosztuje masa szpachlowa w Polsce?", answer: "Wiadro 25 kg gotowej masy kosztuje 25–80 zł w zależności od marki (Cekol, Rigips, Knauf). Masa szybkowiążąca kosztuje 15–40 zł za worek 5 kg. Taśma papierowa to 10–15 zł za rolkę 75 m. Na cały dom budżetuj 200–700 zł na materiały szpachlowe." },
+  ],
+};
+
+// ─── HARDWARE ───────────────────────────────────────────────────────────────
+
+export const framingNailCalculator: CalculatorSEOContent = {
+  disclaimer: WASTE_DISCLAIMER,
+  howToUse: [
+    "Wprowadź liczbę słupków lub elementów szkieletowych.",
+    "Wybierz typ i rozmiar gwoździ (75 mm, 90 mm).",
+    "Podaj metodę montażu (ręczna, gwoździarka).",
+    "Kliknij Oblicz materiały, aby otrzymać łączną liczbę gwoździ i masę w kilogramach.",
+  ],
+  materialInfo:
+    "Gwoździe konstrukcyjne służą do montażu szkieletu drewnianego — mocowania słupków do podwalin, belek do podciągów i poszycia do szkieletu. W polskim budownictwie najczęstsze gwoździe konstrukcyjne to gładkie lub pierścieniowe gwoździe 75 mm i 90 mm, jasne lub ocynkowane. Typowy dom szkieletowy zużywa 15–25 kg gwoździ. Gwoździarki pneumatyczne i akumulatorowe używają gwoździi w taśmach lub magazynkach — typowe rozmiary to 75 mm × 3,1 mm na połączenia słupek-podwalina i 90 mm × 3,1 mm na połączenia podwalina-podwalina i belka. Gwoździe luzem kosztują 10–25 zł/kg w hurtowniach budowlanych. Gwoździe w taśmach (do gwoździarek) kosztują 80–200 zł za opakowanie 2000–3000 sztuk. Gwoździe pierścieniowe zapewniają lepszą odporność na wyrywanie i są specyfikowane na poszycie i połączenia krytyczne. Gwoździe ocynkowane stosuj do drewna impregnowanego i na zewnątrz, aby zapobiec korozji. Połączenia zgodne z PN-EN 1995-1-1 wymagają przestrzegania rozstawów, średnic i odległości od krawędzi.",
+  nextSteps: [
+    { label: "Kalkulator Słupków Ściennych", href: "/calculators/wall-framing/stud-calculator/" },
+    { label: "Kalkulator Wieszaków Belkowych", href: "/calculators/hardware/joist-hanger-calculator/" },
+    { label: "Kalkulator Wkrętów do Płyt G-K", href: "/calculators/insulation-drywall/drywall-screw-calculator/" },
+  ],
+  installationTips: [
+    "Używaj gwoździarki pneumatycznej lub akumulatorowej dla szybkości i konsystencji na dużych projektach szkieletowych.",
+    "Przestrzegaj schematu gwoździowania określonego przez konstruktora dla każdego typu połączenia.",
+    "Nawierć otwory pilotażowe przy gwoździowaniu blisko końców drewna, aby zapobiec pękaniu.",
+    "Stosuj gwoździe ocynkowane do drewna impregnowanego i na zewnątrz.",
+    "Sprawdzaj regularnie ustawienia gwoździarki — zbyt głębokie wbicie osłabia połączenie.",
+  ],
+  commonMistakes: [
+    "Stosowanie gwoździ gładkich tam, gdzie specyfikowane są pierścieniowe — gładkie mają znacznie mniejszą odporność na wyrywanie.",
+    "Zbyt gęste lub za rzadkie gwoździowanie poszycia — przestrzegaj rozstawów dla nośności konstrukcyjnej.",
+    "Stosowanie gwoździi jasnych (nieocynkowanych) na drewno impregnowane, gdzie środki impregnujące przyspieszają korozję.",
+    "Gwoździowanie zbyt blisko krawędzi drewna, co powoduje pękanie.",
+    "Nieuwzględnienie różnic między gwoździami do gwoździarek różnych marek (Paslode, DeWalt, Makita).",
+  ],
+  faqs: [
+    { question: "Jakie gwoździe na szkielet drewniany?", answer: "75 mm na połączenia słupek-podwalina, 90 mm na podwalina-podwalina i połączenia belkowe. Na poszycie: 50 mm lub 63 mm gwoździe pierścieniowe. Zawsze przestrzegaj specyfikacji konstruktora." },
+    { question: "Ile gwoździ na słupek?", answer: "Każdy słupek wymaga 4 gwoździ (2 na każdym końcu) przy gwoździowaniu czołowym przez podwalinę. Gwoździowanie ukośne wymaga 3 gwoździ na połączenie (2 z jednej strony, 1 z drugiej)." },
+    { question: "Pierścieniowe czy gładkie?", answer: "Pierścieniowe na poszycie, podłogę i połączenia wymagające dużej odporności na wyrywanie. Gładkie na ogólne gwoździowanie szkieletu, gdzie obciążenie jest głównie ścinające." },
+    { question: "Ile kosztują gwoździe konstrukcyjne w Polsce?", answer: "Luzem: 10–25 zł/kg. W taśmach do gwoździarek: 80–200 zł za opakowanie (2000–3000 szt.). Na typowy dom budżetuj 400–1200 zł na wszystkie gwoździe konstrukcyjne." },
+    { question: "Czy potrzebuję gwoździ ocynkowanych?", answer: "Tak, do połączeń z drewnem impregnowanym, na zewnątrz i w miejscach narażonych na wilgoć. Gwoździe jasne (nieocynkowane) nadają się tylko do wewnętrznych połączeń z drewnem nieimpregnowanym." },
+    { question: "Gdzie kupić gwoździe konstrukcyjne?", answer: "Gwoździe dostępne są w Castoramie, Leroy Merlin, OBI, Bricomarché i hurtowniach budowlanych. Gwoździe w taśmach do konkretnych marek gwoździarek (Paslode, DeWalt, Makita) u dystrybutorów narzędzi." },
+  ],
+};
+
+export const joistHangerCalculator: CalculatorSEOContent = {
+  disclaimer: WASTE_DISCLAIMER,
+  howToUse: [
+    "Wprowadź liczbę belek stropowych.",
+    "Wybierz typ wieszaka odpowiedni do przekroju belki.",
+    "Podaj sposób podparcia (ściana, podciąg).",
+    "Kliknij Oblicz materiały, aby otrzymać liczbę wieszaków.",
+  ],
+  materialInfo:
+    "Wieszaki belkowe to ocynkowane łączniki stalowe podpierające koniec belki stropowej lub wzmocnienia tam, gdzie styka się ona z podciągiem, ścianą lub nadprożem. Zapewniają silne, niezawodne połączenie bez potrzeby wmurowania belki w ścianę. W Polsce wieszaki specyfikowane są wg PN-EN 14545 i produkowane przez Simpson Strong-Tie, Bova, Domax i BMF. Standardowe typy to wieszaki czołowe (przybijane do czoła elementu nośnego), wieszaki murowane (wmurowane w mur) i wieszaki ukryte. Wieszaki dobiera się do głębokości i szerokości belki: typowe rozmiary to 45×200 mm, 45×225 mm i 45×250 mm. Każdy wieszak kosztuje 5–20 zł w Castoramie, Leroy Merlin lub hurtowniach budowlanych. Wieszaki mocuje się gwoździami lub wkrętami specyfikowanymi przez producenta — nigdy zwykłymi gwoździami, które nie mają wymaganej wytrzymałości na ścinanie. Każda belka zwykle wymaga jednego wieszaka na każdym podpartym końcu, więc łączna liczba to dwa razy liczba belek.",
+  nextSteps: [
+    { label: "Kalkulator Belek Stropowych", href: "/calculators/floor-framing/floor-joist-calculator/" },
+    { label: "Kalkulator Łączników Wiatrowych", href: "/calculators/hardware/hurricane-tie-calculator/" },
+    { label: "Kalkulator Gwoździ Konstrukcyjnych", href: "/calculators/hardware/framing-nail-calculator/" },
+  ],
+  installationTips: [
+    "Dobierz prawidłowy rozmiar wieszaka do wymiarów belki — belka musi siedzieć ciasno w wieszaku.",
+    "Mocuj gwoździami lub wkrętami specyfikowanymi przez producenta (zwykle 30×3,75 mm lub 40×4 mm ocynkowane).",
+    "Wypełnij każdy otwór gwoździowy w wieszaku — puste otwory zmniejszają nośność połączenia.",
+    "Sprawdź, czy wieszak jest wypoziomowany i belka w pełni oparta na siodełku wieszaka.",
+    "Nie modyfikuj wieszaków (nie wyginaj, nie docinaj) — unieważnia to deklarowaną nośność.",
+  ],
+  commonMistakes: [
+    "Niewłaściwy rozmiar wieszaka — belka siedzi luźno lub nie jest w pełni podparta.",
+    "Niewypełnienie wszystkich otworów gwoździowych — każdy pusty otwór zmniejsza nośność.",
+    "Stosowanie zwykłych gwoździ zamiast specyfikowanych przez producenta wieszaka.",
+    "Montaż wieszaka do zbyt cienkiego elementu nośnego, który nie wytrzyma obciążenia.",
+    "Użycie wkrętów uniwersalnych zamiast specjalnych wkrętów do wieszaków (np. Simpson SDS).",
+  ],
+  faqs: [
+    { question: "Ile wieszaków na belkę?", answer: "Każda belka wymaga jednego wieszaka na każdym podpartym końcu. Jeśli oba końce oparte na ścianach lub podciągach, potrzebujesz 2 wieszaków na belkę. Jeśli jeden koniec jest wmurowany, potrzebujesz 1." },
+    { question: "Jakie gwoździe do wieszaków?", answer: "Stosuj wyłącznie gwoździe specyfikowane przez producenta. Simpson Strong-Tie specyfikuje gwoździe 30×3,75 mm lub 40×4 mm ocynkowane. Zwykłe gwoździe unieważniają deklarowaną nośność." },
+    { question: "Czy każda belka wymaga wieszaka?", answer: "Wieszaki są wymagane wszędzie tam, gdzie belka styka się z elementem nośnym i nie może na nim spocząć lub być wmurowana. W budownictwie szkieletowym wieszaki stosuje się przy niemal każdym połączeniu belkowym." },
+    { question: "Ile kosztują wieszaki belkowe?", answer: "Standardowe ocynkowane wieszaki kosztują 5–20 zł/szt. Wieszaki ukryte i wzmocnione: 25–60 zł. Dla typowego domu budżetuj 400–1200 zł na wieszaki." },
+    { question: "Czy mogę użyć wkrętów zamiast gwoździ w wieszakach?", answer: "Tylko jeśli producent specyfikuje wkręty dla danego wieszaka. Większość wieszaków jest zaprojektowana na gwoździe. Jeśli wkręty są dopuszczone, stosuj wkręty konstrukcyjne (np. Simpson SDS) o specyfikowanej średnicy i długości." },
+    { question: "Gdzie kupić wieszaki belkowe w Polsce?", answer: "Wieszaki dostępne w Castoramie, Leroy Merlin, OBI, Bricomarché i hurtowniach budowlanych. Simpson Strong-Tie, Bova i Domax to najszerzej dostępne marki w Polsce." },
+  ],
+};
+
+export const hurricaneTieCalculator: CalculatorSEOContent = {
+  disclaimer: WASTE_DISCLAIMER,
+  howToUse: [
+    "Wprowadź liczbę wiązarów lub krokwi.",
+    "Wybierz typ łącznika (kątownik, taśma).",
+    "Podaj strefę obciążenia wiatrem.",
+    "Kliknij Oblicz materiały, aby otrzymać liczbę łączników.",
+  ],
+  materialInfo:
+    "Łączniki wiatrowe (kątowniki wiązarowe) to ocynkowane łączniki stalowe mocujące wiązary dachowe lub krokwie do murłaty lub oczepu poniżej. Przeciwdziałają siłom unoszącym wiatru, które mogą zerwać dach z budynku. W Polsce łączniki wiatrowe są wymagane przez PN-EN 1995-1-1 i warunki techniczne dla zapewnienia pozytywnego połączenia odpornego na obliczeniowe siły unoszące. Każdy wiązar lub krokiew musi mieć łącznik w każdym punkcie oparcia na murłacie. Standardowe kątowniki (np. Simpson Strong-Tie A35, Bova, Domax) kosztują 2–8 zł za sztukę i mocowane są gwoździami 30×3,75 mm. Każdy kątownik wymaga 4–6 gwoździ dla pełnej deklarowanej nośności. W strefach o dużym obciążeniu wiatrem (wybrzeże Bałtyku, tereny górskie) konstruktor może specyfikować wzmocnione łączniki lub taśmy stalowe. Taśma stalowa ocynkowana (30×5 mm) jest alternatywną metodą — prowadzi się ją od krokwi, przez murłatę, w dół po wewnętrznej stronie ściany, mocując gwoździami na każdym kontakcie z drewnem.",
+  nextSteps: [
+    { label: "Kalkulator Wiązarów Dachowych", href: "/calculators/roofing/truss-calculator/" },
+    { label: "Kalkulator Krokwi", href: "/calculators/roofing/rafter-calculator/" },
+    { label: "Kalkulator Wieszaków Belkowych", href: "/calculators/hardware/joist-hanger-calculator/" },
+  ],
+  installationTips: [
+    "Zamocuj łącznik w każdym punkcie oparcia wiązara lub krokwi na murłacie.",
+    "Stosuj gwoździe specyfikowane przez producenta i wypełnij każdy otwór dla pełnej nośności.",
+    "Montuj łączniki przed obciążeniem dachu (przed ułożeniem pokrycia), aby wiązar dobrze osiadł na murłacie.",
+    "W strefach wietrznych łącz kątowniki z taśmą stalową ocynkowaną dla wzmocnionej odporności.",
+    "Sprawdź, czy łączniki są zainstalowane po prawidłowej stronie — kątownik musi obejmować krokiew i murłatę.",
+  ],
+  commonMistakes: [
+    "Pominięcie łączników na niektórych wiązarach — każdy wiązar i krokiew musi być połączony z murłatą.",
+    "Niewypełnienie wszystkich otworów gwoździowych, co zmniejsza siłę odrywania poniżej wymagań obliczeniowych.",
+    "Stosowanie niewystarczających łączników w strefach wietrznych, gdzie wymagane są wzmocnione łączniki lub taśmy.",
+    "Montaż łączników po ułożeniu pokrycia, gdy wiązary są już obciążone i nie osiadają prawidłowo.",
+    "Stosowanie zwykłych wkrętów zamiast specyfikowanych gwoździ.",
+  ],
+  faqs: [
+    { question: "Czy łączniki wiatrowe są wymagane przepisami?", answer: "Tak. PN-EN 1995 i warunki techniczne wymagają, aby konstrukcja dachu była odpowiednio połączona z podparciem dla odporności na siły unoszące wiatru. Łączniki wiatrowe to najczęstsza i najbardziej ekonomiczna metoda." },
+    { question: "Ile łączników na wiązar?", answer: "Każdy wiązar wymaga jednego łącznika w każdym punkcie oparcia na murłacie — zwykle 2 łączniki na wiązar (po jednym z każdej strony). Jeśli wiązar opiera się też na ścianie wewnętrznej, dodaj łącznik w tym punkcie." },
+    { question: "Jakie gwoździe do łączników wiatrowych?", answer: "Gwoździe 30×3,75 mm ocynkowane wg specyfikacji producenta łącznika. Zwykłe gwoździe lub wkręty unieważniają deklarowaną nośność." },
+    { question: "Czy potrzebuję taśm stalowych oprócz łączników?", answer: "W standardowych lokalizacjach same łączniki zwykle wystarczają. Na wybrzeżu, wzniesieniach i w otwartym terenie konstruktor może specyfikować taśmy stalowe prowadzone od krokwi przez murłatę w dół po wewnętrznej stronie ściany." },
+    { question: "Ile kosztują łączniki wiatrowe?", answer: "Standardowe kątowniki kosztują 2–8 zł za sztukę. Dla typowego domu z 30 wiązarami budżetuj 60 łączników za 120–480 zł łącznie. To zaniedbywalny koszt w porównaniu z kosztem konstrukcji dachu." },
+    { question: "Gdzie kupić łączniki wiatrowe w Polsce?", answer: "Łączniki dostępne w Castoramie, Leroy Merlin, OBI i hurtowniach budowlanych. Simpson Strong-Tie, Bova i Domax to główne marki w Polsce." },
+  ],
+};
+
+export const lumberCostCalculator: CalculatorSEOContent = {
+  disclaimer: "Ceny są przybliżonymi średnimi polskimi. Rzeczywiste ceny zależą od regionu, dostawcy i warunków rynkowych.",
+  howToUse: [
+    "Wybierz przekrój drewna z listy (45×90, 45×140, 45×200 mm itp.).",
+    "Wprowadź ilość (liczbę sztuk).",
+    "Wprowadź długość jednej sztuki w metrach.",
+    "Kliknij Oblicz materiały, aby otrzymać szacunek kosztu w zł.",
+  ],
+  materialInfo:
+    "Drewno konstrukcyjne iglaste (głównie świerk, sosna i jodła) jest podstawowym materiałem polskiego budownictwa szkieletowego. Drewno jest klasyfikowane C16 lub C24 wg PN-EN 338, z C24 jako wyższą klasą wytrzymałości preferowaną do zastosowań konstrukcyjnych. Typowe przekroje to 45×90 mm, 45×140 mm, 45×200 mm i 45×250 mm, w standardowych długościach 3,0 m, 4,0 m, 5,0 m i 6,0 m. Ceny drewna w Polsce zmieniają się z globalnymi rynkami, krajowym popytem i warunkami łańcucha dostaw. Orientacyjne ceny w hurtowniach: 8–15 zł/m.b. za 45×90 mm C16, 15–25 zł/m.b. za 45×200 mm C24, 20–40 zł/m.b. za 45×250 mm C24. Zakup hurtowy (pełne pakiety lub transport) z Castoramy, Leroy Merlin, PSB Mrówka lub bezpośrednio z tartaku daje 10–20% oszczędności. Drewno impregnowane kosztuje 15–25% więcej niż nieimpregnowane. Drewno suszone komorowo (KD) jest preferowane nad drewno mokre, ponieważ jest stabilne wymiarowo i mniej podatne na wypaczanie i skurcz.",
+  nextSteps: [
+    { label: "Kalkulator Słupków Ściennych", href: "/calculators/wall-framing/stud-calculator/" },
+    { label: "Kalkulator Belek Stropowych", href: "/calculators/floor-framing/floor-joist-calculator/" },
+    { label: "Kalkulator Objętości Drewna", href: "/calculators/hardware/board-feet-calculator/" },
+  ],
+  installationTips: [
+    "Sprawdzaj drewno przy odbiorze pod kątem prostoliniowości, pęknięć i stempli klasyfikacyjnych — odrzucaj wadliwe sztuki.",
+    "Składuj drewno nad ziemią na podkładach, przykryte oddychającą plandeką, aby zapobiec wchłanianiu wilgoci.",
+    "Stosuj drewno suszone komorowo (KD) na szkielet wewnętrzny, aby zminimalizować skurcz i odkształcenia.",
+    "Zamawiaj 5–10% więcej, aby uwzględnić odpady z cięcia i odrzuty.",
+    "Negocjuj ceny przy większych zamówieniach — różnice między dostawcami mogą być znaczące.",
+  ],
+  commonMistakes: [
+    "Zamawianie bez sprawdzenia aktualnych cen — ceny drewna mogą się znacząco zmieniać z miesiąca na miesiąc.",
+    "Stosowanie C16 tam, gdzie specyfikowane jest C24 — C16 ma niższą wytrzymałość i krótszą rozpiętość.",
+    "Nieuwzględnienie odpadów z cięcia — 5–10% to norma na każdym projekcie szkieletowym.",
+    "Kupowanie drewna mokrego (nieklasyfikowanego) zamiast KD, co prowadzi do skurczu i problemów z konstrukcją.",
+    "Brak porównania cen między dostawcami — różnice mogą wynosić 20–30%.",
+  ],
+  faqs: [
+    { question: "Jaka jest różnica między C16 a C24?", answer: "C16 i C24 to klasy wytrzymałości wg PN-EN 338. C24 ma wyższą wytrzymałość na zginanie (24 N/mm² vs 16 N/mm²), wyższą sztywność i większą gęstość. C24 stosuje się do zastosowań konstrukcyjnych wymagających wyższych parametrów. C24 kosztuje 10–20% więcej niż C16." },
+    { question: "Gdzie najtaniej kupić drewno?", answer: "Hurtownie budowlane (PSB Mrówka, Castorama, Leroy Merlin) oferują ceny handlowe, zwłaszcza przy zamówieniach hurtowych. Drewno bezpośrednio z tartaków jest najtańsze przy dużych ilościach. Dla małych ilości OBI i Bricomarché są wygodne, ale droższe." },
+    { question: "Ile kosztuje drewno za metr bieżący?", answer: "Orientacyjnie: 45×90 mm C16 = 8–15 zł/m.b., 45×200 mm C24 = 15–25 zł/m.b., 45×250 mm C24 = 20–40 zł/m.b. Drewno impregnowane kosztuje 15–25% więcej. Ceny zależą od regionu i dostawcy." },
+    { question: "Drewno impregnowane czy nieimpregnowane?", answer: "Impregnowane ciśnieniowo stosuj wszędzie tam, gdzie drewno styka się z betonem, murem lub gruntem, lub jest narażone na wilgoć. Szkielet wewnętrzny powyżej poziomu izolacji zwykle nie wymaga impregnacji." },
+    { question: "Jaka różnica między drewnem suszonym a mokrym?", answer: "Drewno suszone komorowo (KD, wilgotność <18%) jest stabilne wymiarowo i nie kurczy się po montażu. Drewno mokre (wilgotność >20%) jest tańsze, ale kurczy się, wypacza i powoduje szczeliny w konstrukcji. Do szkieletu zawsze preferuj KD." },
+    { question: "Ile drewna na cały dom?", answer: "Typowy dom jednorodzinny szkieletowy zużywa ok. 15–25 m³ drewna konstrukcyjnego. Przy aktualnych polskich cenach to 20 000–60 000 zł za samo drewno, w zależności od specyfikacji i warunków rynkowych." },
+  ],
+};
+
+export const boardFeetCalculator: CalculatorSEOContent = {
+  disclaimer: "Wycena na board feet dotyczy głównie drewna twardego. Drewno iglaste w Polsce sprzedaje się zwykle na metry bieżące lub sześcienne.",
+  howToUse: [
+    "Wprowadź grubość, szerokość i długość drewna.",
+    "Wprowadź cenę za board foot lub metr sześcienny.",
+    "Wybierz gatunek drewna twardego.",
+    "Kliknij Oblicz materiały, aby otrzymać łączne board feet, metry sześcienne i koszt.",
+  ],
+  materialInfo:
+    "Board foot to jednostka objętości równa 144 cali sześciennym (kawałek 1 cal gruby × 12 cali szeroki × 12 cali długi). Jest standardową jednostką cenową drewna twardego w Ameryce Północnej i stosowaną przez polskich dostawców importujących z tartaków północnoamerykańskich. Formuła: Board Feet = (grubość w calach × szerokość w calach × długość w stopach) / 12. Stosuje się wymiary nominalne (nie rzeczywiste). W Polsce drewno twarde sprzedaje się również na metry sześcienne — 1 m³ = 423,8 board feet. Popularne drewna twarde dostępne u polskich dostawców to dąb amerykański (od 80–160 zł/BF), orzech amerykański (140–240 zł/BF), dąb europejski (100–200 zł/BF), jesion (40–80 zł/BF) i klon (60–120 zł/BF). Polscy importerzy drewna twardego (np. Tarcica24, Drewmart, Drew-Handel) sprzedają zarówno na board feet, jak i metry sześcienne. Drewno twarde sprzedawane jest zwykle w losowych szerokościach i długościach, dlatego system board feet normalizuje wycenę niezależnie od wymiarów poszczególnych desek.",
+  nextSteps: [
+    { label: "Kalkulator Kosztów Drewna", href: "/calculators/hardware/lumber-cost-calculator/" },
+    { label: "Kalkulator Sklejki", href: "/calculators/hardware/plywood-calculator/" },
+    { label: "Kalkulator Desek Tarasowych", href: "/calculators/outdoor/deck-board-calculator/" },
+  ],
+  installationTips: [
+    "Dolicz 25–40% odpadu przy kupowaniu surowego drewna twardego na meble i stolarkę.",
+    "Poproś sprzedawcę o heblowanie (struganie) desek, aby zaoszczędzić czas w warsztacie.",
+    "Specyfikuj klasę FAS (First and Seconds) dla projektów wymagających czystych, bezwadowych powierzchni.",
+    "Aklimatyzuj drewno twarde w pomieszczeniu przez min. 2 tygodnie przed obróbką.",
+    "Sprawdź wilgotność drewna wilgotnościomierzem — powinna być 8–12% do zastosowań meblowych.",
+  ],
+  commonMistakes: [
+    "Stosowanie wymiarów rzeczywistych zamiast nominalnych — board feet zawsze używają nominalnych.",
+    "Nieuwzględnienie odpadów ze strugania, wad i odcinków.",
+    "Porównywanie cen za board foot między gatunkami bez uwzględnienia gęstości i obrabialności.",
+    "Kupowanie drewna o zbyt wysokiej wilgotności — prowadzi do paczenia się gotowych wyrobów.",
+    "Brak aklimatyzacji drewna przed obróbką.",
+  ],
+  faqs: [
+    { question: "Co to jest board foot?", answer: "Board foot (BF) to jednostka objętości równa 144 calom sześciennym — kawałek 1 cal gruby, 12 cali szeroki i 1 stopę długi. Jest standardową jednostką cenową drewna twardego w Ameryce Północnej i stosowaną przez polskich importerów." },
+    { question: "Jak przeliczyć board feet na metry sześcienne?", answer: "1 metr sześcienny = 423,8 board feet. Aby przeliczyć BF na m³, podziel przez 423,8. Na przykład 100 BF = 0,236 m³." },
+    { question: "Dlaczego drewno twarde sprzedaje się na board feet?", answer: "Drewno twarde pochodzi w losowych szerokościach i długościach, ponieważ jest piłowane z kłód o różnych rozmiarach. System board feet normalizuje wycenę objętościowo, niezależnie od wymiarów poszczególnych desek." },
+    { question: "Gdzie kupić drewno twarde w Polsce?", answer: "Polscy dostawcy drewna twardego to Tarcica24, Drewmart, Drew-Handel, Drewno-Lux i regionalne tartaki dębowe. Wielu sprzedaje online z dostawą. Lokalne tartaki też mają drewno twarde krajowe." },
+    { question: "Ile kosztuje drewno twarde w Polsce?", answer: "Orientacyjne ceny za BF: jesion 40–80 zł, dąb amerykański 80–160 zł, dąb europejski 100–200 zł, orzech 140–240 zł, klon 60–120 zł. Gatunki egzotyczne (teak, iroko) to 120–300 zł/BF." },
+    { question: "Co to jest klasa FAS?", answer: "FAS (First and Seconds) to najwyższa standardowa klasa drewna twardego, wymagająca co najmniej 83% czystego (bezwadowego) drewna na licu. To klasa do specyfikowania na meble, stolarkę i każdy projekt, gdzie wygląd ma znaczenie." },
+  ],
+};
+
+export const plywoodCalculator: CalculatorSEOContent = {
+  disclaimer: "Ceny dotyczą standardowej sklejki iglastej. Panele specjalistyczne (morskie, brzozowe, laminowane) kosztują więcej.",
+  howToUse: [
+    "Wprowadź powierzchnię do pokrycia w metrach kwadratowych.",
+    "Wybierz grubość sklejki.",
+    "Podaj przeznaczenie (podłoga, poszycie, meble).",
+    "Kliknij Oblicz materiały, aby otrzymać liczbę arkuszy i szacunek kosztów w zł.",
+  ],
+  materialInfo:
+    "Sklejka to inżynieryjny panel drewniany wykonany z cienkich warstw (fornirów) drewna klejonych naprzemiennie z kierunkiem włókien. Ta budowa krzyżowo-laminowana nadaje sklejce doskonałą wytrzymałość, sztywność i stabilność wymiarową w porównaniu z drewnem litym o tej samej grubości. Standardowe arkusze mają 1250×2500 mm lub 1220×2440 mm, z grubościami od 4 mm do 24 mm. Typowe rodzaje w Polsce: sklejka iglasta konstrukcyjna (na poszycie, podłogi i dachy), sklejka liściasta (na meble i stolarkę), sklejka morska (wg PN-EN 636 klasa 3 — na środowiska mokre), sklejka brzozowa (na meble i CNC). Ceny w polskich hurtowniach: 35–60 zł za 6 mm iglastą, 60–100 zł za 18 mm iglastą, 80–150 zł za 18 mm brzozową, 150–300 zł za 18 mm morską. Producenci popularni w Polsce: Paged, Biaform, UPM Plywood, Metsä Wood. Przy cięciu sklejki stosuj piłę z drobnym uzębieniem (80+ zębów na pile stołowej), aby zminimalizować rozwarstwianie forniru lica. Zawsze składuj sklejkę płasko na równej powierzchni.",
+  nextSteps: [
+    { label: "Kalkulator Płyt OSB", href: "/calculators/floor-framing/osb-panel-calculator/" },
+    { label: "Kalkulator Kosztów Drewna", href: "/calculators/hardware/lumber-cost-calculator/" },
+    { label: "Kalkulator Poszycia Zewnętrznego", href: "/calculators/wall-framing/exterior-sheathing-calculator/" },
+  ],
+  installationTips: [
+    "Zostaw 3 mm szczelinę dylatacyjną między arkuszami na ruch wilgotnościowy.",
+    "Montuj z włóknami lica prostopadle do podparć dla maksymalnej wytrzymałości.",
+    "Na zewnątrz stosuj łączniki nierdzewne lub ocynkowane.",
+    "Przesuwaj złącza między rzędami dla mocniejszego montażu.",
+    "Na meble obrabiaj krawędzie okleiną lub frezem profilowym — surowe krawędzie sklejki są nieestetyczne.",
+  ],
+  commonMistakes: [
+    "Brak szczelin dylatacyjnych — ciasno ułożone arkusze wybrzuszą się po wchłonięciu wilgoci.",
+    "Stosowanie sklejki do wnętrz na zewnątrz — rozwarstwiw się pod wpływem deszczu.",
+    "Cięcie grubym zębem piły, co wyrywa fornir lica i daje szorstką krawędź.",
+    "Składowanie sklejki na nierównej powierzchni, co powoduje trwałe wypaczenie.",
+    "Mylenie klas wodoodporności — nie każda sklejka 'wodoodporna' nadaje się na stałe zanurzenie.",
+  ],
+  faqs: [
+    { question: "Ile arkuszy sklejki na metr kwadratowy?", answer: "Arkusz 1250×2500 mm pokrywa 3,125 m². Podziel powierzchnię przez 3,125 i dodaj 10% na odpady. Dla 30 m²: (30 × 1,10) / 3,125 = 11 arkuszy." },
+    { question: "Jaka różnica między sklejką a OSB?", answer: "Sklejka jest z obrotowo obranych fornirów klejonych warstwowo. OSB z dużych wiórów prasowanych z klejem. Sklejka jest mocniejsza, bardziej wodoodporna i ma gładszą powierzchnię. OSB jest tańsze i wystarczające do większości zastosowań konstrukcyjnych." },
+    { question: "Co to jest sklejka morska?", answer: "Sklejka morska (PN-EN 636 klasa 3) jest wykonana z wodoodpornym klejem i fornirami bez pustek. Przeznaczona na stałą ekspozycję na wilgoć (łodzie, mokre pomieszczenia). Kosztuje 2–3 razy więcej niż standardowa." },
+    { question: "Ile kosztuje sklejka w Polsce?", answer: "Standardowa 1250×2500 mm iglasta: 6 mm = 35–50 zł, 12 mm = 55–80 zł, 18 mm = 75–120 zł. Brzozowa 18 mm = 100–160 zł. Morska 18 mm = 150–300 zł. Ceny z Castoramy, Leroy Merlin lub hurtowni." },
+    { question: "Czy sklejka nadaje się na dach płaski?", answer: "Tak. Sklejka klasy zewnętrznej (WBP — weather and boil proof) nadaje się na poszycie dachów płaskich. 18 mm na belkach co 40 cm. Sklejka musi być pokryta membraną dachową i nie powinna być eksponowana na warunki atmosferyczne." },
+    { question: "Sklejka czy MDF na półki?", answer: "Sklejka jest mocniejsza i bardziej wodoodporna, lepsza na obciążone półki i wilgotne pomieszczenia. MDF daje gładszą powierzchnię do malowania i jest tańszy. Na malowane półki z umiarkowanym obciążeniem oba się sprawdzą. Na duże obciążenia lub kuchnie/łazienki — sklejka." },
+  ],
+};
+
+// ─── FINISHING ───────────────────────────────────────────────────────────────
+
+export const paintCoverageCalculator: CalculatorSEOContent = {
+  disclaimer: "Rzeczywiste pokrycie zależy od faktury powierzchni, marki farby i metody aplikacji. Powierzchnie szorstkie lub teksturowane mogą zmniejszyć pokrycie o 20–30%.",
+  howToUse: [
+    "Wprowadź całkowitą powierzchnię ścian i sufitu w metrach kwadratowych.",
+    "Odejmij powierzchnię okien i drzwi.",
+    "Wybierz liczbę warstw (2 to standard).",
+    "Kliknij Oblicz materiały, aby otrzymać litry, opakowania i pokrycie.",
+  ],
+  materialInfo:
+    "Pokrycie farby w Polsce mierzy się w metrach kwadratowych na litr. Standardowa emulsja pokrywa 10–14 m²/l na gładkich, wcześniej malowanych powierzchniach. Farby matowe zwykle pokrywają nieco więcej niż satynowe lub półmatowe ze względu na niższą zawartość składników stałych. Farby premium marek Śnieżka, Dekoral, Dulux, Caparol i Tikkurila często zapewniają lepsze krycie jedną warstwą dzięki wyższej zawartości pigmentu. Farba sprzedawana jest w opakowaniach 1 l, 2,5 l, 5 l i 10 l. Opakowanie 2,5 l pokrywa ok. 25–35 m² na warstwę. Dla standardowego pokoju (30 m² ścian + 12 m² sufitu = 42 m²) dwie warstwy wymagają ok. 6–8 litrów — kup 2 opakowania 2,5 l lub 1 opakowanie 5 l. Ceny od 25 do 60 zł za 2,5 l farby handlowej (Śnieżka Barwy Natury, Dekoral Clean) do 150–350 zł za 2,5 l marek premium (Beckers, Tikkurila, Caparol). Nowe płyty g-k lub tynk wymagają warstwy gruntującej (rozcieńczona emulsja 70:30 farba:woda) lub dedykowanego gruntu (Ceresit, Atlas) przed warstwami nawierzchniowymi.",
+  nextSteps: [
+    { label: "Kalkulator Kosztów Malowania", href: "/calculators/finishing/paint-cost-calculator/" },
+    { label: "Kalkulator Gruntu", href: "/calculators/finishing/primer-calculator/" },
+    { label: "Kalkulator Płyt Gipsowo-Kartonowych", href: "/calculators/insulation-drywall/drywall-calculator/" },
+  ],
+  installationTips: [
+    "Używaj wałka z krótkim włosem (5–10 mm) na gładkie ściany, z średnim (10–15 mm) na lekką fakturę.",
+    "Wytnij krawędzie i narożniki pędzlem kątowym przed wałkowaniem głównej powierzchni.",
+    "Utrzymuj mokrą krawędź — pracuj sekcjami i nie pozwól krawędzi schnąć przed kontynuacją.",
+    "Nakładaj w kształcie litery W wałkiem, potem wyrównuj równomiernie bez podnoszenia.",
+    "W polskim klimacie maluj w temperaturze 10–25°C przy wilgotności poniżej 70% dla najlepszych efektów.",
+  ],
+  commonMistakes: [
+    "Brak warstwy gruntującej na nowym tynku lub g-k — farba będzie się łuszczyć lub nierówno wchłaniać.",
+    "Kupienie za mało farby — przerwanie w połowie ściany tworzy widoczne ślady zakładek.",
+    "Nakładanie drugiej warstwy zbyt wcześnie — odczekaj 2–4 godziny między warstwami emulsji.",
+    "Stosowanie tanich wałków, które gubią włókna w warstwie farby.",
+    "Malowanie w zbyt niskiej temperaturze (poniżej 10°C) lub zbyt wysokiej wilgotności.",
+  ],
+  faqs: [
+    { question: "Ile farby na pokój?", answer: "Typowy pokój 3×4 m z sufitem 2,5 m ma ok. 42 m² powierzchni do malowania. Przy 12 m²/l i 2 warstwach potrzebujesz ok. 7 litrów. Kup opakowanie 5 l + 2,5 l lub 2 opakowania 5 l na zapas do poprawek." },
+    { question: "Ile metrów kwadratowych na litr?", answer: "Standardowa emulsja pokrywa 10–14 m²/l na gładkich, wcześniej malowanych powierzchniach. Na szorstkich lub chłonnych to 8–10 m². Farby premium mogą pokryć do 16 m²/l." },
+    { question: "Kupić 2,5 l czy 5 l?", answer: "Na pojedynczy pokój 2,5 l jest praktyczne. Na wiele pokoi w tym samym kolorze 5 l lub 10 l jest bardziej ekonomiczne (15–25% taniej na litr) i zapewnia konsystencję koloru." },
+    { question: "Czy potrzebuję 2 warstwy?", answer: "Tak. Dwie warstwy są zalecane dla niemal wszystkich prac malarskich. Pierwsza warstwa uszczelnia i daje jednolite podłoże. Druga zapewnia docelową głębię koloru, połysk i trwałość." },
+    { question: "Ile farby na cały dom?", answer: "Typowy dom jednorodzinny ma 250–350 m² malowanych ścian i sufitów. Przy 2 warstwach z 12 m²/l potrzebujesz 40–60 litrów — ok. 4–6 opakowań 10 l lub 8–12 opakowań 5 l." },
+    { question: "Jakie marki farb są najlepsze w Polsce?", answer: "Handlowe: Śnieżka (Barwy Natury, Satynowa) i Dekoral (Clean, Fashion) oferują najlepsze pokrycie i trwałość za cenę. Premium: Beckers, Tikkurila i Caparol zapewniają wyjątkową głębię koloru. Średnia półka: Dulux, Magnat i Śnieżka Premium." },
+  ],
+};
+
+export const paintCostCalculator: CalculatorSEOContent = {
+  disclaimer: "Ceny są przybliżonymi średnimi polskimi na 2025–2026. Rzeczywiste ceny zależą od marki, detalisty i regionu.",
+  howToUse: [
+    "Wprowadź całkowitą powierzchnię do malowania w metrach kwadratowych.",
+    "Wybierz liczbę warstw.",
+    "Wybierz poziom jakości farby: handlowa, średnia lub premium.",
+    "Zaznacz, czy potrzebujesz gruntu.",
+    "Kliknij Oblicz materiały, aby otrzymać rozbicie kosztów w zł.",
+  ],
+  materialInfo:
+    "Koszt projektu malarskiego zależy od jakości farby, powierzchni, liczby warstw i ewentualnej robocizny. Farba handlowa (25–50 zł za 2,5 l), np. Śnieżka Barwy Natury, Dekoral Clean, to standard dla profesjonalnych malarzy z doskonałym pokryciem i trwałością. Farba średniej klasy (50–100 zł za 2,5 l), np. Dulux, Magnat, Śnieżka Premium, jest przeznaczona dla wymagających amatorów. Farba premium (100–350 zł za 2,5 l), np. Beckers, Tikkurila Optiva, Caparol Indeko Plus, oferuje wyjątkową głębię koloru i pokrycie, ale po 3–5-krotnie wyższej cenie. Oprócz farby budżetuj materiały pomocnicze: zestaw wałkowy (15–50 zł), pędzle (10–35 zł/szt.), taśma malarska (8–15 zł/rolka), folia ochronna (15–40 zł) i grunt (25–50 zł za 2,5 l). Profesjonalni malarze w Polsce biorą 200–500 zł za pokój lub 25–50 zł/m², z farbą i przygotowaniem.",
+  nextSteps: [
+    { label: "Kalkulator Wydajności Farby", href: "/calculators/finishing/paint-coverage-calculator/" },
+    { label: "Kalkulator Gruntu", href: "/calculators/finishing/primer-calculator/" },
+    { label: "Kalkulator Płyt Gipsowo-Kartonowych", href: "/calculators/insulation-drywall/drywall-calculator/" },
+  ],
+  installationTips: [
+    "Kup całą farbę za jednym razem dla konsystencji partii — kolory mogą się różnić między partiami.",
+    "Inwestuj w jakościowe wałki i pędzle — widocznie wpływają na wykończenie.",
+    "Stosuj taśmę malarską na listwach przypodłogowych, ościeżnicach i liniach sufitowych dla czystych krawędzi.",
+    "Miej pod ręką wilgotną szmatkę do natychmiastowego wycierania rozbryzgów.",
+    "Kupuj farbę w większych opakowaniach (10 l) dla lepszej ceny za litr.",
+  ],
+  commonMistakes: [
+    "Wybór najtańszej farby do pomieszczeń o dużym ruchu — będzie wymagać odmalowania za 2–3 lata zamiast 7–10.",
+    "Nieuwzględnienie gruntu w budżecie — pominięcie gruntu na nowym tynku podwaja zużycie farby.",
+    "Kupienie za mało farby — dorobienie niestandardowego koloru później jest prawie niemożliwe.",
+    "Ignorowanie wyboru połysku — matowa maskuje niedoskonałości, ale łatwo się brudzi; satyna to najlepszy kompromis.",
+    "Brak porównania cen między sklepami — różnice mogą być znaczące.",
+  ],
+  faqs: [
+    { question: "Ile kosztuje pomalowanie pokoju?", answer: "Standardowy pokój 3×4 m kosztuje 100–250 zł w materiałach (7–8 litrów farby plus akcesoria) przy samodzielnym malowaniu. Profesjonalny malarz bierze 200–500 zł za pokój z farbą i przygotowaniem." },
+    { question: "Czy premium farba jest tego warta?", answer: "Do pokoi, których używasz codziennie — tak. Farby premium (100–350 zł za 2,5 l) oferują lepsze pokrycie (czasem jednowarstwowe), doskonałą zmywalność i wytrzymują 10–15 lat. Na dłuższą metę premium kosztuje mniej rocznie niż przemalowywanie co 3–5 lat tanią farbą." },
+    { question: "Ile kosztują materiały pomocnicze?", answer: "Podstawowe materiały na jeden pokój: 40–120 zł. Wałek z kuwetą (15–50 zł), 2 pędzle (20–70 zł), taśma malarska (8–15 zł/rolka, 2–3 rolki), folia ochronna (15–40 zł)." },
+    { question: "Gdzie najtaniej kupić farbę?", answer: "Farby handlowe z hurtowni budowlanych (PSB Mrówka, Castorama) dają najlepszą wartość za jakość. Leroy Merlin i OBI mają regularne promocje. Online (Allegro, sklepy producenta) czasem bije ceny stacjonarne." },
+    { question: "Ile farby na 100 m²?", answer: "Przy 12 m²/l i 2 warstwach, 100 m² wymaga ok. 17 litrów. Kup 2 opakowania 10 l za 200–400 zł (handlowa) lub 400–700 zł (średnia klasa)." },
+    { question: "Czy potrzebuję gruntu przed malowaniem?", answer: "Grunt jest zalecany na nowe płyty g-k (warstwa gruntująca), surowe drewno, naprawione/szpachlowane miejsca, dramatyczne zmiany koloru i blokowanie plam. Na wcześniej malowanych powierzchniach w dobrym stanie o podobnym kolorze grunt zwykle nie jest konieczny." },
+  ],
+};
+
+export const primerCalculator: CalculatorSEOContent = {
+  disclaimer: "Porowate lub teksturowane powierzchnie mogą wymagać dodatkowego gruntu. Zawsze przestrzegaj wydajności producenta.",
+  howToUse: [
+    "Wprowadź całkowitą powierzchnię w metrach kwadratowych.",
+    "Wybierz typ powierzchni dla prawidłowej wydajności.",
+    "Podaj liczbę warstw gruntu.",
+    "Kliknij Oblicz materiały, aby otrzymać litry i liczbę opakowań.",
+  ],
+  materialInfo:
+    "Grunt (podkład) to warstwa preparacyjna nakładana przed farbą nawierzchniową dla zapewnienia prawidłowej przyczepności, jednolitego połysku i konsystentnego koloru. Różne powierzchnie wymagają różnych formuł gruntu. Na nowe płyty g-k stosuje się warstwę gruntującą (emulsja rozcieńczona 70:30 z wodą) lub dedykowany grunt (Ceresit CT 17, Atlas Uni-Grunt, Śnieżka Acryl-Putz GP41), który daje bardziej konsystentny efekt. Surowe drewno wymaga gruntu drewnianego (akrylowego lub rozpuszczalnikowego) do uszczelnienia słojów i zapobiegania wybijaniu żywicy. Do blokowania plam (zacieki wodne, nikotyna, żywica) grunt szelakowy (Zinsser BIN) jest niezastąpiony. Wydajność gruntu: grunt g-k pokrywa 10–14 m²/l, grunt drewniany 8–10 m²/l, grunt blokujący plamy 6–8 m²/l. Ceny od 25 do 60 zł za litr w polskich marketach. Popularne marki gruntów w Polsce: Ceresit, Atlas, Śnieżka, Dekoral, Zinsser i Caparol.",
+  nextSteps: [
+    { label: "Kalkulator Wydajności Farby", href: "/calculators/finishing/paint-coverage-calculator/" },
+    { label: "Kalkulator Kosztów Malowania", href: "/calculators/finishing/paint-cost-calculator/" },
+    { label: "Kalkulator Masy Szpachlowej", href: "/calculators/insulation-drywall/joint-compound-calculator/" },
+  ],
+  installationTips: [
+    "Nakładaj grunt tym samym typem wałka lub pędzla, którego użyjesz na farbę nawierzchniową.",
+    "Poczekaj na pełne wyschnięcie gruntu przed malowaniem — zwykle 1–2 godziny dla akrylowego, 16–24 godziny dla rozpuszczalnikowego.",
+    "Poproś sprzedawcę o zabarwienie gruntu w kierunku koloru nawierzchniowego dla lepszego krycia.",
+    "Nakładaj pędzlem na wycinkach i wałkiem na dużych powierzchniach.",
+    "Na nowe tynki i gładzie stosuj grunt głęboko penetrujący (Ceresit CT 17) — zwykłe emulsje nie wnikną wystarczająco.",
+  ],
+  commonMistakes: [
+    "Brak gruntowania nowych płyt g-k — powoduje nierównomierne wchłanianie (flashowanie) widoczne pod określonym oświetleniem.",
+    "Stosowanie gruntu wodorozcieńczalnego na plamy — grunt wodny nie blokuje żywicy, nikotyny ani zacieków; stosuj szelakowy (Zinsser BIN).",
+    "Nakładanie gruntu zbyt grubo — jedna równa warstwa wystarczy; gruba warstwa dłużej schnie i może się łuszczyć.",
+    "Gruntowanie po kurzu i brucie — zawsze oczyść lub odkurz powierzchnie przed gruntowaniem.",
+    "Stosowanie zwykłej emulsji jako gruntu na nowym tynku — grunt ma specjalne żywice do przyczepności i uszczelnienia.",
+  ],
+  faqs: [
+    { question: "Czy zawsze potrzebuję gruntu przed malowaniem?", answer: "Grunt jest niezbędny na nowych płytach g-k, surowym drewnie, naprawionych miejscach i przy blokowaniu plam lub dramatycznych zmianach koloru. Na wcześniej malowanych powierzchniach w dobrym stanie o podobnym kolorze samogruntująca farba nawierzchniowa może wystarczyć." },
+    { question: "Jaki grunt na nowe płyty g-k?", answer: "Warstwa gruntująca (emulsja rozcieńczona 70:30 z wodą) lub dedykowany grunt (Ceresit CT 17, Atlas Uni-Grunt, Śnieżka GP41). Grunt uszczelnia chłonną powierzchnię dla równomiernego wchłaniania farby nawierzchniowej." },
+    { question: "Ile gruntu na litr?", answer: "Wydajność zależy od powierzchni: g-k 10–14 m²/l, wcześniej malowane ściany 12–16 m²/l, surowe drewno 8–10 m²/l, grunt blokujący plamy 6–8 m²/l. Zawsze sprawdź kartę techniczną produktu." },
+    { question: "Czy mogę użyć białej farby jako gruntu?", answer: "Nie. Farba i grunt pełnią różne funkcje. Grunt ma specjalne żywice do przyczepności i uszczelnienia. Stosowanie farby jako gruntu na nowych g-k daje nierównomierne wchłanianie, flashowanie i słabą przyczepność." },
+    { question: "Czy warto zabarwić grunt?", answer: "Tak, gdy farba nawierzchniowa jest w średnim lub ciemnym kolorze. Zabarwiony grunt zmniejsza liczbę warstw nawierzchniowych potrzebnych do pełnego krycia. Większość sprzedawców doda niewielką ilość barwnika do gruntu bezpłatnie." },
+    { question: "Jakie są najlepsze marki gruntów w Polsce?", answer: "Ceresit CT 17 (grunt głęboko penetrujący) to standard budowlany. Atlas Uni-Grunt — wielozadaniowy. Śnieżka Acryl-Putz GP41 na g-k. Zinsser BIN (szelakowy) na blokowanie plam. Caparol TiefGrund na tynki i gładzie." },
+  ],
+};
+
+// ─── OUTDOOR ────────────────────────────────────────────────────────────────
+
+export const deckBoardCalculator: CalculatorSEOContent = {
+  disclaimer: "Szacunek uwzględnia 10% zapasu na odpady. Rzeczywiste odpady zależą od kształtu tarasu i długości desek. Układy ukośne zwiększają odpady do 15–20%.",
+  howToUse: [
+    "Wprowadź długość i szerokość tarasu w metrach.",
+    "Wprowadź szerokość deski w milimetrach (140 mm to standard).",
+    "Wprowadź długość desek (typowe: 3,0 m, 4,0 m, 6,0 m).",
+    "Kliknij Oblicz materiały, aby otrzymać liczbę desek, metry bieżące i pokrycie.",
+  ],
+  materialInfo:
+    "Deski tarasowe to widoczna powierzchnia tarasu, narażona na ruch pieszy, meble, warunki atmosferyczne i UV. Najczęstsze materiały w Polsce to drewno iglaste impregnowane (najtańsza opcja), modrzew syberyjski, drewno twarde egzotyczne (bangkirai, cumaru, ipe) i deski kompozytowe.\n\nDrewno iglaste impregnowane ciśnieniowo (zwykle sosna lub świerk, impregnowane do klasy UC3 lub UC4) to najpopularniejszy wybór w Polsce. Standardowe deski to 28×145 mm z ryflowaną powierzchnią antypoślizgową. Ceny od 12 do 30 zł/m.b. w Castoramie, Leroy Merlin i PSB Mrówka. Żywotność 10–15 lat przy corocznej konserwacji olejem tarasowym.\n\nModrzew syberyjski jest naturalnie odporny na gnicie i wietrzeje do atrakcyjnej srebrno-szarej barwy. Ceny 25–50 zł/m.b., żywotność 15–25 lat.\n\nDrewno twarde egzotyczne (bangkirai, cumaru, ipe) jest ekstremalnie trwałe i naturalnie odporne na gnicie i owady. Ceny 40–100 zł/m.b. Żywotność 25–40+ lat przy minimalnej konserwacji.\n\nDeski kompozytowe (WPC — wood-plastic composite) z marek Fiberon, TimberTech, Millboard czy polskiej marki Gardenline nie wymagają bejcowania, nie gniją i mają gwarancje 25–50 lat. Ceny 30–100 zł/m.b. Wymagają specyficznych łączników i wentylowanej podkonstrukcji.\n\nOdstęp między deskami jest kluczowy: zostaw 5–8 mm na drenaż. Deski impregnowane montowane mokre układaj na styk — skurczą się po wyschnięciu.",
+  nextSteps: [
+    { label: "Kalkulator Stóp Fundamentowych Tarasu", href: "/calculators/outdoor/deck-footing-calculator/" },
+    { label: "Kalkulator Balustrady Tarasu", href: "/calculators/outdoor/deck-railing-calculator/" },
+    { label: "Kalkulator Schodów Tarasowych", href: "/calculators/outdoor/deck-stair-calculator/" },
+  ],
+  installationTips: [
+    "Pierwszą deskę ułóż idealnie prosto i prostopadle do domu — każda kolejna pójdzie za nią.",
+    "Nawierć otwory pilotażowe przy końcach desek, aby zapobiec pękaniu, zwłaszcza przy drewnie twardym.",
+    "Przesuwaj złącza o co najmniej 2 przęsła legarów dla wytrzymałości i estetyki.",
+    "Układaj deski stroną korową do góry (słoje wyginające się w dół), aby woda spływała zamiast się gromadzić.",
+    "Zostaw 10 mm szczelinę między ścianą domu a pierwszą deską na odprowadzanie wody.",
+  ],
+  commonMistakes: [
+    "Brak szczelin między deskami — ciasne suche deski wybrzuszą się po wchłonięciu wilgoci.",
+    "Zbyt krótkie wkręty — wkręty tarasowe powinny wchodzić min. 40 mm w legar.",
+    "Liniowanie wszystkich złączy na tym samym legarze — przesuwaj złącza dla wytrzymałości i profesjonalnego wyglądu.",
+    "Pominięcie impregnacji ciętych końców — odsłonięte czoła drewna wchłaniają wodę i gniją szybciej.",
+    "Stosowanie wkrętów stalowych zamiast nierdzewnych — rdzawe plamy na drewnie i kompozycie.",
+  ],
+  faqs: [
+    { question: "Ile desek na taras 4×5 m?", answer: "Taras 4×5 m z deskami 145 mm potrzebuje ok. 27 desek po 5 m. Z 10% zapasem zamów 30 desek. Przy krótszych deskach ze złączami potrzebujesz więcej na odpady na złączach." },
+    { question: "Jaki rozmiar desek tarasowych?", answer: "Najpopularniejsza deska tarasowa w Polsce to 28×145 mm. Zapewnia dobrą równowagę wytrzymałości, wyglądu i ceny. Deski 21×120 mm dostępne do lżejszych zastosowań." },
+    { question: "Jak daleko od siebie deski?", answer: "Zostaw 5–8 mm między deskami na drenaż i wentylację. Deski impregnowane montowane mokre układaj na styk — skurczą się. Deski kompozytowe: rozstaw wg instrukcji producenta, zwykle 5–6 mm." },
+    { question: "Jak długo wytrzymują deski tarasowe?", answer: "Impregnowane iglaste: 10–15 lat z corocznym olejowaniem. Modrzew: 15–25 lat. Drewno egzotyczne: 25–40+ lat. Kompozyt: 25–50 lat z gwarancją. Nieimpregnowane iglaste: 3–5 lat." },
+    { question: "Wkręty czy gwoździe na taras?", answer: "Wkręty tarasowe nierdzewne to najlepsze mocowanie. 65–75 mm wkręty nierdzewne, 2 wkręty na deskę przy każdym legarze. Gwoździe są mniej niezawodne i mają tendencję do luzowania się." },
+    { question: "Ile kosztują deski tarasowe w Polsce?", answer: "Impregnowane iglaste: 12–30 zł/m.b. Modrzew: 25–50 zł/m.b. Egzotyczne: 40–100 zł/m.b. Kompozyt: 30–100 zł/m.b. Dla tarasu 4×5 m koszt samych desek to ok. 1800 zł (impregnowane) do 12 000 zł (premium kompozyt)." },
+  ],
+};
+
+export const deckFootingCalculator: CalculatorSEOContent = {
+  disclaimer: "Głębokość stóp musi odpowiadać warunkom lokalnym. Kalkulator podaje szacunek rozmieszczenia — rzeczywiste pozycje zależą od projektu tarasu, obciążeń i warunków gruntowych.",
+  howToUse: [
+    "Wprowadź długość i szerokość tarasu w metrach.",
+    "Ustaw maksymalny rozstaw słupków (1,8 m dla legarów 45×150 mm, 2,4 m dla 45×200 mm).",
+    "Podaj strefę przemarzania gruntu.",
+    "Kliknij Oblicz materiały, aby otrzymać liczbę stóp, słupków i wymagania na legary.",
+  ],
+  materialInfo:
+    "Stopy fundamentowe tarasu to betonowe filary przenoszące ciężar tarasu na grunt. Bez prawidłowych stóp taras osiadzie, przesunie się lub ulegnie wysadzinom mrozowym. Dwie popularne metody to betonowe szalunki rurowe (tekturowe rury osadzone w wykopanych otworach i wypełnione betonem) i betonowe stopy prefabrykowane.\n\nDla większości polskich tarasów ogrodowych szalunki 250 mm lub 300 mm wypełnione betonem to standardowe podejście. Każda stopa 250 mm × 100 cm wymaga ok. 0,049 m³ betonu (ok. 4 worki betonu szybkowiążącego po 25 kg). Stopy muszą sięgać poniżej strefy przemarzania: 80 cm w strefie I (zachodnia Polska), 100 cm w strefie II, 120 cm w strefie III, 140 cm w strefie IV (północno-wschodnia Polska). W gruntach gliniastych podatnych na wysadziny głębsze stopy (120–150 cm) mogą być wymagane.\n\nRozstaw słupków zależy od przekroju legarów i klasy drewna. Dla podwójnych legarów 45×200 mm C24 maksymalny rozstaw to ok. 2,4 m. Dla 45×150 mm — do 1,8 m. Słupki to zwykle kantówka 100×100 mm impregnowana, łączona ze stopą za pomocą ocynkowanej stopy słupkowej zamiast osadzania drewna w betonie.\n\nBeton na stopy powinien mieć min. klasę C20/25. Odczekaj 24–48 godzin przed obciążaniem. Typowy taras 4×5 m przy domu wymaga 4–6 stóp.",
+  nextSteps: [
+    { label: "Kalkulator Desek Tarasowych", href: "/calculators/outdoor/deck-board-calculator/" },
+    { label: "Kalkulator Betonu", href: "/calculators/foundation/concrete-calculator/" },
+    { label: "Kalkulator Balustrady Tarasu", href: "/calculators/outdoor/deck-railing-calculator/" },
+  ],
+  installationTips: [
+    "Kop otwory na stopy poniżej strefy przemarzania — w Polsce to 80–140 cm w zależności od regionu.",
+    "Stosuj szalunki rurowe dla czystych, jednolitych stóp.",
+    "Osadź śruby stopy słupkowej w mokrym betonie i sprawdź centrowanie i pionowość.",
+    "Uformuj wierzch każdej stopy powyżej poziomu gruntu, aby woda odpływała od stopy.",
+    "Odczekaj min. 48 godzin na utwardzenie betonu przed montażem słupków.",
+  ],
+  commonMistakes: [
+    "Zbyt płytkie stopy — muszą sięgać poniżej strefy przemarzania (80–140 cm w Polsce).",
+    "Osadzanie drewnianych słupków bezpośrednio w betonie — zatrzymuje wilgoć i powoduje gnicie; zawsze stosuj metalową stopę.",
+    "Zbyt duży rozstaw słupków, przeciążający legary i powodując ugięcie.",
+    "Pominięcie zagęszczenia dna wykopu przed betonowaniem.",
+    "Brak sprawdzenia poziomu wszystkich stóp przed wiązaniem betonu.",
+  ],
+  faqs: [
+    { question: "Jak głęboko stopy tarasu w Polsce?", answer: "Stopy muszą sięgać poniżej strefy przemarzania: 80 cm w strefie I (zachodnia), 100 cm w strefie II (centralna), 120 cm w strefie III (wschodnia), 140 cm w strefie IV (północno-wschodnia). W gruntach gliniastych może być wymagana większa głębokość." },
+    { question: "Ile stóp na taras 4×5 m?", answer: "Taras 4×5 m z rozstawem słupków 2,4 m wymaga ok. 4–6 stóp w 2 rzędach. Jeśli taras jest mocowany do domu listwą przyścienną, strona przy domu nie wymaga stóp." },
+    { question: "Czy potrzebuję pozwolenia na budowę tarasu?", answer: "W Polsce taras o powierzchni do 35 m² i wysokości do 50 cm nad gruntem zwykle wymaga jedynie zgłoszenia. Tarasy wyższe lub większe mogą wymagać pozwolenia na budowę. Sprawdź z urzędem gminy." },
+    { question: "Jaki beton na stopy tarasu?", answer: "Stosuj beton C20/25 lub mocniejszy. Beton szybkowiążący (do słupków) nadaje się do lekkich tarasów. Dla większych tarasów lub podwyższonych konstrukcji stosuj standardowy beton C25/30." },
+    { question: "Ile betonu na jedną stopę?", answer: "Stopa 250 mm × 100 cm wymaga ok. 0,049 m³ betonu (ok. 4 worki po 25 kg). Stopa 300 mm × 100 cm to ok. 0,071 m³ (ok. 6 worków)." },
+    { question: "Czy mogę użyć bloków prefabrykowanych zamiast stóp betonowych?", answer: "Prefabrykowane bloki (stopy tarasowe) mogą być stosowane na niskie, wolnostojące tarasy na stabilnym gruncie. Nie wymagają kopania i osiadają na powierzchni. Nie nadają się na tarasy podwyższone ani mocowane do budynku." },
+  ],
+};
+
+export const deckRailingCalculator: CalculatorSEOContent = {
+  disclaimer: "Szacunek oparty na standardowych rozstawach. Zawsze weryfikuj wysokość, rozstaw tralek i sposób mocowania słupków z warunkami technicznymi (WT).",
+  howToUse: [
+    "Wprowadź całkowity obwód tarasu w metrach.",
+    "Odejmij długość przy domu (tam balustrada nie jest potrzebna).",
+    "Podaj wysokość tarasu nad gruntem.",
+    "Kliknij Oblicz materiały, aby otrzymać liczbę słupków, tralek i metry bieżące poręczy.",
+  ],
+  materialInfo:
+    "Balustrada tarasu jest elementem bezpieczeństwa wymaganym przez warunki techniczne (WT §298–§305) na każdej powierzchni tarasu 50 cm lub więcej nad gruntem. Minimalna wysokość balustrady to 90 cm dla tarasów mieszkalnych i 110 cm dla dostępu publicznego. Tralki muszą być rozmieszczone tak, aby kula 12 cm nie mogła przejść między nimi (wg WT — różni się od norm zachodnich z kulą 10 cm).\n\nSystemy balustrad składają się ze słupków, poręczy górnej, poręczy dolnej, tralek i opcjonalnie płaskiej nakładki poręczowej. Słupki to zwykle kantówka 100×100 mm impregnowana lub kompozytowe osłony na drewnie, w rozstawie max. 1,8 m. Muszą być skręcone do podkonstrukcji tarasu śrubami M10 lub M12 — nigdy tylko przykręcone do desek.\n\nTralki to zwykle listwy 40×40 mm lub 30×30 mm, lub metalowe/kompozytowe odpowiedniki. Przy standardowym rozstawie potrzebujesz ok. 8 tralek na metr bieżący.\n\nBalustrada drewniana kosztuje ok. 100–200 zł/m.b. z montażem. Kompozytowa: 200–400 zł/m.b. Szklana: 400–800 zł/m.b. Stalowa z linkami: 250–600 zł/m.b.\n\nBalustrada to jeden z najczęściej kontrolowanych elementów przez nadzór budowlany. Inspektorzy sprawdzają wytrzymałość mocowania słupków, rozstaw tralek, wysokość i szczelinę pod dolną poręczą.",
+  nextSteps: [
+    { label: "Kalkulator Desek Tarasowych", href: "/calculators/outdoor/deck-board-calculator/" },
+    { label: "Kalkulator Schodów Tarasowych", href: "/calculators/outdoor/deck-stair-calculator/" },
+    { label: "Kalkulator Stóp Fundamentowych Tarasu", href: "/calculators/outdoor/deck-footing-calculator/" },
+  ],
+  installationTips: [
+    "Skręcaj słupki do podkonstrukcji tarasu śrubami M10 lub M12 przez belkę obwodową lub legar.",
+    "Rozstaw tralki tak, aby kula 12 cm nie mogła przejść między nimi (wymóg WT).",
+    "Upewnij się, że szczelina między powierzchnią tarasu a dolną poręczą jest mniejsza niż 12 cm.",
+    "Nakładkę poręczową (45×150 mm) umieść na szczycie słupków dla wygodnej poręczy.",
+    "Stosuj łączniki nierdzewne — wilgoć i warunki atmosferyczne szybko korodują zwykłą stal.",
+  ],
+  commonMistakes: [
+    "Mocowanie słupków tylko do desek tarasowych — muszą być skręcone do podkonstrukcji.",
+    "Zbyt duży rozstaw tralek — test kuli 12 cm musi być spełniony w każdym punkcie.",
+    "Zbyt niska balustrada — minimum 90 cm od powierzchni tarasu do góry poręczy.",
+    "Brak uwzględnienia obciążenia poziomego — balustrada musi wytrzymać siłę poziomą wg PN-EN 1991.",
+    "Stosowanie drewna nieimpregnowanego na elementy narażone na warunki atmosferyczne.",
+  ],
+  faqs: [
+    { question: "Kiedy potrzebuję balustrady na tarasie?", answer: "Warunki techniczne (WT §298–§305) wymagają balustrady na każdej powierzchni tarasu 50 cm lub więcej nad gruntem. Dotyczy to tarasów podwyższonych, wielopoziomowych i każdej krawędzi z różnicą poziomów." },
+    { question: "Jaka wysokość balustrady?", answer: "Minimum 90 cm od powierzchni tarasu do góry poręczy dla tarasów mieszkalnych. 110 cm dla dostępu publicznego i komercyjnego." },
+    { question: "Ile tralek na metr bieżący?", answer: "Dla tralek 30 mm z max. rozstawem 12 cm (kula 12 cm) potrzebujesz ok. 7 tralek na metr. Dla tralek 40 mm ok. 7 na metr. Dokładna liczba zależy od szerokości tralki i wymaganego testu kuli." },
+    { question: "Ile kosztuje balustrada tarasu?", answer: "Drewniana: 100–200 zł/m.b. z montażem. Kompozytowa: 200–400 zł/m.b. Szklana: 400–800 zł/m.b. Dla typowego tarasu o 12 m biegu balustrady budżetuj 1200–2400 zł (drewno) lub 2400–4800 zł (kompozyt)." },
+    { question: "Czy potrzebuję poręczy na schodach tarasu?", answer: "Tak, jeśli schody mają 2 lub więcej stopni. Poręcz wymagana jest po co najmniej jednej stronie, na wysokości 90–100 cm od nosków stopni. Dla schodów szerszych niż 1,0 m poręcze po obu stronach." },
+    { question: "Czy mogę użyć paneli szklanych?", answer: "Tak. Panele ze szkła hartowanego bezpiecznego (10 mm lub 12 mm) są coraz popularniejsze ze względu na estetykę i widok. Muszą spełniać PN-EN 12150 dla szkła bezpiecznego i być mocowane zatwierdzonymi uchwytami lub szyna." },
+  ],
+};
+
+export const deckStairCalculator: CalculatorSEOContent = {
+  disclaimer: "Wymiary schodów muszą być zgodne z warunkami technicznymi (WT). Zawsze weryfikuj wysokość i głębokość stopni.",
+  howToUse: [
+    "Wprowadź całkowitą wysokość od gruntu do powierzchni tarasu w milimetrach.",
+    "Podaj szerokość schodów w metrach.",
+    "Kalkulator oblicza liczbę stopni, długość policzkówki i liczbę desek stopniowych.",
+    "Kliknij Oblicz materiały, aby otrzymać pełne zestawienie.",
+  ],
+  materialInfo:
+    "Schody tarasowe zapewniają dostęp z poziomu gruntu na podwyższony taras. Warunki techniczne (WT §68–§71) określają maksymalne wymiary schodów zewnętrznych: wysokość stopnia 150–175 mm, głębokość stopnia minimum 250 mm, z jednakową wysokością wszystkich stopni (tolerancja 5 mm). Najwygodniejsze wymiary schodów zewnętrznych to wysokość 150–170 mm i głębokość 280–320 mm.\n\nPoliczkówki to ukośne deski nośne po każdej stronie (i w środku dla szerokich schodów) z trójkątnymi nacięciami na stopnie. Wykonuje się je zwykle z desek 45×250 mm lub 45×300 mm impregnowanego drewna C24. Schody szersze niż 900 mm wymagają policzkówki środkowej. Stopnie to zwykle 2 deski tarasowe (28×145 mm) na każdy stopień, przykręcone do naciętych policzkówek.\n\nDla typowego tarasu o wysokości 90 cm z wysokością stopnia 170 mm potrzebujesz 5 stopni, 2 policzkówki po ok. 1,5 m i 10 desek stopniowych. Betonowa płyta lądowania (min. 100 mm grubości, 900×900 mm) jest potrzebna u podstawy. Poręcz jest wymagana po co najmniej jednej stronie przy 2 lub więcej stopniach.\n\nDrewno na schody musi być impregnowane do klasy UC3 lub UC4, mocowane wkrętami nierdzewnymi. Dół policzkówek powinien stać na metalowym uchwycie na betonowej płycie — nie bezpośrednio na gruncie. Koszt materiałów na 5-stopniowe schody to ok. 400–800 zł plus 200–400 zł na betonową płytę lądowania.",
+  nextSteps: [
+    { label: "Kalkulator Desek Tarasowych", href: "/calculators/outdoor/deck-board-calculator/" },
+    { label: "Kalkulator Balustrady Tarasu", href: "/calculators/outdoor/deck-railing-calculator/" },
+    { label: "Kalkulator Schodów Betonowych", href: "/calculators/foundation/concrete-steps-calculator/" },
+  ],
+  installationTips: [
+    "Oblicz dokładną wysokość stopnia, dzieląc całkowitą wysokość przez liczbę stopni — wszystkie muszą być jednakowe.",
+    "Wytnij policzkówkę wzorcową i sprawdź dopasowanie przed cięciem pozostałych.",
+    "Zamocuj górę policzkówek do belki obwodowej tarasu wieszakami belkowymi lub kątownikami schodowymi.",
+    "Postaw dół policzkówek na betonowej płycie lądowania — nigdy bezpośrednio na gruncie.",
+    "Zastosuj listwę antypoślizgową na nosku każdego stopnia dla bezpieczeństwa zimą.",
+  ],
+  commonMistakes: [
+    "Nierówna wysokość stopni — wszystkie muszą być jednakowe z tolerancją 5 mm wg WT.",
+    "Brak solidnego lądowania u podstawy — policzkówki na gruncie zgniiją i osiądą.",
+    "Zbyt głębokie nacięcia w policzkówce, osłabiające ją konstrukcyjnie — po nacięciach musi zostać min. 90 mm materiału.",
+    "Pominięcie poręczy — wymagana przy 2 lub więcej stopniach wg WT.",
+    "Stosowanie drewna nieimpregnowanego na schody — narażone na bezpośredni kontakt z wilgocią i gruntem.",
+  ],
+  faqs: [
+    { question: "Jakie wymiary schodów tarasowych wg WT?", answer: "WT: maksymalna wysokość stopnia 175 mm, minimalna głębokość 250 mm, jednakowe stopnie z tolerancją 5 mm, poręcz wymagana przy 2+ stopniach. Poręcz: 90–100 cm od nosków stopni." },
+    { question: "Ile stopni na taras o wysokości 90 cm?", answer: "Dzieląc 900 mm przez wygodne 170 mm wysokości stopnia, otrzymujemy ok. 5 stopni (5 × 180 mm = 900 mm). Dokładna wysokość: 900 / 5 = 180 mm na stopień." },
+    { question: "Jak szerokie powinny być schody tarasowe?", answer: "Minimum 60 cm na wejście użytkowe, 90 cm na wygodne przejście jednej osoby, 120 cm dla dwóch osób. Schody szersze niż 90 cm wymagają policzkówki środkowej." },
+    { question: "Czy potrzebuję lądowania u podstawy?", answer: "Tak. Policzkówki muszą opierać się na trwałej powierzchni. Betonowa płyta min. 100 mm grubości i co najmniej tak szeroka jak schody to standard. Niektóre tarasy stosują kostkę brukową lub płyty chodnikowe." },
+    { question: "Jakie drewno na policzkówki?", answer: "Stosuj kantówki 45×250 mm lub 45×300 mm impregnowane C24. Po nacięciach trójkątnych pozostała głębokość drewna powinna wynosić min. 90 mm. Dla szerokich schodów lub drewna twardego mogą być potrzebne większe przekroje." },
+    { question: "Czy mogę zbudować schody bez nacinanych policzkówek?", answer: "Tak. Metalowe uchwyty stopniowe (wsporniki) mocuje się do boku nienacinanych policzkówek. Są łatwiejsze dla amatorów, dają czysty wygląd i nie osłabiają policzkówki. Dostępne w Castoramie i u specjalistycznych dostawców." },
+  ],
+};
+
+// ─── REGISTRY MAP ───────────────────────────────────────────────────────────
+
+export const registryPL: Record<string, Record<string, CalculatorSEOContent>> = {
+  foundation: {
+    "anchor-bolt-calculator": anchorBoltCalculator,
+    "sill-seal-calculator": sillSealCalculator,
+    "sill-plate-calculator": sillPlateCalculator,
+    "concrete-calculator": concreteCalculator,
+    "concrete-slab-calculator": concreteSlabCalculator,
+    "concrete-footing-calculator": concreteFootingCalculator,
+    "concrete-column-calculator": concreteColumnCalculator,
+    "concrete-steps-calculator": concreteStepsCalculator,
+  },
+  "floor-framing": {
+    "rim-joist-calculator": rimJoistCalculator,
+    "floor-joist-calculator": floorJoistCalculator,
+    "bridging-calculator": bridgingCalculator,
+    "subfloor-adhesive-calculator": subfloorAdhesiveCalculator,
+    "osb-panel-calculator": osbPanelCalculator,
+  },
+  "wall-framing": {
+    "stud-calculator": studCalculator,
+    "bottom-plate-calculator": bottomPlateCalculator,
+    "top-plate-calculator": topPlateCalculator,
+    "header-calculator": headerCalculator,
+    "exterior-sheathing-calculator": exteriorSheathingCalculator,
+  },
+  roofing: {
+    "truss-calculator": trussCalculator,
+    "rafter-calculator": rafterCalculator,
+    "ridge-board-calculator": ridgeBoardCalculator,
+    "roof-sheathing-calculator": roofSheathingCalculator,
+    "shingle-calculator": shingleCalculator,
+    "underlayment-calculator": underlaymentCalculator,
+    "drip-edge-calculator": dripEdgeCalculator,
+    "roof-pitch-calculator": roofPitchCalculator,
+    "roof-area-calculator": roofAreaCalculator,
+    "roof-slope-calculator": roofSlopeCalculator,
+  },
+  "exterior-shell": {
+    "housewrap-calculator": housewrapCalculator,
+    "vinyl-siding-calculator": vinylSidingCalculator,
+    "hardie-siding-calculator": hardieSidingCalculator,
+    "window-flashing-calculator": windowFlashingCalculator,
+  },
+  "insulation-drywall": {
+    "cavity-insulation-calculator": cavityInsulationCalculator,
+    "drywall-calculator": drywallCalculator,
+    "drywall-screw-calculator": drywallScrewCalculator,
+    "joint-compound-calculator": jointCompoundCalculator,
+  },
+  hardware: {
+    "framing-nail-calculator": framingNailCalculator,
+    "joist-hanger-calculator": joistHangerCalculator,
+    "hurricane-tie-calculator": hurricaneTieCalculator,
+    "lumber-cost-calculator": lumberCostCalculator,
+    "board-feet-calculator": boardFeetCalculator,
+    "plywood-calculator": plywoodCalculator,
+  },
+  finishing: {
+    "paint-coverage-calculator": paintCoverageCalculator,
+    "paint-cost-calculator": paintCostCalculator,
+    "primer-calculator": primerCalculator,
+  },
+  outdoor: {
+    "deck-board-calculator": deckBoardCalculator,
+    "deck-footing-calculator": deckFootingCalculator,
+    "deck-railing-calculator": deckRailingCalculator,
+    "deck-stair-calculator": deckStairCalculator,
+  },
+};
