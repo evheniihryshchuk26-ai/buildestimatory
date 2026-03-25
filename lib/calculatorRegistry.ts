@@ -2196,7 +2196,7 @@ const paintCostCalculator: CalculatorConfig = {
     results.push({ label: `Estimated total project cost: $${r.totalCost}` });
     return results;
   },
-  disclaimer: "Prices are approximate 2024 US national averages. Actual prices vary by brand, retailer, and region.",
+  disclaimer: "Prices are approximate 2026 US national averages. Actual prices vary by brand, retailer, and region.",
   howToUse: [
     "Enter the total wall and ceiling area you plan to paint.",
     "Select the number of coats (2 is standard for most projects).",
@@ -2343,7 +2343,7 @@ const lumberCostCalculator: CalculatorConfig = {
     "Not price-comparing between home centers and local lumberyards.",
   ],
   faqs: [
-    { question: "How much does a 2x4x8 cost?", answer: "A standard SPF 2x4x8 stud costs $3 to $6 at most home centers as of 2024-2025. Prices fluctuate based on market conditions, season, and region. Pressure-treated 2x4x8 costs $5 to $9. Check prices at your local Home Depot, Lowe's, or lumberyard for the most current pricing." },
+    { question: "How much does a 2x4x8 cost?", answer: "A standard SPF 2x4x8 stud costs $3 to $6 at most home centers as of 2026-2025. Prices fluctuate based on market conditions, season, and region. Pressure-treated 2x4x8 costs $5 to $9. Check prices at your local Home Depot, Lowe's, or lumberyard for the most current pricing." },
     { question: "What is the difference between #2 and Stud grade lumber?", answer: "No. 2 grade lumber is graded for general structural use and can be used for joists, rafters, headers, and beams in any length. Stud grade is specifically graded for vertical load-bearing applications (wall studs) and is only available in lengths up to 10 feet. Stud grade is typically less expensive than No. 2 for 8-foot lengths because the grading criteria are less restrictive for vertical use." },
     { question: "Why are lumber prices so volatile?", answer: "Lumber prices are driven by housing starts, mill capacity, transportation costs, tariffs on Canadian imports, and natural disasters like wildfires and beetle infestations that reduce timber supply. The 2021 price spike was caused by pandemic-driven demand combined with temporary mill shutdowns. Futures markets and speculative trading also amplify price swings." },
     { question: "How many board feet are in a 2x4x8?", answer: "A 2x4x8 contains 5.33 board feet (2 x 4 x 8 / 12 = 5.33). Board feet measure volume: one board foot equals a piece 1 inch thick, 12 inches wide, and 1 foot long (144 cubic inches). Note this uses nominal dimensions, not actual dimensions." },

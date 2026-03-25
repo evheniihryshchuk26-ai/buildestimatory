@@ -36,7 +36,7 @@ const guides: GuidesTranslations = {
         href: "/guides/ready-mix-vs-bagged-concrete",
       },
       {
-        title: "Was kostet Beton? Preisleitfaden 2024",
+        title: "Was kostet Beton? Preisleitfaden 2026",
         description:
           "Transportbeton kostet 80–120 EUR pro Kubikmeter. Vollständiger Preisleitfaden für Platten, Fundamente, Einfahrten, Trockenbeton, Arbeitskosten und Spartipps.",
         href: "/guides/concrete-cost-guide",
@@ -563,7 +563,7 @@ const guides: GuidesTranslations = {
     costIntro:
       "Die Kosten pro Kubikmeter sind überraschend ähnlich. Der tatsächliche Kostenunterschied ergibt sich aus Liefergebühren, Arbeitsaufwand und Projektgröße.",
     costText1:
-      "Trockenbeton: Ein 40-kg-Sack Trockenbeton kostet 2–3 EUR im Baustoffhandel (2024-Preise). Jeder 40-kg-Sack ergibt etwa 0,02 m³. Für einen Kubikmeter benötigen Sie ca. 50 Säcke. Bei 2,50 EUR pro Sack sind das 125 EUR pro Kubikmeter allein an Material. Berücksichtigt man die Mischzeit (4–6 Stunden pro Kubikmeter von Hand), liegen die Gesamtkosten einschließlich Ihres Arbeitswerts bei großen Betonagen deutlich über Transportbeton.",
+      "Trockenbeton: Ein 40-kg-Sack Trockenbeton kostet 2–3 EUR im Baustoffhandel (2026-Preise). Jeder 40-kg-Sack ergibt etwa 0,02 m³. Für einen Kubikmeter benötigen Sie ca. 50 Säcke. Bei 2,50 EUR pro Sack sind das 125 EUR pro Kubikmeter allein an Material. Berücksichtigt man die Mischzeit (4–6 Stunden pro Kubikmeter von Hand), liegen die Gesamtkosten einschließlich Ihres Arbeitswerts bei großen Betonagen deutlich über Transportbeton.",
     costText2:
       "Transportbeton: Der Grundpreis für Standard-C25/30-Beton liegt bei 80–120 EUR pro Kubikmeter, abhängig von Region und aktuellem Zementpreis. Die meisten Lieferwerke berechnen Liefergebühren (50–100 EUR pro Anlieferung) und Kleinmengenaufschläge (30–60 EUR/m³) für Bestellungen unter dem Minimum (typischerweise 3 m³). Für eine 4-m³-Betonage erwarten Sie 400–550 EUR Material plus 50–100 EUR Gebühren, insgesamt 450–650 EUR.",
     costText3:
@@ -619,22 +619,22 @@ const guides: GuidesTranslations = {
   },
 
   concreteCostGuide: {
-    title: "Was kostet Beton? Preisleitfaden 2024",
+    title: "Was kostet Beton? Preisleitfaden 2026",
     metaDescription:
-      "Transportbeton kostet 80–120 EUR pro Kubikmeter. Vollständiger Preisleitfaden 2024 für Platten, Fundamente, Einfahrten, Trockenbeton, Arbeitskosten und Spartipps.",
+      "Transportbeton kostet 80–120 EUR pro Kubikmeter. Vollständiger Preisleitfaden 2026 für Platten, Fundamente, Einfahrten, Trockenbeton, Arbeitskosten und Spartipps.",
 
     heroTitle: "Was kostet Beton?",
-    heroSubtitle: "Preisleitfaden 2024",
+    heroSubtitle: "Preisleitfaden 2026",
     heroDescription:
       "Eine vollständige Aufschlüsselung der Betonpreise für jeden Typ von Wohnbauprojekt. Umfasst Transportbeton, Trockenbeton, Arbeitskosten und die Faktoren, die den Preis beeinflussen.",
 
     quickAnswerHeading: "Kurzantwort",
     quickAnswerText:
-      "Transportbeton kostet 80–120 EUR pro Kubikmeter geliefert in 2024, wobei die meisten Bauherren 90–110 EUR/m³ für Standard-C25/30-Beton zahlen. Die Gesamtkosten einschließlich Einbau (Arbeit, Schalung, Nachbearbeitung) liegen bei 50–120 EUR pro Quadratmeter für Flächenbetonage wie Einfahrten, Terrassen und Gehwege. Trockenbeton in Säcken kostet 2–3 EUR pro 40-kg-Sack, was etwa 100–150 EUR pro Kubikmeter nur an Material entspricht.",
+      "Transportbeton kostet 80–120 EUR pro Kubikmeter geliefert in 2026, wobei die meisten Bauherren 90–110 EUR/m³ für Standard-C25/30-Beton zahlen. Die Gesamtkosten einschließlich Einbau (Arbeit, Schalung, Nachbearbeitung) liegen bei 50–120 EUR pro Quadratmeter für Flächenbetonage wie Einfahrten, Terrassen und Gehwege. Trockenbeton in Säcken kostet 2–3 EUR pro 40-kg-Sack, was etwa 100–150 EUR pro Kubikmeter nur an Material entspricht.",
 
     costByProjectHeading: "Betonkosten nach Projektart",
     costByProjectIntro:
-      "Was Sie für Beton zahlen, hängt stark von Art und Größe des Projekts ab. Hier sind typische 2024-Kosten für gängige Betonprojekte im Wohnungsbau, inklusive Material und fachgerechtem Einbau:",
+      "Was Sie für Beton zahlen, hängt stark von Art und Größe des Projekts ab. Hier sind typische 2026-Kosten für gängige Betonprojekte im Wohnungsbau, inklusive Material und fachgerechtem Einbau:",
     costByProjectColProject: "Projekt",
     costByProjectColTypical: "Typische Kosten",
     costByProjectColNotes: "Anmerkungen",
@@ -653,7 +653,7 @@ const guides: GuidesTranslations = {
     baggedCostIntro:
       "Trockenbeton wird im Baustoffhandel und in Baumärkten verkauft. Die Preise variieren nach Sackgröße, Marke und Region:",
     baggedCostText1:
-      "Standard-Sackgrößen und -preise (2024): 25-kg-Säcke kosten 1,50–2,50 EUR. 40-kg-Säcke kosten 2,00–3,50 EUR. Der 40-kg-Sack bietet das beste Preis-Leistungs-Verhältnis, aber bei 40 kg pro Sack ist die körperliche Arbeit beim Mischen erheblich.",
+      "Standard-Sackgrößen und -preise (2026): 25-kg-Säcke kosten 1,50–2,50 EUR. 40-kg-Säcke kosten 2,00–3,50 EUR. Der 40-kg-Sack bietet das beste Preis-Leistungs-Verhältnis, aber bei 40 kg pro Sack ist die körperliche Arbeit beim Mischen erheblich.",
     baggedCostText2:
       "Kosten pro Kubikmeter aus Säcken: Mit 40-kg-Säcken à 2,50 EUR kostet ein Kubikmeter ca. 125 EUR an Material (50 Säcke). Diese Preise sind höher als Transportbeton (80–120 EUR/m³), aber Säcke haben keine Liefergebühren und Mindestmengen.",
     baggedCostText3:
@@ -715,10 +715,10 @@ const guides: GuidesTranslations = {
 
     faqHeading: "Häufig gestellte Fragen",
     faqs: [
-      { question: "Was kostet ein Kubikmeter Beton 2024?", answer: "Ein Kubikmeter Transportbeton kostet 80–120 EUR für das Material, abhängig von Region und Festigkeitsklasse. Liefergebühren (50–100 EUR) und eventuelle Kleinmengenaufschläge kommen hinzu. Gesamtkosten für eine typische 3–4 m³ Bestellung liegen bei 90–115 EUR/m³ inklusive aller Gebühren." },
+      { question: "Was kostet ein Kubikmeter Beton 2026?", answer: "Ein Kubikmeter Transportbeton kostet 80–120 EUR für das Material, abhängig von Region und Festigkeitsklasse. Liefergebühren (50–100 EUR) und eventuelle Kleinmengenaufschläge kommen hinzu. Gesamtkosten für eine typische 3–4 m³ Bestellung liegen bei 90–115 EUR/m³ inklusive aller Gebühren." },
       { question: "Was kostet eine 3×3-m-Betonplatte?", answer: "Eine 3×3-m-Betonplatte (12 cm stark) benötigt ca. 1,1 m³ Beton. Eigenleistungs-Materialkosten: 150–300 EUR (Beton, Schalung, Bewehrung, Schotter). Fachgerecht eingebaut: 600–1.200 EUR je nach Bodenvorbereitung, Oberfläche und lokalem Lohnniveau." },
       { question: "Ist Selbstmischen günstiger als Transportbeton?", answer: "Für kleine Projekte (unter 0,5 m³) ist Selbstmischen günstiger an Materialkosten. Für Projekte über 0,5 m³ ist Transportbeton fast immer günstiger pro Kubikmeter und spart Stunden an Arbeit. Der Wendepunkt liegt bei ca. 0,5 m³." },
-      { question: "Was kostet eine Betoneinfahrt?", answer: "Eine Standard-Einfahrt für 2 PKW (ca. 5×5 m, 15 cm stark) kostet 3.000–5.500 EUR eingebaut in 2024. Dies umfasst ca. 4 m³ Beton, Schotterunterbau, Schalung, Bewehrung und Besenstrich-Oberfläche. Waschbeton oder eingefärbter Beton kostet 5.000–8.000 EUR+." },
+      { question: "Was kostet eine Betoneinfahrt?", answer: "Eine Standard-Einfahrt für 2 PKW (ca. 5×5 m, 15 cm stark) kostet 3.000–5.500 EUR eingebaut in 2026. Dies umfasst ca. 4 m³ Beton, Schotterunterbau, Schalung, Bewehrung und Besenstrich-Oberfläche. Waschbeton oder eingefärbter Beton kostet 5.000–8.000 EUR+." },
       { question: "Warum variieren Betonpreise so stark nach Region?", answer: "Betonpreise hängen von den Kosten für Zement (variiert je nach Nähe zu Zementwerken), lokalen Zuschlagstoffkosten, Kraftstoffpreisen für Lieferfahrzeuge, Lohnniveau und Wettbewerb unter Anbietern ab." },
       { question: "Wie viel Beton brauche ich für mein Projekt?", answer: "Beton wird in Kubikmetern gemessen. Für rechteckige Platten: Länge (m) × Breite (m) × Stärke (m). Eine 3×4-m-Platte mit 12 cm Stärke = 3 × 4 × 0,12 = 1,44 m³. Immer 5–10 % für Verschnitt addieren. Nutzen Sie unseren kostenlosen Betonrechner für genaue Ergebnisse." },
     ],
@@ -931,7 +931,7 @@ const guides: GuidesTranslations = {
 
     faqHeading: "Häufig gestellte Fragen",
     faqs: [
-      { question: "Was kostet ein KVH-Ständer aktuell?", answer: "Ein Standard-KVH-Ständer 6×12×250 cm kostet 5–8 EUR im Baustoffhandel (2024/2025). Preise variieren regional, mit höheren Kosten in Ballungsräumen. Premium-Hölzer wie Douglasie kosten 8–15 EUR für die gleiche Dimension." },
+      { question: "Was kostet ein KVH-Ständer aktuell?", answer: "Ein Standard-KVH-Ständer 6×12×250 cm kostet 5–8 EUR im Baustoffhandel (2026/2025). Preise variieren regional, mit höheren Kosten in Ballungsräumen. Premium-Hölzer wie Douglasie kosten 8–15 EUR für die gleiche Dimension." },
       { question: "Warum ist Holz teurer als vor 5 Jahren?", answer: "Holzpreise stiegen 2020–2021 um 200–300 % durch pandemiebedingte Nachfrage und Lieferkettenprobleme. Obwohl die Preise deutlich von den Höchstständen gefallen sind, liegen sie weiterhin 30–50 % über dem Vorkrisenniveau aufgrund höherer Betriebs-, Transport- und Rohstoffkosten." },
       { question: "Wann ist die beste Zeit, Holz zu kaufen?", answer: "Spätherbst und Winter (Oktober bis Januar) bieten typischerweise die niedrigsten Preise, da die Bautätigkeit nachlässt. Sie können 10–20 % gegenüber Frühjahrs-/Sommerpreisen sparen. Wenn Sie trockene, überdachte Lagerung haben, kann der Kauf im November für einen Frühjahrsbau erhebliche Einsparungen bringen." },
       { question: "Lohnt sich kesseldruckimprägniertes Holz?", answer: "Ja, für jedes Holz mit Erdkontakt, innerhalb von 15 cm des Erdreichs oder bei dauerhafter Feuchtigkeit. KDI-Holz kostet 50–100 % mehr als unbehandeltes, hält aber 20–40 Jahre gegenüber 3–5 Jahren für unbehandeltes Holz bei Erdkontakt. Es ist baurechtlich vorgeschrieben für Schwellhölzer und Terrassenunterkonstruktionen." },

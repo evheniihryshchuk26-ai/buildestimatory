@@ -36,7 +36,7 @@ const guides: GuidesTranslations = {
         href: "/guides/ready-mix-vs-bagged-concrete",
       },
       {
-        title: "How Much Does Concrete Cost? 2024 Price Guide",
+        title: "How Much Does Concrete Cost? 2026 Price Guide",
         description:
           "Concrete costs $125\u2013$160 per cubic yard for ready-mix. Complete price guide covering slabs, footings, driveways, bagged concrete, labor costs, and saving tips.",
         href: "/guides/concrete-cost-guide",
@@ -181,7 +181,7 @@ const guides: GuidesTranslations = {
     costText1:
       "For a standard 8-foot wall, 16\" OC spacing requires one stud every 16 inches \u2014 roughly 0.75 studs per linear foot of wall. At 24\" OC, you need about 0.50 studs per linear foot. That is a 33% reduction in stud count.",
     costText2:
-      "On a typical 2,000 sq ft single-story home with ~200 linear feet of interior partitions, switching from 16\" to 24\" OC saves approximately 50 studs. At $6\u2013$8 per stud (2024 pricing for 2\u00d74\u00d796 SPF), that is $300\u2013$400 in studs alone. Factor in reduced fasteners, reduced labor (fewer studs to cut, carry, and nail), and the savings reach $800\u2013$1,200.",
+      "On a typical 2,000 sq ft single-story home with ~200 linear feet of interior partitions, switching from 16\" to 24\" OC saves approximately 50 studs. At $6\u2013$8 per stud (2026 pricing for 2\u00d74\u00d796 SPF), that is $300\u2013$400 in studs alone. Factor in reduced fasteners, reduced labor (fewer studs to cut, carry, and nail), and the savings reach $800\u2013$1,200.",
     costText3:
       "However, do not use 24\" OC spacing just to save money on load-bearing walls. The cost of a structural failure or code violation far exceeds any material savings. The savings apply only where 24\" OC is code-compliant.",
 
@@ -725,7 +725,7 @@ const guides: GuidesTranslations = {
     costIntro:
       "The per-yard cost of concrete is surprisingly similar between the two options. The real cost difference comes from delivery fees, labor, and the scale of your project.",
     costText1:
-      "Bagged concrete: An 80 lb bag of Quikrete or Sakrete costs $4.50\u2013$6.00 at most home improvement stores (2024 pricing). Each 80 lb bag yields about 0.6 cubic feet. One cubic yard equals 27 cubic feet, so you need approximately 45 bags per yard. At $5 per bag, that is $225 per cubic yard in material alone. However, 60 lb bags ($3.50\u2013$4.50) are more common for DIY projects and bring the cost to roughly $150\u2013$190 per yard. Factoring in the time to mix (easily 4\u20136 hours per yard by hand), the total cost including your labor value is significantly higher than ready-mix for large pours.",
+      "Bagged concrete: An 80 lb bag of Quikrete or Sakrete costs $4.50\u2013$6.00 at most home improvement stores (2026 pricing). Each 80 lb bag yields about 0.6 cubic feet. One cubic yard equals 27 cubic feet, so you need approximately 45 bags per yard. At $5 per bag, that is $225 per cubic yard in material alone. However, 60 lb bags ($3.50\u2013$4.50) are more common for DIY projects and bring the cost to roughly $150\u2013$190 per yard. Factoring in the time to mix (easily 4\u20136 hours per yard by hand), the total cost including your labor value is significantly higher than ready-mix for large pours.",
     costText2:
       "Ready-mix concrete: The base price for standard 3,000 PSI ready-mix ranges from $120 to $160 per cubic yard, depending on your region and the current cost of cement. Most suppliers add delivery fees ($50\u2013$100 for a standard truck trip) and may charge short-load fees ($40\u2013$75 per yard) for orders under their minimum (typically 3\u20134 yards). A fuel surcharge of $20\u2013$50 is also common. For a 4-yard driveway pour, expect to pay $600\u2013$800 in material plus $50\u2013$150 in fees, totaling $650\u2013$950.",
     costText3:
@@ -821,22 +821,22 @@ const guides: GuidesTranslations = {
   },
 
   concreteCostGuide: {
-    title: "How Much Does Concrete Cost? 2024 Price Guide",
+    title: "How Much Does Concrete Cost? 2026 Price Guide",
     metaDescription:
-      "Concrete costs $125\u2013$160 per cubic yard for ready-mix delivery. Complete 2024 price guide covering slabs, footings, driveways, bagged concrete, labor costs, and money-saving tips.",
+      "Concrete costs $125\u2013$160 per cubic yard for ready-mix delivery. Complete 2026 price guide covering slabs, footings, driveways, bagged concrete, labor costs, and money-saving tips.",
 
     heroTitle: "How Much Does Concrete Cost?",
-    heroSubtitle: "2024 Price Guide",
+    heroSubtitle: "2026 Price Guide",
     heroDescription:
       "A complete breakdown of concrete prices for every type of residential project. Covers ready-mix delivery, bagged concrete, labor costs, and the factors that affect what you will pay.",
 
     quickAnswerHeading: "Quick Answer",
     quickAnswerText:
-      "Ready-mix concrete costs $125\u2013$160 per cubic yard delivered in 2024, with most homeowners paying $130\u2013$150 per yard for standard 3,000\u20134,000 PSI residential concrete. Total installed cost (including labor, forms, and finishing) ranges from $8\u2013$18 per square foot for flatwork like driveways, patios, and sidewalks. Bagged concrete (Quikrete, Sakrete) costs $4.50\u2013$6.00 per 80 lb bag, which works out to about $150\u2013$225 per cubic yard for the material alone.",
+      "Ready-mix concrete costs $125\u2013$160 per cubic yard delivered in 2026, with most homeowners paying $130\u2013$150 per yard for standard 3,000\u20134,000 PSI residential concrete. Total installed cost (including labor, forms, and finishing) ranges from $8\u2013$18 per square foot for flatwork like driveways, patios, and sidewalks. Bagged concrete (Quikrete, Sakrete) costs $4.50\u2013$6.00 per 80 lb bag, which works out to about $150\u2013$225 per cubic yard for the material alone.",
 
     costByProjectHeading: "Concrete Cost by Project Type",
     costByProjectIntro:
-      "What you will pay for concrete depends heavily on the type and size of project. Here are typical 2024 costs for common residential concrete projects, including material and professional installation:",
+      "What you will pay for concrete depends heavily on the type and size of project. Here are typical 2026 costs for common residential concrete projects, including material and professional installation:",
     costByProjectColProject: "Project",
     costByProjectColTypical: "Typical Cost",
     costByProjectColNotes: "Notes",
@@ -855,7 +855,7 @@ const guides: GuidesTranslations = {
     baggedCostIntro:
       "Bagged concrete is sold at home improvement stores and lumber yards. Prices vary by bag size, brand, and region:",
     baggedCostText1:
-      "Standard bag sizes and prices (2024): 40 lb bags cost $2.50\u2013$3.50 each (yields 0.3 cubic feet). 60 lb bags cost $3.50\u2013$5.00 each (yields 0.45 cubic feet). 80 lb bags cost $4.50\u2013$6.00 each (yields 0.6 cubic feet). The 80 lb bag offers the best price per cubic foot, but at 80 pounds per bag, the physical labor of mixing is substantial. Many DIYers prefer 60 lb bags as a compromise between cost and manageability.",
+      "Standard bag sizes and prices (2026): 40 lb bags cost $2.50\u2013$3.50 each (yields 0.3 cubic feet). 60 lb bags cost $3.50\u2013$5.00 each (yields 0.45 cubic feet). 80 lb bags cost $4.50\u2013$6.00 each (yields 0.6 cubic feet). The 80 lb bag offers the best price per cubic foot, but at 80 pounds per bag, the physical labor of mixing is substantial. Many DIYers prefer 60 lb bags as a compromise between cost and manageability.",
     baggedCostText2:
       "Cost per cubic yard from bags: Using 80 lb bags at $5 each, one cubic yard costs approximately $225 in material (45 bags). Using 60 lb bags at $4 each, one cubic yard costs approximately $240 (60 bags). These prices are higher than ready-mix delivery ($125\u2013$160/yard), but bags have no delivery fees, no minimum orders, and no waiting time fees. For small projects under 0.5 cubic yards, bags are almost always the more economical choice.",
     baggedCostText3:
@@ -934,7 +934,7 @@ const guides: GuidesTranslations = {
     faqHeading: "Frequently Asked Questions",
     faqs: [
       {
-        question: "How much does a cubic yard of concrete cost in 2024?",
+        question: "How much does a cubic yard of concrete cost in 2026?",
         answer:
           "A cubic yard of ready-mix concrete costs $125\u2013$160 for the material, depending on your region and the PSI strength. Add delivery fees ($50\u2013$100) and potential short-load fees ($40\u2013$75/yard for small orders). Total delivered cost for a typical 3\u20134 yard residential order is usually $130\u2013$155 per cubic yard all-in.",
       },
@@ -951,7 +951,7 @@ const guides: GuidesTranslations = {
       {
         question: "How much does a concrete driveway cost?",
         answer:
-          "A standard 2-car concrete driveway (approximately 20\u00d720 ft, 4 inches thick) costs $3,000\u2013$5,500 installed in 2024. This includes about 5 cubic yards of concrete, gravel base, forms, wire mesh, and a broom finish. Stamped or decorative concrete driveways cost $5,500\u2013$10,000+ depending on the pattern and color choices.",
+          "A standard 2-car concrete driveway (approximately 20\u00d720 ft, 4 inches thick) costs $3,000\u2013$5,500 installed in 2026. This includes about 5 cubic yards of concrete, gravel base, forms, wire mesh, and a broom finish. Stamped or decorative concrete driveways cost $5,500\u2013$10,000+ depending on the pattern and color choices.",
       },
       {
         question: "Why does concrete cost vary so much by region?",
@@ -1164,7 +1164,7 @@ const guides: GuidesTranslations = {
     priceTrendsIntro:
       "Lumber prices are notoriously volatile, and understanding the market cycle helps you time your purchases:",
     priceTrendsText1:
-      "The lumber futures market hit an all-time high of $1,711 per thousand board feet in May 2021, driven by pandemic-fueled DIY demand and temporary mill shutdowns. By late 2022, prices had crashed back to $350/MBF before stabilizing in the $400 to $600/MBF range through 2023-2024. A standard 2x4x8 that cost $9 to $12 at the peak can now be found for $3 to $5. These dramatic swings underscore the importance of getting current prices rather than relying on historical estimates.",
+      "The lumber futures market hit an all-time high of $1,711 per thousand board feet in May 2021, driven by pandemic-fueled DIY demand and temporary mill shutdowns. By late 2022, prices had crashed back to $350/MBF before stabilizing in the $400 to $600/MBF range through 2023-2026. A standard 2x4x8 that cost $9 to $12 at the peak can now be found for $3 to $5. These dramatic swings underscore the importance of getting current prices rather than relying on historical estimates.",
     priceTrendsText2:
       "Seasonal patterns are predictable: lumber prices typically peak in spring and early summer (March through June) when building season drives demand, and bottom out in late fall and winter (October through January) when construction slows. Buying framing packages in November or December can save 10-20% compared to May pricing. However, you need dry, covered storage to protect lumber purchased months before your project start date.",
     priceTrendsText3:
@@ -1207,7 +1207,7 @@ const guides: GuidesTranslations = {
 
     faqHeading: "Frequently Asked Questions",
     faqs: [
-      { question: "How much does a 2x4 cost right now?", answer: "As of 2024-2025, a standard SPF 2x4x8 stud costs $3 to $6 at retail home centers like Home Depot and Lowe's. Prices vary by region, with higher costs on the coasts and lower prices in the Midwest and Southeast. Premium species like Douglas fir and cedar cost $6 to $15 for the same 2x4x8 size. Check your local store's website for current pricing — lumber prices can change weekly." },
+      { question: "How much does a 2x4 cost right now?", answer: "As of 2026-2025, a standard SPF 2x4x8 stud costs $3 to $6 at retail home centers like Home Depot and Lowe's. Prices vary by region, with higher costs on the coasts and lower prices in the Midwest and Southeast. Premium species like Douglas fir and cedar cost $6 to $15 for the same 2x4x8 size. Check your local store's website for current pricing — lumber prices can change weekly." },
       { question: "Why is lumber so expensive compared to 5 years ago?", answer: "Lumber prices spiked 300-400% during 2020-2021 due to pandemic-driven DIY demand, temporary mill shutdowns, and supply chain disruptions. While prices have fallen significantly from the $1,700/MBF peak, they remain 30-50% above pre-2020 levels due to higher mill operating costs, transportation costs, Canadian import tariffs, and increased demand from a structural housing shortage. The market has normalized but at a higher baseline than the $300-$400/MBF levels of the 2010s." },
       { question: "What is the best time of year to buy lumber?", answer: "Late fall and winter (October through January) typically offers the lowest lumber prices because construction activity slows and suppliers discount inventory. You can save 10-20% compared to spring and summer peak pricing. If you have dry, covered storage, buying your framing package in November for a spring build can yield significant savings. Watch for holiday sales at home centers (Black Friday, Labor Day) for additional discounts." },
       { question: "Is pressure-treated lumber worth the extra cost?", answer: "Yes, for any wood in ground contact, within 6 inches of soil, or exposed to persistent moisture. Pressure-treated lumber costs 50-100% more than untreated SPF but lasts 20-40 years versus 3-5 years for untreated wood in ground contact. It is required by code for sill plates, deck substructure, and any structural member near grade. The most common treatment is MCA (micronized copper azole), which replaced CCA (chromated copper arsenate) for residential use." },

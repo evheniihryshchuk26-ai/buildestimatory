@@ -36,7 +36,7 @@ const guides: GuidesTranslations = {
         href: "/guides/ready-mix-vs-bagged-concrete",
       },
       {
-        title: "Combien coûte le béton ? Guide des prix 2024",
+        title: "Combien coûte le béton ? Guide des prix 2026",
         description:
           "Le BPE coûte 80 à 150 € le m³ livré. Guide complet des prix pour dalles, semelles, allées, béton en sacs, main-d'œuvre et astuces d'économie.",
         href: "/guides/concrete-cost-guide",
@@ -815,22 +815,22 @@ const guides: GuidesTranslations = {
   },
 
   concreteCostGuide: {
-    title: "Combien coûte le béton ? Guide des prix 2024",
+    title: "Combien coûte le béton ? Guide des prix 2026",
     metaDescription:
       "Le BPE coûte 80 à 150 € le m³ livré. Guide complet des prix pour dalles, semelles, allées, béton en sacs, coûts de main-d'œuvre et astuces d'économie.",
 
     heroTitle: "Combien coûte le béton ?",
-    heroSubtitle: "Guide des prix 2024",
+    heroSubtitle: "Guide des prix 2026",
     heroDescription:
       "Détail complet des prix du béton pour chaque type de projet résidentiel : BPE en toupie, béton en sacs, main-d'œuvre et facteurs de coût.",
 
     quickAnswerHeading: "Réponse rapide",
     quickAnswerText:
-      "Le BPE coûte 80 à 150 € le m³ livré en 2024, la plupart des projets résidentiels se situant entre 90 et 130 € le m³ pour du C25/30. Le coût total posé (main-d'œuvre, coffrage, finition inclus) va de 60 à 120 € le m² pour les ouvrages horizontaux (dalles, allées, terrasses). Le béton en sacs (Weber, PRB) coûte 5 à 7 € le sac de 35 kg, soit environ 280 à 400 € le m³ en matériaux seuls.",
+      "Le BPE coûte 80 à 150 € le m³ livré en 2026, la plupart des projets résidentiels se situant entre 90 et 130 € le m³ pour du C25/30. Le coût total posé (main-d'œuvre, coffrage, finition inclus) va de 60 à 120 € le m² pour les ouvrages horizontaux (dalles, allées, terrasses). Le béton en sacs (Weber, PRB) coûte 5 à 7 € le sac de 35 kg, soit environ 280 à 400 € le m³ en matériaux seuls.",
 
     costByProjectHeading: "Coût du béton par type de projet",
     costByProjectIntro:
-      "Ce que vous paierez dépend fortement du type et de la taille du projet. Voici les coûts typiques en 2024 pour les projets résidentiels courants, matériaux et pose professionnelle inclus :",
+      "Ce que vous paierez dépend fortement du type et de la taille du projet. Voici les coûts typiques en 2026 pour les projets résidentiels courants, matériaux et pose professionnelle inclus :",
     costByProjectColProject: "Projet",
     costByProjectColTypical: "Coût typique",
     costByProjectColNotes: "Notes",
@@ -849,7 +849,7 @@ const guides: GuidesTranslations = {
     baggedCostIntro:
       "Le béton en sacs se vend en GSB (Leroy Merlin, Castorama, Bricomarché) et en négoces. Prix selon la taille et la marque :",
     baggedCostText1:
-      "Sacs standard et prix (2024) : les sacs de 25 kg coûtent 3 à 5 € (environ 0,012 m³). Les sacs de 35 kg coûtent 5 à 7 € (environ 0,017 m³). Le sac de 35 kg offre le meilleur rapport qualité-prix au m³, mais à 35 kg par sac, le travail physique de gâchage est conséquent. Beaucoup de bricoleurs préfèrent les sacs de 25 kg comme compromis entre coût et maniabilité.",
+      "Sacs standard et prix (2026) : les sacs de 25 kg coûtent 3 à 5 € (environ 0,012 m³). Les sacs de 35 kg coûtent 5 à 7 € (environ 0,017 m³). Le sac de 35 kg offre le meilleur rapport qualité-prix au m³, mais à 35 kg par sac, le travail physique de gâchage est conséquent. Beaucoup de bricoleurs préfèrent les sacs de 25 kg comme compromis entre coût et maniabilité.",
     baggedCostText2:
       "Coût au m³ en sacs : avec des sacs de 35 kg à 6 €, un m³ coûte environ 342 € en matériau (57 sacs). Avec des sacs de 25 kg à 4 €, un m³ revient à environ 330 € (83 sacs). Ces prix sont nettement supérieurs au BPE (80–150 €/m³), mais les sacs n'ont pas de frais de livraison, pas de minimum de commande et pas de temps d'attente. Pour les projets de moins de 0,3 m³, les sacs sont presque toujours le choix le plus économique.",
     baggedCostText3:
@@ -928,7 +928,7 @@ const guides: GuidesTranslations = {
     faqHeading: "Questions fréquentes",
     faqs: [
       {
-        question: "Combien coûte un mètre cube de béton en 2024 ?",
+        question: "Combien coûte un mètre cube de béton en 2026 ?",
         answer:
           "Un m³ de BPE C25/30 coûte 80 à 130 € en matériau, selon la région et la centrale. Ajoutez les frais de livraison (50 à 100 €) et le supplément éventuel pour petite quantité. Le coût total livré pour un projet de 3 à 4 m³ est généralement de 90 à 140 € le m³ tout compris.",
       },
@@ -945,7 +945,7 @@ const guides: GuidesTranslations = {
       {
         question: "Combien coûte une allée de garage en béton ?",
         answer:
-          "Une allée de garage standard (5×5 m, 12 cm d'épaisseur) coûte 2 500 à 4 500 € posée en 2024. Cela inclut environ 3 m³ de béton, la forme, le coffrage, le treillis et la finition balai. Le béton imprimé ou désactivé ajoute 30 à 50 % au budget.",
+          "Une allée de garage standard (5×5 m, 12 cm d'épaisseur) coûte 2 500 à 4 500 € posée en 2026. Cela inclut environ 3 m³ de béton, la forme, le coffrage, le treillis et la finition balai. Le béton imprimé ou désactivé ajoute 30 à 50 % au budget.",
       },
       {
         question: "Pourquoi le prix du béton varie-t-il autant selon les régions ?",

@@ -2473,7 +2473,7 @@ const paintCoverageCalculatorES: CalculatorSEOContent = {
 };
 
 const paintCostCalculatorES: CalculatorSEOContent = {
-  disclaimer: "Los precios son promedios aproximados del mercado latinoamericano 2024. Los precios reales varían por marca, tienda y región.",
+  disclaimer: "Los precios son promedios aproximados del mercado latinoamericano 2026. Los precios reales varían por marca, tienda y región.",
   howToUse: [
     "Ingresa el área total de muros y techos que planeas pintar en m².",
     "Selecciona el número de manos (2 es estándar para la mayoría de proyectos).",

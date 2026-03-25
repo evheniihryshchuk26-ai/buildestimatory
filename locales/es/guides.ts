@@ -36,7 +36,7 @@ const guides: GuidesTranslations = {
         href: "/guides/ready-mix-vs-bagged-concrete",
       },
       {
-        title: "\u00bfCu\u00e1nto Cuesta el Concreto? Gu\u00eda de Precios 2024",
+        title: "\u00bfCu\u00e1nto Cuesta el Concreto? Gu\u00eda de Precios 2026",
         description:
           "El concreto premezclado cuesta $2,500\u2013$3,500 MXN por metro c\u00fabico. Gu\u00eda completa de precios para losas, cimentaciones, cocheras, concreto en bultos y costos de mano de obra.",
         href: "/guides/concrete-cost-guide",
@@ -181,7 +181,7 @@ const guides: GuidesTranslations = {
     costText1:
       "Para un muro est\u00e1ndar de 2.40 m de altura, la separaci\u00f3n de 40 cm e/c requiere un poste cada 40 cm \u2014 aproximadamente 2.5 postes por metro lineal de muro. A 60 cm e/c, necesitas aproximadamente 1.7 postes por metro lineal. Eso es una reducci\u00f3n del 33% en cantidad de postes.",
     costText2:
-      "En una casa t\u00edpica de 185 m\u00b2 de una planta con ~60 metros lineales de muros divisorios interiores, cambiar de 40 cm a 60 cm e/c ahorra aproximadamente 50 postes. A $5\u2013$7 USD por poste (precios 2024 para madera de 5\u00d710\u00d7240 cm), eso es $250\u2013$350 USD solo en postes. Sumando la reducci\u00f3n en clavos, reducci\u00f3n en mano de obra (menos postes para cortar, cargar y clavar), el ahorro alcanza $600\u2013$1,000 USD.",
+      "En una casa t\u00edpica de 185 m\u00b2 de una planta con ~60 metros lineales de muros divisorios interiores, cambiar de 40 cm a 60 cm e/c ahorra aproximadamente 50 postes. A $5\u2013$7 USD por poste (precios 2026 para madera de 5\u00d710\u00d7240 cm), eso es $250\u2013$350 USD solo en postes. Sumando la reducci\u00f3n en clavos, reducci\u00f3n en mano de obra (menos postes para cortar, cargar y clavar), el ahorro alcanza $600\u2013$1,000 USD.",
     costText3:
       "Sin embargo, no uses separaci\u00f3n de 60 cm e/c solo para ahorrar dinero en muros portantes. El costo de una falla estructural o violaci\u00f3n de norma supera por mucho cualquier ahorro en materiales. Los ahorros aplican solo donde 60 cm e/c cumple con la norma.",
 
@@ -726,7 +726,7 @@ const guides: GuidesTranslations = {
     costIntro:
       "El costo por metro c\u00fabico de concreto es sorprendentemente similar entre ambas opciones. La diferencia real viene de los costos de env\u00edo, mano de obra y la escala de tu proyecto.",
     costText1:
-      "Concreto en bultos: Un bulto de 50 kg cuesta $70\u2013$100 MXN en la mayor\u00eda de las ferreter\u00edas (precios 2024). Cada bulto de 50 kg rinde unos 25 litros. Un metro c\u00fabico equivale a 1,000 litros, as\u00ed que necesitas aproximadamente 40 bultos por metro c\u00fabico. A $85 MXN por bulto, eso es $3,400 MXN por metro c\u00fabico solo en material. Los bultos de 25 kg ($40\u2013$55 MXN) son m\u00e1s manejables pero menos econ\u00f3micos por litro.",
+      "Concreto en bultos: Un bulto de 50 kg cuesta $70\u2013$100 MXN en la mayor\u00eda de las ferreter\u00edas (precios 2026). Cada bulto de 50 kg rinde unos 25 litros. Un metro c\u00fabico equivale a 1,000 litros, as\u00ed que necesitas aproximadamente 40 bultos por metro c\u00fabico. A $85 MXN por bulto, eso es $3,400 MXN por metro c\u00fabico solo en material. Los bultos de 25 kg ($40\u2013$55 MXN) son m\u00e1s manejables pero menos econ\u00f3micos por litro.",
     costText2:
       "Concreto premezclado: El precio base para concreto f'c=200 premezclado var\u00eda de $2,500 a $3,500 MXN por metro c\u00fabico, dependiendo de tu regi\u00f3n y el costo actual del cemento. La mayor\u00eda de los proveedores agregan cargos de env\u00edo ($800\u2013$2,000 MXN por viaje) y pueden cobrar cargos por pedidos peque\u00f1os para \u00f3rdenes menores a su m\u00ednimo (t\u00edpicamente 3\u20134 m\u00b3). Para un colado de cochera de 4 m\u00b3, espera pagar $10,000\u2013$16,000 MXN en material m\u00e1s $800\u2013$2,000 MXN en cargos.",
     costText3:
@@ -822,22 +822,22 @@ const guides: GuidesTranslations = {
   },
 
   concreteCostGuide: {
-    title: "\u00bfCu\u00e1nto Cuesta el Concreto? Gu\u00eda de Precios 2024",
+    title: "\u00bfCu\u00e1nto Cuesta el Concreto? Gu\u00eda de Precios 2026",
     metaDescription:
-      "El concreto premezclado cuesta $2,500\u2013$3,500 MXN por metro c\u00fabico. Gu\u00eda completa de precios 2024 para losas, zapatas, cocheras, concreto en bultos, mano de obra y consejos de ahorro.",
+      "El concreto premezclado cuesta $2,500\u2013$3,500 MXN por metro c\u00fabico. Gu\u00eda completa de precios 2026 para losas, zapatas, cocheras, concreto en bultos, mano de obra y consejos de ahorro.",
 
     heroTitle: "\u00bfCu\u00e1nto Cuesta el Concreto?",
-    heroSubtitle: "Gu\u00eda de Precios 2024",
+    heroSubtitle: "Gu\u00eda de Precios 2026",
     heroDescription:
       "Un desglose completo de precios de concreto para cada tipo de proyecto residencial. Cubre entregas de premezclado, concreto en bultos, costos de mano de obra y los factores que afectan lo que pagar\u00e1s.",
 
     quickAnswerHeading: "Respuesta R\u00e1pida",
     quickAnswerText:
-      "El concreto premezclado cuesta $2,500\u2013$3,500 MXN por metro c\u00fabico entregado en 2024, con la mayor\u00eda de los propietarios pagando $2,800\u2013$3,200 MXN por metro c\u00fabico para concreto residencial est\u00e1ndar f'c=200\u2013250. El costo total instalado (incluyendo mano de obra, cimbra y acabado) var\u00eda de $800\u2013$2,000 MXN por metro cuadrado para trabajo plano como cocheras, patios y banquetas. El concreto en bultos cuesta $70\u2013$100 MXN por bulto de 50 kg, lo que equivale a unos $2,800\u2013$4,000 MXN por metro c\u00fabico solo en material.",
+      "El concreto premezclado cuesta $2,500\u2013$3,500 MXN por metro c\u00fabico entregado en 2026, con la mayor\u00eda de los propietarios pagando $2,800\u2013$3,200 MXN por metro c\u00fabico para concreto residencial est\u00e1ndar f'c=200\u2013250. El costo total instalado (incluyendo mano de obra, cimbra y acabado) var\u00eda de $800\u2013$2,000 MXN por metro cuadrado para trabajo plano como cocheras, patios y banquetas. El concreto en bultos cuesta $70\u2013$100 MXN por bulto de 50 kg, lo que equivale a unos $2,800\u2013$4,000 MXN por metro c\u00fabico solo en material.",
 
     costByProjectHeading: "Costo de Concreto por Tipo de Proyecto",
     costByProjectIntro:
-      "Lo que pagar\u00e1s por concreto depende mucho del tipo y tama\u00f1o del proyecto. Aqu\u00ed est\u00e1n los costos t\u00edpicos de 2024 para proyectos residenciales comunes, incluyendo material e instalaci\u00f3n profesional:",
+      "Lo que pagar\u00e1s por concreto depende mucho del tipo y tama\u00f1o del proyecto. Aqu\u00ed est\u00e1n los costos t\u00edpicos de 2026 para proyectos residenciales comunes, incluyendo material e instalaci\u00f3n profesional:",
     costByProjectColProject: "Proyecto",
     costByProjectColTypical: "Costo T\u00edpico",
     costByProjectColNotes: "Notas",
@@ -856,7 +856,7 @@ const guides: GuidesTranslations = {
     baggedCostIntro:
       "El concreto en bultos se vende en ferreter\u00edas y tiendas de materiales. Los precios var\u00edan por tama\u00f1o de bulto, marca y regi\u00f3n:",
     baggedCostText1:
-      "Tama\u00f1os y precios est\u00e1ndar de bultos (2024): Bultos de 25 kg cuestan $40\u2013$55 MXN cada uno (rinden ~12.5 litros). Bultos de 50 kg cuestan $70\u2013$100 MXN cada uno (rinden ~25 litros). El bulto de 50 kg ofrece el mejor precio por litro, pero a 50 kg por bulto, el trabajo f\u00edsico de mezcla es considerable. Muchos autoconstructores prefieren bultos de 25 kg como compromiso entre costo y manejabilidad.",
+      "Tama\u00f1os y precios est\u00e1ndar de bultos (2026): Bultos de 25 kg cuestan $40\u2013$55 MXN cada uno (rinden ~12.5 litros). Bultos de 50 kg cuestan $70\u2013$100 MXN cada uno (rinden ~25 litros). El bulto de 50 kg ofrece el mejor precio por litro, pero a 50 kg por bulto, el trabajo f\u00edsico de mezcla es considerable. Muchos autoconstructores prefieren bultos de 25 kg como compromiso entre costo y manejabilidad.",
     baggedCostText2:
       "Costo por metro c\u00fabico en bultos: Usando bultos de 50 kg a $85 MXN cada uno, un metro c\u00fabico cuesta aproximadamente $3,400 MXN en material (40 bultos). Estos precios son mayores que la entrega de premezclado ($2,500\u2013$3,500/m\u00b3), pero los bultos no tienen cargos de env\u00edo, sin pedidos m\u00ednimos y sin cobros por tiempo de espera. Para proyectos peque\u00f1os menores a 0.5 metros c\u00fabicos, los bultos son casi siempre la opci\u00f3n m\u00e1s econ\u00f3mica.",
     baggedCostText3:
@@ -935,7 +935,7 @@ const guides: GuidesTranslations = {
     faqHeading: "Preguntas Frecuentes",
     faqs: [
       {
-        question: "\u00bfCu\u00e1nto cuesta un metro c\u00fabico de concreto en 2024?",
+        question: "\u00bfCu\u00e1nto cuesta un metro c\u00fabico de concreto en 2026?",
         answer:
           "Un metro c\u00fabico de concreto premezclado cuesta $2,500\u2013$3,500 MXN por el material, dependiendo de tu regi\u00f3n y la resistencia. Agrega cargos de env\u00edo ($800\u2013$2,000 MXN) y posibles cargos por pedido peque\u00f1o. El costo total entregado para un pedido residencial t\u00edpico de 3\u20134 m\u00b3 es usualmente $2,800\u2013$3,300 MXN por metro c\u00fabico todo incluido.",
       },
@@ -952,7 +952,7 @@ const guides: GuidesTranslations = {
       {
         question: "\u00bfCu\u00e1nto cuesta una cochera de concreto?",
         answer:
-          "Una cochera de concreto est\u00e1ndar para 2 autos (aproximadamente 6\u00d76 m, 10 cm de espesor) cuesta $25,000\u2013$50,000 MXN instalada en 2024. Esto incluye unos 4 metros c\u00fabicos de concreto, base de grava, cimbra, malla electrosoldada y acabado escobillado. Las cocheras de concreto estampado o decorativo cuestan $45,000\u2013$80,000 MXN seg\u00fan el patr\u00f3n y color.",
+          "Una cochera de concreto est\u00e1ndar para 2 autos (aproximadamente 6\u00d76 m, 10 cm de espesor) cuesta $25,000\u2013$50,000 MXN instalada en 2026. Esto incluye unos 4 metros c\u00fabicos de concreto, base de grava, cimbra, malla electrosoldada y acabado escobillado. Las cocheras de concreto estampado o decorativo cuestan $45,000\u2013$80,000 MXN seg\u00fan el patr\u00f3n y color.",
       },
       {
         question: "\u00bfPor qu\u00e9 el costo del concreto var\u00eda tanto por regi\u00f3n?",
@@ -1165,7 +1165,7 @@ const guides: GuidesTranslations = {
     priceTrendsIntro:
       "Los precios de la madera son notoriamente volátiles, y entender el ciclo del mercado te ayuda a programar tus compras:",
     priceTrendsText1:
-      "El mercado de futuros de madera alcanzó un máximo histórico de $1,711 USD por millar de pies tabla en mayo de 2021, impulsado por la demanda de proyectos caseros durante la pandemia y el cierre temporal de aserraderos. Para finales de 2022, los precios habían caído a $350/MBF antes de estabilizarse en el rango de $400 a $600/MBF durante 2023-2024. En México, esto se reflejó en tablas de 2x4x8 que llegaron a costar $200+ MXN en el pico y que ahora se encuentran en $60 a $120 MXN.",
+      "El mercado de futuros de madera alcanzó un máximo histórico de $1,711 USD por millar de pies tabla en mayo de 2021, impulsado por la demanda de proyectos caseros durante la pandemia y el cierre temporal de aserraderos. Para finales de 2022, los precios habían caído a $350/MBF antes de estabilizarse en el rango de $400 a $600/MBF durante 2023-2026. En México, esto se reflejó en tablas de 2x4x8 que llegaron a costar $200+ MXN en el pico y que ahora se encuentran en $60 a $120 MXN.",
     priceTrendsText2:
       "Los patrones estacionales son predecibles: los precios de la madera típicamente alcanzan su pico en primavera y principios de verano (marzo a junio) cuando la temporada de construcción impulsa la demanda, y tocan fondo en otoño e invierno (octubre a enero) cuando la construcción se desacelera. Comprar tu paquete de estructura en noviembre o diciembre puede ahorrarte 10-20% comparado con precios de mayo.",
     priceTrendsText3:
@@ -1208,7 +1208,7 @@ const guides: GuidesTranslations = {
 
     faqHeading: "Preguntas Frecuentes",
     faqs: [
-      { question: "¿Cuánto cuesta una tabla de 2x4 actualmente?", answer: "En 2024-2025, una tabla estándar de pino 2x4x8 pies cuesta $60 a $120 MXN en tiendas como Home Depot México y madererías. Los precios varían por región, con costos más altos en las grandes ciudades y menores en zonas productoras de madera. Las tablas de cedro del mismo tamaño cuestan $150 a $300 MXN. Consulta precios actuales en tu tienda local — pueden cambiar semanalmente." },
+      { question: "¿Cuánto cuesta una tabla de 2x4 actualmente?", answer: "En 2026-2025, una tabla estándar de pino 2x4x8 pies cuesta $60 a $120 MXN en tiendas como Home Depot México y madererías. Los precios varían por región, con costos más altos en las grandes ciudades y menores en zonas productoras de madera. Las tablas de cedro del mismo tamaño cuestan $150 a $300 MXN. Consulta precios actuales en tu tienda local — pueden cambiar semanalmente." },
       { question: "¿Por qué la madera es tan cara comparada con hace 5 años?", answer: "Los precios de la madera se dispararon 300-400% durante 2020-2021 por la demanda de proyectos caseros durante la pandemia y el cierre de aserraderos. Aunque han bajado significativamente desde el pico, siguen siendo 30-50% más altos que antes de 2020 por mayores costos de operación, transporte, aranceles y una escasez estructural de vivienda. El tipo de cambio también afecta la madera importada en México." },
       { question: "¿Cuál es la mejor época del año para comprar madera?", answer: "Otoño e invierno (octubre a enero) típicamente ofrecen los precios más bajos porque la actividad de construcción se desacelera. Puedes ahorrar 10-20% comparado con precios pico de primavera y verano. Si tienes almacenamiento seco y cubierto, comprar tu paquete de estructura en noviembre para una obra en primavera puede generar ahorros significativos." },
       { question: "¿Cuánta madera necesito para construir una casa de 120 m²?", answer: "Una casa típica de 120 m² con entramado ligero de madera requiere aproximadamente 10,000 a 14,000 pies tabla de madera para la estructura completa (muros, piso y techo). Esto se traduce en aproximadamente 350-450 montantes, 35-50 hojas de triplay, más viguetas, cabios/cerchas, soleras y dinteles. A precios actuales, el paquete de madera para estructura cuesta $80,000 a $150,000 MXN." },

@@ -36,7 +36,7 @@ const guides: GuidesTranslations = {
         href: "/guides/ready-mix-vs-bagged-concrete",
       },
       {
-        title: "Quanto Costa il Calcestruzzo? Guida ai Prezzi 2024",
+        title: "Quanto Costa il Calcestruzzo? Guida ai Prezzi 2026",
         description:
           "Il calcestruzzo costa €90–€130 al metro cubo preconfezionato. Guida completa ai prezzi per solette, fondazioni, vialetti, calcestruzzo in sacchi, manodopera e consigli per risparmiare.",
         href: "/guides/concrete-cost-guide",
@@ -181,7 +181,7 @@ const guides: GuidesTranslations = {
     costText1:
       "Per una parete standard alta 2,70 m, l'interasse di 40 cm richiede un montante ogni 40 cm — circa 2,5 montanti per metro lineare di parete. A 60 cm, servono circa 1,67 montanti per metro lineare. Si tratta di una riduzione del 33% nel numero dei montanti.",
     costText2:
-      "Su una tipica casa di 200 m² su un piano con circa 60 metri lineari di tramezze interne, passare da 40 a 60 cm di interasse fa risparmiare circa 50 montanti. A €8–€12 a montante (prezzi 2024 per montanti in abete), sono €400–€600 solo di montanti. Aggiungendo il risparmio su fissaggi e manodopera (meno montanti da tagliare, trasportare e fissare), il risparmio raggiunge €600–€1.000.",
+      "Su una tipica casa di 200 m² su un piano con circa 60 metri lineari di tramezze interne, passare da 40 a 60 cm di interasse fa risparmiare circa 50 montanti. A €8–€12 a montante (prezzi 2026 per montanti in abete), sono €400–€600 solo di montanti. Aggiungendo il risparmio su fissaggi e manodopera (meno montanti da tagliare, trasportare e fissare), il risparmio raggiunge €600–€1.000.",
     costText3:
       "Tuttavia, non usare 60 cm di interasse solo per risparmiare sulle pareti portanti. Il costo di un cedimento strutturale o di una non conformità normativa supera di gran lunga qualsiasi risparmio sui materiali. Il risparmio si applica solo dove l'interasse di 60 cm è conforme alla normativa.",
 
@@ -725,7 +725,7 @@ const guides: GuidesTranslations = {
     costIntro:
       "Il costo al metro cubo del calcestruzzo è sorprendentemente simile tra le due opzioni. La vera differenza di costo viene dalle spese di consegna, dalla manodopera e dalla scala del progetto.",
     costText1:
-      "Calcestruzzo in sacchi: un sacco da 25 kg di Mapei o Kerakoll costa €3–€5 nella maggior parte dei magazzini edili e centri bricolage (prezzi 2024). Ogni sacco da 25 kg produce circa 12 litri. Un metro cubo equivale a 1.000 litri, quindi servono circa 80–85 sacchi per metro cubo. A €4 per sacco, sono circa €340 al metro cubo solo di materiale. Sacchi da 30 kg (€4,50–€6) sono comuni nei magazzini edili e portano il costo a circa €150–€200 per m³. Considerando il tempo per impastare (facilmente 5–7 ore per m³ a mano), il costo totale incluso il valore della tua manodopera è significativamente più alto del preconfezionato per grandi getti.",
+      "Calcestruzzo in sacchi: un sacco da 25 kg di Mapei o Kerakoll costa €3–€5 nella maggior parte dei magazzini edili e centri bricolage (prezzi 2026). Ogni sacco da 25 kg produce circa 12 litri. Un metro cubo equivale a 1.000 litri, quindi servono circa 80–85 sacchi per metro cubo. A €4 per sacco, sono circa €340 al metro cubo solo di materiale. Sacchi da 30 kg (€4,50–€6) sono comuni nei magazzini edili e portano il costo a circa €150–€200 per m³. Considerando il tempo per impastare (facilmente 5–7 ore per m³ a mano), il costo totale incluso il valore della tua manodopera è significativamente più alto del preconfezionato per grandi getti.",
     costText2:
       "Calcestruzzo preconfezionato: il prezzo base per C25/30 standard varia da €90 a €130 al metro cubo, a seconda della regione e del costo attuale del cemento. La maggior parte dei fornitori aggiunge spese di consegna (€50–€100 per viaggio standard) e può applicare supplementi per carico ridotto (€30–€60/m³) per ordini sotto il minimo (tipicamente 3–4 m³). Un supplemento carburante di €20–€40 è comune. Per un getto di 4 m³ per un vialetto, aspettarsi €400–€550 di materiale più €50–€150 di supplementi, per un totale di €450–€700.",
     costText3:
@@ -821,22 +821,22 @@ const guides: GuidesTranslations = {
   },
 
   concreteCostGuide: {
-    title: "Quanto Costa il Calcestruzzo? Guida ai Prezzi 2024",
+    title: "Quanto Costa il Calcestruzzo? Guida ai Prezzi 2026",
     metaDescription:
-      "Il calcestruzzo costa €90–€130 al metro cubo preconfezionato. Guida completa ai prezzi 2024 per solette, fondazioni, vialetti, calcestruzzo in sacchi, manodopera e consigli per risparmiare.",
+      "Il calcestruzzo costa €90–€130 al metro cubo preconfezionato. Guida completa ai prezzi 2026 per solette, fondazioni, vialetti, calcestruzzo in sacchi, manodopera e consigli per risparmiare.",
 
     heroTitle: "Quanto Costa il Calcestruzzo?",
-    heroSubtitle: "Guida ai Prezzi 2024",
+    heroSubtitle: "Guida ai Prezzi 2026",
     heroDescription:
       "Un'analisi completa dei prezzi del calcestruzzo per ogni tipo di progetto residenziale. Include consegna con autobetoniera, calcestruzzo in sacchi, costi di manodopera e fattori che influenzano il prezzo.",
 
     quickAnswerHeading: "Risposta Rapida",
     quickAnswerText:
-      "Il calcestruzzo preconfezionato costa €90–€130 al metro cubo consegnato nel 2024, con la maggior parte dei committenti che paga €95–€120/m³ per calcestruzzo residenziale standard C25/30 o C30/37. Il costo totale installato (inclusi manodopera, casseforme e finitura) varia da €80–€180 al metro quadro per lavori piani come vialetti, patii e marciapiedi. Il calcestruzzo in sacchi (Mapei, Kerakoll) costa €3–€5 per sacco da 25 kg, che equivale a circa €250–€400 al metro cubo per il solo materiale.",
+      "Il calcestruzzo preconfezionato costa €90–€130 al metro cubo consegnato nel 2026, con la maggior parte dei committenti che paga €95–€120/m³ per calcestruzzo residenziale standard C25/30 o C30/37. Il costo totale installato (inclusi manodopera, casseforme e finitura) varia da €80–€180 al metro quadro per lavori piani come vialetti, patii e marciapiedi. Il calcestruzzo in sacchi (Mapei, Kerakoll) costa €3–€5 per sacco da 25 kg, che equivale a circa €250–€400 al metro cubo per il solo materiale.",
 
     costByProjectHeading: "Costo del Calcestruzzo per Tipo di Progetto",
     costByProjectIntro:
-      "Quanto pagherai per il calcestruzzo dipende molto dal tipo e dalla dimensione del progetto. Ecco i costi tipici 2024 per progetti residenziali comuni, inclusi materiale e installazione professionale:",
+      "Quanto pagherai per il calcestruzzo dipende molto dal tipo e dalla dimensione del progetto. Ecco i costi tipici 2026 per progetti residenziali comuni, inclusi materiale e installazione professionale:",
     costByProjectColProject: "Progetto",
     costByProjectColTypical: "Costo Tipico",
     costByProjectColNotes: "Note",
@@ -855,7 +855,7 @@ const guides: GuidesTranslations = {
     baggedCostIntro:
       "Il calcestruzzo in sacchi si vende nei centri bricolage e magazzini edili. I prezzi variano per dimensione del sacco, marca e regione:",
     baggedCostText1:
-      "Dimensioni standard e prezzi (2024): sacchi da 25 kg costano €3–€5 ciascuno (producono circa 12 litri). Sacchi da 30 kg costano €4,50–€6 ciascuno (producono circa 14 litri). Il sacco da 25 kg è il più comune nei centri bricolage come Leroy Merlin, Bricoman e OBI Italia. L'impasto fisico è impegnativo: molti appassionati fai-da-te preferiscono usare una piccola betoniera elettrica noleggiabile.",
+      "Dimensioni standard e prezzi (2026): sacchi da 25 kg costano €3–€5 ciascuno (producono circa 12 litri). Sacchi da 30 kg costano €4,50–€6 ciascuno (producono circa 14 litri). Il sacco da 25 kg è il più comune nei centri bricolage come Leroy Merlin, Bricoman e OBI Italia. L'impasto fisico è impegnativo: molti appassionati fai-da-te preferiscono usare una piccola betoniera elettrica noleggiabile.",
     baggedCostText2:
       "Costo al metro cubo dai sacchi: usando sacchi da 25 kg a €4 ciascuno, un metro cubo costa circa €340 in solo materiale (85 sacchi). Usando sacchi da 30 kg a €5, un metro cubo costa circa €260 (55 sacchi). Questi prezzi sono più alti della consegna con autobetoniera (€90–€130/m³), ma i sacchi non hanno spese di consegna, nessun ordine minimo e nessun supplemento di attesa. Per piccoli progetti sotto 0,5 m³, i sacchi sono quasi sempre la scelta più economica.",
     baggedCostText3:
@@ -934,7 +934,7 @@ const guides: GuidesTranslations = {
     faqHeading: "Domande Frequenti",
     faqs: [
       {
-        question: "Quanto costa un metro cubo di calcestruzzo nel 2024?",
+        question: "Quanto costa un metro cubo di calcestruzzo nel 2026?",
         answer:
           "Un metro cubo di calcestruzzo preconfezionato costa €90–€130 per il materiale, a seconda della regione e della classe di resistenza. Aggiungere spese di consegna (€50–€100) e potenziali supplementi per carico ridotto (€30–€60/m³ per piccoli ordini). Il costo totale consegnato per un tipico ordine residenziale da 3–4 m³ è solitamente €100–€125 al metro cubo tutto incluso.",
       },
@@ -951,7 +951,7 @@ const guides: GuidesTranslations = {
       {
         question: "Quanto costa un vialetto in calcestruzzo?",
         answer:
-          "Un vialetto standard per due auto (circa 5×5 m, spessore 10 cm) costa €2.500–€5.000 installato nel 2024. Include circa 2,5 m³ di calcestruzzo, sottofondo in ghiaia, casseforme, rete elettrosaldata e finitura a spazzola. Calcestruzzo stampato o decorativo costa €4.500–€8.000+ a seconda del motivo e dei colori scelti.",
+          "Un vialetto standard per due auto (circa 5×5 m, spessore 10 cm) costa €2.500–€5.000 installato nel 2026. Include circa 2,5 m³ di calcestruzzo, sottofondo in ghiaia, casseforme, rete elettrosaldata e finitura a spazzola. Calcestruzzo stampato o decorativo costa €4.500–€8.000+ a seconda del motivo e dei colori scelti.",
       },
       {
         question: "Perché il costo del calcestruzzo varia così tanto per regione?",
@@ -1165,7 +1165,7 @@ const guides: GuidesTranslations = {
     priceTrendsIntro:
       "I prezzi del legname sono notoriamente volatili, e comprendere il ciclo di mercato aiuta a tempificare gli acquisti:",
     priceTrendsText1:
-      "Il mercato europeo del legname ha toccato massimi storici nel 2021, trainato dalla domanda post-pandemia e dalla temporanea chiusura delle segherie. Un montante che costava €4–€5 prima della pandemia è arrivato a €8–€12 al picco. Verso fine 2022 i prezzi sono scesi e si sono stabilizzati nella fascia €300–€500/m³ per abete strutturale nel 2023-2024. Queste oscillazioni drammatiche sottolineano l'importanza di ottenere prezzi aggiornati anziché affidarsi a stime storiche.",
+      "Il mercato europeo del legname ha toccato massimi storici nel 2021, trainato dalla domanda post-pandemia e dalla temporanea chiusura delle segherie. Un montante che costava €4–€5 prima della pandemia è arrivato a €8–€12 al picco. Verso fine 2022 i prezzi sono scesi e si sono stabilizzati nella fascia €300–€500/m³ per abete strutturale nel 2023-2026. Queste oscillazioni drammatiche sottolineano l'importanza di ottenere prezzi aggiornati anziché affidarsi a stime storiche.",
     priceTrendsText2:
       "I pattern stagionali sono prevedibili: i prezzi del legname tipicamente raggiungono il picco in primavera e inizio estate (marzo–giugno) quando la stagione edilizia alimenta la domanda, e toccano il minimo in tardo autunno e inverno (ottobre–gennaio) quando l'edilizia rallenta. Acquistare i pacchetti di legname per l'orditura a novembre o dicembre può far risparmiare il 10–15% rispetto ai prezzi di maggio. Tuttavia, serve uno stoccaggio asciutto e coperto.",
     priceTrendsText3:
@@ -1208,7 +1208,7 @@ const guides: GuidesTranslations = {
 
     faqHeading: "Domande Frequenti",
     faqs: [
-      { question: "Quanto costa un montante in abete oggi?", answer: "Nel 2024-2025, un montante strutturale in abete 6×8×300 cm costa €4–€8 nei centri bricolage come Leroy Merlin e Bricoman. I prezzi variano per regione, con costi più alti nelle isole e più bassi nel Nord-Est dove è vicino alle segherie austriache e trentine. Specie premium come larice e castagno costano €8–€15 per la stessa dimensione. Verifica il sito del tuo rivenditore locale per i prezzi correnti — i prezzi del legname possono cambiare settimanalmente." },
+      { question: "Quanto costa un montante in abete oggi?", answer: "Nel 2026-2025, un montante strutturale in abete 6×8×300 cm costa €4–€8 nei centri bricolage come Leroy Merlin e Bricoman. I prezzi variano per regione, con costi più alti nelle isole e più bassi nel Nord-Est dove è vicino alle segherie austriache e trentine. Specie premium come larice e castagno costano €8–€15 per la stessa dimensione. Verifica il sito del tuo rivenditore locale per i prezzi correnti — i prezzi del legname possono cambiare settimanalmente." },
       { question: "Perché il legname è così caro rispetto a 5 anni fa?", answer: "I prezzi del legname sono saliti del 200–300% nel 2020-2021 per la domanda post-pandemia, la chiusura temporanea delle segherie e le interruzioni delle catene di approvvigionamento. Sebbene i prezzi siano scesi significativamente dal picco, restano del 20–40% sopra i livelli pre-2020 per i maggiori costi operativi delle segherie, i costi di trasporto e l'aumento della domanda da una carenza strutturale di alloggi. Il mercato si è normalizzato ma a una base più alta." },
       { question: "Qual è il periodo migliore per acquistare legname?", answer: "Il tardo autunno e l'inverno (ottobre–gennaio) offrono tipicamente i prezzi più bassi perché l'attività edilizia rallenta e i fornitori scontano le scorte. Si può risparmiare il 10–15% rispetto ai prezzi di punta di primavera ed estate. Se hai stoccaggio asciutto e coperto, acquistare il pacchetto orditura a novembre per una costruzione primaverile può portare risparmi significativi." },
       { question: "Il legname trattato in autoclave vale il costo aggiuntivo?", answer: "Sì, per qualsiasi legno a contatto con il suolo, entro 15 cm dal terreno o esposto a umidità persistente. Il legname trattato costa il 50–100% in più dell'abete non trattato ma dura 20–40 anni contro 3–5 anni del legno non trattato a contatto con il suolo. È richiesto dalle normative per dormienti, sottostrutture di terrazze e qualsiasi elemento strutturale vicino al terreno. Il trattamento più comune in Italia è con sali di rame (classe di rischio 3 o 4)." },

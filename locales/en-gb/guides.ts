@@ -36,7 +36,7 @@ const guides: GuidesTranslations = {
         href: "/guides/ready-mix-vs-bagged-concrete",
       },
       {
-        title: "How Much Does Concrete Cost? 2024 Price Guide",
+        title: "How Much Does Concrete Cost? 2026 Price Guide",
         description:
           "Concrete costs £80–£120 per cubic metre for ready-mix. Complete price guide covering slabs, footings, driveways, bagged concrete, labour costs, and saving tips.",
         href: "/guides/concrete-cost-guide",
@@ -181,7 +181,7 @@ const guides: GuidesTranslations = {
     costText1:
       "For a standard 2.4-metre wall, 400mm centres spacing requires one stud every 400mm — roughly 2.5 studs per linear metre of wall. At 600mm centres, you need about 1.67 studs per linear metre. That is a 33% reduction in stud count.",
     costText2:
-      "On a typical 185 m² single-storey home with ~60 linear metres of internal partitions, switching from 400mm to 600mm centres saves approximately 50 studs. At £4–£6 per stud (2024 pricing for 38×89×2400 C16 timber from Jewson or Travis Perkins), that is £200–£300 in studs alone. Factor in reduced fixings, reduced labour (fewer studs to cut, carry, and nail), and the savings reach £600–£900.",
+      "On a typical 185 m² single-storey home with ~60 linear metres of internal partitions, switching from 400mm to 600mm centres saves approximately 50 studs. At £4–£6 per stud (2026 pricing for 38×89×2400 C16 timber from Jewson or Travis Perkins), that is £200–£300 in studs alone. Factor in reduced fixings, reduced labour (fewer studs to cut, carry, and nail), and the savings reach £600–£900.",
     costText3:
       "However, do not use 600mm centres spacing just to save money on load-bearing walls. The cost of a structural failure or Building Regulations non-compliance far exceeds any material savings. The savings apply only where 600mm centres is compliant.",
 
@@ -725,7 +725,7 @@ const guides: GuidesTranslations = {
     costIntro:
       "The per-cubic-metre cost of concrete is surprisingly similar between the two options. The real cost difference comes from delivery fees, labour, and the scale of your project.",
     costText1:
-      "Bagged concrete: A 25 kg bag of Blue Circle or Postcrete costs £4–£6 at most builders' merchants (2024 pricing). Each 25 kg bag yields about 0.012 cubic metres. One cubic metre requires approximately 83 bags. At £5 per bag, that is about £415 per cubic metre in material alone. However, 20 kg bags (£3.50–£4.50) are more common for DIY projects and bring the cost to roughly £300–£380 per cubic metre. Factoring in the time to mix (easily 4–6 hours per cubic metre by hand), the total cost including your labour value is significantly higher than ready-mix for large pours.",
+      "Bagged concrete: A 25 kg bag of Blue Circle or Postcrete costs £4–£6 at most builders' merchants (2026 pricing). Each 25 kg bag yields about 0.012 cubic metres. One cubic metre requires approximately 83 bags. At £5 per bag, that is about £415 per cubic metre in material alone. However, 20 kg bags (£3.50–£4.50) are more common for DIY projects and bring the cost to roughly £300–£380 per cubic metre. Factoring in the time to mix (easily 4–6 hours per cubic metre by hand), the total cost including your labour value is significantly higher than ready-mix for large pours.",
     costText2:
       "Ready-mix concrete: The base price for standard C25/30 ready-mix ranges from £80 to £120 per cubic metre, depending on your region and the current cost of cement. Most suppliers add delivery fees (£30–£80 for a standard truck trip) and may charge part-load fees (£20–£50 per cubic metre) for orders under their minimum (typically 4–6 m³). A fuel surcharge of £15–£40 is also common. For a 3 m³ driveway pour, expect to pay £240–£360 in material plus £30–£100 in fees, totalling £270–£460.",
     costText3:
@@ -821,22 +821,22 @@ const guides: GuidesTranslations = {
   },
 
   concreteCostGuide: {
-    title: "How Much Does Concrete Cost? 2024 Price Guide",
+    title: "How Much Does Concrete Cost? 2026 Price Guide",
     metaDescription:
-      "Concrete costs £80–£120 per cubic metre for ready-mix delivery. Complete 2024 price guide covering slabs, footings, driveways, bagged concrete, labour costs, and money-saving tips.",
+      "Concrete costs £80–£120 per cubic metre for ready-mix delivery. Complete 2026 price guide covering slabs, footings, driveways, bagged concrete, labour costs, and money-saving tips.",
 
     heroTitle: "How Much Does Concrete Cost?",
-    heroSubtitle: "2024 Price Guide",
+    heroSubtitle: "2026 Price Guide",
     heroDescription:
       "A complete breakdown of concrete prices for every type of residential project. Covers ready-mix delivery, bagged concrete, labour costs, and the factors that affect what you will pay.",
 
     quickAnswerHeading: "Quick Answer",
     quickAnswerText:
-      "Ready-mix concrete costs £80–£120 per cubic metre delivered in 2024, with most homeowners paying £90–£110 per cubic metre for standard C25/30 residential concrete. Total installed cost (including labour, formwork, and finishing) ranges from £60–£140 per square metre for flatwork like driveways, patios, and paths. Bagged concrete (Blue Circle, Postcrete) costs £4–£6 per 25 kg bag, which works out to about £330–£500 per cubic metre for the material alone.",
+      "Ready-mix concrete costs £80–£120 per cubic metre delivered in 2026, with most homeowners paying £90–£110 per cubic metre for standard C25/30 residential concrete. Total installed cost (including labour, formwork, and finishing) ranges from £60–£140 per square metre for flatwork like driveways, patios, and paths. Bagged concrete (Blue Circle, Postcrete) costs £4–£6 per 25 kg bag, which works out to about £330–£500 per cubic metre for the material alone.",
 
     costByProjectHeading: "Concrete Cost by Project Type",
     costByProjectIntro:
-      "What you will pay for concrete depends heavily on the type and size of project. Here are typical 2024 costs for common residential concrete projects, including material and professional installation:",
+      "What you will pay for concrete depends heavily on the type and size of project. Here are typical 2026 costs for common residential concrete projects, including material and professional installation:",
     costByProjectColProject: "Project",
     costByProjectColTypical: "Typical Cost",
     costByProjectColNotes: "Notes",
@@ -855,7 +855,7 @@ const guides: GuidesTranslations = {
     baggedCostIntro:
       "Bagged concrete is sold at builders' merchants and DIY stores. Prices vary by bag size, brand, and region:",
     baggedCostText1:
-      "Standard bag sizes and prices (2024): 20 kg bags cost £3.50–£4.50 each (yields 0.009 m³). 25 kg bags cost £4.00–£6.00 each (yields 0.012 m³). The 25 kg bag offers the best price per cubic metre, but at 25 kg per bag, the physical labour of mixing is substantial. Many DIYers prefer 20 kg bags as a compromise between cost and manageability. Available from Jewson, Travis Perkins, Wickes, B&Q, and Screwfix.",
+      "Standard bag sizes and prices (2026): 20 kg bags cost £3.50–£4.50 each (yields 0.009 m³). 25 kg bags cost £4.00–£6.00 each (yields 0.012 m³). The 25 kg bag offers the best price per cubic metre, but at 25 kg per bag, the physical labour of mixing is substantial. Many DIYers prefer 20 kg bags as a compromise between cost and manageability. Available from Jewson, Travis Perkins, Wickes, B&Q, and Screwfix.",
     baggedCostText2:
       "Cost per cubic metre from bags: Using 25 kg bags at £5 each, one cubic metre costs approximately £415 in material (83 bags). Using 20 kg bags at £4 each, one cubic metre costs approximately £430 (108 bags). These prices are higher than ready-mix delivery (£80–£120/m³), but bags have no delivery fees, no minimum orders, and no waiting time fees. For small projects under 0.5 cubic metres, bags are almost always the more economical choice.",
     baggedCostText3:
@@ -934,7 +934,7 @@ const guides: GuidesTranslations = {
     faqHeading: "Frequently Asked Questions",
     faqs: [
       {
-        question: "How much does a cubic metre of concrete cost in 2024?",
+        question: "How much does a cubic metre of concrete cost in 2026?",
         answer:
           "A cubic metre of ready-mix concrete costs £80–£120 for the material, depending on your region and the strength class. Add delivery fees (£30–£80) and potential part-load fees (£20–£50/m³ for small orders). Total delivered cost for a typical 3–4 m³ residential order is usually £90–£115 per cubic metre all-in.",
       },
@@ -951,12 +951,17 @@ const guides: GuidesTranslations = {
       {
         question: "How much does a concrete driveway cost?",
         answer:
-          "A standard double concrete driveway (approximately 6×6 m, 100mm thick) costs £3,000–£6,000 installed in 2024. This includes about 3.6 cubic metres of concrete, sub-base, formwork, mesh reinforcement, and a brushed finish. Pattern imprinted or decorative concrete driveways cost £5,000–£10,000+ depending on the pattern and colour choices.",
+          "A standard double concrete driveway (approximately 6×6 m, 100mm thick) costs £3,000–£6,000 installed in 2026. This includes about 3.6 cubic metres of concrete, sub-base, formwork, mesh reinforcement, and a brushed finish. Pattern imprinted or decorative concrete driveways cost £5,000–£10,000+ depending on the pattern and colour choices.",
       },
       {
         question: "Why does concrete cost vary so much by region?",
         answer:
           "Concrete prices depend on the cost of cement (which varies by proximity to cement works), local aggregate costs, fuel prices for delivery trucks, labour market rates, and competition among suppliers. Areas near major cement works (the Midlands, Yorkshire) tend to have lower prices. Remote and rural locations pay the most due to transport costs.",
+      },
+      {
+        question: "How much does exposed aggregate concrete cost per m³?",
+        answer:
+          "Exposed aggregate concrete costs £120–£180 per cubic metre for the ready-mix material, which is £30–£60 more than standard concrete due to the decorative aggregate blend. Professionally installed, expect £100–£180 per square metre including preparation, pouring, surface retarder application, and pressure washing to expose the aggregate. Total cost for a typical 20 m² patio with exposed aggregate finish is £2,500–£4,500 installed.",
       },
       {
         question: "How much concrete do I need for a project?",
@@ -1164,7 +1169,7 @@ const guides: GuidesTranslations = {
     priceTrendsIntro:
       "Timber prices are notoriously volatile, and understanding the market cycle helps you time your purchases:",
     priceTrendsText1:
-      "UK timber prices surged dramatically during 2020–2021, driven by pandemic-fuelled demand, supply chain disruptions, and reduced imports from Scandinavia and the Baltic states. Structural timber prices more than doubled before stabilising through 2022–2024. A standard 47×100×2400 that cost £8–£10 at the peak can now be found for £3–£5. These dramatic swings underscore the importance of getting current prices rather than relying on historical estimates.",
+      "UK timber prices surged dramatically during 2020–2021, driven by pandemic-fuelled demand, supply chain disruptions, and reduced imports from Scandinavia and the Baltic states. Structural timber prices more than doubled before stabilising through 2022–2026. A standard 47×100×2400 that cost £8–£10 at the peak can now be found for £3–£5. These dramatic swings underscore the importance of getting current prices rather than relying on historical estimates.",
     priceTrendsText2:
       "Seasonal patterns are predictable: timber prices typically peak in spring and early summer (March through June) when building season drives demand, and bottom out in late autumn and winter (October through January) when construction slows. Buying framing packages in November or December can save 10–20% compared to May pricing. However, you need dry, covered storage to protect timber purchased months before your project start date.",
     priceTrendsText3:
@@ -1207,7 +1212,7 @@ const guides: GuidesTranslations = {
 
     faqHeading: "Frequently Asked Questions",
     faqs: [
-      { question: "How much does a 47×100 stud cost right now?", answer: "As of 2024–2025, a standard C16 47×100×2400mm stud costs £3 to £6 at builders' merchants like Jewson, Travis Perkins, or Wickes. Prices vary by region, with higher costs in London and the South-East and lower prices in the Midlands and North. Treated timber costs 30–50% more for the same size. Check your local merchant's website or call for current pricing — timber prices can change weekly." },
+      { question: "How much does a 47×100 stud cost right now?", answer: "As of 2026–2025, a standard C16 47×100×2400mm stud costs £3 to £6 at builders' merchants like Jewson, Travis Perkins, or Wickes. Prices vary by region, with higher costs in London and the South-East and lower prices in the Midlands and North. Treated timber costs 30–50% more for the same size. Check your local merchant's website or call for current pricing — timber prices can change weekly." },
       { question: "Why is timber so expensive compared to 5 years ago?", answer: "Timber prices spiked dramatically during 2020–2021 due to pandemic-driven demand, supply chain disruptions, and reduced imports from Scandinavia. While prices have fallen significantly from the peak, they remain 20–40% above pre-2020 levels due to higher transport costs, exchange rate pressure on imports, and increased demand from the housing sector. The market has normalised but at a higher baseline than the pre-pandemic levels." },
       { question: "What is the best time of year to buy timber?", answer: "Late autumn and winter (October through January) typically offers the lowest timber prices because construction activity slows and suppliers discount stock. You can save 10–20% compared to spring and summer peak pricing. If you have dry, covered storage, buying your framing package in November for a spring build can yield significant savings. Watch for bank holiday sales at DIY stores for additional discounts." },
       { question: "Is treated timber worth the extra cost?", answer: "Yes, for any wood in ground contact, within 150mm of soil, or exposed to persistent moisture. Treated timber costs 30–50% more than untreated softwood but lasts 15–30 years versus 3–5 years for untreated wood in ground contact. It is required by Building Regulations for sole plates, external joinery, and any structural timber near grade. The most common treatment is tanalised (copper-based preservative) to Use Class 2, 3, or 4 depending on the application." },

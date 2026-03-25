@@ -181,7 +181,7 @@ const guides: GuidesTranslations = {
     costText1:
       "Para uma parede padrão de 2,70 m de altura, o espaçamento de 40 cm requer um montante a cada 40 cm — aproximadamente 2,5 montantes por metro linear de parede. A 60 cm, você precisa de cerca de 1,67 montantes por metro linear. Isso é uma redução de 33% na quantidade de montantes.",
     costText2:
-      "Em uma casa típica de 150 m² em planta com ~60 metros lineares de divisórias internas, trocar de 40 cm para 60 cm economiza aproximadamente 50 montantes. A R$ 15,00–25,00 por montante (preços 2024-2025 para pinus tratado 38x89x2440 mm), isso representa R$ 750,00–R$ 1.250,00 só em montantes. Incluindo a redução de fixadores e mão de obra (menos montantes para cortar, transportar e pregar), a economia chega a R$ 2.000,00–R$ 4.000,00.",
+      "Em uma casa típica de 150 m² em planta com ~60 metros lineares de divisórias internas, trocar de 40 cm para 60 cm economiza aproximadamente 50 montantes. A R$ 15,00–25,00 por montante (preços 2026-2025 para pinus tratado 38x89x2440 mm), isso representa R$ 750,00–R$ 1.250,00 só em montantes. Incluindo a redução de fixadores e mão de obra (menos montantes para cortar, transportar e pregar), a economia chega a R$ 2.000,00–R$ 4.000,00.",
     costText3:
       "No entanto, não use 60 cm apenas para economizar em paredes portantes. O custo de uma falha estrutural ou violação de norma supera em muito qualquer economia de material. A economia se aplica apenas onde 60 cm é permitido pelas normas.",
 
@@ -705,7 +705,7 @@ const guides: GuidesTranslations = {
     costIntro:
       "O custo por metro cúbico é surpreendentemente diferente entre as duas opções. A real diferença de custo vem de taxas de entrega, mão de obra e escala do projeto.",
     costText1:
-      "Concreto em sacos: um saco de 50 kg de concreto preparado custa R$ 15,00–25,00 na maioria das lojas de materiais (preços 2024-2025). Cada saco rende aproximadamente 0,025 m³. Um metro cúbico exige cerca de 40 sacos. A R$ 20,00 por saco, isso é R$ 800,00 por metro cúbico em material — significativamente mais caro que usinado. Considerando o tempo para misturar (4–6 horas por m³ manualmente), o custo total é ainda mais alto para grandes volumes.",
+      "Concreto em sacos: um saco de 50 kg de concreto preparado custa R$ 15,00–25,00 na maioria das lojas de materiais (preços 2026-2025). Cada saco rende aproximadamente 0,025 m³. Um metro cúbico exige cerca de 40 sacos. A R$ 20,00 por saco, isso é R$ 800,00 por metro cúbico em material — significativamente mais caro que usinado. Considerando o tempo para misturar (4–6 horas por m³ manualmente), o custo total é ainda mais alto para grandes volumes.",
     costText2:
       "Concreto usinado: o preço base para fck 20 MPa padrão varia de R$ 350,00 a R$ 450,00 por metro cúbico, dependendo da região e fornecedor. A maioria adiciona taxa de entrega (R$ 100,00–200,00) e pode cobrar taxa de meia carga (R$ 50,00–100,00 por m³) para pedidos abaixo de 3 m³. Para uma concretagem de 4 m³ de laje, espere pagar R$ 1.600,00–R$ 2.200,00 em material mais R$ 100,00–R$ 300,00 em taxas.",
     costText3:
@@ -1129,7 +1129,7 @@ const guides: GuidesTranslations = {
     priceTrendsIntro:
       "Os preços de madeira no Brasil acompanham tendências nacionais e internacionais:",
     priceTrendsText1:
-      "O mercado de madeira tratada para wood frame no Brasil tem crescido consistentemente com a expansão do sistema construtivo. Os preços aumentaram 30-50% entre 2020 e 2024 devido ao aumento da demanda, custos de tratamento e logística. O pinus tratado que custava R$ 1.000/m³ em 2019 agora custa R$ 1.500–2.500/m³.",
+      "O mercado de madeira tratada para wood frame no Brasil tem crescido consistentemente com a expansão do sistema construtivo. Os preços aumentaram 30-50% entre 2020 e 2026 devido ao aumento da demanda, custos de tratamento e logística. O pinus tratado que custava R$ 1.000/m³ em 2019 agora custa R$ 1.500–2.500/m³.",
     priceTrendsText2:
       "Padrões sazonais são previsíveis: preços de madeira tendem a subir no período seco (abril-outubro) quando a construção é mais intensa, e estabilizar no período chuvoso (novembro-março). Comprar kits de madeira no período de menor demanda pode gerar economia de 10-15%.",
     priceTrendsText3:
@@ -1170,8 +1170,8 @@ const guides: GuidesTranslations = {
 
     faqHeading: "Perguntas Frequentes",
     faqs: [
-      { question: "Quanto custa um montante de pinus tratado?", answer: "Em 2024-2025, um montante padrão de pinus tratado 38x89x2440 mm custa R$ 15–25 em madeireiras e home centers. Preços variam por região, com maiores custos no Norte e Nordeste. Eucalipto tratado na mesma seção custa R$ 12–20." },
-      { question: "Por que a madeira está mais cara?", answer: "Os preços subiram 30-50% desde 2020 devido a aumento de demanda por wood frame, custos de tratamento preservativo, logística e inflação geral. O mercado se estabilizou em 2024 mas em patamar mais alto que o pré-pandemia." },
+      { question: "Quanto custa um montante de pinus tratado?", answer: "Em 2026-2025, um montante padrão de pinus tratado 38x89x2440 mm custa R$ 15–25 em madeireiras e home centers. Preços variam por região, com maiores custos no Norte e Nordeste. Eucalipto tratado na mesma seção custa R$ 12–20." },
+      { question: "Por que a madeira está mais cara?", answer: "Os preços subiram 30-50% desde 2020 devido a aumento de demanda por wood frame, custos de tratamento preservativo, logística e inflação geral. O mercado se estabilizou em 2026 mas em patamar mais alto que o pré-pandemia." },
       { question: "Qual a melhor época para comprar madeira?", answer: "O período chuvoso (novembro-março) tipicamente oferece preços menores pois a construção desacelera. Pode economizar 10-15% vs período seco. Se tem armazenamento coberto, comprar o kit de madeira no período chuvoso para obra na seca gera boa economia." },
       { question: "Madeira tratada vale o custo extra?", answer: "Sim, para qualquer madeira em contato com o solo, a menos de 30 cm do solo, ou exposta à umidade persistente. Madeira tratada custa 30-50% mais que sem tratamento mas dura 20-40 anos vs 3-5 anos em contato com o solo. É obrigatória por norma para baldrame e estrutura próxima ao solo." },
       { question: "Quanta madeira preciso para estruturar uma casa?", answer: "Uma casa wood frame típica de 100 m² requer 8–12 m³ de madeira para a estrutura completa (paredes, piso e telhado), equivalente a 300-400 montantes, 30-50 chapas de revestimento, mais vigas, caibros/tesouras, guias e vergas. O custo do kit de madeira é R$ 30.000–R$ 60.000." },

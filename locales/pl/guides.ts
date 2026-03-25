@@ -1164,7 +1164,7 @@ const guides: GuidesTranslations = {
     priceTrendsIntro:
       "Ceny drewna są notoryczno zmienne, a zrozumienie cyklu rynkowego pomaga w planowaniu zakupów:",
     priceTrendsText1:
-      "Rynek drewna budowlanego w Polsce przeżył gwałtowne wzrosty cen w 2021–2022, napędzane pandemicznym popytem DIY i zakłóceniami łańcucha dostaw. Krawędziak, który kosztował 15–20 zł, skoczył do 35–50 zł. Do 2023–2024 ceny ustabilizowały się, ale pozostają 20–40% powyżej poziomów sprzed 2020. Te dramatyczne wahania podkreślają potrzebę zbierania aktualnych cen zamiast opierania się na historycznych szacunkach.",
+      "Rynek drewna budowlanego w Polsce przeżył gwałtowne wzrosty cen w 2021–2022, napędzane pandemicznym popytem DIY i zakłóceniami łańcucha dostaw. Krawędziak, który kosztował 15–20 zł, skoczył do 35–50 zł. Do 2023–2026 ceny ustabilizowały się, ale pozostają 20–40% powyżej poziomów sprzed 2020. Te dramatyczne wahania podkreślają potrzebę zbierania aktualnych cen zamiast opierania się na historycznych szacunkach.",
     priceTrendsText2:
       "Wzorce sezonowe są przewidywalne: ceny drewna osiągają szczyt wiosną i wczesnym latem (marzec–czerwiec), gdy sezon budowlany napędza popyt, i spadają późną jesienią i zimą (październik–styczeń), gdy budownictwo zwalnia. Kupowanie drewna konstrukcyjnego w listopadzie lub grudniu może zaoszczędzić 10–20% w porównaniu z cenami majowymi. Potrzebujesz jednak suchego, zadaszonego magazynu.",
     priceTrendsText3:

@@ -1415,7 +1415,7 @@ export const lumberCostCalculator: CalculatorSEOContent = {
     "Click Calculate Materials for the total cost estimate in \u00a3.",
   ],
   materialInfo:
-    "Structural softwood timber (primarily spruce, pine, and fir) is the fundamental material for UK timber-frame construction. Timber is graded C16 or C24 according to BS EN 338, with C24 being the higher-strength grade preferred for structural applications. Common sections include 38\u00d789 mm, 38\u00d7140 mm, 47\u00d7150 mm, 47\u00d7200 mm, and 47\u00d7225 mm, supplied in standard lengths of 2.4 m, 3.0 m, 3.6 m, 4.2 m, and 4.8 m. UK timber prices fluctuate with global markets, domestic demand, and supply chain conditions. As of 2024\u20132025, typical prices at builders\u2019 merchants are \u00a32\u2013\u00a34 per metre for 38\u00d789 mm C16, \u00a34\u2013\u00a37 per metre for 47\u00d7200 mm C24, and \u00a36\u2013\u00a312 per metre for 47\u00d7250 mm C24. Buying in bulk (full packs or lorry loads) from Jewson, Travis Perkins, or direct from a sawmill gives 10\u201320% savings compared to single-piece pricing. Pressure-treated timber costs 15\u201325% more than untreated. Kiln-dried timber (KD) is preferred over green timber because it is dimensionally stable and less prone to warping and shrinkage.",
+    "Structural softwood timber (primarily spruce, pine, and fir) is the fundamental material for UK timber-frame construction. Timber is graded C16 or C24 according to BS EN 338, with C24 being the higher-strength grade preferred for structural applications. Common sections include 38\u00d789 mm, 38\u00d7140 mm, 47\u00d7150 mm, 47\u00d7200 mm, and 47\u00d7225 mm, supplied in standard lengths of 2.4 m, 3.0 m, 3.6 m, 4.2 m, and 4.8 m. UK timber prices fluctuate with global markets, domestic demand, and supply chain conditions. As of 2026\u20132025, typical prices at builders\u2019 merchants are \u00a32\u2013\u00a34 per metre for 38\u00d789 mm C16, \u00a34\u2013\u00a37 per metre for 47\u00d7200 mm C24, and \u00a36\u2013\u00a312 per metre for 47\u00d7250 mm C24. Buying in bulk (full packs or lorry loads) from Jewson, Travis Perkins, or direct from a sawmill gives 10\u201320% savings compared to single-piece pricing. Pressure-treated timber costs 15\u201325% more than untreated. Kiln-dried timber (KD) is preferred over green timber because it is dimensionally stable and less prone to warping and shrinkage.",
   nextSteps: [
     { label: "Stud Calculator", href: "/calculators/wall-framing/stud-calculator/" },
     { label: "Floor Joist Calculator", href: "/calculators/floor-framing/floor-joist-calculator/" },
@@ -1551,7 +1551,7 @@ export const paintCoverageCalculator: CalculatorSEOContent = {
 };
 
 export const paintCostCalculator: CalculatorSEOContent = {
-  disclaimer: "Prices are approximate UK averages for 2024\u20132025. Actual prices vary by brand, retailer, and region.",
+  disclaimer: "Prices are approximate UK averages for 2026\u20132025. Actual prices vary by brand, retailer, and region.",
   howToUse: [
     "Enter the total area to paint in square metres.",
     "Select the number of coats.",

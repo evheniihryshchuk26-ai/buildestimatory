@@ -36,7 +36,7 @@ const guides: GuidesTranslations = {
         href: "/guides/ready-mix-vs-bagged-concrete",
       },
       {
-        title: "How Much Does Concrete Cost? 2024 Price Guide",
+        title: "How Much Does Concrete Cost? 2026 Price Guide",
         description:
           "Concrete costs $175\u2013$225 CAD per cubic metre for ready-mix. Complete price guide covering slabs, footings, driveways, bagged concrete, labour costs, and saving tips.",
         href: "/guides/concrete-cost-guide",
@@ -181,7 +181,7 @@ const guides: GuidesTranslations = {
     costText1:
       "For a standard 8-foot wall, 16\" OC spacing requires one stud every 16 inches \u2014 roughly 0.75 studs per linear foot of wall. At 24\" OC, you need about 0.50 studs per linear foot. That is a 33% reduction in stud count.",
     costText2:
-      "On a typical 2,000 sq ft single-storey home with ~200 linear feet of interior partitions, switching from 16\" to 24\" OC saves approximately 50 studs. At $8\u2013$11 CAD per stud (2024 pricing for 2\u00d74\u00d796 SPF from Home Hardware or RONA), that is $400\u2013$550 CAD in studs alone. Factor in reduced fasteners, reduced labour (fewer studs to cut, carry, and nail), and the savings reach $1,100\u2013$1,700 CAD.",
+      "On a typical 2,000 sq ft single-storey home with ~200 linear feet of interior partitions, switching from 16\" to 24\" OC saves approximately 50 studs. At $8\u2013$11 CAD per stud (2026 pricing for 2\u00d74\u00d796 SPF from Home Hardware or RONA), that is $400\u2013$550 CAD in studs alone. Factor in reduced fasteners, reduced labour (fewer studs to cut, carry, and nail), and the savings reach $1,100\u2013$1,700 CAD.",
     costText3:
       "However, do not use 24\" OC spacing just to save money on load-bearing walls. The cost of a structural failure or code violation far exceeds any material savings. The savings apply only where 24\" OC is code-compliant.",
 
@@ -725,7 +725,7 @@ const guides: GuidesTranslations = {
     costIntro:
       "The per-cubic-metre cost of concrete is surprisingly similar between the two options. The real cost difference comes from delivery fees, labour, and the scale of your project.",
     costText1:
-      "Bagged concrete: A 30 kg bag of Quikrete or Bomix costs $5.50\u2013$8.00 CAD at most Canadian home improvement stores (2024 pricing). Each 30 kg bag yields about 0.014 m\u00b3. One cubic metre requires approximately 71 bags. At $6.50 per bag, that is roughly $460 CAD per cubic metre in material alone. However, 25 kg bags ($4.50\u2013$6.00 CAD) are more common for DIY projects and bring the cost to roughly $220\u2013$290 per cubic metre. Factoring in the time to mix (easily 4\u20136 hours per cubic metre by hand), the total cost including your labour value is significantly higher than ready-mix for large pours.",
+      "Bagged concrete: A 30 kg bag of Quikrete or Bomix costs $5.50\u2013$8.00 CAD at most Canadian home improvement stores (2026 pricing). Each 30 kg bag yields about 0.014 m\u00b3. One cubic metre requires approximately 71 bags. At $6.50 per bag, that is roughly $460 CAD per cubic metre in material alone. However, 25 kg bags ($4.50\u2013$6.00 CAD) are more common for DIY projects and bring the cost to roughly $220\u2013$290 per cubic metre. Factoring in the time to mix (easily 4\u20136 hours per cubic metre by hand), the total cost including your labour value is significantly higher than ready-mix for large pours.",
     costText2:
       "Ready-mix concrete: The base price for standard 25 MPa ready-mix ranges from $175 to $225 CAD per cubic metre, depending on your region and the current cost of cement. Most suppliers add delivery fees ($75\u2013$150 CAD for a standard truck trip) and may charge short-load fees ($55\u2013$100 per m\u00b3) for orders under their minimum (typically 3\u20134 m\u00b3). A fuel surcharge of $30\u2013$75 CAD is also common. For a 3 m\u00b3 driveway pour, expect to pay $525\u2013$675 CAD in material plus $75\u2013$200 in fees, totalling $600\u2013$875 CAD.",
     costText3:
@@ -821,22 +821,22 @@ const guides: GuidesTranslations = {
   },
 
   concreteCostGuide: {
-    title: "How Much Does Concrete Cost? 2024 Price Guide",
+    title: "How Much Does Concrete Cost? 2026 Price Guide",
     metaDescription:
-      "Concrete costs $175\u2013$225 CAD per cubic metre for ready-mix delivery. Complete 2024 Canadian price guide covering slabs, footings, driveways, bagged concrete, labour costs, and money-saving tips.",
+      "Concrete costs $175\u2013$225 CAD per cubic metre for ready-mix delivery. Complete 2026 Canadian price guide covering slabs, footings, driveways, bagged concrete, labour costs, and money-saving tips.",
 
     heroTitle: "How Much Does Concrete Cost?",
-    heroSubtitle: "2024 Price Guide",
+    heroSubtitle: "2026 Price Guide",
     heroDescription:
       "A complete breakdown of concrete prices for every type of residential project in Canada. Covers ready-mix delivery, bagged concrete, labour costs, and the factors that affect what you will pay.",
 
     quickAnswerHeading: "Quick Answer",
     quickAnswerText:
-      "Ready-mix concrete costs $175\u2013$225 CAD per cubic metre delivered in 2024, with most Canadian homeowners paying $180\u2013$210 per m\u00b3 for standard 25\u201332 MPa residential concrete. Total installed cost (including labour, forms, and finishing) ranges from $90\u2013$200 CAD per square metre for flatwork like driveways, patios, and sidewalks. Bagged concrete (Quikrete, Bomix) costs $5.50\u2013$8.00 per 30 kg bag, which works out to about $220\u2013$350 CAD per cubic metre for the material alone.",
+      "Ready-mix concrete costs $175\u2013$225 CAD per cubic metre delivered in 2026, with most Canadian homeowners paying $180\u2013$210 per m\u00b3 for standard 25\u201332 MPa residential concrete. Total installed cost (including labour, forms, and finishing) ranges from $90\u2013$200 CAD per square metre for flatwork like driveways, patios, and sidewalks. Bagged concrete (Quikrete, Bomix) costs $5.50\u2013$8.00 per 30 kg bag, which works out to about $220\u2013$350 CAD per cubic metre for the material alone.",
 
     costByProjectHeading: "Concrete Cost by Project Type",
     costByProjectIntro:
-      "What you will pay for concrete depends heavily on the type and size of project. Here are typical 2024 costs for common residential concrete projects in Canada, including material and professional installation:",
+      "What you will pay for concrete depends heavily on the type and size of project. Here are typical 2026 costs for common residential concrete projects in Canada, including material and professional installation:",
     costByProjectColProject: "Project",
     costByProjectColTypical: "Typical Cost (CAD)",
     costByProjectColNotes: "Notes",
@@ -855,7 +855,7 @@ const guides: GuidesTranslations = {
     baggedCostIntro:
       "Bagged concrete is sold at Canadian Tire, Home Hardware, RONA, Home Depot Canada, and lumber yards. Prices vary by bag size, brand, and region:",
     baggedCostText1:
-      "Standard bag sizes and prices (2024 CAD): 20 kg bags cost $4.00\u2013$5.50 each (yields 0.009 m\u00b3). 25 kg bags cost $4.50\u2013$6.00 each (yields 0.012 m\u00b3). 30 kg bags cost $5.50\u2013$8.00 each (yields 0.014 m\u00b3). The 30 kg bag offers the best price per cubic metre, but at 30 kilograms per bag, the physical labour of mixing is substantial. Many DIYers prefer 25 kg bags as a compromise between cost and manageability.",
+      "Standard bag sizes and prices (2026 CAD): 20 kg bags cost $4.00\u2013$5.50 each (yields 0.009 m\u00b3). 25 kg bags cost $4.50\u2013$6.00 each (yields 0.012 m\u00b3). 30 kg bags cost $5.50\u2013$8.00 each (yields 0.014 m\u00b3). The 30 kg bag offers the best price per cubic metre, but at 30 kilograms per bag, the physical labour of mixing is substantial. Many DIYers prefer 25 kg bags as a compromise between cost and manageability.",
     baggedCostText2:
       "Cost per cubic metre from bags: Using 30 kg bags at $6.50 each, one cubic metre costs approximately $460 CAD in material (71 bags). Using 25 kg bags at $5.25 each, one cubic metre costs approximately $440 CAD (84 bags). These prices are higher than ready-mix delivery ($175\u2013$225/m\u00b3), but bags have no delivery fees, no minimum orders, and no waiting time fees. For small projects under 0.5 m\u00b3, bags are almost always the more economical choice.",
     baggedCostText3:
@@ -934,7 +934,7 @@ const guides: GuidesTranslations = {
     faqHeading: "Frequently Asked Questions",
     faqs: [
       {
-        question: "How much does a cubic metre of concrete cost in Canada in 2024?",
+        question: "How much does a cubic metre of concrete cost in Canada in 2026?",
         answer:
           "A cubic metre of ready-mix concrete costs $175\u2013$225 CAD for the material, depending on your region and the MPa strength. Add delivery fees ($75\u2013$150 CAD) and potential short-load fees ($55\u2013$100/m\u00b3 for small orders). Total delivered cost for a typical 3\u20134 m\u00b3 residential order is usually $185\u2013$215 CAD per m\u00b3 all-in.",
       },
@@ -951,7 +951,7 @@ const guides: GuidesTranslations = {
       {
         question: "How much does a concrete driveway cost in Canada?",
         answer:
-          "A standard 2-car concrete driveway (approximately 6\u00d76 m, 100 mm thick) costs $4,500\u2013$8,000 CAD installed in 2024. This includes about 3.6 m\u00b3 of concrete, gravel base, forms, wire mesh, and a broom finish. Stamped or decorative concrete driveways cost $8,000\u2013$15,000+ depending on the pattern and colour choices.",
+          "A standard 2-car concrete driveway (approximately 6\u00d76 m, 100 mm thick) costs $4,500\u2013$8,000 CAD installed in 2026. This includes about 3.6 m\u00b3 of concrete, gravel base, forms, wire mesh, and a broom finish. Stamped or decorative concrete driveways cost $8,000\u2013$15,000+ depending on the pattern and colour choices.",
       },
       {
         question: "Why does concrete cost vary so much across Canada?",
@@ -1164,7 +1164,7 @@ const guides: GuidesTranslations = {
     priceTrendsIntro:
       "Lumber prices are notoriously volatile, and understanding the market cycle helps you time your purchases:",
     priceTrendsText1:
-      "The lumber futures market hit an all-time high of $1,711 USD per thousand board feet in May 2021, driven by pandemic-fuelled DIY demand and temporary mill shutdowns. By late 2022, prices had crashed back to $350/MBF before stabilising in the $400 to $600/MBF range through 2023\u20132024. A standard 2x4x8 that cost $12\u2013$16 CAD at the peak can now be found for $4\u2013$8 CAD. These dramatic swings underscore the importance of getting current prices rather than relying on historical estimates.",
+      "The lumber futures market hit an all-time high of $1,711 USD per thousand board feet in May 2021, driven by pandemic-fuelled DIY demand and temporary mill shutdowns. By late 2022, prices had crashed back to $350/MBF before stabilising in the $400 to $600/MBF range through 2023\u20132026. A standard 2x4x8 that cost $12\u2013$16 CAD at the peak can now be found for $4\u2013$8 CAD. These dramatic swings underscore the importance of getting current prices rather than relying on historical estimates.",
     priceTrendsText2:
       "Seasonal patterns are predictable: lumber prices typically peak in spring and early summer (March through June) when building season drives demand, and bottom out in late fall and winter (October through January) when construction slows across Canada. Buying framing packages in November or December can save 10\u201320% compared to May pricing. However, you need dry, covered storage to protect lumber purchased months before your project start date.",
     priceTrendsText3:
@@ -1207,7 +1207,7 @@ const guides: GuidesTranslations = {
 
     faqHeading: "Frequently Asked Questions",
     faqs: [
-      { question: "How much does a 2x4 cost right now in Canada?", answer: "As of 2024\u20132025, a standard SPF 2x4x8 stud costs $4 to $8 CAD at retail home centres like Home Depot Canada, RONA, and Canadian Tire. Prices vary by region, with higher costs in BC and the Maritimes and lower prices in Ontario and the Prairies. Premium species like Douglas fir and western red cedar cost $8 to $20 CAD for the same 2x4x8 size. Check your local store\u2019s website for current pricing \u2014 lumber prices can change weekly." },
+      { question: "How much does a 2x4 cost right now in Canada?", answer: "As of 2026\u20132025, a standard SPF 2x4x8 stud costs $4 to $8 CAD at retail home centres like Home Depot Canada, RONA, and Canadian Tire. Prices vary by region, with higher costs in BC and the Maritimes and lower prices in Ontario and the Prairies. Premium species like Douglas fir and western red cedar cost $8 to $20 CAD for the same 2x4x8 size. Check your local store\u2019s website for current pricing \u2014 lumber prices can change weekly." },
       { question: "Why is lumber so expensive compared to 5 years ago?", answer: "Lumber prices spiked 300\u2013400% during 2020\u20132021 due to pandemic-driven DIY demand, temporary mill shutdowns, and supply chain disruptions. While prices have fallen significantly from the $1,700/MBF peak, they remain 30\u201350% above pre-2020 levels due to higher mill operating costs, transportation costs, US import tariffs on Canadian softwood, wildfire and beetle-kill impacts on BC timber supply, and increased demand from a structural housing shortage in Canada. The market has normalised but at a higher baseline than the $300\u2013$400/MBF levels of the 2010s." },
       { question: "What is the best time of year to buy lumber in Canada?", answer: "Late fall and winter (October through January) typically offers the lowest lumber prices because construction activity slows across Canada. You can save 10\u201320% compared to spring and summer peak pricing. If you have dry, covered storage, buying your framing package in November for a spring build can yield significant savings. Watch for holiday sales at home centres (Black Friday, Boxing Day) for additional discounts." },
       { question: "Is pressure-treated lumber worth the extra cost?", answer: "Yes, for any wood in ground contact, within 150 mm of soil, or exposed to persistent moisture. Pressure-treated lumber costs 50\u2013100% more than untreated SPF but lasts 20\u201340 years versus 3\u20135 years for untreated wood in ground contact. It is required by the NBC for sill plates, deck substructure, and any structural member near grade. The most common treatment in Canada is MCA (micronised copper azole), which replaced CCA (chromated copper arsenate) for residential use." },

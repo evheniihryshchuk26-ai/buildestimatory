@@ -1103,7 +1103,7 @@ export const lumberCostCalculator: CalculatorSEOContent = {
   installationTips: ["Holz trocken und überdacht lagern.", "Holzfeuchte vor Einbau prüfen (max. 20 %).", "KVH-Stempel auf Sortierklasse und Feuchtegehalt prüfen.", "Mehrere Angebote einholen — Preise variieren stark.", "Holzpakete auf Beschädigungen prüfen bei Anlieferung."],
   commonMistakes: ["Holz ohne Abdeckung im Freien lagern.", "Baumarktpreise als Referenz nehmen — Holzhandlungen sind 15–25 % günstiger.", "Holz ohne Sortierklassen-Stempel für tragende Zwecke verwenden.", "Holz mit zu hoher Feuchte einbauen.", "Saisonale Preisschwankungen nicht berücksichtigen."],
   faqs: [
-    { question: "Was kostet KVH aktuell?", answer: "KVH 6×12×250 cm: 5–8 EUR. KVH 6×16×300 cm: 8–14 EUR. Preise schwanken nach Marktlage und Region. Stand: 2024/2025." },
+    { question: "Was kostet KVH aktuell?", answer: "KVH 6×12×250 cm: 5–8 EUR. KVH 6×16×300 cm: 8–14 EUR. Preise schwanken nach Marktlage und Region. Stand: 2026/2025." },
     { question: "KVH oder BSH?", answer: "KVH für Standardquerschnitte bis ca. 5 m Spannweite. BSH für größere Spannweiten, höhere Lasten und sichtbare Konstruktionen. BSH kostet ca. 2–3× mehr." },
     { question: "Wo kaufe ich am günstigsten?", answer: "1. Holzfachhandel (Holzland-Partner): beste Qualität und Beratung, 15–25 % günstiger als Baumarkt. 2. Direkt vom Sägewerk: 30–50 % günstiger, aber Mindestmengen. 3. Baumarkt: bequem, aber teuerste Option." },
     { question: "Wann ist Holz am günstigsten?", answer: "Oktober bis Januar — nach Ende der Bausaison und vor Frühjahrsnachfrage. Einsparung: 10–20 % gegenüber Frühjahrs-/Sommerpreisen." },

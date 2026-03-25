@@ -1645,7 +1645,7 @@ export const hurricaneTieCalculator: CalculatorSEOContent = {
 };
 
 export const lumberCostCalculator: CalculatorSEOContent = {
-  disclaimer: "Os preços são estimativas baseadas no mercado brasileiro 2024-2025. Os preços reais variam conforme região, fornecedor e condições de mercado.",
+  disclaimer: "Os preços são estimativas baseadas no mercado brasileiro 2026-2025. Os preços reais variam conforme região, fornecedor e condições de mercado.",
   howToUse: [
     "Selecione a seção da madeira desejada.",
     "Insira a quantidade de peças e o comprimento.",
@@ -1797,7 +1797,7 @@ const paintCoverageCalculatorPTBR: CalculatorSEOContent = {
 };
 
 const paintCostCalculatorPTBR: CalculatorSEOContent = {
-  disclaimer: "Os preços são médias aproximadas do mercado brasileiro 2024-2025. Os preços reais variam por marca, loja e região.",
+  disclaimer: "Os preços são médias aproximadas do mercado brasileiro 2026-2025. Os preços reais variam por marca, loja e região.",
   howToUse: [
     "Insira a área total de paredes e tetos que planeja pintar em m².",
     "Selecione o número de demãos (2 é padrão).",
