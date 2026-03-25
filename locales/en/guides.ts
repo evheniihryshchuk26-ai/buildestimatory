@@ -408,6 +408,11 @@ const guides: GuidesTranslations = {
         href: "/calculators/roofing/rafter-calculator",
         description: "Calculate rafter length, count, and lumber for your roof system.",
       },
+      {
+        label: "Roof Truss Calculator",
+        href: "/calculators/roofing/truss-calculator",
+        description: "Estimate truss count and spacing for your roof system.",
+      },
     ],
 
     faqHeading: "Frequently Asked Questions",
@@ -915,19 +920,24 @@ const guides: GuidesTranslations = {
         description: "Calculate cubic yards and bags needed for slabs, footings, columns, and custom shapes.",
       },
       {
-        label: "Anchor Bolt Calculator",
-        href: "/calculators/foundation/anchor-bolt-calculator",
-        description: "Determine anchor bolt spacing and count for your concrete foundation.",
+        label: "Concrete Slab Calculator",
+        href: "/calculators/foundation/concrete-slab-calculator",
+        description: "Estimate concrete volume for garage, patio, and driveway slabs of any thickness.",
       },
       {
-        label: "Sill Plate Calculator",
-        href: "/calculators/foundation/sill-plate-calculator",
-        description: "Estimate sill plate lumber for the top of your foundation walls.",
+        label: "Concrete Footing Calculator",
+        href: "/calculators/foundation/concrete-footing-calculator",
+        description: "Calculate cubic yards for continuous and spread footings with waste factor.",
       },
       {
-        label: "Sill Seal Calculator",
-        href: "/calculators/foundation/sill-seal-calculator",
-        description: "Calculate sill seal gasket needed between foundation and framing.",
+        label: "Concrete Column Calculator",
+        href: "/calculators/foundation/concrete-column-calculator",
+        description: "Estimate concrete for Sonotube column piers — 8\", 10\", and 12\" diameters.",
+      },
+      {
+        label: "Concrete Steps Calculator",
+        href: "/calculators/foundation/concrete-steps-calculator",
+        description: "Calculate concrete volume for stairs by width, rise, run, and step count.",
       },
     ],
 

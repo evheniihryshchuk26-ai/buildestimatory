@@ -12,9 +12,9 @@ const guides: GuidesTranslations = {
       "In-depth guides to help you make better decisions on your next building project.",
     guides: [
       {
-        title: "400mm vs 600mm Centres Spacing: Complete Guide",
+        title: "400mm vs 600mm Centres — Which Spacing to Use? Complete Guide (2026)",
         description:
-          "Learn when to use 400mm vs 600mm centres spacing for studs, joists, and rafters. Includes Building Regulations requirements, cost comparison, and material impact.",
+          "Free guide: 400mm vs 600mm centres compared — load capacity, cost comparison, and building regulations. Find the right spacing for studs, joists & rafters.",
         href: "/guides/16-vs-24-on-center-spacing",
       },
       {
@@ -63,9 +63,9 @@ const guides: GuidesTranslations = {
   },
 
   spacingGuide: {
-    title: "400mm vs 600mm Centres Spacing: Complete Guide",
+    title: "400mm vs 600mm Centres — Which Spacing to Use? Complete Guide (2026)",
     metaDescription:
-      "400mm vs 600mm centres spacing explained: when to use each for wall studs, floor joists, roof rafters. Includes UK Building Regulations requirements, cost comparison, and material impact.",
+      "Free guide: 400mm vs 600mm centres compared — load capacity, cost comparison, and building regulations. Find the right spacing for studs, joists & rafters.",
 
     heroTitle: "400mm vs 600mm Centres Spacing",
     heroSubtitle: "Complete Guide",
@@ -219,7 +219,7 @@ const guides: GuidesTranslations = {
       },
       {
         label: "Roof Truss Calculator",
-        href: "/calculators/roofing/roof-truss-calculator",
+        href: "/calculators/roofing/truss-calculator",
         description: "Estimate truss count and spacing for your roof system.",
       },
     ],
@@ -446,9 +446,9 @@ const guides: GuidesTranslations = {
   },
 
   minimumRoofPitch: {
-    title: "Minimum Roof Pitch for Slates, Metal & Tile",
+    title: "Minimum Roof Pitch for Slates, Metal & Tile — 2026 UK Building Regs Guide",
     metaDescription:
-      "Find the minimum roof pitch for concrete tiles (17.5°), natural slate (20°+), metal roofing (1:12), clay tile (17.5°+), and more. Includes Building Regulations references and low-slope solutions.",
+      "Minimum roof pitch UK 2026: concrete tiles (17.5°), natural slate (20°+), metal roofing (1:12), clay tile (17.5°+). BS 5534, Approved Document C, and low-slope solutions explained.",
 
     heroTitle: "Minimum Roof Pitch",
     heroSubtitle: "for Slates, Metal & Tile",
@@ -560,7 +560,7 @@ const guides: GuidesTranslations = {
       "Local authority building control may impose additional requirements. Always verify your project's specific requirements with your building control officer or approved inspector before selecting roofing materials.",
     ],
     codeSummary:
-      "Building Regulations are minimum standards, not best practices. Many roofing professionals recommend pitches at least one step above the regulatory minimum to provide an extra margin of safety against wind-driven rain.",
+      "Building Regulations are minimum standards, not best practices. Many roofing professionals recommend pitches at least one step above the regulatory minimum to provide an extra margin of safety against wind-driven rain. Under the 2024 update to Approved Document L (Conservation of fuel and power), low-pitch roofs must also meet stricter U-value targets of 0.15 W/m\u00b2K for new builds and 0.18 W/m\u00b2K for extensions, which affects insulation depth and ventilation design. BS 5534:2014+A2:2018 requires that fixings for slates and tiles be calculated for the specific wind zone, altitude, and site exposure \u2014 roofs with marginal pitch are more susceptible to wind uplift because water on the underside of tiles increases the effective wind load. The NHBC Standards (updated 2025) require a minimum 12.5\u00b0 pitch for any tiled or slated roof in new-build housing, even with sealed underlayment, which is stricter than the manufacturer minimums listed above. Always confirm the current edition of each standard with your building control body, as requirements are reviewed regularly.",
 
     belowMinHeading: "What Happens Below Minimum Pitch",
     belowMinIntro:
@@ -609,6 +609,16 @@ const guides: GuidesTranslations = {
         href: "/calculators/roofing/roof-slope-calculator",
         description: "Determine slope factor and material multiplier for any pitch.",
       },
+      {
+        label: "Rafter Calculator",
+        href: "/calculators/roofing/rafter-calculator",
+        description: "Calculate rafter length, count, and timber for your roof system.",
+      },
+      {
+        label: "Roof Truss Calculator",
+        href: "/calculators/roofing/truss-calculator",
+        description: "Estimate truss count and spacing for your roof system.",
+      },
     ],
 
     faqHeading: "Frequently Asked Questions",
@@ -642,6 +652,26 @@ const guides: GuidesTranslations = {
         question: "Can you change the pitch of an existing roof?",
         answer:
           "Yes, it is possible to change an existing roof's pitch by adding new rafters or trusses over the current structure, a process sometimes called a roof-over or re-pitch. This is a significant structural modification that requires structural engineering calculations, Building Regulations approval, and potentially planning permission. The cost typically ranges from £8,000 to £25,000 depending on the roof size and the amount of pitch change needed.",
+      },
+      {
+        question: "What is the minimum pitch for a tiled roof UK?",
+        answer:
+          "In the UK, the minimum pitch for concrete interlocking tiles is 17.5\u00b0 under standard conditions per BS 5534. With a fully sealed breathable membrane underlayment, some manufacturers (Marley, Redland) allow installation down to 15\u00b0. Plain tiles (clay or concrete) require a minimum of 35\u00b0, or 30\u00b0 with enhanced underlayment. Always check the specific tile manufacturer's data sheet and confirm with your building control officer, as NHBC Standards may impose a stricter 12.5\u00b0 minimum for new-build housing.",
+      },
+      {
+        question: "Can you put shingles on a low pitch roof?",
+        answer:
+          "Asphalt shingles are rarely used in the UK, but where they are specified, the minimum pitch is typically 15\u00b0 (3.2:12). Below 20\u00b0, a fully bonded underlayment (ice-and-water shield) is required beneath the shingles to prevent wind-driven rain penetration. Most UK roofers recommend standing seam metal or membrane roofing instead of shingles for pitches below 20\u00b0, as these systems provide superior weatherproofing in the UK climate.",
+      },
+      {
+        question: "What roof pitch is too low for tiles?",
+        answer:
+          "Any pitch below 15\u00b0 is too low for tiles, even with enhanced underlayment. Below 15\u00b0, water moves too slowly across the tile surface and capillary action pulls moisture under the tile overlaps, causing chronic leaks. For pitches between 10\u00b0 and 15\u00b0, standing seam metal roofing is the best option. Below 10\u00b0, membrane systems (EPDM, single-ply, or GRP) are required. These thresholds are set by BS 5534 and enforced by building control.",
+      },
+      {
+        question: "What is the minimum roof pitch for planning permission?",
+        answer:
+          "Planning permission does not specify a minimum roof pitch directly. However, local planning authorities often require new roofs to match the character of surrounding buildings, which may effectively impose a minimum pitch. Permitted development rights for rear extensions allow flat roofs (any pitch), but loft conversions and front-facing roof alterations typically require planning approval where pitch changes are proposed. Building Regulations (separate from planning) enforce minimum pitches via BS 5534 for structural and weatherproofing compliance.",
       },
     ],
   },
@@ -915,19 +945,24 @@ const guides: GuidesTranslations = {
         description: "Calculate cubic metres and bags needed for slabs, footings, columns, and custom shapes.",
       },
       {
-        label: "Anchor Bolt Calculator",
-        href: "/calculators/foundation/anchor-bolt-calculator",
-        description: "Determine anchor bolt spacing and count for your concrete foundation.",
+        label: "Concrete Slab Calculator",
+        href: "/calculators/foundation/concrete-slab-calculator",
+        description: "Estimate concrete volume for garage, patio, and driveway slabs of any thickness.",
       },
       {
-        label: "Sill Plate Calculator",
-        href: "/calculators/foundation/sill-plate-calculator",
-        description: "Estimate sill plate timber for the top of your foundation walls.",
+        label: "Concrete Footing Calculator",
+        href: "/calculators/foundation/concrete-footing-calculator",
+        description: "Calculate cubic metres for continuous and spread footings with waste factor.",
       },
       {
-        label: "Sill Seal Calculator",
-        href: "/calculators/foundation/sill-seal-calculator",
-        description: "Calculate sill seal gasket needed between foundation and framing.",
+        label: "Concrete Column Calculator",
+        href: "/calculators/foundation/concrete-column-calculator",
+        description: "Estimate concrete for column piers — 200 mm, 250 mm, and 300 mm diameters.",
+      },
+      {
+        label: "Concrete Steps Calculator",
+        href: "/calculators/foundation/concrete-steps-calculator",
+        description: "Calculate concrete volume for stairs by width, rise, run, and step count.",
       },
     ],
 

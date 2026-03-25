@@ -27,7 +27,7 @@ export const categories: CategoryMeta[] = [
       { slug: "floor-joist-calculator", title: "Floor Joist Calculator", description: "Floor joist calculator: Estimate joists by span and spacing. Free sizing tool for 400 mm or 600 mm centres \u2014 includes total board count.", category: "Floor Framing", categorySlug: "floor-framing" },
       { slug: "bridging-calculator", title: "Bridging Calculator", description: "How many rows of bridging do I need? Free calculator for timber cross-bridging & solid blocking by joist span \u2014 instant results.", category: "Floor Framing", categorySlug: "floor-framing" },
       { slug: "subfloor-adhesive-calculator", title: "Subfloor Adhesive Calculator", description: "Subfloor adhesive calculator: How many tubes of construction adhesive? Free estimator based on floor area \u2014 covers standard cartridge sizes.", category: "Floor Framing", categorySlug: "floor-framing" },
-      { slug: "osb-panel-calculator", title: "OSB Panel Calculator", description: "How many OSB sheets do I need? Free calculator for 1200\u00d72400 mm subfloor panels \u2014 accounts for waste and gives exact sheet count.", category: "Floor Framing", categorySlug: "floor-framing" },
+      { slug: "osb-panel-calculator", title: "OSB Panel Calculator UK — Sheets & Cost 2026", description: "How many OSB sheets do I need? Free UK calculator for 1200\u00d72400 mm OSB/3 floor panels \u2014 instant sheet count, waste allowance, and 2026 prices.", category: "Floor Framing", categorySlug: "floor-framing" },
     ],
   },
   {
@@ -51,7 +51,7 @@ export const categories: CategoryMeta[] = [
     calculators: [
       { slug: "truss-calculator", title: "Roof Truss Calculator", description: "How many roof trusses do I need? Free calculator for 600 mm standard spacing \u2014 enter roof length for instant truss count and layout.", category: "Roofing", categorySlug: "roofing" },
       { slug: "rafter-calculator", title: "Rafter Calculator", description: "Rafter calculator: Estimate rafter count by roof length & spacing. Free tool for 400 mm and 600 mm centres \u2014 works for gable and hip roofs.", category: "Roofing", categorySlug: "roofing" },
-      { slug: "ridge-board-calculator", title: "Ridge Board Calculator", description: "Ridge board calculator: How many boards for my roof peak? Free tool for standard ridge board sizes \u2014 gives length and count.", category: "Roofing", categorySlug: "roofing" },
+      { slug: "ridge-board-calculator", title: "Ridge Board Calculator UK — Size & Timber 2026", description: "Ridge board calculator UK: What size ridge board do I need? Free tool for C16/C24 softwood sizing \u2014 board count, length, and 2026 timber prices.", category: "Roofing", categorySlug: "roofing" },
       { slug: "roof-sheathing-calculator", title: "Roof Sheathing Calculator", description: "How many OSB sheets to sheathe my roof? Free roof decking calculator for 1200\u00d72400 mm panels \u2014 factors in roof pitch and waste.", category: "Roofing", categorySlug: "roofing" },
       { slug: "shingle-calculator", title: "Shingle Calculator", description: "Shingle calculator: How many bundles do I need? Free estimator for standard shingles \u2014 converts square metres to bundles.", category: "Roofing", categorySlug: "roofing" },
       { slug: "underlayment-calculator", title: "Roofing Underlayment Calculator", description: "How many rolls of roofing underlayment? Free calculator for breathable membrane & felt \u2014 accounts for overlap and waste.", category: "Roofing", categorySlug: "roofing" },

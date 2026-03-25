@@ -123,7 +123,7 @@ export const categories: CategoryMeta[] = [
     description:
       "Calculate housewrap, siding, flashing, and seam tape for your home's exterior envelope.",
     calculators: [
-      { slug: "housewrap-calculator", title: "Housewrap Calculator", description: "How many rolls of housewrap do I need? Free Tyvek calculator by wall area — covers 3 ft, 5 ft & 9 ft roll widths with overlap.", category: "Exterior Shell", categorySlug: "exterior-shell" },
+      { slug: "housewrap-calculator", title: "Housewrap Calculator", description: "Free Tyvek housewrap calculator — instant roll count for 3 ft, 5 ft & 9 ft rolls. Accounts for 6\" overlap and waste. Get your material list now.", category: "Exterior Shell", categorySlug: "exterior-shell" },
       { slug: "vinyl-siding-calculator", title: "Vinyl Siding Calculator", description: "Vinyl siding calculator: Estimate panels by wall square footage. Free tool that accounts for doors, windows & 10% waste factor.", category: "Exterior Shell", categorySlug: "exterior-shell" },
       { slug: "hardie-siding-calculator", title: "Hardie Plank Siding Calculator", description: "How many HardiePlank boards do I need? Free fiber cement siding calculator — covers 8.25\" & 6.25\" exposure with waste included.", category: "Exterior Shell", categorySlug: "exterior-shell" },
       { slug: "window-flashing-calculator", title: "Window Flashing Calculator", description: "Window flashing tape calculator: Estimate linear feet for all openings. Free tool for 4\", 6\" & 9\" wide self-adhesive flashing.", category: "Exterior Shell", categorySlug: "exterior-shell" },
@@ -213,7 +213,7 @@ export const categories: CategoryMeta[] = [
         slug: "deck-railing-calculator",
         title: "Deck Railing Calculator",
         description:
-          "How many railing posts and balusters do I need? Free deck railing calculator — gives post count, baluster total, and rail linear feet.",
+          "Free deck railing calculator — get exact posts, balusters, and material list in seconds. Works for wood, composite & metal rail systems.",
         category: "Outdoor",
         categorySlug: "outdoor",
       },

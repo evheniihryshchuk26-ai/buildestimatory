@@ -36,9 +36,9 @@ const guides: GuidesTranslations = {
         href: "/guides/ready-mix-vs-bagged-concrete",
       },
       {
-        title: "Quanto Custa o Concreto? Guia de Preços 2025",
+        title: "Quanto Custa o Concreto em 2026? Guia Completo de Preços em R$",
         description:
-          "O concreto usinado custa R$ 350–550 por metro cúbico. Guia completo de preços cobrindo lajes, sapatas, calçadas, concreto em saco, mão de obra e dicas de economia.",
+          "Grátis: guia completo de preços do concreto em 2026 — valores em R$ por m³ para lajes, sapatas e calçadas. Inclui custo de mão de obra e dicas de economia.",
         href: "/guides/concrete-cost-guide",
       },
       {
@@ -801,9 +801,9 @@ const guides: GuidesTranslations = {
   },
 
   concreteCostGuide: {
-    title: "Quanto Custa o Concreto? Guia de Preços 2025",
+    title: "Quanto Custa o Concreto em 2026? Guia Completo de Preços em R$",
     metaDescription:
-      "O concreto usinado custa R$ 350–550 por metro cúbico entregue. Guia completo de preços cobrindo lajes, sapatas, calçadas, concreto em sacos, mão de obra e dicas de economia.",
+      "Grátis: guia completo de preços do concreto em 2026 — valores em R$ por m³ para lajes, sapatas e calçadas. Inclui custo de mão de obra e dicas de economia.",
 
     heroTitle: "Quanto Custa o Concreto?",
     heroSubtitle: "Guia de Preços 2025",

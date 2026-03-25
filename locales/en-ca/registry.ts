@@ -327,3 +327,45 @@ export const concreteStepsCalculator: CalculatorSEOContent = {
     { question: "Do exterior steps need footings below the frost line?", answer: "Yes. Exterior steps must bear on footings that extend below the local frost line to prevent heaving. In southern Ontario this means 1.2 m (4 ft) deep, in the Prairies 1.8 m (6 ft). Steps that are not properly footed will heave, tilt, and separate from the building." },
   ],
 };
+
+// ─── FLOOR FRAMING ──────────────────────────────────────────────────────────
+
+export const floorJoistCalculator: CalculatorSEOContent = {
+  disclaimer: "Order 2–3 extra joists for waste and damage. Always verify sizes against NBC span tables for your region.",
+  howToUse: [
+    "Enter the total room width perpendicular to joist direction.",
+    "Choose your on-centre spacing (16\" is standard for living spaces in Canada).",
+    "Click Calculate to get the total joist count.",
+    "Verify joist size against NBC Part 9 span tables for your species, grade, and loading.",
+  ],
+  materialInfo:
+    "Floor joists are the horizontal structural members that span between bearing walls or beams to support the subfloor and all live and dead loads above. In Canadian residential construction, floor joist sizing and spacing are governed by the National Building Code of Canada (NBC) Part 9 — Housing and Small Buildings, specifically Tables 9.23.4.1 and 9.23.4.2, which provide maximum allowable spans for various lumber sizes, species groups, grades, and on-centre spacings.\n\nThe most common lumber species used for floor joists in Canada is SPF (Spruce-Pine-Fir), which dominates the Canadian softwood market due to its availability, strength-to-weight ratio, and cost-effectiveness. SPF is graded under NLGA (National Lumber Grades Authority) standards, with No. 2 grade being the minimum acceptable for structural framing. Standard dimensional sizes are 38 × 184 mm (2×8), spanning up to approximately 3.6 m (12 ft); 38 × 235 mm (2×10), spanning up to about 4.5 m (15 ft); and 38 × 286 mm (2×12), spanning up to roughly 5.5 m (18 ft) — all at 400 mm (16 in) on-centre spacing with standard residential loads (1.9 kPa live load for floors).\n\nEngineered alternatives include I-joists (TJI), which are manufactured with oriented strand board (OSB) webs and laminated veneer lumber (LVL) flanges. I-joists offer superior span capability, lighter weight, and consistent dimensions compared to sawn lumber. They are available from Canadian manufacturers such as Weyerhaeuser (Trus Joist), Tolko, and LP Building Solutions, in depths from 241 mm (9-1/2 in) to 406 mm (16 in), spanning over 6 m (20 ft) without intermediate support.\n\nJoists are typically spaced at 400 mm (16 in) on centre, which provides a stiff, bounce-free floor suitable for all finish materials including ceramic tile and stone. Spacing of 600 mm (24 in) on centre is permitted under the NBC with thicker subfloor panels (minimum 18.5 mm tongue-and-groove OSB or plywood) but produces a noticeably less rigid floor.\n\nCurrent pricing in Canada ranges from approximately CAD $10 to $30 per piece for dimensional lumber joists depending on size and region, while engineered I-joists cost CAD $4 to $8 per linear foot. Lumber is available at Home Depot Canada, RONA, Home Hardware, Castle Building Centres, and regional yards. For a typical 130 m² (1,400 sq ft) floor system, expect to spend CAD $1,200 to $3,000 on joists before labour.",
+  nextSteps: [
+    { label: "Rim Joist Calculator", href: "/calculators/floor-framing/rim-joist-calculator/" },
+    { label: "Bridging Calculator", href: "/calculators/floor-framing/bridging-calculator/" },
+    { label: "Joist Hanger Calculator", href: "/calculators/hardware/joist-hanger-calculator/" },
+  ],
+  installationTips: [
+    "Crown all joists the same way (crown up) for a flat floor — sight down the edge of each board to identify the bow.",
+    "Use joist hangers (Simpson or MiTek) at beam connections — toe-nailing alone does not meet NBC requirements for lateral support.",
+    "Install solid blocking or cross-bridging at mid-span and at bearing points per NBC Section 9.23.9.",
+    "Leave a 10 mm (3/8 in) gap between joist ends and foundation walls to allow for wood expansion in humid Canadian seasons.",
+    "Apply construction adhesive (PL Premium or similar) to joist tops before laying subfloor panels to reduce squeaks.",
+  ],
+  commonMistakes: [
+    "Not crowning joists consistently — some up, some down — causes an uneven, wavy floor surface.",
+    "Under-sizing joists for the span — always check NBC Part 9 span tables for your specific species, grade, and loading.",
+    "Forgetting to add the extra starter joist at the beginning of the layout.",
+    "Using lumber graded below No. 2 (such as utility or economy grade) for structural floor joists — these do not meet NBC requirements.",
+    "Cutting or notching joists beyond the limits in NBC Section 9.23.4.6, which reduces structural capacity and voids the span rating.",
+  ],
+  faqs: [
+    { question: "Should I use 16\" or 24\" floor joist spacing?", answer: "In Canada, 400 mm (16 in) on-centre spacing is the standard for residential floors and produces a noticeably stiffer floor. The NBC permits 600 mm (24 in) spacing with thicker subfloor, but this is generally reserved for utility areas, storage rooms, or budget-conscious projects. For any floor that will receive ceramic tile, stone, or engineered hardwood, use 16-inch spacing to prevent flexion cracking in the finish material." },
+    { question: "What size floor joists do I need?", answer: "Joist size depends on the unsupported span, species, grade, and loads. Under the NBC Part 9 span tables for SPF No. 2 at 400 mm (16 in) on centre: 2×8 spans approximately 3.6 m (12 ft), 2×10 spans about 4.5 m (15 ft), and 2×12 spans roughly 5.5 m (18 ft). For longer spans, use engineered I-joists or LVL beams to eliminate the need for intermediate bearing walls." },
+    { question: "What size floor joists for a 12 foot span Canada?", answer: "For a 12-foot (3.66 m) span in Canadian residential construction, a 2×8 SPF No. 2 joist at 400 mm (16 in) on centre is at its maximum limit under NBC Part 9 span tables. A 2×10 provides a more comfortable margin and a stiffer floor with less bounce. For heavy loads (tile floors, large aquariums, libraries), step up to 2×10 or consider engineered I-joists. Always verify against the specific NBC span table for your lumber species and grade." },
+    { question: "How far apart are floor joists in Canada?", answer: "The standard joist spacing in Canadian residential construction is 400 mm (16 inches) on centre, which complies with NBC Part 9 and provides a stiff, solid floor. Spacing of 600 mm (24 in) on centre is permitted but requires thicker subfloor sheathing (minimum 18.5 mm T&G) and produces a floor that may feel bouncy, especially with heavy finish materials. Some provincial codes may have additional requirements — check with your local building department." },
+    { question: "Do I need engineered floor joists?", answer: "Engineered I-joists (TJI) are not required by the NBC, but they offer significant advantages for spans over 4.5 m (15 ft), open-concept floor plans, and situations where consistent depth and straightness are critical. I-joists are lighter than dimensional lumber, do not twist, shrink, or crown, and come in depths up to 406 mm (16 in) to span over 6 m (20 ft). They are widely available from Canadian suppliers like Weyerhaeuser, Tolko, and LP. The main drawback is cost — roughly 20 to 40 percent more than sawn lumber — and the need for web stiffeners at bearing points." },
+    { question: "What is the NBC requirement for floor joist spacing?", answer: "The National Building Code of Canada (NBC) Part 9 permits floor joist spacing of 400 mm (16 in), 300 mm (12 in), or 600 mm (24 in) on centre, with maximum allowable spans varying by spacing, lumber size, species, and grade. The span tables in NBC Tables 9.23.4.1 (for bedrooms and attics) and 9.23.4.2 (for all other areas with 1.9 kPa live load) provide the specific maximums. Most builders default to 400 mm (16 in) on centre as the best balance of material cost and floor stiffness. Provincial building codes (such as the OBC in Ontario or the BCBC in British Columbia) adopt the NBC tables with occasional local amendments." },
+    { question: "How much do floor joists cost in Canada?", answer: "Dimensional SPF lumber joists cost approximately CAD $10 to $30 each depending on size, length, and regional pricing. A 2×10×12 ft typically runs CAD $15 to $22. Engineered I-joists cost CAD $4 to $8 per linear foot. For a typical 130 m² (1,400 sq ft) floor system using 2×10 at 16-inch spacing, expect to spend CAD $1,200 to $2,500 on joists alone. Lumber prices in Canada fluctuate with the softwood market — check current pricing at Home Depot Canada, RONA, or your local building supply yard." },
+  ],
+};
