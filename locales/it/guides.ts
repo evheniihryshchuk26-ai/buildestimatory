@@ -59,6 +59,12 @@ const guides: GuidesTranslations = {
           "Decking composito vs legno a confronto: costo, durabilità, manutenzione, aspetto e durata. Scopri quale materiale è migliore per il tuo progetto e il tuo clima.",
         href: "/guides/composite-vs-wood-decking",
       },
+      {
+        title: "Quanto Costa la Ghiaia? Guida ai Prezzi 2026",
+        description:
+          "La ghiaia costa 15\u201340 EUR a tonnellata. Guida completa ai prezzi per vialetti, terrazze, sentieri, drenaggio e giardino con costi di consegna e calcolo quantit\u00e0.",
+        href: "/guides/gravel-cost-guide",
+      },
     ],
   },
 
@@ -1336,6 +1342,130 @@ const guides: GuidesTranslations = {
         question: "Si possono combinare composito e legno sulla stessa terrazza?",
         answer:
           "Sì, molti costruttori usano una sottostruttura in legno trattato (pali, travi, travetti) con tavole e parapetti in composito sopra. Questo è l'approccio standard dato che le tavole composite sono progettate come superficie da calpestio, non come elementi strutturali. La struttura in legno trattato fornisce il supporto strutturale a un costo inferiore rispetto a un sistema tutto in composito, mentre la superficie composita offre i benefici della bassa manutenzione dove si vede e si calpesta la terrazza.",
+      },
+    ],
+  },
+
+  gravelCost: {
+    title: "Quanto Costa la Ghiaia? Guida ai Prezzi 2026",
+    metaDescription:
+      "La ghiaia costa 15\u201340 EUR a tonnellata, 25\u201360 EUR al metro cubo nel 2026. Guida completa: pietrisco, ghiaietto, stabilizzato, granito decomposto, ciottoli di fiume. Vialetti, terrazze, sentieri, drenaggio, consegna e calcolo quantit\u00e0.",
+
+    heroTitle: "Quanto Costa la Ghiaia?",
+    heroSubtitle: "Guida ai Prezzi 2026",
+    heroDescription:
+      "Panoramica completa dei prezzi della ghiaia per tipo, progetto e regione in Italia. Copre pietrisco, ghiaietto, stabilizzato, granito decomposto e ciottoli di fiume con costi di consegna, ordini minimi e consigli per risparmiare.",
+
+    quickAnswerHeading: "Risposta Rapida",
+    quickAnswerText:
+      "La ghiaia costa da 15 a 40 EUR a tonnellata o da 25 a 60 EUR al metro cubo nel 2026, a seconda del tipo e della regione. Lo stabilizzato e il pietrisco sono i pi\u00f9 economici a 12\u201325 EUR/tonnellata. Il ghiaietto costa 25\u201345 EUR/tonnellata. Le pietre decorative come i ciottoli costano 40\u2013120 EUR/tonnellata. La consegna aggiunge 50\u2013150 EUR a carico per distanze fino a 30 km.",
+
+    gravelTypesHeading: "Tipi di Ghiaia e Prezzi",
+    gravelTypesIntro:
+      "Non tutta la ghiaia \u00e8 uguale. Ogni tipo ha peso, compattazione e prezzo diversi. Ecco i tipi pi\u00f9 comuni e i prezzi 2026 in Italia:",
+    gravelTypesColType: "Tipo di Ghiaia",
+    gravelTypesColCost: "Costo per Tonnellata",
+    gravelTypesColBestFor: "Ideale Per",
+    gravelTypesRows: [
+      { type: "Pietrisco (10\u201320 mm)", cost: "15 \u2013 30 EUR", bestFor: "Vialetti, drenaggio, sottofondo. Spigoli angolari che si incastrano." },
+      { type: "Ghiaietto (8\u201316 mm)", cost: "25 \u2013 45 EUR", bestFor: "Sentieri, terrazze, aiuole. Liscio e arrotondato." },
+      { type: "Stabilizzato (0/30 mm)", cost: "12 \u2013 22 EUR", bestFor: "Vialetti, parcheggi. Contiene fini che compattano in superficie dura." },
+      { type: "Granito Decomposto", cost: "25 \u2013 50 EUR", bestFor: "Sentieri, giardini, aspetto naturale. Si compatta bene." },
+      { type: "Ciottoli di Fiume (30\u201380 mm)", cost: "40 \u2013 120 EUR", bestFor: "Paesaggistica, letti di ruscello secco, decorazione." },
+      { type: "Ghiaia di Marmo Bianco", cost: "60 \u2013 160 EUR", bestFor: "Decorazione, bordure, zone d'accento. Prezzo premium." },
+    ],
+
+    costByProjectHeading: "Costo della Ghiaia per Tipo di Progetto",
+    costByProjectIntro:
+      "Quanto pagherete dipende dalle dimensioni, dalla profondit\u00e0 e dal tipo. Costi tipici 2026 per progetti residenziali comuni in Italia:",
+    costByProjectColProject: "Progetto",
+    costByProjectColTypical: "Costo Tipico",
+    costByProjectColNotes: "Note",
+    costByProjectRows: [
+      { project: "Vialetto d'ingresso (3,5\u00d715 m)", typical: "400 \u2013 1.200 EUR", notes: "8\u201312 tonnellate di pietrisco a 15 cm. Posa professionale extra." },
+      { project: "Terrazza (4\u00d74 m)", typical: "150 \u2013 400 EUR", notes: "2\u20133 tonnellate di ghiaietto a 8\u201310 cm. Cordoli extra." },
+      { project: "Sentiero (1\u00d710 m)", typical: "60 \u2013 180 EUR", notes: "0,5\u20131,5 tonnellate a 8 cm. Ghiaietto o granito decomposto." },
+      { project: "Drenaggio (15 m)", typical: "100 \u2013 300 EUR", notes: "2\u20134 tonnellate di pietrisco 10/20. Geotessile separato." },
+      { project: "Aiuola (3\u00d76 m)", typical: "150 \u2013 500 EUR", notes: "2\u20133 tonnellate di pietra decorativa a 8 cm." },
+      { project: "Base per Casetta (3\u00d74 m)", typical: "100 \u2013 300 EUR", notes: "2\u20133 tonnellate a 10\u201315 cm. Pietrisco con compattazione." },
+      { project: "Posto Auto (3\u00d76 m)", typical: "200 \u2013 600 EUR", notes: "4\u20136 tonnellate a 15 cm. Stabilizzato raccomandato." },
+    ],
+
+    deliveryCostsHeading: "Costi di Consegna e Ordini Minimi",
+    deliveryCostsIntro:
+      "La consegna \u00e8 una parte significativa del costo, specialmente per ordini piccoli.",
+    deliveryCostsText1:
+      "La maggior parte delle cave e dei rivenditori di materiali edili applica 50\u2013150 EUR per consegna fino a 30 km. Oltre, contare 2\u20134 EUR per km aggiuntivo. Un camion ribaltabile standard trasporta 10\u201315 tonnellate. Molti offrono mezzi carichi, ma il costo di consegna resta invariato.",
+    deliveryCostsText2:
+      "Gli ordini minimi variano ma sono generalmente 5\u201310 tonnellate per la consegna. Alcuni offrono 1\u20132 tonnellate con sovrapprezzo (20\u201350 EUR). Per quantit\u00e0 sotto 1 tonnellata, il ritiro con rimorchio \u00e8 l'opzione pi\u00f9 economica.",
+    deliveryCostsText3:
+      "Per risparmiare sulla consegna: unite gli ordini con i vicini, acquistate in bassa stagione (autunno-inverno), o ritirate voi stessi. Un rimorchio da 750 kg contiene circa 0,4 m\u00b3 a viaggio. Un rimorchio da 2 tonnellate trasporta 1,2 m\u00b3. Il noleggio di un rimorchio ribaltabile (50\u2013100 EUR/giorno) permette 2\u20133 m\u00b3 a viaggio.",
+
+    howToCalculateHeading: "Come Calcolare la Quantit\u00e0 Necessaria",
+    howToCalculateIntro:
+      "Calcolare la quantit\u00e0 giusta evita consegne extra costose o materiale in eccesso. Seguite questi passaggi:",
+    howToCalculateItems: [
+      "Misurate l'area: Moltiplicate lunghezza per larghezza in metri per ottenere i m\u00b2. Per forme irregolari, suddividete in rettangoli.",
+      "Determinate la profondit\u00e0: Standard: 5\u20138 cm per sentieri e aiuole, 10 cm per terrazze, 15\u201320 cm per vialetti. Convertite cm in metri dividendo per 100.",
+      "Calcolate i metri cubi: Lunghezza \u00d7 larghezza \u00d7 profondit\u00e0 (tutto in metri) = m\u00b3.",
+      "Convertite in tonnellate: Moltiplicate i m\u00b3 per il fattore peso \u2014 1,8 per pietrisco, 1,7 per ghiaietto, 2,0 per stabilizzato, 1,9 per granito decomposto.",
+      "Aggiungete il 10% di scarto: Moltiplicate per 1,1 per compattazione, dispersione e terreno irregolare.",
+      "Esempio: Un vialetto di 3,5 \u00d7 15 m a 15 cm = 3,5 \u00d7 15 \u00d7 0,15 = 7,9 m\u00b3 \u00d7 1,8 = 14,2 tonnellate. Con 10%: ordinate 15,6 tonnellate.",
+    ],
+    howToCalculateSummary:
+      "Consiglio: Usate il nostro Calcolatore di Ghiaia gratuito. Inserite le dimensioni e ottenete istantaneamente m\u00b3, tonnellaggio e stime dei costi.",
+
+    savingTipsHeading: "Come Risparmiare sulla Ghiaia",
+    savingTipsIntro:
+      "La ghiaia \u00e8 gi\u00e0 uno dei materiali di pavimentazione pi\u00f9 economici, ma questi consigli aiutano a risparmiare ancora di pi\u00f9:",
+    savingTipsItems: [
+      "Acquistate in grandi quantit\u00e0: Il prezzo per tonnellata cala per ordini grandi. Sopra 15 tonnellate, sconti del 10\u201320% sono comuni.",
+      "Scegliete pietra locale: La ghiaia da cave vicine costa molto meno. Il trasporto \u00e8 il secondo fattore di prezzo pi\u00f9 importante.",
+      "Ordinate fuori stagione: Autunno e inverno sono i mesi pi\u00f9 tranquilli. Molti fornitori offrono sconti del 10\u201315%.",
+      "Ritirate voi stessi: Con un rimorchio, eliminate i 50\u2013150 EUR di consegna. Per piccoli progetti, risparmiate il 20\u201330%.",
+      "Usate stabilizzato al posto della pietra decorativa: Lo stabilizzato costa 12\u201322 EUR/tonnellata vs 40\u2013120 EUR per le opzioni decorative.",
+      "Confrontate pi\u00f9 fornitori: I prezzi variano del 30\u201350% tra fornitori della stessa zona. Chiedete almeno 3 preventivi.",
+    ],
+
+    calculatorCtaHeading: "Calcolate il Vostro Fabbisogno di Ghiaia",
+    calculatorCtaText: "Usate i nostri calcolatori gratuiti per stimare quantit\u00e0 e costo esatti del vostro progetto.",
+    calculatorLinks: [
+      { label: "Calcolatore di Ghiaia", href: "/calculators/foundation/gravel-calculator", description: "Calcolate m\u00b3 e tonnellate per qualsiasi area con stima dei costi." },
+      { label: "Calcolatore Ghiaia per Vialetto", href: "/calculators/foundation/driveway-gravel-calculator", description: "Stimate la ghiaia per tipo per vialetti con fascia di prezzo e consegna." },
+      { label: "Calcolatore Lastra in Calcestruzzo", href: "/calculators/foundation/concrete-slab-calculator", description: "Progettate in calcestruzzo? Calcolate m\u00b3 e numero di sacchi." },
+    ],
+
+    faqHeading: "Domande Frequenti",
+    faqs: [
+      {
+        question: "Quanto costa una tonnellata di ghiaia nel 2026?",
+        answer:
+          "La ghiaia costa 15\u201340 EUR a tonnellata nel 2026 per i tipi comuni. Lo stabilizzato \u00e8 il pi\u00f9 economico a 12\u201322 EUR/tonnellata. Il pietrisco costa 15\u201330 EUR/tonnellata. Il ghiaietto costa 25\u201345 EUR/tonnellata. Il granito decomposto va da 25 a 50 EUR/tonnellata. I ciottoli decorativi costano 40\u2013120 EUR/tonnellata.",
+      },
+      {
+        question: "Quanta ghiaia serve per un vialetto?",
+        answer:
+          "Un vialetto standard per un'auto (3,5 m \u00d7 15 m a 15 cm) richiede circa 8 m\u00b3 o 14 tonnellate. Per un vialetto doppio (7 \u00d7 15 m), servono 16 m\u00b3 o 28 tonnellate. Usate pietrisco o stabilizzato. Aggiungete il 10% per compattazione. Costo materiale: 200\u2013600 EUR.",
+      },
+      {
+        question: "Quanto costa un metro cubo di ghiaia?",
+        answer:
+          "Un metro cubo costa 25\u201360 EUR a seconda del tipo. Il pietrisco costa 25\u201350 EUR/m\u00b3. Lo stabilizzato costa 20\u201335 EUR/m\u00b3. Il ghiaietto costa 40\u201375 EUR/m\u00b3. Prezzi solo materiale \u2014 consegna (50\u2013150 EUR/carico) a parte. Un m\u00b3 copre circa 10 m\u00b2 a 10 cm.",
+      },
+      {
+        question: "Qual \u00e8 la ghiaia pi\u00f9 economica?",
+        answer:
+          "Lo stabilizzato (0/30 mm, detto anche misto granulometrico) \u00e8 il pi\u00f9 economico a 12\u201322 EUR/tonnellata. \u00c8 una miscela di pietrisco e fini che si compatta in una superficie molto dura. Il pietrisco semplice \u00e8 la successiva opzione a 15\u201330 EUR/tonnellata. L'aggregato riciclato pu\u00f2 costare ancora meno.",
+      },
+      {
+        question: "Quanta ghiaia serve per metro quadrato?",
+        answer:
+          "A 10 cm di profondit\u00e0: circa 0,10 m\u00b3 o 0,18 tonnellate per m\u00b2. A 5 cm: 0,05 m\u00b3/m\u00b2. A 15 cm (vialetti): 0,15 m\u00b3 o 0,27 tonnellate/m\u00b2. Moltiplicate per l'area totale e aggiungete il 10%.",
+      },
+      {
+        question: "Un vialetto in ghiaia costa meno del calcestruzzo o dell'asfalto?",
+        answer:
+          "S\u00ec, notevolmente. Un vialetto in ghiaia costa 8\u201320 EUR/m\u00b2 in materiale (20\u201350 EUR/m\u00b2 posato), contro 60\u2013120 EUR/m\u00b2 per il calcestruzzo e 40\u201380 EUR/m\u00b2 per l'asfalto. Un vialetto di 3,5 \u00d7 15 m in ghiaia costa 1.000\u20132.500 EUR posato vs 3.200\u20136.500 EUR per il calcestruzzo. Tuttavia, la ghiaia richiede pi\u00f9 manutenzione e rabbocco ogni 2\u20133 anni.",
       },
     ],
   },

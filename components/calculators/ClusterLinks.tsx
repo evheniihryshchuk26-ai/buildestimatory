@@ -47,6 +47,10 @@ const clusters: Record<string, ClusterConfig> = {
       { href: "/guides/lumber-prices-guide/", title: "Lumber Prices Guide" },
     ],
   },
+  "gravel-calculator": {
+    subCalculators: ["driveway-gravel-calculator"],
+    guides: [{ href: "/guides/gravel-cost-guide/", title: "Gravel Cost Guide: Prices Per Ton & Yard" }],
+  },
   "deck-board-calculator": {
     subCalculators: [
       "deck-footing-calculator",

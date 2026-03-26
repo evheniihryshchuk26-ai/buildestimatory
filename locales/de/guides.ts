@@ -59,6 +59,12 @@ const guides: GuidesTranslations = {
           "WPC vs. Holz-Terrassendielen im Vergleich: Kosten, Haltbarkeit, Pflege, Optik und Lebensdauer. Finden Sie heraus, welches Terrassenmaterial für Ihr Projekt und Klima am besten geeignet ist.",
         href: "/guides/composite-vs-wood-decking",
       },
+      {
+        title: "Was kostet Kies? Preisratgeber 2026",
+        description:
+          "Kies kostet 15–40 EUR pro Tonne. Vollständiger Preisratgeber für Einfahrten, Terrassen, Wege, Drainage und Landschaftsbau mit Lieferkosten und Mengenberechnung.",
+        href: "/guides/gravel-cost-guide",
+      },
     ],
   },
 
@@ -1036,6 +1042,130 @@ const guides: GuidesTranslations = {
       { question: "Kann man WPC-Terrassendielen streichen oder ölen?", answer: "Ummantelte WPC-Dielen sollten nicht gestrichen oder geölt werden, da die Polymerhülle die Haftung verhindert und Farbe innerhalb von 1–2 Saisons abblättert. Wenn Sie die Farbe einer WPC-Terrasse ändern möchten, gibt es spezielle WPC-Beschichtungen — kontaktieren Sie den Hersteller für zugelassene Produkte." },
       { question: "Was ist umweltfreundlicher: WPC oder Holz?", answer: "Beide haben Umwelt-Vor- und -Nachteile. WPC verwendet Recyclingmaterialien und hat durch seine lange Lebensdauer weniger Austauschzyklen. Allerdings ist WPC nicht biologisch abbaubar und schwer am Lebensende zu recyceln. Holz ist ein nachwachsender, biologisch abbaubarer Rohstoff, aber behandeltes Holz enthält Konservierungsstoffe und hat eine kürzere Lebensdauer. Nachhaltig geerntetes Holz (FSC/PEFC-zertifiziert) hat die geringste Umweltbelastung." },
       { question: "Kann ich WPC und Holz auf derselben Terrasse kombinieren?", answer: "Ja, viele Bauherren verwenden eine kesseldruckimprägnierte Holz- oder Aluminium-Unterkonstruktion (Pfosten, Träger, Unterlager) mit WPC-Dielen und -Geländer obenauf. Dies ist tatsächlich der Standardansatz, da WPC-Dielen als Belagmaterial konzipiert sind, nicht als tragende Bauteile." },
+    ],
+  },
+
+  gravelCost: {
+    title: "Was kostet Kies? Preisratgeber 2026",
+    metaDescription:
+      "Kies kostet 15–40 EUR pro Tonne, 25–60 EUR pro Kubikmeter in 2026. Vollständiger Preisratgeber: Schotter, Zierkies, Schottertragschicht, Granitgrus, Flusskiesel. Einfahrten, Terrassen, Wege, Drainage, Lieferkosten und Mengenberechnung.",
+
+    heroTitle: "Was kostet Kies?",
+    heroSubtitle: "Preisratgeber 2026",
+    heroDescription:
+      "Ein vollständiger Überblick über Kiespreise nach Sorte, Projekt und Region in Deutschland, Österreich und der Schweiz. Schotter, Zierkies, Schottertragschicht, Granitgrus und Flusskiesel mit Lieferkosten, Mindestmengen und Spartipps.",
+
+    quickAnswerHeading: "Kurzantwort",
+    quickAnswerText:
+      "Kies kostet 15 bis 40 EUR pro Tonne oder 25 bis 60 EUR pro Kubikmeter in 2026, je nach Sorte und Region. Schotter und Schottertragschicht sind am günstigsten mit 15–25 EUR pro Tonne. Zierkies kostet 25–45 EUR pro Tonne. Dekorative Steine wie Flusskiesel kosten 40–120 EUR pro Tonne. Die Lieferung kostet 50–150 EUR pro Fahrt bis 30 km, und die meisten Anbieter verlangen eine Mindestbestellung von 5 bis 10 Tonnen.",
+
+    gravelTypesHeading: "Kiessorten und Preise",
+    gravelTypesIntro:
+      "Nicht jeder Kies ist gleich. Jede Sorte hat unterschiedliches Gewicht, verschiedene Verdichtungseigenschaften und Preise. Hier die gängigsten Kiessorten und ihre 2026-Preise:",
+    gravelTypesColType: "Kiessorte",
+    gravelTypesColCost: "Preis pro Tonne",
+    gravelTypesColBestFor: "Am besten für",
+    gravelTypesRows: [
+      { type: "Schotter (16/32 mm)", cost: "15 – 30 EUR", bestFor: "Einfahrten, Drainage, Unterbau. Kantige Bruchstücke verzahnen sich fest." },
+      { type: "Zierkies (8–16 mm)", cost: "25 – 45 EUR", bestFor: "Wege, Terrassen, Beete. Gerundet und dekorativ." },
+      { type: "Schottertragschicht (0/32 mm)", cost: "12 – 22 EUR", bestFor: "Einfahrten, Parkflächen. Mit Feinanteil, verdichtet sich zu fester Oberfläche." },
+      { type: "Granitgrus (0/5 mm)", cost: "25 – 50 EUR", bestFor: "Wege, Terrassenflächen, natürlicher Look. Verdichtet sich gut." },
+      { type: "Flusskiesel (30–80 mm)", cost: "40 – 120 EUR", bestFor: "Gartengestaltung, Trockenbächlein, Dekoration. Nicht verdichtbar." },
+      { type: "Weißer Marmorkies", cost: "60 – 160 EUR", bestFor: "Dekorative Gestaltung, Einfassungen, Akzentflächen. Premiumpreis." },
+    ],
+
+    costByProjectHeading: "Kieskosten nach Projektart",
+    costByProjectIntro:
+      "Was Sie für Kies bezahlen, hängt stark von der Projektgröße, der benötigten Tiefe und der Kiessorte ab. Hier die typischen Kosten 2026 für gängige Wohnprojekte:",
+    costByProjectColProject: "Projekt",
+    costByProjectColTypical: "Typische Kosten",
+    costByProjectColNotes: "Hinweise",
+    costByProjectRows: [
+      { project: "Kieseinfahrt (3,5×15 m)", typical: "400 – 1.200 EUR", notes: "8–12 Tonnen Schotter bei 15 cm Tiefe. Professionelle Verlegung extra." },
+      { project: "Terrassenfläche (4×4 m)", typical: "150 – 400 EUR", notes: "2–3 Tonnen Zierkies bei 8–10 cm Tiefe. Randeinfassung extra." },
+      { project: "Gartenweg (1×10 m)", typical: "60 – 180 EUR", notes: "0,5–1,5 Tonnen bei 8 cm Tiefe. Zierkies oder Granitgrus." },
+      { project: "Drainage (15 m)", typical: "100 – 300 EUR", notes: "2–4 Tonnen Schotter 16/32. Geotextil separat." },
+      { project: "Pflanzenbeet (3×6 m)", typical: "150 – 500 EUR", notes: "2–3 Tonnen Dekorstein bei 8 cm Tiefe." },
+      { project: "Unterbau für Gartenhaus (3×4 m)", typical: "100 – 300 EUR", notes: "2–3 Tonnen bei 10–15 cm Tiefe. Schotter mit Verdichtung." },
+      { project: "Stellplatz (3×6 m)", typical: "200 – 600 EUR", notes: "4–6 Tonnen bei 15 cm Tiefe. Schottertragschicht empfohlen." },
+    ],
+
+    deliveryCostsHeading: "Lieferkosten und Mindestmengen",
+    deliveryCostsIntro:
+      "Die Lieferung ist ein wesentlicher Kostenfaktor bei Kies, besonders bei kleinen Bestellungen. Das Verständnis der Liefer- und Mindestmengen hilft bei der Budgetplanung.",
+    deliveryCostsText1:
+      "Die meisten Kieswerke und Baustoffhändler berechnen 50 bis 150 EUR pro Lieferung für Entfernungen bis 30 km. Ab 30 km kommen ca. 2–4 EUR pro zusätzlichem Kilometer hinzu. Ein Standard-LKW lädt 10–15 Tonnen Kies. Viele Händler bieten auch Teilladungen an, wobei die Liefergebühr unabhängig von der Menge gleich bleibt.",
+    deliveryCostsText2:
+      "Mindestbestellmengen variieren, liegen aber typischerweise bei 5–10 Tonnen für eine Lieferung. Einige Händler bieten 1–2 Tonnen mit Aufschlag (20–50 EUR extra). Für sehr kleine Mengen unter 1 Tonne ist die Selbstabholung mit Anhänger am wirtschaftlichsten — die meisten Kieswerke erlauben Selbstbeladung und berechnen nur das Material.",
+    deliveryCostsText3:
+      "Zum Sparen bei der Lieferung: Bestellen Sie gemeinsam mit Nachbarn, planen Sie den Kauf in der Nebensaison (Spätherbst oder Winter, wenn die Nachfrage gering ist) oder holen Sie den Kies selbst ab. Ein PKW-Anhänger (750 kg Nutzlast) fasst etwa 0,4 m³ pro Fahrt. Ein größerer Anhänger (2 Tonnen) schafft ca. 1,2 m³. Ein Kipper-Anhänger zum Mieten (50–100 EUR/Tag) ermöglicht 2–3 m³ pro Fahrt.",
+
+    howToCalculateHeading: "So berechnen Sie die benötigte Menge",
+    howToCalculateIntro:
+      "Die richtige Kiesmenge zu bestimmen verhindert kostspielige Nachlieferungen oder Materialüberschuss. Folgen Sie diesen Schritten:",
+    howToCalculateItems: [
+      "Fläche messen: Multiplizieren Sie Länge mal Breite in Metern für die Quadratmeterzahl. Bei unregelmäßigen Formen teilen Sie in Rechtecke auf.",
+      "Tiefe bestimmen: Standard sind 5–8 cm für Wege und Beete, 10 cm für Terrassen, 15–20 cm für Einfahrten. Zentimeter durch 100 teilen ergibt Meter.",
+      "Kubikmeter berechnen: Länge × Breite × Tiefe (alles in Metern) ergibt Kubikmeter.",
+      "In Tonnen umrechnen: Kubikmeter mal Gewichtsfaktor — 1,8 für Schotter, 1,7 für Zierkies, 2,0 für Schottertragschicht, 1,9 für Granitgrus.",
+      "10 % Verschnitt addieren: Multiplizieren Sie mit 1,1 für Verdichtung, Streuung und unebenen Untergrund.",
+      "Beispiel: Eine Einfahrt 3,5 × 15 m bei 15 cm Tiefe = 3,5 × 15 × 0,15 = 7,9 m³ × 1,8 = 14,2 Tonnen. Mit 10 % Verschnitt: 15,6 Tonnen bestellen.",
+    ],
+    howToCalculateSummary:
+      "Tipp: Nutzen Sie unseren kostenlosen Kies-Rechner. Geben Sie Ihre Maße ein und erhalten Sie sofort Kubikmeter, Tonnage und Kostenschätzungen.",
+
+    savingTipsHeading: "So sparen Sie Geld beim Kieskauf",
+    savingTipsIntro:
+      "Kies ist bereits eines der günstigsten Belagmaterialien, aber mit diesen Tipps sparen Sie noch mehr:",
+    savingTipsItems: [
+      "In großen Mengen kaufen: Der Tonnenpreis sinkt bei größeren Bestellungen deutlich. Ab 15+ Tonnen gibt es oft 10–20 % Mengenrabatt.",
+      "Regionales Material wählen: Kies aus nahegelegenen Werken ist deutlich günstiger als überregional transportierter Stein. Der Transport ist der zweitgrößte Preisfaktor.",
+      "In der Nebensaison bestellen: Spätherbst und Winter sind die ruhigsten Monate. Viele Anbieter gewähren 10–15 % Rabatt in dieser Zeit.",
+      "Selbst abholen: Mit Anhänger entfällt die Liefergebühr von 50–150 EUR. Bei kleinen Projekten spart das 20–30 % der Gesamtkosten.",
+      "Schottertragschicht statt Dekorstein: Tragschicht kostet 12–22 EUR/Tonne vs. 40–120 EUR für dekorative Optionen. Für Einfahrten und Nutzflächen ist Tragschicht besser und billiger.",
+      "Mehrere Anbieter vergleichen: Preise können um 30–50 % zwischen Anbietern derselben Region variieren. Holen Sie mindestens 3 Angebote ein.",
+    ],
+
+    calculatorCtaHeading: "Berechnen Sie Ihren Kiesbedarf",
+    calculatorCtaText: "Nutzen Sie unsere kostenlosen Kies-Rechner für die exakte Mengen- und Kostenberechnung Ihres Projekts.",
+    calculatorLinks: [
+      { label: "Kies-Rechner", href: "/calculators/foundation/gravel-calculator", description: "Kubikmeter und Tonnen für jede Fläche mit Kostenabschätzung berechnen." },
+      { label: "Einfahrt-Kies-Rechner", href: "/calculators/foundation/driveway-gravel-calculator", description: "Kies nach Sorte für Einfahrten mit Kostenspanne und Lieferbedarf schätzen." },
+      { label: "Betonplatten-Rechner", href: "/calculators/foundation/concrete-slab-calculator", description: "Planen Sie ein Betonprojekt? Kubikmeter und Sackanzahl berechnen." },
+    ],
+
+    faqHeading: "Häufig gestellte Fragen",
+    faqs: [
+      {
+        question: "Was kostet eine Tonne Kies 2026?",
+        answer:
+          "Kies kostet 15 bis 40 EUR pro Tonne in 2026 für gängige Sorten. Schottertragschicht ist am günstigsten mit 12–22 EUR/Tonne. Schotter 16/32 kostet 15–30 EUR/Tonne. Zierkies kostet 25–45 EUR/Tonne. Granitgrus liegt bei 25–50 EUR/Tonne. Dekorsteine wie Flusskiesel kosten 40–120 EUR/Tonne. Preise variieren nach Region und Anbieter.",
+      },
+      {
+        question: "Wie viel Kies brauche ich für eine Einfahrt?",
+        answer:
+          "Eine Standard-Einfahrt (3,5 m breit, 15 m lang, 15 cm tief) benötigt ca. 8 Kubikmeter oder 14 Tonnen Kies. Für eine Doppeleinfahrt (7×15 m) brauchen Sie ca. 16 m³ oder 28 Tonnen. Verwenden Sie Schotter oder Schottertragschicht. Rechnen Sie 10 % für Verdichtung und Verschnitt hinzu. Die reinen Materialkosten liegen bei 200–600 EUR.",
+      },
+      {
+        question: "Was kostet ein Kubikmeter Kies?",
+        answer:
+          "Ein Kubikmeter Kies kostet 25 bis 60 EUR je nach Sorte. Schotter liegt bei 25–50 EUR/m³. Schottertragschicht kostet 20–35 EUR/m³. Zierkies kostet 40–75 EUR/m³. Dies sind Materialpreise — die Lieferung (50–150 EUR/Fahrt) kommt hinzu. Ein Kubikmeter deckt ca. 10 m² bei 10 cm Tiefe ab.",
+      },
+      {
+        question: "Was ist der günstigste Kies?",
+        answer:
+          "Schottertragschicht (0/32 mm, auch als Mineralbeton oder Frostschutzschicht bekannt) ist der günstigste Kies mit 12–22 EUR/Tonne. Sie enthält Feinanteil, der sich zu einer extrem festen Oberfläche verdichtet — ideal für Einfahrten und Stellplätze. Einfacher Schotter 16/32 ist die nächstgünstigere Option mit 15–30 EUR/Tonne. Recycling-Bauschutt ist teilweise noch günstiger.",
+      },
+      {
+        question: "Wie viel Kies brauche ich pro Quadratmeter?",
+        answer:
+          "Bei 10 cm Tiefe (Standard für die meisten Anwendungen) benötigen Sie ca. 0,10 m³ oder 0,18 Tonnen Kies pro Quadratmeter. Bei 5 cm Tiefe ca. 0,05 m³/m². Bei 15 cm Tiefe (Einfahrten) ca. 0,15 m³ oder 0,27 Tonnen/m². Mit Ihrer Gesamtfläche multiplizieren und 10 % Verschnitt addieren.",
+      },
+      {
+        question: "Ist eine Kieseinfahrt günstiger als Beton oder Asphalt?",
+        answer:
+          "Ja, deutlich. Eine Kieseinfahrt kostet 8–20 EUR/m² für Material (20–50 EUR/m² fertig verlegt), verglichen mit 60–120 EUR/m² für Beton und 40–80 EUR/m² für Asphalt. Eine 3,5×15 m Kieseinfahrt kostet 1.000–2.500 EUR fertig verlegt vs. 3.200–6.500 EUR für Beton. Allerdings braucht Kies mehr laufende Pflege und alle 2–3 Jahre eine Nachschüttung.",
+      },
     ],
   },
 };

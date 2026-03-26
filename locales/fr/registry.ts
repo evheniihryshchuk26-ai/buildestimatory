@@ -472,6 +472,122 @@ export const concreteStepsCalculator: CalculatorSEOContent = {
   ],
 };
 
+export const gravelCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "Cette estimation inclut un facteur de perte de 10 %. Le poids du gravier varie selon le type et l'humidité. La conversion de 1,5 tonne par mètre cube est une moyenne — le poids réel varie de 1,4 à 1,8 t/m³ selon le matériau. Confirmez toujours les quantités auprès de votre fournisseur avant de commander.",
+  howToUse: [
+    "Mesurez la longueur de la surface à couvrir en mètres.",
+    "Mesurez la largeur de la surface en mètres.",
+    "Saisissez l'épaisseur de gravier souhaitée en centimètres — 10 cm est standard pour la plupart des applications, 15 à 20 cm pour les allées carrossables.",
+    "Cliquez sur Calculer pour obtenir les mètres cubes et les tonnes avec un facteur de perte de 10 % intégré.",
+  ],
+  materialInfo:
+    "Le gravier est un granulat en vrac de fragments de roche utilisé pour les allées, les chemins piétons, le drainage, l'aménagement paysager et comme couche de fondation sous le béton et l'enrobé. Il existe dans une large gamme de granulométries et de types, chacun adapté à des applications différentes.\n\nLes granulométries les plus courantes en France sont : le gravillon 6/10 et 10/20 mm (standard pour allées et drainage), le concassé 0/31,5 mm ou 0/20 mm (tout-venant pour sous-couches compactées), et le gros gravier 20/40 mm ou 40/80 mm (pour drainage et couches antigel). Le gravier roulé 8/12 mm (galets arrondis) est populaire pour les allées piétonnes, les terrasses et les massifs décoratifs. Le concassé a des arêtes angulaires qui s'emboîtent et se compactent fermement, tandis que les galets roulés ont des surfaces lisses qui glissent sous les pieds et ne se compactent pas.\n\nLe gravier se vend en France au mètre cube ou à la tonne. Un mètre cube de gravier pèse environ 1,5 à 1,8 tonne selon le type de roche — le tout-venant est plus lourd à 1,8 t/m³, le gravier décoratif plus léger à 1,4 t/m³. La plupart des négoces vendent à la tonne avec livraison. Les prix courants vont de 20 à 50 € la tonne selon le type et la région. Les frais de livraison sont de 80 à 200 € par voyage pour des distances jusqu'à 30 km. Des fournisseurs comme Leroy Merlin, Point.P, Gedimat et les carrières locales proposent différents types de gravier.\n\nPour les allées carrossables, la méthode standard est un système à 3 couches : 15 cm de tout-venant (0/31,5 mm) comme couche de fondation, 10 cm de gravillon 10/20 mm comme couche intermédiaire, et 5 cm de gravillon 4/6 mm ou de concassé fin comme couche de roulement. Cette épaisseur totale de 30 cm assure un excellent drainage et une surface stable. Pour les remblais simples, les chemins piétons et les massifs, une seule couche de 8 à 10 cm suffit.",
+  nextSteps: [
+    { label: "Calculateur de gravier pour allée", href: "/calculators/foundation/driveway-gravel-calculator/" },
+    { label: "Calculateur de dalle béton", href: "/calculators/foundation/concrete-slab-calculator/" },
+    { label: "Calculateur de semelle de fondation", href: "/calculators/foundation/concrete-footing-calculator/" },
+  ],
+  installationTips: [
+    "Retirez toute la terre végétale et les matières organiques avant de poser le gravier — la matière organique se décompose et provoque des affaissements.",
+    "Posez un géotextile sur le sol compacté pour empêcher le gravier de se mélanger au sol en dessous.",
+    "Étalez le gravier en couches de 5 à 8 cm et compactez chaque couche à la plaque vibrante avant d'ajouter la suivante.",
+    "Donnez aux allées une légère pente transversale (2 à 3 %) pour que l'eau s'écoule vers les bords au lieu de stagner.",
+    "Utilisez des bordures de contention (acier, aluminium ou bordures béton) pour empêcher le gravier de migrer vers les zones adjacentes.",
+  ],
+  commonMistakes: [
+    "Utiliser des galets roulés pour les allées carrossables — ils ne se compactent pas et glissent sous le poids des pneus. Utilisez du concassé anguleux à la place.",
+    "Ne pas retirer la terre végétale — l'herbe et les racines sous le gravier se décomposeront et créeront des affaissements.",
+    "Sauter l'étape de compactage — le gravier non compacté se déplace et forme rapidement des ornières.",
+    "Appliquer le gravier trop fin — moins de 8 cm ne fournira pas une couverture ni un support suffisants et le sol apparaîtra à travers la pierre.",
+    "Ne pas tenir compte des minimums de livraison — la plupart des fournisseurs exigent une commande minimale de 5 à 10 tonnes pour la livraison.",
+  ],
+  faqs: [
+    {
+      question: "Combien de gravier me faut-il ?",
+      answer: "Multipliez la longueur par la largeur de votre projet (en mètres) pour obtenir la surface en m², puis multipliez par l'épaisseur (en mètres) pour obtenir les mètres cubes. Un mètre cube de gravier couvre environ 10 m² sur 10 cm d'épaisseur. Ajoutez 10 % pour le tassement, les pertes et les irrégularités du terrain. Exemple : une surface de 6×6 mètres sur 10 cm d'épaisseur nécessite environ 4 m³ (6 à 7 tonnes).",
+    },
+    {
+      question: "Combien pèse un mètre cube de gravier ?",
+      answer: "Un mètre cube de gravier pèse environ 1 500 à 1 800 kg (1,5 à 1,8 tonne). Le poids exact dépend du type de roche : le concassé standard pèse en moyenne 1,5 t/m³, le tout-venant est plus lourd à 1,8 t/m³, le gravier décoratif pèse environ 1,4 t/m³. Le gravier humide peut peser 10 à 15 % de plus que le sec.",
+    },
+    {
+      question: "Combien de tonnes de gravier me faut-il ?",
+      answer: "Calculez d'abord vos mètres cubes (longueur × largeur × épaisseur en mètres), puis multipliez par 1,5 à 1,8 selon le type de matériau. Exemple : une surface de 3×6 mètres sur 10 cm d'épaisseur donne 1,8 m³, soit environ 2,7 à 3,2 tonnes. Commandez toujours 10 % de plus pour le tassement et les pertes.",
+    },
+    {
+      question: "Quelle épaisseur de gravier faut-il ?",
+      answer: "L'épaisseur recommandée dépend de l'usage : 5 à 8 cm pour les chemins piétons et les massifs décoratifs, 10 cm pour les terrasses et le remblai général, 15 à 20 cm pour les allées carrossables (en plusieurs couches), et 25 à 30 cm pour les zones de circulation lourde. Compactez toujours chaque couche avant d'ajouter la suivante.",
+    },
+    {
+      question: "Combien coûte le gravier à la tonne ?",
+      answer: "Les prix du gravier varient de 20 à 50 € la tonne selon le type. Le tout-venant et le concassé standard sont les plus abordables à 20 à 30 € la tonne. Le gravillon décoratif coûte 30 à 50 € la tonne. Les galets et le gravier de marbre coûtent 50 à 120 € la tonne. Les frais de livraison ajoutent 80 à 200 € par voyage. Leroy Merlin, Point.P et les carrières locales proposent les meilleures options.",
+    },
+    {
+      question: "Combien de mètres cubes de gravier contient un camion ?",
+      answer: "Un camion-benne standard à 2 essieux contient 6 à 8 m³ (9 à 14 tonnes) de gravier. Un semi-remorque à benne contient 15 à 20 m³ (22 à 36 tonnes). Pour les petits projets, de nombreux fournisseurs proposent des livraisons partielles, ou vous pouvez transporter du gravier dans une remorque (environ 0,3 à 0,5 m³ par voyage).",
+    },
+  ],
+};
+
+export const drivewayGravelCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "Cette estimation inclut un facteur de perte de 10 %. Les estimations de coûts sont basées sur des moyennes régionales et varient considérablement selon la région, le fournisseur et la distance de livraison. Le poids du gravier varie selon le type et l'humidité. Demandez toujours des devis à des fournisseurs locaux avant de commander.",
+  howToUse: [
+    "Mesurez la longueur totale de votre allée en mètres.",
+    "Saisissez la largeur de l'allée — 3 à 3,5 mètres pour une voiture, 5,5 à 6,5 mètres pour une allée double.",
+    "Saisissez l'épaisseur de gravier — 15 cm est standard pour les allées, 20 à 25 cm pour la circulation de véhicules lourds.",
+    "Sélectionnez le type de gravier et cliquez sur Calculer pour obtenir les mètres cubes, tonnes et une estimation de coût.",
+  ],
+  materialInfo:
+    "Une allée en gravier est l'une des alternatives les plus économiques et pratiques au béton coulé ou à l'enrobé. Correctement réalisée avec les bons matériaux et une épaisseur suffisante, une allée en gravier peut durer 10 à 15 ans avec un entretien minimal.\n\nLa meilleure allée en gravier est construite en trois couches. La couche inférieure (15 cm) utilise du tout-venant 0/31,5 mm pour le drainage et la portance. La couche intermédiaire (10 cm) utilise du gravillon 10/20 mm comme transition. La couche supérieure (5 à 8 cm) utilise du concassé fin compactable 4/6 mm ou 2/6 mm qui s'emboîte pour former une surface de roulement ferme. Chaque couche doit être étalée et compactée séparément.\n\nLe concassé (gravillon 6/10 ou 10/14) est le gravier le plus populaire pour les allées car ses arêtes angulaires s'emboîtent lors du compactage, créant une surface stable. Le tout-venant (également appelé grave ou GNT 0/31,5) est un mélange de concassé et de fines qui se compacte en une surface extrêmement dure — c'est le choix privilégié pour les allées à fort trafic. Les galets roulés ont un bel aspect mais se déplacent sous les pneus et ne sont pas recommandés comme surface de roulement principale. Le gravier de granite se compacte bien et offre un aspect naturel.\n\nLes allées en gravier coûtent de 15 à 40 € par mètre carré posées, selon l'épaisseur et le matériau. Une allée typique de 3,5 × 15 mètres pour une voiture coûte de 800 à 2 000 € en matériaux seuls. L'installation professionnelle avec terrassement, géotextile et compactage ajoute 15 à 40 € par m². L'entretien annuel comprend le ratissage du gravier déplacé et l'ajout d'une couche de rechargement de 3 à 5 cm tous les 2 à 3 ans. Leroy Merlin, Point.P et les carrières locales fournissent les matériaux nécessaires.",
+  nextSteps: [
+    { label: "Calculateur de gravier", href: "/calculators/foundation/gravel-calculator/" },
+    { label: "Calculateur de dalle béton", href: "/calculators/foundation/concrete-slab-calculator/" },
+  ],
+  installationTips: [
+    "Terrassez l'allée avec une pente de 2 à 3 % en s'éloignant de la maison pour un bon drainage — l'eau stagnante sur le gravier crée des nids-de-poule.",
+    "Posez un géotextile sur le sol terrassé pour empêcher la pierre de se mélanger au sol en dessous.",
+    "Étalez et compactez chaque couche séparément — ne déversez pas tout le gravier d'un coup.",
+    "Utilisez une plaque vibrante ou un rouleau sur chaque couche pour maximiser la densité et la stabilité.",
+    "Installez des bordures (acier, aluminium ou traverses bois) des deux côtés pour empêcher la migration du gravier dans le jardin.",
+    "Bombez légèrement le centre de l'allée (3 à 5 cm) pour que l'eau s'écoule vers les deux côtés.",
+  ],
+  commonMistakes: [
+    "Utiliser des galets roulés comme surface de roulement — leur forme arrondie ne se compacte pas et les pierres sont projetées par les pneus.",
+    "Déverser le gravier directement sur la terre végétale sans terrassement — le sol organique se décompose et provoque des affaissements et un mélange de boue.",
+    "N'appliquer que 5 à 8 cm de gravier — c'est trop fin pour la circulation automobile et les ornières atteindront le sol rapidement.",
+    "Omettre la couche de géotextile — sans elle, le gravier s'enfonce dans le sol meuble en 1 à 2 ans et vous perdez la moitié de votre matériau.",
+    "Ne pas compacter entre les couches — le gravier en vrac se déplace et développe des ornières et des nids-de-poule en quelques semaines d'utilisation.",
+  ],
+  faqs: [
+    {
+      question: "Combien de gravier faut-il pour une allée ?",
+      answer: "Une allée standard pour une voiture (3,5 mètres de large, 15 mètres de long, 15 cm d'épaisseur) nécessite environ 8 m³ (12 à 14 tonnes) de gravier. Une allée double (6×15 mètres à 15 cm d'épaisseur) nécessite environ 14 m³ (21 à 25 tonnes). Ces quantités incluent un facteur de perte de 10 % pour le tassement et l'étalement.",
+    },
+    {
+      question: "Combien coûte une allée en gravier ?",
+      answer: "Les matériaux pour une allée en gravier coûtent de 15 à 40 € par mètre carré selon le type de gravier et l'épaisseur. Une allée de 3,5×15 mètres coûte de 800 à 2 000 € pour le gravier seul. L'installation professionnelle avec terrassement, géotextile et compactage coûte typiquement 15 à 40 € par m², portant le coût total installé entre 1 600 et 4 200 € pour une allée simple.",
+    },
+    {
+      question: "Quel est le meilleur gravier pour une allée ?",
+      answer: "Le concassé (gravillon 6/10 ou 10/14 mm) est le meilleur gravier polyvalent pour les allées car ses arêtes angulaires s'emboîtent lors du compactage. Le tout-venant (GNT 0/31,5) est encore mieux pour le trafic lourd — il contient des fines qui lient le granulat en une surface quasi-solide. Utilisez du gravillon 10/20 pour le corps et du tout-venant ou du concassé fin pour la couche de surface.",
+    },
+    {
+      question: "Quelle épaisseur de gravier pour une allée ?",
+      answer: "Une allée en gravier doit avoir au minimum 15 à 20 cm d'épaisseur pour les véhicules légers, mise en œuvre en 2 à 3 couches. Pour les véhicules lourds (camions, engins), utilisez 25 à 30 cm d'épaisseur totale. Chaque couche doit être compactée avant d'appliquer la suivante. Une couche fine de 5 à 8 cm formera des ornières jusqu'au sol en quelques mois.",
+    },
+    {
+      question: "Combien de temps dure une allée en gravier ?",
+      answer: "Une allée en gravier correctement réalisée dure 10 à 15 ans avant de nécessiter une rénovation majeure. L'entretien annuel comprend le ratissage du gravier déplacé et l'ajout d'une couche de rechargement de 3 à 5 cm tous les 2 à 3 ans. La couche de fondation peut durer indéfiniment si elle a été correctement réalisée avec géotextile et drainage.",
+    },
+    {
+      question: "Faut-il un géotextile sous une allée en gravier ?",
+      answer: "Oui, le géotextile est indispensable sous une allée en gravier. Sans géotextile, le gravier s'enfonce dans le sol meuble en 1 à 2 ans, et la terre remonte à travers la pierre en créant une surface boueuse. Utilisez un géotextile tissé de qualité professionnelle prévu pour la circulation automobile — pas le feutre mince vendu pour les massifs de jardin.",
+    },
+  ],
+};
+
 // ─── FLOOR FRAMING ──────────────────────────────────────────────────────────
 
 export const rimJoistCalculator: CalculatorSEOContent = {
@@ -2145,6 +2261,8 @@ export const registryFR: Record<string, Record<string, CalculatorSEOContent>> = 
     "concrete-footing-calculator": concreteFootingCalculator,
     "concrete-column-calculator": concreteColumnCalculator,
     "concrete-steps-calculator": concreteStepsCalculator,
+    "gravel-calculator": gravelCalculator,
+    "driveway-gravel-calculator": drivewayGravelCalculator,
   },
   "floor-framing": {
     "rim-joist-calculator": rimJoistCalculator,

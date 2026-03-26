@@ -87,6 +87,22 @@ export const categories: CategoryMeta[] = [
         category: "Cimentación",
         categorySlug: "foundation",
       },
+      {
+        slug: "gravel-calculator",
+        title: "Calculadora de Grava",
+        description:
+          "¿Cuánta grava necesito? Calculadora gratis para cualquier área — metros cúbicos, toneladas y estimación de costo con 10% de desperdicio.",
+        category: "Cimentación",
+        categorySlug: "foundation",
+      },
+      {
+        slug: "driveway-gravel-calculator",
+        title: "Calculadora de Grava para Cochera",
+        description:
+          "Calculadora de grava para cochera/entrada: Estima toneladas y costo por tipo — piedra triturada, gravilla, base hidráulica o granito descompuesto.",
+        category: "Cimentación",
+        categorySlug: "foundation",
+      },
     ],
   },
   {

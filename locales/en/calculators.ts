@@ -71,6 +71,22 @@ export const categories: CategoryMeta[] = [
         category: "Foundation",
         categorySlug: "foundation",
       },
+      {
+        slug: "gravel-calculator",
+        title: "Gravel Calculator",
+        description:
+          "Gravel calculator — free tool to estimate cubic yards & tons for any project. Enter dimensions for instant results with cost estimate.",
+        category: "Foundation",
+        categorySlug: "foundation",
+      },
+      {
+        slug: "driveway-gravel-calculator",
+        title: "Driveway Gravel Calculator",
+        description:
+          "Driveway gravel calculator — how much gravel for your driveway? Free tool for crushed stone, pea gravel & road base with cost per ton.",
+        category: "Foundation",
+        categorySlug: "foundation",
+      },
     ],
   },
   {

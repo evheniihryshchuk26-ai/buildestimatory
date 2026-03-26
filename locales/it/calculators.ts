@@ -71,6 +71,22 @@ export const categories: CategoryMeta[] = [
         category: "Fondazioni",
         categorySlug: "foundation",
       },
+      {
+        slug: "gravel-calculator",
+        title: "Calcolatore di Ghiaia",
+        description:
+          "Quanta ghiaia mi serve? Calcolatore gratuito per qualsiasi area \u2014 metri cubi, tonnellate e stima dei costi con il 10% di scarto.",
+        category: "Fondazioni",
+        categorySlug: "foundation",
+      },
+      {
+        slug: "driveway-gravel-calculator",
+        title: "Calcolatore Ghiaia per Vialetto",
+        description:
+          "Calcolatore ghiaia per vialetto d'ingresso: stimi tonnellate e costo per tipo \u2014 pietrisco, ghiaietto, stabilizzato o granito decomposto.",
+        category: "Fondazioni",
+        categorySlug: "foundation",
+      },
     ],
   },
   {

@@ -328,6 +328,122 @@ export const concreteStepsCalculator: CalculatorSEOContent = {
   ],
 };
 
+export const gravelCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "Questa stima include un fattore di scarto del 10%. Il peso della ghiaia varia in base al tipo e al contenuto di umidità. La conversione di 1,5 tonnellate per metro cubo è una media — il peso reale varia da 1,4 a 1,8 t/m³ a seconda del materiale. Confermare sempre le quantità con il fornitore prima di ordinare.",
+  howToUse: [
+    "Misurare la lunghezza dell'area da coprire in metri.",
+    "Misurare la larghezza dell'area in metri.",
+    "Inserire lo spessore desiderato di ghiaia in centimetri — 10 cm è lo standard per la maggior parte delle applicazioni, 15–20 cm per vialetti carrabili.",
+    "Cliccare Calcola per ottenere metri cubi e tonnellate con un fattore di scarto del 10% incluso.",
+  ],
+  materialInfo:
+    "La ghiaia è un aggregato sciolto di frammenti di roccia utilizzato per vialetti, percorsi pedonali, drenaggi, aree verdi e come sottofondo per platee in calcestruzzo e pavimentazioni. In Italia si distinguono diversi tipi di aggregato in base alla granulometria e all'impiego: ghiaia (aggregato naturale tondeggiante con pezzatura da 8 a 60 mm), pietrisco (aggregato di frantumazione con spigoli angolari), stabilizzato (misto di frantumazione con sabbia e fini che compatta saldamente) e tout-venant (misto cava non selezionato).\n\nI tipi più comuni reperibili presso i rivenditori italiani sono: pietrisco 20–40 mm (l'aggregato standard per sottofondi e drenaggi), ghiaietto 8–15 mm (ghiaia tondeggiante per vialetti pedonali e aiuole decorative), stabilizzato 0–30 mm (il materiale di sottofondo che compatta formando una superficie solida, equivalente al tout-venant selezionato) e graniglia decorativa (marmo di Carrara, porfido trentino, basalto, ciottoli di fiume) per giardini e aree di pregio.\n\nLa ghiaia si vende a tonnellata o a metro cubo. Un metro cubo di ghiaia pesa circa 1,5 tonnellate, ma il peso varia: lo stabilizzato è più pesante a circa 1,7–1,8 t/m³, il ghiaietto tondeggiante è più leggero a circa 1,4 t/m³. I prezzi tipici in Italia vanno da 15 a 40 €/tonnellata per aggregati standard presso cave e rivenditori come Bricoman, Leroy Merlin, o centri edili locali. I sacchi da 25 kg (big bag da 1 m³ o sfuso) costano di più al metro cubo ma evitano quantitativi minimi di consegna. La consegna con camion ribaltabile è l'opzione più economica per grandi quantità, con costi di 100–250 € per un carico da 10 tonnellate entro 30 km.\n\nPer i vialetti carrabili, l'approccio standard in Italia prevede due strati: 15 cm di stabilizzato compattato come sottofondo, ricoperti da 5–8 cm di ghiaia decorativa o pietrisco. Per percorsi pedonali, bordure e aiuole, uno strato singolo di 5–8 cm su telo pacciamante è sufficiente. Le cave locali offrono spesso i prezzi migliori per grandi quantità e dispongono di pietre regionali non disponibili presso le catene nazionali.",
+  nextSteps: [
+    { label: "Calcolatore Ghiaia Vialetto", href: "/calculators/foundation/driveway-gravel-calculator/" },
+    { label: "Calcolatore Platea in Calcestruzzo", href: "/calculators/foundation/concrete-slab-calculator/" },
+    { label: "Calcolatore Plinti di Fondazione", href: "/calculators/foundation/concrete-footing-calculator/" },
+  ],
+  installationTips: [
+    "Rimuovere tutto il terreno vegetale e il materiale organico prima di posare la ghiaia — la materia organica si decompone e provoca cedimenti.",
+    "Installare un telo geotessile resistente sul sottofondo compattato per impedire alla ghiaia di mescolarsi con il terreno sottostante.",
+    "Stendere la ghiaia a strati di 5–8 cm e compattare ogni strato con una piastra vibrante prima di aggiungere il successivo.",
+    "Assicurarsi che la superficie finita abbia una leggera pendenza (minimo 1–2%) per far defluire l'acqua piovana.",
+    "Utilizzare cordoli in metallo, legno o calcestruzzo per contenere la ghiaia e impedirne la migrazione nelle aree adiacenti.",
+  ],
+  commonMistakes: [
+    "Usare ghiaietto tondeggiante per vialetti carrabili — non compatta e si sposta sotto il peso dei pneumatici. Utilizzare pietrisco angolare o stabilizzato.",
+    "Non rimuovere il terreno vegetale — erba e radici sotto la ghiaia si decompongono e creano avvallamenti.",
+    "Saltare la fase di compattazione — l'aggregato non compattato si sposta e forma solchi rapidamente.",
+    "Applicare uno strato troppo sottile — meno di 8 cm non fornisce copertura adeguata e il sottofondo sarà visibile attraverso la pietra.",
+    "Non considerare i quantitativi minimi di consegna — la maggior parte delle cave richiede un ordine minimo di 5–10 tonnellate per la consegna con camion.",
+  ],
+  faqs: [
+    {
+      question: "Quanta ghiaia mi serve?",
+      answer: "Moltiplicare la lunghezza per la larghezza (in metri) per ottenere la superficie in m², poi moltiplicare per lo spessore (in metri) per ottenere i metri cubi. Un metro cubo copre circa 10 m² con uno spessore di 10 cm. Aggiungere il 10% per scarti, compattazione e irregolarità del terreno. Ad esempio, un'area di 6×6 m con 10 cm di spessore richiede circa 4 m³ (6 tonnellate).",
+    },
+    {
+      question: "Quanto pesa un metro cubo di ghiaia?",
+      answer: "Un metro cubo di ghiaia pesa circa 1.500 kg (1,5 tonnellate). Il peso esatto dipende dal tipo: lo stabilizzato è più pesante a circa 1,7–1,8 t/m³, il pietrisco standard pesa circa 1,5 t/m³ e il ghiaietto tondeggiante circa 1,4 t/m³. La ghiaia bagnata può pesare il 10–15% in più della ghiaia asciutta.",
+    },
+    {
+      question: "Quante tonnellate di ghiaia mi servono?",
+      answer: "Calcolare prima i metri cubi (lunghezza × larghezza × spessore in metri), poi moltiplicare per 1,5 per convertire in tonnellate. Ad esempio, un'area di 3×6 m con 10 cm di spessore corrisponde a 1,8 m³, ovvero circa 2,7 tonnellate. Ordinare sempre il 10% in più per compattazione e scarti.",
+    },
+    {
+      question: "Quale spessore di ghiaia serve?",
+      answer: "Lo spessore consigliato dipende dall'utilizzo: 5–8 cm per aiuole decorative e percorsi pedonali leggeri, 8–10 cm per patii e aree generiche, 15–20 cm per vialetti carrabili (con sottofondo in stabilizzato compattato), e 20–30 cm per aree commerciali ad alto traffico. Compattare ogni strato prima di aggiungere il successivo.",
+    },
+    {
+      question: "Quanto costa la ghiaia in Italia?",
+      answer: "I prezzi della ghiaia vanno da 15 a 40 €/tonnellata a seconda del tipo e della provenienza. Stabilizzato e pietrisco sono i più economici a 15–30 €/tonnellata dalle cave. Ghiaietto tondeggiante costa 25–45 €/tonnellata. Graniglia decorativa (marmo, porfido) va da 50 a 150 €/tonnellata. La consegna aggiunge 80–200 € a carico. Big bag da 1 m³ costano 40–100 € presso Bricoman, Leroy Merlin o centri edili locali.",
+    },
+    {
+      question: "Qual è la differenza tra stabilizzato e ghiaia?",
+      answer: "Lo stabilizzato (o tout-venant selezionato) è un misto di frantumazione con granulometria 0–30 mm che include sabbia e fini: compatta in una superficie molto dura e stabile ed è il materiale standard per sottofondi di vialetti, piazzali e sotto platee in calcestruzzo. La ghiaia è un aggregato mono-granulometrico (tondeggiante o angolare) usato come finitura superficiale. Per un vialetto carrabile servono entrambi: stabilizzato come sottofondo e ghiaia decorativa sopra.",
+    },
+  ],
+};
+
+export const drivewayGravelCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "Questa stima include un fattore di scarto del 10%. Le stime di costo si basano su medie italiane e variano significativamente per regione, fornitore e distanza di consegna. Il peso della ghiaia varia in base al tipo e al contenuto di umidità. Richiedere sempre preventivi ai fornitori locali prima di ordinare.",
+  howToUse: [
+    "Misurare la lunghezza totale del vialetto in metri.",
+    "Inserire la larghezza del vialetto — 3–3,5 m per un'auto singola, 5–6 m per un vialetto a doppia corsia.",
+    "Inserire lo spessore della ghiaia — 15 cm è lo standard per vialetti carrabili, 20 cm per traffico pesante.",
+    "Selezionare il tipo di ghiaia e cliccare Calcola per ottenere metri cubi, tonnellate e una stima dei costi.",
+  ],
+  materialInfo:
+    "Un vialetto in ghiaia è una delle alternative più economiche e pratiche alla pavimentazione in autobloccanti, asfalto o pietra naturale. Quando installato correttamente con i materiali adeguati e uno spessore sufficiente, un vialetto in ghiaia può durare 15–20 anni con manutenzione minima e non richiede permessi edilizi nella maggior parte dei comuni italiani.\n\nIl migliore vialetto in ghiaia si costruisce in due strati. Lo strato inferiore (10–15 cm) utilizza stabilizzato compattato (misto di frantumazione 0–30 mm), che fornisce drenaggio, stabilità e distribuzione dei carichi. Lo strato superiore (5–8 cm) utilizza ghiaia decorativa — pietrisco angolare, ghiaietto tondeggiante o graniglia — a seconda dell'estetica desiderata. Ogni strato deve essere steso e compattato separatamente con piastra vibrante o rullo.\n\nLo stabilizzato (tout-venant selezionato) è il materiale di sottofondo standard perché le sue particelle di diverse dimensioni si incastrano sotto compattazione, creando una superficie estremamente solida. Per la superficie di calpestio e transito, il pietrisco 15–25 mm è il più comune — i suoi spigoli angolari si incastrano sotto il peso dei veicoli. Il ghiaietto tondeggiante è esteticamente gradevole ma si sposta sotto i pneumatici e non è consigliato come superficie principale per il transito veicolare.\n\nIl costo di un vialetto in ghiaia è di 10–30 €/m² a seconda dello spessore e del materiale scelto. Un tipico vialetto per un'auto singola (3×10 m) costa 500–1.200 € per i soli materiali. L'installazione professionale con scavo, geotessile, sottofondo e compattazione aggiunge 20–50 €/m². La manutenzione annuale consiste nel rastrellare la ghiaia spostata nei solchi e nell'aggiungere uno strato di rabbocco di 3–5 cm ogni 3–5 anni. I fornitori includono cave locali, Bricoman, Leroy Merlin e centri edili regionali.",
+  nextSteps: [
+    { label: "Calcolatore Ghiaia", href: "/calculators/foundation/gravel-calculator/" },
+    { label: "Calcolatore Platea in Calcestruzzo", href: "/calculators/foundation/concrete-slab-calculator/" },
+  ],
+  installationTips: [
+    "Scavare a una profondità di almeno 20–25 cm sotto il livello finito per ospitare sottofondo e ghiaia superficiale.",
+    "Predisporre una pendenza minima dell'1–2% per il deflusso dell'acqua piovana — fondamentale per evitare ristagni e formazione di buche.",
+    "Installare un telo geotessile resistente sul sottofondo scavato per impedire all'aggregato di mescolarsi con il terreno sottostante.",
+    "Stendere e compattare lo stabilizzato in strati di 8 cm con piastra vibrante prima di aggiungere lo strato superficiale.",
+    "Installare cordoli in metallo, legno o calcestruzzo lungo entrambi i lati per impedire la migrazione della ghiaia nel prato adiacente.",
+    "Valutare una griglia stabilizzatrice alveolare per lo strato superficiale per ridurre lo spostamento della pietra e migliorare la percorribilità.",
+  ],
+  commonMistakes: [
+    "Usare ghiaietto tondeggiante come superficie di transito — la forma liscia non compatta e i sassi si disperdono sotto i pneumatici. Utilizzare pietrisco angolare.",
+    "Stendere la ghiaia direttamente sul terreno vegetale senza scavare — il suolo organico si decompone e provoca avvallamenti e fango.",
+    "Applicare solo 5–8 cm di aggregato — troppo sottile per il traffico veicolare, si formeranno solchi fino al sottofondo.",
+    "Saltare il telo geotessile — senza di esso, la ghiaia affonda nel terreno argilloso entro 1–2 anni e si perde metà del materiale.",
+    "Non compattare tra gli strati — lo stabilizzato sciolto cede in modo disomogeneo e sviluppa buche e avvallamenti entro poche settimane.",
+  ],
+  faqs: [
+    {
+      question: "Quanta ghiaia serve per un vialetto?",
+      answer: "Un vialetto per un'auto singola (3 m × 10 m con 15 cm di spessore) necessita di circa 5 m³ (7,5 tonnellate) di aggregato in totale — circa 3,5 m³ di stabilizzato e 1,5 m³ di ghiaia superficiale. Un vialetto a doppia corsia (6×10 m con 15 cm) necessita di circa 10 m³ (15 tonnellate). Queste quantità includono un fattore di scarto del 10%.",
+    },
+    {
+      question: "Quanto costa un vialetto in ghiaia in Italia?",
+      answer: "I materiali per un vialetto in ghiaia costano 10–30 €/m² a seconda del tipo di aggregato e dello spessore. Un vialetto 3×10 m costa 500–1.200 € per i materiali. L'installazione professionale con scavo, geotessile, sottofondo e compattazione costa tipicamente 30–60 €/m², portando il costo totale a 1.200–3.000 € per un vialetto singolo.",
+    },
+    {
+      question: "Qual è la ghiaia migliore per un vialetto in Italia?",
+      answer: "Il pietrisco angolare 15–25 mm è la migliore superficie per vialetti carrabili perché i suoi spigoli si incastrano sotto compattazione. Lo stabilizzato 0–30 mm è essenziale come sottofondo. Le graniglie decorative (porfido trentino, marmo di Carrara) sono ottime per estetica ma più costose. Evitare ghiaietto tondeggiante per superfici carrabili.",
+    },
+    {
+      question: "Quale spessore serve per un vialetto in ghiaia?",
+      answer: "Un vialetto in ghiaia dovrebbe avere 10–15 cm di stabilizzato compattato come sottofondo più 5–8 cm di ghiaia superficiale, per uno spessore totale di 15–23 cm. Per veicoli pesanti o uso commerciale, aumentare il sottofondo a 20 cm. Compattare sempre ogni strato prima di aggiungere il successivo.",
+    },
+    {
+      question: "Serve un permesso per un vialetto in ghiaia?",
+      answer: "Nella maggior parte dei comuni italiani, un vialetto in ghiaia non richiede permesso edilizio perché è una superficie permeabile che non altera la destinazione d'uso del suolo. Tuttavia, se il vialetto si trova in zona vincolata (paesaggistica, centro storico) potrebbe essere necessaria un'autorizzazione. Verificare sempre con il proprio comune le normative locali.",
+    },
+    {
+      question: "Quanto dura un vialetto in ghiaia?",
+      answer: "Un vialetto in ghiaia installato correttamente dura 15–20 anni prima di necessitare di un rifacimento completo. La manutenzione annuale consiste nel rastrellare la ghiaia spostata e nell'aggiungere uno strato di rabbocco di 3–5 cm ogni 3–5 anni. Il sottofondo in stabilizzato può durare indefinitamente se installato correttamente con geotessile e drenaggio adeguato.",
+    },
+  ],
+};
+
 // ─── STRUTTURA SOLAIO ───────────────────────────────────────────────────────
 
 export const rimJoistCalculator: CalculatorSEOContent = {
@@ -1956,6 +2072,8 @@ export const registryIT: Record<string, Record<string, CalculatorSEOContent>> = 
     "concrete-footing-calculator": concreteFootingCalculator,
     "concrete-column-calculator": concreteColumnCalculator,
     "concrete-steps-calculator": concreteStepsCalculator,
+    "gravel-calculator": gravelCalculator,
+    "driveway-gravel-calculator": drivewayGravelCalculator,
   },
   "floor-framing": {
     "rim-joist-calculator": rimJoistCalculator,

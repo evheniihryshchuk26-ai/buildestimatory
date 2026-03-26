@@ -23,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/guides/how-much-paint-do-i-need/`, lastModified, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/guides/lumber-prices-guide/`, lastModified, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/guides/composite-vs-wood-decking/`, lastModified, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/guides/gravel-cost-guide/`, lastModified, changeFrequency: "monthly", priority: 0.8 },
   ];
 
   const categoryPages: MetadataRoute.Sitemap = categories.map((cat) => ({

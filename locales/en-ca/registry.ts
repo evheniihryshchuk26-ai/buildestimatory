@@ -328,6 +328,122 @@ export const concreteStepsCalculator: CalculatorSEOContent = {
   ],
 };
 
+export const gravelCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "This estimate includes a 10% waste factor. Gravel weight varies by type and moisture content. The 1.5 tonnes per cubic metre (1.4 tons per cubic yard) conversion is an average — actual weight ranges from 1.3 to 1.5 tons per cubic yard depending on the material. Always confirm quantities with your supplier before ordering.",
+  howToUse: [
+    "Measure the length of the area you need to cover in feet.",
+    "Measure the width of the area in feet.",
+    "Enter the desired gravel depth in inches — 4 inches (100 mm) is standard for most applications, 6 to 8 inches for driveways.",
+    "Click Calculate to get cubic yards and tonnes with a built-in 10% waste factor.",
+  ],
+  materialInfo:
+    "Gravel is a loose aggregate of rock fragments used for driveways, walkways, drainage, landscaping, and as a sub-base beneath concrete and asphalt. In Canada, gravel is widely available from local quarries, Home Hardware, RONA, and building supply yards across every province.\n\nThe most common gravel sizes in Canadian construction are 3/4\" clear stone (19 mm, the standard drainage and driveway gravel), Granular A (a graded blend of crushed stone and fines that compacts firmly for sub-bases), and Granular B (a coarser base material used for fill and road beds). Pea gravel (3/8\" or 10 mm rounded stones) is popular for walkways, patios, and decorative beds. Crusher run (also called pit run or quarry process) is a blend of crushed stone and stone dust that compacts into an extremely hard surface — it is the preferred material for driveway sub-bases across Canada.\n\nGravel is sold by the cubic yard, by the tonne, or by the cubic metre depending on the supplier and province. One cubic yard of gravel weighs approximately 1.4 tons (2,800 lbs), or about 1.5 tonnes per cubic metre. Most Canadian suppliers sell by the tonne with delivery, and typical pricing ranges from CAD $25 to $60 per tonne depending on type and region. Delivery fees run CAD $75 to $200 per load for distances up to 30 km. Prices tend to be lower at local quarries than at retail building centres.\n\nFor driveways, the standard Canadian approach is a two-layer system: 150 to 200 mm (6 to 8 inches) of compacted Granular A or crusher run as a sub-base, topped with 50 to 100 mm (2 to 4 inches) of 3/4\" clear stone or decorative gravel. In regions with severe freeze-thaw cycles (most of Canada), adequate depth and proper drainage are critical to prevent frost heave and potholing. For simple fill, walkways, and landscaping beds, a single layer of 75 to 100 mm (3 to 4 inches) over a geotextile fabric is sufficient.",
+  nextSteps: [
+    { label: "Driveway Gravel Calculator", href: "/calculators/foundation/driveway-gravel-calculator/" },
+    { label: "Concrete Slab Calculator", href: "/calculators/foundation/concrete-slab-calculator/" },
+    { label: "Concrete Footing Calculator", href: "/calculators/foundation/concrete-footing-calculator/" },
+  ],
+  installationTips: [
+    "Remove all topsoil and organic material before laying gravel — organic matter decomposes and causes settling, especially after spring thaw.",
+    "Install geotextile landscape fabric over the compacted subgrade to prevent gravel from mixing with the soil below.",
+    "Spread gravel in 50 to 75 mm (2 to 3 inch) lifts and compact each layer with a plate compactor before adding the next.",
+    "Crown driveways and paths slightly (5 mm per 300 mm or 1/4 inch per foot) so water drains to the edges rather than pooling.",
+    "Use edge restraints (metal edging, timber borders, or concrete curbs) to keep gravel from migrating into adjacent areas.",
+  ],
+  commonMistakes: [
+    "Using rounded pea gravel for driveways — it does not compact and shifts under tire weight. Use angular crushed stone or Granular A instead.",
+    "Not removing organic topsoil — grass and roots under the gravel will decompose and create sinkholes after spring thaw.",
+    "Skipping the compaction step — uncompacted gravel shifts and develops ruts quickly, especially during freeze-thaw cycles.",
+    "Applying gravel too thin — less than 75 mm (3 inches) will not provide adequate coverage or support and you will see the subgrade through the stone.",
+    "Not accounting for delivery minimums — most Canadian quarries require a 5 to 10-tonne minimum order for delivery.",
+  ],
+  faqs: [
+    {
+      question: "How much gravel do I need?",
+      answer: "Multiply your project length by width (in feet) to get the square footage, then multiply by the depth (in feet) to get cubic feet. Divide by 27 to convert to cubic yards. One cubic yard covers about 80 square feet at 4 inches deep. Add 10% for waste, compaction, and uneven ground. For example, a 20×20 ft area at 4 inches deep needs about 5.5 cubic yards (7.7 tonnes).",
+    },
+    {
+      question: "How much does a cubic yard of gravel weigh?",
+      answer: "One cubic yard of gravel weighs approximately 2,800 lbs (1.4 tons or about 1.27 tonnes). The exact weight depends on the stone type: Granular A averages 1.5 tons per yard, crusher run is about 1.45 tons per yard, pea gravel weighs about 1.35 tons per yard, and 3/4\" clear stone weighs about 1.4 tons per yard. Wet gravel can weigh 10 to 15% more than dry.",
+    },
+    {
+      question: "How many tonnes of gravel do I need?",
+      answer: "Calculate your cubic yards first (length × width × depth in feet, divided by 27), then multiply by 1.27 to convert to metric tonnes. For example, a 10×20 ft area at 4 inches deep is 2.5 cubic yards, which is approximately 3.2 tonnes. Always order 10% extra to account for compaction and waste.",
+    },
+    {
+      question: "How deep should gravel be?",
+      answer: "The recommended depth depends on the application: 50 to 75 mm (2 to 3 inches) for walkways and decorative beds, 100 mm (4 inches) for patios and general fill, 150 to 200 mm (6 to 8 inches) for driveways (with compacted sub-base), and 250 to 300 mm (10 to 12 inches) for high-traffic or commercial areas. In cold regions, extra depth helps resist frost heave.",
+    },
+    {
+      question: "How much does gravel cost in Canada?",
+      answer: "Gravel prices range from CAD $25 to $60 per tonne depending on the type and region. Granular A and crusher run are the most affordable at CAD $20 to $40 per tonne from quarries. Pea gravel costs CAD $35 to $55 per tonne. Decorative stone runs CAD $50 to $100 per tonne. Delivery fees add CAD $75 to $200 per load. Bulk orders from local quarries offer the best value — retail bags from Home Hardware or RONA cost significantly more per tonne.",
+    },
+    {
+      question: "What is the difference between Granular A and crusher run?",
+      answer: "Granular A is an Ontario Ministry of Transportation specification for a well-graded crushed stone aggregate with specific particle size requirements, used as a sub-base for roads, driveways, and beneath concrete. Crusher run (also called quarry process or pit run) is a similar blend of crushed stone and fines but without the strict grading requirements. Both compact firmly and are excellent sub-base materials. The terminology varies by province — in western Canada, 'road crush' or '3/4 minus' are equivalent products.",
+    },
+  ],
+};
+
+export const drivewayGravelCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "This estimate includes a 10% waste factor. Cost estimates are based on Canadian averages and vary significantly by province, supplier, and delivery distance. Gravel weight varies by type and moisture content. Always get quotes from local suppliers before ordering.",
+  howToUse: [
+    "Measure the total length of your driveway in feet.",
+    "Enter the driveway width — 10 to 12 feet (3 to 3.5 m) for a single car, 20 to 24 feet (6 to 7 m) for a double-wide driveway.",
+    "Enter the gravel depth — 6 inches (150 mm) is standard for driveways, 8 to 10 inches for heavy vehicle traffic.",
+    "Select your gravel type and click Calculate for cubic yards, tonnes, and an estimated cost range.",
+  ],
+  materialInfo:
+    "A gravel driveway is one of the most affordable and practical driveway surfaces across Canada, well suited to the country's extreme climate and long freeze-thaw seasons. When properly installed with the correct materials and adequate depth, a Canadian gravel driveway can last 10 to 15 years with routine maintenance.\n\nThe best gravel driveway in Canada is built in two layers. The bottom layer (150 to 200 mm or 6 to 8 inches) uses compacted Granular A, crusher run, or equivalent provincial specification aggregate. This sub-base provides drainage, load distribution, and stability through freeze-thaw cycles. The top layer (50 to 100 mm or 2 to 4 inches) uses 3/4\" clear stone, decorative gravel, or self-compacting aggregate. Each layer must be spread and compacted separately using a plate compactor or roller.\n\nGranular A and crusher run are the most popular sub-base materials because their angular edges and graded particle sizes lock together under compaction, creating a stable foundation. In western Canada, '3/4 minus' or 'road crush' serve the same purpose. For the driving surface, 3/4\" clear stone is the standard — its angular edges interlock under tire pressure. Pea gravel looks attractive but shifts under tires and is not recommended as a primary driveway surface.\n\nDriveway gravel costs CAD $3 to $10 per square foot installed, depending on depth and material. A typical 3.5×15 m (12×50 ft) single-car driveway costs CAD $800 to $2,500 for materials only. Professional installation with excavation, grading, fabric, and compaction adds CAD $5 to $15 per square foot. Annual maintenance includes grading displaced stone back into ruts (especially after spring thaw) and adding a 25 to 50 mm (1 to 2 inch) top-up layer every 2 to 3 years. In snowy regions, use a gravel-setting snow plough blade to avoid pushing gravel off the driveway during winter clearing.",
+  nextSteps: [
+    { label: "Gravel Calculator", href: "/calculators/foundation/gravel-calculator/" },
+    { label: "Concrete Slab Calculator", href: "/calculators/foundation/concrete-slab-calculator/" },
+  ],
+  installationTips: [
+    "Grade the driveway with a 2 to 3% slope away from the house and garage for proper drainage — water pooling on gravel creates potholes, and freeze-thaw makes them worse.",
+    "Install geotextile landscape fabric over the graded subgrade to prevent stone from mixing with the soil below — essential in Canadian clay soils.",
+    "Spread and compact each layer separately — do not dump all the gravel at once.",
+    "Use a plate compactor or roller on each lift to maximise density and stability.",
+    "Install border edging (steel, aluminum, or timber) along both sides to prevent gravel migration into the yard.",
+    "Crown the driveway centre slightly higher (25 to 50 mm) so water sheds to both edges.",
+  ],
+  commonMistakes: [
+    "Using pea gravel as the driving surface — its rounded shape does not compact and stones scatter under tires.",
+    "Dumping gravel directly on topsoil without grading — organic soil decomposes and causes sinkholes, especially after spring thaw.",
+    "Applying only 50 to 75 mm (2 to 3 inches) of gravel — this is too thin for vehicle traffic and will rut through to the subgrade quickly.",
+    "Skipping the fabric layer — without it, gravel sinks into soft clay soil within 1 to 2 years and you lose half your stone.",
+    "Not compacting between layers — loose gravel shifts and develops ruts and potholes within weeks, especially during freeze-thaw cycles.",
+  ],
+  faqs: [
+    {
+      question: "How much gravel do I need for a driveway?",
+      answer: "A standard single-car driveway (12 ft wide by 50 ft long at 6 inches deep) needs about 12 cubic yards (15 tonnes) of gravel. A double-wide driveway (24×50 ft at 6 inches deep) needs about 24 cubic yards (30 tonnes). These amounts include a 10% waste factor for compaction and spreading.",
+    },
+    {
+      question: "How much does a gravel driveway cost in Canada?",
+      answer: "Materials for a gravel driveway cost CAD $3 to $10 per square foot depending on the gravel type and depth. A 12×50 ft driveway costs CAD $800 to $2,500 for gravel alone. Professional installation with grading, fabric, and compaction typically costs CAD $5 to $15 per square foot, putting the total installed cost at CAD $3,000 to $9,000 for a single-car driveway. Prices vary significantly by province and distance from quarry.",
+    },
+    {
+      question: "What is the best gravel for a driveway in Canada?",
+      answer: "Granular A or crusher run is the best sub-base material because its graded particle sizes compact firmly. For the driving surface, 3/4\" clear stone is the standard — its angular edges interlock under traffic. In western Canada, 'road crush' or '3/4 minus' are equivalent products. Self-compacting aggregates are gaining popularity for a firmer surface.",
+    },
+    {
+      question: "How deep should gravel be for a driveway in Canada?",
+      answer: "A gravel driveway should be 150 to 200 mm (6 to 8 inches) deep minimum, applied in 2 layers. For heavy vehicles (trucks, RVs, equipment), use 250 to 300 mm (10 to 12 inches) total depth. The extra depth is important in Canadian climates to resist frost heave. Each layer should be compacted before the next is applied.",
+    },
+    {
+      question: "How long does a gravel driveway last in Canada?",
+      answer: "A properly installed gravel driveway lasts 10 to 15 years before needing a major refresh. Canadian winters are harder on gravel driveways than mild climates — annual maintenance includes raking displaced stone back into low spots after spring thaw and adding a 25 to 50 mm (1 to 2 inch) top-up layer every 2 to 3 years. The sub-base layer can last indefinitely if properly installed.",
+    },
+    {
+      question: "Can I plough snow on a gravel driveway?",
+      answer: "Yes, but adjust your plough blade height to avoid scraping gravel off the driveway. Set the blade 25 mm (1 inch) above the surface, or use a rubber-edged blade designed for gravel surfaces. Some homeowners install gravel grids (cellular confinement systems) to lock the surface stone in place, making snow removal easier. In spring, rake displaced gravel back from the edges where the plough pushed it.",
+    },
+  ],
+};
+
 // ─── FLOOR FRAMING ──────────────────────────────────────────────────────────
 
 export const floorJoistCalculator: CalculatorSEOContent = {

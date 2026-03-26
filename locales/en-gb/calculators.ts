@@ -15,6 +15,8 @@ export const categories: CategoryMeta[] = [
       { slug: "concrete-footing-calculator", title: "Concrete Footing Calculator", description: "Concrete footing calculator: Estimate cubic metres for continuous & spread footings. Free tool for foundation walls \u2014 includes waste factor.", category: "Foundation", categorySlug: "foundation" },
       { slug: "concrete-column-calculator", title: "Concrete Column Calculator", description: "How much concrete for column piers? Free column calculator for 200 mm, 250 mm & 300 mm diameter piers \u2014 gives cubic metres per column and total.", category: "Foundation", categorySlug: "foundation" },
       { slug: "concrete-steps-calculator", title: "Concrete Steps Calculator", description: "Concrete steps calculator: How many cubic metres for stairs? Free tool \u2014 enter width, rise, run & step count for instant estimate.", category: "Foundation", categorySlug: "foundation" },
+      { slug: "gravel-calculator", title: "Gravel Calculator", description: "How much gravel do I need? Free calculator for any area \u2014 cubic metres, tonnes, and cost estimate with 10% wastage factor.", category: "Foundation", categorySlug: "foundation" },
+      { slug: "driveway-gravel-calculator", title: "Driveway Gravel Calculator", description: "Driveway gravel calculator: Estimate tonnes and cost by type \u2014 crushed stone, pea gravel, MOT Type 1, or decomposed granite with delivery.", category: "Foundation", categorySlug: "foundation" },
     ],
   },
   {

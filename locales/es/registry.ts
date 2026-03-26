@@ -489,6 +489,122 @@ export const concreteStepsCalculator: CalculatorSEOContent = {
   ],
 };
 
+export const gravelCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "Esta estimación incluye un 10% de factor de desperdicio. El peso de la grava varía según el tipo y la humedad. La conversión de 1,5 toneladas por metro cúbico es un promedio — el peso real varía entre 1,4 y 1,7 toneladas por m³ dependiendo del material. Siempre confirma las cantidades con tu proveedor antes de ordenar.",
+  howToUse: [
+    "Mide el largo del área que necesitas cubrir en metros.",
+    "Mide el ancho del área en metros.",
+    "Ingresa la profundidad deseada de la grava en centímetros — 10 cm es estándar para la mayoría de aplicaciones, 15 a 20 cm para entradas vehiculares.",
+    "Haz clic en Calcular para obtener metros cúbicos y toneladas con un factor de desperdicio del 10% incluido.",
+  ],
+  materialInfo:
+    "La grava es un agregado suelto de fragmentos de roca utilizado para entradas vehiculares, andadores, drenajes, jardinería y como base debajo de concreto y asfalto. Viene en una amplia variedad de tamaños y tipos, cada uno adecuado para diferentes aplicaciones.\n\nLos tamaños de grava más comunes en Latinoamérica son: grava de 3/4 de pulgada (19 mm, la estándar para entradas y drenaje), grava triturada de 1/2 pulgada (13 mm, para bases compactadas), y piedra bola de 2 a 4 pulgadas (50-100 mm, para drenaje y control de erosión). El gravín o grava fina (10 mm, piedras redondeadas) es popular para andadores, patios y jardineras decorativas. La piedra triturada tiene bordes angulares que se entrelazan y compactan firmemente, mientras que la piedra de río tiene bordes redondeados que se desplazan al caminar y no compactan.\n\nLa grava se vende por metro cúbico o por tonelada. Un metro cúbico de grava pesa aproximadamente 1,5 toneladas (1.500 kg), aunque esto varía según el tipo de piedra — la base compactada es más pesada con 1,7 toneladas por m³, mientras que el gravín es más ligero con 1,4 toneladas por m³. La mayoría de los proveedores venden por metro cúbico o por viaje de camión. Los precios típicos en Latinoamérica van de $200 a $600 MXN por metro cúbico dependiendo del tipo y la región. Los costos de flete varían de $800 a $2,500 MXN por viaje para distancias de hasta 30 km. Proveedores como materiales para construcción locales, Construrama o Home Depot ofrecen diferentes tipos de grava.\n\nPara entradas vehiculares, el enfoque estándar es un sistema de 3 capas: 10 cm de piedra grande como base, 10 cm de grava de 3/4 como capa intermedia, y 5 cm de grava fina o gravilla como superficie. Esta profundidad total de 25 cm proporciona excelente drenaje y una superficie estable. Para rellenos simples, andadores y jardineras, una sola capa de 8 a 10 cm es suficiente.",
+  nextSteps: [
+    { label: "Calculadora de Grava para Entrada Vehicular", href: "/calculators/foundation/driveway-gravel-calculator/" },
+    { label: "Calculadora de Losa de Concreto", href: "/calculators/foundation/concrete-slab-calculator/" },
+    { label: "Calculadora de Zapata de Concreto", href: "/calculators/foundation/concrete-footing-calculator/" },
+  ],
+  installationTips: [
+    "Retira toda la tierra vegetal y material orgánico antes de colocar grava — la materia orgánica se descompone y causa asentamientos.",
+    "Instala geotextil sobre el terreno compactado para evitar que la grava se mezcle con el suelo inferior.",
+    "Esparce la grava en capas de 5 a 8 cm y compacta cada capa con una placa vibratoria antes de agregar la siguiente.",
+    "Corona las entradas y andadores ligeramente (1 cm por cada 40 cm) para que el agua drene hacia los bordes en lugar de estancarse.",
+    "Usa bordillos de contención (bordillo de concreto, guarnición metálica o madera tratada) para evitar que la grava migre hacia áreas adyacentes.",
+  ],
+  commonMistakes: [
+    "Usar gravín redondeado para entradas vehiculares — no compacta y se desplaza bajo el peso de los vehículos. Usa piedra triturada angular en su lugar.",
+    "No retirar la tierra vegetal orgánica — el pasto y las raíces debajo de la grava se descompondrán y crearán hundimientos.",
+    "Saltarse el paso de compactación — la grava sin compactar se desplaza y desarrolla surcos rápidamente.",
+    "Aplicar grava muy delgada — menos de 8 cm no proporcionará cobertura ni soporte adecuados y se verá el terreno a través de la piedra.",
+    "No considerar los mínimos de entrega — la mayoría de los proveedores requieren un pedido mínimo de 5 a 7 m³ para entrega.",
+  ],
+  faqs: [
+    {
+      question: "¿Cuánta grava necesito?",
+      answer: "Multiplica el largo por el ancho de tu proyecto (en metros) para obtener los metros cuadrados, luego multiplica por la profundidad (en metros) para obtener metros cúbicos. Un metro cúbico de grava cubre aproximadamente 10 m² a 10 cm de profundidad. Agrega un 10% por desperdicio, compactación y terreno irregular. Por ejemplo, un área de 6×6 metros a 10 cm de profundidad necesita aproximadamente 4 m³ (6 toneladas).",
+    },
+    {
+      question: "¿Cuánto pesa un metro cúbico de grava?",
+      answer: "Un metro cúbico de grava pesa aproximadamente 1.500 kg (1,5 toneladas). El peso exacto depende del tipo de piedra: la piedra triturada promedia 1,5 toneladas por m³, la base compactada es más pesada con 1,7 toneladas por m³, el gravín pesa alrededor de 1,4 toneladas por m³, y la piedra volcánica (tezontle) pesa apenas 0,8 toneladas por m³. La grava húmeda puede pesar 10 a 15% más que la seca.",
+    },
+    {
+      question: "¿Cuántas toneladas de grava necesito?",
+      answer: "Calcula primero tus metros cúbicos (largo × ancho × profundidad en metros), luego multiplica por 1,5 para convertir a toneladas. Por ejemplo, un área de 3×6 metros a 10 cm de profundidad son 1,8 m³, que equivalen a 2,7 toneladas. Siempre ordena un 10% extra para compensar compactación y desperdicio.",
+    },
+    {
+      question: "¿Qué profundidad debe tener la grava?",
+      answer: "La profundidad recomendada depende de la aplicación: 5 a 8 cm para andadores y jardineras decorativas, 10 cm para patios y relleno general, 15 a 20 cm para entradas vehiculares (aplicada en múltiples capas), y 25 a 30 cm para áreas de tráfico pesado comercial. Siempre compacta cada capa antes de agregar la siguiente para mejores resultados.",
+    },
+    {
+      question: "¿Cuánto cuesta la grava por metro cúbico?",
+      answer: "Los precios de la grava varían de $200 a $600 MXN por metro cúbico dependiendo del tipo. La base compactada y la piedra triturada son las más económicas a $200-$400 MXN por m³. El gravín cuesta $350-$600 MXN por m³. La piedra de río decorativa cuesta $500-$900 MXN por m³. Los costos de flete agregan $800-$2,500 MXN por viaje. Proveedores como Construrama y distribuidores locales ofrecen las mejores opciones.",
+    },
+    {
+      question: "¿Cuántos metros cúbicos de grava caben en un camión de volteo?",
+      answer: "Un camión de volteo estándar de 3 ejes carga de 7 a 8 m³ (10 a 12 toneladas) de grava. Un tráiler de volteo de doble eje carga de 12 a 14 m³ (18 a 21 toneladas). Para proyectos pequeños, muchos proveedores ofrecen entregas parciales o puedes transportar grava en una camioneta (aproximadamente 0,5 m³ por viaje).",
+    },
+  ],
+};
+
+export const drivewayGravelCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "Esta estimación incluye un 10% de factor de desperdicio. Los costos estimados se basan en promedios regionales y varían significativamente según la región, el proveedor y la distancia de entrega. El peso de la grava varía según el tipo y la humedad. Siempre solicita cotizaciones a proveedores locales antes de ordenar.",
+  howToUse: [
+    "Mide el largo total de tu entrada vehicular en metros.",
+    "Ingresa el ancho de la entrada — 3 a 3,5 metros para un solo auto, 6 a 7 metros para doble ancho.",
+    "Ingresa la profundidad de grava — 15 cm es estándar para entradas vehiculares, 20 a 25 cm para tráfico de vehículos pesados.",
+    "Selecciona el tipo de grava y haz clic en Calcular para obtener metros cúbicos, toneladas y un rango de costo estimado.",
+  ],
+  materialInfo:
+    "Una entrada vehicular de grava es una de las alternativas más económicas y prácticas al concreto colado o al asfalto. Cuando se instala correctamente con los materiales adecuados y profundidad suficiente, una entrada de grava puede durar de 10 a 15 años con mantenimiento mínimo.\n\nLa mejor entrada vehicular de grava se construye en tres capas. La capa inferior (10 cm) usa piedra grande de 40 a 75 mm para drenaje y estabilidad. La capa intermedia (10 cm) usa grava triturada de 19 mm como transición. La capa superior (5 a 10 cm) usa grava fina compactable de 10 a 13 mm que se entrelaza para formar una superficie de rodamiento firme. Cada capa debe esparcirse y compactarse por separado.\n\nLa piedra triturada (grava de 3/4 o gravilla) es la grava más popular para entradas porque sus bordes angulares se entrelazan bajo compactación, creando una superficie estable. La base hidráulica (también llamada base compactada o subbase) es una mezcla de piedra triturada y polvo de piedra que compacta en una superficie extremadamente dura — es la opción preferida para entradas de tráfico pesado. El gravín se ve atractivo pero se desplaza bajo las llantas y no se recomienda como superficie principal de rodamiento. La grava de río compacta bien y proporciona una apariencia natural.\n\nLas entradas de grava cuestan de $150 a $350 MXN por metro cuadrado instaladas, dependiendo de la profundidad y el material. Una entrada vehicular típica de 3,5 × 15 metros para un solo auto cuesta de $8,000 a $18,000 MXN solo en materiales. La instalación profesional con nivelación, geotextil y compactación agrega de $200 a $500 MXN por m². El mantenimiento anual incluye rastrillar la piedra desplazada de vuelta a los surcos y agregar una capa de recarga de 3 a 5 cm cada 2 a 3 años. Proveedores como Construrama, materiales locales y Home Depot pueden suministrar los materiales necesarios.",
+  nextSteps: [
+    { label: "Calculadora de Grava", href: "/calculators/foundation/gravel-calculator/" },
+    { label: "Calculadora de Losa de Concreto", href: "/calculators/foundation/concrete-slab-calculator/" },
+  ],
+  installationTips: [
+    "Nivela la entrada con una pendiente del 2 al 3% alejándose de la casa para un drenaje adecuado — el agua estancada sobre grava crea baches.",
+    "Instala geotextil sobre el terreno nivelado para evitar que la piedra se mezcle con el suelo inferior.",
+    "Esparce y compacta cada capa por separado — no viertas toda la grava de una vez.",
+    "Usa una placa vibratoria o rodillo sobre cada capa para maximizar la densidad y estabilidad.",
+    "Instala bordillos de contención (acero, aluminio o madera tratada) a ambos lados para evitar que la grava migre hacia el jardín.",
+    "Corona el centro de la entrada ligeramente más alto (3 a 5 cm) para que el agua escurra hacia ambos lados.",
+  ],
+  commonMistakes: [
+    "Usar gravín como superficie de rodamiento — su forma redondeada no compacta y las piedras se dispersan bajo las llantas.",
+    "Colocar grava directamente sobre tierra vegetal sin nivelar — el suelo orgánico se descompone y causa hundimientos y mezcla de lodo.",
+    "Aplicar solo 5 a 8 cm de grava — esto es demasiado delgado para tráfico vehicular y se formarán surcos hasta el terreno rápidamente.",
+    "Saltarse la capa de geotextil — sin ella, la grava se hunde en suelo blando dentro de 1 a 2 años y pierdes la mitad de tu piedra.",
+    "No compactar entre capas — la grava suelta se desplaza y desarrolla surcos y baches dentro de semanas de uso.",
+  ],
+  faqs: [
+    {
+      question: "¿Cuánta grava necesito para una entrada vehicular?",
+      answer: "Una entrada vehicular estándar para un auto (3,5 metros de ancho por 15 metros de largo a 15 cm de profundidad) necesita aproximadamente 8 m³ (12 toneladas) de grava. Una entrada doble (7×15 metros a 15 cm de profundidad) necesita aproximadamente 16 m³ (24 toneladas). Estas cantidades incluyen un 10% de desperdicio por compactación y esparcido.",
+    },
+    {
+      question: "¿Cuánto cuesta una entrada vehicular de grava?",
+      answer: "Los materiales para una entrada de grava cuestan de $150 a $350 MXN por metro cuadrado dependiendo del tipo de grava y la profundidad. Una entrada de 3,5×15 metros cuesta de $8,000 a $18,000 MXN solo en grava. La instalación profesional con nivelación, geotextil y compactación típicamente cuesta de $200 a $500 MXN por m², poniendo el costo total instalado entre $18,000 y $45,000 MXN para una entrada de un solo auto.",
+    },
+    {
+      question: "¿Cuál es la mejor grava para una entrada vehicular?",
+      answer: "La piedra triturada (grava de 3/4 o gravilla) es la mejor grava general para entradas porque sus bordes angulares se entrelazan al compactarse. La base hidráulica (base compactada) es aún mejor para tráfico pesado — contiene polvo de piedra que une el agregado en una superficie casi sólida. Usa grava triturada para el cuerpo principal y base compactada para la capa superior.",
+    },
+    {
+      question: "¿Qué profundidad debe tener la grava para una entrada vehicular?",
+      answer: "Una entrada de grava debe tener mínimo 15 a 20 cm de profundidad para vehículos de pasajeros, aplicada en 2 a 3 capas. Para vehículos pesados (camiones, maquinaria), usa 25 a 30 cm de profundidad total. Cada capa debe compactarse antes de aplicar la siguiente. Una capa delgada de 5 a 8 cm formará surcos hasta el terreno en meses.",
+    },
+    {
+      question: "¿Cuánto dura una entrada vehicular de grava?",
+      answer: "Una entrada de grava correctamente instalada dura de 10 a 15 años antes de necesitar una renovación mayor. El mantenimiento anual incluye rastrillar la piedra desplazada de vuelta a los puntos bajos y agregar una capa de recarga de 3 a 5 cm cada 2 a 3 años. La capa base puede durar indefinidamente si se instaló correctamente con geotextil y drenaje.",
+    },
+    {
+      question: "¿Necesito geotextil debajo de una entrada de grava?",
+      answer: "Sí, el geotextil es esencial debajo de una entrada de grava. Sin él, la grava se hunde en suelo blando dentro de 1 a 2 años, y el suelo sube a través de la piedra creando un lodazal. Usa geotextil tejido de grado comercial, no la tela delgada de jardinería que se vende para macetas.",
+    },
+  ],
+};
+
 // ─── FLOOR FRAMING ───────────────────────────────────────────────────────────
 
 export const rimJoistCalculator: CalculatorSEOContent = {
@@ -2792,6 +2908,8 @@ export const registryES: Record<string, Record<string, CalculatorSEOContent>> = 
     "concrete-footing-calculator": concreteFootingCalculator,
     "concrete-column-calculator": concreteColumnCalculator,
     "concrete-steps-calculator": concreteStepsCalculator,
+    "gravel-calculator": gravelCalculator,
+    "driveway-gravel-calculator": drivewayGravelCalculator,
   },
   "floor-framing": {
     "rim-joist-calculator": rimJoistCalculator,

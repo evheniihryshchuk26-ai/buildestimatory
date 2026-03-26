@@ -59,6 +59,12 @@ const guides: GuidesTranslations = {
           "Deck composite vs madera comparado: costo, durabilidad, mantenimiento, apariencia y vida útil. Aprende qué material es mejor para tu proyecto y clima.",
         href: "/guides/composite-vs-wood-decking",
       },
+      {
+        title: "¿Cuánto Cuesta la Grava? Guía de Precios 2026",
+        description:
+          "La grava cuesta $300–$900 MXN por tonelada. Guía completa de precios para cocheras, patios, andadores, drenaje y jardinería con costos de envío y cómo calcular la cantidad.",
+        href: "/guides/gravel-cost-guide",
+      },
     ],
   },
 
@@ -1336,6 +1342,130 @@ const guides: GuidesTranslations = {
         question: "¿Puedo combinar composite y madera en el mismo deck?",
         answer:
           "Sí, muchos constructores usan una estructura de madera tratada (postes, trabes, viguetas) con tablas composite y barandal encima. Este es el enfoque estándar ya que las tablas composite están diseñadas como superficie, no como miembros estructurales. La estructura de madera tratada proporciona el soporte estructural a menor costo, mientras que la superficie composite brinda los beneficios de bajo mantenimiento donde ves y tocas el deck.",
+      },
+    ],
+  },
+
+  gravelCost: {
+    title: "¿Cuánto Cuesta la Grava? Guía de Precios 2026",
+    metaDescription:
+      "La grava cuesta $300–$900 MXN por tonelada, $400–$1,200 MXN por metro cúbico en 2026. Guía completa de precios: piedra triturada, gravilla, base hidráulica, granito descompuesto, piedra de río. Incluye costos de cocheras, patios, andadores, drenaje, jardinería, flete y cómo calcular la cantidad.",
+
+    heroTitle: "¿Cuánto Cuesta la Grava?",
+    heroSubtitle: "Guía de Precios 2026",
+    heroDescription:
+      "Desglose completo de precios de grava por tipo, proyecto y región en Latinoamérica. Cubre piedra triturada, gravilla, base hidráulica, granito descompuesto y piedra de río con costos de envío, pedidos mínimos y consejos para ahorrar.",
+
+    quickAnswerHeading: "Respuesta Rápida",
+    quickAnswerText:
+      "La grava cuesta $300 a $900 MXN por tonelada o $400 a $1,200 MXN por metro cúbico en 2026, dependiendo del tipo y tu región. La base hidráulica y la piedra triturada son las más económicas a $300–$600 MXN por tonelada. La gravilla cuesta $400–$800 MXN por tonelada. La piedra decorativa como la piedra de río cuesta $800–$2,500 MXN por tonelada. El flete agrega $500–$1,500 MXN por viaje para distancias hasta 30 km, y la mayoría de los proveedores requieren un pedido mínimo de 5 a 10 toneladas.",
+
+    gravelTypesHeading: "Tipos de Grava y Precios",
+    gravelTypesIntro:
+      "No toda la grava es igual. Cada tipo tiene diferente peso, características de compactación y precio. Estos son los tipos más comunes y sus precios 2026 en México y Latinoamérica:",
+    gravelTypesColType: "Tipo de Grava",
+    gravelTypesColCost: "Costo por Tonelada",
+    gravelTypesColBestFor: "Mejor Para",
+    gravelTypesRows: [
+      { type: "Piedra Triturada (#57)", cost: "$400 – $800 MXN", bestFor: "Cocheras, drenaje, sub-base. Bordes angulares que se traban para estabilidad." },
+      { type: "Gravilla (10 mm)", cost: "$500 – $900 MXN", bestFor: "Andadores, patios, jardineras. Redondeada y decorativa." },
+      { type: "Base Hidráulica", cost: "$300 – $600 MXN", bestFor: "Cocheras, estacionamientos. Contiene finos que se compactan en una superficie firme." },
+      { type: "Granito Descompuesto", cost: "$500 – $1,000 MXN", bestFor: "Senderos, xeriscaping, apariencia natural. Se compacta bien en climas secos." },
+      { type: "Piedra de Río (3–8 cm)", cost: "$800 – $2,500 MXN", bestFor: "Jardinería, cauces secos, decoración. No se compacta." },
+      { type: "Mármol Triturado", cost: "$1,200 – $3,500 MXN", bestFor: "Jardinería decorativa, bordes, áreas de acento. Precio premium." },
+    ],
+
+    costByProjectHeading: "Costo de Grava por Tipo de Proyecto",
+    costByProjectIntro:
+      "Lo que pagarás por grava depende del tamaño del proyecto, la profundidad requerida y el tipo. Estos son los costos típicos de 2026 para proyectos residenciales comunes, incluyendo material y tendido básico:",
+    costByProjectColProject: "Proyecto",
+    costByProjectColTypical: "Costo Típico",
+    costByProjectColNotes: "Notas",
+    costByProjectRows: [
+      { project: "Cochera de Grava (4×15 m)", typical: "$5,000 – $15,000 MXN", notes: "10–15 toneladas de piedra triturada a 15 cm. Instalación profesional extra." },
+      { project: "Patio (4×4 m)", typical: "$2,000 – $5,000 MXN", notes: "2–3 toneladas de gravilla a 8–10 cm. Confinamiento aparte." },
+      { project: "Andador (1×10 m)", typical: "$800 – $2,000 MXN", notes: "1–2 toneladas a 8 cm. Gravilla o granito descompuesto." },
+      { project: "Drenaje Francés (15 m)", typical: "$1,500 – $4,000 MXN", notes: "3–5 toneladas de piedra #57. Geotextil aparte." },
+      { project: "Jardinera (3×6 m)", typical: "$2,000 – $6,000 MXN", notes: "2–4 toneladas de piedra decorativa a 8 cm." },
+      { project: "Base para Bodega (3×4 m)", typical: "$1,500 – $4,000 MXN", notes: "2–4 toneladas a 10–15 cm. Piedra triturada con compactación." },
+      { project: "Estacionamiento (4×6 m)", typical: "$3,000 – $8,000 MXN", notes: "5–7 toneladas a 15 cm. Base hidráulica recomendada." },
+    ],
+
+    deliveryCostsHeading: "Costos de Envío y Pedidos Mínimos",
+    deliveryCostsIntro:
+      "El flete es una parte significativa del costo de la grava, especialmente en pedidos pequeños. Entender las tarifas de envío y los mínimos te ayuda a planificar mejor.",
+    deliveryCostsText1:
+      "La mayoría de los proveedores de grava cobran $500 a $1,500 MXN por viaje para distancias hasta 30 km desde su banco de materiales. Más allá de 30 km, espera $30 a $50 MXN adicionales por kilómetro. Un volteo típico carga 7 a 14 m³ de grava. Muchos proveedores ofrecen cargas parciales, aunque el costo de flete es el mismo sin importar la cantidad.",
+    deliveryCostsText2:
+      "Los pedidos mínimos varían por proveedor pero típicamente son de 5 a 10 toneladas para envío. Algunos ofrecen 1 a 2 toneladas con recargo ($200 a $500 MXN extra). Para proyectos muy pequeños de menos de 1 tonelada, recoger la grava tú mismo en camioneta es la opción más económica — la mayoría de los bancos de materiales permiten carga directa y cobran solo por el material.",
+    deliveryCostsText3:
+      "Para ahorrar en flete, combina pedidos con vecinos, programa tu compra en temporada baja (otoño o invierno cuando la demanda es baja), o recoge la grava tú mismo. Una camioneta de media tonelada puede cargar unos 0.4 m³ (600 kg) por viaje. Una camioneta de una tonelada aguanta 0.7–1 m³. Rentar un remolque pequeño ($500–$1,000 MXN por día) te permite transportar 2 a 3 m³ por viaje.",
+
+    howToCalculateHeading: "Cómo Calcular la Cantidad que Necesitas",
+    howToCalculateIntro:
+      "Obtener la cantidad correcta de grava evita viajes extra costosos o material sobrante. Sigue estos pasos para calcular tus necesidades con precisión:",
+    howToCalculateItems: [
+      "Mide tu área de proyecto: Multiplica el largo por el ancho en metros para obtener los metros cuadrados. Para formas irregulares, divide el área en rectángulos y súmalos.",
+      "Determina la profundidad: Las profundidades estándar son 5–8 cm para andadores y jardineras, 10 cm para patios y relleno general, y 15–20 cm para cocheras. Convierte centímetros a metros dividiendo entre 100.",
+      "Calcula metros cúbicos: Multiplica largo × ancho × profundidad (todo en metros) para obtener metros cúbicos.",
+      "Convierte a toneladas: Multiplica los metros cúbicos por el factor de peso de tu tipo de grava — 1.8 para piedra triturada, 1.7 para gravilla, 2.0 para base hidráulica, 1.9 para granito descompuesto.",
+      "Agrega 10% de desperdicio: Multiplica tu total por 1.1 para considerar compactación, derrame y terreno irregular. Esto es especialmente importante para grava que será compactada.",
+      "Ejemplo: Un patio de 6×6 m a 10 cm de profundidad = 6 × 6 × 0.10 = 3.6 m³ × 1.8 = 6.5 toneladas. Con 10% de desperdicio: pide 7.2 toneladas de grava.",
+    ],
+    howToCalculateSummary:
+      "Consejo: Usa nuestra Calculadora de Grava gratuita para saltarte las matemáticas. Ingresa tus dimensiones y obtén metros cúbicos, tonelaje y costos al instante.",
+
+    savingTipsHeading: "Cómo Ahorrar Dinero en Grava",
+    savingTipsIntro:
+      "La grava ya es uno de los materiales de pavimentación más económicos, pero estos consejos pueden ayudarte a ahorrar aún más:",
+    savingTipsItems: [
+      "Compra al mayoreo: El precio por tonelada baja significativamente en pedidos grandes. Pedir 15+ toneladas suele desbloquear precios de mayoreo 10–20% más baratos.",
+      "Elige piedra local: La grava de canteras cercanas cuesta mucho menos que la piedra transportada de lejos. El flete es el factor más importante en el precio después del tipo.",
+      "Pide en temporada baja: Otoño e invierno son los meses más lentos. Muchos proveedores ofrecen descuentos del 10–15% para mantener sus flotillas ocupadas.",
+      "Recoge tú mismo: Si tienes acceso a camioneta, la auto-recolección elimina el cargo de flete de $500–$1,500 MXN. Para proyectos pequeños, puede significar un ahorro del 20–30%.",
+      "Usa base hidráulica en vez de piedra decorativa: La base cuesta $300–$600 MXN/ton vs $800–$2,500 MXN para opciones decorativas. Para cocheras y áreas utilitarias, rinde mejor y más barato.",
+      "Compara múltiples proveedores: Los precios pueden variar 30–50% entre proveedores de la misma zona. Pide al menos 3 cotizaciones antes de ordenar.",
+    ],
+
+    calculatorCtaHeading: "Calcula tu Necesidad de Grava",
+    calculatorCtaText: "Usa nuestras calculadoras gratuitas de grava para estimar la cantidad exacta y el costo de tu proyecto. Ingresa tus dimensiones y obtén resultados al instante.",
+    calculatorLinks: [
+      { label: "Calculadora de Grava", href: "/calculators/foundation/gravel-calculator", description: "Calcula metros cúbicos y toneladas para cualquier área rectangular con estimación de costo." },
+      { label: "Calculadora de Grava para Cochera", href: "/calculators/foundation/driveway-gravel-calculator", description: "Estima grava por tipo para cocheras con rango de costos y necesidades de envío." },
+      { label: "Calculadora de Losa de Concreto", href: "/calculators/foundation/concrete-slab-calculator", description: "¿Planeas un proyecto de concreto? Calcula metros cúbicos y cantidad de bultos." },
+    ],
+
+    faqHeading: "Preguntas Frecuentes",
+    faqs: [
+      {
+        question: "¿Cuánto cuesta la tonelada de grava en 2026?",
+        answer:
+          "La grava cuesta $300 a $900 MXN por tonelada en 2026 para tipos comunes. La base hidráulica es la más económica a $300–$600 MXN/ton. La piedra triturada cuesta $400–$800 MXN/ton. La gravilla cuesta $500–$900 MXN/ton. El granito descompuesto va de $500–$1,000 MXN/ton. La piedra decorativa como la de río cuesta $800–$2,500 MXN/ton. Los precios varían por región y proveedor.",
+      },
+      {
+        question: "¿Cuánta grava necesito para una cochera?",
+        answer:
+          "Una cochera de grava estándar para un auto (4 m de ancho por 15 m de largo a 15 cm de profundidad) necesita unos 9 metros cúbicos o 16 toneladas de grava. Para dos autos (7×15 m), necesitas unos 16 m³ o 29 toneladas. Usa piedra triturada o base hidráulica. Incluye 10% extra por compactación y desperdicio. El costo solo de material es de $5,000–$15,000 MXN.",
+      },
+      {
+        question: "¿Cuánto cuesta el metro cúbico de grava?",
+        answer:
+          "Un metro cúbico de grava cuesta $400 a $1,200 MXN dependiendo del tipo. La piedra triturada promedia $500–$1,000 MXN/m³. La base hidráulica cuesta $400–$800 MXN/m³. La gravilla cuesta $600–$1,200 MXN/m³. Estos son precios solo de material — el flete ($500–$1,500 MXN/viaje) es adicional. Un metro cúbico cubre aproximadamente 10 m² a 10 cm de profundidad.",
+      },
+      {
+        question: "¿Cuál es el tipo de grava más barato?",
+        answer:
+          "La base hidráulica (también llamada tepetate, rezaga o material de banco según la región) es la grava más barata a $300–$600 MXN por tonelada. Es una mezcla de piedra triturada y finos que se compacta en una superficie muy dura, ideal para cocheras y áreas de servicio. La piedra triturada simple es la siguiente opción más económica a $400–$800 MXN/ton.",
+      },
+      {
+        question: "¿Cuánta grava necesito por metro cuadrado?",
+        answer:
+          "A 10 cm de profundidad (el estándar para la mayoría de aplicaciones), necesitas unos 0.10 m³ o 0.18 toneladas de grava por metro cuadrado. A 5 cm de profundidad, necesitas 0.05 m³/m². A 15 cm (cocheras), necesitas 0.15 m³ o 0.27 toneladas/m². Multiplica por tus metros cuadrados totales y agrega 10% de desperdicio.",
+      },
+      {
+        question: "¿Una cochera de grava es más barata que concreto o asfalto?",
+        answer:
+          "Sí, significativamente. Una cochera de grava cuesta $80–$250 MXN/m² en material ($250–$700 MXN/m² instalada), comparado con $800–$1,500 MXN/m² para concreto y $600–$1,200 MXN/m² para asfalto. Sin embargo, la grava requiere más mantenimiento continuo y necesita reposición periódica cada 2–3 años.",
       },
     ],
   },

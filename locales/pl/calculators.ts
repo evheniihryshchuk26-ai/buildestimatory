@@ -75,6 +75,22 @@ export const categories: CategoryMeta[] = [
         category: "Fundamenty",
         categorySlug: "foundation",
       },
+      {
+        slug: "gravel-calculator",
+        title: "Kalkulator Żwiru",
+        description:
+          "Ile żwiru potrzebuję? Darmowy kalkulator dla dowolnej powierzchni \u2014 metry sześcienne, tony i szacunek kosztów z 10% zapasem.",
+        category: "Fundamenty",
+        categorySlug: "foundation",
+      },
+      {
+        slug: "driveway-gravel-calculator",
+        title: "Kalkulator Żwiru na Podjazd",
+        description:
+          "Kalkulator żwiru na podjazd: oszacuj tony i koszt wg typu \u2014 tłuczeń, żwir, kruszywo łamane lub grys z dostawą.",
+        category: "Fundamenty",
+        categorySlug: "foundation",
+      },
     ],
   },
   {

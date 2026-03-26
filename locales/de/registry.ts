@@ -334,6 +334,122 @@ export const concreteStepsCalculator: CalculatorSEOContent = {
 };
 
 
+export const gravelCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "Diese Schätzung enthält einen 10 % Verschnittfaktor. Das Gewicht von Schotter und Kies variiert je nach Typ und Feuchtigkeit. Die Umrechnung von 1,5 Tonnen pro Kubikmeter ist ein Durchschnittswert — das tatsächliche Gewicht liegt je nach Material zwischen 1,4 und 1,8 t/m³. Bestätigen Sie die Mengen immer bei Ihrem Lieferanten vor der Bestellung.",
+  howToUse: [
+    "Messen Sie die Länge der zu bedeckenden Fläche in Metern.",
+    "Messen Sie die Breite der Fläche in Metern.",
+    "Geben Sie die gewünschte Schotterstärke in Zentimetern ein — 10 cm ist Standard für die meisten Anwendungen, 15 bis 20 cm für Einfahrten.",
+    "Klicken Sie auf Berechnen, um Kubikmeter und Tonnen mit eingebautem 10 % Verschnittfaktor zu erhalten.",
+  ],
+  materialInfo:
+    "Schotter, Kies und Splitt sind lose Gesteinskörnungen, die für Einfahrten, Gehwege, Drainage, Gartengestaltung und als Tragschicht unter Beton und Asphalt verwendet werden. Sie sind in verschiedenen Korngrößen und Gesteinsarten erhältlich, die jeweils für unterschiedliche Anwendungen geeignet sind.\n\nDie gängigsten Korngrößen in Deutschland sind: Schotter 16/32 mm (Standardmaterial für Einfahrten und Drainage), Splitt 2/5 mm und 5/8 mm (für Pflasterbettungen und Wegedecken), und Grobschotter 32/56 mm oder 56/100 mm (für Drainage und Frostschutzschichten). Zierkies 8/16 mm (gerundete Steine) ist beliebt für Gehwege, Terrassen und Zierbeete. Gebrochenes Material (Splitt, Schotter) hat kantige Kanten, die ineinandergreifen und fest verdichten, während Rundkies (Flusskies) glatte Oberflächen hat und sich unter Belastung verschiebt.\n\nSchotter wird in Deutschland nach Kubikmeter oder Tonne verkauft. Ein Kubikmeter Schotter wiegt etwa 1,5 bis 1,8 Tonnen, abhängig von der Gesteinsart — Frostschutz (0/32 mm) ist schwerer mit 1,8 t/m³, Zierkies leichter mit 1,4 t/m³. Die meisten Baustoffhändler verkaufen nach Tonne mit Lieferung. Typische Preise liegen bei 15 bis 45 € pro Tonne je nach Typ und Region. Lieferkosten betragen 80 bis 200 € pro Fuhre für Entfernungen bis 30 km. Anbieter wie der lokale Baustoffhandel, toom Baumarkt und Hornbach bieten verschiedene Schotter- und Kiesarten an.\n\nFür Einfahrten ist der Standardaufbau ein 3-Schichten-System: 15 cm Frostschutzschicht (0/32 mm oder 0/45 mm) als Tragschicht, 10 cm Schotter 16/32 mm als Zwischenschicht und 5 cm Splitt 2/5 mm oder Edelsplitt als Deckschicht. Diese Gesamtstärke von 30 cm bietet hervorragende Drainage und eine stabile Oberfläche. Für einfache Auffüllungen, Gehwege und Zierbeete reicht eine einzelne Schicht von 8 bis 10 cm.",
+  nextSteps: [
+    { label: "Einfahrt-Schotter-Rechner", href: "/calculators/foundation/driveway-gravel-calculator/" },
+    { label: "Betonplatten-Rechner", href: "/calculators/foundation/concrete-slab-calculator/" },
+    { label: "Streifenfundament-Rechner", href: "/calculators/foundation/concrete-footing-calculator/" },
+  ],
+  installationTips: [
+    "Entfernen Sie den gesamten Mutterboden und organisches Material, bevor Sie Schotter verlegen — organische Substanz zersetzt sich und verursacht Setzungen.",
+    "Verlegen Sie Geotextil (Vlies) über dem verdichteten Planum, um zu verhindern, dass Schotter sich mit dem darunterliegenden Boden vermischt.",
+    "Verteilen Sie Schotter in Lagen von 5 bis 8 cm und verdichten Sie jede Lage mit einer Rüttelplatte, bevor Sie die nächste aufbringen.",
+    "Geben Sie Einfahrten und Wegen ein leichtes Quergefälle (2 bis 3 %), damit Wasser zu den Rändern abfließt und sich nicht staut.",
+    "Verwenden Sie Randsteine oder Kantenprofile (Stahl, Aluminium oder Betonrandsteine) um zu verhindern, dass Schotter in angrenzende Bereiche wandert.",
+  ],
+  commonMistakes: [
+    "Rundkies für Einfahrten verwenden — er verdichtet nicht und verschiebt sich unter dem Reifengewicht. Verwenden Sie stattdessen kantigen Splitt oder Schotter.",
+    "Mutterboden nicht entfernen — Gras und Wurzeln unter dem Schotter zersetzen sich und erzeugen Senkstellen.",
+    "Den Verdichtungsschritt überspringen — nicht verdichteter Schotter verschiebt sich und bildet schnell Spurrinnen.",
+    "Schotter zu dünn aufbringen — weniger als 8 cm bietet keine ausreichende Abdeckung oder Tragfähigkeit und das Planum scheint durch den Stein hindurch.",
+    "Mindestbestellmengen nicht berücksichtigen — die meisten Lieferanten verlangen eine Mindestbestellung von 5 bis 10 Tonnen für die Lieferung.",
+  ],
+  faqs: [
+    {
+      question: "Wie viel Schotter brauche ich?",
+      answer: "Multiplizieren Sie Länge mal Breite Ihres Projekts (in Metern) für die Quadratmeter, dann mit der Stärke (in Metern) für die Kubikmeter. Ein Kubikmeter Schotter deckt etwa 10 m² bei 10 cm Stärke ab. Rechnen Sie 10 % Zuschlag für Verdichtung, Verschnitt und unebenen Boden. Beispiel: Eine 6×6-Meter-Fläche bei 10 cm Stärke benötigt etwa 4 m³ (6 bis 7 Tonnen).",
+    },
+    {
+      question: "Wie viel wiegt ein Kubikmeter Schotter?",
+      answer: "Ein Kubikmeter Schotter wiegt etwa 1.500 bis 1.800 kg (1,5 bis 1,8 Tonnen). Das genaue Gewicht hängt von der Gesteinsart ab: Schotter 16/32 mm wiegt durchschnittlich 1,5 t/m³, Frostschutz (0/32 mm) ist schwerer mit 1,8 t/m³, Zierkies wiegt etwa 1,4 t/m³. Nasser Schotter kann 10 bis 15 % mehr wiegen als trockener.",
+    },
+    {
+      question: "Wie viele Tonnen Schotter brauche ich?",
+      answer: "Berechnen Sie zuerst die Kubikmeter (Länge × Breite × Stärke in Metern), dann multiplizieren Sie mit 1,5 bis 1,8 je nach Materialtyp. Beispiel: Eine 3×6-Meter-Fläche bei 10 cm Stärke ergibt 1,8 m³, das sind etwa 2,7 bis 3,2 Tonnen. Bestellen Sie immer 10 % mehr für Verdichtung und Verschnitt.",
+    },
+    {
+      question: "Wie stark sollte der Schotter sein?",
+      answer: "Die empfohlene Stärke richtet sich nach der Anwendung: 5 bis 8 cm für Gehwege und Zierbeete, 10 cm für Terrassen und allgemeine Auffüllung, 15 bis 20 cm für Einfahrten (in mehreren Lagen aufgebracht), und 25 bis 30 cm für gewerbliche Schwerlastbereiche. Verdichten Sie jede Lage vor dem Aufbringen der nächsten.",
+    },
+    {
+      question: "Wie viel kostet Schotter pro Tonne?",
+      answer: "Schotterpreise liegen bei 15 bis 45 € pro Tonne je nach Typ. Frostschutz und Standardschotter sind am günstigsten mit 15 bis 25 € pro Tonne. Splitt kostet 20 bis 35 € pro Tonne. Zierkies und Edelsplitt kosten 30 bis 60 € pro Tonne. Lieferkosten betragen 80 bis 200 € pro Fuhre. Baustoffhandel, toom und Hornbach bieten verschiedene Optionen an.",
+    },
+    {
+      question: "Wie viele Kubikmeter Schotter passen auf einen LKW?",
+      answer: "Ein Standard-Dreiseitenkipper fasst 6 bis 8 m³ (9 bis 14 Tonnen) Schotter. Ein größerer Sattelkipper fasst 12 bis 16 m³ (18 bis 28 Tonnen). Für kleine Projekte bieten viele Baustoffhändler Teilladungen an, oder Sie können Schotter mit einem Pkw-Anhänger transportieren (ca. 0,3 bis 0,5 m³ pro Ladung).",
+    },
+  ],
+};
+
+export const drivewayGravelCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "Diese Schätzung enthält einen 10 % Verschnittfaktor. Kostenschätzungen basieren auf regionalen Durchschnittswerten und variieren erheblich nach Region, Lieferant und Lieferentfernung. Das Schottergewicht variiert je nach Typ und Feuchtigkeit. Holen Sie immer Angebote von lokalen Lieferanten ein, bevor Sie bestellen.",
+  howToUse: [
+    "Messen Sie die Gesamtlänge Ihrer Einfahrt in Metern.",
+    "Geben Sie die Einfahrtbreite ein — 3 bis 3,5 Meter für ein Auto, 5,5 bis 6,5 Meter für eine Doppeleinfahrt.",
+    "Geben Sie die Schotterstärke ein — 15 cm ist Standard für Einfahrten, 20 bis 25 cm für Schwerlastverkehr.",
+    "Wählen Sie den Schottertyp und klicken Sie auf Berechnen für Kubikmeter, Tonnen und eine Kostenschätzung.",
+  ],
+  materialInfo:
+    "Eine Schottereinfahrt ist eine der wirtschaftlichsten und praktischsten Alternativen zu Beton oder Asphalt. Bei fachgerechter Ausführung mit den richtigen Materialien und ausreichender Stärke kann eine Schottereinfahrt 10 bis 15 Jahre mit minimalem Wartungsaufwand halten.\n\nDie beste Schottereinfahrt wird in drei Lagen aufgebaut. Die untere Lage (15 cm) verwendet Frostschutzschicht (0/32 mm oder 0/45 mm) für Drainage und Tragfähigkeit. Die mittlere Lage (10 cm) verwendet Schotter 16/32 mm als Übergangsschicht. Die obere Lage (5 bis 8 cm) verwendet verdichtungsfähigen Splitt 2/5 mm oder 5/8 mm, der sich zu einer festen Fahrfläche verzahnt. Jede Lage muss einzeln verteilt und verdichtet werden.\n\nGebrochener Schotter (Splitt 5/8 oder 8/16) ist das beliebteste Einfahrtmaterial, weil seine kantigen Kanten sich bei der Verdichtung verzahnen und eine stabile Oberfläche bilden. Schottertragschicht (auch Mineralbeton oder Frostschutz) ist eine Mischung aus gebrochenem Gestein und Steinmehl, die zu einer extrem harten Oberfläche verdichtet — sie ist die bevorzugte Wahl für stark befahrene Einfahrten. Rundkies sieht attraktiv aus, verschiebt sich aber unter Reifen und wird nicht als Hauptfahrfläche empfohlen. Granitsplitt verdichtet gut und bietet eine natürliche Optik.\n\nSchottereinfahrten kosten 15 bis 35 € pro Quadratmeter eingebaut, abhängig von Stärke und Material. Eine typische Einzeleinfahrt von 3,5 × 15 Metern kostet 800 bis 1.800 € nur für Material. Professionelle Installation mit Planierung, Vlies und Verdichtung kostet zusätzlich 15 bis 40 € pro m². Die jährliche Wartung umfasst das Zurückrechen von verschobenem Schotter und das Aufbringen einer 3 bis 5 cm dicken Ausgleichsschicht alle 2 bis 3 Jahre. Material erhalten Sie im Baustoffhandel, bei toom oder Hornbach.",
+  nextSteps: [
+    { label: "Schotter-Rechner", href: "/calculators/foundation/gravel-calculator/" },
+    { label: "Betonplatten-Rechner", href: "/calculators/foundation/concrete-slab-calculator/" },
+  ],
+  installationTips: [
+    "Planen Sie die Einfahrt mit einem Gefälle von 2 bis 3 % vom Haus weg für ordnungsgemäße Entwässerung — stehendes Wasser auf Schotter erzeugt Schlaglöcher.",
+    "Verlegen Sie Geotextilvlies über dem planierten Boden, um zu verhindern, dass Stein sich mit dem darunterliegenden Erdreich vermischt.",
+    "Verteilen und verdichten Sie jede Lage einzeln — kippen Sie nicht den gesamten Schotter auf einmal ab.",
+    "Verwenden Sie eine Rüttelplatte oder Walze auf jeder Lage für maximale Dichte und Stabilität.",
+    "Installieren Sie Randeinfassungen (Stahl, Aluminium oder Betonrandsteine) auf beiden Seiten, um das Wandern von Schotter in den Garten zu verhindern.",
+    "Wölben Sie die Einfahrtmitte leicht höher (3 bis 5 cm), damit Wasser zu beiden Seiten abfließt.",
+  ],
+  commonMistakes: [
+    "Rundkies als Fahrfläche verwenden — seine runde Form verdichtet nicht und Steine spritzen unter den Reifen weg.",
+    "Schotter direkt auf Mutterboden kippen ohne zu planieren — organischer Boden zersetzt sich und verursacht Senkstellen und Schlammvermischung.",
+    "Nur 5 bis 8 cm Schotter aufbringen — das ist zu dünn für Fahrzeugverkehr und wird schnell bis zum Planum durchspuren.",
+    "Die Vliesschicht weglassen — ohne sie sinkt Schotter innerhalb von 1 bis 2 Jahren in weichen Boden ein und Sie verlieren die Hälfte Ihres Materials.",
+    "Zwischen den Lagen nicht verdichten — loser Schotter verschiebt sich und entwickelt Spurrinnen und Schlaglöcher innerhalb weniger Wochen.",
+  ],
+  faqs: [
+    {
+      question: "Wie viel Schotter brauche ich für eine Einfahrt?",
+      answer: "Eine Standard-Einzeleinfahrt (3,5 Meter breit, 15 Meter lang, 15 cm stark) benötigt etwa 8 m³ (12 bis 14 Tonnen) Schotter. Eine Doppeleinfahrt (6×15 Meter bei 15 cm Stärke) benötigt etwa 14 m³ (21 bis 25 Tonnen). Diese Mengen beinhalten einen 10 % Verschnittfaktor für Verdichtung und Verteilung.",
+    },
+    {
+      question: "Was kostet eine Schottereinfahrt?",
+      answer: "Material für eine Schottereinfahrt kostet 15 bis 35 € pro Quadratmeter je nach Schottertyp und Stärke. Eine 3,5×15-Meter-Einfahrt kostet 800 bis 1.800 € nur für Schotter. Professionelle Ausführung mit Planierung, Vlies und Verdichtung kostet typischerweise 15 bis 40 € pro m², sodass die Gesamtkosten für eine Einzeleinfahrt bei 1.600 bis 4.000 € liegen.",
+    },
+    {
+      question: "Welcher Schotter ist der beste für eine Einfahrt?",
+      answer: "Gebrochener Splitt (5/8 oder 8/16 mm) ist das beste Allround-Einfahrtmaterial, weil seine kantigen Kanten sich bei der Verdichtung verzahnen. Frostschutz (0/32 mm) oder Mineralbeton ist noch besser für Schwerlastverkehr — er enthält Steinmehl, das das Aggregat zu einer nahezu festen Oberfläche verbindet. Verwenden Sie Schotter 16/32 für den Unterbau und Splitt oder Frostschutz für die Deckschicht.",
+    },
+    {
+      question: "Wie stark sollte Schotter für eine Einfahrt sein?",
+      answer: "Eine Schottereinfahrt sollte mindestens 15 bis 20 cm stark sein für PKW-Verkehr, aufgebaut in 2 bis 3 Lagen. Für Schwerlastverkehr (LKW, Baumaschinen) verwenden Sie 25 bis 30 cm Gesamtstärke. Jede Lage muss vor dem Aufbringen der nächsten verdichtet werden. Eine dünne 5 bis 8 cm Schicht wird innerhalb weniger Monate bis zum Planum durchspuren.",
+    },
+    {
+      question: "Wie lange hält eine Schottereinfahrt?",
+      answer: "Eine fachgerecht angelegte Schottereinfahrt hält 10 bis 15 Jahre, bevor eine größere Erneuerung nötig wird. Die jährliche Wartung umfasst das Zurückrechen von verschobenem Schotter und das Aufbringen einer 3 bis 5 cm Ausgleichsschicht alle 2 bis 3 Jahre. Die Tragschicht kann bei fachgerechter Ausführung mit Vlies und Drainage praktisch unbegrenzt halten.",
+    },
+    {
+      question: "Brauche ich Geotextilvlies unter einer Schottereinfahrt?",
+      answer: "Ja, Geotextilvlies ist unter einer Schottereinfahrt unverzichtbar. Ohne Vlies sinkt Schotter innerhalb von 1 bis 2 Jahren in weichen Boden ein, und Erde arbeitet sich durch den Stein nach oben und erzeugt eine schlammige Oberfläche. Verwenden Sie gewerbliches Geotextilvlies mit Fahrzeugbelastungsklasse — nicht das dünne Unkrautvlies aus dem Gartenmarkt.",
+    },
+  ],
+};
+
 // ─── FLOOR FRAMING ───────────────────────────────────────────────────────────
 
 export const rimJoistCalculator: CalculatorSEOContent = {
@@ -1317,6 +1433,8 @@ export const registryDE: Record<string, Record<string, CalculatorSEOContent>> = 
     "concrete-footing-calculator": concreteFootingCalculator,
     "concrete-column-calculator": concreteColumnCalculator,
     "concrete-steps-calculator": concreteStepsCalculator,
+    "gravel-calculator": gravelCalculator,
+    "driveway-gravel-calculator": drivewayGravelCalculator,
   },
   "floor-framing": {
     "rim-joist-calculator": rimJoistCalculator,

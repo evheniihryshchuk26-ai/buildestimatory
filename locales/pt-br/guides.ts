@@ -59,6 +59,12 @@ const guides: GuidesTranslations = {
           "Deck composite vs madeira comparados: custo, durabilidade, manutenção, aparência e vida útil. Descubra qual material é melhor para seu projeto e clima.",
         href: "/guides/composite-vs-wood-decking",
       },
+      {
+        title: "Quanto Custa a Brita? Guia de Preços 2026",
+        description:
+          "A brita custa R$60–R$180 por tonelada. Guia completo de preços para entradas, pátios, caminhos, drenagem e paisagismo com frete e cálculo de quantidade.",
+        href: "/guides/gravel-cost-guide",
+      },
     ],
   },
 
@@ -1298,6 +1304,130 @@ const guides: GuidesTranslations = {
         question: "Posso misturar composite e madeira no mesmo deck?",
         answer:
           "Sim, muitos construtores usam estrutura de madeira tratada (postes, vigas, vigamentos) com réguas e guarda-corpo de composite na superfície. Esta é na verdade a abordagem padrão — réguas composite são projetadas como superfície de acabamento, não como elementos estruturais. A estrutura de madeira fornece suporte a custo menor.",
+      },
+    ],
+  },
+
+  gravelCost: {
+    title: "Quanto Custa a Brita? Guia de Preços 2026",
+    metaDescription:
+      "A brita custa R$60–R$180 por tonelada, R$80–R$250 por metro cúbico em 2026. Guia completo: brita graduada, pedrisco, rachão, saibro, seixo de rio. Entradas, pátios, caminhos, drenagem, paisagismo, frete e cálculo de quantidade.",
+
+    heroTitle: "Quanto Custa a Brita?",
+    heroSubtitle: "Guia de Preços 2026",
+    heroDescription:
+      "Panorama completo dos preços de brita por tipo, projeto e região no Brasil. Cobre brita graduada, pedrisco, rachão, saibro e seixo de rio com custos de frete, pedidos mínimos e dicas para economizar.",
+
+    quickAnswerHeading: "Resposta Rápida",
+    quickAnswerText:
+      "A brita custa R$60 a R$180 por tonelada ou R$80 a R$250 por metro cúbico em 2026, dependendo do tipo e da região. Brita graduada e rachão são os mais baratos a R$60–R$120 por tonelada. Pedrisco custa R$80–R$150/ton. Materiais decorativos como seixo de rio custam R$150–R$500/ton. O frete adiciona R$150–R$500 por viagem para distâncias até 30 km, e a maioria dos fornecedores exige pedido mínimo de 5 a 10 toneladas.",
+
+    gravelTypesHeading: "Tipos de Brita e Preços",
+    gravelTypesIntro:
+      "Nem toda brita é igual. Cada tipo tem peso, compactação e preço diferentes. Veja os tipos mais comuns e seus preços 2026 no Brasil:",
+    gravelTypesColType: "Tipo de Brita",
+    gravelTypesColCost: "Custo por Tonelada",
+    gravelTypesColBestFor: "Melhor Para",
+    gravelTypesRows: [
+      { type: "Brita 1 (19–25 mm)", cost: "R$70 – R$140", bestFor: "Entradas, drenagem, sub-base. Arestas angulares que se travam." },
+      { type: "Pedrisco (4–10 mm)", cost: "R$80 – R$150", bestFor: "Caminhos, pátios, canteiros. Fino e decorativo." },
+      { type: "Rachão (100–250 mm)", cost: "R$50 – R$100", bestFor: "Aterro, sub-base pesada, estabilização de terreno." },
+      { type: "Saibro", cost: "R$40 – R$80", bestFor: "Caminhos, base para calçadas. Compacta bem, baixo custo." },
+      { type: "Seixo de Rio (30–80 mm)", cost: "R$150 – R$500", bestFor: "Paisagismo, fontes, decoração. Não compacta." },
+      { type: "Brita Branca / Mármore", cost: "R$200 – R$600", bestFor: "Decoração, bordas, áreas de destaque. Preço premium." },
+    ],
+
+    costByProjectHeading: "Custo de Brita por Tipo de Projeto",
+    costByProjectIntro:
+      "O que você pagará depende do tamanho do projeto, profundidade e tipo. Custos típicos 2026 para projetos residenciais comuns:",
+    costByProjectColProject: "Projeto",
+    costByProjectColTypical: "Custo Típico",
+    costByProjectColNotes: "Notas",
+    costByProjectRows: [
+      { project: "Entrada de Veículos (4×15 m)", typical: "R$1.500 – R$5.000", notes: "10–15 toneladas de brita a 15 cm. Instalação profissional extra." },
+      { project: "Pátio (4×4 m)", typical: "R$500 – R$1.500", notes: "2–3 toneladas de pedrisco a 8–10 cm. Contenção à parte." },
+      { project: "Caminho (1×10 m)", typical: "R$200 – R$600", notes: "1–2 toneladas a 8 cm. Pedrisco ou saibro." },
+      { project: "Dreno Francês (15 m)", typical: "R$400 – R$1.200", notes: "3–5 toneladas de brita 1. Manta geotêxtil separada." },
+      { project: "Canteiro (3×6 m)", typical: "R$500 – R$2.000", notes: "2–4 toneladas de pedra decorativa a 8 cm." },
+      { project: "Base para Depósito (3×4 m)", typical: "R$400 – R$1.200", notes: "2–4 toneladas a 10–15 cm. Brita com compactação." },
+      { project: "Estacionamento (4×6 m)", typical: "R$800 – R$2.500", notes: "5–7 toneladas a 15 cm. Brita graduada recomendada." },
+    ],
+
+    deliveryCostsHeading: "Custos de Frete e Pedidos Mínimos",
+    deliveryCostsIntro:
+      "O frete é parte significativa do custo, especialmente em pedidos pequenos. Entender taxas e mínimos ajuda no planejamento.",
+    deliveryCostsText1:
+      "A maioria das pedreiras e lojas de material cobra R$150 a R$500 por viagem para distâncias até 30 km. Acima de 30 km, espere R$5 a R$10 por km adicional. Um caminhão basculante padrão carrega 10 a 14 m³ de brita. Muitos fornecedores oferecem meias cargas, mas o frete é o mesmo independentemente da quantidade.",
+    deliveryCostsText2:
+      "Pedidos mínimos variam mas geralmente ficam entre 5 e 10 toneladas para entrega. Alguns oferecem 1 a 2 toneladas com taxa extra (R$50–R$150). Para quantidades muito pequenas (menos de 1 tonelada), buscar você mesmo com caminhonete é a opção mais econômica — a maioria das pedreiras permite carregamento no local.",
+    deliveryCostsText3:
+      "Para economizar no frete: combine pedidos com vizinhos, compre na baixa temporada (outono/inverno) ou busque você mesmo. Uma caminhonete pode carregar 0,5 m³ (700 kg) por viagem. Alugar uma caçamba basculante (R$200–R$400/dia) permite transportar 2 a 3 m³.",
+
+    howToCalculateHeading: "Como Calcular a Quantidade Necessária",
+    howToCalculateIntro:
+      "Calcular a quantidade certa de brita evita entregas extras caras ou sobras. Siga estes passos:",
+    howToCalculateItems: [
+      "Meça a área: Multiplique comprimento por largura em metros para obter m². Para formas irregulares, divida em retângulos.",
+      "Determine a espessura: Padrão: 5–8 cm para caminhos e canteiros, 10 cm para pátios, 15–20 cm para entradas. Converta cm em metros dividindo por 100.",
+      "Calcule metros cúbicos: Comprimento × largura × espessura (tudo em metros) = m³.",
+      "Converta em toneladas: Multiplique m³ pelo fator de peso — 1,8 para brita, 1,7 para pedrisco, 1,5 para saibro, 2,0 para brita graduada.",
+      "Adicione 10% de desperdício: Multiplique por 1,1 para compactação, derramamento e terreno irregular.",
+      "Exemplo: Entrada de 4 × 15 m a 15 cm = 4 × 15 × 0,15 = 9,0 m³ × 1,8 = 16,2 toneladas. Com 10%: peça 17,8 toneladas.",
+    ],
+    howToCalculateSummary:
+      "Dica: Use nossa Calculadora de Brita gratuita. Insira suas dimensões e obtenha m³, tonelagem e custos instantaneamente.",
+
+    savingTipsHeading: "Como Economizar na Brita",
+    savingTipsIntro:
+      "A brita já é um dos materiais de pavimentação mais baratos, mas estas dicas ajudam a economizar ainda mais:",
+    savingTipsItems: [
+      "Compre em grande quantidade: O preço por tonelada cai significativamente em pedidos grandes. Acima de 15 toneladas, descontos de 10–20% são comuns.",
+      "Escolha material local: Brita de pedreiras próximas custa bem menos. O frete é o segundo maior fator de custo.",
+      "Peça na baixa temporada: Outono e inverno são os meses mais calmos. Muitos fornecedores oferecem 10–15% de desconto.",
+      "Busque você mesmo: Com caminhonete, elimina o frete de R$150–R$500. Para projetos pequenos, economiza 20–30% do total.",
+      "Use saibro em vez de pedra decorativa: Saibro custa R$40–R$80/ton vs R$150–R$500 para seixo. Para entradas e áreas utilitárias, é mais barato e funcional.",
+      "Compare múltiplos fornecedores: Preços variam 30–50% entre fornecedores da mesma região. Peça pelo menos 3 orçamentos.",
+    ],
+
+    calculatorCtaHeading: "Calcule sua Necessidade de Brita",
+    calculatorCtaText: "Use nossas calculadoras gratuitas para estimar a quantidade exata e o custo do seu projeto.",
+    calculatorLinks: [
+      { label: "Calculadora de Brita", href: "/calculators/foundation/gravel-calculator", description: "Calcule m³ e toneladas para qualquer área com estimativa de custo." },
+      { label: "Calculadora de Brita para Entrada", href: "/calculators/foundation/driveway-gravel-calculator", description: "Estime brita por tipo para entradas com faixa de custo e frete." },
+      { label: "Calculadora de Laje de Concreto", href: "/calculators/foundation/concrete-slab-calculator", description: "Planejando concreto? Calcule m³ e quantidade de sacos." },
+    ],
+
+    faqHeading: "Perguntas Frequentes",
+    faqs: [
+      {
+        question: "Quanto custa a tonelada de brita em 2026?",
+        answer:
+          "A brita custa R$60 a R$180 por tonelada em 2026 para tipos comuns. Saibro é o mais barato a R$40–R$80/ton. Brita 1 custa R$70–R$140/ton. Pedrisco custa R$80–R$150/ton. Seixo de rio custa R$150–R$500/ton. Preços variam por região e fornecedor.",
+      },
+      {
+        question: "Quanta brita preciso para uma entrada de veículos?",
+        answer:
+          "Uma entrada padrão (4 m × 15 m a 15 cm) necessita cerca de 9 m³ ou 16 toneladas de brita. Para entrada dupla (7 × 15 m), são 16 m³ ou 29 toneladas. Use brita graduada ou saibro. Inclua 10% para compactação. Custo do material: R$1.500–R$5.000.",
+      },
+      {
+        question: "Quanto custa o metro cúbico de brita?",
+        answer:
+          "Um metro cúbico de brita custa R$80 a R$250 dependendo do tipo. Brita 1 fica em R$100–R$200/m³. Saibro custa R$60–R$120/m³. Pedrisco custa R$120–R$250/m³. Preços são só material — frete (R$150–R$500/viagem) é adicional. Um m³ cobre cerca de 10 m² a 10 cm.",
+      },
+      {
+        question: "Qual é o tipo de brita mais barato?",
+        answer:
+          "Saibro é o material mais barato a R$40–R$80 por tonelada. É uma mistura natural de argila e cascalho que compacta bem, ideal para caminhos e bases. Brita de demolição reciclada pode ser ainda mais barata quando disponível. Brita 1 convencional custa R$70–R$140/ton.",
+      },
+      {
+        question: "Quanta brita preciso por metro quadrado?",
+        answer:
+          "A 10 cm (padrão para a maioria das aplicações): 0,10 m³ ou 0,18 tonelada por m². A 5 cm: 0,05 m³/m². A 15 cm (entradas): 0,15 m³ ou 0,27 ton/m². Multiplique pela área total e adicione 10% de desperdício.",
+      },
+      {
+        question: "Entrada de brita é mais barata que concreto ou asfalto?",
+        answer:
+          "Sim, significativamente. Entrada de brita custa R$25–R$80/m² em material (R$60–R$200/m² instalada), vs R$150–R$350/m² para concreto e R$120–R$280/m² para asfalto. Porém, brita exige mais manutenção e reposição a cada 2–3 anos.",
       },
     ],
   },

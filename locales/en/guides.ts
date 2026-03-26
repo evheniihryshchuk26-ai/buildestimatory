@@ -59,6 +59,12 @@ const guides: GuidesTranslations = {
           "Composite vs wood decking compared: cost, durability, maintenance, appearance, and lifespan. Learn which deck material is best for your project and climate.",
         href: "/guides/composite-vs-wood-decking",
       },
+      {
+        title: "How Much Does Gravel Cost? 2026 Price Guide",
+        description:
+          "Gravel costs $20-50 per ton, $30-75 per cubic yard. Complete price guide covering driveways, patios, walkways, drainage, landscaping, delivery costs, and how to calculate the amount you need.",
+        href: "/guides/gravel-cost-guide",
+      },
     ],
   },
 
@@ -1345,6 +1351,130 @@ const guides: GuidesTranslations = {
         question: "Can I mix composite and wood on the same deck?",
         answer:
           "Yes, many builders use a pressure-treated wood substructure (posts, beams, joists) with composite deck boards and railing on top. This is actually the standard approach since composite boards are designed as a decking surface, not structural members. The treated wood frame provides the structural support at a lower cost than an all-composite system, while the composite surface delivers the low-maintenance benefits where you see and touch the deck.",
+      },
+    ],
+  },
+
+  gravelCost: {
+    title: "How Much Does Gravel Cost? 2026 Price Guide",
+    metaDescription:
+      "Gravel costs $20-50 per ton, $30-75 per cubic yard in 2026. Complete price guide covering crushed stone, pea gravel, road base, decomposed granite, river rock. Includes driveway, patio, walkway, drainage, and landscaping costs plus delivery fees and how to calculate the amount you need.",
+
+    heroTitle: "How Much Does Gravel Cost?",
+    heroSubtitle: "2026 Price Guide",
+    heroDescription:
+      "A complete breakdown of gravel prices by type, project, and region. Covers crushed stone, pea gravel, road base, decomposed granite, and river rock with delivery costs, minimum orders, and tips to save money on your next gravel project.",
+
+    quickAnswerHeading: "Quick Answer",
+    quickAnswerText:
+      "Gravel costs $20 to $50 per ton or $30 to $75 per cubic yard in 2026, depending on the type and your region. Crushed stone and road base are the most affordable at $20 to $35 per ton. Pea gravel runs $30 to $55 per ton. Decorative stone like river rock costs $50 to $150 per ton. Delivery adds $50 to $150 per load for distances up to 20 miles, and most suppliers require a 5 to 10-ton minimum order.",
+
+    gravelTypesHeading: "Gravel Types & Pricing",
+    gravelTypesIntro:
+      "Not all gravel is created equal. Each type has different weight, compaction characteristics, and price points. Here are the most common gravel types and their 2026 pricing:",
+    gravelTypesColType: "Gravel Type",
+    gravelTypesColCost: "Cost per Ton",
+    gravelTypesColBestFor: "Best For",
+    gravelTypesRows: [
+      { type: "Crushed Stone (#57)", cost: "$25 – $50", bestFor: "Driveways, drainage, sub-base. Angular edges lock together for stability." },
+      { type: "Pea Gravel (3/8\")", cost: "$30 – $55", bestFor: "Walkways, patios, decorative beds. Smooth and rounded." },
+      { type: "Road Base (#21A)", cost: "$20 – $40", bestFor: "Driveways, parking areas. Contains stone dust that compacts into a hard surface." },
+      { type: "Decomposed Granite", cost: "$35 – $60", bestFor: "Paths, xeriscaping, natural look. Compacts well in dry climates." },
+      { type: "River Rock (1-3\")", cost: "$50 – $150", bestFor: "Landscaping, dry creek beds, decorative features. Does not compact." },
+      { type: "White Marble Chips", cost: "$80 – $200", bestFor: "Decorative landscaping, borders, accent areas. Premium pricing." },
+    ],
+
+    costByProjectHeading: "Gravel Cost by Project Type",
+    costByProjectIntro:
+      "What you pay for gravel depends heavily on the project size, depth required, and gravel type. Here are typical 2026 costs for common residential projects, including material and basic spreading:",
+    costByProjectColProject: "Project",
+    costByProjectColTypical: "Typical Cost",
+    costByProjectColNotes: "Notes",
+    costByProjectRows: [
+      { project: "Gravel Driveway (12x50 ft)", typical: "$600 – $1,800", notes: "12-17 tons of crushed stone at 6\" depth. Add $1,200-$3,000 for pro install." },
+      { project: "Patio Area (12x12 ft)", typical: "$200 – $500", notes: "2-3 tons of pea gravel at 3-4\" depth. Edge restraints extra." },
+      { project: "Walkway (3x30 ft)", typical: "$100 – $250", notes: "1-2 tons at 3\" depth. Pea gravel or decomposed granite." },
+      { project: "French Drain (50 ft)", typical: "$150 – $400", notes: "3-5 tons of #57 stone around drain pipe. Fabric included separately." },
+      { project: "Landscaping Bed (10x20 ft)", typical: "$200 – $600", notes: "3-4 tons of decorative stone at 3\" depth. River rock costs more." },
+      { project: "Shed Pad (10x12 ft)", typical: "$150 – $400", notes: "2-4 tons at 4-6\" depth. Crushed stone with compaction." },
+      { project: "Parking Pad (12x20 ft)", typical: "$300 – $800", notes: "5-7 tons at 6\" depth. Road base or crushed stone recommended." },
+    ],
+
+    deliveryCostsHeading: "Delivery Costs & Minimum Orders",
+    deliveryCostsIntro:
+      "Delivery is a significant part of gravel cost, especially for smaller orders. Understanding delivery fees and minimums can help you plan your budget more accurately.",
+    deliveryCostsText1:
+      "Most gravel suppliers charge $50 to $150 per delivery for distances up to 20 miles from their yard. Beyond 20 miles, expect an additional $3 to $5 per mile. A typical dump truck delivery holds 10 to 15 tons of gravel. Many suppliers offer half-load options for smaller projects, though the delivery fee remains the same regardless of the amount on the truck.",
+    deliveryCostsText2:
+      "Minimum order requirements vary by supplier but typically range from 5 to 10 tons for delivery. Some suppliers offer 1 to 2-ton minimums with a surcharge ($25 to $50 extra). For very small projects under 1 ton, picking up gravel yourself in a truck or trailer is usually the most economical option — most landscape supply yards allow self-loading and charge only for the material.",
+    deliveryCostsText3:
+      "To save on delivery, combine orders with neighbors, time your purchase during the off-season (late fall or winter when demand is low), or pick up gravel yourself. A standard pickup truck with a 1/2-ton payload can carry about 1/2 cubic yard (1,400 lbs) per load. A 3/4-ton truck can handle a full cubic yard (2,800 lbs). Renting a small dump trailer ($75 to $150 per day) lets you haul 2 to 3 cubic yards per trip.",
+
+    howToCalculateHeading: "How to Calculate the Amount You Need",
+    howToCalculateIntro:
+      "Getting the right amount of gravel prevents costly extra deliveries or leftover material. Follow these steps to calculate your gravel needs accurately:",
+    howToCalculateItems: [
+      "Measure your project area: Multiply the length by the width in feet to get the square footage. For irregular shapes, break the area into rectangles and add them together.",
+      "Determine the depth: Standard depths are 2-3 inches for walkways and beds, 4 inches for patios and general fill, and 6-8 inches for driveways. Convert inches to feet by dividing by 12.",
+      "Calculate cubic yards: Multiply length x width x depth (all in feet), then divide by 27 to convert cubic feet to cubic yards.",
+      "Convert to tons: Multiply cubic yards by the weight factor for your gravel type — 1.4 for crushed stone, 1.35 for pea gravel, 1.5 for road base, 1.45 for decomposed granite.",
+      "Add 10% waste: Multiply your total by 1.1 to account for compaction, spillage, and uneven ground. This is especially important for gravel that will be compacted, as compaction reduces volume by 5-10%.",
+      "Example: A 20x20 ft patio at 4 inches deep = (20 x 20 x 0.33) / 27 = 4.9 cubic yards x 1.4 = 6.9 tons. With 10% waste: order 7.6 tons of gravel.",
+    ],
+    howToCalculateSummary:
+      "Tip: Use our free Gravel Calculator to skip the math. Enter your dimensions and get instant cubic yard, tonnage, and cost estimates.",
+
+    savingTipsHeading: "How to Save Money on Gravel",
+    savingTipsIntro:
+      "Gravel is already one of the most affordable hardscaping materials, but these tips can help you save even more:",
+    savingTipsItems: [
+      "Buy in bulk: Gravel per-ton cost drops significantly for larger orders. Ordering 15+ tons often unlocks bulk pricing that is 10-20% cheaper than small orders.",
+      "Choose local stone: Gravel quarried locally costs far less than stone shipped from distant regions. Transportation cost is the single biggest factor in gravel pricing after the stone type itself.",
+      "Order during the off-season: Late fall and winter are the slowest months for landscape suppliers. Many offer discounts of 10-15% during these months to keep crews busy.",
+      "Pick up yourself: If you have access to a truck or trailer, self-pickup eliminates the $50-$150 delivery fee. For small projects, this can save 20-30% of the total cost.",
+      "Use road base instead of decorative stone: Road base costs $20-$40 per ton versus $50-$150 for decorative options. For driveways and utility areas, road base performs better than decorative gravel at a fraction of the price.",
+      "Compare multiple suppliers: Prices can vary by 30-50% between suppliers in the same area. Get at least 3 quotes before ordering, and ask about any current promotions or contractor discounts.",
+    ],
+
+    calculatorCtaHeading: "Calculate Your Gravel Needs",
+    calculatorCtaText: "Use our free gravel calculators to estimate the exact amount and cost for your project. Enter your dimensions and get instant results.",
+    calculatorLinks: [
+      { label: "Gravel Calculator", href: "/calculators/foundation/gravel-calculator", description: "Calculate cubic yards and tons for any rectangular area with cost estimate." },
+      { label: "Driveway Gravel Calculator", href: "/calculators/foundation/driveway-gravel-calculator", description: "Estimate gravel by type for driveways with cost range and delivery needs." },
+      { label: "Concrete Slab Calculator", href: "/calculators/foundation/concrete-slab-calculator", description: "Planning a concrete project instead? Calculate cubic yards and bag counts." },
+    ],
+
+    faqHeading: "Frequently Asked Questions",
+    faqs: [
+      {
+        question: "How much does gravel cost per ton in 2026?",
+        answer:
+          "Gravel costs $20 to $50 per ton in 2026 for common types. Road base is the cheapest at $20-$40 per ton. Crushed stone (#57) runs $25-$50 per ton. Pea gravel costs $30-$55 per ton. Decomposed granite is $35-$60 per ton. Decorative stone like river rock costs $50-$150 per ton, and premium options like white marble chips run $80-$200 per ton. Prices vary by region and supplier.",
+      },
+      {
+        question: "How much gravel do I need for a driveway?",
+        answer:
+          "A standard single-car gravel driveway (12 feet wide by 50 feet long at 6 inches deep) requires about 12 cubic yards or 17 tons of gravel. A double-wide driveway (24x50 feet) needs about 24 cubic yards or 34 tons. Use crushed stone or road base for the best results. Include 10% extra for compaction and waste. Total material cost runs $600-$1,800 depending on the gravel type.",
+      },
+      {
+        question: "How much does a cubic yard of gravel cost?",
+        answer:
+          "A cubic yard of gravel costs $30 to $75 depending on the type. Crushed stone averages $35-$70 per cubic yard. Road base runs $28-$56 per cubic yard. Pea gravel costs $40-$75 per cubic yard. These prices are for the material only — delivery fees ($50-$150 per load) are additional. One cubic yard covers about 80 square feet at 4 inches deep.",
+      },
+      {
+        question: "What is the cheapest type of gravel?",
+        answer:
+          "Road base (also called crusher run or #21A) is typically the cheapest gravel at $20-$40 per ton. It is a blend of crushed stone and stone dust that compacts into an extremely hard surface, making it ideal for driveways and utility areas. Plain crushed stone (#57) is the next most affordable option at $25-$50 per ton. Recycled concrete aggregate is sometimes available for even less.",
+      },
+      {
+        question: "How much gravel do I need per square foot?",
+        answer:
+          "At 4 inches deep (the standard for most applications), you need about 0.012 cubic yards or 0.017 tons of gravel per square foot. At 2 inches deep, you need about 0.006 cubic yards per square foot. At 6 inches deep (driveways), you need about 0.019 cubic yards or 0.026 tons per square foot. Multiply by your total square footage and add 10% for waste.",
+      },
+      {
+        question: "Is a gravel driveway cheaper than concrete or asphalt?",
+        answer:
+          "Yes, significantly. A gravel driveway costs $1 to $3 per square foot for materials ($3 to $8 installed), compared to $8 to $15 per square foot for concrete and $7 to $13 per square foot for asphalt. A 12x50-foot gravel driveway costs $1,800-$4,800 installed versus $4,800-$9,000 for concrete. However, gravel requires more ongoing maintenance and needs periodic top-up every 2-3 years.",
       },
     ],
   },

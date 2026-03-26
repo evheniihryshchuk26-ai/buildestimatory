@@ -297,6 +297,122 @@ export const concreteStepsCalculator: CalculatorSEOContent = {
   ],
 };
 
+export const gravelCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "This estimate includes a 10% waste factor. Gravel weight varies by type and moisture content. The 1.5 tonnes per cubic metre conversion is an average — actual weight ranges from 1.4 to 1.8 tonnes per cubic metre depending on the aggregate. Always confirm quantities with your supplier before ordering.",
+  howToUse: [
+    "Measure the length of the area you need to cover in metres.",
+    "Measure the width of the area in metres.",
+    "Enter the desired gravel depth in millimetres — 100 mm is standard for most applications, 150 to 200 mm for driveways.",
+    "Click Calculate to get cubic metres and tonnes with a built-in 10% waste factor.",
+  ],
+  materialInfo:
+    "Gravel is a loose aggregate of rock fragments used for driveways, paths, drainage, landscaping, and as a sub-base beneath concrete and tarmac. In the UK it is commonly referred to as aggregate, shingle, or ballast depending on the application and region.\n\nThe most common gravel types available from UK builders merchants are 20 mm gravel (the standard all-purpose aggregate), 10 mm pea shingle (rounded stones popular for paths, patios, and decorative beds), and MOT Type 1 (a graded crushed stone sub-base material that compacts firmly and is the standard specification for driveways, parking areas, and beneath concrete slabs). Decorative aggregates such as golden gravel, plum slate, and Cotswold chippings are widely used for front gardens and feature areas.\n\nGravel is sold by the tonne or by the bulk bag (approximately 0.5 m³ or 0.75 to 0.85 tonnes per bag). One cubic metre of gravel weighs approximately 1.5 tonnes, though this varies — MOT Type 1 is heavier at about 1.8 tonnes per cubic metre, whilst pea shingle is lighter at roughly 1.4 tonnes per cubic metre. Typical UK pricing ranges from £25 to £60 per tonne for standard aggregates at Jewson, Travis Perkins, or Wickes. Bulk bags (850 kg) cost £40 to £90 each and are convenient for smaller projects. Loose tipped delivery is the most economical option for larger quantities, typically costing £150 to £350 for a 10-tonne load including haulage within 20 miles.\n\nFor driveways, the standard UK approach is a two-layer system: 150 mm of compacted MOT Type 1 as a sub-base, topped with 50 to 75 mm of 20 mm decorative gravel or self-binding gravel. Self-binding gravel (such as Breedon gravel or hoggin) contains clay fines that bind together when compacted and wetted, creating a firm surface that resists displacement. For simple paths, borders, and landscaping beds, a single layer of 30 to 50 mm over a weed membrane is sufficient. Local quarries often offer the best prices for large quantities and may stock regional stone types not available at national merchants.",
+  nextSteps: [
+    { label: "Driveway Gravel Calculator", href: "/calculators/foundation/driveway-gravel-calculator/" },
+    { label: "Concrete Slab Calculator", href: "/calculators/foundation/concrete-slab-calculator/" },
+    { label: "Concrete Footing Calculator", href: "/calculators/foundation/concrete-footing-calculator/" },
+  ],
+  installationTips: [
+    "Remove all topsoil and organic material before laying aggregate — organic matter decomposes and causes settling.",
+    "Install a heavy-duty weed membrane over the compacted subgrade to prevent gravel from mixing with the soil below.",
+    "Spread gravel in 50 to 75 mm lifts and compact each layer with a plate compactor or vibrating roller before adding the next.",
+    "Ensure the finished surface has a slight fall (1:80 minimum) so rainwater drains away rather than pooling.",
+    "Use metal or timber edging to contain the gravel and prevent migration into adjacent lawn or borders.",
+  ],
+  commonMistakes: [
+    "Using rounded pea shingle for driveways — it does not compact and shifts under tyre weight. Use angular crushed stone or MOT Type 1 instead.",
+    "Not removing organic topsoil — grass and roots beneath the gravel will decompose and create sinkholes.",
+    "Skipping the compaction step — uncompacted aggregate shifts and develops ruts quickly, especially under vehicle traffic.",
+    "Applying gravel too thin — less than 75 mm will not provide adequate coverage and you will see the subgrade through the stone.",
+    "Not accounting for delivery minimums — most quarries and merchants require a 5 to 10-tonne minimum for loose tipped delivery.",
+  ],
+  faqs: [
+    {
+      question: "How much gravel do I need?",
+      answer: "Multiply your project length by width (in metres) to get the area in square metres, then multiply by the depth (in metres) to get cubic metres. One cubic metre covers approximately 10 square metres at 100 mm deep. Add 10% for waste, compaction, and uneven ground. For example, a 6×6 metre area at 100 mm deep needs about 4 m³ (6 tonnes).",
+    },
+    {
+      question: "How much does a cubic metre of gravel weigh?",
+      answer: "One cubic metre of gravel weighs approximately 1,500 kg (1.5 tonnes). The exact weight depends on the stone type: MOT Type 1 is heavier at about 1.8 tonnes per m³, standard 20 mm gravel averages 1.5 tonnes per m³, and pea shingle weighs about 1.4 tonnes per m³. Wet gravel can weigh 10 to 15% more than dry.",
+    },
+    {
+      question: "How many tonnes of gravel do I need?",
+      answer: "Calculate your cubic metres first (length × width × depth in metres), then multiply by 1.5 to convert to tonnes. For example, a 3×6 metre area at 100 mm deep is 1.8 m³, which is approximately 2.7 tonnes. Always order 10% extra to account for compaction and waste.",
+    },
+    {
+      question: "How deep should gravel be?",
+      answer: "The recommended depth depends on the application: 30 to 50 mm for decorative beds and light-use paths, 75 to 100 mm for patios and general areas, 150 to 200 mm for driveways (with a compacted MOT Type 1 sub-base), and 200 to 300 mm for heavy-traffic commercial areas. Compact each layer before adding the next.",
+    },
+    {
+      question: "How much does gravel cost per tonne in the UK?",
+      answer: "Gravel prices range from £25 to £60 per tonne depending on the type and source. MOT Type 1 and standard 20 mm gravel are the most affordable at £25 to £40 per tonne. Pea shingle costs £35 to £55 per tonne. Decorative aggregates such as golden gravel or slate chippings run £50 to £120 per tonne. Delivery adds £50 to £150 per load. Bulk bags (850 kg) cost £40 to £90 each at Jewson, Travis Perkins, or Wickes.",
+    },
+    {
+      question: "What is the difference between MOT Type 1 and gravel?",
+      answer: "MOT Type 1 is a specific graded crushed stone sub-base material to Department for Transport specification, containing a mixture of stone sizes from 40 mm down to fine dust. It compacts into an extremely hard, stable surface and is the required sub-base for driveways, paths, and beneath concrete. Standard gravel is a single-size or decorative aggregate used as a surface finish. For driveways, you typically need both: MOT Type 1 as the sub-base and decorative gravel on top.",
+    },
+  ],
+};
+
+export const drivewayGravelCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "This estimate includes a 10% waste factor. Cost estimates are based on UK averages and vary by region, supplier, and delivery distance. Gravel weight varies by type and moisture content. Always get quotes from local suppliers before ordering.",
+  howToUse: [
+    "Measure the total length of your driveway in metres.",
+    "Enter the driveway width — 3 to 3.5 metres for a single car, 5 to 6 metres for a double-width driveway.",
+    "Enter the gravel depth — 150 mm is standard for driveways, 200 mm for heavy vehicle traffic.",
+    "Select your gravel type and click Calculate for cubic metres, tonnes, and an estimated cost range.",
+  ],
+  materialInfo:
+    "A gravel driveway is one of the most affordable and practical alternatives to block paving, tarmac, or resin-bound surfaces in the UK. When properly installed with the correct materials and adequate depth, a gravel driveway can last 15 to 20 years with minimal maintenance and does not require planning permission in most cases (subject to permeable surface requirements under permitted development rules).\n\nThe best gravel driveway is built in two layers. The bottom layer (100 to 150 mm) uses compacted MOT Type 1 crushed stone sub-base, which provides drainage, stability, and load distribution. The top layer (50 to 75 mm) uses a surface aggregate — either 20 mm angular gravel, self-binding gravel, or decorative chippings. Each layer must be spread and compacted separately using a plate compactor or vibrating roller.\n\nMOT Type 1 (also called crusher run or hardcore) is the standard sub-base aggregate specified by Highways England and local authorities. It compacts into an extremely firm surface. Self-binding gravel (such as Breedon gravel, hoggin, or golden self-binding aggregate) contains natural clay fines that bind together when wetted and compacted, creating a surface that resists displacement under tyres. Standard 20 mm angular gravel is the most common decorative surface — its angular edges lock together under traffic. Pea shingle looks attractive but shifts under tyres and is not recommended as a driveway surface.\n\nDriveway gravel costs £8 to £25 per square metre depending on depth and material choice. A typical 3×10 metre single-car gravel driveway costs £500 to £1,200 for materials only. Professional installation including excavation, membrane, sub-base, and surface aggregate typically costs £40 to £80 per square metre. Annual maintenance includes raking displaced stone back into ruts and adding a 25 to 50 mm top-up layer every 3 to 5 years. Suppliers include Jewson, Travis Perkins, Wickes, and local quarries.",
+  nextSteps: [
+    { label: "Gravel Calculator", href: "/calculators/foundation/gravel-calculator/" },
+    { label: "Concrete Slab Calculator", href: "/calculators/foundation/concrete-slab-calculator/" },
+  ],
+  installationTips: [
+    "Excavate to a depth of at least 200 mm below the finished level to accommodate sub-base and surface aggregate.",
+    "Grade the driveway with a minimum 1:80 crossfall so rainwater drains to the edges rather than pooling — this is especially important under UK Building Regulations for permeable surfaces.",
+    "Install a heavy-duty woven geotextile membrane over the excavated subgrade to prevent aggregate from mixing with the soil below.",
+    "Spread and compact MOT Type 1 sub-base in 75 mm lifts using a plate compactor before adding the surface layer.",
+    "Install metal or timber edging along both sides to prevent gravel migration into adjacent lawn or borders.",
+    "Consider a gravel grid (cellular confinement system) for the surface layer to reduce stone displacement and improve accessibility.",
+  ],
+  commonMistakes: [
+    "Using rounded pea shingle as the driving surface — its smooth shape does not compact and stones scatter under tyres. Use angular crushed stone instead.",
+    "Dumping gravel directly on topsoil without excavating — organic soil decomposes and causes sinkholes and mud mixing.",
+    "Applying only 50 mm of aggregate — this is too thin for vehicle traffic and will rut through to the subgrade quickly.",
+    "Skipping the membrane layer — without it, gravel sinks into soft clay soil within 1 to 2 years and you lose half your stone.",
+    "Not compacting the sub-base — loose MOT Type 1 settles unevenly and develops ruts and potholes within weeks of use.",
+  ],
+  faqs: [
+    {
+      question: "How much gravel do I need for a driveway?",
+      answer: "A standard single-car driveway (3 m wide by 10 m long at 150 mm deep) needs approximately 5 m³ (7.5 tonnes) of aggregate in total — roughly 3.5 m³ of MOT Type 1 sub-base and 1.5 m³ of surface gravel. A double-width driveway (6×10 m at 150 mm deep) needs approximately 10 m³ (15 tonnes). These amounts include a 10% waste factor.",
+    },
+    {
+      question: "How much does a gravel driveway cost in the UK?",
+      answer: "Materials for a gravel driveway cost £8 to £25 per square metre depending on aggregate type and depth. A 3×10 m single-car driveway costs £500 to £1,200 for materials. Professional installation with excavation, membrane, sub-base, and compaction typically costs £40 to £80 per m², putting the total installed cost at £1,200 to £2,400 for a single-car driveway.",
+    },
+    {
+      question: "What is the best gravel for a driveway in the UK?",
+      answer: "Angular 20 mm gravel is the best all-purpose driveway surface because its edges interlock when compacted. Self-binding gravel (Breedon, hoggin) is even better as it creates a near-solid surface when wetted and rolled. MOT Type 1 is essential as the sub-base layer beneath any surface aggregate. Avoid pea shingle and rounded decorative stones for driving surfaces.",
+    },
+    {
+      question: "How deep should gravel be for a driveway?",
+      answer: "A gravel driveway should have 100 to 150 mm of compacted MOT Type 1 sub-base plus 50 to 75 mm of surface aggregate, giving a total depth of 150 to 225 mm. For heavy vehicles or commercial use, increase the sub-base to 200 mm. Always compact each layer before adding the next.",
+    },
+    {
+      question: "Do I need planning permission for a gravel driveway?",
+      answer: "In most cases, no. Gravel driveways are classified as permeable surfaces and fall under permitted development rights, so planning permission is not required. However, if you are paving over more than 5 m² of your front garden with a non-permeable surface, planning permission is needed under the 2008 amendments to permitted development rules. Gravel is inherently permeable, so it typically qualifies without permission.",
+    },
+    {
+      question: "How long does a gravel driveway last?",
+      answer: "A properly installed gravel driveway lasts 15 to 20 years before needing a major refresh. Annual maintenance includes raking displaced stone back into low spots and adding a 25 to 50 mm top-up layer every 3 to 5 years. The MOT Type 1 sub-base can last indefinitely if properly installed with a geotextile membrane and adequate drainage.",
+    },
+  ],
+};
+
 // ─── FLOOR FRAMING ──────────────────────────────────────────────────────────
 
 export const rimJoistCalculator: CalculatorSEOContent = {
@@ -1791,6 +1907,8 @@ export const registryGB: Record<string, Record<string, CalculatorSEOContent>> = 
     "concrete-footing-calculator": concreteFootingCalculator,
     "concrete-column-calculator": concreteColumnCalculator,
     "concrete-steps-calculator": concreteStepsCalculator,
+    "gravel-calculator": gravelCalculator,
+    "driveway-gravel-calculator": drivewayGravelCalculator,
   },
   "floor-framing": {
     "rim-joist-calculator": rimJoistCalculator,

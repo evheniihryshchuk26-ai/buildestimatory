@@ -332,6 +332,122 @@ export const concreteStepsCalculator: CalculatorSEOContent = {
   ],
 };
 
+export const gravelCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "Ta kalkulacja zawiera 10% zapas na straty. Waga żwiru zależy od rodzaju i wilgotności. Przelicznik 1,5 tony na metr sześcienny jest średnią — rzeczywista waga wynosi od 1,4 do 1,8 t/m³ w zależności od materiału. Zawsze potwierdzaj ilości u dostawcy przed zamówieniem.",
+  howToUse: [
+    "Zmierz długość powierzchni do pokrycia w metrach.",
+    "Zmierz szerokość powierzchni w metrach.",
+    "Wprowadź żądaną grubość warstwy żwiru w centymetrach — 10 cm to standard dla większości zastosowań, 15–20 cm dla podjazdów.",
+    "Kliknij Oblicz, aby uzyskać metry sześcienne i tony z wliczonym 10% zapasem na straty.",
+  ],
+  materialInfo:
+    "Żwir to luźne kruszywo z fragmentów skalnych stosowane na podjazdy, ścieżki, drenaże, tereny zielone oraz jako podbudowa pod płyty betonowe i nawierzchnie asfaltowe. W Polsce rozróżnia się kilka rodzajów kruszywa w zależności od granulacji i zastosowania: żwir (kruszywo naturalne zaokrąglone o frakcji 8–63 mm), kruszywo łamane/tłuczeń (kruszywo z kruszenia o ostrych krawędziach), podsypka/mieszanka (kruszywo 0–31,5 mm z piaskiem i pyłami, które doskonale się zagęszcza) oraz pospółka (niefrakcjonowane kruszywo naturalne).\n\nNajpopularniejsze typy kruszywa dostępne w polskich składach budowlanych to: tłuczeń 31,5–63 mm (standardowe kruszywo do podbudów i drenażu), żwirek 8–16 mm (zaokrąglone kamyki na ścieżki i rabaty), kliniec 0–31,5 mm (kruszywo podbudowowe, które zagęszcza się w twardą powierzchnię — odpowiednik stabilizacji) oraz kruszywo dekoracyjne (grys granitowy, bazaltowy, marmurowy, otoczaki) do ogrodów i powierzchni reprezentacyjnych.\n\nŻwir sprzedaje się na tony lub metry sześcienne. Metr sześcienny żwiru waży ok. 1,5 tony, choć waga zależy od typu: kliniec jest cięższy — ok. 1,7–1,8 t/m³, żwirek zaokrąglony lżejszy — ok. 1,4 t/m³. Typowe ceny w Polsce to 30–80 zł/tonę za kruszywo standardowe w żwirowniach i składach budowlanych takich jak Castorama, OBI, PSB Mrówka czy lokalne hurtownie. Worki 25 kg (big bag 1 m³ lub luzem) kosztują więcej za m³, ale pozwalają uniknąć minimum dostawy. Dostawa wywrotką to najtańsza opcja przy dużych ilościach — 200–500 zł za ładunek 10 ton w promieniu 30 km.\n\nNa podjazdy standardowe podejście w Polsce to dwie warstwy: 15 cm zagęszczonego klińca 0–31,5 mm jako podbudowa, pokrytego 5–8 cm żwiru dekoracyjnego lub tłucznia. Na ścieżki piesze, obrzeża i rabaty wystarczy jedna warstwa 5–8 cm na geowłókninie. Lokalne żwirownie często oferują najlepsze ceny na duże ilości i mogą mieć regionalne rodzaje kamienia niedostępne w sieciach marketów.",
+  nextSteps: [
+    { label: "Kalkulator Żwiru na Podjazd", href: "/calculators/foundation/driveway-gravel-calculator/" },
+    { label: "Kalkulator Płyty Betonowej", href: "/calculators/foundation/concrete-slab-calculator/" },
+    { label: "Kalkulator Ławy Fundamentowej", href: "/calculators/foundation/concrete-footing-calculator/" },
+  ],
+  installationTips: [
+    "Usunąć całą warstwę ziemi urodzajnej i materię organiczną przed ułożeniem żwiru — materia organiczna rozkłada się i powoduje osiadanie.",
+    "Ułożyć geowłókninę na zagęszczonym podłożu, aby zapobiec mieszaniu się żwiru z gruntem pod spodem.",
+    "Rozsypywać żwir warstwami po 5–8 cm i zagęszczać każdą warstwę zagęszczarką płytową przed nasypaniem kolejnej.",
+    "Zapewnić spadek powierzchni (minimum 1–2%), aby woda opadowa odpływała, a nie stagnowała.",
+    "Zastosować obrzeża metalowe, drewniane lub betonowe, aby utrzymać żwir na miejscu i zapobiec jego migracji na sąsiednie tereny.",
+  ],
+  commonMistakes: [
+    "Stosowanie zaokrąglonego żwirku na podjazdy — nie zagęszcza się i przesuwa pod ciężarem kół. Używać kruszywa łamanego lub klińca.",
+    "Brak usunięcia ziemi urodzajnej — trawa i korzenie pod żwirem rozkładają się i tworzą zapadliska.",
+    "Pominięcie zagęszczania — niezagęszczone kruszywo przesuwa się i szybko tworzą się koleiny.",
+    "Zbyt cienka warstwa — mniej niż 8 cm nie zapewnia odpowiedniego pokrycia i podłoże będzie widoczne przez kamień.",
+    "Nieuwzględnienie minimum dostawy — większość żwirowni wymaga zamówienia od 5 do 10 ton na dostawę wywrotką.",
+  ],
+  faqs: [
+    {
+      question: "Ile żwiru potrzebuję?",
+      answer: "Pomnóż długość przez szerokość (w metrach), aby uzyskać powierzchnię w m², następnie pomnóż przez grubość (w metrach), aby uzyskać metry sześcienne. Metr sześcienny pokrywa ok. 10 m² przy grubości 10 cm. Dodaj 10% na straty, zagęszczenie i nierówności terenu. Na przykład powierzchnia 6×6 m przy 10 cm grubości wymaga ok. 4 m³ (6 ton).",
+    },
+    {
+      question: "Ile waży metr sześcienny żwiru?",
+      answer: "Metr sześcienny żwiru waży ok. 1500 kg (1,5 tony). Dokładna waga zależy od typu: kliniec jest cięższy — ok. 1,7–1,8 t/m³, standardowy tłuczeń waży ok. 1,5 t/m³, a żwirek zaokrąglony ok. 1,4 t/m³. Mokry żwir może ważyć 10–15% więcej niż suchy.",
+    },
+    {
+      question: "Ile ton żwiru potrzebuję?",
+      answer: "Najpierw oblicz metry sześcienne (długość × szerokość × grubość w metrach), następnie pomnóż przez 1,5, aby przeliczyć na tony. Na przykład powierzchnia 3×6 m przy 10 cm grubości to 1,8 m³, czyli ok. 2,7 tony. Zawsze zamawiaj 10% więcej na zagęszczenie i straty.",
+    },
+    {
+      question: "Jaka grubość warstwy żwiru jest potrzebna?",
+      answer: "Zalecana grubość zależy od zastosowania: 5–8 cm na rabaty dekoracyjne i lekkie ścieżki, 8–10 cm na patia i obszary ogólne, 15–20 cm na podjazdy (z zagęszczoną podbudową z klińca) i 20–30 cm na tereny komercyjne o dużym natężeniu ruchu. Zagęszczaj każdą warstwę przed nasypaniem kolejnej.",
+    },
+    {
+      question: "Ile kosztuje żwir w Polsce?",
+      answer: "Ceny żwiru wynoszą od 30 do 80 zł/tonę w zależności od rodzaju i źródła. Kliniec i tłuczeń to najtańsze opcje — 30–60 zł/tonę z żwirowni. Żwirek zaokrąglony kosztuje 40–70 zł/tonę. Kruszywo dekoracyjne (grys granitowy, bazaltowy) to 80–200 zł/tonę. Dostawa dodaje 150–400 zł za ładunek. Big bagi 1 m³ kosztują 80–200 zł w Castoramie, OBI czy PSB Mrówka.",
+    },
+    {
+      question: "Jaka jest różnica między klińcem a żwirem?",
+      answer: "Kliniec (mieszanka 0–31,5 mm) to kruszywo łamane z frakcjami od pyłu do kamieni, które zagęszcza się w bardzo twardą, stabilną powierzchnię — jest standardowym materiałem na podbudowy podjazdów, parkingów i pod płyty betonowe. Żwir to kruszywo jednowymiarowe (zaokrąglone lub łamane) stosowane jako warstwa wykończeniowa. Na podjazd potrzebne są oba: kliniec jako podbudowa i żwir dekoracyjny na wierzch.",
+    },
+  ],
+};
+
+export const drivewayGravelCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "Ta kalkulacja zawiera 10% zapas na straty. Szacunki kosztów oparte są na polskich średnich i różnią się znacznie w zależności od regionu, dostawcy i odległości dostawy. Waga żwiru zależy od rodzaju i wilgotności. Zawsze uzyskaj wyceny od lokalnych dostawców przed zamówieniem.",
+  howToUse: [
+    "Zmierz całkowitą długość podjazdu w metrach.",
+    "Wprowadź szerokość podjazdu — 3–3,5 m na jedno auto, 5–6 m na podjazd dwupasmowy.",
+    "Wprowadź grubość warstwy żwiru — 15 cm to standard, 20 cm dla ciężkich pojazdów.",
+    "Wybierz rodzaj kruszywa i kliknij Oblicz, aby uzyskać metry sześcienne, tony i szacowany zakres kosztów.",
+  ],
+  materialInfo:
+    "Podjazd żwirowy to jedna z najtańszych i najbardziej praktycznych alternatyw dla kostki brukowej, asfaltu czy betonu. Przy prawidłowej instalacji z odpowiednimi materiałami i wystarczającą grubością, podjazd żwirowy może służyć 15–20 lat przy minimalnej konserwacji i w większości gmin nie wymaga pozwolenia na budowę.\n\nNajlepszy podjazd żwirowy buduje się w dwóch warstwach. Warstwa dolna (10–15 cm) to zagęszczony kliniec 0–31,5 mm (mieszanka kruszywa łamanego z pyłami), który zapewnia drenaż, stabilność i rozkład obciążeń. Warstwa górna (5–8 cm) to kruszywo dekoracyjne — tłuczeń łamany, grys lub żwir — w zależności od pożądanej estetyki. Każda warstwa musi być rozsypana i zagęszczona oddzielnie zagęszczarką płytową lub walcem.\n\nKliniec 0–31,5 mm jest najpopularniejszym materiałem podbudowy, ponieważ jego zróżnicowane frakcje incastrują się pod zagęszczaniem, tworząc niezwykle stabilne podłoże. Na powierzchnię użytkową tłuczeń 16–31,5 mm jest standardem — jego ostre krawędzie blokują się pod naciskiem kół. Żwirek zaokrąglony wygląda estetycznie, ale przesuwa się pod oponami i nie jest zalecany jako główna powierzchnia jezdna.\n\nKoszt podjazdu żwirowego to 30–80 zł/m² w zależności od grubości i wybranego materiału. Typowy podjazd na jedno auto (3×10 m) kosztuje 1.000–3.000 zł za same materiały. Profesjonalna instalacja ze skopaniem, geowłókniną, podbudową i zagęszczeniem dodaje 40–100 zł/m². Roczna konserwacja polega na grabieniu przemieszczonego żwiru w koleiny oraz dosypywaniu warstwy 3–5 cm co 3–5 lat. Dostawcy to lokalne żwirownie, Castorama, OBI, PSB Mrówka i regionalne składy budowlane.",
+  nextSteps: [
+    { label: "Kalkulator Żwiru", href: "/calculators/foundation/gravel-calculator/" },
+    { label: "Kalkulator Płyty Betonowej", href: "/calculators/foundation/concrete-slab-calculator/" },
+  ],
+  installationTips: [
+    "Wykopać na głębokość co najmniej 20–25 cm poniżej poziomu docelowego, aby pomieścić podbudowę i warstwę powierzchniową.",
+    "Zapewnić spadek 1–2% od domu/garażu, aby woda opadowa odpływała — stojąca woda na żwirze tworzy dziury, a mróz je pogarsza.",
+    "Ułożyć geowłókninę na wykopanym podłożu, aby zapobiec mieszaniu się kruszywa z gruntem — szczególnie ważne na polskich gliniastych gruntach.",
+    "Rozsypać i zagęścić kliniec warstwami po 8 cm zagęszczarką płytową przed nasypaniem warstwy powierzchniowej.",
+    "Zamontować obrzeża metalowe, drewniane lub betonowe wzdłuż obu krawędzi, aby zapobiec migracji żwiru na trawnik.",
+    "Rozważyć kratki stabilizujące (geokraty) na warstwę powierzchniową, aby zmniejszyć przesuwanie się kamieni i poprawić przejezdność.",
+  ],
+  commonMistakes: [
+    "Stosowanie zaokrąglonego żwirku jako powierzchni jezdnej — okrągły kształt nie zagęszcza się i kamienie rozlatują się pod kołami. Stosować tłuczeń łamany.",
+    "Sypanie żwiru bezpośrednio na ziemię urodzajną bez kopania — gleba organiczna rozkłada się i tworzy zapadliska i błoto.",
+    "Nałożenie tylko 5–8 cm kruszywa — to za mało na ruch pojazdów, powstaną koleiny sięgające podłoża.",
+    "Pominięcie geowłókniny — bez niej żwir zapada się w miękki gliniasty grunt w ciągu 1–2 lat i traci się połowę materiału.",
+    "Brak zagęszczania między warstwami — luźny kliniec osiada nierównomiernie i tworzą się dziury i koleiny w ciągu kilku tygodni.",
+  ],
+  faqs: [
+    {
+      question: "Ile żwiru potrzebuję na podjazd?",
+      answer: "Standardowy podjazd na jedno auto (3 m × 10 m przy 15 cm grubości) wymaga ok. 5 m³ (7,5 tony) kruszywa — ok. 3,5 m³ klińca na podbudowę i 1,5 m³ żwiru powierzchniowego. Podjazd dwupasmowy (6×10 m przy 15 cm) wymaga ok. 10 m³ (15 ton). Te ilości zawierają 10% zapas na straty.",
+    },
+    {
+      question: "Ile kosztuje podjazd żwirowy w Polsce?",
+      answer: "Materiały na podjazd żwirowy kosztują 30–80 zł/m² w zależności od rodzaju kruszywa i grubości. Podjazd 3×10 m kosztuje 1.000–3.000 zł za materiały. Profesjonalna instalacja ze skopaniem, geowłókniną i zagęszczeniem kosztuje zwykle 50–120 zł/m², co daje łączny koszt 2.500–6.000 zł za podjazd na jedno auto.",
+    },
+    {
+      question: "Jaki żwir jest najlepszy na podjazd?",
+      answer: "Tłuczeń łamany 16–31,5 mm jest najlepszą powierzchnią jezdną, ponieważ jego krawędzie blokują się pod zagęszczeniem. Kliniec 0–31,5 mm jest niezbędny jako warstwa podbudowy. Grys granitowy lub bazaltowy to atrakcyjne opcje dekoracyjne. Unikaj zaokrąglonego żwirku na powierzchnie jezdne.",
+    },
+    {
+      question: "Jaka grubość żwiru na podjazd?",
+      answer: "Podjazd żwirowy powinien mieć 10–15 cm zagęszczonego klińca jako podbudowę plus 5–8 cm kruszywa powierzchniowego, dając łącznie 15–23 cm. Na ciężkie pojazdy lub użytek komercyjny zwiększ podbudowę do 20 cm. Zawsze zagęszczaj każdą warstwę przed nasypaniem kolejnej.",
+    },
+    {
+      question: "Czy potrzebuję pozwolenia na podjazd żwirowy?",
+      answer: "W większości gmin w Polsce podjazd żwirowy nie wymaga pozwolenia na budowę ani zgłoszenia, ponieważ jest powierzchnią przepuszczalną i nie stanowi obiektu budowlanego. Jednak jeśli podjazd wiąże się ze zmianą zagospodarowania terenu lub jest w strefie ochrony konserwatorskiej, może być wymagane zgłoszenie. Zawsze sprawdź w swoim urzędzie gminy.",
+    },
+    {
+      question: "Jak długo wytrzymuje podjazd żwirowy?",
+      answer: "Prawidłowo wykonany podjazd żwirowy służy 15–20 lat przed koniecznością pełnej renowacji. Roczna konserwacja polega na grabieniu przemieszczonego żwiru w zagłębienia i dosypywaniu warstwy 3–5 cm co 3–5 lat. Podbudowa z klińca może trwać praktycznie w nieskończoność, jeśli jest prawidłowo zainstalowana z geowłókniną i odpowiednim drenażem.",
+    },
+  ],
+};
+
 // ─── FLOOR FRAMING ──────────────────────────────────────────────────────────
 
 export const rimJoistCalculator: CalculatorSEOContent = {
@@ -1960,6 +2076,8 @@ export const registryPL: Record<string, Record<string, CalculatorSEOContent>> = 
     "concrete-footing-calculator": concreteFootingCalculator,
     "concrete-column-calculator": concreteColumnCalculator,
     "concrete-steps-calculator": concreteStepsCalculator,
+    "gravel-calculator": gravelCalculator,
+    "driveway-gravel-calculator": drivewayGravelCalculator,
   },
   "floor-framing": {
     "rim-joist-calculator": rimJoistCalculator,

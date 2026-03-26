@@ -59,6 +59,12 @@ const guides: GuidesTranslations = {
           "Composite vs bois pour votre terrasse : coût, durabilité, entretien, esthétique et durée de vie. Guide pour choisir le bon matériau selon votre projet et votre climat.",
         href: "/guides/composite-vs-wood-decking",
       },
+      {
+        title: "Combien coûte le gravier ? Guide des prix 2026",
+        description:
+          "Le gravier coûte 15–40 EUR la tonne. Guide complet des prix pour allées, terrasses, chemins, drainage et aménagement avec frais de livraison et calcul des quantités.",
+        href: "/guides/gravel-cost-guide",
+      },
     ],
   },
 
@@ -1329,6 +1335,130 @@ const guides: GuidesTranslations = {
         question: "Peut-on mélanger composite et bois sur une même terrasse ?",
         answer:
           "Oui, et c'est même l'approche standard. La plupart des terrasses utilisent une structure en pin traité classe 4 (poteaux, poutres, lambourdes) avec des lames composite en surface. Le bois traité fournit la résistance structurelle à moindre coût, tandis que le composite offre la surface d'usage sans entretien. Les lambourdes composite existent mais coûtent nettement plus cher que le pin traité.",
+      },
+    ],
+  },
+
+  gravelCost: {
+    title: "Combien coûte le gravier ? Guide des prix 2026",
+    metaDescription:
+      "Le gravier coûte 15–40 EUR la tonne, 25–60 EUR le mètre cube en 2026. Guide complet : gravier concassé, gravier roulé, grave, granit décomposé, galets. Allées, terrasses, chemins, drainage, livraison et calcul des quantités.",
+
+    heroTitle: "Combien coûte le gravier ?",
+    heroSubtitle: "Guide des prix 2026",
+    heroDescription:
+      "Panorama complet des prix du gravier par type, projet et région en France. Couvre le gravier concassé, le gravier roulé, la grave, le granit décomposé et les galets de rivière avec frais de livraison, commandes minimales et astuces pour économiser.",
+
+    quickAnswerHeading: "Réponse rapide",
+    quickAnswerText:
+      "Le gravier coûte 15 à 40 EUR la tonne ou 25 à 60 EUR le mètre cube en 2026, selon le type et la région. La grave et le concassé sont les moins chers à 15–25 EUR/tonne. Le gravier roulé coûte 25–45 EUR/tonne. Les pierres décoratives comme les galets coûtent 40–120 EUR/tonne. La livraison ajoute 50–150 EUR par camion pour des distances jusqu'à 30 km, et la plupart des fournisseurs exigent une commande minimale de 5 à 10 tonnes.",
+
+    gravelTypesHeading: "Types de gravier et prix",
+    gravelTypesIntro:
+      "Tous les graviers ne se valent pas. Chaque type a un poids, des caractéristiques de compactage et un prix différents. Voici les types les plus courants et leurs prix 2026 en France :",
+    gravelTypesColType: "Type de gravier",
+    gravelTypesColCost: "Prix par tonne",
+    gravelTypesColBestFor: "Idéal pour",
+    gravelTypesRows: [
+      { type: "Gravier concassé (10/20 mm)", cost: "15 – 30 EUR", bestFor: "Allées, drainage, sous-couche. Arêtes vives qui s'imbriquent pour la stabilité." },
+      { type: "Gravier roulé (8–16 mm)", cost: "25 – 45 EUR", bestFor: "Chemins, terrasses, massifs. Lisse et arrondi, aspect naturel." },
+      { type: "Grave (0/31,5 mm)", cost: "12 – 22 EUR", bestFor: "Allées, parkings. Contient des fines qui se compactent en surface dure." },
+      { type: "Granit décomposé", cost: "25 – 50 EUR", bestFor: "Sentiers, aménagement paysager. Se compacte bien, aspect naturel." },
+      { type: "Galets de rivière (30–80 mm)", cost: "40 – 120 EUR", bestFor: "Aménagement paysager, rivières sèches, décoration. Ne se compacte pas." },
+      { type: "Gravier de marbre blanc", cost: "60 – 160 EUR", bestFor: "Décoration, bordures, espaces d'accent. Prix premium." },
+    ],
+
+    costByProjectHeading: "Coût du gravier par type de projet",
+    costByProjectIntro:
+      "Ce que vous payez dépend de la taille du projet, de l'épaisseur et du type de gravier. Voici les coûts typiques 2026 pour les projets résidentiels courants :",
+    costByProjectColProject: "Projet",
+    costByProjectColTypical: "Coût typique",
+    costByProjectColNotes: "Notes",
+    costByProjectRows: [
+      { project: "Allée carrossable (3,5×15 m)", typical: "400 – 1 200 EUR", notes: "8–12 tonnes de concassé sur 15 cm. Installation pro en supplément." },
+      { project: "Terrasse (4×4 m)", typical: "150 – 400 EUR", notes: "2–3 tonnes de gravier roulé sur 8–10 cm. Bordures en plus." },
+      { project: "Chemin (1×10 m)", typical: "60 – 180 EUR", notes: "0,5–1,5 tonne sur 8 cm. Gravier roulé ou granit décomposé." },
+      { project: "Drainage (15 m)", typical: "100 – 300 EUR", notes: "2–4 tonnes de concassé 10/20. Géotextile séparé." },
+      { project: "Massif paysager (3×6 m)", typical: "150 – 500 EUR", notes: "2–3 tonnes de pierre décorative sur 8 cm." },
+      { project: "Dalle pour abri de jardin (3×4 m)", typical: "100 – 300 EUR", notes: "2–3 tonnes sur 10–15 cm. Concassé avec compactage." },
+      { project: "Place de stationnement (3×6 m)", typical: "200 – 600 EUR", notes: "4–6 tonnes sur 15 cm. Grave recommandée." },
+    ],
+
+    deliveryCostsHeading: "Frais de livraison et commandes minimales",
+    deliveryCostsIntro:
+      "La livraison représente une part importante du coût, surtout pour les petites commandes. Bien comprendre les tarifs et minimums aide à budgéter correctement.",
+    deliveryCostsText1:
+      "La plupart des carrières et négoces de matériaux facturent 50 à 150 EUR par livraison pour des distances jusqu'à 30 km. Au-delà, comptez 2 à 4 EUR par kilomètre supplémentaire. Un camion standard transporte 10 à 15 tonnes. Beaucoup de fournisseurs proposent des demi-charges, mais le tarif de livraison reste identique quelle que soit la quantité.",
+    deliveryCostsText2:
+      "Les commandes minimales varient mais se situent généralement entre 5 et 10 tonnes pour la livraison. Certains proposent 1 à 2 tonnes avec un supplément (20–50 EUR). Pour de très petites quantités sous 1 tonne, l'enlèvement en propre avec une remorque est la solution la plus économique — la plupart des carrières permettent le chargement sur place.",
+    deliveryCostsText3:
+      "Pour économiser sur la livraison : regroupez les commandes avec les voisins, planifiez l'achat en basse saison (automne-hiver) ou enlevez le gravier vous-même. Une remorque de 750 kg contient environ 0,4 m³ par voyage. Une remorque de 2 tonnes transporte 1,2 m³. La location d'une benne remorque (50–100 EUR/jour) permet de transporter 2 à 3 m³.",
+
+    howToCalculateHeading: "Comment calculer la quantité nécessaire",
+    howToCalculateIntro:
+      "Calculer la bonne quantité de gravier évite les livraisons supplémentaires coûteuses ou les excédents. Suivez ces étapes :",
+    howToCalculateItems: [
+      "Mesurez la surface : Multipliez longueur par largeur en mètres pour obtenir la surface en m². Pour les formes irrégulières, décomposez en rectangles.",
+      "Déterminez l'épaisseur : Standard : 5–8 cm pour chemins et massifs, 10 cm pour terrasses, 15–20 cm pour allées carrossables. Convertissez les cm en mètres en divisant par 100.",
+      "Calculez les mètres cubes : Longueur × largeur × épaisseur (tout en mètres) = m³.",
+      "Convertissez en tonnes : Multipliez les m³ par le facteur de poids — 1,8 pour le concassé, 1,7 pour le roulé, 2,0 pour la grave, 1,9 pour le granit décomposé.",
+      "Ajoutez 10 % de perte : Multipliez par 1,1 pour le compactage, les pertes et les irrégularités du terrain.",
+      "Exemple : Une allée de 3,5 × 15 m sur 15 cm = 3,5 × 15 × 0,15 = 7,9 m³ × 1,8 = 14,2 tonnes. Avec 10 % : commandez 15,6 tonnes.",
+    ],
+    howToCalculateSummary:
+      "Astuce : Utilisez notre Calculateur de gravier gratuit. Entrez vos dimensions et obtenez instantanément m³, tonnage et estimations de coûts.",
+
+    savingTipsHeading: "Comment économiser sur le gravier",
+    savingTipsIntro:
+      "Le gravier est déjà l'un des revêtements les moins chers, mais ces astuces permettent d'économiser davantage :",
+    savingTipsItems: [
+      "Achetez en grande quantité : Le prix à la tonne baisse nettement pour les grosses commandes. À partir de 15+ tonnes, les remises atteignent 10–20 %.",
+      "Choisissez une pierre locale : Le gravier de carrières proches coûte bien moins cher. Le transport est le deuxième facteur de prix après le type de pierre.",
+      "Commandez hors saison : L'automne et l'hiver sont calmes. De nombreux fournisseurs offrent 10–15 % de remise pendant ces mois.",
+      "Enlevez vous-même : Avec une remorque, vous éliminez les 50–150 EUR de livraison. Pour les petits projets, cela représente 20–30 % d'économie.",
+      "Utilisez de la grave plutôt que de la pierre décorative : La grave coûte 12–22 EUR/tonne contre 40–120 EUR pour les options décoratives. Pour les allées, elle est plus performante et moins chère.",
+      "Comparez plusieurs fournisseurs : Les prix varient de 30–50 % entre fournisseurs d'une même zone. Demandez au moins 3 devis.",
+    ],
+
+    calculatorCtaHeading: "Calculez vos besoins en gravier",
+    calculatorCtaText: "Utilisez nos calculateurs gratuits pour estimer la quantité exacte et le coût de votre projet.",
+    calculatorLinks: [
+      { label: "Calculateur de gravier", href: "/calculators/foundation/gravel-calculator", description: "Calculez m³ et tonnes pour toute surface avec estimation du coût." },
+      { label: "Calculateur gravier pour allée", href: "/calculators/foundation/driveway-gravel-calculator", description: "Estimez le gravier par type pour allées avec fourchette de prix et livraison." },
+      { label: "Calculateur de dalle béton", href: "/calculators/foundation/concrete-slab-calculator", description: "Vous envisagez du béton ? Calculez m³ et nombre de sacs." },
+    ],
+
+    faqHeading: "Questions fréquentes",
+    faqs: [
+      {
+        question: "Combien coûte une tonne de gravier en 2026 ?",
+        answer:
+          "Le gravier coûte 15 à 40 EUR la tonne en 2026 pour les types courants. La grave est la moins chère à 12–22 EUR/tonne. Le concassé 10/20 coûte 15–30 EUR/tonne. Le gravier roulé coûte 25–45 EUR/tonne. Le granit décomposé va de 25 à 50 EUR/tonne. Les galets décoratifs coûtent 40–120 EUR/tonne. Les prix varient selon la région et le fournisseur.",
+      },
+      {
+        question: "Combien de gravier pour une allée ?",
+        answer:
+          "Une allée carrossable standard (3,5 m × 15 m sur 15 cm) nécessite environ 8 m³ ou 14 tonnes de gravier. Pour une allée double (7 × 15 m), comptez 16 m³ ou 28 tonnes. Utilisez du concassé ou de la grave. Ajoutez 10 % pour le compactage et les pertes. Le coût matériau se situe entre 200 et 600 EUR.",
+      },
+      {
+        question: "Combien coûte un mètre cube de gravier ?",
+        answer:
+          "Un mètre cube de gravier coûte 25 à 60 EUR selon le type. Le concassé se situe à 25–50 EUR/m³. La grave coûte 20–35 EUR/m³. Le gravier roulé coûte 40–75 EUR/m³. Ce sont les prix matériau seul — la livraison (50–150 EUR/camion) est en supplément. Un mètre cube couvre environ 10 m² sur 10 cm d'épaisseur.",
+      },
+      {
+        question: "Quel est le gravier le moins cher ?",
+        answer:
+          "La grave (0/31,5 mm, aussi appelée tout-venant ou GNT) est le gravier le moins cher à 12–22 EUR/tonne. C'est un mélange de concassé et de fines qui se compacte en une surface très dure, idéale pour les allées et parkings. Le concassé simple est l'option suivante à 15–30 EUR/tonne. Les granulats recyclés sont parfois encore moins chers.",
+      },
+      {
+        question: "Combien de gravier par mètre carré ?",
+        answer:
+          "Sur 10 cm d'épaisseur (standard pour la plupart des usages), il faut environ 0,10 m³ ou 0,18 tonne de gravier par m². Sur 5 cm : 0,05 m³/m². Sur 15 cm (allées) : 0,15 m³ ou 0,27 tonne/m². Multipliez par votre surface totale et ajoutez 10 % de perte.",
+      },
+      {
+        question: "Une allée en gravier est-elle moins chère que le béton ou l'enrobé ?",
+        answer:
+          "Oui, nettement. Une allée en gravier coûte 8–20 EUR/m² en matériau (20–50 EUR/m² posée), contre 60–120 EUR/m² pour le béton et 40–80 EUR/m² pour l'enrobé. Une allée de 3,5 × 15 m en gravier coûte 1 000–2 500 EUR posée vs 3 200–6 500 EUR en béton. Toutefois, le gravier demande plus d'entretien et nécessite un rechargement tous les 2–3 ans.",
       },
     ],
   },

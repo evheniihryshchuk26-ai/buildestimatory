@@ -87,6 +87,22 @@ export const categories: CategoryMeta[] = [
         category: "Fundação",
         categorySlug: "foundation",
       },
+      {
+        slug: "gravel-calculator",
+        title: "Calculadora de Brita",
+        description:
+          "Quanta brita preciso? Calculadora grátis para qualquer área — metros cúbicos, toneladas e estimativa de custo com 10% de desperdício.",
+        category: "Fundação",
+        categorySlug: "foundation",
+      },
+      {
+        slug: "driveway-gravel-calculator",
+        title: "Calculadora de Brita para Entrada",
+        description:
+          "Calculadora de brita para entrada de veículos: estime toneladas e custo por tipo — brita, pedrisco, rachão ou saibro com entrega.",
+        category: "Fundação",
+        categorySlug: "foundation",
+      },
     ],
   },
   {

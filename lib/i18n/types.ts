@@ -555,6 +555,45 @@ export interface CompositeVsWoodGuideTranslations {
   faqs: GuideFaq[];
 }
 
+export interface GravelCostGuideTranslations {
+  title: string;
+  metaDescription: string;
+  heroTitle: string;
+  heroSubtitle: string;
+  heroDescription: string;
+  quickAnswerHeading: string;
+  quickAnswerText: string;
+  gravelTypesHeading: string;
+  gravelTypesIntro: string;
+  gravelTypesColType: string;
+  gravelTypesColCost: string;
+  gravelTypesColBestFor: string;
+  gravelTypesRows: { type: string; cost: string; bestFor: string }[];
+  costByProjectHeading: string;
+  costByProjectIntro: string;
+  costByProjectColProject: string;
+  costByProjectColTypical: string;
+  costByProjectColNotes: string;
+  costByProjectRows: { project: string; typical: string; notes: string }[];
+  deliveryCostsHeading: string;
+  deliveryCostsIntro: string;
+  deliveryCostsText1: string;
+  deliveryCostsText2: string;
+  deliveryCostsText3: string;
+  howToCalculateHeading: string;
+  howToCalculateIntro: string;
+  howToCalculateItems: string[];
+  howToCalculateSummary: string;
+  savingTipsHeading: string;
+  savingTipsIntro: string;
+  savingTipsItems: string[];
+  calculatorCtaHeading: string;
+  calculatorCtaText: string;
+  calculatorLinks: { label: string; href: string; description: string }[];
+  faqHeading: string;
+  faqs: GuideFaq[];
+}
+
 export interface GuidesTranslations {
   index: GuidesIndexTranslations;
   spacingGuide: SpacingGuideTranslations;
@@ -565,6 +604,7 @@ export interface GuidesTranslations {
   howMuchPaint: HowMuchPaintGuideTranslations;
   lumberPrices: LumberPricesGuideTranslations;
   compositeVsWood: CompositeVsWoodGuideTranslations;
+  gravelCost: GravelCostGuideTranslations;
   breadcrumbGuides: string;
 }
 

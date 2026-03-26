@@ -59,6 +59,12 @@ const guides: GuidesTranslations = {
           "Composite vs wood decking compared: cost, durability, maintenance, appearance, and lifespan. Learn which deck material is best for your project and climate.",
         href: "/guides/composite-vs-wood-decking",
       },
+      {
+        title: "How Much Does Gravel Cost? 2026 Price Guide",
+        description:
+          "Gravel costs $25\u2013$60 CAD per tonne. Complete price guide for driveways, patios, walkways, drainage, and landscaping with delivery costs and how to calculate amounts.",
+        href: "/guides/gravel-cost-guide",
+      },
     ],
   },
 
@@ -1335,6 +1341,130 @@ const guides: GuidesTranslations = {
         question: "Can I mix composite and wood on the same deck?",
         answer:
           "Yes, many builders use a pressure-treated wood substructure (posts, beams, joists) with composite deck boards and railing on top. This is actually the standard approach since composite boards are designed as a decking surface, not structural members. The treated wood frame provides the structural support at a lower cost than an all-composite system, while the composite surface delivers the low-maintenance benefits where you see and touch the deck.",
+      },
+    ],
+  },
+
+  gravelCost: {
+    title: "How Much Does Gravel Cost? 2026 Price Guide",
+    metaDescription:
+      "Gravel costs $25\u2013$60 CAD per tonne, $35\u2013$85 CAD per cubic metre in 2026. Complete price guide: crushed stone, pea gravel, road base, limestone screenings. Driveways, patios, walkways, drainage, delivery costs, and how to calculate amounts in Canada.",
+
+    heroTitle: "How Much Does Gravel Cost?",
+    heroSubtitle: "2026 Canadian Price Guide",
+    heroDescription:
+      "A complete breakdown of gravel prices by type, project, and region across Canada. Covers crushed stone, pea gravel, road base (Granular A/B), limestone screenings, and river rock with delivery costs, minimum orders, and tips to save money.",
+
+    quickAnswerHeading: "Quick Answer",
+    quickAnswerText:
+      "Gravel costs $25 to $60 CAD per tonne or $35 to $85 CAD per cubic metre in 2026, depending on the type and your province. Granular A/B and crushed stone are the cheapest at $25\u2013$40 CAD per tonne. Pea gravel costs $35\u2013$55 CAD per tonne. Decorative stone like river rock costs $60\u2013$150 CAD per tonne. Delivery adds $75\u2013$200 CAD per load for distances up to 30 km, and most suppliers require a minimum order of 5 to 10 tonnes.",
+
+    gravelTypesHeading: "Gravel Types & Pricing",
+    gravelTypesIntro:
+      "Not all gravel is the same. Each type has different weight, compaction characteristics, and pricing. Here are the most common types and their 2026 Canadian pricing:",
+    gravelTypesColType: "Gravel Type",
+    gravelTypesColCost: "Cost per Tonne (CAD)",
+    gravelTypesColBestFor: "Best For",
+    gravelTypesRows: [
+      { type: "Crushed Stone (19 mm)", cost: "$30 \u2013 $55 CAD", bestFor: "Driveways, drainage, sub-base. Angular edges lock together for stability." },
+      { type: "Pea Gravel (10 mm)", cost: "$35 \u2013 $55 CAD", bestFor: "Walkways, patios, decorative beds. Smooth and rounded." },
+      { type: "Granular A (0/19 mm)", cost: "$25 \u2013 $40 CAD", bestFor: "Driveways, parking pads. Contains fines for compaction. MTO-spec road base." },
+      { type: "Limestone Screenings", cost: "$25 \u2013 $45 CAD", bestFor: "Paths, patio base, levelling. Fine material that packs hard." },
+      { type: "River Rock (25\u201375 mm)", cost: "$60 \u2013 $150 CAD", bestFor: "Landscaping, dry creek beds, decoration. Does not compact." },
+      { type: "White Marble Chips", cost: "$80 \u2013 $200 CAD", bestFor: "Decorative landscaping, borders, accent areas. Premium pricing." },
+    ],
+
+    costByProjectHeading: "Gravel Cost by Project Type",
+    costByProjectIntro:
+      "What you pay depends on project size, depth, and gravel type. Typical 2026 costs for common residential projects in Canada:",
+    costByProjectColProject: "Project",
+    costByProjectColTypical: "Typical Cost (CAD)",
+    costByProjectColNotes: "Notes",
+    costByProjectRows: [
+      { project: "Gravel Driveway (3.5\u00d715 m)", typical: "$600 \u2013 $1,800 CAD", notes: "8\u201312 tonnes of Granular A at 150 mm depth. Pro install extra." },
+      { project: "Patio Area (4\u00d74 m)", typical: "$200 \u2013 $500 CAD", notes: "2\u20133 tonnes of pea gravel at 80\u2013100 mm. Edging extra." },
+      { project: "Walkway (1\u00d710 m)", typical: "$80 \u2013 $250 CAD", notes: "0.5\u20131.5 tonnes at 80 mm. Limestone screenings or pea gravel." },
+      { project: "French Drain (15 m)", typical: "$150 \u2013 $400 CAD", notes: "2\u20134 tonnes of 19 mm clear stone. Geotextile separate." },
+      { project: "Garden Bed (3\u00d76 m)", typical: "$200 \u2013 $600 CAD", notes: "2\u20133 tonnes of decorative stone at 80 mm." },
+      { project: "Shed Pad (3\u00d74 m)", typical: "$150 \u2013 $400 CAD", notes: "2\u20133 tonnes at 100\u2013150 mm. Granular A with compaction." },
+      { project: "Parking Pad (3\u00d76 m)", typical: "$300 \u2013 $800 CAD", notes: "4\u20136 tonnes at 150 mm. Granular A recommended." },
+    ],
+
+    deliveryCostsHeading: "Delivery Costs & Minimum Orders",
+    deliveryCostsIntro:
+      "Delivery is a significant part of gravel cost, especially for smaller orders. Understanding delivery fees and minimums helps with budgeting.",
+    deliveryCostsText1:
+      "Most landscape supply yards and aggregate dealers charge $75 to $200 CAD per delivery for distances up to 30 km. Beyond that, expect $3\u2013$5 CAD per km. A standard tandem dump truck carries 12\u201316 tonnes. Many suppliers offer half-load options, though the delivery fee stays the same.",
+    deliveryCostsText2:
+      "Minimum order requirements vary but typically range from 5 to 10 tonnes for delivery. Some dealers offer 1\u20132 tonne minimums with a surcharge ($25\u2013$50 CAD extra). For very small quantities, picking up gravel yourself in a truck or trailer is the most economical option. Most landscape supply yards allow self-loading.",
+    deliveryCostsText3:
+      "To save on delivery: combine orders with neighbours, buy in spring before the rush (or late fall), or pick up yourself. A half-ton pickup can carry about 0.5 m\u00b3 (700 kg) per load. A 3/4-ton truck handles a full cubic metre (1,400 kg). Renting a dump trailer ($100\u2013$175 CAD/day) lets you haul 2\u20133 m\u00b3 per trip.",
+
+    howToCalculateHeading: "How to Calculate the Amount You Need",
+    howToCalculateIntro:
+      "Getting the right amount prevents costly extra deliveries or leftover material. Follow these steps:",
+    howToCalculateItems: [
+      "Measure your area: Multiply length by width in metres for m\u00b2. For irregular shapes, break into rectangles.",
+      "Determine depth: Standard depths are 50\u201380 mm for walkways and beds, 100 mm for patios, 150\u2013200 mm for driveways. Convert mm to metres by dividing by 1,000.",
+      "Calculate cubic metres: Length \u00d7 width \u00d7 depth (all in metres) = m\u00b3.",
+      "Convert to tonnes: Multiply m\u00b3 by the weight factor \u2014 1.8 for crushed stone, 1.7 for pea gravel, 2.0 for Granular A, 1.9 for limestone screenings.",
+      "Add 10% waste: Multiply by 1.1 for compaction, spillage, and uneven ground.",
+      "Example: A driveway 3.5 \u00d7 15 m at 150 mm = 3.5 \u00d7 15 \u00d7 0.15 = 7.9 m\u00b3 \u00d7 1.8 = 14.2 tonnes. With 10%: order 15.6 tonnes.",
+    ],
+    howToCalculateSummary:
+      "Tip: Use our free Gravel Calculator to skip the math. Enter your dimensions and get instant cubic metre, tonnage, and cost estimates.",
+
+    savingTipsHeading: "How to Save Money on Gravel",
+    savingTipsIntro:
+      "Gravel is already one of the most affordable hardscaping materials, but these tips can help you save even more:",
+    savingTipsItems: [
+      "Buy in bulk: The per-tonne cost drops for larger orders. 15+ tonnes often unlocks 10\u201320% bulk discounts.",
+      "Choose local aggregate: Gravel from nearby pits and quarries costs much less. Transportation is the second-biggest price factor.",
+      "Order off-season: Late fall and early spring often have lower demand. Some suppliers discount 10\u201315%.",
+      "Pick up yourself: With a truck or trailer, you eliminate the $75\u2013$200 CAD delivery fee. For small projects, this saves 20\u201330%.",
+      "Use Granular A instead of decorative stone: Granular A costs $25\u2013$40 CAD/tonne vs $60\u2013$150 for decorative. For driveways and utility pads, it performs better at a fraction of the cost.",
+      "Compare suppliers: Prices vary 30\u201350% between dealers in the same area. Get at least 3 quotes.",
+    ],
+
+    calculatorCtaHeading: "Calculate Your Gravel Needs",
+    calculatorCtaText: "Use our free gravel calculators to estimate the exact amount and cost for your project.",
+    calculatorLinks: [
+      { label: "Gravel Calculator", href: "/calculators/foundation/gravel-calculator", description: "Calculate cubic metres and tonnes for any area with cost estimate." },
+      { label: "Driveway Gravel Calculator", href: "/calculators/foundation/driveway-gravel-calculator", description: "Estimate gravel by type for driveways with cost range and delivery needs." },
+      { label: "Concrete Slab Calculator", href: "/calculators/foundation/concrete-slab-calculator", description: "Planning concrete instead? Calculate cubic metres and bag counts." },
+    ],
+
+    faqHeading: "Frequently Asked Questions",
+    faqs: [
+      {
+        question: "How much does a tonne of gravel cost in Canada in 2026?",
+        answer:
+          "Gravel costs $25 to $60 CAD per tonne in 2026. Granular A is cheapest at $25\u2013$40 CAD/tonne. Crushed stone costs $30\u2013$55 CAD/tonne. Pea gravel costs $35\u2013$55 CAD/tonne. Limestone screenings are $25\u2013$45 CAD/tonne. River rock costs $60\u2013$150 CAD/tonne. Prices vary by province.",
+      },
+      {
+        question: "How much gravel do I need for a driveway in Canada?",
+        answer:
+          "A standard single-car driveway (3.5 m \u00d7 15 m at 150 mm) needs about 8 m\u00b3 or 14 tonnes. A double driveway (7 \u00d7 15 m) needs 16 m\u00b3 or 28 tonnes. Use Granular A or crushed limestone. Add 10% for compaction. Material cost: $400\u2013$1,200 CAD. Note: in cold climates, a deeper base (200 mm+) helps prevent frost heave.",
+      },
+      {
+        question: "How much does a cubic metre of gravel cost in Canada?",
+        answer:
+          "A cubic metre costs $35 to $85 CAD depending on type. Crushed stone averages $40\u2013$75 CAD/m\u00b3. Granular A costs $35\u2013$55 CAD/m\u00b3. Pea gravel costs $50\u2013$85 CAD/m\u00b3. Delivery ($75\u2013$200 CAD/load) is additional. One m\u00b3 covers about 10 m\u00b2 at 100 mm depth.",
+      },
+      {
+        question: "What is the cheapest gravel in Canada?",
+        answer:
+          "Granular A (also called road base or pit run) is the cheapest at $25\u2013$40 CAD/tonne. It is a Ministry of Transportation spec blend that compacts into a very hard surface. Recycled concrete aggregate is sometimes cheaper when available. Crushed limestone is the next cheapest at $30\u2013$55 CAD/tonne.",
+      },
+      {
+        question: "How much gravel per square metre?",
+        answer:
+          "At 100 mm depth: 0.10 m\u00b3 or 0.18 tonnes per m\u00b2. At 50 mm: 0.05 m\u00b3/m\u00b2. At 150 mm (driveways): 0.15 m\u00b3 or 0.27 tonnes/m\u00b2. Multiply by total area and add 10% waste.",
+      },
+      {
+        question: "Is a gravel driveway cheaper than asphalt or concrete?",
+        answer:
+          "Yes. A gravel driveway costs $10\u2013$25 CAD/m\u00b2 for materials ($25\u2013$60 CAD/m\u00b2 installed), vs $80\u2013$150 CAD/m\u00b2 for concrete and $50\u2013$100 CAD/m\u00b2 for asphalt. A 3.5 \u00d7 15 m gravel driveway costs $1,500\u2013$3,500 CAD installed vs $4,500\u2013$8,000 for concrete. Gravel needs more maintenance and periodic top-up every 2\u20133 years.",
       },
     ],
   },

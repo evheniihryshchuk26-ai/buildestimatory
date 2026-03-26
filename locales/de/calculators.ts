@@ -71,6 +71,22 @@ export const categories: CategoryMeta[] = [
         category: "Fundament",
         categorySlug: "foundation",
       },
+      {
+        slug: "gravel-calculator",
+        title: "Kies-Rechner",
+        description:
+          "Wie viel Kies brauche ich? Kostenloser Rechner für jede Fläche — Kubikmeter, Tonnen und Kostenabschätzung mit 10 % Verschnitt.",
+        category: "Fundament",
+        categorySlug: "foundation",
+      },
+      {
+        slug: "driveway-gravel-calculator",
+        title: "Einfahrt-Kies-Rechner",
+        description:
+          "Kies-Rechner für Einfahrten: Tonnen und Kosten nach Kiesart — Schotter, Zierkies, Schottertragschicht oder Granitgrus mit Lieferkalkulation.",
+        category: "Fundament",
+        categorySlug: "foundation",
+      },
     ],
   },
   {

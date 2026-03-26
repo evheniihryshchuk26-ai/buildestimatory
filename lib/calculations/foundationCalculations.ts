@@ -124,6 +124,74 @@ export function calculateConcreteColumn(diameterInches: number, heightFt: number
   };
 }
 
+// ─── GRAVEL ──────────────────────────────────────────────────────────────────
+
+export interface GravelResult {
+  cubicFeet: number;
+  cubicYards: number;
+  tons: number;
+  cubicYardsWithWaste: number;
+  tonsWithWaste: number;
+}
+
+export function calculateGravel(lengthFt: number, widthFt: number, depthInches: number): GravelResult {
+  const depthFt = depthInches / 12;
+  const cubicFeet = lengthFt * widthFt * depthFt;
+  const cubicYards = cubicFeet / 27;
+  const tons = cubicYards * 1.4; // gravel weighs ~1.4 tons per cubic yard
+  const cubicYardsWithWaste = cubicYards * 1.1; // 10% waste factor
+  const tonsWithWaste = cubicYardsWithWaste * 1.4;
+  return {
+    cubicFeet: Math.round(cubicFeet * 10) / 10,
+    cubicYards: Math.round(cubicYards * 10) / 10,
+    tons: Math.round(tons * 10) / 10,
+    cubicYardsWithWaste: Math.ceil(cubicYardsWithWaste * 10) / 10,
+    tonsWithWaste: Math.ceil(tonsWithWaste * 10) / 10,
+  };
+}
+
+export interface DrivewayGravelResult {
+  cubicYards: number;
+  tons: number;
+  costLow: number;
+  costHigh: number;
+}
+
+const GRAVEL_WEIGHT_PER_YARD: Record<string, number> = {
+  "crushed stone": 1.4,
+  "pea gravel": 1.35,
+  "road base": 1.5,
+  "decomposed granite": 1.45,
+};
+
+const GRAVEL_COST_PER_TON: Record<string, [number, number]> = {
+  "crushed stone": [25, 50],
+  "pea gravel": [30, 55],
+  "road base": [20, 40],
+  "decomposed granite": [35, 60],
+};
+
+export function calculateDrivewayGravel(
+  lengthFt: number,
+  widthFt: number,
+  depthInches: number,
+  gravelType: string,
+): DrivewayGravelResult {
+  const depthFt = depthInches / 12;
+  const cubicFeet = lengthFt * widthFt * depthFt;
+  const cubicYards = cubicFeet / 27;
+  const cubicYardsWithWaste = cubicYards * 1.1;
+  const weightPerYard = GRAVEL_WEIGHT_PER_YARD[gravelType] ?? 1.4;
+  const tons = cubicYardsWithWaste * weightPerYard;
+  const [costPerTonLow, costPerTonHigh] = GRAVEL_COST_PER_TON[gravelType] ?? [25, 50];
+  return {
+    cubicYards: Math.ceil(cubicYardsWithWaste * 10) / 10,
+    tons: Math.ceil(tons * 10) / 10,
+    costLow: Math.round(tons * costPerTonLow),
+    costHigh: Math.round(tons * costPerTonHigh),
+  };
+}
+
 export interface ConcreteStepsResult {
   cubicYards: number;
   cubicYardsWithWaste: number;

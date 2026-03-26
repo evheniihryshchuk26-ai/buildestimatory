@@ -87,6 +87,22 @@ export const categories: CategoryMeta[] = [
         category: "Fondations",
         categorySlug: "foundation",
       },
+      {
+        slug: "gravel-calculator",
+        title: "Calculateur de gravier",
+        description:
+          "Combien de gravier me faut-il ? Calculateur gratuit pour toute surface — mètres cubes, tonnes et estimation du coût avec 10 % de perte.",
+        category: "Fondations",
+        categorySlug: "foundation",
+      },
+      {
+        slug: "driveway-gravel-calculator",
+        title: "Calculateur de gravier pour allée",
+        description:
+          "Calculateur de gravier pour allée carrossable : estimez tonnes et coût par type — gravier concassé, gravier roulé, grave ou granit décomposé.",
+        category: "Fondations",
+        categorySlug: "foundation",
+      },
     ],
   },
   {

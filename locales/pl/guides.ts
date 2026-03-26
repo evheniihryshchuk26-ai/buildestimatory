@@ -59,6 +59,12 @@ const guides: GuidesTranslations = {
           "Porównanie desek kompozytowych i drewnianych: koszt, trwałość, konserwacja, wygląd i żywotność. Dowiedz się, który materiał tarasowy jest najlepszy dla Twojego projektu i klimatu.",
         href: "/guides/composite-vs-wood-decking",
       },
+      {
+        title: "Ile kosztuje \u017cwir? Przewodnik cenowy 2026",
+        description:
+          "Żwir kosztuje 60\u2013180 PLN za tonę. Kompletny przewodnik cenowy: podjazdy, tarasy, ścieżki, drenaż, ogród z kosztami dostawy i obliczaniem ilości.",
+        href: "/guides/gravel-cost-guide",
+      },
     ],
   },
 
@@ -1335,6 +1341,130 @@ const guides: GuidesTranslations = {
         question: "Czy mogę łączyć kompozyt i drewno na tym samym tarasie?",
         answer:
           "Tak, wielu budowniczych stosuje podkonstrukcję z drewna impregnowanego (słupki, belki, legary) z deskami kompozytowymi i balustradą na wierzchu. To standardowe podejście, ponieważ deski kompozytowe są zaprojektowane jako powierzchnia tarasowa, a nie elementy konstrukcyjne. Drewniana rama zapewnia nośność przy niższym koszcie, a kompozytowa powierzchnia daje bezobsługowe korzyści tam, gdzie widzisz i dotykasz taras.",
+      },
+    ],
+  },
+
+  gravelCost: {
+    title: "Ile Kosztuje \u017bwir? Przewodnik Cenowy 2026",
+    metaDescription:
+      "Żwir kosztuje 60\u2013180 PLN za tonę, 80\u2013250 PLN za metr sześcienny w 2026. Kompletny przewodnik: tłuczeń, żwir, kruszywo łamane, grys granitowy, otoczak. Podjazdy, tarasy, ścieżki, drenaż, dostawa i obliczanie ilości.",
+
+    heroTitle: "Ile Kosztuje \u017bwir?",
+    heroSubtitle: "Przewodnik Cenowy 2026",
+    heroDescription:
+      "Kompletny przegląd cen żwiru według rodzaju, projektu i regionu w Polsce. Obejmuje tłuczeń, żwir, kruszywo łamane, grys granitowy i otoczak z kosztami dostawy, minimalnymi zamówieniami i poradami oszczędnościowymi.",
+
+    quickAnswerHeading: "Szybka Odpowiedź",
+    quickAnswerText:
+      "Żwir kosztuje 60\u2013180 PLN za tonę lub 80\u2013250 PLN za metr sześcienny w 2026, w zależności od rodzaju i regionu. Kruszywo łamane i tłuczeń są najtańsze \u2014 60\u2013120 PLN/tonę. Żwir płukany kosztuje 80\u2013150 PLN/tonę. Kamień dekoracyjny jak otoczak kosztuje 150\u2013500 PLN/tonę. Dostawa dodaje 150\u2013400 PLN za kurs do 30 km, a większość dostawców wymaga minimum 5\u201310 ton.",
+
+    gravelTypesHeading: "Rodzaje \u017bwiru i Ceny",
+    gravelTypesIntro:
+      "Nie każdy żwir jest taki sam. Każdy rodzaj ma inną wagę, właściwości zagęszczania i cenę. Oto najpopularniejsze rodzaje i ich ceny 2026 w Polsce:",
+    gravelTypesColType: "Rodzaj \u017bwiru",
+    gravelTypesColCost: "Cena za Tonę",
+    gravelTypesColBestFor: "Najlepszy Do",
+    gravelTypesRows: [
+      { type: "Tłuczeń (16/31,5 mm)", cost: "60 \u2013 120 PLN", bestFor: "Podjazdy, drenaż, podbudowa. Krawędzie kątowe, które się zazębiają." },
+      { type: "Żwir płukany (8\u201316 mm)", cost: "80 \u2013 150 PLN", bestFor: "Ścieżki, tarasy, klomby. Gładki i zaokrąglony." },
+      { type: "Kruszywo łamane (0/31,5 mm)", cost: "50 \u2013 100 PLN", bestFor: "Podjazdy, parkingi. Zawiera frakcję drobną, zagęszcza się w twardą nawierzchnię." },
+      { type: "Grys Granitowy (2\u20138 mm)", cost: "100 \u2013 200 PLN", bestFor: "Ścieżki, tarasy, dekoracja. Zagęszcza się dobrze, naturalny wygląd." },
+      { type: "Otoczak (30\u201380 mm)", cost: "150 \u2013 500 PLN", bestFor: "Ogród, suche koryta, dekoracja. Nie zagęszcza się." },
+      { type: "Grys marmurowy biały", cost: "200 \u2013 600 PLN", bestFor: "Dekoracja, obrzeża, strefy akcentowe. Cena premium." },
+    ],
+
+    costByProjectHeading: "Koszt \u017bwiru wg Typu Projektu",
+    costByProjectIntro:
+      "Ile zapłacisz zależy od wielkości projektu, głębokości i rodzaju żwiru. Typowe koszty 2026 dla projektów mieszkaniowych w Polsce:",
+    costByProjectColProject: "Projekt",
+    costByProjectColTypical: "Typowy Koszt",
+    costByProjectColNotes: "Uwagi",
+    costByProjectRows: [
+      { project: "Podjazd żwirowy (3,5\u00d715 m)", typical: "1 500 \u2013 4 500 PLN", notes: "8\u201312 ton tłucznia na 15 cm. Profesjonalny montaż ekstra." },
+      { project: "Taras (4\u00d74 m)", typical: "500 \u2013 1 500 PLN", notes: "2\u20133 tony żwiru płukanego na 8\u201310 cm. Obrzeża osobno." },
+      { project: "Ścieżka (1\u00d710 m)", typical: "200 \u2013 600 PLN", notes: "0,5\u20131,5 tony na 8 cm. Żwir lub grys granitowy." },
+      { project: "Drenaż (15 m)", typical: "400 \u2013 1 200 PLN", notes: "2\u20134 tony tłucznia 16/31,5. Geowłóknina osobno." },
+      { project: "Klomb (3\u00d76 m)", typical: "500 \u2013 2 000 PLN", notes: "2\u20133 tony kamienia dekoracyjnego na 8 cm." },
+      { project: "Podbudowa pod altankę (3\u00d74 m)", typical: "400 \u2013 1 200 PLN", notes: "2\u20133 tony na 10\u201315 cm. Tłuczeń z zagęszczeniem." },
+      { project: "Miejsce parkingowe (3\u00d76 m)", typical: "800 \u2013 2 500 PLN", notes: "4\u20136 ton na 15 cm. Kruszywo łamane zalecane." },
+    ],
+
+    deliveryCostsHeading: "Koszty Dostawy i Minimalne Zamówienia",
+    deliveryCostsIntro:
+      "Dostawa stanowi znaczną część kosztu żwiru, zwłaszcza przy małych zamówieniach.",
+    deliveryCostsText1:
+      "Większość żwirowni i hurtowni budowlanych nalicza 150\u2013400 PLN za dostawę na dystansie do 30 km. Powyżej 30 km doliczane jest 5\u201310 PLN za dodatkowy kilometr. Standardowa wywrotka mieści 10\u201315 ton. Wielu dostawców oferuje połówki ładunków, ale opłata za transport jest taka sama.",
+    deliveryCostsText2:
+      "Minimalne zamówienia wynoszą zwykle 5\u201310 ton na dostawę. Niektórzy oferują 1\u20132 tony z dopłatą (50\u2013100 PLN). Przy bardzo małych ilościach (poniżej 1 tony), odbiór własny przyczepką jest najtańszy \u2014 większość żwirowni pozwala na samozaładunek.",
+    deliveryCostsText3:
+      "Aby zaoszczędzić na dostawie: połączcie zamówienia z sąsiadami, kupujcie poza sezonem (jesień-zima) lub odbierajcie sami. Przyczepa 750 kg mieści ok. 0,4 m³. Przyczepa 2-tonowa \u2014 1,2 m³. Wynajem przyczepy wywrotki (100\u2013200 PLN/dzień) pozwala przewieźć 2\u20133 m³ na kurs.",
+
+    howToCalculateHeading: "Jak Obliczyć Potrzebną Ilość",
+    howToCalculateIntro:
+      "Prawidłowe obliczenie ilości żwiru zapobiega kosztownym dodatkowym dostawom lub nadmiarowi materiału. Wykonajcie te kroki:",
+    howToCalculateItems: [
+      "Zmierzcie powierzchnię: Pomnóżcie długość przez szerokość w metrach. Przy nieregularnych kształtach podzielcie na prostokąty.",
+      "Określcie głębokość: Standard: 5\u20138 cm na ścieżki i klomby, 10 cm na tarasy, 15\u201320 cm na podjazdy. Przeliczcie cm na metry dzieląc przez 100.",
+      "Obliczcie metry sześcienne: Długość \u00d7 szerokość \u00d7 głębokość (wszystko w metrach) = m³.",
+      "Przeliczcie na tony: Pomnóżcie m³ przez współczynnik wagi \u2014 1,8 dla tłucznia, 1,7 dla żwiru, 2,0 dla kruszywa łamanego, 1,9 dla grysu.",
+      "Dodajcie 10% zapasu: Pomnóżcie przez 1,1 na zagęszczenie, rozsypanie i nierówności terenu.",
+      "Przykład: Podjazd 3,5 \u00d7 15 m na 15 cm = 3,5 \u00d7 15 \u00d7 0,15 = 7,9 m³ \u00d7 1,8 = 14,2 tony. Z 10%: zamówcie 15,6 ton.",
+    ],
+    howToCalculateSummary:
+      "Porada: Użyjcie naszego darmowego Kalkulatora Żwiru. Wpiszcie wymiary i uzyskajcie natychmiastowe obliczenia m³, tonażu i kosztów.",
+
+    savingTipsHeading: "Jak Zaoszczędzić na \u017bwirze",
+    savingTipsIntro:
+      "Żwir jest już jednym z najtańszych materiałów nawierzchniowych, ale te porady pomogą zaoszczędzić jeszcze więcej:",
+    savingTipsItems: [
+      "Kupujcie hurtowo: Cena za tonę spada przy większych zamówieniach. Powyżej 15 ton rabaty 10\u201320% są standardem.",
+      "Wybierajcie lokalne kruszywo: Żwir z pobliskich żwirowni kosztuje znacznie mniej. Transport to drugi najważniejszy czynnik cenowy.",
+      "Zamawiajcie poza sezonem: Jesień i zima to najspokojniejsze miesiące. Wielu dostawców daje 10\u201315% rabatu.",
+      "Odbierajcie sami: Z przyczepką eliminujecie 150\u2013400 PLN za dostawę. Przy małych projektach oszczędność 20\u201330%.",
+      "Użyjcie kruszywa łamanego zamiast kamienia dekoracyjnego: Kruszywo kosztuje 50\u2013100 PLN/tonę vs 150\u2013500 PLN za opcje dekoracyjne.",
+      "Porównajcie wielu dostawców: Ceny mogą różnić się o 30\u201350% między dostawcami w tym samym regionie. Zbierzcie minimum 3 oferty.",
+    ],
+
+    calculatorCtaHeading: "Oblicz Zapotrzebowanie na \u017bwir",
+    calculatorCtaText: "Użyjcie naszych darmowych kalkulatorów żwiru, aby oszacować dokładną ilość i koszt projektu.",
+    calculatorLinks: [
+      { label: "Kalkulator \u017bwiru", href: "/calculators/foundation/gravel-calculator", description: "Oblicz m³ i tony dla dowolnej powierzchni z szacunkiem kosztów." },
+      { label: "Kalkulator \u017bwiru na Podjazd", href: "/calculators/foundation/driveway-gravel-calculator", description: "Oszacuj żwir według typu na podjazd z przedziałem cenowym i dostawą." },
+      { label: "Kalkulator Płyty Betonowej", href: "/calculators/foundation/concrete-slab-calculator", description: "Planujesz beton? Oblicz m³ i liczbę worków." },
+    ],
+
+    faqHeading: "Najczęściej Zadawane Pytania",
+    faqs: [
+      {
+        question: "Ile kosztuje tona żwiru w 2026?",
+        answer:
+          "Żwir kosztuje 60\u2013180 PLN za tonę w 2026 dla typowych rodzajów. Kruszywo łamane jest najtańsze \u2014 50\u2013100 PLN/tonę. Tłuczeń kosztuje 60\u2013120 PLN/tonę. Żwir płukany 80\u2013150 PLN/tonę. Grys granitowy 100\u2013200 PLN/tonę. Otoczak dekoracyjny 150\u2013500 PLN/tonę. Ceny zależą od regionu.",
+      },
+      {
+        question: "Ile żwiru potrzebuję na podjazd?",
+        answer:
+          "Standardowy podjazd (3,5 m \u00d7 15 m na 15 cm) wymaga ok. 8 m³ lub 14 ton żwiru. Na podjazd podwójny (7 \u00d7 15 m) \u2014 16 m³ lub 28 ton. Użyjcie tłucznia lub kruszywa łamanego. Dodajcie 10% na zagęszczenie. Koszt materiału: 1.500\u20134.500 PLN.",
+      },
+      {
+        question: "Ile kosztuje metr sześcienny żwiru?",
+        answer:
+          "Metr sześcienny żwiru kosztuje 80\u2013250 PLN w zależności od rodzaju. Tłuczeń: 100\u2013200 PLN/m³. Kruszywo łamane: 70\u2013150 PLN/m³. Żwir płukany: 120\u2013250 PLN/m³. To ceny samego materiału \u2014 dostawa (150\u2013400 PLN/kurs) osobno. 1 m³ pokrywa ok. 10 m² na 10 cm.",
+      },
+      {
+        question: "Jaki żwir jest najtańszy?",
+        answer:
+          "Kruszywo łamane (0/31,5 mm) jest najtańsze \u2014 50\u2013100 PLN za tonę. To mieszanka kruszonego kamienia i drobnych frakcji, która zagęszcza się w bardzo twardą nawierzchnię, idealną na podjazdy. Tłuczeń jest następną opcją \u2014 60\u2013120 PLN/tonę. Kruszywo z recyklingu bywa jeszcze tańsze.",
+      },
+      {
+        question: "Ile żwiru na metr kwadratowy?",
+        answer:
+          "Przy 10 cm głębokości: ok. 0,10 m³ lub 0,18 tony na m². Przy 5 cm: 0,05 m³/m². Przy 15 cm (podjazdy): 0,15 m³ lub 0,27 tony/m². Pomnóżcie przez całkowitą powierzchnię i dodajcie 10% zapasu.",
+      },
+      {
+        question: "Czy podjazd żwirowy jest tańszy niż beton lub asfalt?",
+        answer:
+          "Tak, znacznie. Podjazd żwirowy kosztuje 30\u201380 PLN/m² w materiale (80\u2013200 PLN/m² z montażem), w porównaniu z 250\u2013500 PLN/m² za beton i 200\u2013400 PLN/m² za asfalt. Podjazd 3,5 \u00d7 15 m z żwiru kosztuje 4.000\u201310.000 PLN z montażem vs 13.000\u201326.000 PLN za beton. Żwir wymaga jednak więcej konserwacji i dosypywania co 2\u20133 lata.",
       },
     ],
   },

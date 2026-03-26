@@ -10,6 +10,8 @@ import {
   calculateConcreteFooting,
   calculateConcreteColumn,
   calculateConcreteSteps,
+  calculateGravel,
+  calculateDrivewayGravel,
 } from "./calculations/foundationCalculations";
 import {
   calculateRimJoists,
@@ -631,6 +633,168 @@ const concreteStepsCalculator: CalculatorConfig = {
     {
       question: "How long do concrete steps last?",
       answer: "Properly built and maintained concrete steps last 50 to 100 years. The most common maintenance issue is surface scaling from freeze-thaw damage, which can be prevented by using air-entrained concrete, applying a penetrating sealer every 2 to 3 years, and avoiding deicing salts (use sand for traction instead).",
+    },
+  ],
+};
+
+// ─── GRAVEL ─────────────────────────────────────────────────────────────────
+
+const gravelCalculator: CalculatorConfig = {
+  fields: [
+    { id: "length", label: "Length", unit: "ft", placeholder: "20" },
+    { id: "width", label: "Width", unit: "ft", placeholder: "20" },
+    { id: "depth", label: "Depth", unit: "in", defaultValue: 4, placeholder: "4" },
+  ],
+  calculate: (v) => {
+    const r = calculateGravel(v.length as number, v.width as number, v.depth as number);
+    return [
+      { label: `${r.cubicYardsWithWaste} cubic yards needed (includes 10% waste)` },
+      { label: `${r.tonsWithWaste} tons needed (includes 10% waste)` },
+      { label: `${r.cubicYards} cubic yards (before waste)` },
+      { label: `${r.tons} tons (before waste)` },
+      { label: `${r.cubicFeet} cubic feet total volume` },
+    ];
+  },
+  disclaimer:
+    "This estimate includes a 10% waste factor. Gravel weight varies by type and moisture content. The 1.4 tons per cubic yard conversion is an average — actual weight ranges from 1.3 to 1.5 tons per cubic yard depending on the material. Always confirm quantities with your supplier before ordering.",
+  howToUse: [
+    "Measure the length of the area you need to cover in feet.",
+    "Measure the width of the area in feet.",
+    "Enter the desired gravel depth in inches — 4 inches is standard for most applications, 6 to 8 inches for driveways.",
+    "Click Calculate to get cubic yards and tons with a built-in 10% waste factor.",
+  ],
+  materialInfo:
+    "Gravel is a loose aggregate of rock fragments used for driveways, walkways, drainage, landscaping, and as a sub-base beneath concrete and asphalt. It comes in a wide range of sizes and types, each suited to different applications.\n\nThe most common gravel sizes are #57 stone (3/4 inch, the standard driveway and drainage gravel), #411 (a blend of #4 and fine stone that compacts well for bases), and #2 stone (2 to 4 inch chunks used for drainage and erosion control). Pea gravel (3/8 inch rounded stones) is popular for walkways, patios, and decorative beds. Crushed stone has angular edges that lock together and compact firmly, while river rock has smooth rounded edges that shift underfoot and do not compact.\n\nGravel is sold by the cubic yard or by the ton. One cubic yard of gravel weighs approximately 1.4 tons (2,800 lbs), though this varies by stone type — road base is heavier at 1.5 tons per yard, while pea gravel is lighter at 1.35 tons per yard. Most suppliers sell by the ton with delivery, and typical pricing ranges from $20 to $50 per ton depending on type and region. Delivery fees run $50 to $150 per load for distances up to 20 miles.\n\nFor driveways, the standard approach is a 3-layer system: 4 inches of #2 or #3 stone as a base, 4 inches of #57 stone as the middle layer, and 2 inches of #8 or #411 stone as the top driving surface. This 10-inch total depth provides excellent drainage and a stable surface. For simple fill, walkways, and landscaping beds, a single layer of 3 to 4 inches is sufficient.",
+  nextSteps: [
+    { label: "Driveway Gravel Calculator", href: "/calculators/foundation/driveway-gravel-calculator/" },
+    { label: "Concrete Slab Calculator", href: "/calculators/foundation/concrete-slab-calculator/" },
+    { label: "Retaining Wall — coming soon", href: "/calculators/foundation/concrete-footing-calculator/" },
+  ],
+  installationTips: [
+    "Remove all topsoil and organic material before laying gravel — organic matter decomposes and causes settling.",
+    "Install landscape fabric over the compacted subgrade to prevent gravel from mixing with the soil below.",
+    "Spread gravel in 2 to 3-inch lifts and compact each layer with a plate compactor before adding the next.",
+    "Crown driveways and paths slightly (1/4 inch per foot) so water drains to the edges rather than pooling.",
+    "Use edge restraints (metal edging, timber borders, or concrete curbs) to keep gravel from migrating into adjacent areas.",
+  ],
+  commonMistakes: [
+    "Using rounded pea gravel for driveways — it does not compact and shifts under tire weight. Use angular crushed stone instead.",
+    "Not removing organic topsoil — grass and roots under the gravel will decompose and create sinkholes.",
+    "Skipping the compaction step — uncompacted gravel shifts and develops ruts quickly.",
+    "Applying gravel too thin — less than 3 inches will not provide adequate coverage or support and you will see the subgrade through the stone.",
+    "Not accounting for delivery minimums — most suppliers require a 5 to 10-ton minimum order for delivery.",
+  ],
+  faqs: [
+    {
+      question: "How much gravel do I need?",
+      answer: "Multiply your project length by width (in feet) to get the square footage, then multiply by the depth (in feet) to get cubic feet. Divide by 27 to convert to cubic yards. One cubic yard covers about 80 square feet at 4 inches deep. Add 10% for waste, compaction, and uneven ground. For example, a 20x20-foot area at 4 inches deep needs about 5.5 cubic yards (7.7 tons).",
+    },
+    {
+      question: "How much does a cubic yard of gravel weigh?",
+      answer: "One cubic yard of gravel weighs approximately 2,800 lbs (1.4 tons). The exact weight depends on the stone type: crushed stone averages 1.4 tons per yard, road base is heavier at 1.5 tons per yard, pea gravel weighs about 1.35 tons per yard, and decomposed granite weighs about 1.45 tons per yard. Wet gravel can weigh 10 to 15% more than dry.",
+    },
+    {
+      question: "How many tons of gravel do I need?",
+      answer: "Calculate your cubic yards first (length x width x depth in feet, divided by 27), then multiply by 1.4 to convert to tons. For example, a 10x20-foot area at 4 inches deep is 2.5 cubic yards, which is 3.5 tons. Always order 10% extra to account for compaction and waste.",
+    },
+    {
+      question: "How deep should gravel be?",
+      answer: "The recommended depth depends on the application: 2 to 3 inches for walkways and decorative beds, 4 inches for patios and general fill, 6 to 8 inches for driveways (applied in multiple layers), and 10 to 12 inches for high-traffic commercial areas. Always compact each layer before adding the next for best results.",
+    },
+    {
+      question: "How much does gravel cost per ton?",
+      answer: "Gravel prices range from $20 to $50 per ton depending on the type. Road base and crushed stone are the most affordable at $20 to $35 per ton. Pea gravel costs $30 to $55 per ton. Decomposed granite runs $35 to $60 per ton. Delivery fees add $50 to $150 per load. Most suppliers require a 5 to 10-ton minimum for delivery.",
+    },
+    {
+      question: "How many cubic yards of gravel fit in a dump truck?",
+      answer: "A standard single-axle dump truck holds 8 to 10 cubic yards (11 to 14 tons) of gravel. A tandem-axle dump truck holds 14 to 18 cubic yards (20 to 25 tons). A tri-axle dump truck holds 18 to 22 cubic yards (25 to 31 tons). For small projects, many suppliers offer half-load deliveries or you can haul gravel in a pickup truck (about 1/2 cubic yard per load).",
+    },
+  ],
+};
+
+const drivewayGravelCalculator: CalculatorConfig = {
+  fields: [
+    { id: "length", label: "Driveway Length", unit: "ft", placeholder: "50" },
+    { id: "width", label: "Driveway Width", unit: "ft", defaultValue: 12, placeholder: "12" },
+    { id: "depth", label: "Gravel Depth", unit: "in", defaultValue: 6, placeholder: "6" },
+    {
+      id: "gravelType",
+      label: "Gravel Type",
+      type: "select",
+      options: [
+        { label: "Crushed Stone", value: "crushed stone" },
+        { label: "Pea Gravel", value: "pea gravel" },
+        { label: "Road Base", value: "road base" },
+        { label: "Decomposed Granite", value: "decomposed granite" },
+      ],
+    },
+  ],
+  calculate: (v) => {
+    const r = calculateDrivewayGravel(
+      v.length as number,
+      v.width as number,
+      v.depth as number,
+      v.gravelType as string,
+    );
+    return [
+      { label: `${r.cubicYards} cubic yards needed (includes 10% waste)` },
+      { label: `${r.tons} tons needed (includes 10% waste)` },
+      { label: `Estimated cost: $${r.costLow.toLocaleString()} – $${r.costHigh.toLocaleString()}` },
+    ];
+  },
+  disclaimer:
+    "This estimate includes a 10% waste factor. Cost estimates are based on national averages and vary significantly by region, supplier, and delivery distance. Gravel weight varies by type and moisture content. Always get quotes from local suppliers before ordering.",
+  howToUse: [
+    "Measure the total length of your driveway in feet.",
+    "Enter the driveway width — 10 to 12 feet for a single car, 20 to 24 feet for a double-wide driveway.",
+    "Enter the gravel depth — 6 inches is standard for driveways, 8 to 10 inches for heavy vehicle traffic.",
+    "Select your gravel type and click Calculate for cubic yards, tons, and an estimated cost range.",
+  ],
+  materialInfo:
+    "A gravel driveway is one of the most affordable and practical alternatives to poured concrete or asphalt. When properly installed with the correct materials and adequate depth, a gravel driveway can last 10 to 15 years with minimal maintenance.\n\nThe best gravel driveway is built in three layers. The bottom layer (4 inches) uses large #3 or #4 stone (1.5 to 3 inches) for drainage and stability. The middle layer (4 inches) uses #57 stone (3/4 inch) as a transition. The top layer (2 to 4 inches) uses compactable stone like #8 or #411 that locks together to form a firm driving surface. Each layer must be spread and compacted separately.\n\nCrushed stone (#57 or #411) is the most popular driveway gravel because its angular edges lock together under compaction, creating a stable surface. Road base (also called crusher run or #21A) is a blend of crushed stone and stone dust that compacts into an extremely hard surface — it is the preferred choice for heavy-traffic driveways. Pea gravel looks attractive but shifts under tires and is not recommended as a primary driveway surface. Decomposed granite compacts well and provides a natural appearance, popular in the western United States.\n\nDriveway gravel costs $1 to $3 per square foot installed, depending on depth and material. A typical 12x50-foot single-car gravel driveway costs $600 to $1,800 for materials only. Professional installation with grading, fabric, and compaction adds $2 to $5 per square foot. Annual maintenance includes raking displaced stone back into ruts and adding a 1 to 2-inch top-up layer every 2 to 3 years.",
+  nextSteps: [
+    { label: "Gravel Calculator", href: "/calculators/foundation/gravel-calculator/" },
+    { label: "Concrete Slab Calculator", href: "/calculators/foundation/concrete-slab-calculator/" },
+  ],
+  installationTips: [
+    "Grade the driveway with a 2 to 3% slope away from the house for proper drainage — water pooling on gravel creates potholes.",
+    "Install geotextile landscape fabric over the graded subgrade to prevent stone from mixing with the soil below.",
+    "Spread and compact each layer separately — do not dump all the gravel at once.",
+    "Use a plate compactor or roller on each lift to maximize density and stability.",
+    "Install border edging (steel, aluminum, or timber) along both sides to prevent gravel migration into the yard.",
+    "Crown the driveway center slightly higher (1 to 2 inches) so water sheds to both edges.",
+  ],
+  commonMistakes: [
+    "Using pea gravel as the driving surface — its rounded shape does not compact and stones scatter under tires.",
+    "Dumping gravel directly on topsoil without grading — organic soil decomposes and causes sinkholes and mud mixing.",
+    "Applying only 2 to 3 inches of gravel — this is too thin for vehicle traffic and will rut through to the subgrade quickly.",
+    "Skipping the fabric layer — without it, gravel sinks into soft soil within 1 to 2 years and you lose half your stone.",
+    "Not compacting between layers — loose gravel shifts and develops ruts and potholes within weeks of use.",
+  ],
+  faqs: [
+    {
+      question: "How much gravel do I need for a driveway?",
+      answer: "A standard single-car driveway (12 feet wide by 50 feet long at 6 inches deep) needs about 12 cubic yards (17 tons) of gravel. A double-wide driveway (24x50 feet at 6 inches deep) needs about 24 cubic yards (34 tons). These amounts include a 10% waste factor for compaction and spreading.",
+    },
+    {
+      question: "How much does a gravel driveway cost?",
+      answer: "Materials for a gravel driveway cost $1 to $3 per square foot depending on the gravel type and depth. A 12x50-foot driveway costs $600 to $1,800 for gravel alone. Professional installation with grading, fabric, and compaction typically costs $2 to $5 per square foot, putting the total installed cost at $1,800 to $4,800 for a single-car driveway.",
+    },
+    {
+      question: "What is the best gravel for a driveway?",
+      answer: "Crushed stone (#57 or #411) is the best all-around driveway gravel because its angular edges interlock when compacted. Road base (crusher run) is even better for heavy traffic — it contains stone dust that binds the aggregate into a near-solid surface. Use #57 stone for the main body and #411 or road base for the top layer.",
+    },
+    {
+      question: "How deep should gravel be for a driveway?",
+      answer: "A gravel driveway should be 6 to 8 inches deep minimum for passenger vehicles, applied in 2 to 3 layers. For heavy vehicles (trucks, RVs, equipment), use 10 to 12 inches total depth. Each layer should be compacted before the next is applied. A thin 2 to 3-inch layer will rut through to the subgrade within months.",
+    },
+    {
+      question: "How long does a gravel driveway last?",
+      answer: "A properly installed gravel driveway lasts 10 to 15 years before needing a major refresh. Annual maintenance includes raking displaced stone back into low spots and adding a 1 to 2-inch top-up layer every 2 to 3 years. The base layer can last indefinitely if properly installed with fabric and drainage.",
+    },
+    {
+      question: "Do I need landscape fabric under a gravel driveway?",
+      answer: "Yes, landscape fabric (geotextile) is essential under a gravel driveway. Without it, gravel sinks into soft soil within 1 to 2 years, and soil works up through the stone, creating a muddy mess. Use commercial-grade woven geotextile rated for vehicle traffic — not the thin landscape fabric sold for garden beds.",
     },
   ],
 };
@@ -2787,6 +2951,8 @@ export const calculatorRegistry: Record<string, Record<string, CalculatorConfig>
     "concrete-footing-calculator": concreteFootingCalculator,
     "concrete-column-calculator": concreteColumnCalculator,
     "concrete-steps-calculator": concreteStepsCalculator,
+    "gravel-calculator": gravelCalculator,
+    "driveway-gravel-calculator": drivewayGravelCalculator,
   },
   "floor-framing": {
     "rim-joist-calculator": rimJoistCalculator,

@@ -473,6 +473,122 @@ export const concreteStepsCalculator: CalculatorSEOContent = {
   ],
 };
 
+export const gravelCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "Esta estimativa inclui um fator de desperdício de 10%. O peso da brita varia conforme o tipo e a umidade. A conversão de 1,5 tonelada por metro cúbico é uma média — o peso real varia de 1,4 a 1,8 t/m³ dependendo do material. Sempre confirme as quantidades com seu fornecedor antes de fazer o pedido.",
+  howToUse: [
+    "Meça o comprimento da área que precisa cobrir em metros.",
+    "Meça a largura da área em metros.",
+    "Insira a espessura desejada de brita em centímetros — 10 cm é padrão para a maioria das aplicações, 15 a 20 cm para acessos de veículos.",
+    "Clique em Calcular para obter metros cúbicos e toneladas com o fator de desperdício de 10% já incluído.",
+  ],
+  materialInfo:
+    "A brita é um agregado solto de fragmentos de rocha utilizado para acessos de veículos, calçadas, drenagem, paisagismo e como sub-base sob concreto e asfalto. Está disponível em uma ampla variedade de granulometrias e tipos, cada um adequado para diferentes aplicações.\n\nAs granulometrias mais comuns no Brasil são: brita 1 (19 mm, o padrão para acessos e drenagem), brita 0 ou pedrisco (4,8 a 9,5 mm, para bases compactadas e acabamentos), e pedra rachão (100 a 250 mm, para drenagem profunda e aterro). O cascalho (pedras arredondadas naturais) é popular para caminhos de jardim, pátios e canteiros decorativos. A pedra britada tem arestas angulares que se encaixam e compactam firmemente, enquanto o seixo rolado tem superfícies lisas que se deslocam ao caminhar e não compactam.\n\nA brita é vendida no Brasil por metro cúbico ou por tonelada. Um metro cúbico de brita pesa aproximadamente 1,4 a 1,8 tonelada, dependendo do tipo de rocha — brita graduada (BGS) é mais pesada com 1,8 t/m³, enquanto pedrisco é mais leve com 1,3 t/m³. A maioria dos fornecedores vende por metro cúbico com entrega por caminhão basculante. Os preços típicos no Brasil vão de R$ 80,00 a R$ 200,00 por metro cúbico dependendo do tipo e da região. Os custos de frete variam de R$ 200,00 a R$ 600,00 por viagem para distâncias de até 30 km. Fornecedores como pedreiras locais, casas de materiais de construção, Leroy Merlin e C&C oferecem diferentes tipos de brita e cascalho.\n\nPara acessos de veículos, a abordagem padrão é um sistema de 3 camadas: 15 cm de rachão ou brita graduada como base, 10 cm de brita 1 como camada intermediária, e 5 cm de pedrisco ou pó de pedra como superfície de rolamento. Essa espessura total de 30 cm proporciona excelente drenagem e uma superfície estável. Para aterros simples, caminhos e canteiros, uma única camada de 8 a 10 cm é suficiente.",
+  nextSteps: [
+    { label: "Calculadora de Brita para Acesso", href: "/calculators/foundation/driveway-gravel-calculator/" },
+    { label: "Calculadora de Laje de Concreto", href: "/calculators/foundation/concrete-slab-calculator/" },
+    { label: "Calculadora de Sapata de Concreto", href: "/calculators/foundation/concrete-footing-calculator/" },
+  ],
+  installationTips: [
+    "Remova toda a terra vegetal e material orgânico antes de colocar a brita — a matéria orgânica se decompõe e causa recalques.",
+    "Instale geotêxtil (bidim) sobre o terreno compactado para evitar que a brita se misture com o solo abaixo.",
+    "Espalhe a brita em camadas de 5 a 8 cm e compacte cada camada com placa vibratória antes de adicionar a próxima.",
+    "Dê aos acessos e caminhos um leve caimento (2 a 3%) para que a água escorra para as bordas em vez de empoçar.",
+    "Use meios-fios ou bordas de contenção (concreto, aço ou madeira tratada) para evitar que a brita migre para áreas adjacentes.",
+  ],
+  commonMistakes: [
+    "Usar seixo rolado para acessos de veículos — não compacta e se desloca sob o peso dos pneus. Use pedra britada angular.",
+    "Não remover a terra vegetal — grama e raízes sob a brita vão se decompor e criar afundamentos.",
+    "Pular a etapa de compactação — brita sem compactar se desloca e forma sulcos rapidamente.",
+    "Aplicar brita muito fina — menos de 8 cm não fornecerá cobertura nem suporte adequados e o solo aparecerá através da pedra.",
+    "Não considerar os mínimos de entrega — a maioria dos fornecedores exige pedido mínimo de 5 a 8 m³ para entrega.",
+  ],
+  faqs: [
+    {
+      question: "Quanta brita eu preciso?",
+      answer: "Multiplique o comprimento pela largura do seu projeto (em metros) para obter a área em m², depois multiplique pela espessura (em metros) para obter os metros cúbicos. Um metro cúbico de brita cobre aproximadamente 10 m² com 10 cm de espessura. Adicione 10% por desperdício, compactação e irregularidades do terreno. Exemplo: uma área de 6×6 metros com 10 cm de espessura precisa de aproximadamente 4 m³ (6 toneladas).",
+    },
+    {
+      question: "Quanto pesa um metro cúbico de brita?",
+      answer: "Um metro cúbico de brita pesa aproximadamente 1.400 a 1.800 kg (1,4 a 1,8 tonelada). O peso exato depende do tipo de rocha: brita 1 pesa em média 1,5 t/m³, brita graduada (BGS) é mais pesada com 1,8 t/m³, pedrisco pesa cerca de 1,3 t/m³, e seixo rolado pesa cerca de 1,6 t/m³. Brita úmida pode pesar 10 a 15% mais que seca.",
+    },
+    {
+      question: "Quantas toneladas de brita eu preciso?",
+      answer: "Calcule primeiro os metros cúbicos (comprimento × largura × espessura em metros), depois multiplique por 1,4 a 1,8 conforme o tipo de material. Exemplo: uma área de 3×6 metros com 10 cm de espessura dá 1,8 m³, que equivale a 2,5 a 3,2 toneladas. Sempre peça 10% a mais para compensar compactação e desperdício.",
+    },
+    {
+      question: "Qual espessura de brita devo usar?",
+      answer: "A espessura recomendada depende da aplicação: 5 a 8 cm para caminhos de jardim e canteiros decorativos, 10 cm para pátios e aterro geral, 15 a 20 cm para acessos de veículos (aplicada em múltiplas camadas), e 25 a 30 cm para áreas de tráfego pesado comercial. Sempre compacte cada camada antes de adicionar a próxima.",
+    },
+    {
+      question: "Quanto custa a brita por metro cúbico?",
+      answer: "Os preços da brita variam de R$ 80,00 a R$ 200,00 por metro cúbico dependendo do tipo. Brita 1 e brita graduada são as mais acessíveis a R$ 80,00-R$ 130,00 por m³. Pedrisco custa R$ 90,00-R$ 150,00 por m³. Seixo rolado decorativo custa R$ 150,00-R$ 350,00 por m³. Custos de frete adicionam R$ 200,00-R$ 600,00 por viagem. Pedreiras locais e lojas como Leroy Merlin oferecem as melhores opções.",
+    },
+    {
+      question: "Quantos metros cúbicos de brita cabem em um caminhão?",
+      answer: "Um caminhão basculante toco (2 eixos) carrega 5 a 6 m³ (7 a 10 toneladas) de brita. Um caminhão truck (3 eixos) carrega 8 a 10 m³ (12 a 18 toneladas). Uma carreta basculante carrega 14 a 18 m³ (21 a 32 toneladas). Para projetos pequenos, muitos fornecedores oferecem entregas parciais ou você pode transportar brita em uma caminhonete (cerca de 0,3 a 0,5 m³ por viagem).",
+    },
+  ],
+};
+
+export const drivewayGravelCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "Esta estimativa inclui um fator de desperdício de 10%. As estimativas de custo são baseadas em médias regionais e variam significativamente por região, fornecedor e distância de entrega. O peso da brita varia conforme o tipo e a umidade. Sempre solicite orçamentos de fornecedores locais antes de fazer o pedido.",
+  howToUse: [
+    "Meça o comprimento total do seu acesso de veículos em metros.",
+    "Insira a largura do acesso — 3 a 3,5 metros para um carro, 6 a 7 metros para acesso duplo.",
+    "Insira a espessura da brita — 15 cm é padrão para acessos, 20 a 25 cm para tráfego de veículos pesados.",
+    "Selecione o tipo de brita e clique em Calcular para obter metros cúbicos, toneladas e uma faixa de custo estimado.",
+  ],
+  materialInfo:
+    "Um acesso de veículos em brita é uma das alternativas mais econômicas e práticas ao concreto moldado ou ao asfalto. Quando instalado corretamente com os materiais adequados e espessura suficiente, um acesso em brita pode durar de 10 a 15 anos com manutenção mínima.\n\nO melhor acesso em brita é construído em três camadas. A camada inferior (15 cm) usa rachão ou brita graduada (BGS 0/32 mm) para drenagem e estabilidade. A camada intermediária (10 cm) usa brita 1 (19 mm) como transição. A camada superior (5 a 10 cm) usa pedrisco ou pó de pedra compactável que se encaixa para formar uma superfície de rolamento firme. Cada camada deve ser espalhada e compactada separadamente.\n\nA pedra britada (brita 1 ou brita 0) é a mais popular para acessos porque suas arestas angulares se encaixam sob compactação, criando uma superfície estável. A brita graduada simples (BGS) é uma mistura de pedra britada e pó de pedra que compacta em uma superfície extremamente dura — é a escolha preferida para acessos de tráfego pesado. O seixo rolado tem boa aparência mas se desloca sob os pneus e não é recomendado como superfície principal de rolamento. O saibro compacta bem e proporciona uma aparência natural, popular em áreas rurais do Brasil.\n\nAcessos em brita custam de R$ 30,00 a R$ 80,00 por metro quadrado instalados, dependendo da espessura e do material. Um acesso típico de 3,5 × 15 metros para um carro custa de R$ 1.600,00 a R$ 4.200,00 apenas em materiais. A instalação profissional com terraplenagem, geotêxtil e compactação adiciona de R$ 30,00 a R$ 60,00 por m². A manutenção anual inclui rastelar a pedra deslocada de volta aos sulcos e adicionar uma camada de recarga de 3 a 5 cm a cada 2 a 3 anos. Pedreiras locais, casas de materiais e lojas como Leroy Merlin e C&C fornecem os materiais necessários.",
+  nextSteps: [
+    { label: "Calculadora de Brita", href: "/calculators/foundation/gravel-calculator/" },
+    { label: "Calculadora de Laje de Concreto", href: "/calculators/foundation/concrete-slab-calculator/" },
+  ],
+  installationTips: [
+    "Terraplane o acesso com caimento de 2 a 3% afastando da casa para drenagem adequada — água empoçada sobre brita cria buracos.",
+    "Instale geotêxtil (bidim) sobre o terreno terraplenado para evitar que a pedra se misture com o solo abaixo.",
+    "Espalhe e compacte cada camada separadamente — não despeje toda a brita de uma vez.",
+    "Use placa vibratória ou rolo compressor em cada camada para maximizar a densidade e estabilidade.",
+    "Instale meios-fios ou bordas de contenção (concreto, aço ou madeira tratada) em ambos os lados para evitar que a brita migre para o jardim.",
+    "Abaulte o centro do acesso ligeiramente mais alto (3 a 5 cm) para que a água escorra para ambos os lados.",
+  ],
+  commonMistakes: [
+    "Usar seixo rolado como superfície de rolamento — sua forma arredondada não compacta e as pedras são arremessadas pelos pneus.",
+    "Despejar brita diretamente sobre terra vegetal sem terraplenar — o solo orgânico se decompõe e causa afundamentos e mistura de lama.",
+    "Aplicar apenas 5 a 8 cm de brita — isso é muito fino para tráfego de veículos e formará sulcos até o solo rapidamente.",
+    "Pular a camada de geotêxtil — sem ela, a brita afunda em solo mole em 1 a 2 anos e você perde metade do seu material.",
+    "Não compactar entre as camadas — brita solta se desloca e desenvolve sulcos e buracos em poucas semanas de uso.",
+  ],
+  faqs: [
+    {
+      question: "Quanta brita preciso para um acesso de veículos?",
+      answer: "Um acesso padrão para um carro (3,5 metros de largura, 15 metros de comprimento, 15 cm de espessura) precisa de aproximadamente 8 m³ (12 toneladas) de brita. Um acesso duplo (7×15 metros a 15 cm de espessura) precisa de aproximadamente 16 m³ (24 toneladas). Essas quantidades incluem um fator de desperdício de 10% para compactação e espalhamento.",
+    },
+    {
+      question: "Quanto custa um acesso de veículos em brita?",
+      answer: "Os materiais para um acesso em brita custam de R$ 30,00 a R$ 80,00 por metro quadrado dependendo do tipo de brita e da espessura. Um acesso de 3,5×15 metros custa de R$ 1.600,00 a R$ 4.200,00 apenas em brita. A instalação profissional com terraplenagem, geotêxtil e compactação tipicamente custa de R$ 30,00 a R$ 60,00 por m², colocando o custo total instalado entre R$ 3.200,00 e R$ 7.500,00 para um acesso simples.",
+    },
+    {
+      question: "Qual é a melhor brita para um acesso de veículos?",
+      answer: "A pedra britada (brita 1 ou brita 0) é a melhor opção geral para acessos porque suas arestas angulares se encaixam ao compactar. A brita graduada simples (BGS) é ainda melhor para tráfego pesado — contém pó de pedra que une o agregado em uma superfície quase sólida. Use brita 1 para o corpo principal e BGS ou pedrisco para a camada de superfície.",
+    },
+    {
+      question: "Qual espessura de brita para um acesso de veículos?",
+      answer: "Um acesso em brita deve ter no mínimo 15 a 20 cm de espessura para veículos de passeio, aplicado em 2 a 3 camadas. Para veículos pesados (caminhões, máquinas), use 25 a 30 cm de espessura total. Cada camada deve ser compactada antes de aplicar a próxima. Uma camada fina de 5 a 8 cm formará sulcos até o solo em poucos meses.",
+    },
+    {
+      question: "Quanto tempo dura um acesso de veículos em brita?",
+      answer: "Um acesso em brita corretamente instalado dura de 10 a 15 anos antes de precisar de uma renovação maior. A manutenção anual inclui rastelar a pedra deslocada de volta aos pontos baixos e adicionar uma camada de recarga de 3 a 5 cm a cada 2 a 3 anos. A camada de base pode durar indefinidamente se foi instalada corretamente com geotêxtil e drenagem.",
+    },
+    {
+      question: "Preciso de geotêxtil sob um acesso em brita?",
+      answer: "Sim, o geotêxtil (bidim) é essencial sob um acesso em brita. Sem ele, a brita afunda em solo mole em 1 a 2 anos, e o solo sobe através da pedra criando uma superfície enlameada. Use geotêxtil tecido de grau comercial (bidim RT ou similar) — não a manta fina vendida para jardins e canteiros.",
+    },
+  ],
+};
+
 // ─── FLOOR FRAMING (ESTRUTURA DE PISO) ─────────────────────────────────────
 
 export const rimJoistCalculator: CalculatorSEOContent = {
@@ -2050,6 +2166,8 @@ export const registryPTBR: Record<string, Record<string, CalculatorSEOContent>> 
     "concrete-footing-calculator": concreteFootingCalculator,
     "concrete-column-calculator": concreteColumnCalculator,
     "concrete-steps-calculator": concreteStepsCalculator,
+    "gravel-calculator": gravelCalculator,
+    "driveway-gravel-calculator": drivewayGravelCalculator,
   },
   "floor-framing": {
     "rim-joist-calculator": rimJoistCalculator,

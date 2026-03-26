@@ -59,6 +59,12 @@ const guides: GuidesTranslations = {
           "Composite vs wood decking compared: cost, durability, maintenance, appearance, and lifespan. Learn which deck material is best for your project and climate.",
         href: "/guides/composite-vs-wood-decking",
       },
+      {
+        title: "How Much Does Gravel Cost? 2026 Price Guide",
+        description:
+          "Gravel costs \u00a315\u2013\u00a340 per tonne. Complete price guide for driveways, patios, paths, drainage, and landscaping with delivery costs and how to calculate amounts.",
+        href: "/guides/gravel-cost-guide",
+      },
     ],
   },
 
@@ -1375,6 +1381,130 @@ const guides: GuidesTranslations = {
         question: "Can I mix composite and wood on the same deck?",
         answer:
           "Yes, many builders use a treated softwood substructure (posts, beams, joists) with composite deck boards and balustrade on top. This is actually the standard approach since composite boards are designed as a decking surface, not structural members. The treated wood frame provides the structural support at a lower cost than an all-composite system, while the composite surface delivers the low-maintenance benefits where you see and touch the deck.",
+      },
+    ],
+  },
+
+  gravelCost: {
+    title: "How Much Does Gravel Cost? 2026 Price Guide",
+    metaDescription:
+      "Gravel costs \u00a315\u2013\u00a340 per tonne, \u00a325\u2013\u00a360 per cubic metre in 2026. Complete price guide: crushed stone, pea gravel, MOT Type 1, decomposed granite, river pebbles. Driveways, patios, paths, drainage, delivery costs, and how to calculate amounts.",
+
+    heroTitle: "How Much Does Gravel Cost?",
+    heroSubtitle: "2026 Price Guide",
+    heroDescription:
+      "A complete breakdown of gravel prices by type, project, and region across the UK. Covers crushed stone, pea gravel, MOT Type 1, decomposed granite, and river pebbles with delivery costs, minimum orders, and tips to save money.",
+
+    quickAnswerHeading: "Quick Answer",
+    quickAnswerText:
+      "Gravel costs \u00a315 to \u00a340 per tonne or \u00a325 to \u00a360 per cubic metre in 2026, depending on the type and your location. MOT Type 1 and crushed stone are the cheapest at \u00a315\u2013\u00a325 per tonne. Pea gravel costs \u00a325\u2013\u00a345 per tonne. Decorative stone like river pebbles costs \u00a340\u2013\u00a3120 per tonne. Delivery adds \u00a350\u2013\u00a3150 per load for distances up to 30 km, and most suppliers require a minimum order of 5 to 10 tonnes.",
+
+    gravelTypesHeading: "Gravel Types & Pricing",
+    gravelTypesIntro:
+      "Not all gravel is the same. Each type has different weight, compaction characteristics, and pricing. Here are the most common types and their 2026 UK pricing:",
+    gravelTypesColType: "Gravel Type",
+    gravelTypesColCost: "Cost per Tonne",
+    gravelTypesColBestFor: "Best For",
+    gravelTypesRows: [
+      { type: "Crushed Stone (10\u201320 mm)", cost: "\u00a315 \u2013 \u00a330", bestFor: "Driveways, drainage, sub-base. Angular edges lock together for stability." },
+      { type: "Pea Gravel (8\u201316 mm)", cost: "\u00a325 \u2013 \u00a345", bestFor: "Paths, patios, decorative beds. Smooth and rounded." },
+      { type: "MOT Type 1 (0/40 mm)", cost: "\u00a312 \u2013 \u00a322", bestFor: "Driveways, car parks. Contains fines that compact into a hard surface." },
+      { type: "Decomposed Granite", cost: "\u00a325 \u2013 \u00a350", bestFor: "Paths, garden areas, natural look. Compacts well." },
+      { type: "River Pebbles (30\u201380 mm)", cost: "\u00a340 \u2013 \u00a3120", bestFor: "Landscaping, dry river beds, decoration. Does not compact." },
+      { type: "White Marble Chips", cost: "\u00a360 \u2013 \u00a3160", bestFor: "Decorative landscaping, borders, accent areas. Premium pricing." },
+    ],
+
+    costByProjectHeading: "Gravel Cost by Project Type",
+    costByProjectIntro:
+      "What you pay depends on project size, depth, and gravel type. Here are typical 2026 costs for common residential projects in the UK:",
+    costByProjectColProject: "Project",
+    costByProjectColTypical: "Typical Cost",
+    costByProjectColNotes: "Notes",
+    costByProjectRows: [
+      { project: "Gravel Driveway (3.5\u00d715 m)", typical: "\u00a3400 \u2013 \u00a31,200", notes: "8\u201312 tonnes of crushed stone at 150 mm depth. Professional laying extra." },
+      { project: "Patio Area (4\u00d74 m)", typical: "\u00a3150 \u2013 \u00a3400", notes: "2\u20133 tonnes of pea gravel at 80\u2013100 mm depth. Edging extra." },
+      { project: "Garden Path (1\u00d710 m)", typical: "\u00a360 \u2013 \u00a3180", notes: "0.5\u20131.5 tonnes at 80 mm. Pea gravel or decomposed granite." },
+      { project: "French Drain (15 m)", typical: "\u00a3100 \u2013 \u00a3300", notes: "2\u20134 tonnes of 10/20 stone. Geotextile separate." },
+      { project: "Planting Bed (3\u00d76 m)", typical: "\u00a3150 \u2013 \u00a3500", notes: "2\u20133 tonnes of decorative stone at 80 mm." },
+      { project: "Shed Base (3\u00d74 m)", typical: "\u00a3100 \u2013 \u00a3300", notes: "2\u20133 tonnes at 100\u2013150 mm. Crushed stone with compaction." },
+      { project: "Parking Bay (3\u00d76 m)", typical: "\u00a3200 \u2013 \u00a3600", notes: "4\u20136 tonnes at 150 mm. MOT Type 1 recommended." },
+    ],
+
+    deliveryCostsHeading: "Delivery Costs & Minimum Orders",
+    deliveryCostsIntro:
+      "Delivery is a significant part of gravel cost, especially for smaller orders. Understanding delivery fees and minimums helps with budgeting.",
+    deliveryCostsText1:
+      "Most builders\u2019 merchants and quarries charge \u00a350 to \u00a3150 per delivery for distances up to 30 km. Beyond 30 km, expect an additional \u00a32\u2013\u00a34 per mile. A standard tipper lorry carries 10\u201315 tonnes. Many suppliers offer half-load options, though the delivery charge remains the same regardless of quantity.",
+    deliveryCostsText2:
+      "Minimum order requirements vary but typically range from 5 to 10 tonnes for delivery. Some merchants offer 1\u20132 tonne minimums with a surcharge (\u00a320\u2013\u00a350 extra). For very small quantities under 1 tonne, collecting gravel yourself with a trailer is the most economical option \u2014 most quarries and builders\u2019 merchants allow self-loading.",
+    deliveryCostsText3:
+      "To save on delivery: combine orders with neighbours, time your purchase for autumn or winter when demand is low, or collect it yourself. A car trailer (750 kg payload) holds about 0.4 m\u00b3 per trip. A larger trailer (2 tonnes) manages 1.2 m\u00b3. Hiring a tipper trailer (\u00a350\u2013\u00a3100/day) lets you haul 2\u20133 m\u00b3 per trip.",
+
+    howToCalculateHeading: "How to Calculate the Amount You Need",
+    howToCalculateIntro:
+      "Getting the right amount prevents costly extra deliveries or leftover material. Follow these steps:",
+    howToCalculateItems: [
+      "Measure your area: Multiply length by width in metres for the area in m\u00b2. For irregular shapes, break into rectangles and add them together.",
+      "Determine the depth: Standard depths are 50\u201380 mm for paths and beds, 100 mm for patios, 150\u2013200 mm for driveways. Convert mm to metres by dividing by 1,000.",
+      "Calculate cubic metres: Length \u00d7 width \u00d7 depth (all in metres) = m\u00b3.",
+      "Convert to tonnes: Multiply m\u00b3 by the weight factor \u2014 1.8 for crushed stone, 1.7 for pea gravel, 2.0 for MOT Type 1, 1.9 for decomposed granite.",
+      "Add 10% wastage: Multiply by 1.1 for compaction, spillage, and uneven ground.",
+      "Example: A driveway 3.5 \u00d7 15 m at 150 mm depth = 3.5 \u00d7 15 \u00d7 0.15 = 7.9 m\u00b3 \u00d7 1.8 = 14.2 tonnes. With 10% wastage: order 15.6 tonnes.",
+    ],
+    howToCalculateSummary:
+      "Tip: Use our free Gravel Calculator to skip the maths. Enter your dimensions and get instant cubic metre, tonnage, and cost estimates.",
+
+    savingTipsHeading: "How to Save Money on Gravel",
+    savingTipsIntro:
+      "Gravel is already one of the cheapest hardscaping materials, but these tips can help you save even more:",
+    savingTipsItems: [
+      "Buy in bulk: The per-tonne cost drops significantly for larger orders. Ordering 15+ tonnes often unlocks bulk pricing that is 10\u201320% cheaper.",
+      "Choose local stone: Gravel from nearby quarries costs far less than stone transported from other regions. Transport is the second-biggest factor in pricing.",
+      "Order off-season: Autumn and winter are the quietest months. Many suppliers offer 10\u201315% discounts during these periods.",
+      "Collect it yourself: With a trailer, you eliminate the \u00a350\u2013\u00a3150 delivery charge. For small projects, this can save 20\u201330% of the total cost.",
+      "Use MOT Type 1 instead of decorative stone: MOT costs \u00a312\u2013\u00a322/tonne versus \u00a340\u2013\u00a3120 for decorative options. For driveways and utility areas, it performs better and costs a fraction of the price.",
+      "Compare multiple suppliers: Prices can vary by 30\u201350% between suppliers in the same area. Get at least 3 quotes before ordering.",
+    ],
+
+    calculatorCtaHeading: "Calculate Your Gravel Needs",
+    calculatorCtaText: "Use our free gravel calculators to estimate the exact amount and cost for your project.",
+    calculatorLinks: [
+      { label: "Gravel Calculator", href: "/calculators/foundation/gravel-calculator", description: "Calculate cubic metres and tonnes for any area with cost estimate." },
+      { label: "Driveway Gravel Calculator", href: "/calculators/foundation/driveway-gravel-calculator", description: "Estimate gravel by type for driveways with cost range and delivery needs." },
+      { label: "Concrete Slab Calculator", href: "/calculators/foundation/concrete-slab-calculator", description: "Planning a concrete project instead? Calculate cubic metres and bag counts." },
+    ],
+
+    faqHeading: "Frequently Asked Questions",
+    faqs: [
+      {
+        question: "How much does a tonne of gravel cost in 2026?",
+        answer:
+          "Gravel costs \u00a315 to \u00a340 per tonne in 2026 for common types. MOT Type 1 is cheapest at \u00a312\u2013\u00a322/tonne. Crushed stone costs \u00a315\u2013\u00a330/tonne. Pea gravel costs \u00a325\u2013\u00a345/tonne. Decomposed granite is \u00a325\u2013\u00a350/tonne. Decorative stones like river pebbles cost \u00a340\u2013\u00a3120/tonne. Prices vary by region and supplier.",
+      },
+      {
+        question: "How much gravel do I need for a driveway?",
+        answer:
+          "A standard single-car driveway (3.5 m wide by 15 m long at 150 mm deep) requires about 8 cubic metres or 14 tonnes of gravel. For a double driveway (7 \u00d7 15 m), you need about 16 m\u00b3 or 28 tonnes. Use crushed stone or MOT Type 1. Include 10% extra for compaction and wastage. Material cost runs \u00a3200\u2013\u00a3600.",
+      },
+      {
+        question: "How much does a cubic metre of gravel cost?",
+        answer:
+          "A cubic metre of gravel costs \u00a325 to \u00a360 depending on the type. Crushed stone averages \u00a325\u2013\u00a350/m\u00b3. MOT Type 1 costs \u00a320\u2013\u00a335/m\u00b3. Pea gravel costs \u00a340\u2013\u00a375/m\u00b3. These are material-only prices \u2014 delivery (\u00a350\u2013\u00a3150/load) is additional. One cubic metre covers about 10 m\u00b2 at 100 mm depth.",
+      },
+      {
+        question: "What is the cheapest type of gravel?",
+        answer:
+          "MOT Type 1 (0/40 mm, also called sub-base or hardcore) is the cheapest gravel at \u00a312\u2013\u00a322 per tonne. It is a blend of crushed stone and fines that compacts into an extremely hard surface, ideal for driveways and parking areas. Plain crushed stone is the next cheapest at \u00a315\u2013\u00a330/tonne. Recycled aggregate is sometimes available for even less.",
+      },
+      {
+        question: "How much gravel do I need per square metre?",
+        answer:
+          "At 100 mm depth (standard for most applications), you need about 0.10 m\u00b3 or 0.18 tonnes of gravel per square metre. At 50 mm: 0.05 m\u00b3/m\u00b2. At 150 mm (driveways): 0.15 m\u00b3 or 0.27 tonnes/m\u00b2. Multiply by your total area and add 10% for wastage.",
+      },
+      {
+        question: "Is a gravel driveway cheaper than tarmac or concrete?",
+        answer:
+          "Yes, significantly. A gravel driveway costs \u00a38\u2013\u00a320/m\u00b2 for materials (\u00a320\u2013\u00a350/m\u00b2 laid), compared with \u00a360\u2013\u00a3120/m\u00b2 for concrete and \u00a340\u2013\u00a380/m\u00b2 for tarmac. A 3.5 \u00d7 15 m gravel driveway costs \u00a31,000\u2013\u00a32,500 laid versus \u00a33,200\u2013\u00a36,500 for concrete. However, gravel requires more ongoing maintenance and needs topping up every 2\u20133 years.",
       },
     ],
   },
