@@ -589,6 +589,105 @@ export const drivewayGravelCalculator: CalculatorSEOContent = {
   ],
 };
 
+export const mortarMixCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "Esta estimativa inclui um fator de desperdício de 10%. O consumo real de argamassa varia conforme o tamanho do bloco ou tijolo, o perfil da junta, a qualidade da mão de obra e as condições climáticas. Sempre confirme as quantidades com seu fornecedor antes de encomendar.",
+  howToUse: [
+    "Calcule a área total da parede em metros quadrados — multiplique o comprimento pela altura e subtraia as aberturas de portas e janelas.",
+    "Selecione o tipo de argamassa — Tipo N para uso geral acima do solo, Tipo S para estrutural e subterrâneo, Tipo M para cargas pesadas.",
+    "Escolha a espessura da junta — 10 mm é o padrão para a maioria dos trabalhos com bloco e tijolo.",
+    "Clique em Calcular para obter o número de sacos pré-misturados e as quantidades para misturar do zero com cimento Portland e areia.",
+  ],
+  materialInfo:
+    "A argamassa é o material de ligação usado entre blocos, tijolos e pedras na construção em alvenaria. É composta de cimento Portland, cal hidratada, areia e água, misturados até uma consistência trabalhável que permite aos pedreiros assentar as peças de forma eficiente.\n\nNo Brasil, as argamassas de assentamento são classificadas pela NBR 13281 da ABNT. As classes mais comuns são: argamassa mista (cimento, cal e areia) com resistência de 1,5 a 4 MPa para alvenaria de vedação, argamassa industrializada com resistência de 4 a 8 MPa para alvenaria estrutural, e argamassa de cimento com resistência acima de 8 MPa para fundações e muros de arrimo.\n\nA argamassa industrializada pronta vem em sacos de 20 kg e 50 kg. Um saco de 20 kg rende aproximadamente 12 litros de argamassa e cobre cerca de 6 blocos de concreto (14x19x39 cm) com juntas de 10 mm. Para projetos grandes, a mistura no canteiro com cimento, cal e areia é mais econômica — um traço comum para alvenaria de vedação é 1:2:8 (cimento:cal:areia) por volume.\n\nAs marcas mais comuns no Brasil incluem Quartzolit (Weber Saint-Gobain), Votomassa (Votorantim), Argamil e Precon. Os sacos de argamassa industrializada (20 kg) custam entre R$ 15 e R$ 30 nas lojas de materiais de construção (Leroy Merlin, C&C, Telhanorte, Tumelero). A areia média para argamassa custa entre R$ 80 e R$ 120 por metro cúbico.",
+  nextSteps: [
+    { label: "Calculadora de Concreto", href: "/calculators/foundation/concrete-calculator/" },
+    { label: "Calculadora de Preenchimento de Blocos", href: "/calculators/foundation/block-fill-calculator/" },
+    { label: "Calculadora de Sapata de Concreto", href: "/calculators/foundation/concrete-footing-calculator/" },
+  ],
+  installationTips: [
+    "Misture apenas a quantidade de argamassa que pode ser usada em 90 minutos — após esse período, ela começa a endurecer e perde a trabalhabilidade.",
+    "Umedeça os blocos ou tijolos antes de assentar para evitar que absorvam a água da argamassa, o que causa juntas fracas.",
+    "Mantenha a espessura da junta consistente usando linha de pedreiro e verificando o prumo a cada 3 a 4 fiadas.",
+    "Faça o acabamento das juntas quando a argamassa estiver firme ao toque — muito cedo borra a superfície, muito tarde impede a compactação.",
+    "Cubra a alvenaria recém-assentada com lona plástica em condições quentes, secas ou ventosas para prevenir perda rápida de umidade.",
+  ],
+  commonMistakes: [
+    "Usar o tipo errado de argamassa — argamassa de cimento puro em paredes de vedação é rígida demais e trinca; argamassa fraca em fundação se deteriora.",
+    "Adicionar muita água à mistura — argamassa aguada tem resistência reduzida e mancha a face dos blocos.",
+    "Retemperar a argamassa depois que começou a endurecer — adicionar água à argamassa endurecida reduz permanentemente a aderência.",
+    "Misturar um lote grande demais — argamassa que fica na masseira por mais de 2 horas está morta e deve ser descartada.",
+    "Não preencher as juntas verticais — juntas de topo vazias criam pontos de entrada de água e enfraquecem a parede.",
+  ],
+  faqs: [
+    {
+      question: "Quanta argamassa preciso por metro quadrado?",
+      answer: "Para blocos de concreto (14x19x39 cm) com juntas de 10 mm, são necessários aproximadamente 1,5 sacos (20 kg) de argamassa industrializada por metro quadrado de parede. Para tijolos cerâmicos furados, o consumo é um pouco menor. Juntas mais grossas (15 mm) aumentam o consumo em cerca de 50%.",
+    },
+    {
+      question: "Qual é a diferença entre argamassa de assentamento e de revestimento?",
+      answer: "A argamassa de assentamento é usada para unir blocos e tijolos e tem resistência moderada com boa aderência. A argamassa de revestimento (chapisco, emboço, reboco) é aplicada sobre paredes para regularizar a superfície. São produtos com traços e granulometrias diferentes — nunca use argamassa de revestimento para assentar alvenaria.",
+    },
+    {
+      question: "Qual o traço correto para argamassa de assentamento?",
+      answer: "Para alvenaria de vedação, o traço mais comum é 1:2:8 (cimento:cal:areia) em volume. Para alvenaria estrutural, use 1:0,5:4 (cimento:cal:areia). Para fundações e muros de arrimo, use 1:0,25:3. Adicione água gradualmente até a mistura ficar com consistência de pasta de dente — deve segurar na colher sem escorrer.",
+    },
+    {
+      question: "Quanto tempo a argamassa leva para secar e curar?",
+      answer: "A argamassa atinge a pega inicial em 2 a 4 horas e está firme o suficiente para trabalho leve em 24 horas. A cura completa leva 28 dias. Evite aplicar cargas pesadas ou aterrar contra paredes recém-assentadas por pelo menos 7 dias. Em temperaturas abaixo de 10 C, a cura desacelera significativamente.",
+    },
+    {
+      question: "Posso usar argamassa no lugar de concreto?",
+      answer: "Não. Argamassa e concreto são produtos diferentes. A argamassa é feita para unir peças de alvenaria e não contém brita. O concreto contém brita e é projetado para lajes, sapatas e pilares. Usar argamassa onde concreto é necessário causará falha estrutural.",
+    },
+    {
+      question: "Quantos blocos um saco de argamassa cobre?",
+      answer: "Um saco de 20 kg de argamassa industrializada rende para aproximadamente 6 blocos de concreto (14x19x39 cm) com juntas de 10 mm, ou cerca de 15 tijolos cerâmicos. Um saco de 50 kg cobre aproximadamente 15 blocos ou 38 tijolos. O rendimento real varia conforme a espessura da junta e o desperdício.",
+    },
+  ],
+};
+
+export const blockFillCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "Esta estimativa inclui um fator de perda de 10%. O volume real de preenchimento varia conforme o fabricante do bloco, a geometria dos furos e a consist\u00eancia do graute. Sempre verifique as dimens\u00f5es dos furos na ficha t\u00e9cnica do produto antes de encomendar.",
+  howToUse: [
+    "Conte o n\u00famero total de blocos de concreto que precisam ser preenchidos \u2014 inclua todas as fiadas e se\u00e7\u00f5es de parede.",
+    "Selecione o tamanho do bloco: 14 cm \u00e9 o padr\u00e3o residencial, 19 cm para paredes estruturais, 29 cm para funda\u00e7\u00f5es e muros de arrimo.",
+    "Escolha o tipo de preenchimento: concreto/graute para preenchimentos estruturais, vermiculita para isolamento, espuma para desempenho t\u00e9rmico.",
+    "Clique em Calcular para obter metros c\u00fabicos e n\u00famero de sacos.",
+  ],
+  materialInfo:
+    "O preenchimento de blocos (\u00e9 o processo de preencher os furos vazios dos blocos de concreto com concreto, graute, vermiculita ou espuma isolante. No Brasil, a alvenaria estrutural com blocos de concreto \u00e9 regida pela NBR 15961 (Alvenaria Estrutural \u2014 Blocos de Concreto) e pela NBR 15812 (Alvenaria Estrutural \u2014 Blocos Cer\u00e2micos), com a NBR 14837 regulando o graute para alvenaria.\n\nO preenchimento estrutural utiliza graute fluido (tipicamente fck 15 a 25 MPa conforme a NBR 14837) que preenche os furos e envolve as armaduras colocadas dentro da parede. A NBR 15961 especifica os furos grauteados nos locais das armaduras verticais e nas cintas de amarra\u00e7\u00e3o.\n\nA coloca\u00e7\u00e3o das armaduras segue a NBR 15961 e a NBR 6118. Barras verticais (CA-50, di\u00e2metro 8 ou 10 mm) s\u00e3o ancoradas na funda\u00e7\u00e3o e sobem pelos furos a serem grauteados. Armaduras horizontais s\u00e3o colocadas nas cintas de amarra\u00e7\u00e3o no topo da parede e nos n\u00edveis intermedi\u00e1rios conforme projeto estrutural.\n\nPara aplica\u00e7\u00f5es n\u00e3o estruturais, o preenchimento com vermiculita ou perlita oferece isolamento moderado (condutividade t\u00e9rmica de aproximadamente 0,065 W/mK). Espuma de poliuretano injetada oferece melhor desempenho (aproximadamente 0,022 W/mK) e ajuda a atender \u00e0 NBR 15575 (Norma de Desempenho). Blocos padr\u00e3o de 14 cm t\u00eam dois furos produzindo aproximadamente 0,005 m\u00b3 de preenchimento por bloco, enquanto blocos de 19 cm produzem cerca de 0,009 m\u00b3.\n\nEspere pagar R$ 450 a R$ 700 por metro c\u00fabico de graute pronto, ou R$ 25 a R$ 40 por saco de 50 kg de concreto ensacado para projetos pequenos. Vermiculita custa R$ 30 a R$ 50 por saco de 100 litros. Materiais dispon\u00edveis em Leroy Merlin, C&C, Telha Norte, depep\u00f3sitos de constru\u00e7\u00e3o e home centers. Sempre pe\u00e7a 10% a mais para acomodar assentamento, perdas e varia\u00e7\u00f5es nos furos.",
+  nextSteps: [
+    { label: "Calculadora de Concreto", href: "/calculators/foundation/concrete-calculator/" },
+    { label: "Calculadora de Sapata", href: "/calculators/foundation/concrete-footing-calculator/" },
+    { label: "Calculadora de Brita", href: "/calculators/foundation/gravel-calculator/" },
+  ],
+  installationTips: [
+    "Molhe os furos dos blocos antes de lan\u00e7ar o graute \u2014 blocos secos absorvem \u00e1gua da mistura e enfraquecem o preenchimento.",
+    "Lance o graute em etapas de no m\u00e1ximo 1,20 m de altura, depois consolide com vibrador ou barra.",
+    "Use graute fino (agregado m\u00e1ximo 10 mm) para que flua livremente pelos furos sem criar pontes.",
+    "Coloque as armaduras verticais antes de assentar os blocos e mantenha-as aprumadas.",
+    "Instale blocos de inspe\u00e7\u00e3o na base de paredes altas para verificar os furos antes do grauteamento.",
+    "Preencha completamente as cintas de amarra\u00e7\u00e3o e vibre o graute para eliminar vazios ao redor das armaduras horizontais.",
+  ],
+  commonMistakes: [
+    "Grautear todos os furos de uma parede alta de uma vez \u2014 a press\u00e3o do graute pode estourar as fiadas inferiores. Limite as etapas a 1,20 m.",
+    "Omitir armaduras nos furos grauteados \u2014 furos sem a\u00e7o oferecem pouco valor estrutural.",
+    "Usar concreto padr\u00e3o em vez de graute fino \u2014 agregados grandes se bloqueiam na abertura dos furos e criam vazios.",
+    "N\u00e3o consolidar o graute com vibrador ou barra \u2014 bolhas de ar reduzem a resist\u00eancia de ader\u00eancia em at\u00e9 50%.",
+    "Preencher furos em temperaturas abaixo de 10 \u00b0C \u2014 o graute deve curar acima de 10 \u00b0C por pelo menos 48 horas.",
+  ],
+  faqs: [
+    { question: "Quanto concreto preciso para preencher blocos de concreto?", answer: "Um bloco padr\u00e3o de 14 cm requer aproximadamente 0,005 m\u00b3 de graute. Para 100 blocos, voc\u00ea precisa de cerca de 0,55 m\u00b3 incluindo 10% de perda. Blocos de 19 cm precisam de 0,009 m\u00b3 cada. Insira a quantidade e tamanho acima para uma estimativa instant\u00e2nea." },
+    { question: "Quantos sacos de concreto de 50 kg para preencher um bloco?", answer: "Um saco de concreto de 50 kg preenche aproximadamente 3 blocos padr\u00e3o de 14 cm ou 2 blocos de 19 cm. Para 100 blocos de 14 cm, voc\u00ea precisa de cerca de 35 sacos. Sempre compre 10% a mais para perdas." },
+    { question: "Todos os furos dos blocos precisam ser preenchidos?", answer: "N\u00e3o \u2014 a NBR 15961 exige preenchimento apenas dos furos que cont\u00eam armaduras ou que fazem parte de cintas de amarra\u00e7\u00e3o. Normalmente, os furos s\u00e3o grauteados a cada 1,20 m horizontal, em esquinas, v\u00e3os de portas e janelas, e na cinta superior." },
+    { question: "Qual a diferen\u00e7a entre graute e concreto para preenchimento de blocos?", answer: "Graute conforme a NBR 14837 \u00e9 uma mistura fluida com agregado pequeno (m\u00e1ximo 10 mm), projetada para fluir nos furos estreitos dos blocos. Concreto padr\u00e3o tem agregados maiores que se bloqueiam nos furos criando vazios. Sempre use graute fino para preenchimento de blocos." },
+    { question: "Posso preencher blocos com espuma isolante em vez de concreto?", answer: "Sim, para paredes n\u00e3o estruturais onde a norma permite. Espuma PU injetada oferece excelente desempenho t\u00e9rmico (cerca de 0,022 W/mK) e ajuda a atender \u00e0 NBR 15575. Vermiculita \u00e9 mais barata mas menos eficiente. Nenhuma fornece resist\u00eancia estrutural \u2014 se armaduras s\u00e3o especificadas, esses furos devem ser grauteados." },
+    { question: "Quantos metros c\u00fabicos de graute para uma parede de blocos?", answer: "Multiplique os blocos a preencher pelo volume do furo: 0,005 m\u00b3 por bloco de 14 cm, 0,009 m\u00b3 por bloco de 19 cm ou 0,011 m\u00b3 por bloco de 29 cm. Uma parede de funda\u00e7\u00e3o t\u00edpica de 19 cm com 400 blocos e preenchimento completo precisa de cerca de 4,0 m\u00b3 de graute com 10% de perda." },
+  ],
+};
+
 // ─── FLOOR FRAMING (ESTRUTURA DE PISO) ─────────────────────────────────────
 
 export const rimJoistCalculator: CalculatorSEOContent = {
@@ -2154,6 +2253,45 @@ const deckStairCalculatorPTBR: CalculatorSEOContent = {
   ],
 };
 
+export const postHoleCalculatorPTBR: CalculatorSEOContent = {
+  disclaimer: "Volume de concreto estimado para buracos cil\u00edndricos. O consumo real pode variar conforme condi\u00e7\u00f5es do solo e tamanho do poste.",
+  howToUse: [
+    "Digite o di\u00e2metro do buraco em polegadas \u2014 20 cm para postes de 10\u00d710 cm, 25\u201330 cm para postes de 15\u00d715 cm.",
+    "Digite a profundidade do buraco em polegadas \u2014 postes de cerca: 60\u201380 cm, postes estruturais: 80\u2013120 cm.",
+    "Digite o n\u00famero total de buracos.",
+    "Clique em Calcular para obter volume por buraco, volume total e quantidade de sacos.",
+  ],
+  materialInfo:
+    "Buracos para postes s\u00e3o escava\u00e7\u00f5es cil\u00edndricas preenchidas com concreto para ancorar postes de cercas, caixas de correio, suportes de decks, placas, pergolados e outras estruturas externas. O concreto envolve a base do poste e transfere as cargas para o solo ao redor, impedindo que o poste se mova, incline ou seja levantado pela a\u00e7\u00e3o do vento ou for\u00e7as laterais.\n\nPara postes de cerca, a regra geral \u00e9 enterrar um ter\u00e7o do comprimento total do poste. Uma cerca de 1,80 m com postes de 2,40 m deve ter 60\u201380 cm de poste enterrado no concreto. Para postes de 10\u00d710 cm, um buraco de 20 cm de di\u00e2metro \u00e9 suficiente. Para postes de 15\u00d715 cm ou postes de port\u00e3o sujeitos a maiores for\u00e7as laterais, usar buracos de 25\u201330 cm.\n\nNo Brasil, n\u00e3o h\u00e1 preocupa\u00e7\u00e3o com linha de congelamento, mas postes devem atingir solo firme e compacto. A NBR 6122 recomenda funda\u00e7\u00f5es em solo com capacidade de suporte adequada. Profundidades t\u00edpicas s\u00e3o 60\u201380 cm para cercas e 80\u2013100 cm para estruturas como pergolados e decks.\n\nO concreto ensacado em sacos de 25 kg e 50 kg (Votoran, InterCement, Votorantim) \u00e9 o produto mais utilizado. Um saco de 25 kg rende aproximadamente 12 litros, um saco de 50 kg rende aproximadamente 24 litros. Pre\u00e7os: R$ 20\u201335 por saco de 25 kg, R$ 35\u201360 por saco de 50 kg. Para projetos grandes, concreto usinado custa R$ 400\u2013600/m\u00b3.\n\nAntes de lan\u00e7ar o concreto, adicionar 10\u201315 cm de brita no fundo do buraco para drenagem. Moldar o concreto ligeiramente acima do n\u00edvel do terreno com caimento para fora do poste.",
+  nextSteps: [
+    { label: "Calculadora de Funda\u00e7\u00f5es para Deck", href: "/calculators/outdoor/deck-footing-calculator/" },
+    { label: "Calculadora de Brita", href: "/calculators/foundation/gravel-calculator/" },
+    { label: "Calculadora de Concreto", href: "/calculators/foundation/concrete-calculator/" },
+  ],
+  installationTips: [
+    "Cavar buracos 3 a 4 vezes a largura do poste \u2014 20 cm para poste de 10\u00d710 cm.",
+    "Adicionar 10\u201315 cm de brita compactada no fundo para drenagem.",
+    "Verificar o prumo do poste em duas faces com n\u00edvel de bolha e escorar com sarrafos antes de lan\u00e7ar o concreto.",
+    "Moldar o concreto 2\u20133 cm acima do n\u00edvel do terreno, com caimento para fora do poste.",
+    "Aguardar no m\u00ednimo 24\u201348 horas antes de fixar r\u00e9guas, ferragens ou cargas no poste.",
+  ],
+  commonMistakes: [
+    "Postes rasos demais \u2014 postes de cerca devem ser enterrados pelo menos um ter\u00e7o do comprimento; postes estruturais devem atingir solo firme.",
+    "Pular a camada de brita \u2014 sem drenagem, a \u00e1gua se acumula na base e acelera o apodrecimento da madeira.",
+    "N\u00e3o escorar o poste no prumo antes da cura do concreto \u2014 corrigir um poste torto exige demolir o concreto.",
+    "Lan\u00e7ar o concreto abaixo do n\u00edvel do terreno \u2014 o topo deve ficar acima do solo para evitar empoçamento.",
+    "Usar di\u00e2metro de buraco pequeno demais \u2014 concreto insuficiente ao redor do poste n\u00e3o resiste \u00e0s for\u00e7as laterais do vento ou port\u00e3o.",
+  ],
+  faqs: [
+    { question: "Quanto concreto para um poste de cerca?", answer: "Um poste de 10\u00d710 cm em buraco de 20 cm a 60 cm de profundidade requer cerca de 14 litros de concreto \u2014 aproximadamente 1 saco de 50 kg ou 2 sacos de 25 kg por poste." },
+    { question: "Qual a profundidade do buraco para poste de cerca?", answer: "Regra geral: um ter\u00e7o do comprimento total do poste. Cerca de 1,80 m com postes de 2,40 m: 60\u201380 cm. Postes de port\u00e3o e de canto 10 cm mais profundos." },
+    { question: "Quantos sacos de concreto por poste?", answer: "Para poste de 10\u00d710 cm em buraco de 20 cm a 60 cm: 1\u20132 sacos de 25 kg ou 1 saco de 50 kg. Para buracos mais fundos (80 cm): 2\u20133 sacos de 25 kg por poste." },
+    { question: "Posso usar concreto r\u00e1pido para postes?", answer: "Sim \u2014 concreto de pega r\u00e1pida \u00e9 ideal. Endurece em 20\u201340 minutos. Despeje a mistura seca ao redor do poste, adicione \u00e1gua e segure no prumo por alguns minutos. Resist\u00eancia total em cerca de 4 horas." },
+    { question: "Como calcular concreto para buracos de postes?", answer: "Buracos s\u00e3o cilindros: volume = \u03c0 \u00d7 r\u00b2 \u00d7 profundidade. Converter cm para metros. Exemplo: 25 cm di\u00e2metro, 80 cm profundidade: r = 0,125 m, V = 3,14 \u00d7 0,125\u00b2 \u00d7 0,8 = 0,039 m\u00b3 = 39 litros. Um saco de 25 kg rende cerca de 12 litros." },
+    { question: "Qual tamanho de buraco para poste de port\u00e3o?", answer: "Poste de port\u00e3o precisa de buraco de 25\u201330 cm de di\u00e2metro a 80\u2013100 cm de profundidade. Port\u00f5es exercem for\u00e7a lateral significativa. Usar postes de 15\u00d715 cm m\u00ednimo para port\u00f5es simples." },
+  ],
+};
+
 // ─── REGISTRY MAP ─────────────────────────────────────────────────────────────
 
 export const registryPTBR: Record<string, Record<string, CalculatorSEOContent>> = {
@@ -2168,6 +2306,8 @@ export const registryPTBR: Record<string, Record<string, CalculatorSEOContent>> 
     "concrete-steps-calculator": concreteStepsCalculator,
     "gravel-calculator": gravelCalculator,
     "driveway-gravel-calculator": drivewayGravelCalculator,
+    "mortar-mix-calculator": mortarMixCalculator,
+    "block-fill-calculator": blockFillCalculator,
   },
   "floor-framing": {
     "rim-joist-calculator": rimJoistCalculator,
@@ -2225,5 +2365,6 @@ export const registryPTBR: Record<string, Record<string, CalculatorSEOContent>> 
     "deck-footing-calculator": deckFootingCalculatorPTBR,
     "deck-railing-calculator": deckRailingCalculatorPTBR,
     "deck-stair-calculator": deckStairCalculatorPTBR,
+    "post-hole-calculator": postHoleCalculatorPTBR,
   },
 };

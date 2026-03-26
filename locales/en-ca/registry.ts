@@ -444,6 +444,105 @@ export const drivewayGravelCalculator: CalculatorSEOContent = {
   ],
 };
 
+export const blockFillCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "This estimate includes a 10% waste factor. Actual fill volume varies with block manufacturer, core geometry, and grout slump. Always verify core dimensions against the specific CMU product data sheet before ordering.",
+  howToUse: [
+    "Count the total number of CMU blocks that need to be filled \u2014 include all courses and wall sections.",
+    "Select the block size: 8-inch is standard residential, 10-inch and 12-inch are used for taller or load-bearing walls.",
+    "Choose the fill type: concrete/grout for structural fills, vermiculite for insulation, foam insulation for thermal performance.",
+    "Click Calculate to get cubic yards, cubic feet, and bag count.",
+  ],
+  materialInfo:
+    "Block fill (also called core fill or grout fill) is the process of filling the hollow cores of concrete masonry unit (CMU) blocks with concrete, grout, vermiculite, or foam insulation. In Canadian construction, CMU block filling is governed by CSA A370 (Connectors for Masonry) and CSA A179 (Mortar and Grout for Unit Masonry), with the National Building Code of Canada (NBC) Part 9 referencing these standards for residential applications.\n\nStructural block fill uses a pourable grout mix conforming to CSA A179, typically achieving 12.5 MPa compressive strength. The grout flows into the cores and around vertical rebar placed inside the wall. The NBC and provincial codes require grouted cells at specific intervals \u2014 usually every 1200 mm horizontally and at all corners, jambs, and bond beam courses.\n\nRebar placement follows CSA A370 requirements. Vertical rebar (10M or 15M bars) is set into the footing before the wall is laid and extends up through the cores that will be grouted. Horizontal rebar runs through bond beam blocks at the top of the wall and at intermediate courses as specified by the engineer. All grouted cells must have rebar \u2014 filling empty cores with grout alone does not meet structural requirements.\n\nFor non-structural applications, vermiculite or perlite loose fill provides moderate insulation (approximately RSI 0.37 per 25 mm) and is poured dry into the cores. Spray foam insulation offers higher R-values (RSI 1.06 per 25 mm for closed-cell) but costs significantly more and requires professional installation. Standard 200 mm (8-inch) CMU blocks have two cores yielding approximately 0.007 cubic metres of fill per block.\n\nExpect to pay CAD $150 to $200 per cubic metre for ready-mix grout delivered, or CAD $7 to $10 per 30 kg bag of premixed grout for small projects. Vermiculite costs CAD $20 to $30 per 4-cubic-foot bag. Materials are available at Home Depot Canada, RONA, and local masonry supply yards. Always over-order by 10% to account for settling, spillage, and irregular core sizes.",
+  nextSteps: [
+    { label: "Concrete Calculator", href: "/calculators/foundation/concrete-calculator/" },
+    { label: "Concrete Footing Calculator", href: "/calculators/foundation/concrete-footing-calculator/" },
+    { label: "Gravel Calculator", href: "/calculators/foundation/gravel-calculator/" },
+  ],
+  installationTips: [
+    "Pre-wet the CMU cores before pouring grout \u2014 dry blocks absorb water from the mix and weaken the fill.",
+    "Pour grout in lifts of no more than 1.2 metres (4 feet) at a time, then consolidate with a vibrator or rod.",
+    "Use fine grout (10 mm aggregate max) so it flows freely through the cores without bridging.",
+    "Place vertical rebar before laying blocks and brace it plumb \u2014 do not try to drop rebar into filled cores.",
+    "Install cleanout blocks at the base of tall walls so you can inspect cores before grouting.",
+    "Fill bond beam courses completely and rod the grout to eliminate voids around horizontal rebar.",
+  ],
+  commonMistakes: [
+    "Grouting all cores at once on a tall wall \u2014 grout sets under pressure and can blow out lower courses. Limit pours to 1.2-metre lifts.",
+    "Skipping rebar in grouted cells \u2014 grouted cells without rebar provide little structural value.",
+    "Using standard concrete mix instead of fine grout \u2014 large aggregate bridges across the core opening and creates voids.",
+    "Not consolidating grout with a vibrator or rod \u2014 air pockets reduce bond strength by up to 50%.",
+    "Filling cores in freezing temperatures \u2014 grout must cure above 5\u00b0C for at least 48 hours per CSA A179.",
+  ],
+  faqs: [
+    { question: "How much concrete do I need to fill cinder blocks?", answer: "A standard 200 mm (8-inch) CMU block requires approximately 0.007 cubic metres of grout per block. For 100 blocks, you need about 0.77 cubic metres including a 10% waste factor. Enter your block count and size above for an instant estimate with bag counts." },
+    { question: "How many 30 kg bags of concrete to fill a cinder block?", answer: "One 30 kg bag of premixed grout fills approximately 2 standard 200 mm CMU blocks. For a wall of 100 blocks, you need about 55 bags. For 300 mm blocks, one bag fills only about 1.5 blocks because of the larger core volume. Always buy 10% extra for waste and spillage." },
+    { question: "Do all CMU block cores need to be filled?", answer: "No \u2014 the NBC and CSA standards only require filling cores that contain rebar or are part of a bond beam course. Typically, cores are grouted every 1200 mm horizontally and at all corners, door and window jambs, and the top bond beam. In seismic zones (parts of BC, Quebec, and Ottawa), codes may require every core to be grouted." },
+    { question: "What is the difference between grout and concrete for block fill?", answer: "Grout conforming to CSA A179 is a fluid mix with small aggregate (10 mm max) and higher water content, designed to flow into narrow block cores without bridging. Standard concrete has larger aggregate that can jam in the cores, creating voids. Always use fine grout or a premixed block fill product for CMU cores." },
+    { question: "Can I fill cinder blocks with foam insulation instead of concrete?", answer: "Yes, for non-structural walls where code allows it. Closed-cell spray foam provides approximately RSI 1.06 per 25 mm and adds moisture resistance. Vermiculite loose fill is cheaper at about RSI 0.37 per 25 mm. Neither provides structural strength \u2014 if the wall requires grouted rebar, those cells must be filled with grout." },
+    { question: "How many cubic metres of grout for a CMU block wall?", answer: "Multiply the number of blocks to be filled by the core volume: 0.007 m\u00b3 per 200 mm block, 0.009 m\u00b3 per 250 mm block, or 0.011 m\u00b3 per 300 mm block. A typical 200 mm foundation wall of 400 blocks with every core filled needs about 3.1 m\u00b3 of grout including 10% waste." },
+  ],
+};
+
+export const mortarMixCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "This estimate includes a 10% waste factor. Actual mortar usage varies based on block or brick size, joint profile (concave, V-joint, flush), workmanship, and weather conditions. Always confirm quantities with your masonry supplier before ordering.",
+  howToUse: [
+    "Calculate the total wall or surface area in square feet — multiply wall length by height, then subtract window and door openings.",
+    "Select your mortar type — Type N for general above-grade work, Type S for structural and below-grade, Type M for heavy loads and foundations.",
+    "Choose the joint thickness — 3/8\" is the standard for most block and brick work.",
+    "Click Calculate to get the number of pre-mixed bags needed plus quantities for mixing from scratch with Portland cement and sand.",
+  ],
+  materialInfo:
+    "Mortar is the bonding material used between blocks, bricks, and stone units in masonry construction. It is composed of Portland cement, hydrated lime, sand, and water, mixed to a workable consistency that allows masons to lay units efficiently while providing structural bond and weather resistance.\n\nIn Canada, mortar is specified under CSA A179 (Mortar and Grout for Unit Masonry) and must comply with the National Building Code of Canada (NBC). The three most common types are Type N (750 psi / 5.2 MPa), Type S (1,800 psi / 12.4 MPa), and Type M (2,500 psi / 17.2 MPa). Type N is the standard general-purpose mortar for above-grade walls, chimneys, and non-load-bearing partitions. Type S is required for structural walls, below-grade foundation walls, and retaining walls per NBC Part 9. Type M provides the highest compressive strength for heavy-load foundations.\n\nPre-mixed mortar (such as King, Bomix, or Sakrete) comes in 30 kg and 25 kg bags. A 30 kg bag yields approximately 0.5 cubic feet (14 litres) of mortar and covers roughly 14 standard CMU blocks (200 x 200 x 400 mm) at 10 mm joints. For large projects, site-mixing with Portland cement (CSA A3001), hydrated lime, and masonry sand is more economical.\n\nPre-mixed mortar bags (30 kg) cost approximately CAD 8 to 15 at Home Depot Canada, RONA, Home Hardware, or Castle Building Centres. Masonry sand costs about CAD 30 to 50 per tonne. In cold-weather provinces, mortar must be protected from freezing per CSA A371 — cold weather masonry requires heated materials and enclosures when temperatures fall below 5 C.",
+  nextSteps: [
+    { label: "Concrete Calculator", href: "/calculators/foundation/concrete-calculator/" },
+    { label: "Block Fill Calculator", href: "/calculators/foundation/block-fill-calculator/" },
+    { label: "Concrete Footing Calculator", href: "/calculators/foundation/concrete-footing-calculator/" },
+  ],
+  installationTips: [
+    "Mix only as much mortar as you can use within 90 minutes — mortar begins to set and loses workability after that window.",
+    "Dampen blocks or bricks before laying to prevent them from absorbing water from the mortar, which causes weak bonds.",
+    "Maintain consistent joint thickness by using a mason's line and checking courses with a level every 3 to 4 rows.",
+    "Tool (strike) the joints when the mortar is thumbprint-firm — tooling too early smears the surface, and too late prevents proper compaction.",
+    "In Canadian winters, never lay masonry when temperatures are below -5 C without heated enclosures and warm materials per CSA A371.",
+  ],
+  commonMistakes: [
+    "Using the wrong mortar type — Type M in above-grade walls is too rigid and cracks; Type N below grade is too weak and deteriorates.",
+    "Adding too much water to the mix — soupy mortar has reduced strength and stains the face of the blocks or bricks.",
+    "Re-tempering mortar after it has begun to set — adding water to stiffened mortar restores workability but permanently reduces bond strength.",
+    "Mixing too large a batch — mortar that sits in the wheelbarrow for over 2 hours is dead and must be discarded, wasting material.",
+    "Not buttering the ends of blocks or bricks — head joints left empty create water entry points and weaken the wall structurally.",
+  ],
+  faqs: [
+    {
+      question: "How much mortar do I need per 100 square feet?",
+      answer: "For standard 200 x 200 x 400 mm concrete blocks with 10 mm joints, you need approximately 7 bags (30 kg) of pre-mixed mortar per 100 square feet (9.3 m2) of wall area. Type S mortar uses about 7.5 bags and Type M about 8 bags per 100 sq ft due to their denser mix.",
+    },
+    {
+      question: "What mortar type does the NBC require?",
+      answer: "The National Building Code of Canada (NBC) Part 9 requires Type S mortar for below-grade foundation walls, retaining walls, and any masonry in contact with soil. Type N is acceptable for above-grade load-bearing and non-load-bearing walls. CSA A179 governs mortar specifications, and CSA A371 covers cold-weather masonry practices.",
+    },
+    {
+      question: "How do I mix mortar from scratch in Canada?",
+      answer: "For Type N mortar per CSA A179, combine 1 part Portland cement (CSA A3001), 1 part hydrated lime, and 6 parts masonry sand by volume. For Type S, use 1 part cement, 0.5 part lime, and 4.5 parts sand. Add water gradually until the mix reaches a peanut-butter consistency. One 40 kg bag of Portland cement makes about 4.5 cubic feet of Type N mortar.",
+    },
+    {
+      question: "Can I lay mortar in winter in Canada?",
+      answer: "Yes, but CSA A371 requires special cold-weather procedures when temperatures fall below 5 C. Materials must be heated (sand to at least 20 C, water to 40-70 C), the work area must be enclosed and heated, and freshly laid masonry must be protected from freezing for at least 48 hours. Antifreeze admixtures are not a substitute for proper cold-weather protection.",
+    },
+    {
+      question: "How long does mortar take to cure?",
+      answer: "Mortar reaches initial set in 2 to 4 hours and is firm enough for light work in 24 hours. Full cure takes 28 days. Avoid heavy loads or backfilling for at least 7 days. In Canadian winters, curing slows dramatically below 5 C and mortar must be protected from freezing per CSA A371.",
+    },
+    {
+      question: "How much does mortar cost in Canada?",
+      answer: "Pre-mixed mortar bags (30 kg) cost CAD 8 to 15 depending on type and brand. Portland cement (40 kg) costs CAD 12 to 18. Masonry sand runs CAD 30 to 50 per tonne. For a typical 100-block foundation wall project, mortar materials cost approximately CAD 80 to 150. Prices vary by province and are generally higher in remote and northern communities.",
+    },
+  ],
+};
+
 // ─── FLOOR FRAMING ──────────────────────────────────────────────────────────
 
 export const floorJoistCalculator: CalculatorSEOContent = {
@@ -483,5 +582,45 @@ export const floorJoistCalculator: CalculatorSEOContent = {
     { question: "Do I need engineered floor joists?", answer: "Engineered I-joists (TJI) are not required by the NBC, but they offer significant advantages for spans over 4.5 m (15 ft), open-concept floor plans, and situations where consistent depth and straightness are critical. I-joists are lighter than dimensional lumber, do not twist, shrink, or crown, and come in depths up to 406 mm (16 in) to span over 6 m (20 ft). They are widely available from Canadian suppliers like Weyerhaeuser, Tolko, and LP. The main drawback is cost — roughly 20 to 40 percent more than sawn lumber — and the need for web stiffeners at bearing points." },
     { question: "What is the NBC requirement for floor joist spacing?", answer: "The National Building Code of Canada (NBC) Part 9 permits floor joist spacing of 400 mm (16 in), 300 mm (12 in), or 600 mm (24 in) on centre, with maximum allowable spans varying by spacing, lumber size, species, and grade. The span tables in NBC Tables 9.23.4.1 (for bedrooms and attics) and 9.23.4.2 (for all other areas with 1.9 kPa live load) provide the specific maximums. Most builders default to 400 mm (16 in) on centre as the best balance of material cost and floor stiffness. Provincial building codes (such as the OBC in Ontario or the BCBC in British Columbia) adopt the NBC tables with occasional local amendments." },
     { question: "How much do floor joists cost in Canada?", answer: "Dimensional SPF lumber joists cost approximately CAD $10 to $30 each depending on size, length, and regional pricing. A 2×10×12 ft typically runs CAD $15 to $22. Engineered I-joists cost CAD $4 to $8 per linear foot. For a typical 130 m² (1,400 sq ft) floor system using 2×10 at 16-inch spacing, expect to spend CAD $1,200 to $2,500 on joists alone. Lumber prices in Canada fluctuate with the softwood market — check current pricing at Home Depot Canada, RONA, or your local building supply yard." },
+  ],
+};
+// ─── OUTDOOR ────────────────────────────────────────────────────────────────
+
+export const postHoleCalculator: CalculatorSEOContent = {
+  disclaimer: "This calculator estimates concrete volume for cylindrical post holes. Actual usage may vary based on soil conditions, gravel base, and post size.",
+  howToUse: [
+    "Enter the hole diameter in inches — 8 inches for 4×4 posts, 10–12 inches for 6×6 posts.",
+    "Enter the hole depth in inches — fence posts typically need 24–36 inches, structural posts 36–48 inches (below the frost line).",
+    "Enter the total number of holes.",
+    "Click Calculate for volume per hole, total volume, and bag counts.",
+  ],
+  materialInfo:
+    "Post holes are cylindrical excavations filled with concrete to anchor fence posts, mailbox posts, deck supports, signs, pergolas, and other outdoor structures. The concrete encases the post base and transfers loads into the surrounding soil, preventing the post from shifting, leaning, or heaving due to wind, frost, or lateral force.\n\nFor fence posts, the standard rule is to bury one-third of the total post length. A 6-foot fence using 8-foot posts should have 24 to 30 inches buried in concrete. For 4×4 posts, an 8-inch diameter hole is sufficient. For 6×6 posts or gate posts bearing heavier lateral loads, use a 10 to 12-inch hole.\n\nIn Canada, frost depth is the critical factor. The NBC and provincial codes require post foundations to extend below the local frost line: 1.2 m (48 in) in southern Ontario, 1.5 m (60 in) in the Prairies, and up to 2.1 m (84 in) in northern regions. Fence posts in most of Canada should be set at least 900 mm (36 in) deep, and structural posts (decks, pergolas, carports) must reach below the published frost depth.\n\nQuikrete fast-setting concrete is widely available at Home Depot Canada, RONA, and local building supply yards. A 30 kg bag fills approximately 0.014 m³ (0.5 cu ft). For large projects, 80 lb (36 kg) bags fill approximately 0.017 m³ (0.6 cu ft) and cost CAD $7–10 per bag. Standard ready-mix bags cost CAD $5–8 for 30 kg.\n\nBefore pouring concrete, add 100–150 mm of gravel at the bottom of each hole for drainage. Crown the concrete above grade and slope it away from the post to shed water.",
+  nextSteps: [
+    { label: "Deck Footing Calculator", href: "/calculators/outdoor/deck-footing-calculator/" },
+    { label: "Gravel Calculator", href: "/calculators/foundation/gravel-calculator/" },
+    { label: "Concrete Calculator", href: "/calculators/foundation/concrete-calculator/" },
+  ],
+  installationTips: [
+    "Dig holes 3 to 4 times the width of the post — an 8-inch hole for a 4×4 post, 10–12 inches for a 6×6 post.",
+    "Add 100–150 mm of gravel at the bottom of each hole for drainage before setting the post.",
+    "Plumb the post on two adjacent sides with a level and brace it with 2×4 stakes before pouring concrete.",
+    "Crown the concrete 25–50 mm above grade, sloping away from the post to shed water.",
+    "Allow at least 24–48 hours before attaching fence rails, brackets, or loads to the post.",
+  ],
+  commonMistakes: [
+    "Setting posts above the frost line — in Canada, frost heave is the primary cause of leaning fences and shifted deck posts; always dig below the published frost depth.",
+    "Skipping the gravel base — without drainage at the bottom, water pools around the post base and accelerates rot.",
+    "Not bracing posts plumb before the concrete sets — once cured, correcting a leaning post requires breaking out the concrete.",
+    "Pouring concrete below grade level — the top should crown above ground to prevent water pooling against the post.",
+    "Using too small a hole diameter — insufficient concrete cannot resist lateral forces from wind or gate operation.",
+  ],
+  faqs: [
+    { question: "How much concrete for a fence post in Canada?", answer: "A standard 4×4 fence post in an 8-inch hole at 36 inches deep (typical Canadian frost depth) requires about 0.87 cubic feet of concrete — roughly 2 bags of 30 kg Quikrete per post. For a 6×6 post in a 10-inch hole at 48 inches deep, you need about 1.8 cubic feet per post." },
+    { question: "How deep should fence posts be in Canada?", answer: "Fence posts in Canada should be set at least 900 mm (36 in) deep in most regions. In the Prairies and northern Ontario, 1.2–1.5 m (48–60 in) is required to get below the frost line. Check your local building code or municipal requirements for the exact frost depth in your area." },
+    { question: "How many bags of concrete per fence post Canada?", answer: "For a 4×4 post at 36 inches deep in an 8-inch hole: 2 bags of 30 kg Quikrete. For 48-inch depth: 3 bags. Quikrete fast-setting mix can be poured dry into the hole and wetted — no mixing required." },
+    { question: "Can I use fast-setting concrete for post holes?", answer: "Yes — Quikrete Fast-Setting Concrete Mix sets in 20–40 minutes. Pour the dry mix around the post, add water, and hold plumb. Full strength in about 4 hours. Widely available at Home Depot Canada, RONA, and local yards. For structural posts, standard mix with 24-hour cure is stronger." },
+    { question: "How do I calculate concrete for post holes?", answer: "Post holes are cylinders: volume = π × r² × depth. Convert inches to feet. Example: 10-inch diameter, 36 inches deep: r = 5 in = 0.417 ft, depth = 3 ft. Volume = 3.14 × 0.417² × 3 = 1.64 cu ft. Divide by 0.5 for 30 kg bags or 0.6 for 80 lb bags." },
+    { question: "What size hole for a mailbox post in Canada?", answer: "A Canada Post community mailbox pad typically requires a 200 mm (8 in) hole, 600 mm (24 in) deep. For a standalone rural mailbox post, use a 4×4 pressure-treated post in an 8-inch hole at 36 inches deep with gravel drainage base." },
   ],
 };

@@ -10,6 +10,8 @@ import {
   calculateConcreteFooting,
   calculateConcreteColumn,
   calculateConcreteSteps,
+  calculateBlockFill,
+  calculateMortarMix,
   calculateGravel,
   calculateDrivewayGravel,
 } from "./calculations/foundationCalculations";
@@ -75,6 +77,7 @@ import {
   calculateDeckFootings,
   calculateDeckRailing,
   calculateDeckStairs,
+  calculatePostHole,
 } from "./calculations/outdoorCalculations";
 import {
   calculatePaintCoverage,
@@ -795,6 +798,198 @@ const drivewayGravelCalculator: CalculatorConfig = {
     {
       question: "Do I need landscape fabric under a gravel driveway?",
       answer: "Yes, landscape fabric (geotextile) is essential under a gravel driveway. Without it, gravel sinks into soft soil within 1 to 2 years, and soil works up through the stone, creating a muddy mess. Use commercial-grade woven geotextile rated for vehicle traffic — not the thin landscape fabric sold for garden beds.",
+    },
+  ],
+};
+
+const blockFillCalculator: CalculatorConfig = {
+  fields: [
+    { id: "numberOfBlocks", label: "Number of Blocks", unit: "blocks", placeholder: "100" },
+    {
+      id: "blockSize",
+      label: "Block Size",
+      type: "select",
+      options: [
+        { label: '8 inch (standard)', value: "8 inch" },
+        { label: '10 inch', value: "10 inch" },
+        { label: '12 inch', value: "12 inch" },
+      ],
+    },
+    {
+      id: "fillType",
+      label: "Fill Type",
+      type: "select",
+      options: [
+        { label: "Concrete / Grout", value: "concrete/grout" },
+        { label: "Vermiculite", value: "vermiculite" },
+        { label: "Foam Insulation", value: "foam insulation" },
+      ],
+    },
+  ],
+  calculate: (v) => {
+    const r = calculateBlockFill(
+      v.numberOfBlocks as number,
+      v.blockSize as string,
+      v.fillType as string,
+    );
+    return [
+      { label: `${r.cubicYards} cubic yards of fill needed (includes 10% waste)` },
+      { label: `${r.cubicFeet} cubic feet total` },
+      { label: `${r.bags80lb} bags of concrete (80 lb)` },
+    ];
+  },
+  disclaimer:
+    "This estimate includes a 10% waste factor. Actual fill volume varies with block manufacturer, core geometry, and grout slump. Always verify core dimensions against the specific CMU product data sheet before ordering.",
+  howToUse: [
+    "Count the total number of CMU blocks that need to be filled — include all courses and wall sections.",
+    "Select the block size: 8-inch is standard residential, 10-inch and 12-inch are used for taller or load-bearing walls.",
+    "Choose the fill type: concrete/grout for structural fills, vermiculite for insulation, foam insulation for thermal performance.",
+    "Click Calculate to get cubic yards, cubic feet, and bag count.",
+  ],
+  materialInfo:
+    "Block fill (also called core fill or grout fill) is the process of filling the hollow cores of concrete masonry unit (CMU) blocks with concrete, grout, vermiculite, or foam insulation. Structural block fill uses a pourable concrete or fine-grout mix (typically 2,000 to 3,000 PSI) that flows into the cores and around any rebar placed inside the wall. The International Building Code (IBC) and most local codes require grouted cells at specific intervals — usually every 48 inches horizontally and at all corners, jambs, and bond beam courses.\n\nRebar placement is critical for structural integrity. Vertical rebar (#4 or #5 bars) is set into the footing before the wall is laid and extends up through the cores that will be grouted. Horizontal rebar runs through bond beam blocks at the top of the wall and at intermediate courses as specified by the engineer. All grouted cells must have rebar — filling empty cores with grout alone does not meet structural requirements in most jurisdictions.\n\nFor non-structural applications, vermiculite or perlite loose fill provides moderate insulation (R-value of about 2.1 per inch) and is poured dry into the cores. Spray foam insulation offers higher R-values (R-6 per inch for closed-cell) but costs significantly more and requires professional installation. Standard 8-inch CMU blocks have two cores, each roughly 5.5 inches wide by 7.5 inches tall by 3.25 inches deep, yielding approximately 0.009 cubic yards of fill per block. The 10-inch and 12-inch blocks have proportionally larger cores.\n\nExpect to pay $120 to $160 per cubic yard for ready-mix grout delivered, or $5 to $7 per 80-pound bag of premixed concrete for small projects. Vermiculite costs $15 to $25 per 4-cubic-foot bag. Always over-order by 10% to account for settling, spillage, and irregular core sizes.",
+  nextSteps: [
+    { label: "Concrete Calculator", href: "/calculators/foundation/concrete-calculator/" },
+    { label: "Concrete Footing Calculator", href: "/calculators/foundation/concrete-footing-calculator/" },
+    { label: "Gravel Calculator", href: "/calculators/foundation/gravel-calculator/" },
+  ],
+  installationTips: [
+    "Pre-wet the CMU cores before pouring grout — dry blocks absorb water from the mix and weaken the fill.",
+    "Pour grout in lifts of no more than 4 feet (5 courses) at a time, then consolidate with a vibrator or rod.",
+    "Use fine grout (3/8-inch aggregate max) so it flows freely through the cores without bridging.",
+    "Place vertical rebar before laying blocks and brace it plumb — do not try to drop rebar into filled cores.",
+    "Install cleanout blocks at the base of tall walls so you can inspect cores before grouting.",
+    "Fill bond beam courses completely and rod the grout to eliminate voids around horizontal rebar.",
+  ],
+  commonMistakes: [
+    "Grouting all cores at once on a tall wall — grout sets under pressure and can blow out lower courses. Limit pours to 4-foot lifts.",
+    "Skipping rebar in grouted cells — ungrouted cores are hollow, but grouted cells without rebar provide little structural value.",
+    "Using standard concrete mix instead of fine grout — large aggregate bridges across the core opening and creates voids.",
+    "Not consolidating grout with a vibrator or rod — air pockets reduce bond strength by up to 50%.",
+    "Filling cores in freezing temperatures — grout must cure above 40 degrees F for at least 48 hours.",
+  ],
+  faqs: [
+    {
+      question: "How much concrete do I need to fill cinder blocks?",
+      answer: "A standard 8-inch CMU block requires approximately 0.009 cubic yards (0.24 cubic feet) of grout per block. For 100 blocks, you need about 1.0 cubic yard of concrete or grout including a 10% waste factor. Use our calculator above — enter your block count and size for an instant estimate with bag counts.",
+    },
+    {
+      question: "How many 80 lb bags of concrete to fill a cinder block?",
+      answer: "One 80-pound bag of concrete fills approximately 2.5 standard 8-inch CMU blocks. For a wall of 100 blocks, you need about 44 bags. For 12-inch blocks, one bag fills only about 1.5 blocks because of the larger core volume. Always buy 10% extra for waste and spillage.",
+    },
+    {
+      question: "Do all CMU block cores need to be filled?",
+      answer: "No — building codes only require filling cores that contain rebar or are part of a bond beam course. Typically, cores are grouted every 48 inches horizontally and at all corners, door and window jambs, and the top bond beam. However, in high-wind zones (130+ mph) and seismic categories D through F, codes may require every core to be grouted. Always check your local code requirements.",
+    },
+    {
+      question: "What is the difference between grout and concrete for block fill?",
+      answer: "Grout is a fluid concrete mix with small aggregate (3/8-inch max) and higher water content, designed to flow into narrow block cores without bridging. Standard concrete has larger aggregate (3/4 to 1 inch) that can jam in the cores, creating voids and weak spots. For CMU block fill, always use fine grout or a premixed block fill product — never standard concrete mix.",
+    },
+    {
+      question: "Can I fill cinder blocks with foam insulation instead of concrete?",
+      answer: "Yes, for non-structural walls where code allows it. Spray foam (closed-cell) provides about R-6 per inch and also adds moisture resistance. Vermiculite loose fill is a cheaper alternative at about R-2.1 per inch. Neither foam nor vermiculite provides structural strength — if the wall requires grouted rebar per your plans or code, those cells must be filled with grout, not insulation.",
+    },
+    {
+      question: "How many cubic yards of grout for a CMU block wall?",
+      answer: "Multiply the number of blocks to be filled by the core volume: 0.009 cubic yards per 8-inch block, 0.012 per 10-inch block, or 0.015 per 12-inch block. A typical 8-inch foundation wall of 400 blocks with every core filled needs about 4.0 cubic yards of grout including 10% waste. For partially grouted walls, count only the cells with rebar plus bond beam courses.",
+    },
+  ],
+};
+
+const mortarMixCalculator: CalculatorConfig = {
+  fields: [
+    { id: "area", label: "Wall / Surface Area", unit: "sq ft", placeholder: "200" },
+    {
+      id: "mortarType",
+      label: "Mortar Type",
+      type: "select",
+      options: [
+        { label: "Type N (General Purpose)", value: "Type N" },
+        { label: "Type S (Structural / Below Grade)", value: "Type S" },
+        { label: "Type M (Heavy Load / Below Grade)", value: "Type M" },
+      ],
+    },
+    {
+      id: "jointThickness",
+      label: "Joint Thickness",
+      unit: "in",
+      type: "select",
+      options: [
+        { label: '1/4"', value: "0.25" },
+        { label: '3/8" (Standard)', value: "0.375" },
+        { label: '1/2"', value: "0.5" },
+        { label: '5/8"', value: "0.625" },
+        { label: '3/4"', value: "0.75" },
+      ],
+    },
+  ],
+  calculate: (v) => {
+    const r = calculateMortarMix(
+      v.area as number,
+      v.mortarType as string,
+      parseFloat(v.jointThickness as string),
+    );
+    return [
+      { label: `${r.bags60lb} bags of pre-mixed mortar (60 lb)` },
+      { label: `${r.bags80lb} bags of pre-mixed mortar (80 lb)` },
+      { label: `${r.mortarCubicFeet} cubic feet of mortar needed` },
+      { label: `${r.portlandCementBags} bags of portland cement (if mixing from scratch)` },
+      { label: `${r.sandCubicFeet} cubic feet of sand (if mixing from scratch)` },
+    ];
+  },
+  disclaimer:
+    "This estimate includes a 10% waste factor. Actual mortar usage varies based on block or brick size, joint profile (concave, V-joint, flush), workmanship, and weather conditions. Hot or windy conditions increase waste due to faster drying. Always confirm quantities with your masonry supplier before ordering.",
+  howToUse: [
+    "Calculate the total wall or surface area in square feet — multiply wall length by height, then subtract window and door openings.",
+    "Select your mortar type — Type N for general above-grade work, Type S for structural and below-grade, Type M for heavy loads and foundations.",
+    'Choose the joint thickness — 3/8" is the standard for most block and brick work.',
+    "Click Calculate to get the number of pre-mixed bags needed plus quantities for mixing from scratch with portland cement and sand.",
+  ],
+  materialInfo:
+    "Mortar is the bonding material used between blocks, bricks, and stone units in masonry construction. It is composed of portland cement, hydrated lime, sand, and water, mixed to a workable consistency that allows masons to lay units efficiently while providing structural bond and weather resistance.\n\nThe three most common mortar types are Type N, Type S, and Type M, classified by ASTM C270. Type N (750 psi compressive strength) is the most widely used general-purpose mortar for above-grade walls, chimneys, and non-load-bearing partitions. It offers the best balance of workability, bond strength, and flexibility. Type S (1,800 psi) is required for structural walls, below-grade foundation walls, retaining walls, and any masonry in contact with soil. Type M (2,500 psi) provides the highest compressive strength and is used for heavy-load foundations, retaining walls below grade, and masonry subjected to extreme lateral pressure.\n\nPre-mixed mortar (such as Quikrete or Sakrete) comes in 60 lb and 80 lb bags. A 60 lb bag yields approximately 0.5 cubic feet of mortar and covers roughly 14 standard blocks (8x8x16) at 3/8-inch joints. An 80 lb bag yields about 0.667 cubic feet. For large projects, mixing from scratch with portland cement, hydrated lime, and masonry sand is more economical — a Type N batch uses 1 part cement, 1 part lime, and 6 parts sand by volume.\n\nMortar joint thickness affects both appearance and material usage significantly. The standard 3/8-inch joint is the baseline for most residential masonry. Thicker joints (1/2 to 3/4 inch) use 30 to 100% more mortar but provide better accommodation for irregularly sized stone or salvaged brick. Thinner joints (1/4 inch) reduce mortar use by about 30% and are common with precision-cut stone veneer.",
+  nextSteps: [
+    { label: "Concrete Calculator", href: "/calculators/foundation/concrete-calculator/" },
+    { label: "Block Fill Calculator", href: "/calculators/foundation/block-fill-calculator/" },
+    { label: "Concrete Footing Calculator", href: "/calculators/foundation/concrete-footing-calculator/" },
+  ],
+  installationTips: [
+    "Mix only as much mortar as you can use within 90 minutes — mortar begins to set and loses workability after that window.",
+    "Dampen blocks or bricks before laying to prevent them from absorbing water from the mortar, which causes weak bonds.",
+    "Maintain consistent joint thickness by using a mason's line and checking courses with a level every 3 to 4 rows.",
+    "Tool (strike) the joints when the mortar is thumbprint-firm — tooling too early smears the surface, and too late prevents proper compaction.",
+    "Cover freshly laid masonry with plastic sheeting in hot, dry, or windy conditions to prevent rapid moisture loss and cracking.",
+  ],
+  commonMistakes: [
+    "Using the wrong mortar type — Type M in above-grade walls is too rigid and cracks; Type N below grade is too weak and deteriorates.",
+    "Adding too much water to the mix — soupy mortar has reduced strength and stains the face of the blocks or bricks.",
+    "Re-tempering mortar after it has begun to set — adding water to stiffened mortar restores workability but permanently reduces bond strength.",
+    "Mixing too large a batch — mortar that sits in the wheelbarrow for over 2 hours is dead and must be discarded, wasting material.",
+    "Not buttering the ends of blocks or bricks — head joints left empty create water entry points and weaken the wall structurally.",
+  ],
+  faqs: [
+    {
+      question: "How much mortar do I need per 100 square feet?",
+      answer: "For standard 8x8x16 concrete blocks with 3/8-inch joints, you need approximately 7 bags (60 lb) of pre-mixed mortar per 100 square feet of wall area. Type S mortar uses about 7.5 bags and Type M about 8 bags per 100 sq ft due to their denser mix. Thicker joints increase usage proportionally — 1/2-inch joints require about 30% more mortar than 3/8-inch joints.",
+    },
+    {
+      question: "What is the difference between Type N, Type S, and Type M mortar?",
+      answer: "Type N (750 psi) is a general-purpose mortar for above-grade walls, chimneys, and interior partitions — it is the most workable and flexible. Type S (1,800 psi) is a structural mortar required for below-grade walls, retaining walls, and masonry in contact with soil. Type M (2,500 psi) has the highest compressive strength and is used for heavy-load foundations and severe below-grade conditions. Most residential above-grade masonry uses Type N.",
+    },
+    {
+      question: "How many blocks does one bag of mortar cover?",
+      answer: "One 60 lb bag of pre-mixed mortar lays approximately 14 standard concrete blocks (8x8x16) or about 30 standard bricks (3-5/8 x 2-1/4 x 8 inches) with 3/8-inch joints. An 80 lb bag covers about 19 blocks or 40 bricks. These are averages — actual coverage varies based on joint thickness, tooling technique, and waste.",
+    },
+    {
+      question: "How do I mix mortar from scratch?",
+      answer: "For Type N mortar, combine 1 part portland cement, 1 part hydrated lime, and 6 parts masonry sand by volume. For Type S, use 1 part cement, 0.5 part lime, and 4.5 parts sand. For Type M, use 1 part cement, 0.25 part lime, and 3.25 parts sand. Add water gradually until the mix reaches a peanut-butter consistency — it should hold its shape on a trowel without slumping. One 94 lb bag of portland cement makes about 4.5 cubic feet of Type N mortar.",
+    },
+    {
+      question: "How long does mortar take to set and cure?",
+      answer: "Mortar reaches initial set in 2 to 4 hours and is firm enough for light work in 24 hours. Full cure takes 28 days, during which the mortar gains its rated compressive strength. Avoid applying heavy loads or backfilling against newly mortared walls for at least 7 days. In cold weather (below 40F / 4C), mortar curing slows dramatically and must be protected from freezing for at least 48 hours.",
+    },
+    {
+      question: "Can I use mortar mix instead of concrete?",
+      answer: "No. Mortar and concrete are different products with different purposes. Mortar is designed to bond masonry units and is intentionally weaker and more flexible than concrete. It contains no coarse aggregate (gravel). Concrete contains coarse aggregate and is designed for structural slabs, footings, and columns. Using mortar where concrete is required will result in structural failure. Similarly, concrete makes a poor substitute for mortar because it is too stiff and does not bond well to masonry units.",
     },
   ],
 };
@@ -2939,6 +3134,79 @@ const deckStairCalculator: CalculatorConfig = {
   ],
 };
 
+const postHoleCalculator: CalculatorConfig = {
+  fields: [
+    { id: "holeDiameter", label: "Hole Diameter", unit: "in", defaultValue: 10, placeholder: "10" },
+    { id: "holeDepth", label: "Hole Depth", unit: "in", defaultValue: 24, placeholder: "24" },
+    { id: "numberOfHoles", label: "Number of Holes", unit: "", placeholder: "10" },
+  ],
+  calculate: (v) => {
+    const r = calculatePostHole(v.holeDiameter as number, v.holeDepth as number, v.numberOfHoles as number);
+    return [
+      { label: `${r.cubicFeetPerHole} cubic feet of concrete per hole` },
+      { label: `${r.totalCubicFeet} cubic feet total` },
+      { label: `${r.totalCubicYards} cubic yards total` },
+      { label: `${r.bags50lb} bags of 50 lb Quikrete (total)` },
+      { label: `${r.bags80lb} bags of 80 lb Quikrete (total)` },
+    ];
+  },
+  disclaimer:
+    "This calculator estimates concrete volume for cylindrical post holes. Actual concrete usage may vary based on soil conditions, gravel base depth, and post size. Always set posts plumb and brace them before the concrete cures.",
+  howToUse: [
+    "Enter the hole diameter in inches — 8 inches is common for 4x4 posts, 10 to 12 inches for 6x6 posts.",
+    "Enter the hole depth in inches — most fence posts need 24 to 36 inches, deck and mailbox posts often need 36 to 48 inches.",
+    "Enter the total number of holes you need to fill with concrete.",
+    "Click Calculate to get cubic feet per hole, total concrete volume, and the number of 50 lb and 80 lb bags needed.",
+  ],
+  materialInfo:
+    "Post holes are cylindrical excavations filled with concrete to anchor vertical posts for fences, mailboxes, deck supports, signs, pergolas, and other outdoor structures. The concrete encases the post base and transfers loads into the surrounding soil, preventing the post from shifting, leaning, or heaving due to wind, frost, or lateral force.\n\nFor fence posts, the standard rule of thumb is to bury one-third of the total post length underground. A 6-foot fence using 8-foot posts should have 24 to 30 inches of post buried in concrete. For 4x4 fence posts, an 8-inch diameter hole is sufficient. For 6x6 posts or gate posts that bear heavier lateral loads, use a 10 to 12-inch diameter hole to provide more concrete mass and bearing area.\n\nMailbox posts installed to USPS standards typically require a 24-inch deep hole with an 8 to 10-inch diameter. Deck support posts and pergola posts need deeper holes — 36 to 48 inches depending on the frost line in your region. Posts supporting structural loads should always extend below the local frost line to prevent frost heave from lifting the structure.\n\nQuikrete fast-setting concrete mix is the most popular product for post holes because it can be poured dry into the hole around the post and then saturated with water — no mixing required. A 50 lb bag of Quikrete fills approximately 0.375 cubic feet, while an 80 lb bag fills approximately 0.6 cubic feet. For large projects with many holes, 80 lb bags are more cost-effective at roughly $6 to $7 per bag versus $4 to $5 for 50 lb bags.\n\nBefore pouring concrete, add 4 to 6 inches of gravel at the bottom of each hole for drainage. This prevents water from pooling at the post base and accelerating rot in wood posts. Crown the concrete slightly above grade so water runs away from the post rather than pooling against it.",
+  nextSteps: [
+    { label: "Deck Footing Calculator", href: "/calculators/outdoor/deck-footing-calculator/" },
+    { label: "Gravel Calculator", href: "/calculators/foundation/gravel-calculator/" },
+    { label: "Concrete Calculator", href: "/calculators/foundation/concrete-calculator/" },
+  ],
+  installationTips: [
+    "Dig holes 3 to 4 times the width of the post — an 8-inch hole for a 4x4 post, 10 to 12 inches for a 6x6 post.",
+    "Add 4 to 6 inches of gravel at the bottom of each hole for drainage before setting the post.",
+    "Plumb the post on two adjacent sides with a level and brace it with 2x4 stakes before pouring concrete.",
+    "Crown the concrete 1 to 2 inches above grade, sloping away from the post to shed water.",
+    "Allow the concrete to cure for at least 24 to 48 hours before attaching fence rails, brackets, or loads to the post.",
+  ],
+  commonMistakes: [
+    "Setting posts too shallow — fence posts should be buried at least one-third of their total length; structural posts must reach below the frost line.",
+    "Skipping the gravel base — without drainage at the bottom, water pools around the post base and accelerates wood rot.",
+    "Not bracing posts plumb before the concrete sets — once cured, correcting a leaning post requires breaking out the concrete and starting over.",
+    "Pouring concrete below grade level — the top of the concrete should crown above ground to prevent water from pooling against the post.",
+    "Using too small a hole diameter — insufficient concrete around the post cannot resist lateral forces from wind or gate operation.",
+  ],
+  faqs: [
+    {
+      question: "How much concrete do I need for a fence post?",
+      answer: "A standard 4x4 fence post in an 8-inch diameter hole at 24 inches deep requires about 0.58 cubic feet of concrete — roughly 2 bags of 50 lb Quikrete or 1 bag of 80 lb Quikrete per post. For a 6x6 post in a 10-inch hole at 30 inches deep, you need about 1.14 cubic feet per post. Multiply by the number of posts to get your total.",
+    },
+    {
+      question: "How deep should a fence post hole be?",
+      answer: "The general rule is to bury one-third of the total post length. For a 6-foot fence using 8-foot posts, dig holes 24 to 30 inches deep. For gate posts and corner posts that bear more force, go 6 inches deeper. In cold climates, fence post holes should reach below the frost line (36 to 48 inches in northern states) to prevent frost heave.",
+    },
+    {
+      question: "How many bags of concrete for a 4x4 fence post?",
+      answer: "For a 4x4 post in an 8-inch diameter hole at 24 inches deep, you need approximately 1 to 2 bags of 50 lb Quikrete or 1 bag of 80 lb Quikrete. For deeper holes (36 inches), plan on 2 to 3 bags of 50 lb mix per post. Quikrete fast-setting mix can be poured dry into the hole and wetted — no mixing required.",
+    },
+    {
+      question: "Can I use fast-setting concrete for post holes?",
+      answer: "Yes — fast-setting concrete (like Quikrete Fast-Setting Mix) is ideal for post holes. It sets in 20 to 40 minutes, so you can attach fence rails the same day. Pour the dry mix around the post, add water, and hold the post plumb for a few minutes. It reaches full strength in about 4 hours. For structural posts bearing heavy loads, standard concrete mix with a 24-hour cure is stronger.",
+    },
+    {
+      question: "How do I calculate concrete for post holes?",
+      answer: "Post holes are cylinders, so use the formula: volume = pi times radius squared times depth. Convert inches to feet first. For example, a 10-inch diameter hole at 24 inches deep: radius = 5 inches = 0.417 ft, depth = 24 inches = 2 ft. Volume = 3.14 x 0.417 x 0.417 x 2 = 1.09 cubic feet. Divide by 0.375 for 50 lb bags or 0.6 for 80 lb bags.",
+    },
+    {
+      question: "What size hole do I need for a mailbox post?",
+      answer: "A standard mailbox post requires an 8 to 10-inch diameter hole, 24 inches deep. USPS regulations require the mailbox to be 41 to 45 inches from the road surface to the bottom of the mailbox. Use a 4x4 pressure-treated post and set it in concrete with a gravel base for drainage. For decorative or brick mailbox structures, a larger 12-inch hole at 30 inches may be needed.",
+    },
+  ],
+};
+
 // ─── REGISTRY MAP ─────────────────────────────────────────────────────────────
 
 export const calculatorRegistry: Record<string, Record<string, CalculatorConfig>> = {
@@ -2953,6 +3221,8 @@ export const calculatorRegistry: Record<string, Record<string, CalculatorConfig>
     "concrete-steps-calculator": concreteStepsCalculator,
     "gravel-calculator": gravelCalculator,
     "driveway-gravel-calculator": drivewayGravelCalculator,
+    "block-fill-calculator": blockFillCalculator,
+    "mortar-mix-calculator": mortarMixCalculator,
   },
   "floor-framing": {
     "rim-joist-calculator": rimJoistCalculator,
@@ -3010,5 +3280,6 @@ export const calculatorRegistry: Record<string, Record<string, CalculatorConfig>
     "deck-footing-calculator": deckFootingCalculator,
     "deck-railing-calculator": deckRailingCalculator,
     "deck-stair-calculator": deckStairCalculator,
+    "post-hole-calculator": postHoleCalculator,
   },
 };

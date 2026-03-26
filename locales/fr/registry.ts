@@ -588,6 +588,105 @@ export const drivewayGravelCalculator: CalculatorSEOContent = {
   ],
 };
 
+export const mortarMixCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "Cette estimation comprend un facteur de gaspillage de 10 %. La consommation réelle de mortier varie selon la taille des blocs ou briques, le profil de joint, la qualité de la main-d'oeuvre et les conditions météorologiques. Confirmez toujours les quantités auprès de votre fournisseur avant de commander.",
+  howToUse: [
+    "Calculez la surface totale du mur en mètres carrés — multipliez la longueur par la hauteur et soustrayez les ouvertures de portes et fenêtres.",
+    "Sélectionnez le type de mortier — Type N pour les travaux courants hors sol, Type S pour les murs porteurs et enterrés, Type M pour les charges lourdes.",
+    "Choisissez l'épaisseur du joint — 10 mm est la norme pour la plupart des travaux de maçonnerie.",
+    "Cliquez sur Calculer pour obtenir le nombre de sacs prémélangés et les quantités pour un mélange artisanal avec ciment Portland et sable.",
+  ],
+  materialInfo:
+    "Le mortier est le liant utilisé entre les parpaings, les briques et les pierres en construction maçonnée. Il est composé de ciment Portland, de chaux hydraulique, de sable et d'eau, mélangés jusqu'à obtenir une consistance maniable permettant une pose efficace des éléments de maçonnerie.\n\nEn France, les mortiers de maçonnerie sont classés selon la norme NF EN 998-2. Les classes les plus courantes sont : M2,5 (mortier bâtard, résistance ~2,5 MPa) pour les murs intérieurs et la maçonnerie non porteuse, M5 (mortier courant, ~5 MPa) pour la plupart des applications résidentielles y compris les murs porteurs, et M10/M15 (mortier ciment, ~10-15 MPa) pour les fondations, murs de soutènement et ouvrages enterrés.\n\nLe mortier prêt à l'emploi est disponible en sacs de 25 kg et 35 kg. Un sac de 25 kg donne environ 14 litres de mortier gâché et couvre environ 8 à 10 parpaings standard (20x20x50 cm) avec des joints de 10 mm. Pour les grands chantiers, le dosage sur place avec du ciment, de la chaux et du sable est plus économique — un dosage courant pour mortier M5 utilise 1 volume de ciment, 0,5 volume de chaux et 4,5 volumes de sable.\n\nLes marques courantes en France incluent Parexlanko, Weber (Saint-Gobain), PRB et Lafarge. Les sacs de mortier (25 kg) coûtent entre 5 et 10 EUR en négoce de matériaux (Point.P, BigMat, Gedimat, Leroy Merlin, Castorama). Le sable à maçonner coûte environ 30 à 50 EUR la tonne.",
+  nextSteps: [
+    { label: "Calculateur de béton", href: "/calculators/foundation/concrete-calculator/" },
+    { label: "Calculateur de remplissage de blocs", href: "/calculators/foundation/block-fill-calculator/" },
+    { label: "Calculateur de semelle filante", href: "/calculators/foundation/concrete-footing-calculator/" },
+  ],
+  installationTips: [
+    "Ne gâchez que la quantité de mortier utilisable en 90 minutes — au-delà, il commence à prendre et perd sa maniabilité.",
+    "Humidifiez les parpaings ou briques avant la pose pour éviter qu'ils n'absorbent l'eau du mortier, ce qui provoque des joints faibles.",
+    "Maintenez une épaisseur de joint régulière en tendant un cordeau et en vérifiant l'aplomb toutes les 3 à 4 rangées.",
+    "Jointoyez quand le mortier est ferme au toucher — trop tôt, il s'étale ; trop tard, il ne se compacte plus correctement.",
+    "Protégez la maçonnerie fraîchement posée avec une bâche par temps chaud, sec ou venteux pour éviter la dessiccation rapide.",
+  ],
+  commonMistakes: [
+    "Utiliser le mauvais type de mortier — un mortier M10 en mur intérieur est trop rigide et fissure ; un M2,5 en fondation est trop faible.",
+    "Ajouter trop d'eau au mélange — un mortier trop liquide a une résistance réduite et tache la face des blocs.",
+    "Retremper le mortier après le début de prise — ajouter de l'eau à un mortier raidi réduit définitivement sa résistance d'adhérence.",
+    "Gâcher une quantité trop importante — le mortier resté plus de 2 heures dans l'auge est inutilisable et doit être jeté.",
+    "Ne pas garnir les joints verticaux — des joints montants vides créent des points d'infiltration d'eau et affaiblissent le mur.",
+  ],
+  faqs: [
+    {
+      question: "Combien de mortier faut-il par mètre carré ?",
+      answer: "Pour des parpaings standard (20x20x50 cm) avec des joints de 10 mm, comptez environ 1,5 sacs de 25 kg de mortier prémélangé par mètre carré de mur. Pour des briques de parement, le besoin est d'environ 30 litres de mortier par m2. Les joints plus épais (15 mm) augmentent la consommation d'environ 50 %.",
+    },
+    {
+      question: "Quelle est la différence entre mortier M2,5 / M5 / M10 ?",
+      answer: "Le M2,5 (mortier bâtard à la chaux) est un mortier souple pour murs intérieurs et cloisons non porteuses. Le M5 (mortier courant) est le standard pour les murs porteurs résidentiels, intérieurs et extérieurs. Le M10/M15 (mortier ciment) offre la plus haute résistance et est utilisé pour les fondations, murs de soutènement et ouvrages enterrés.",
+    },
+    {
+      question: "Comment doser le mortier soi-même ?",
+      answer: "Pour un mortier M5 courant, mélangez 1 volume de ciment Portland CEM II, 0,5 volume de chaux hydraulique et 4,5 volumes de sable à maçonner. Pour un M10, utilisez 1 volume de ciment, 0,25 volume de chaux et 3 volumes de sable. Ajoutez l'eau progressivement jusqu'à obtenir une consistance onctueuse qui tient sur la truelle sans couler.",
+    },
+    {
+      question: "Combien de temps le mortier met-il à durcir ?",
+      answer: "Le mortier atteint sa prise initiale en 2 à 4 heures et est suffisamment ferme pour de légers travaux après 24 heures. Le durcissement complet prend 28 jours. Évitez les charges lourdes et le remblaiement contre les murs fraîchement maçonnés pendant au moins 7 jours. En dessous de 5 C, le durcissement ralentit considérablement.",
+    },
+    {
+      question: "Peut-on utiliser du mortier à la place du béton ?",
+      answer: "Non. Le mortier et le béton sont des produits différents. Le mortier sert à lier les éléments de maçonnerie et ne contient pas de graviers. Le béton contient des granulats et est conçu pour les dalles, semelles et poteaux. Utiliser du mortier à la place du béton entraînerait une défaillance structurelle.",
+    },
+    {
+      question: "Quel mortier pour la pierre naturelle ?",
+      answer: "Pour la pierre naturelle, utilisez un mortier bâtard (chaux-ciment) dosé à environ 200 kg de ciment et 100 kg de chaux par m3 de sable. La chaux apporte la souplesse nécessaire pour absorber les mouvements différentiels entre les pierres irrégulières. Pour les pierres calcaires claires, un mortier à base de ciment blanc et de chaux évite les taches et les efflorescences.",
+    },
+  ],
+};
+
+export const blockFillCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "Cette estimation inclut un facteur de perte de 10 %. Le volume r\u00e9el de remplissage varie selon le fabricant du bloc, la g\u00e9om\u00e9trie des alv\u00e9oles et la consistance du coulis. V\u00e9rifiez toujours les dimensions des alv\u00e9oles sur la fiche technique du produit avant de commander.",
+  howToUse: [
+    "Comptez le nombre total de parpaings \u00e0 remplir \u2014 incluez toutes les rang\u00e9es et sections de mur.",
+    "S\u00e9lectionnez la taille du bloc : 20 cm est le standard r\u00e9sidentiel, 25 cm et 30 cm pour les murs porteurs ou plus hauts.",
+    "Choisissez le type de remplissage : b\u00e9ton/coulis pour les remplissages structurels, vermiculite pour l\u2019isolation, mousse pour la performance thermique.",
+    "Cliquez sur Calculer pour obtenir les m\u00e8tres cubes et le nombre de sacs.",
+  ],
+  materialInfo:
+    "Le remplissage de blocs (aussi appel\u00e9 remplissage d\u2019alv\u00e9oles ou injection de coulis) est le proc\u00e9d\u00e9 de remplissage des alv\u00e9oles creuses des parpaings avec du b\u00e9ton, du coulis, de la vermiculite ou de la mousse isolante. En France, la construction en ma\u00e7onnerie de blocs est r\u00e9gie par l\u2019Eurocode 6 (NF EN 1996) et les DTU 20.1 (Ouvrages en ma\u00e7onnerie de petits \u00e9l\u00e9ments) et DTU 20.13.\n\nLe remplissage structural utilise un coulis fluide (typiquement C25/30) qui s\u2019\u00e9coule dans les alv\u00e9oles et autour des armatures plac\u00e9es dans le mur. Les r\u00e8gles de construction exigent des alv\u00e9oles remplies aux emplacements des armatures et aux cha\u00eenages horizontaux et verticaux.\n\nLe ferraillage est essentiel pour l\u2019int\u00e9grit\u00e9 structurelle. Les armatures verticales (HA 10 ou HA 12) sont ancr\u00e9es dans la fondation et remontent dans les alv\u00e9oles \u00e0 remplir. Les armatures horizontales sont plac\u00e9es dans les blocs de cha\u00eenage en partie haute du mur et aux niveaux interm\u00e9diaires selon les prescriptions de l\u2019ing\u00e9nieur.\n\nPour les applications non structurelles, le remplissage en vrac de vermiculite ou de perlite offre une isolation mod\u00e9r\u00e9e (conductivit\u00e9 thermique d\u2019environ 0,065 W/mK). La mousse polyur\u00e9thane inject\u00e9e offre de meilleures performances (environ 0,022 W/mK) et aide \u00e0 respecter la RE2020. Les parpaings standards de 20 cm ont deux alv\u00e9oles produisant environ 0,007 m\u00b3 de remplissage par bloc.\n\nComptez de 120 \u00e0 180 EUR le m\u00e8tre cube pour du coulis pr\u00eat \u00e0 l\u2019emploi livr\u00e9, ou de 5 \u00e0 8 EUR par sac de 25 kg de coulis pr\u00e9m\u00e9lang\u00e9. La vermiculite co\u00fbte 15 \u00e0 25 EUR le sac de 100 litres. Mat\u00e9riaux disponibles chez Point P, Gedimat, BigMat et les n\u00e9goces locaux. Commandez toujours 10 % de plus pour le tassement, les pertes et les variations d\u2019alv\u00e9oles.",
+  nextSteps: [
+    { label: "Calculateur de b\u00e9ton", href: "/calculators/foundation/concrete-calculator/" },
+    { label: "Calculateur de semelle", href: "/calculators/foundation/concrete-footing-calculator/" },
+    { label: "Calculateur de gravier", href: "/calculators/foundation/gravel-calculator/" },
+  ],
+  installationTips: [
+    "Humidifiez les alv\u00e9oles avant de couler le coulis \u2014 les blocs secs absorbent l\u2019eau du m\u00e9lange et affaiblissent le remplissage.",
+    "Coulez le coulis par passes de 1,20 m maximum, puis vibrez ou piquez pour consolider.",
+    "Utilisez un coulis fin (granulat max 10 mm) pour qu\u2019il s\u2019\u00e9coule librement dans les alv\u00e9oles sans faire de ponts.",
+    "Placez les armatures verticales avant de monter les blocs et maintenez-les d\u2019aplomb.",
+    "Pr\u00e9voyez des blocs de nettoyage en pied de murs hauts pour inspecter les alv\u00e9oles avant le coulage.",
+    "Remplissez compl\u00e8tement les cha\u00eenages et vibrez le coulis pour \u00e9liminer les vides autour des armatures horizontales.",
+  ],
+  commonMistakes: [
+    "Remplir toutes les alv\u00e9oles d\u2019un mur haut en une seule fois \u2014 la pression du coulis peut faire \u00e9clater les rangs inf\u00e9rieurs. Limitez les passes \u00e0 1,20 m.",
+    "Omettre les armatures dans les alv\u00e9oles remplies \u2014 les alv\u00e9oles sans acier offrent peu de valeur structurelle.",
+    "Utiliser du b\u00e9ton standard au lieu de coulis fin \u2014 les gros granulats se coincent dans l\u2019ouverture des alv\u00e9oles et cr\u00e9ent des vides.",
+    "Ne pas consolider le coulis avec un vibrateur ou une tige \u2014 les poches d\u2019air r\u00e9duisent la r\u00e9sistance d\u2019adh\u00e9rence jusqu\u2019\u00e0 50 %.",
+    "Remplir les alv\u00e9oles par temps de gel \u2014 le coulis doit durcir au-dessus de 5 \u00b0C pendant au moins 48 heures.",
+  ],
+  faqs: [
+    { question: "Combien de b\u00e9ton faut-il pour remplir des parpaings ?", answer: "Un parpaing standard de 20 cm n\u00e9cessite environ 0,007 m\u00b3 de coulis. Pour 100 parpaings, il faut environ 0,77 m\u00b3 en incluant 10 % de perte. Entrez votre nombre de blocs et taille ci-dessus pour une estimation instantan\u00e9e avec le nombre de sacs." },
+    { question: "Combien de sacs de b\u00e9ton de 25 kg pour remplir un parpaing ?", answer: "Un sac de coulis de 25 kg remplit environ 2 parpaings standards de 20 cm. Pour un mur de 100 parpaings, il faut environ 55 sacs. Pour des blocs de 30 cm, un sac ne remplit qu\u2019environ 1,2 bloc en raison du plus grand volume d\u2019alv\u00e9ole." },
+    { question: "Faut-il remplir toutes les alv\u00e9oles des parpaings ?", answer: "Non \u2014 les r\u00e8gles de construction n\u2019exigent le remplissage que des alv\u00e9oles contenant des armatures ou faisant partie d\u2019un cha\u00eenage. En zone sismique, le remplissage de toutes les alv\u00e9oles peut \u00eatre exig\u00e9." },
+    { question: "Quelle est la diff\u00e9rence entre le coulis et le b\u00e9ton pour le remplissage de blocs ?", answer: "Le coulis est un m\u00e9lange fluide de b\u00e9ton avec de petits granulats (max 10 mm), con\u00e7u pour s\u2019\u00e9couler dans les alv\u00e9oles \u00e9troites sans cr\u00e9er de ponts. Le b\u00e9ton standard a des granulats plus gros qui se coincent et cr\u00e9ent des vides." },
+    { question: "Peut-on remplir les parpaings avec de la mousse isolante ?", answer: "Oui, pour les murs non porteurs lorsque la r\u00e9glementation le permet. La mousse PU projet\u00e9e offre une excellente performance thermique (environ 0,022 W/mK) et aide \u00e0 respecter la RE2020. La vermiculite est moins ch\u00e8re mais moins performante. Aucune ne fournit de r\u00e9sistance structurelle." },
+    { question: "Combien de m\u00e8tres cubes de coulis pour un mur en parpaings ?", answer: "Multipliez le nombre de blocs \u00e0 remplir par le volume d\u2019alv\u00e9ole : 0,007 m\u00b3 par bloc de 20 cm, 0,009 m\u00b3 par bloc de 25 cm ou 0,011 m\u00b3 par bloc de 30 cm. Un mur de fondation typique de 20 cm avec 400 blocs n\u00e9cessite environ 3,1 m\u00b3 incluant 10 % de perte." },
+  ],
+};
+
 // ─── FLOOR FRAMING ──────────────────────────────────────────────────────────
 
 export const rimJoistCalculator: CalculatorSEOContent = {
@@ -2249,6 +2348,45 @@ const deckStairCalculatorFR: CalculatorSEOContent = {
   ],
 };
 
+export const postHoleCalculatorFR: CalculatorSEOContent = {
+  disclaimer: "Volume de b\u00e9ton estim\u00e9 pour des trous cylindriques. La consommation r\u00e9elle peut varier selon le sol et la taille du poteau.",
+  howToUse: [
+    "Entrez le diam\u00e8tre du trou en pouces \u2014 20 cm pour les poteaux de 9\u00d79 cm, 25\u201330 cm pour les poteaux de 14\u00d714 cm.",
+    "Entrez la profondeur du trou en pouces \u2014 poteaux de cl\u00f4ture : 60\u201380 cm, poteaux porteurs : 80\u2013120 cm (hors gel).",
+    "Entrez le nombre total de trous.",
+    "Cliquez sur Calculer pour obtenir le volume par trou, le volume total et le nombre de sacs.",
+  ],
+  materialInfo:
+    "Les trous de poteau sont des excavations cylindriques remplies de b\u00e9ton pour ancrer les poteaux de cl\u00f4ture, bo\u00eetes aux lettres, supports de terrasse, panneaux et pergolas. Le b\u00e9ton enrobe la base du poteau et transf\u00e8re les charges au sol environnant, emp\u00eachant le poteau de bouger, pencher ou \u00eatre soulev\u00e9 par le vent, le gel ou les forces lat\u00e9rales.\n\nPour les poteaux de cl\u00f4ture, la r\u00e8gle g\u00e9n\u00e9rale est d\u2019enterrer un tiers de la longueur totale du poteau. Une cl\u00f4ture de 1,80 m avec des poteaux de 2,40 m doit avoir 60\u201380 cm de poteau scell\u00e9 dans le b\u00e9ton. Pour les poteaux de 9\u00d79 cm, un trou de 20 cm de diam\u00e8tre suffit. Pour les poteaux de 14\u00d714 cm ou les poteaux de portail soumis \u00e0 des forces lat\u00e9rales plus importantes, utiliser un trou de 25\u201330 cm.\n\nEn France, la profondeur hors gel varie de 50 cm (littoral m\u00e9diterran\u00e9en) \u00e0 90 cm (montagne). Les poteaux porteurs pour terrasses, pergolas et carports doivent toujours \u00eatre fond\u00e9s hors gel conform\u00e9ment au DTU 13.1.\n\nLe b\u00e9ton pr\u00eat \u00e0 l\u2019emploi en sacs de 25 kg et 35 kg (Weber, PRB, Lafarge) est le produit le plus utilis\u00e9. Un sac de 25 kg donne environ 12 litres, un sac de 35 kg environ 17 litres. Pour les grands projets, le b\u00e9ton pr\u00eat \u00e0 l\u2019emploi livr\u00e9 par toupie revient \u00e0 100\u2013150 \u20ac/m\u00b3.\n\nAvant de couler le b\u00e9ton, ajouter 10\u201315 cm de gravier au fond du trou pour le drainage. Former un d\u00f4me de b\u00e9ton l\u00e9g\u00e8rement au-dessus du niveau du sol en pente vers l\u2019ext\u00e9rieur pour \u00e9vacuer l\u2019eau de pluie.",
+  nextSteps: [
+    { label: "Calculateur de plots de terrasse", href: "/calculators/outdoor/deck-footing-calculator/" },
+    { label: "Calculateur de gravier", href: "/calculators/foundation/gravel-calculator/" },
+    { label: "Calculateur de b\u00e9ton", href: "/calculators/foundation/concrete-calculator/" },
+  ],
+  installationTips: [
+    "Creuser des trous 3 \u00e0 4 fois la largeur du poteau \u2014 20 cm pour un poteau de 9\u00d79 cm.",
+    "Ajouter 10\u201315 cm de gravier compact\u00e9 au fond pour le drainage.",
+    "V\u00e9rifier l\u2019aplomb du poteau sur deux faces avec un niveau \u00e0 bulle et \u00e9tayer avec des tasseaux avant de couler.",
+    "Former un d\u00f4me de b\u00e9ton 2\u20133 cm au-dessus du sol, inclin\u00e9 vers l\u2019ext\u00e9rieur.",
+    "Attendre 24\u201348 heures avant de fixer des lames de cl\u00f4ture, ferrures ou charges sur le poteau.",
+  ],
+  commonMistakes: [
+    "Poteaux trop peu profonds \u2014 les poteaux de cl\u00f4ture doivent \u00eatre enterr\u00e9s au minimum d\u2019un tiers ; les poteaux porteurs doivent atteindre la profondeur hors gel.",
+    "Oublier la couche de gravier \u2014 sans drainage, l\u2019eau stagne \u00e0 la base et acc\u00e9l\u00e8re le pourrissement du bois.",
+    "Ne pas \u00e9tayer le poteau d\u2019aplomb avant la prise du b\u00e9ton \u2014 un poteau pench\u00e9 n\u00e9cessite de casser le b\u00e9ton pour le corriger.",
+    "Couler le b\u00e9ton sous le niveau du sol \u2014 le sommet doit d\u00e9passer le sol pour \u00e9viter la stagnation d\u2019eau.",
+    "Utiliser un diam\u00e8tre de trou trop petit \u2014 un volume de b\u00e9ton insuffisant ne r\u00e9siste pas aux forces lat\u00e9rales du vent ou du portail.",
+  ],
+  faqs: [
+    { question: "Combien de b\u00e9ton pour un poteau de cl\u00f4ture ?", answer: "Un poteau de 9\u00d79 cm dans un trou de 20 cm \u00e0 60 cm de profondeur n\u00e9cessite environ 14 litres de b\u00e9ton \u2014 soit 1 sac de 35 kg ou 2 sacs de 25 kg par poteau." },
+    { question: "Quelle profondeur pour un trou de poteau de cl\u00f4ture ?", answer: "R\u00e8gle g\u00e9n\u00e9rale : un tiers de la longueur totale du poteau. Pour une cl\u00f4ture de 1,80 m avec des poteaux de 2,40 m : 60\u201380 cm. Poteaux de portail et d\u2019angle 10 cm plus profonds. En zones froides, atteindre la profondeur hors gel (50\u201390 cm selon la r\u00e9gion)." },
+    { question: "Combien de sacs de b\u00e9ton par poteau ?", answer: "Pour un poteau de 9\u00d79 cm dans un trou de 20 cm \u00e0 60 cm : 1\u20132 sacs de 25 kg ou 1 sac de 35 kg. Pour des trous plus profonds (80 cm), 2\u20133 sacs de 25 kg par poteau." },
+    { question: "Peut-on utiliser du b\u00e9ton \u00e0 prise rapide pour les poteaux ?", answer: "Oui \u2014 le b\u00e9ton \u00e0 prise rapide (type PRB Express ou Weber Betonrapid) est id\u00e9al. Il prend en 20\u201340 minutes. Verser le m\u00e9lange sec autour du poteau, ajouter l\u2019eau, maintenir d\u2019aplomb quelques minutes. R\u00e9sistance compl\u00e8te en environ 4 heures." },
+    { question: "Comment calculer le b\u00e9ton pour les trous de poteau ?", answer: "Les trous sont des cylindres : volume = \u03c0 \u00d7 r\u00b2 \u00d7 profondeur. Convertir les cm en m\u00e8tres. Exemple : 25 cm de diam\u00e8tre, 80 cm de profondeur : r = 0,125 m, V = 3,14 \u00d7 0,125\u00b2 \u00d7 0,8 = 0,039 m\u00b3 = 39 litres. Un sac de 25 kg donne environ 12 litres." },
+    { question: "Quelle taille de trou pour un poteau de portail ?", answer: "Un poteau de portail n\u00e9cessite un trou de 25\u201330 cm de diam\u00e8tre \u00e0 80\u2013100 cm de profondeur. Les portails exercent des forces lat\u00e9rales importantes. Utiliser des poteaux de 14\u00d714 cm minimum pour un portail simple." },
+  ],
+};
+
 // ─── REGISTRY MAP ─────────────────────────────────────────────────────────────
 
 export const registryFR: Record<string, Record<string, CalculatorSEOContent>> = {
@@ -2263,6 +2401,8 @@ export const registryFR: Record<string, Record<string, CalculatorSEOContent>> = 
     "concrete-steps-calculator": concreteStepsCalculator,
     "gravel-calculator": gravelCalculator,
     "driveway-gravel-calculator": drivewayGravelCalculator,
+    "mortar-mix-calculator": mortarMixCalculator,
+    "block-fill-calculator": blockFillCalculator,
   },
   "floor-framing": {
     "rim-joist-calculator": rimJoistCalculator,
@@ -2320,5 +2460,6 @@ export const registryFR: Record<string, Record<string, CalculatorSEOContent>> = 
     "deck-footing-calculator": deckFootingCalculatorFR,
     "deck-railing-calculator": deckRailingCalculatorFR,
     "deck-stair-calculator": deckStairCalculatorFR,
+    "post-hole-calculator": postHoleCalculatorFR,
   },
 };

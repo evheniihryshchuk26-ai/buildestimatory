@@ -448,6 +448,105 @@ export const drivewayGravelCalculator: CalculatorSEOContent = {
   ],
 };
 
+export const blockFillCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "Ta kalkulacja zawiera 10% naddatek na straty. Rzeczywista obj\u0119to\u015b\u0107 wype\u0142nienia r\u00f3\u017cni si\u0119 w zale\u017cno\u015bci od producenta pustaka, geometrii rdzenia i konsystencji zaprawy. Zawsze sprawd\u017a wymiary rdzeni na karcie technicznej produktu przed zam\u00f3wieniem.",
+  howToUse: [
+    "Policz ca\u0142kowit\u0105 liczb\u0119 pustak\u00f3w do wype\u0142nienia \u2014 uwzgl\u0119dnij wszystkie warstwy i odcinki muru.",
+    "Wybierz rozmiar pustaka: 20 cm to standard mieszkaniowy, 25 cm i 30 cm dla wy\u017cszych lub no\u015bnych mur\u00f3w.",
+    "Wybierz typ wype\u0142nienia: beton/zaprawa do wype\u0142nie\u0144 konstrukcyjnych, wermikulit do izolacji, pianka do wydajno\u015bci cieplnej.",
+    "Kliknij Oblicz, aby uzyska\u0107 metry sze\u015bcienne i liczb\u0119 work\u00f3w.",
+  ],
+  materialInfo:
+    "Wype\u0142nianie pustak\u00f3w to proces wype\u0142niania pustych rdzeni pustak\u00f3w betonowych betonem, zapraw\u0105 p\u0142ynn\u0105, wermikulitem lub piank\u0105 izolacyjn\u0105. W Polsce budownictwo murowe z pustak\u00f3w jest regulowane przez Eurokod 6 (PN-EN 1996) oraz Warunki Techniczne (WT 2021), z odwo\u0142aniami do norm PN-B i PN-EN dotycz\u0105cych element\u00f3w murowych.\n\nWype\u0142nienie konstrukcyjne wykorzystuje p\u0142ynn\u0105 zapraw\u0119 (typowo klasy C20/25), kt\u00f3ra wp\u0142ywa do rdzeni i otacza zbrojenie umieszczone w murze. Normy budowlane wymagaj\u0105 wype\u0142nionych rdzeni w miejscach zbrojenia oraz w wie\u0144cach poziomych i s\u0142upkach \u017celbetowych. W Polsce, szczeg\u00f3lnie w strefach sejsmicznych (Dolny \u015al\u0105sk, Podhale), przepisy mog\u0105 wymaga\u0107 wype\u0142nienia wszystkich rdzeni.\n\nRozmieszczenie zbrojenia jest kluczowe dla integralno\u015bci konstrukcyjnej. Pr\u0119ty pionowe (\u00d810 lub \u00d812, stal B500SP) s\u0105 zakotwiczone w fundamencie i przechodz\u0105 przez rdzenie do wype\u0142nienia. Zbrojenie poziome umieszcza si\u0119 w pustkach wie\u0144cowych w g\u00f3rnej cz\u0119\u015bci muru i na poziomach po\u015brednich wed\u0142ug projektu konstrukcyjnego.\n\nDo zastosowa\u0144 niekonstrukcyjnych, sypki wermikulit lub perlit zapewnia umiarkowan\u0105 izolacj\u0119 (przewodno\u015b\u0107 cieplna ok. 0,065 W/mK). Pianka poliuretanowa natryskowa oferuje lepsze parametry (ok. 0,022 W/mK) i pomaga spe\u0142ni\u0107 wymagania WT 2021. Standardowe pustaki 20 cm maj\u0105 dwa rdzenie daj\u0105ce ok. 0,007 m\u00b3 wype\u0142nienia na pustak.\n\nNale\u017cy liczy\u0107 si\u0119 z kosztem 400\u2013600 PLN za metr sze\u015bcienny zaprawy p\u0142ynnej, lub 15\u201325 PLN za worek 25 kg mieszanki gotowej. Wermikulit kosztuje 40\u201370 PLN za worek 100 litr\u00f3w. Materia\u0142y dost\u0119pne w Castoramie, Leroy Merlin, sk\u0142adach budowlanych i hurtowniach. Zawsze zamawiaj 10% wi\u0119cej na osiadanie, straty i r\u00f3\u017cnice w rozmiarach rdzeni.",
+  nextSteps: [
+    { label: "Kalkulator Betonu", href: "/calculators/foundation/concrete-calculator/" },
+    { label: "Kalkulator \u0141awy Fundamentowej", href: "/calculators/foundation/concrete-footing-calculator/" },
+    { label: "Kalkulator \u017bwiru", href: "/calculators/foundation/gravel-calculator/" },
+  ],
+  installationTips: [
+    "Zwil\u017c rdzenie pustak\u00f3w przed zalewaniem zapraw\u0105 \u2014 suche pustaki absorbuj\u0105 wod\u0119 z mieszanki i os\u0142abiaj\u0105 wype\u0142nienie.",
+    "Zalewaj zapraw\u0119 etapami po maksymalnie 1,20 m wysoko\u015bci, nast\u0119pnie wibruj lub sztyletuj dla konsolidacji.",
+    "U\u017cywaj drobnoziarnistej zaprawy (kruszywo max 10 mm), aby swobodnie przep\u0142ywa\u0142a przez rdzenie bez tworzenia most\u00f3w.",
+    "Umie\u015b\u0107 zbrojenie pionowe przed murowanem i utrzymuj je w pionie.",
+    "Zainstaluj pustaki czyszcz\u0105ce u podstawy wysokich mur\u00f3w, aby m\u00f3c sprawdzi\u0107 rdzenie przed zalewaniem.",
+    "Wype\u0142nij wie\u0144ce ca\u0142kowicie i wibruj zapraw\u0119, aby wyeliminowa\u0107 pustki wok\u00f3\u0142 zbrojenia poziomego.",
+  ],
+  commonMistakes: [
+    "Zalewanie wszystkich rdzeni wysokiego muru za jednym razem \u2014 ci\u015bnienie zaprawy mo\u017ce rozepchna\u0107 dolne warstwy. Ogranicz etapy do 1,20 m.",
+    "Pomijanie zbrojenia w wype\u0142nionych rdzeniach \u2014 rdzenie bez stali daj\u0105 niewielk\u0105 warto\u015b\u0107 konstrukcyjn\u0105.",
+    "U\u017cywanie standardowego betonu zamiast zaprawy drobnoziarnistej \u2014 grube kruszywo blokuje otwory rdzeni i tworzy pustki.",
+    "Brak konsolidacji zaprawy wibratorem lub pr\u0119tem \u2014 p\u0119cherzyki powietrza zmniejszaj\u0105 przyczepno\u015b\u0107 nawet o 50%.",
+    "Wype\u0142nianie rdzeni w temperaturach poni\u017cej zera \u2014 zaprawa musi twardnie\u0107 powy\u017cej 5 \u00b0C przez co najmniej 48 godzin.",
+  ],
+  faqs: [
+    { question: "Ile betonu potrzeba do wype\u0142nienia pustak\u00f3w?", answer: "Standardowy pustak 20 cm wymaga ok. 0,007 m\u00b3 zaprawy. Dla 100 pustak\u00f3w potrzeba ok. 0,77 m\u00b3 w\u0142\u0105cznie z 10% naddatkiem. Wpisz liczb\u0119 pustak\u00f3w i rozmiar powy\u017cej, aby uzyska\u0107 natychmiastow\u0105 kalkulacj\u0119 z liczb\u0105 work\u00f3w." },
+    { question: "Ile work\u00f3w betonu 25 kg na wype\u0142nienie pustaka?", answer: "Jeden worek zaprawy 25 kg wype\u0142nia ok. 2 standardowe pustaki 20 cm. Na mur ze 100 pustak\u00f3w potrzeba ok. 55 work\u00f3w. Dla pustak\u00f3w 30 cm jeden worek wype\u0142nia tylko ok. 1,2 pustaka ze wzgl\u0119du na wi\u0119kszy rdze\u0144." },
+    { question: "Czy wszystkie rdzenie pustak\u00f3w musz\u0105 by\u0107 wype\u0142nione?", answer: "Nie \u2014 przepisy wymagaj\u0105 wype\u0142nienia tylko rdzeni zawieraj\u0105cych zbrojenie lub b\u0119d\u0105cych cz\u0119\u015bci\u0105 wie\u0144ca. Zwykle rdzenie wype\u0142nia si\u0119 co 1,20 m poziomo, w naro\u017cnikach, o\u015bcie\u017cnicach okien i drzwi oraz w wie\u0144cu g\u00f3rnym." },
+    { question: "Jaka jest r\u00f3\u017cnica mi\u0119dzy zapraw\u0105 p\u0142ynn\u0105 a betonem do wype\u0142niania pustak\u00f3w?", answer: "Zaprawa p\u0142ynna to mieszanka z drobnym kruszywem (max 10 mm), kt\u00f3ra swobodnie wp\u0142ywa w w\u0105skie rdzenie bez tworzenia most\u00f3w. Standardowy beton ma wi\u0119ksze kruszywo, kt\u00f3re blokuje si\u0119 w rdzeniach tworz\u0105c pustki." },
+    { question: "Czy mo\u017cna wype\u0142ni\u0107 pustaki piank\u0105 izolacyjn\u0105 zamiast betonem?", answer: "Tak, dla mur\u00f3w niekonstrukcyjnych. Pianka PU natryskowa zapewnia doskona\u0142\u0105 izolacj\u0119 termiczn\u0105 (ok. 0,022 W/mK) i pomaga spe\u0142ni\u0107 wymagania WT 2021. Wermikulit jest ta\u0144szy ale mniej wydajny. \u017badne z nich nie zapewnia no\u015bno\u015bci konstrukcyjnej." },
+    { question: "Ile metr\u00f3w sze\u015bciennych zaprawy na \u015bcian\u0119 z pustak\u00f3w?", answer: "Pomn\u00f3\u017c liczb\u0119 pustak\u00f3w do wype\u0142nienia przez obj\u0119to\u015b\u0107 rdzenia: 0,007 m\u00b3 na pustak 20 cm, 0,009 m\u00b3 na 25 cm lub 0,011 m\u00b3 na 30 cm. Typowa \u015bciana fundamentowa 20 cm z 400 pustakami i pe\u0142nym wype\u0142nieniem wymaga ok. 3,1 m\u00b3 zaprawy z 10% naddatkiem." },
+  ],
+};
+
+export const mortarMixCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "Ta kalkulacja zawiera 10% naddatek na straty. Rzeczywiste zu\u017cycie zaprawy zale\u017cy od rozmiaru bloczk\u00f3w lub cegie\u0142, profilu spoiny, jako\u015bci wykonania i warunk\u00f3w pogodowych. Zawsze potwierd\u017a ilo\u015bci u dostawcy przed zam\u00f3wieniem.",
+  howToUse: [
+    "Oblicz ca\u0142kowit\u0105 powierzchni\u0119 \u015bciany w metrach kwadratowych \u2014 pomn\u00f3\u017c d\u0142ugo\u015b\u0107 przez wysoko\u015b\u0107 i odejmij otwory drzwiowe i okienne.",
+    "Wybierz typ zaprawy \u2014 M5 do og\u00f3lnych prac powy\u017cej poziomu gruntu, M10 do prac konstrukcyjnych i poni\u017cej poziomu gruntu, M15 do ci\u0119\u017ckich obci\u0105\u017ce\u0144.",
+    "Wybierz grubo\u015b\u0107 spoiny \u2014 10 mm to standard dla wi\u0119kszo\u015bci prac murarskich.",
+    "Kliknij Oblicz, aby uzyska\u0107 liczb\u0119 work\u00f3w gotowej zaprawy oraz ilo\u015bci do mieszania od podstaw z cementem Portland i piaskiem.",
+  ],
+  materialInfo:
+    "Zaprawa murarska to materia\u0142 wi\u0105\u017c\u0105cy stosowany mi\u0119dzy bloczkami, ceg\u0142ami i kamieniami w budownictwie murowym. Sk\u0142ada si\u0119 z cementu Portland, wapna hydratyzowanego, piasku i wody, mieszanych do uzyskania konsystencji umo\u017cliwiaj\u0105cej sprawne murowanie przy jednoczesnym zapewnieniu wi\u0105zania konstrukcyjnego i odporno\u015bci na warunki atmosferyczne.\n\nW Polsce zaprawy murarskie klasyfikowane s\u0105 wed\u0142ug normy PN-EN 998-2. Najcz\u0119stsze klasy to: M5 (zaprawa cementowo-wapienna, wytrzyma\u0142o\u015b\u0107 ~5 MPa) do og\u00f3lnych prac murarskich powy\u017cej poziomu gruntu, M10 (zaprawa cementowa, ~10 MPa) do \u015bcian konstrukcyjnych, fundament\u00f3w i mur\u00f3w oporowych, oraz M15 (zaprawa wysokomarki, ~15 MPa) do ci\u0119\u017cko obci\u0105\u017conych fundament\u00f3w i obiekt\u00f3w podziemnych.\n\nGotowa zaprawa murarska dost\u0119pna jest w workach 25 kg i 40 kg. Worek 25 kg daje oko\u0142o 14 litr\u00f3w zaprawy i wystarczy na oko\u0142o 8-10 bloczk\u00f3w (24x11,5x7,1 cm, format NF) przy spoinach 12 mm. Do du\u017cych projekt\u00f3w mieszanie na budowie z cementu, wapna i piasku jest bardziej ekonomiczne.\n\nPopularne marki w Polsce to Atlas, Ceresit (Henkel), Kreisel, Baumit i Sopro. Worki zaprawy (25 kg) kosztuj\u0105 oko\u0142o 12-25 PLN w marketach budowlanych (Castorama, Leroy Merlin, OBI, Bricomarche). Piasek murarski kosztuje oko\u0142o 50-80 PLN za ton\u0119. Przy wykonywaniu prac nale\u017cy przestrzega\u0107 normy PN-EN 1996 (Eurokod 6) oraz warunk\u00f3w technicznych wykonania i odbioru rob\u00f3t murarskich.",
+  nextSteps: [
+    { label: "Kalkulator Betonu", href: "/calculators/foundation/concrete-calculator/" },
+    { label: "Kalkulator Wype\u0142nienia Pustak\u00f3w", href: "/calculators/foundation/block-fill-calculator/" },
+    { label: "Kalkulator \u0141awy Fundamentowej", href: "/calculators/foundation/concrete-footing-calculator/" },
+  ],
+  installationTips: [
+    "Mieszaj tylko tyle zaprawy, ile zu\u017cyjesz w ci\u0105gu 90 minut \u2014 po tym czasie zaprawa zaczyna wi\u0105za\u0107 i traci urabialnosc.",
+    "Zwil\u017c bloczki lub ceg\u0142y przed murowaniem, aby nie wci\u0105ga\u0142y wody z zaprawy, co powoduje s\u0142abe wi\u0105zanie.",
+    "Utrzymuj sta\u0142\u0105 grubo\u015b\u0107 spoiny, u\u017cywaj\u0105c sznurka murarskiego i sprawdzaj\u0105c pion co 3-4 warstwy.",
+    "Spoinuj, gdy zaprawa jest twarda na dotyk kciuka \u2014 za wcze\u015bnie si\u0119 rozmazuje, za p\u00f3\u017ano nie zag\u0119szcza si\u0119 prawid\u0142owo.",
+    "Os\u0142o\u0144 \u015bwie\u017co wymurowane \u015bciany foli\u0105 w gor\u0105cych, suchych lub wietrznych warunkach, aby zapobiec szybkiej utracie wilgoci.",
+  ],
+  commonMistakes: [
+    "U\u017cycie niew\u0142a\u015bciwego typu zaprawy \u2014 M15 w \u015bcianach dzia\u0142owych jest zbyt sztywna i p\u0119ka; M5 w fundamentach jest zbyt s\u0142aba.",
+    "Dodanie zbyt du\u017co wody do mieszanki \u2014 rzadka zaprawa ma zmniejszon\u0105 wytrzyma\u0142o\u015b\u0107 i brudzi lico bloczk\u00f3w.",
+    "Ponowne dolewanie wody do zaprawy po rozpocz\u0119ciu wi\u0105zania \u2014 trwale zmniejsza to przyczepno\u015b\u0107.",
+    "Mieszanie zbyt du\u017cej partii \u2014 zaprawa stoj\u0105ca w taczce ponad 2 godziny jest martwa i musi by\u0107 wyrzucona.",
+    "Nieprzyprawianie czo\u0142 bloczk\u00f3w lub cegie\u0142 \u2014 puste spoiny pionowe tworz\u0105 punkty wnikania wody i os\u0142abiaj\u0105 \u015bcian\u0119.",
+  ],
+  faqs: [
+    {
+      question: "Ile zaprawy potrzebuj\u0119 na metr kwadratowy?",
+      answer: "Dla cegie\u0142 NF (24x11,5x7,1 cm) ze spoinami 12 mm potrzeba oko\u0142o 30 litr\u00f3w zaprawy na metr kwadratowy \u015bciany, co odpowiada oko\u0142o 2 workom po 25 kg gotowej zaprawy. Dla bloczk\u00f3w z betonu kom\u00f3rkowego z cienko spoin\u0105 zu\u017cycie jest znacznie mniejsze: 3-5 kg na m2.",
+    },
+    {
+      question: "Jaka jest r\u00f3\u017cnica mi\u0119dzy zapraw\u0105 M5, M10 i M15?",
+      answer: "M5 (zaprawa cementowo-wapienna) to zaprawa do og\u00f3lnych prac murarskich powy\u017cej poziomu gruntu. M10 (zaprawa cementowa) to standard do \u015bcian no\u015bnych i konstrukcyjnych. M15 oferuje najwy\u017csz\u0105 wytrzyma\u0142o\u015b\u0107 do fundament\u00f3w, mur\u00f3w oporowych i obiekt\u00f3w podziemnych.",
+    },
+    {
+      question: "Jak wymieszac zapraw\u0119 samodzielnie?",
+      answer: "Dla zaprawy M5, zmieszaj 1 obj\u0119to\u015b\u0107 cementu Portland, 0,5 obj\u0119to\u015bci wapna hydratyzowanego i 4,5 obj\u0119to\u015bci piasku murarskiego. Dla M10 u\u017cyj 1 obj\u0119to\u015bci cementu, 0,25 obj\u0119to\u015bci wapna i 3 obj\u0119to\u015bci piasku. Dodawaj wod\u0119 stopniowo, a\u017c uzyskasz kremow\u0105 konsystencj\u0119, kt\u00f3ra utrzymuje si\u0119 na kielni.",
+    },
+    {
+      question: "Ile czasu schnie zaprawa?",
+      answer: "Zaprawa osi\u0105ga wst\u0119pne wi\u0105zanie w ci\u0105gu 2-4 godzin i jest wystarczaj\u0105co twarda do lekkich prac po 24 godzinach. Pe\u0142ne utwardzenie trwa 28 dni. Unikaj ci\u0119\u017ckich obci\u0105\u017ce\u0144 przez co najmniej 7 dni. Poni\u017cej 5 C utwardzanie dramatycznie spowalnia i zaprawa musi by\u0107 chroniona przed mrozem przez co najmniej 48 godzin.",
+    },
+    {
+      question: "Czy mog\u0119 u\u017cy\u0107 zaprawy zamiast betonu?",
+      answer: "Nie. Zaprawa i beton to r\u00f3\u017cne produkty. Zaprawa jest przeznaczona do \u0142\u0105czenia element\u00f3w murowych i nie zawiera kruszywa grubego (\u017cwiru). Beton zawiera kruszywo i jest przeznaczony do p\u0142yt, fundament\u00f3w i s\u0142up\u00f3w. U\u017cycie zaprawy tam, gdzie wymagany jest beton, spowoduje awari\u0119 konstrukcyjn\u0105.",
+    },
+    {
+      question: "Ile kosztuje zaprawa murarska w Polsce?",
+      answer: "Worki gotowej zaprawy murarskiej (25 kg) kosztuj\u0105 12-25 PLN w zale\u017cno\u015bci od marki i typu. Cement Portland (25 kg) kosztuje 15-25 PLN. Piasek murarski to 50-80 PLN za ton\u0119. Na typowy projekt \u015bciany fundamentowej z 400 bloczk\u00f3w, materia\u0142y na zapraw\u0119 kosztuj\u0105 oko\u0142o 300-600 PLN.",
+    },
+  ],
+};
+
 // ─── FLOOR FRAMING ──────────────────────────────────────────────────────────
 
 export const rimJoistCalculator: CalculatorSEOContent = {
@@ -2064,6 +2163,45 @@ export const deckStairCalculator: CalculatorSEOContent = {
   ],
 };
 
+export const postHoleCalculator: CalculatorSEOContent = {
+  disclaimer: "Szacunkowa obj\u0119to\u015b\u0107 betonu dla cylindrycznych do\u0142\u00f3w. Rzeczywiste zu\u017cycie mo\u017ce si\u0119 r\u00f3\u017cni\u0107 w zale\u017cno\u015bci od warunk\u00f3w gruntu i rozmiaru s\u0142upka.",
+  howToUse: [
+    "Podaj \u015brednic\u0119 do\u0142u w calach \u2014 20 cm dla s\u0142upk\u00f3w 9\u00d79 cm, 25\u201330 cm dla s\u0142upk\u00f3w 14\u00d714 cm.",
+    "Podaj g\u0142\u0119boko\u015b\u0107 do\u0142u w calach \u2014 s\u0142upki ogrodzeniowe: 60\u201380 cm, s\u0142upki no\u015bne: 80\u2013120 cm (poni\u017cej strefy przemarzania).",
+    "Podaj liczb\u0119 do\u0142\u00f3w.",
+    "Kliknij Oblicz, aby uzyska\u0107 obj\u0119to\u015b\u0107 na d\u00f3\u0142, obj\u0119to\u015b\u0107 ca\u0142kowit\u0105 i liczb\u0119 work\u00f3w.",
+  ],
+  materialInfo:
+    "Do\u0142y na s\u0142upki to cylindryczne wykopy wype\u0142niane betonem w celu zakotwienia s\u0142upk\u00f3w ogrodzeniowych, skrzynek pocztowych, podp\u00f3r taras\u00f3w, znak\u00f3w i pergoli. Beton otacza podstaw\u0119 s\u0142upka i przenosi obci\u0105\u017cenia na otaczaj\u0105cy grunt, zapobiegaj\u0105c przesuwaniu si\u0119, przechylaniu lub unoszeniu s\u0142upka przez wiatr, mr\u00f3z lub si\u0142y boczne.\n\nDla s\u0142upk\u00f3w ogrodzeniowych obowi\u0105zuje zasada zagrzebania jednej trzeciej ca\u0142kowitej d\u0142ugo\u015bci s\u0142upka. Ogrodzenie o wysoko\u015bci 1,80 m ze s\u0142upkami 2,40 m powinno mie\u0107 60\u201380 cm s\u0142upka zabetonowanego. Dla s\u0142upk\u00f3w 9\u00d79 cm wystarczy d\u00f3\u0142 o \u015brednicy 20 cm. Dla s\u0142upk\u00f3w 14\u00d714 cm lub s\u0142upk\u00f3w furtki/bramy stosowa\u0107 do\u0142y 25\u201330 cm.\n\nW Polsce g\u0142\u0119boko\u015b\u0107 przemarzania gruntu wynosi od 80 cm (zachodnia Polska) do 140 cm (p\u00f3\u0142nocno-wschodnia Polska). S\u0142upki no\u015bne pod tarasy, pergole i wiaty musz\u0105 by\u0107 posadowione poni\u017cej strefy przemarzania zgodnie z normami PN.\n\nBeton gotowy w workach 25 kg i 40 kg (Atlas, Kreisel, Mapei) jest najpopularniejszym produktem. Worek 25 kg daje oko\u0142o 12 litr\u00f3w, worek 40 kg oko\u0142o 20 litr\u00f3w. Ceny: 12\u201320 z\u0142 za worek 25 kg, 20\u201335 z\u0142 za worek 40 kg. Dla du\u017cych projekt\u00f3w beton z betoniarni kosztuje 350\u2013500 z\u0142/m\u00b3.\n\nPrzed zalaniem betonem nale\u017cy nasypa\u0107 10\u201315 cm \u017cwiru na dno do\u0142u dla drena\u017cu. Uformowan beton lekko powy\u017cej poziomu terenu ze spadkiem od s\u0142upka.",
+  nextSteps: [
+    { label: "Kalkulator Fundament\u00f3w Tarasu", href: "/calculators/outdoor/deck-footing-calculator/" },
+    { label: "Kalkulator \u017bwiru", href: "/calculators/foundation/gravel-calculator/" },
+    { label: "Kalkulator Betonu", href: "/calculators/foundation/concrete-calculator/" },
+  ],
+  installationTips: [
+    "Kopanie do\u0142\u00f3w 3\u20134 razy szerszych ni\u017c s\u0142upek \u2014 20 cm dla s\u0142upka 9\u00d79 cm.",
+    "Nasypa\u0107 10\u201315 cm zag\u0119szczonego \u017cwiru na dno dla drena\u017cu.",
+    "Sprawdzi\u0107 pion s\u0142upka na dw\u00f3ch s\u0105siednich \u015bcianach poziomic\u0105 i podeprzec \u0142atami przed zalewaniem betonu.",
+    "Uformowa\u0107 beton 2\u20133 cm powy\u017cej poziomu terenu ze spadkiem na zewn\u0105trz.",
+    "Odczeka\u0107 minimum 24\u201348 godzin przed monta\u017cem przęse\u0142, okucia lub obci\u0105\u017ce\u0144.",
+  ],
+  commonMistakes: [
+    "Za p\u0142ytkie osadzenie s\u0142upk\u00f3w \u2014 s\u0142upki ogrodzeniowe musz\u0105 by\u0107 wkopane minimum jedn\u0105 trzeci\u0105 d\u0142ugo\u015bci; s\u0142upki no\u015bne poni\u017cej strefy przemarzania.",
+    "Pomini\u0119cie warstwy \u017cwiru \u2014 bez drena\u017cu woda gromadzi si\u0119 przy podstawie i przyspiesza gnicie drewna.",
+    "Brak wypionu s\u0142upka przed wi\u0105zaniem betonu \u2014 krzywy s\u0142upek wymaga skucia betonu do korekty.",
+    "Zalewanie betonu poni\u017cej poziomu terenu \u2014 wierzcho\u0142ek powinien wystawa\u0107 ponad teren, aby woda nie gromadzi\u0142a si\u0119 przy s\u0142upku.",
+    "Za ma\u0142a \u015brednica do\u0142u \u2014 zbyt ma\u0142o betonu wok\u00f3\u0142 s\u0142upka nie oprze si\u0119 si\u0142om bocznym wiatru lub bramy.",
+  ],
+  faqs: [
+    { question: "Ile betonu na s\u0142upek ogrodzeniowy?", answer: "S\u0142upek 9\u00d79 cm w dole o \u015brednicy 20 cm na g\u0142\u0119boko\u015b\u0107 60 cm wymaga oko\u0142o 14 litr\u00f3w betonu \u2014 oko\u0142o 1 worka 40 kg lub 2 work\u00f3w 25 kg na s\u0142upek." },
+    { question: "Jak g\u0142\u0119boki powinien by\u0107 d\u00f3\u0142 na s\u0142upek?", answer: "Zasada: jedna trzecia ca\u0142kowitej d\u0142ugo\u015bci s\u0142upka. Ogrodzenie 1,80 m ze s\u0142upkami 2,40 m: 60\u201380 cm. S\u0142upki bramy i naro\u017cne 10 cm g\u0142\u0119biej. W strefach mrozowych si\u0119ga\u0107 poni\u017cej g\u0142\u0119boko\u015bci przemarzania (80\u2013140 cm w zale\u017cno\u015bci od regionu)." },
+    { question: "Ile work\u00f3w betonu na s\u0142upek ogrodzeniowy?", answer: "Dla s\u0142upka 9\u00d79 cm w dole 20 cm na 60 cm: 1\u20132 worki 25 kg lub 1 worek 40 kg. Dla g\u0142\u0119bszych do\u0142\u00f3w (80 cm): 2\u20133 worki 25 kg na s\u0142upek." },
+    { question: "Czy mo\u017cna u\u017cy\u0107 betonu szybkowi\u0105\u017c\u0105cego do s\u0142upk\u00f3w?", answer: "Tak \u2014 beton szybkowi\u0105\u017c\u0105cy jest idealny. Wi\u0105\u017ce w 20\u201340 minut. Wsypa\u0107 such\u0105 mieszank\u0119 wok\u00f3\u0142 s\u0142upka, doda\u0107 wod\u0119, trzyma\u0107 w pionie kilka minut. Pe\u0142na wytrzyma\u0142o\u015b\u0107 po ok. 4 godzinach." },
+    { question: "Jak obliczy\u0107 beton na do\u0142y pod s\u0142upki?", answer: "Do\u0142y to cylindry: obj\u0119to\u015b\u0107 = \u03c0 \u00d7 r\u00b2 \u00d7 g\u0142\u0119boko\u015b\u0107. Zamieni\u0107 cm na metry. Przyk\u0142ad: 25 cm \u015brednicy, 80 cm g\u0142\u0119boko\u015bci: r = 0,125 m, V = 3,14 \u00d7 0,125\u00b2 \u00d7 0,8 = 0,039 m\u00b3 = 39 litr\u00f3w. Worek 25 kg daje ok. 12 litr\u00f3w." },
+    { question: "Jaki rozmiar do\u0142u na s\u0142upek bramy?", answer: "S\u0142upek bramy wymaga do\u0142u o \u015brednicy 25\u201330 cm na g\u0142\u0119boko\u015b\u0107 80\u2013100 cm. Bramy wywo\u0142uj\u0105 znacz\u0105ce si\u0142y boczne. Stosowa\u0107 s\u0142upki minimum 14\u00d714 cm dla bram jednoskrzyd\u0142owych." },
+  ],
+};
+
 // ─── REGISTRY MAP ───────────────────────────────────────────────────────────
 
 export const registryPL: Record<string, Record<string, CalculatorSEOContent>> = {
@@ -2078,6 +2216,8 @@ export const registryPL: Record<string, Record<string, CalculatorSEOContent>> = 
     "concrete-steps-calculator": concreteStepsCalculator,
     "gravel-calculator": gravelCalculator,
     "driveway-gravel-calculator": drivewayGravelCalculator,
+    "block-fill-calculator": blockFillCalculator,
+    "mortar-mix-calculator": mortarMixCalculator,
   },
   "floor-framing": {
     "rim-joist-calculator": rimJoistCalculator,
@@ -2135,5 +2275,6 @@ export const registryPL: Record<string, Record<string, CalculatorSEOContent>> = 
     "deck-footing-calculator": deckFootingCalculator,
     "deck-railing-calculator": deckRailingCalculator,
     "deck-stair-calculator": deckStairCalculator,
+    "post-hole-calculator": postHoleCalculator,
   },
 };

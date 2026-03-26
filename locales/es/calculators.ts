@@ -103,6 +103,22 @@ export const categories: CategoryMeta[] = [
         category: "Cimentación",
         categorySlug: "foundation",
       },
+      {
+        slug: "block-fill-calculator",
+        title: "Calculadora de Relleno de Bloques",
+        description:
+          "Calculadora de relleno de bloques — ¿cuánto concreto para rellenar bloques de hormigón? Herramienta gratuita para bloques de 20, 25 y 30 cm. Metros cúbicos y sacos al instante.",
+        category: "Cimentación",
+        categorySlug: "foundation",
+      },
+      {
+        slug: "mortar-mix-calculator",
+        title: "Calculadora de Mezcla de Mortero",
+        description:
+          "Calculadora de mezcla de mortero — herramienta gratuita para estimar sacos de mortero para bloque, ladrillo y piedra. Tipos N, S y M con opciones de espesor de junta.",
+        category: "Cimentación",
+        categorySlug: "foundation",
+      },
     ],
   },
   {
@@ -492,6 +508,14 @@ export const categories: CategoryMeta[] = [
         title: "Calculadora de Escaleras para Deck",
         description:
           "Calculadora de escaleras para deck: ¿Cuántos escalones y largueros? Herramienta gratis — ingresa la altura para obtener escalones, largueros y tablas.",
+        category: "Exteriores",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "post-hole-calculator",
+        title: "Calculadora de Hoyos para Postes",
+        description:
+          "Calculadora de hoyos para postes — ¿cuánto concreto para postes de cerca? Herramienta gratis para cualquier tamaño de hoyo. Cantidad exacta de sacos de 25 kg y 50 kg.",
         category: "Exteriores",
         categorySlug: "outdoor",
       },

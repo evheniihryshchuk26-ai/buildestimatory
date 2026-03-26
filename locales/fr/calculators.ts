@@ -103,6 +103,22 @@ export const categories: CategoryMeta[] = [
         category: "Fondations",
         categorySlug: "foundation",
       },
+      {
+        slug: "block-fill-calculator",
+        title: "Calculateur de remplissage de blocs",
+        description:
+          "Calculateur de remplissage de blocs — combien de béton pour remplir des parpaings ? Outil gratuit pour blocs de 20, 25 et 30 cm. Mètres cubes et nombre de sacs instantanément.",
+        category: "Fondations",
+        categorySlug: "foundation",
+      },
+      {
+        slug: "mortar-mix-calculator",
+        title: "Calculateur de Mortier",
+        description:
+          "Calculateur de mortier — outil gratuit pour estimer les sacs de mortier pour parpaings, briques & pierre. Types N, S & M avec options d'épaisseur de joint.",
+        category: "Fondations",
+        categorySlug: "foundation",
+      },
     ],
   },
   {
@@ -492,6 +508,14 @@ export const categories: CategoryMeta[] = [
         title: "Calculateur d'escalier de terrasse",
         description:
           "Calculateur d'escalier : combien de marches et de limons ? Outil gratuit — saisissez la hauteur pour obtenir le nombre de marches, limons et planches.",
+        category: "Extérieur",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "post-hole-calculator",
+        title: "Calculateur de trous de poteau",
+        description:
+          "Calculateur de trous de poteau — combien de béton pour les poteaux de clôture ? Outil gratuit pour toute taille de trou. Nombre exact de sacs de 25 kg et 35 kg.",
         category: "Extérieur",
         categorySlug: "outdoor",
       },

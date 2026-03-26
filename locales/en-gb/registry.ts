@@ -413,6 +413,105 @@ export const drivewayGravelCalculator: CalculatorSEOContent = {
   ],
 };
 
+export const blockFillCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "This estimate includes a 10% wastage factor. Actual fill volume varies with block manufacturer, core geometry, and grout consistency. Always verify core dimensions against the specific product data sheet before ordering.",
+  howToUse: [
+    "Count the total number of concrete blocks that need to be filled \u2014 include all courses and wall sections.",
+    "Select the block size: 100 mm for partitions, 140 mm standard, or 215 mm for structural walls.",
+    "Choose the fill type: concrete/grout for structural fills, vermiculite for insulation, foam insulation for thermal performance.",
+    "Click Calculate to get cubic metres and bag count.",
+  ],
+  materialInfo:
+    "Block fill (also called core fill or grout fill) is the process of filling the hollow cores of concrete masonry blocks with concrete, grout, vermiculite, or foam insulation. In the UK, masonry construction is governed by BS EN 1996 (Eurocode 6) and the accompanying UK National Annex, with Building Regulations Approved Document A covering structural requirements for England and Wales.\n\nStructural block fill uses a pourable grout or fine concrete mix (typically C20/25) that flows into the cores and around any reinforcement placed inside the wall. Reinforced blockwork is less common in UK domestic construction than in North America, but is used for retaining walls, boundary walls over 1.2 m, and in areas subject to lateral loads.\n\nReinforcement placement follows BS 4449 and BS 8666. Vertical reinforcement bars (typically T10 or T12) are set into the foundation and extend up through the cores to be grouted. Horizontal bed joint reinforcement (such as Murfor) is placed every 450 mm to 600 mm for crack control.\n\nFor thermal applications, filling block cores with vermiculite or perlite provides moderate insulation (approximately 0.065 W/mK). Injected foam insulation offers better performance (approximately 0.022 W/mK for PU foam) and helps achieve Part L energy efficiency requirements. Standard 100 mm hollow blocks yield approximately 0.005 m\u00b3 of fill per block, whilst 215 mm blocks yield approximately 0.011 m\u00b3.\n\nExpect to pay \u00a390 to \u00a3130 per cubic metre for ready-mix grout, or \u00a34 to \u00a36 per 25 kg bag of premixed grout for small projects. Vermiculite costs \u00a315 to \u00a325 per 100-litre bag. Materials are available from Jewson, Travis Perkins, Buildbase, and local builders merchants. Always over-order by 10% to account for settling, spillage, and irregular core sizes.",
+  nextSteps: [
+    { label: "Concrete Calculator", href: "/calculators/foundation/concrete-calculator/" },
+    { label: "Concrete Footing Calculator", href: "/calculators/foundation/concrete-footing-calculator/" },
+    { label: "Gravel Calculator", href: "/calculators/foundation/gravel-calculator/" },
+  ],
+  installationTips: [
+    "Dampen the block cores before pouring grout \u2014 dry blocks absorb water from the mix and weaken the fill.",
+    "Pour grout in lifts of no more than 1.2 metres at a time, then consolidate with a vibrator or rod.",
+    "Use fine grout (10 mm aggregate max) so it flows freely through the cores without bridging.",
+    "Place vertical reinforcement before laying blocks and brace it plumb \u2014 do not attempt to drop rebar into filled cores.",
+    "Install cleanout blocks at the base of tall walls so you can inspect cores before grouting.",
+    "Fill bond beam courses completely and rod the grout to eliminate voids around horizontal reinforcement.",
+  ],
+  commonMistakes: [
+    "Grouting all cores at once on a tall wall \u2014 grout sets under pressure and can blow out lower courses. Limit pours to 1.2-metre lifts.",
+    "Omitting reinforcement in grouted cells \u2014 grouted cells without steel provide little structural value.",
+    "Using standard concrete mix instead of fine grout \u2014 large aggregate bridges across the core opening and creates voids.",
+    "Not consolidating grout with a vibrator or rod \u2014 air pockets reduce bond strength by up to 50%.",
+    "Filling cores in freezing conditions \u2014 grout must cure above 5\u00b0C for at least 48 hours.",
+  ],
+  faqs: [
+    { question: "How much concrete do I need to fill concrete blocks?", answer: "A standard 100 mm hollow block requires approximately 0.005 m\u00b3 of grout per block, whilst a 215 mm block needs about 0.011 m\u00b3. For 100 standard blocks, you need about 0.55 m\u00b3 including a 10% wastage factor. Enter your block count and size above for an instant estimate." },
+    { question: "How many 25 kg bags of concrete to fill a concrete block?", answer: "One 25 kg bag of premixed grout fills approximately 2 to 3 standard 100 mm hollow blocks. For 215 mm blocks, one bag fills only about 1 to 1.5 blocks because of the larger core volume. Always buy 10% extra for waste and spillage." },
+    { question: "Do all concrete block cores need to be filled?", answer: "No \u2014 Building Regulations only require filling cores that contain reinforcement or are part of a bond beam course. For domestic walls under 1.2 m, reinforcement is often not required. For retaining walls and structural applications, the engineer\u2019s specification will detail which cores must be grouted." },
+    { question: "What is the difference between grout and concrete for block fill?", answer: "Grout is a fluid concrete mix with small aggregate (10 mm max) designed to flow into narrow block cores without bridging. Standard concrete has larger aggregate (20 mm) that can jam in the cores, creating voids. For block fill, always use fine grout or a premixed block fill product." },
+    { question: "Can I fill concrete blocks with foam insulation instead of concrete?", answer: "Yes, for non-structural walls where Building Regulations allow it. Injected PU foam provides excellent thermal performance (0.022 W/mK) and helps meet Part L requirements. Vermiculite is cheaper but lower performance. Neither provides structural strength \u2014 if reinforcement is specified, those cells must be filled with grout." },
+    { question: "How many cubic metres of grout for a concrete block wall?", answer: "Multiply blocks to be filled by the core volume: 0.005 m\u00b3 per 100 mm block, 0.008 m\u00b3 per 140 mm block, or 0.011 m\u00b3 per 215 mm block. A typical 215 mm wall of 200 blocks with every core filled needs about 2.4 m\u00b3 of grout including 10% wastage." },
+  ],
+};
+
+export const mortarMixCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "This estimate includes a 10% wastage factor. Actual mortar usage varies based on block or brick size, joint profile (bucket handle, weatherstruck, flush), workmanship, and weather conditions. Always confirm quantities with your builders' merchant before ordering.",
+  howToUse: [
+    "Calculate the total wall area in square metres — multiply wall length by height, then subtract window and door openings.",
+    "Select the mortar designation — M2 for general above-ground work, M4 for structural and below-ground, M6 for heavy loads and foundations.",
+    "Choose the joint thickness — 10 mm is the standard for most blockwork and brickwork in the UK.",
+    "Click Calculate to get the number of pre-mixed bags needed plus quantities for site-mixing with Portland cement and sand.",
+  ],
+  materialInfo:
+    "Mortar is the bonding material used between blocks, bricks, and stone units in masonry construction. It comprises Portland cement, hydrated lime, building sand, and water, mixed to a workable consistency that allows bricklayers to lay units efficiently whilst providing structural bond and weather resistance.\n\nIn the UK, mortar is classified by BS EN 998-2 using designation codes. The most common designations are: M2 (1:1:6 cement:lime:sand, ~2 MPa) for general above-ground brickwork and blockwork including cavity walls, M4 (1:0.5:4.5, ~4 MPa) for structural walls, below-ground brickwork, and retaining walls, and M6/M12 (1:0.25:3, ~6-12 MPa) for heavily loaded foundations, engineering brickwork, and manholes.\n\nPre-mixed mortar is available in 20 kg and 25 kg bags from builders' merchants. A 25 kg bag yields approximately 14 litres of mixed mortar and covers roughly 10 standard UK bricks (215 x 102.5 x 65 mm) with 10 mm joints. For larger projects, site-batching with cement, lime, and sharp sand is more economical — a typical 1:1:6 mix for designation M2 uses 1 bucket cement, 1 bucket lime, and 6 buckets sand.\n\nCommon UK brands include Blue Circle (Tarmac), Hanson, Breedon, and Rugby (CEMEX). Pre-mixed mortar bags (25 kg) cost approximately GBP 5 to 8 at Travis Perkins, Jewson, Wickes, or Screwfix. Building sand costs roughly GBP 30 to 50 per tonne. For compliance, always refer to BS 5628 (now superseded by BS EN 1996 Eurocode 6) and the relevant Approved Document A of the Building Regulations.",
+  nextSteps: [
+    { label: "Concrete Calculator", href: "/calculators/foundation/concrete-calculator/" },
+    { label: "Block Fill Calculator", href: "/calculators/foundation/block-fill-calculator/" },
+    { label: "Concrete Footing Calculator", href: "/calculators/foundation/concrete-footing-calculator/" },
+  ],
+  installationTips: [
+    "Mix only as much mortar as you can use within 90 minutes — mortar begins to go off and loses workability after that window.",
+    "Dampen bricks before laying to prevent them drawing moisture from the mortar, which causes weak bonds.",
+    "Maintain consistent joint thickness by using a string line and checking courses with a spirit level every 3 to 4 courses.",
+    "Tool (strike) the joints when the mortar is thumbprint-firm — tooling too early smears the surface, and too late prevents proper compaction.",
+    "Cover freshly laid brickwork with hessian or polythene sheeting in hot, dry, or windy conditions to prevent rapid moisture loss and cracking.",
+  ],
+  commonMistakes: [
+    "Using the wrong mortar designation — M6 in above-ground cavity walls is too rigid and cracks; M2 below ground is too weak and deteriorates.",
+    "Adding too much water to the mix — sloppy mortar has reduced strength and stains the face of the bricks.",
+    "Retempering mortar after it has begun to set — adding water to stiffened mortar restores workability but permanently reduces bond strength.",
+    "Mixing too large a batch — mortar that sits in the spot board for over 2 hours is dead and must be discarded, wasting material.",
+    "Not buttering the ends of bricks — perpend joints left empty create water ingress points and weaken the wall structurally.",
+  ],
+  faqs: [
+    {
+      question: "How much mortar do I need per square metre?",
+      answer: "For standard UK bricks (215 x 102.5 x 65 mm) laid in stretcher bond with 10 mm joints, you need approximately 28 litres of mortar per square metre, which is roughly 2 bags (25 kg) of pre-mixed mortar. For 100 mm concrete blocks, consumption is lower at about 7 litres per square metre. Thicker joints increase usage proportionally.",
+    },
+    {
+      question: "What is the difference between mortar designations M2, M4, and M6?",
+      answer: "M2 (mix ratio 1:1:6) is a general-purpose mortar for above-ground brickwork and cavity walls — it is the most workable and accommodating. M4 (1:0.5:4.5) is a structural mortar for below-ground work, retaining walls, and damp-proof courses. M6 (1:0.25:3) has the highest compressive strength for engineering brickwork and heavily loaded foundations.",
+    },
+    {
+      question: "How do I mix mortar on site?",
+      answer: "For designation M2 (general purpose), combine 1 bucket Portland cement, 1 bucket hydrated lime, and 6 buckets building sand. For M4 (structural), use 1 bucket cement, half a bucket lime, and 4.5 buckets sand. Add water gradually until the mix reaches a buttery consistency that holds its shape on a trowel. Use a cement mixer for consistency on larger jobs.",
+    },
+    {
+      question: "How long does mortar take to set and cure?",
+      answer: "Mortar reaches initial set in 2 to 4 hours and is firm enough for light work in 24 hours. Full cure takes 28 days, during which it gains its rated compressive strength. Avoid heavy loads or backfilling for at least 7 days. Below 5 C, curing slows dramatically and mortar must be protected from frost for at least 48 hours per PD 6697.",
+    },
+    {
+      question: "Can I use mortar instead of concrete?",
+      answer: "No. Mortar and concrete are different products. Mortar bonds masonry units and contains no coarse aggregate. Concrete contains coarse aggregate and is designed for slabs, foundations, and structural elements. Using mortar where concrete is specified will result in structural failure.",
+    },
+    {
+      question: "What mortar should I use for repointing?",
+      answer: "For repointing, always match or use a weaker mortar than the original. Most pre-1919 buildings used lime mortar, so repoint with NHL 3.5 or NHL 5 hydraulic lime mortar — never use cement-based mortar on old lime-mortared buildings as it traps moisture, causes spalling, and damages the brickwork. For modern cavity walls built with cement mortar, match the original designation (usually M2 or M4).",
+    },
+  ],
+};
+
 // ─── FLOOR FRAMING ──────────────────────────────────────────────────────────
 
 export const rimJoistCalculator: CalculatorSEOContent = {
@@ -1895,6 +1994,45 @@ export const deckStairCalculator: CalculatorSEOContent = {
   ],
 };
 
+export const postHoleCalculator: CalculatorSEOContent = {
+  disclaimer: "This calculator estimates concrete volume for cylindrical post holes. Actual usage may vary based on soil conditions, gravel base, and post size.",
+  howToUse: [
+    "Enter the hole diameter in inches — 200 mm (8 in) for 75 mm posts, 250\u2013300 mm (10\u201312 in) for 100 mm posts.",
+    "Enter the hole depth in inches — fence posts typically need 600\u2013900 mm, structural posts 900\u20131200 mm.",
+    "Enter the number of holes you need to fill with concrete.",
+    "Click Calculate for volume per hole, total volume, and bag counts.",
+  ],
+  materialInfo:
+    "Post holes are cylindrical excavations filled with concrete to anchor fence posts, gate posts, pergola uprights, and other vertical timber or steel posts. The concrete encases the post base and transfers loads into the surrounding soil, preventing the post from shifting, leaning, or heaving.\n\nFor timber fence posts, the standard rule is to bury one-third of the total post length. A 1.8 m fence using 2.4 m posts should have 600\u2013750 mm of post set in concrete. For 75 mm (3 in) fence posts, a 200 mm diameter hole is sufficient. For 100 mm (4 in) posts or gate posts bearing heavier lateral loads, use a 250\u2013300 mm diameter hole.\n\nIn the UK, frost depth is relatively shallow (typically 450 mm), but Building Regulations and BS 8500 recommend structural post foundations extend to at least 600 mm. For pergolas, carport posts, and deck supports, 750\u20131000 mm is advisable.\n\nPostcrete (by Hanson) and Postcrete Plus are the most popular fast-setting post mixes in the UK. A 20 kg bag fills approximately one post hole (200 mm diameter, 600 mm deep). Standard ready-mix concrete in 25 kg bags from Wickes, B&Q, or Screwfix fills approximately 0.012 m\u00b3 per bag. For larger projects, bulk ready-mix delivery is more economical at \u00a380\u2013\u00a3120 per m\u00b3.\n\nAlways add 100\u2013150 mm of compacted gravel at the bottom of each hole for drainage. Crown the concrete above ground level, sloping away from the post to shed rainwater.",
+  nextSteps: [
+    { label: "Deck Footing Calculator", href: "/calculators/outdoor/deck-footing-calculator/" },
+    { label: "Gravel Calculator", href: "/calculators/foundation/gravel-calculator/" },
+    { label: "Concrete Calculator", href: "/calculators/foundation/concrete-calculator/" },
+  ],
+  installationTips: [
+    "Dig holes 3\u20134 times the width of the post \u2014 200 mm hole for a 75 mm post, 300 mm for a 100 mm post.",
+    "Add 100\u2013150 mm of compacted gravel or MOT Type 1 at the bottom for drainage.",
+    "Use a spirit level on two adjacent faces and brace the post with timber battens before pouring concrete.",
+    "Crown the concrete 25\u201350 mm above ground level, sloping away from the post.",
+    "Allow at least 24\u201348 hours before attaching fence panels, rails, or loads to the post.",
+  ],
+  commonMistakes: [
+    "Setting posts too shallow \u2014 fence posts should be buried at least one-third of their total length; structural posts must reach a stable bearing depth.",
+    "Skipping the gravel base \u2014 without drainage, water pools at the post base and accelerates rot in timber posts.",
+    "Not bracing posts plumb before the concrete sets \u2014 a leaning post requires breaking out the concrete to correct.",
+    "Pouring concrete below ground level \u2014 the top should be crowned above grade to prevent water pooling against the post.",
+    "Using too small a hole diameter \u2014 insufficient concrete cannot resist lateral forces from wind or gate operation.",
+  ],
+  faqs: [
+    { question: "How much concrete for a fence post UK?", answer: "A standard 75 mm fence post in a 200 mm diameter hole at 600 mm deep needs approximately 0.014 m\u00b3 of concrete \u2014 roughly 1 bag of 20 kg Postcrete or 1\u20132 bags of 25 kg ready-mix. For a 100 mm gate post in a 300 mm hole at 750 mm deep, you need about 0.04 m\u00b3 per post." },
+    { question: "How deep should a fence post be UK?", answer: "The general rule is one-third of the total post length underground. For a 1.8 m fence with 2.4 m posts, dig holes 600\u2013750 mm deep. Gate posts and corner posts should be set 100 mm deeper. In exposed or windy locations, increase depth to 900 mm." },
+    { question: "How many bags of Postcrete per fence post?", answer: "One 20 kg bag of Postcrete fills a standard fence post hole (200 mm diameter, 600 mm deep) for a 75 mm post. For 100 mm posts or deeper holes, use 2 bags per post. Postcrete sets in about 10 minutes \u2014 just pour dry mix around the post and add water." },
+    { question: "Can I use fast-setting concrete for post holes?", answer: "Yes \u2014 Postcrete and similar fast-setting mixes are ideal. They set in 5\u201310 minutes, allowing you to hang fence panels the same day. Pour the dry mix around the post, add water, and hold plumb for a few minutes. For structural posts, standard concrete with 24-hour cure is stronger." },
+    { question: "How do I calculate concrete for post holes?", answer: "Post holes are cylinders: volume = \u03c0 \u00d7 r\u00b2 \u00d7 depth. Convert mm to metres. Example: 250 mm diameter, 600 mm deep: r = 0.125 m, V = 3.14 \u00d7 0.125\u00b2 \u00d7 0.6 = 0.029 m\u00b3. A 25 kg bag fills about 0.012 m\u00b3, so you need 3 bags per hole." },
+    { question: "What size hole for a gate post?", answer: "Gate posts need a minimum 300 mm diameter hole at 750\u2013900 mm deep. Gates exert significant lateral force when opening and closing, so the post needs more concrete mass. Use 100 mm \u00d7 100 mm posts minimum for single gates and 125 mm posts for double gates." },
+  ],
+};
+
 // ─── REGISTRY MAP ───────────────────────────────────────────────────────────
 
 export const registryGB: Record<string, Record<string, CalculatorSEOContent>> = {
@@ -1909,6 +2047,8 @@ export const registryGB: Record<string, Record<string, CalculatorSEOContent>> = 
     "concrete-steps-calculator": concreteStepsCalculator,
     "gravel-calculator": gravelCalculator,
     "driveway-gravel-calculator": drivewayGravelCalculator,
+    "block-fill-calculator": blockFillCalculator,
+    "mortar-mix-calculator": mortarMixCalculator,
   },
   "floor-framing": {
     "rim-joist-calculator": rimJoistCalculator,
@@ -1966,5 +2106,6 @@ export const registryGB: Record<string, Record<string, CalculatorSEOContent>> = 
     "deck-footing-calculator": deckFootingCalculator,
     "deck-railing-calculator": deckRailingCalculator,
     "deck-stair-calculator": deckStairCalculator,
+    "post-hole-calculator": postHoleCalculator,
   },
 };

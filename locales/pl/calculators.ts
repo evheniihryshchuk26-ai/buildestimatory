@@ -91,6 +91,22 @@ export const categories: CategoryMeta[] = [
         category: "Fundamenty",
         categorySlug: "foundation",
       },
+      {
+        slug: "block-fill-calculator",
+        title: "Kalkulator Wypełnienia Pustaków",
+        description:
+          "Kalkulator wypełnienia pustaków \u2014 ile betonu do wypełnienia pustaków? Darmowe narzędzie dla bloków 20, 25 i 30 cm. Metry sześcienne i liczba worków natychmiast.",
+        category: "Fundamenty",
+        categorySlug: "foundation",
+      },
+      {
+        slug: "mortar-mix-calculator",
+        title: "Kalkulator Zaprawy Murarskiej",
+        description:
+          "Kalkulator zaprawy murarskiej \u2014 darmowe narzędzie do obliczania worków zaprawy na bloczki, cegły i kamień. Zaprawy M5, M10 i M15 z opcjami grubości spoiny.",
+        category: "Fundamenty",
+        categorySlug: "foundation",
+      },
     ],
   },
   {
@@ -480,6 +496,14 @@ export const categories: CategoryMeta[] = [
         title: "Kalkulator Schodów Tarasowych",
         description:
           "Kalkulator schodów tarasowych: ile stopni i policzkówek? Darmowe narzędzie \u2014 podaj wysokość tarasu, otrzymaj ilość stopni, policzkówek i desek.",
+        category: "Zewnętrzne",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "post-hole-calculator",
+        title: "Kalkulator Dołów na Słupki",
+        description:
+          "Kalkulator dołów na słupki \u2014 ile betonu na słupki ogrodzeniowe? Darmowe narzędzie na każdy rozmiar dołu. Dokładna ilość worków 25 kg i 40 kg.",
         category: "Zewnętrzne",
         categorySlug: "outdoor",
       },

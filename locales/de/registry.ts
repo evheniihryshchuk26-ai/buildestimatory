@@ -450,6 +450,105 @@ export const drivewayGravelCalculator: CalculatorSEOContent = {
   ],
 };
 
+export const blockFillCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "Diese Schätzung enthält einen 10 % Verschnittfaktor. Das tatsächliche Füllvolumen variiert je nach Hersteller, Kerngeometrie und Mörtelkonsistenz. Prüfen Sie die Kernmaße anhand des spezifischen Produktdatenblatts vor der Bestellung.",
+  howToUse: [
+    "Zählen Sie die Gesamtzahl der zu füllenden Hohlblocksteine — alle Schichten und Wandabschnitte einbeziehen.",
+    "Wählen Sie die Blockgröße: 20 cm ist Standard für den Wohnungsbau, 25 cm und 30 cm für tragende oder höhere Wände.",
+    "Wählen Sie den Fülltyp: Beton/Verguss für tragende Füllungen, Vermiculit für Dämmung, Schaumisolierung für Wärmeleistung.",
+    "Klicken Sie auf Berechnen, um Kubikmeter und Sackanzahl zu erhalten.",
+  ],
+  materialInfo:
+    "Die Hohlraumfüllung (auch Kernfüllung oder Vergussfüllung) ist das Verfahren zum Füllen der Hohlkerne von Hohlblocksteinen (z. B. KS-Plansteine, Leichtbetonhohlblöcke) mit Beton, Vergussmörtel, Vermiculit oder Schaumdämmstoff. Tragende Kernfüllungen verwenden Fließbeton oder Vergussmörtel (typisch C20/25), der in die Kerne fließt und die eingelegte Bewehrung umschließt. Die DIN 1053 und die Eurocode-Normen (DIN EN 1996) schreiben verfüllte Kerne in bestimmten Abständen vor — in der Regel alle 1,20 m horizontal sowie an allen Ecken, Laibungen und Ringankerschichten.\n\nDie Bewehrungsführung ist entscheidend für die Tragfähigkeit. Vertikale Bewehrungsstähle (Ø 10 oder Ø 12 mm) werden im Fundament verankert und ragen durch die zu verfüllenden Kerne nach oben. Horizontale Bewehrung verläuft durch Ringankerblöcke am Wandkopf und in Zwischenschichten laut Statik. Alle vergossenen Kerne müssen bewehrt sein — das bloße Füllen leerer Kerne ohne Stahl erfüllt die statischen Anforderungen in den meisten Fällen nicht.\n\nFür nicht tragende Anwendungen bietet Vermiculit-Schüttung mäßige Dämmung (R-Wert ca. 0,37 pro cm) und wird trocken in die Kerne geschüttet. Spritzschaum bietet höhere R-Werte (ca. 1,05 pro cm bei PU-Hartschaum), kostet aber deutlich mehr und erfordert Fachverarbeitung. Standard-20-cm-Hohlblocksteine haben zwei Kerne mit ca. 0,007 Kubikmeter Füllvolumen pro Stein. 25-cm- und 30-cm-Steine haben proportional größere Kerne.\n\nRechnen Sie mit 120 bis 160 EUR pro Kubikmeter für Transportbeton-Vergussmörtel oder 4 bis 6 EUR pro 25-kg-Sack Fertigmischung für kleine Projekte. Vermiculit kostet 12 bis 20 EUR pro 100-Liter-Sack. Bestellen Sie immer 10 % mehr für Setzung, Verschüttung und ungleichmäßige Kerngrößen.",
+  nextSteps: [
+    { label: "Beton-Rechner", href: "/calculators/foundation/concrete-calculator/" },
+    { label: "Streifenfundament-Rechner", href: "/calculators/foundation/concrete-footing-calculator/" },
+    { label: "Schotter-Rechner", href: "/calculators/foundation/gravel-calculator/" },
+  ],
+  installationTips: [
+    "Feuchten Sie die Hohlblocksteine vor dem Vergießen an — trockene Steine entziehen dem Mörtel Wasser und schwächen die Füllung.",
+    "Gießen Sie Vergussmörtel in Etappen von maximal 1,20 m Höhe, dann mit Rüttler oder Stab verdichten.",
+    "Verwenden Sie Feinbeton (max. 8 mm Körnung), damit er frei durch die Kerne fließt, ohne zu brücken.",
+    "Setzen Sie vertikale Bewehrung vor dem Mauern ein und richten Sie sie lotrecht aus.",
+    "Bauen Sie Reinigungsöffnungen am Wandfuß hoher Wände ein, um Kerne vor dem Vergießen inspizieren zu können.",
+    "Füllen Sie Ringankerschichten vollständig und verdichten Sie den Verguss, um Hohlräume um die horizontale Bewehrung zu beseitigen.",
+  ],
+  commonMistakes: [
+    "Alle Kerne einer hohen Wand auf einmal vergießen — der Druck kann untere Schichten sprengen. Begrenzen Sie Schüttungen auf 1,20-m-Etappen.",
+    "Bewehrung in vergossenen Kernen weglassen — Kerne ohne Stahl bieten kaum strukturellen Wert.",
+    "Normalen Beton statt Vergussmörtel verwenden — grobe Gesteinskörnung überbrückt die Kernöffnung und erzeugt Hohlräume.",
+    "Verguss nicht mit Rüttler oder Stab verdichten — Lufteinschlüsse verringern die Verbundfestigkeit um bis zu 50 %.",
+    "Kerne bei Frosttemperaturen füllen — Verguss muss mindestens 48 Stunden über 5 °C aushärten.",
+  ],
+  faqs: [
+    { question: "Wie viel Beton brauche ich zum Füllen von Hohlblocksteinen?", answer: "Ein Standard-20-cm-Hohlblockstein benötigt ca. 0,007 m³ Vergussmörtel. Für 100 Steine brauchen Sie etwa 0,77 m³ inklusive 10 % Verschnitt. Geben Sie oben Ihre Stückzahl und Blockgröße ein, um sofort Kubikmeter und Sackzahl zu erhalten." },
+    { question: "Wie viele 25-kg-Säcke Beton zum Füllen eines Hohlblocksteins?", answer: "Ein 25-kg-Sack Vergussmörtel füllt etwa 2 Standard-20-cm-Hohlblocksteine. Für 100 Steine benötigen Sie ca. 55 Säcke. Bei 30-cm-Steinen füllt ein Sack nur etwa 1,2 Steine wegen des größeren Kernvolumens." },
+    { question: "Müssen alle Kerne von Hohlblocksteinen gefüllt werden?", answer: "Nein — Bauvorschriften verlangen nur die Füllung von Kernen mit Bewehrung oder Ringankern. In der Regel werden Kerne alle 1,20 m horizontal, an Ecken, Tür-/Fensterlaibungen und am Ringankergurt verfüllt. In Erdbebengebieten kann jeder Kern verfüllt werden müssen." },
+    { question: "Was ist der Unterschied zwischen Vergussmörtel und Beton für Hohlblockfüllungen?", answer: "Vergussmörtel ist eine fließfähige Betonmischung mit kleiner Gesteinskörnung (max. 8 mm) und höherem Wassergehalt, die in enge Kerne fließen kann. Normaler Beton hat größere Zuschläge, die in den Kernen klemmen und Hohlräume erzeugen." },
+    { question: "Kann ich Hohlblocksteine mit Schaumdämmung statt Beton füllen?", answer: "Ja, bei nicht tragenden Wänden, wenn die Bauordnung dies erlaubt. PU-Spritzschaum bietet ca. R 1,05 pro cm und verbessert auch die Feuchtebeständigkeit. Vermiculit-Schüttung ist günstiger mit ca. R 0,37 pro cm. Beide bieten keine Tragfähigkeit — wenn der Statiker vergossene Bewehrung vorschreibt, müssen diese Kerne mit Verguss gefüllt werden." },
+    { question: "Wie viele Kubikmeter Verguss für eine Hohlblockwand?", answer: "Multiplizieren Sie die zu füllenden Steine mit dem Kernvolumen: 0,007 m³ pro 20-cm-Stein, 0,009 m³ pro 25-cm-Stein oder 0,011 m³ pro 30-cm-Stein. Eine typische 20-cm-Fundamentwand mit 400 Steinen und Vollfüllung benötigt ca. 3,1 m³ Verguss inklusive 10 % Verschnitt." },
+  ],
+};
+
+export const mortarMixCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "Diese Schätzung enthält einen 10 % Verschnittfaktor. Der tatsächliche Mörtelverbrauch variiert je nach Stein- oder Ziegelgröße, Fugenprofil, Verarbeitungsqualität und Witterungsbedingungen. Bestätigen Sie die Mengen immer bei Ihrem Baustoffhändler vor der Bestellung.",
+  howToUse: [
+    "Berechnen Sie die Gesamtfläche der Wand in Quadratmetern — multiplizieren Sie die Wandlänge mit der Höhe und ziehen Sie Fenster- und Türöffnungen ab.",
+    "Wählen Sie die Mörtelgruppe — Gruppe I für allgemeine Arbeiten über Erdniveau, Gruppe II für tragende und erdberührte Bauteile, Gruppe III für schwere Belastungen.",
+    "Wählen Sie die Fugendicke — 10 mm ist Standard für die meisten Mauerwerksarbeiten.",
+    "Klicken Sie auf Berechnen, um die Anzahl der Fertigmörtelsäcke sowie die Mengen für das Selbstmischen mit Portlandzement und Sand zu erhalten.",
+  ],
+  materialInfo:
+    "Mörtel ist der Bindebaustoff zwischen Mauersteinen, Klinkern und Natursteinen. Er besteht aus Portlandzement, Kalkhydrat, Sand und Wasser, gemischt zu einer verarbeitbaren Konsistenz, die eine effiziente Verlegung bei gleichzeitiger struktureller Bindung und Witterungsbeständigkeit ermöglicht.\n\nIn Deutschland werden Mauermörtel nach DIN EN 998-2 und DIN 20000-412 klassifiziert. Die gebräuchlichsten Mörtelgruppen sind: Mörtelgruppe I (Kalkmörtel, ca. 1 N/mm² Druckfestigkeit) für nicht tragendes Mauerwerk und Innenwände, Mörtelgruppe II (Kalkzementmörtel, ca. 2,5 N/mm²) als Standardmörtel für die meisten Anwendungen einschließlich Außenmauerwerk, und Mörtelgruppe III (Zementmörtel, ca. 10 N/mm²) für stark belastetes Mauerwerk, Fundamentwände und erdberührte Bauteile.\n\nFertigmörtelmischungen (Trockenmörtel) sind in 25-kg- und 40-kg-Säcken erhältlich. Ein 25-kg-Sack ergibt ca. 14 Liter verarbeitungsfähigen Mörtel und reicht für etwa 8 bis 10 Mauersteine (24×11,5×7,1 cm, Normalformat NF) bei 12 mm Fugendicke. Für große Projekte ist Silo-Trockenmörtel wirtschaftlicher.\n\nDie gängigen Marken in Deutschland sind Sakret, quick-mix, PCI und Knauf. Fertigmörtelsäcke (25 kg) kosten ca. 3 bis 6 EUR im Baustoffhandel (Baustoffring, BayWa, hagebau, OBI, HORNBACH). Mauersand kostet ca. 20 bis 35 EUR pro Tonne. Bei der Verarbeitung ist die DIN 1053 für Mauerwerk zu beachten.",
+  nextSteps: [
+    { label: "Beton-Rechner", href: "/calculators/foundation/concrete-calculator/" },
+    { label: "Hohlblock-Füllrechner", href: "/calculators/foundation/block-fill-calculator/" },
+    { label: "Streifenfundament-Rechner", href: "/calculators/foundation/concrete-footing-calculator/" },
+  ],
+  installationTips: [
+    "Nur so viel Mörtel anrühren, wie in 90 Minuten verarbeitet werden kann — danach beginnt der Mörtel abzubinden und verliert seine Verarbeitbarkeit.",
+    "Mauersteine und Ziegel vor dem Vermauern anfeuchten, damit sie dem Mörtel nicht das Wasser entziehen, was zu schwachen Verbindungen führt.",
+    "Gleichmäßige Fugendicke einhalten, indem eine Richtschnur gespannt und alle 3 bis 4 Schichten mit der Wasserwaage kontrolliert wird.",
+    "Die Fugen verfugen, wenn der Mörtel daumendruckfest ist — zu frühes Verfugen verschmiert die Oberfläche, zu spätes verhindert die richtige Verdichtung.",
+    "Frisch gemauerte Wände bei heißem, trockenem oder windigem Wetter mit Folie abdecken, um schnellen Feuchtigkeitsverlust und Rissbildung zu vermeiden.",
+  ],
+  commonMistakes: [
+    "Falsche Mörtelgruppe verwenden — Gruppe III in Innenwänden ist zu starr und reißt; Gruppe I im Erdreich ist zu schwach.",
+    "Zu viel Wasser in die Mischung geben — flüssiger Mörtel hat reduzierte Festigkeit und verschmutzt die Sichtflächen.",
+    "Mörtel nach Beginn des Abbindens erneut anmischen — das Zugeben von Wasser zu steifem Mörtel reduziert die Haftfestigkeit dauerhaft.",
+    "Zu große Chargen anrühren — Mörtel, der länger als 2 Stunden in der Wanne steht, ist unbrauchbar und muss entsorgt werden.",
+    "Stoßfugen nicht mit Mörtel füllen — leere Vertikalfugen bilden Eintrittspunkte für Wasser und schwächen die Wand strukturell.",
+  ],
+  faqs: [
+    {
+      question: "Wie viel Mörtel brauche ich pro Quadratmeter?",
+      answer: "Für Normalformat-Ziegel (24×11,5×7,1 cm) mit 12 mm Fugen benötigen Sie ca. 30 Liter Mörtel pro Quadratmeter Wandfläche, das entspricht etwa 2 Säcken à 25 kg Fertigmörtel. Für Porenbetonblöcke (60×25×20 cm) mit Dünnbettmörtel ist der Verbrauch deutlich geringer: ca. 3 bis 5 kg pro Quadratmeter.",
+    },
+    {
+      question: "Was ist der Unterschied zwischen Mörtelgruppe I, II und III?",
+      answer: "Mörtelgruppe I (Kalkmörtel, ≥1 N/mm²) ist für nicht tragendes Innenmauerwerk. Gruppe II (Kalkzementmörtel, ≥2,5 N/mm²) ist der Standard für tragendes Mauerwerk innen und außen. Gruppe III (Zementmörtel, ≥10 N/mm²) wird für stark belastete und erdberührte Bauteile verwendet. Die meisten Wohnbauten verwenden Gruppe II.",
+    },
+    {
+      question: "Wie mische ich Mörtel selbst an?",
+      answer: "Für Mörtelgruppe II mischen Sie 1 Teil Portlandzement, 1 Teil Kalkhydrat und 6 Teile Mauersand nach Volumen. Für Gruppe III: 1 Teil Zement, 0,25 Teile Kalk und 3 Teile Sand. Wasser schrittweise zugeben, bis die Mischung eine geschmeidige, formstabile Konsistenz hat.",
+    },
+    {
+      question: "Wie lange braucht Mörtel zum Abbinden?",
+      answer: "Mörtel erreicht die Anfangsfestigkeit in 2 bis 4 Stunden und ist nach 24 Stunden für leichte Belastung fest genug. Die volle Aushärtung dauert 28 Tage. Vermeiden Sie schwere Lasten für mindestens 7 Tage. Bei Temperaturen unter 5 °C verlangsamt sich die Aushärtung drastisch und der Mörtel muss mindestens 48 Stunden vor Frost geschützt werden.",
+    },
+    {
+      question: "Kann ich Mörtel statt Beton verwenden?",
+      answer: "Nein. Mörtel und Beton sind verschiedene Produkte mit unterschiedlichen Zwecken. Mörtel ist zum Verbinden von Mauersteinen gedacht und enthält keine Gesteinskörnung (Kies). Beton enthält Kies und ist für Fundamente, Decken und Stützen konzipiert. Mörtel als Betonersatz führt zu Versagen.",
+    },
+    {
+      question: "Welchen Mörtel für Klinker und Sichtmauerwerk?",
+      answer: "Für Klinker und Sichtmauerwerk wird Mörtelgruppe IIa (Kalkzementmörtel mit angepasster Festigkeit) empfohlen. Verwenden Sie Fugenmörtel mit passendem Farbton — Grau, Weiß oder Anthrazit sind die gängigsten Farben. Trasszement-basierter Mörtel reduziert Ausblühungen auf Sichtmauerwerk erheblich.",
+    },
+  ],
+};
+
 // ─── FLOOR FRAMING ───────────────────────────────────────────────────────────
 
 export const rimJoistCalculator: CalculatorSEOContent = {
@@ -1421,6 +1520,45 @@ export const deckStairCalculatorDE: CalculatorSEOContent = {
   ],
 };
 
+export const postHoleCalculatorDE: CalculatorSEOContent = {
+  disclaimer: "Betonvolumen für zylindrische Pfostenlöcher. Tatsächlicher Verbrauch kann je nach Bodenverhältnissen und Pfostengröße abweichen.",
+  howToUse: [
+    "Lochdurchmesser in Zoll eingeben — 20 cm für 9×9 cm Pfosten, 25–30 cm für 14×14 cm Pfosten.",
+    "Lochtiefe in Zoll eingeben — Zaunpfosten: 60–80 cm, tragende Pfosten: 80–120 cm (frostfrei).",
+    "Anzahl der Löcher eingeben.",
+    "Klicken Sie auf Berechnen für Volumen pro Loch, Gesamtvolumen und Sackanzahl.",
+  ],
+  materialInfo:
+    "Pfostenlöcher sind zylindrische Aushebungen, die mit Beton verfüllt werden, um Pfosten für Zäune, Briefkästen, Terrassenstützen, Schilder und Pergolen zu verankern. Der Beton umschließt den Pfostenfuß und überträgt die Lasten in den umliegenden Boden, sodass der Pfosten nicht verrutscht, kippt oder durch Frosthebung angehoben wird.\n\nFür Zaunpfosten gilt die Faustregel, ein Drittel der Gesamtlänge im Boden einzubetonieren. Ein 1,80-m-Zaun mit 2,40-m-Pfosten sollte 60–80 cm tief einbetoniert werden. Für 9×9-cm-Pfosten reicht ein Lochdurchmesser von 20 cm. Für 14×14-cm-Pfosten oder Torpfosten, die höhere Seitenkräfte aufnehmen, 25–30 cm Durchmesser verwenden.\n\nIn Deutschland muss die Fundamenttiefe die frostfreie Tiefe erreichen — je nach Region 60–120 cm. Tragende Pfosten für Terrassen, Pergolen und Carports müssen immer frostfrei gegründet werden.\n\nFertigbeton (z. B. Sakret Schnellbeton oder quick-mix Blitzbeton) ist das beliebteste Produkt für Pfostenlöcher. Ein 25-kg-Sack ergibt ca. 12 Liter (0,012 m³), ein 40-kg-Sack ca. 20 Liter (0,02 m³). Für große Projekte sind 40-kg-Säcke wirtschaftlicher bei ca. 5–7 EUR pro Sack gegenüber 3–5 EUR für 25-kg-Säcke.\n\nVor dem Betonieren 10–15 cm Kies als Drainageschicht in das Loch geben. Den Beton leicht über das Gelände hochziehen und vom Pfosten weg abschrägen, damit Wasser abfließt.",
+  nextSteps: [
+    { label: "Terrassen-Punktfundament-Rechner", href: "/calculators/outdoor/deck-footing-calculator/" },
+    { label: "Kies-Rechner", href: "/calculators/foundation/gravel-calculator/" },
+    { label: "Beton-Rechner", href: "/calculators/foundation/concrete-calculator/" },
+  ],
+  installationTips: [
+    "Löcher 3- bis 4-mal so breit wie der Pfosten graben — 20 cm Loch für 9×9-cm-Pfosten.",
+    "10–15 cm Kies als Drainageschicht auf den Lochboden geben.",
+    "Pfosten mit Wasserwaage lotrecht ausrichten und mit Latten abstützen, bevor Beton eingefüllt wird.",
+    "Beton 2–3 cm über Gelände hochziehen und vom Pfosten weg abschrägen.",
+    "Mindestens 24–48 Stunden aushärten lassen, bevor Zaunlatten oder Beschläge montiert werden.",
+  ],
+  commonMistakes: [
+    "Pfosten zu flach setzen — Zaunpfosten müssen mindestens ein Drittel der Gesamtlänge im Boden stehen; tragende Pfosten unter die Frosttiefe.",
+    "Drainageschicht aus Kies vergessen — ohne Drainage sammelt sich Wasser am Pfostenfuß und beschleunigt die Holzfäule.",
+    "Pfosten nicht lotrecht ausrichten vor dem Aushärten des Betons — ein schiefer Pfosten lässt sich nach dem Aushärten nur durch Herausbrechen korrigieren.",
+    "Beton unter Geländeoberkante gießen — der Beton sollte über dem Boden enden, damit kein Wasser am Pfosten steht.",
+    "Zu kleinen Lochdurchmesser verwenden — zu wenig Beton um den Pfosten kann Seitenkräfte durch Wind oder Torbetrieb nicht aufnehmen.",
+  ],
+  faqs: [
+    { question: "Wie viel Beton brauche ich für einen Zaunpfosten?", answer: "Ein 9×9-cm-Zaunpfosten in einem 20-cm-Loch bei 60 cm Tiefe benötigt ca. 14 Liter Beton — etwa 1 Sack à 40 kg oder 2 Säcke à 25 kg pro Pfosten. Für einen 14×14-cm-Pfosten in einem 25-cm-Loch bei 80 cm Tiefe sind ca. 30 Liter nötig." },
+    { question: "Wie tief muss ein Zaunpfostenloch sein?", answer: "Die Faustregel lautet: ein Drittel der Gesamtpfostenlänge. Für einen 1,80-m-Zaun mit 2,40-m-Pfosten: 60–80 cm tief. Tor- und Eckpfosten 10 cm tiefer setzen. In Frostgebieten mindestens bis zur frostfreien Tiefe (60–120 cm je nach Region)." },
+    { question: "Wie viele Säcke Beton pro Zaunpfosten?", answer: "Für einen 9×9-cm-Pfosten in einem 20-cm-Loch bei 60 cm Tiefe: 1–2 Säcke à 25 kg oder 1 Sack à 40 kg. Bei tieferen Löchern (80 cm) 2–3 Säcke à 25 kg. Schnellbeton kann trocken ins Loch geschüttet und mit Wasser übergossen werden." },
+    { question: "Kann ich Schnellbeton für Pfostenlöcher verwenden?", answer: "Ja — Schnellbeton (z. B. Sakret Schnellbeton) ist ideal. Er bindet in 20–40 Minuten ab. Trockenen Beton um den Pfosten schütten, Wasser zugeben, lotrecht halten. Nach ca. 4 Stunden voll belastbar." },
+    { question: "Wie berechne ich den Beton für Pfostenlöcher?", answer: "Pfostenlöcher sind Zylinder: Volumen = π × r² × Tiefe. Alle Maße in Meter umrechnen. Beispiel: 25 cm Durchmesser, 80 cm tief: r = 0,125 m, V = 3,14 × 0,125² × 0,8 = 0,039 m³ = 39 Liter. Ein 25-kg-Sack ergibt ca. 12 Liter." },
+    { question: "Welche Lochgröße für einen Briefkastenpfosten?", answer: "Ein Briefkastenpfosten benötigt ein 20–25-cm-Loch, 60 cm tief. KDI-Pfosten 9×9 cm verwenden und in Beton mit Kiesdrainage setzen. Für gemauerte Briefkastenanlagen ein größeres 30-cm-Loch bei 80 cm Tiefe verwenden." },
+  ],
+};
+
 // ─── REGISTRY MAP ─────────────────────────────────────────────────────────────
 
 export const registryDE: Record<string, Record<string, CalculatorSEOContent>> = {
@@ -1435,6 +1573,8 @@ export const registryDE: Record<string, Record<string, CalculatorSEOContent>> = 
     "concrete-steps-calculator": concreteStepsCalculator,
     "gravel-calculator": gravelCalculator,
     "driveway-gravel-calculator": drivewayGravelCalculator,
+    "block-fill-calculator": blockFillCalculator,
+    "mortar-mix-calculator": mortarMixCalculator,
   },
   "floor-framing": {
     "rim-joist-calculator": rimJoistCalculator,
@@ -1492,5 +1632,6 @@ export const registryDE: Record<string, Record<string, CalculatorSEOContent>> = 
     "deck-footing-calculator": deckFootingCalculatorDE,
     "deck-railing-calculator": deckRailingCalculatorDE,
     "deck-stair-calculator": deckStairCalculatorDE,
+    "post-hole-calculator": postHoleCalculatorDE,
   },
 };

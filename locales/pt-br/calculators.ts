@@ -103,6 +103,22 @@ export const categories: CategoryMeta[] = [
         category: "Fundação",
         categorySlug: "foundation",
       },
+      {
+        slug: "block-fill-calculator",
+        title: "Calculadora de Preenchimento de Blocos",
+        description:
+          "Calculadora de preenchimento de blocos — quanto concreto para preencher blocos de concreto? Ferramenta gratuita para blocos de 14, 19 e 29 cm. Metros cúbicos e sacos na hora.",
+        category: "Fundação",
+        categorySlug: "foundation",
+      },
+      {
+        slug: "mortar-mix-calculator",
+        title: "Calculadora de Argamassa",
+        description:
+          "Calculadora de argamassa — ferramenta gratuita para estimar sacos de argamassa para bloco, tijolo e pedra. Tipos N, S e M com opções de espessura de junta.",
+        category: "Fundação",
+        categorySlug: "foundation",
+      },
     ],
   },
   {
@@ -492,6 +508,14 @@ export const categories: CategoryMeta[] = [
         title: "Calculadora de Escada para Deck",
         description:
           "Calculadora de escada para deck: Quantos degraus e longarinas? Ferramenta grátis — insira a altura para obter degraus, longarinas e tábuas.",
+        category: "Áreas Externas",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "post-hole-calculator",
+        title: "Calculadora de Buracos para Postes",
+        description:
+          "Calculadora de buracos para postes — quanto concreto para postes de cerca? Ferramenta grátis para qualquer tamanho de buraco. Quantidade exata de sacos de 25 kg e 50 kg.",
         category: "Áreas Externas",
         categorySlug: "outdoor",
       },

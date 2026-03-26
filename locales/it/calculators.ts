@@ -87,6 +87,22 @@ export const categories: CategoryMeta[] = [
         category: "Fondazioni",
         categorySlug: "foundation",
       },
+      {
+        slug: "block-fill-calculator",
+        title: "Calcolatore Riempimento Blocchi",
+        description:
+          "Calcolatore riempimento blocchi \u2014 quanto calcestruzzo per riempire blocchi in cemento? Strumento gratuito per blocchi da 20, 25 e 30 cm. Metri cubi e numero sacchi in un attimo.",
+        category: "Fondazioni",
+        categorySlug: "foundation",
+      },
+      {
+        slug: "mortar-mix-calculator",
+        title: "Calcolatore Malta da Muratura",
+        description:
+          "Calcolatore malta da muratura \u2014 strumento gratuito per stimare sacchi di malta per blocchi, mattoni e pietra. Tipi M2, M5 e M10 con opzioni di spessore giunto.",
+        category: "Fondazioni",
+        categorySlug: "foundation",
+      },
     ],
   },
   {
@@ -238,6 +254,14 @@ export const categories: CategoryMeta[] = [
         title: "Calcolatore Scale Terrazza",
         description:
           "Calcolatore scale terrazza: quanti gradini e cosciali? Strumento gratuito \u2014 inserisca l\u2019altezza della terrazza per conteggio gradini, cosciali e tavole pedata.",
+        category: "Esterni",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "post-hole-calculator",
+        title: "Calcolatore Buche per Pali",
+        description:
+          "Calcolatore buche per pali — quanto calcestruzzo per i pali della recinzione? Strumento gratuito per qualsiasi dimensione. Numero esatto di sacchi da 25 kg e 40 kg.",
         category: "Esterni",
         categorySlug: "outdoor",
       },

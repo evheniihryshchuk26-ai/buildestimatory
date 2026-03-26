@@ -605,6 +605,105 @@ export const drivewayGravelCalculator: CalculatorSEOContent = {
   ],
 };
 
+export const mortarMixCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "Esta estimación incluye un 10% de factor de desperdicio. El consumo real de mortero varía según el tamaño de bloque o ladrillo, el perfil de junta, la mano de obra y las condiciones climáticas. Siempre confirma cantidades con tu proveedor de materiales antes de ordenar.",
+  howToUse: [
+    "Calcula el área total del muro en metros cuadrados — multiplica el largo por la altura y resta vanos de puertas y ventanas.",
+    "Selecciona el tipo de mortero — Tipo N para uso general sobre nivel de piso, Tipo S para estructural y bajo nivel, Tipo M para cargas pesadas.",
+    "Elige el espesor de junta — 10 mm (3/8\") es el estándar para la mayoría de trabajos con bloque y ladrillo.",
+    "Haz clic en Calcular para obtener el número de sacos premezclados y las cantidades para mezclar desde cero con cemento portland y arena.",
+  ],
+  materialInfo:
+    "El mortero es el material de unión utilizado entre bloques, ladrillos y unidades de piedra en la construcción de mampostería. Se compone de cemento portland, cal hidratada, arena y agua, mezclados hasta alcanzar una consistencia trabajable que permite a los albañiles colocar las piezas de manera eficiente.\n\nLos tres tipos de mortero más comunes son Tipo N, Tipo S y Tipo M, clasificados por la norma ASTM C270. El Tipo N (52 kg/cm² de resistencia a la compresión) es el mortero de uso general más utilizado para muros sobre nivel de piso, chimeneas y divisiones no portantes. El Tipo S (126 kg/cm²) se requiere para muros estructurales, muros de cimentación bajo nivel de piso, muros de contención y cualquier mampostería en contacto con el suelo. El Tipo M (175 kg/cm²) proporciona la mayor resistencia a la compresión.\n\nEl mortero premezclado viene en sacos de 25 kg y 40 kg. Un saco de 25 kg rinde aproximadamente 14 litros de mortero y cubre alrededor de 10 bloques estándar (20×20×40 cm) con juntas de 10 mm. Para proyectos grandes, mezclar desde cero con cemento portland, cal hidratada y arena de río es más económico.\n\nLas marcas más comunes en México y Latinoamérica incluyen Holcim, CEMEX, Apasco y Moctezuma. Los precios del saco de mortero premezclado oscilan entre $80 y $150 MXN (25 kg). La arena de río para mortero cuesta entre $250 y $400 MXN por metro cúbico. Proveedores como Construrama, materiales locales y Home Depot pueden suministrar todos los insumos necesarios.",
+  nextSteps: [
+    { label: "Calculadora de Concreto", href: "/calculators/foundation/concrete-calculator/" },
+    { label: "Calculadora de Relleno de Bloques", href: "/calculators/foundation/block-fill-calculator/" },
+    { label: "Calculadora de Zapata de Concreto", href: "/calculators/foundation/concrete-footing-calculator/" },
+  ],
+  installationTips: [
+    "Mezcla solo la cantidad de mortero que puedas usar en 90 minutos — el mortero comienza a fraguar y pierde trabajabilidad después de ese periodo.",
+    "Humedece los bloques o ladrillos antes de colocarlos para evitar que absorban el agua del mortero, lo que causa uniones débiles.",
+    "Mantén un espesor de junta consistente usando hilo de albañil y verificando con nivel cada 3 a 4 hiladas.",
+    "Raspa las juntas cuando el mortero tenga firmeza de huella digital — raspar muy temprano embarra la superficie, y muy tarde impide la compactación.",
+    "Cubre la mampostería recién colocada con plástico en condiciones calurosas, secas o ventosas para prevenir pérdida rápida de humedad.",
+  ],
+  commonMistakes: [
+    "Usar el tipo de mortero equivocado — Tipo M en muros sobre nivel es demasiado rígido y se agrieta; Tipo N bajo nivel es muy débil.",
+    "Agregar demasiada agua a la mezcla — el mortero aguado tiene resistencia reducida y mancha la cara de los bloques.",
+    "Re-templar el mortero después de que ha comenzado a fraguar — agregar agua al mortero endurecido reduce permanentemente la resistencia.",
+    "Mezclar un lote demasiado grande — el mortero que permanece en la carretilla más de 2 horas está muerto y debe descartarse.",
+    "No untar los extremos de los bloques o ladrillos — las juntas verticales vacías crean puntos de entrada de agua.",
+  ],
+  faqs: [
+    {
+      question: "¿Cuánto mortero necesito por metro cuadrado?",
+      answer: "Para bloques estándar de 20×20×40 cm con juntas de 10 mm, necesitas aproximadamente 1.5 sacos (25 kg) de mortero premezclado por metro cuadrado de muro. El Tipo S usa un poco más por su mezcla más densa. Juntas más gruesas (13 mm) incrementan el consumo en aproximadamente 30%.",
+    },
+    {
+      question: "¿Cuál es la diferencia entre mortero Tipo N, S y M?",
+      answer: "El Tipo N (52 kg/cm²) es un mortero de uso general para muros sobre nivel, chimeneas y divisiones — es el más trabajable y flexible. El Tipo S (126 kg/cm²) es un mortero estructural requerido para muros bajo nivel, muros de contención y mampostería en contacto con el suelo. El Tipo M (175 kg/cm²) tiene la mayor resistencia a la compresión para cimentaciones de cargas pesadas.",
+    },
+    {
+      question: "¿Cómo mezclo mortero desde cero?",
+      answer: "Para Tipo N, combina 1 parte de cemento portland, 1 parte de cal hidratada y 6 partes de arena de río por volumen. Para Tipo S, usa 1 parte de cemento, 0.5 partes de cal y 4.5 partes de arena. Agrega agua gradualmente hasta que la mezcla alcance una consistencia de mantequilla de cacahuate — debe mantener su forma en la cuchara sin desmoronarse.",
+    },
+    {
+      question: "¿Cuánto tiempo tarda en fraguar el mortero?",
+      answer: "El mortero alcanza el fraguado inicial en 2 a 4 horas y está suficientemente firme para trabajo ligero en 24 horas. El curado completo toma 28 días. Evita aplicar cargas pesadas o rellenar contra muros recién pegados por al menos 7 días. En clima frío (menos de 4°C), el curado se ralentiza dramáticamente.",
+    },
+    {
+      question: "¿Puedo usar mortero en lugar de concreto?",
+      answer: "No. El mortero y el concreto son productos diferentes. El mortero está diseñado para unir piezas de mampostería y es intencionalmente más débil y flexible que el concreto. No contiene grava. El concreto contiene grava y está diseñado para losas, zapatas y columnas. Usar mortero donde se requiere concreto resultará en falla estructural.",
+    },
+    {
+      question: "¿Cuántos bloques cubre un saco de mortero?",
+      answer: "Un saco de 25 kg de mortero premezclado rinde para aproximadamente 10 bloques estándar (20×20×40 cm) con juntas de 10 mm, o unos 25 ladrillos con juntas de 10 mm. Un saco de 40 kg cubre aproximadamente 16 bloques o 40 ladrillos. El rendimiento real varía según el espesor de junta y el desperdicio.",
+    },
+  ],
+};
+
+export const blockFillCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "Esta estimación incluye un 10% de factor de desperdicio. El volumen real de relleno varía según el fabricante del bloque, la geometría del núcleo y la consistencia del mortero. Siempre verifica las dimensiones del núcleo con la ficha técnica del producto antes de ordenar.",
+  howToUse: [
+    "Cuente el número total de bloques de concreto que necesitan ser rellenados — incluya todas las hiladas y secciones de muro.",
+    "Seleccione el tamaño del bloque: 20 cm es estándar residencial, 25 cm y 30 cm para muros más altos o de carga.",
+    "Elija el tipo de relleno: concreto/grout para rellenos estructurales, vermiculita para aislamiento, espuma para rendimiento térmico.",
+    "Haga clic en Calcular para obtener metros cúbicos y número de sacos.",
+  ],
+  materialInfo:
+    "El relleno de bloques (también llamado relleno de núcleos o inyección de grout) es el proceso de llenar los huecos de los bloques de concreto (CMU) con concreto, grout, vermiculita o espuma aislante. En Latinoamérica y España, la construcción con bloques de concreto sigue las normas NTC 4026 (Colombia), NMX-C-404 (México), IRAM 11561 (Argentina) y UNE-EN 771-3 (España), según la jurisdicción.\n\nEl relleno estructural utiliza un grout fluido (típicamente f'c 140 a 210 kg/cm²) que fluye en los núcleos y alrededor del acero de refuerzo colocado dentro del muro. Los reglamentos de construcción exigen núcleos rellenos a intervalos específicos — generalmente cada 1.20 m horizontalmente y en todas las esquinas, jambas y dalas.\n\nLa colocación del acero de refuerzo es crítica para la integridad estructural. Las varillas verticales (3/8\" o 1/2\" / No. 3 o No. 4) se anclan en la cimentación y se extienden hacia arriba a través de los núcleos a rellenar. El refuerzo horizontal va por las dalas de cerramiento en la parte superior del muro y en hiladas intermedias según la especificación del ingeniero. Todos los núcleos con grout deben tener acero — rellenar núcleos vacíos sin refuerzo no cumple los requisitos estructurales.\n\nPara aplicaciones no estructurales, el relleno suelto de vermiculita o perlita proporciona aislamiento moderado y se vierte seco en los núcleos. La espuma de poliuretano inyectada ofrece valores R más altos pero cuesta significativamente más y requiere instalación profesional. Los bloques estándar de 20 cm tienen dos núcleos que producen aproximadamente 0.007 metros cúbicos de relleno por bloque.\n\nEspere pagar de $1,500 a $2,500 MXN por metro cúbico de grout premezclado, o de $80 a $120 MXN por saco de 40 kg de concreto premezclado para proyectos pequeños. Siempre ordene 10% más para asentamiento, derrame y variaciones en el tamaño de los núcleos.",
+  nextSteps: [
+    { label: "Calculadora de Concreto", href: "/calculators/foundation/concrete-calculator/" },
+    { label: "Calculadora de Zapata", href: "/calculators/foundation/concrete-footing-calculator/" },
+    { label: "Calculadora de Grava", href: "/calculators/foundation/gravel-calculator/" },
+  ],
+  installationTips: [
+    "Humedezca los núcleos de los bloques antes de verter el grout — los bloques secos absorben agua de la mezcla y debilitan el relleno.",
+    "Vierta el grout en etapas de no más de 1.20 metros a la vez, luego consolide con vibrador o varilla.",
+    "Use grout fino (agregado máximo de 10 mm) para que fluya libremente por los núcleos sin crear puentes.",
+    "Coloque el acero de refuerzo vertical antes de colocar los bloques y asegúrelo a plomo — no intente insertar varillas en núcleos ya rellenos.",
+    "Instale bloques de limpieza en la base de muros altos para inspeccionar los núcleos antes del relleno.",
+    "Rellene completamente las dalas y vibre el grout para eliminar vacíos alrededor del acero horizontal.",
+  ],
+  commonMistakes: [
+    "Rellenar todos los núcleos de un muro alto de una vez — la presión del grout puede reventar las hiladas inferiores. Limite las etapas a 1.20 m.",
+    "Omitir acero de refuerzo en los núcleos rellenos — los núcleos sin acero ofrecen poco valor estructural.",
+    "Usar concreto estándar en vez de grout fino — el agregado grueso se atora en la abertura del núcleo y crea vacíos.",
+    "No consolidar el grout con vibrador o varilla — las bolsas de aire reducen la resistencia de adherencia hasta un 50%.",
+    "Rellenar núcleos en temperaturas de congelación — el grout debe fraguar por encima de 5°C durante al menos 48 horas.",
+  ],
+  faqs: [
+    { question: "¿Cuánto concreto necesito para rellenar bloques de concreto?", answer: "Un bloque estándar de 20 cm requiere aproximadamente 0.007 m³ de grout por bloque. Para 100 bloques, necesita unos 0.77 m³ incluyendo 10% de desperdicio. Ingrese su cantidad de bloques y tamaño arriba para una estimación instantánea con conteo de sacos." },
+    { question: "¿Cuántos sacos de concreto de 40 kg para rellenar un bloque?", answer: "Un saco de concreto de 40 kg rellena aproximadamente 2 bloques estándar de 20 cm. Para un muro de 100 bloques, necesita unos 55 sacos. Para bloques de 30 cm, un saco rellena solo 1.2 bloques por el mayor volumen del núcleo. Siempre compre 10% extra." },
+    { question: "¿Todos los núcleos de bloques deben rellenarse?", answer: "No — los reglamentos solo exigen rellenar núcleos que contienen acero de refuerzo o que son parte de una dala. Típicamente, los núcleos se rellenan cada 1.20 m horizontalmente y en esquinas, jambas de puertas y ventanas, y la dala superior. En zonas sísmicas, puede requerirse rellenar todos los núcleos." },
+    { question: "¿Cuál es la diferencia entre grout y concreto para relleno de bloques?", answer: "El grout es una mezcla fluida de concreto con agregado pequeño (máximo 10 mm) y mayor contenido de agua, diseñada para fluir en los estrechos núcleos de los bloques. El concreto estándar tiene agregados más grandes que pueden atascarse en los núcleos creando vacíos. Use siempre grout fino o un producto premezclado para relleno de bloques." },
+    { question: "¿Puedo rellenar bloques con espuma aislante en vez de concreto?", answer: "Sí, para muros no estructurales donde el reglamento lo permita. La espuma de poliuretano proporciona excelente aislamiento térmico y resistencia a la humedad. La vermiculita es más económica pero con menor rendimiento. Ninguna proporciona resistencia estructural — si se requiere acero de refuerzo, esos núcleos deben rellenarse con grout." },
+    { question: "¿Cuántos metros cúbicos de grout para un muro de bloques?", answer: "Multiplique los bloques a rellenar por el volumen del núcleo: 0.007 m³ por bloque de 20 cm, 0.009 m³ por bloque de 25 cm o 0.011 m³ por bloque de 30 cm. Un muro típico de cimentación de 20 cm con 400 bloques y relleno completo necesita unos 3.1 m³ de grout incluyendo 10% de desperdicio." },
+  ],
+};
+
 // ─── FLOOR FRAMING ───────────────────────────────────────────────────────────
 
 export const rimJoistCalculator: CalculatorSEOContent = {
@@ -2896,6 +2995,45 @@ const deckStairCalculatorES: CalculatorSEOContent = {
   ],
 };
 
+export const postHoleCalculatorES: CalculatorSEOContent = {
+  disclaimer: "Volumen de concreto estimado para hoyos cilíndricos. El consumo real puede variar según condiciones del suelo y tamaño del poste.",
+  howToUse: [
+    "Ingrese el diámetro del hoyo en pulgadas — 20 cm para postes de 10×10 cm, 25–30 cm para postes de 15×15 cm.",
+    "Ingrese la profundidad del hoyo en pulgadas — postes de cerca: 60–80 cm, postes estructurales: 80–120 cm.",
+    "Ingrese el número total de hoyos.",
+    "Haga clic en Calcular para obtener volumen por hoyo, volumen total y cantidad de sacos.",
+  ],
+  materialInfo:
+    "Los hoyos para postes son excavaciones cilíndricas rellenadas con concreto para anclar postes de cercas, buzones, soportes de terrazas, letreros, pérgolas y otras estructuras exteriores. El concreto envuelve la base del poste y transfiere las cargas al suelo circundante, evitando que el poste se mueva, incline o levante por acción del viento, heladas o fuerzas laterales.\n\nPara postes de cerca, la regla general es enterrar un tercio de la longitud total del poste. Una cerca de 1,80 m con postes de 2,40 m debe tener 60–80 cm de poste enterrado en concreto. Para postes de 10×10 cm, un hoyo de 20 cm de diámetro es suficiente. Para postes de 15×15 cm o postes de portón que soportan mayores fuerzas laterales, usar hoyos de 25–30 cm.\n\nEl concreto premezclado en sacos de 25 kg y 50 kg es el producto más usado para hoyos de postes en Latinoamérica. Un saco de 25 kg rinde aproximadamente 12 litros, un saco de 50 kg rinde aproximadamente 24 litros. Para proyectos grandes, los sacos de 50 kg son más económicos a $80–$120 MXN por saco.\n\nAntes de verter el concreto, agregar 10–15 cm de grava en el fondo del hoyo para drenaje. Esto evita que el agua se acumule en la base del poste y acelere la pudrición de la madera. Coronar el concreto ligeramente sobre el nivel del terreno inclinándolo para que el agua escurra.",
+  nextSteps: [
+    { label: "Calculadora de Cimentación para Deck", href: "/calculators/outdoor/deck-footing-calculator/" },
+    { label: "Calculadora de Grava", href: "/calculators/foundation/gravel-calculator/" },
+    { label: "Calculadora de Concreto", href: "/calculators/foundation/concrete-calculator/" },
+  ],
+  installationTips: [
+    "Excavar hoyos 3 a 4 veces el ancho del poste — 20 cm para un poste de 10×10 cm.",
+    "Agregar 10–15 cm de grava al fondo del hoyo para drenaje antes de colocar el poste.",
+    "Aplomar el poste con nivel en dos caras adyacentes y apuntalarlo con tablones antes de verter el concreto.",
+    "Coronar el concreto 2–3 cm sobre el nivel del terreno, inclinando hacia afuera del poste.",
+    "Esperar al menos 24–48 horas antes de instalar malla, tablones o cargas al poste.",
+  ],
+  commonMistakes: [
+    "Colocar postes poco profundos — los postes de cerca deben enterrarse al menos un tercio de su longitud; los postes estructurales deben llegar a suelo firme.",
+    "Omitir la cama de grava — sin drenaje, el agua se acumula en la base y pudre la madera rápidamente.",
+    "No aplomar el poste antes de que fragüe el concreto — corregir un poste inclinado requiere demoler el concreto.",
+    "Verter el concreto por debajo del nivel del terreno — debe coronarse por encima para evitar encharcamiento.",
+    "Usar un diámetro de hoyo demasiado pequeño — poco concreto alrededor del poste no resiste fuerzas laterales del viento o portones.",
+  ],
+  faqs: [
+    { question: "¿Cuánto concreto necesito para un poste de cerca?", answer: "Un poste de 10×10 cm en un hoyo de 20 cm de diámetro a 60 cm de profundidad requiere aproximadamente 14 litros de concreto — alrededor de 1 saco de 50 kg o 2 sacos de 25 kg por poste." },
+    { question: "¿Qué tan profundo debe ser el hoyo para un poste de cerca?", answer: "La regla general es enterrar un tercio de la longitud total del poste. Para una cerca de 1,80 m con postes de 2,40 m, excavar hoyos de 60–80 cm. Postes de portón y esquineros 10 cm más profundos." },
+    { question: "¿Cuántos sacos de concreto por poste?", answer: "Para un poste de 10×10 cm en hoyo de 20 cm a 60 cm: 1–2 sacos de 25 kg o 1 saco de 50 kg. Para hoyos más profundos (80 cm), 2–3 sacos de 25 kg por poste." },
+    { question: "¿Puedo usar concreto de fraguado rápido para postes?", answer: "Sí — el concreto de fraguado rápido es ideal para postes. Fragua en 20–40 minutos. Vierta la mezcla seca alrededor del poste, agregue agua y sostenga aplomado unos minutos. Alcanza resistencia completa en unas 4 horas." },
+    { question: "¿Cómo calculo el concreto para hoyos de postes?", answer: "Los hoyos son cilindros: volumen = π × r² × profundidad. Convertir cm a metros. Ejemplo: 25 cm diámetro, 80 cm profundidad: r = 0,125 m, V = 3,14 × 0,125² × 0,8 = 0,039 m³ = 39 litros." },
+    { question: "¿Qué tamaño de hoyo para un poste de portón?", answer: "Un poste de portón necesita un hoyo de 25–30 cm de diámetro a 80–100 cm de profundidad. Los portones ejercen fuerza lateral significativa. Usar postes de 15×15 cm mínimo para portones sencillos." },
+  ],
+};
+
 // ─── REGISTRY MAP ─────────────────────────────────────────────────────────────
 
 export const registryES: Record<string, Record<string, CalculatorSEOContent>> = {
@@ -2910,6 +3048,8 @@ export const registryES: Record<string, Record<string, CalculatorSEOContent>> = 
     "concrete-steps-calculator": concreteStepsCalculator,
     "gravel-calculator": gravelCalculator,
     "driveway-gravel-calculator": drivewayGravelCalculator,
+    "mortar-mix-calculator": mortarMixCalculator,
+    "block-fill-calculator": blockFillCalculator,
   },
   "floor-framing": {
     "rim-joist-calculator": rimJoistCalculator,
@@ -2967,5 +3107,6 @@ export const registryES: Record<string, Record<string, CalculatorSEOContent>> = 
     "deck-footing-calculator": deckFootingCalculatorES,
     "deck-railing-calculator": deckRailingCalculatorES,
     "deck-stair-calculator": deckStairCalculatorES,
+    "post-hole-calculator": postHoleCalculatorES,
   },
 };

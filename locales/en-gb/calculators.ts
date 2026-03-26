@@ -17,6 +17,8 @@ export const categories: CategoryMeta[] = [
       { slug: "concrete-steps-calculator", title: "Concrete Steps Calculator", description: "Concrete steps calculator: How many cubic metres for stairs? Free tool \u2014 enter width, rise, run & step count for instant estimate.", category: "Foundation", categorySlug: "foundation" },
       { slug: "gravel-calculator", title: "Gravel Calculator", description: "How much gravel do I need? Free calculator for any area \u2014 cubic metres, tonnes, and cost estimate with 10% wastage factor.", category: "Foundation", categorySlug: "foundation" },
       { slug: "driveway-gravel-calculator", title: "Driveway Gravel Calculator", description: "Driveway gravel calculator: Estimate tonnes and cost by type \u2014 crushed stone, pea gravel, MOT Type 1, or decomposed granite with delivery.", category: "Foundation", categorySlug: "foundation" },
+      { slug: "block-fill-calculator", title: "Block Fill Calculator", description: "Block fill calculator \u2014 how much concrete to fill concrete blocks? Free tool for 100 mm, 140 mm & 215 mm blocks. Get cubic metres and bag count instantly.", category: "Foundation", categorySlug: "foundation" },
+      { slug: "mortar-mix-calculator", title: "Mortar Mix Calculator", description: "Mortar mix calculator \u2014 free tool to estimate bags of mortar for blockwork, brickwork & stone. Covers designations M2, M4 & M6 with joint thickness options.", category: "Foundation", categorySlug: "foundation" },
     ],
   },
   {
@@ -122,6 +124,7 @@ export const categories: CategoryMeta[] = [
       { slug: "deck-footing-calculator", title: "Deck Footing Calculator", description: "Deck footing calculator: How many concrete piers for my deck? Free tool \u2014 gives footing count, post layout, and beam spacing.", category: "Outdoor", categorySlug: "outdoor" },
       { slug: "deck-railing-calculator", title: "Deck Railing Calculator", description: "How many railing posts and balusters do I need? Free deck railing calculator \u2014 gives post count, baluster total, and rail linear metres.", category: "Outdoor", categorySlug: "outdoor" },
       { slug: "deck-stair-calculator", title: "Deck Stair Calculator", description: "Deck stair calculator: How many steps and stringers? Free tool \u2014 enter deck height for step count, stringer quantity, and tread boards.", category: "Outdoor", categorySlug: "outdoor" },
+      { slug: "post-hole-calculator", title: "Post Hole Calculator", description: "Post hole calculator \u2014 how much concrete for fence posts? Free tool for any hole size. Get exact bag count for 25 kg & 40 kg postcrete bags.", category: "Outdoor", categorySlug: "outdoor" },
     ],
   },
 ];

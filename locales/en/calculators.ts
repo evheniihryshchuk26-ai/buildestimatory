@@ -87,6 +87,22 @@ export const categories: CategoryMeta[] = [
         category: "Foundation",
         categorySlug: "foundation",
       },
+      {
+        slug: "block-fill-calculator",
+        title: "Block Fill Calculator",
+        description:
+          "Block fill calculator — how much concrete to fill CMU blocks? Free tool for 8\", 10\" & 12\" blocks. Get cubic yards and bag count instantly.",
+        category: "Foundation",
+        categorySlug: "foundation",
+      },
+      {
+        slug: "mortar-mix-calculator",
+        title: "Mortar Mix Calculator",
+        description:
+          "Mortar mix calculator — free tool to estimate bags of mortar for block, brick & stone. Covers Type N, S & M with joint thickness options.",
+        category: "Foundation",
+        categorySlug: "foundation",
+      },
     ],
   },
   {
@@ -238,6 +254,14 @@ export const categories: CategoryMeta[] = [
         title: "Deck Stair Calculator",
         description:
           "Deck stair calculator: How many steps and stringers? Free tool — enter deck height for step count, stringer quantity, and tread boards.",
+        category: "Outdoor",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "post-hole-calculator",
+        title: "Post Hole Calculator",
+        description:
+          "Post hole calculator — how much concrete for fence posts? Free tool for any hole size. Get exact bag count for 50 lb & 80 lb Quikrete bags.",
         category: "Outdoor",
         categorySlug: "outdoor",
       },

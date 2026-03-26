@@ -199,6 +199,111 @@ export interface ConcreteStepsResult {
   bags80lb: number;
 }
 
+// ─── BLOCK FILL ─────────────────────────────────────────────────────────────
+
+export interface BlockFillResult {
+  cubicYards: number;
+  cubicFeet: number;
+  bags80lb: number;
+  label: string;
+}
+
+const BLOCK_CORE_VOLUME_CY: Record<string, number> = {
+  "8 inch": 0.009,
+  "10 inch": 0.012,
+  "12 inch": 0.015,
+};
+
+export function calculateBlockFill(
+  numberOfBlocks: number,
+  blockSize: string,
+  fillType: string,
+): BlockFillResult {
+  const coreVolume = BLOCK_CORE_VOLUME_CY[blockSize] ?? 0.009;
+  const cubicYards = numberOfBlocks * coreVolume;
+  const cubicYardsWithWaste = cubicYards * 1.1; // 10% waste
+  const cubicFeet = cubicYardsWithWaste * 27;
+  const bags80lb = Math.ceil(cubicFeet / 0.6); // 80lb bag covers 0.6 cu ft
+  return {
+    cubicYards: Math.ceil(cubicYardsWithWaste * 10) / 10,
+    cubicFeet: Math.round(cubicFeet * 10) / 10,
+    bags80lb,
+    label: `${Math.ceil(cubicYardsWithWaste * 10) / 10} cubic yards of ${fillType} (includes 10% waste)`,
+  };
+}
+
+// ─── MORTAR MIX ─────────────────────────────────────────────────────────────
+
+export interface MortarMixResult {
+  bags60lb: number;
+  bags80lb: number;
+  portlandCementBags: number;
+  sandCubicFeet: number;
+  mortarCubicFeet: number;
+}
+
+const MORTAR_BAGS_PER_100_SQFT: Record<string, number> = {
+  "Type N": 7,
+  "Type S": 7.5,
+  "Type M": 8,
+};
+
+const MORTAR_JOINT_FACTOR: Record<string, number> = {
+  "0.25": 0.7,
+  "0.375": 1.0,
+  "0.5": 1.3,
+  "0.625": 1.6,
+  "0.75": 2.0,
+};
+
+export function calculateMortarMix(
+  areaSqFt: number,
+  mortarType: string,
+  jointThicknessInches: number,
+): MortarMixResult {
+  const baseBagsPer100 = MORTAR_BAGS_PER_100_SQFT[mortarType] ?? 7;
+  const jointKey = jointThicknessInches.toString();
+  const jointFactor = MORTAR_JOINT_FACTOR[jointKey] ?? 1.0;
+
+  // 60lb bag yields ~0.5 cubic feet of mortar
+  // 80lb bag yields ~0.667 cubic feet of mortar
+  const rawBags60 = (areaSqFt / 100) * baseBagsPer100 * jointFactor;
+  const bags60lb = Math.ceil(rawBags60 * 1.1); // 10% waste
+  const bags80lb = Math.ceil(rawBags60 * 0.75 * 1.1); // 80lb does ~33% more
+
+  // Volume of mortar needed
+  const mortarCubicFeet = Math.round(rawBags60 * 0.5 * 1.1 * 10) / 10;
+
+  // Mixing from scratch: 1 part portland cement to 3 parts sand (Type N)
+  // Type S: 1:0.5:4 (cement:lime:sand), Type M: 1:0.25:3 (cement:lime:sand)
+  const cementRatio: Record<string, number> = {
+    "Type N": 1 / 4,
+    "Type S": 1 / 4.5,
+    "Type M": 1 / 3.25,
+  };
+  const sandRatio: Record<string, number> = {
+    "Type N": 3 / 4,
+    "Type S": 4 / 4.5,
+    "Type M": 3 / 3.25,
+  };
+
+  const ratio = cementRatio[mortarType] ?? 0.25;
+  const sRatio = sandRatio[mortarType] ?? 0.75;
+  // 1 bag portland cement (94lb) = 1 cubic foot
+  const portlandCementBags = Math.ceil(mortarCubicFeet * ratio);
+  const sandCubicFeet = Math.round(mortarCubicFeet * sRatio * 10) / 10;
+
+  return {
+    bags60lb,
+    bags80lb,
+    portlandCementBags,
+    sandCubicFeet,
+    mortarCubicFeet,
+  };
+}
+
+// ─── CONCRETE STEPS ─────────────────────────────────────────────────────────
+
 export function calculateConcreteSteps(widthFt: number, riseInches: number, runInches: number, numberOfSteps: number): ConcreteStepsResult {
   const riseFt = riseInches / 12;
   const runFt = runInches / 12;

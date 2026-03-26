@@ -99,6 +99,38 @@ export interface DeckStairResult {
   totalRunInches: number;
 }
 
+export interface PostHoleResult {
+  cubicFeetPerHole: number;
+  totalCubicFeet: number;
+  totalCubicYards: number;
+  bags50lb: number;
+  bags80lb: number;
+}
+
+export function calculatePostHole(
+  holeDiameterInches: number,
+  holeDepthInches: number,
+  numberOfHoles: number
+): PostHoleResult {
+  const radiusFt = holeDiameterInches / 2 / 12;
+  const depthFt = holeDepthInches / 12;
+  const cubicFeetPerHole = Math.PI * radiusFt * radiusFt * depthFt;
+  const totalCubicFeet = cubicFeetPerHole * numberOfHoles;
+  const totalCubicYards = totalCubicFeet / 27;
+
+  // 50 lb bag fills ~0.375 cu ft, 80 lb bag fills ~0.6 cu ft
+  const bags50lb = Math.ceil(totalCubicFeet / 0.375);
+  const bags80lb = Math.ceil(totalCubicFeet / 0.6);
+
+  return {
+    cubicFeetPerHole: Math.round(cubicFeetPerHole * 100) / 100,
+    totalCubicFeet: Math.round(totalCubicFeet * 100) / 100,
+    totalCubicYards: Math.round(totalCubicYards * 100) / 100,
+    bags50lb,
+    bags80lb,
+  };
+}
+
 export function calculateDeckStairs(
   totalRiseInches: number,
   stairWidthFt: number

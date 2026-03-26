@@ -444,6 +444,105 @@ export const drivewayGravelCalculator: CalculatorSEOContent = {
   ],
 };
 
+export const blockFillCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "Questa stima include un fattore di spreco del 10%. Il volume effettivo di riempimento varia in base al produttore del blocco, alla geometria delle cavit\u00e0 e alla consistenza della malta. Verificare sempre le dimensioni delle cavit\u00e0 sulla scheda tecnica del prodotto prima di ordinare.",
+  howToUse: [
+    "Contare il numero totale di blocchi in cemento da riempire \u2014 includere tutti i corsi e le sezioni di muro.",
+    "Selezionare la dimensione del blocco: 20 cm \u00e8 lo standard residenziale, 25 cm e 30 cm per muri pi\u00f9 alti o portanti.",
+    "Scegliere il tipo di riempimento: calcestruzzo/malta per riempimenti strutturali, vermiculite per isolamento, schiuma per prestazioni termiche.",
+    "Fare clic su Calcola per ottenere metri cubi e numero di sacchi.",
+  ],
+  materialInfo:
+    "Il riempimento dei blocchi (\u00e8 il processo di riempimento delle cavit\u00e0 dei blocchi in cemento con calcestruzzo, malta colabile, vermiculite o schiuma isolante. In Italia, la costruzione in muratura di blocchi \u00e8 regolata dall\u2019Eurocodice 6 (UNI EN 1996) e dalle Norme Tecniche per le Costruzioni (NTC 2018, D.M. 17/01/2018), con particolare riferimento al capitolo 4.5 per le costruzioni in muratura.\n\nIl riempimento strutturale utilizza una malta colabile fluida (tipicamente classe C20/25) che fluisce nelle cavit\u00e0 e avvolge le armature posizionate nel muro. Le NTC 2018 e la circolare esplicativa prescrivono cavit\u00e0 riempite in corrispondenza delle armature e dei cordoli orizzontali e verticali. In zona sismica (tutta Italia tranne zona 4), le prescrizioni sono particolarmente stringenti.\n\nIl posizionamento delle armature segue le NTC 2018 e l\u2019Eurocodice 2. Le barre verticali (\u00d810 o \u00d812, acciaio B450C) sono ancorate nella fondazione e risalgono nelle cavit\u00e0 da riempire. Le armature orizzontali sono collocate nei blocchi a cassero (cordoli) in sommit\u00e0 del muro e ai livelli intermedi secondo le prescrizioni del progettista strutturale.\n\nPer applicazioni non strutturali, il riempimento sfuso di vermiculite o perlite offre un isolamento moderato (conducibilit\u00e0 termica circa 0,065 W/mK). La schiuma poliuretanica iniettata offre prestazioni migliori (circa 0,022 W/mK) e aiuta a rispettare i requisiti del Superbonus e del D.Lgs. 192/2005. I blocchi standard da 20 cm hanno due cavit\u00e0 che producono circa 0,007 m\u00b3 di riempimento per blocco.\n\nPrevedere 120-180 EUR al metro cubo per malta colabile pronta all\u2019uso, o 5-8 EUR per sacco da 25 kg di malta premiscelata. La vermiculite costa 15-25 EUR per sacco da 100 litri. Materiali disponibili presso Leroy Merlin, Bricoman, rivendite edili locali e consorzi agrari. Ordinare sempre il 10% in pi\u00f9 per assestamento, perdite e variazioni delle cavit\u00e0.",
+  nextSteps: [
+    { label: "Calcolatore Calcestruzzo", href: "/calculators/foundation/concrete-calculator/" },
+    { label: "Calcolatore Fondazione", href: "/calculators/foundation/concrete-footing-calculator/" },
+    { label: "Calcolatore Ghiaia", href: "/calculators/foundation/gravel-calculator/" },
+  ],
+  installationTips: [
+    "Bagnare le cavit\u00e0 dei blocchi prima di gettare la malta \u2014 i blocchi asciutti assorbono l\u2019acqua dall\u2019impasto indebolendo il riempimento.",
+    "Gettare la malta per strati di massimo 1,20 m alla volta, poi vibrare o picchettare per consolidare.",
+    "Usare malta fine (aggregato max 10 mm) perch\u00e9 fluisca liberamente nelle cavit\u00e0 senza creare ponti.",
+    "Posizionare le armature verticali prima di posare i blocchi e mantenerle a piombo.",
+    "Prevedere blocchi di ispezione alla base di muri alti per verificare le cavit\u00e0 prima del getto.",
+    "Riempire completamente i cordoli e vibrare la malta per eliminare i vuoti attorno alle armature orizzontali.",
+  ],
+  commonMistakes: [
+    "Riempire tutte le cavit\u00e0 di un muro alto in un\u2019unica volta \u2014 la pressione della malta pu\u00f2 far scoppiare i corsi inferiori. Limitare i getti a strati da 1,20 m.",
+    "Omettere le armature nelle cavit\u00e0 riempite \u2014 le cavit\u00e0 senza acciaio offrono scarso valore strutturale.",
+    "Usare calcestruzzo standard invece di malta fine \u2014 gli aggregati grossi si bloccano nelle aperture delle cavit\u00e0 creando vuoti.",
+    "Non consolidare la malta con vibratore o barra \u2014 le sacche d\u2019aria riducono la resistenza di aderenza fino al 50%.",
+    "Riempire le cavit\u00e0 con temperature sotto zero \u2014 la malta deve maturare sopra i 5 \u00b0C per almeno 48 ore.",
+  ],
+  faqs: [
+    { question: "Quanto calcestruzzo serve per riempire i blocchi in cemento?", answer: "Un blocco standard da 20 cm richiede circa 0,007 m\u00b3 di malta colabile. Per 100 blocchi servono circa 0,77 m\u00b3 includendo il 10% di spreco. Inserisca il numero di blocchi e la dimensione qui sopra per una stima istantanea con conteggio sacchi." },
+    { question: "Quanti sacchi di cemento da 25 kg per riempire un blocco?", answer: "Un sacco di malta da 25 kg riempie circa 2 blocchi standard da 20 cm. Per un muro di 100 blocchi servono circa 55 sacchi. Per blocchi da 30 cm, un sacco riempie solo circa 1,2 blocchi per il maggiore volume della cavit\u00e0." },
+    { question: "Bisogna riempire tutte le cavit\u00e0 dei blocchi?", answer: "No \u2014 le NTC 2018 richiedono il riempimento solo delle cavit\u00e0 che contengono armature o che fanno parte di cordoli. In zona sismica (quasi tutta Italia), le prescrizioni possono richiedere il riempimento di tutte le cavit\u00e0." },
+    { question: "Qual \u00e8 la differenza tra malta colabile e calcestruzzo per il riempimento di blocchi?", answer: "La malta colabile \u00e8 una miscela fluida con aggregati piccoli (max 10 mm), progettata per fluire nelle cavit\u00e0 strette senza creare ponti. Il calcestruzzo standard ha aggregati pi\u00f9 grossi che si bloccano nelle cavit\u00e0 creando vuoti." },
+    { question: "Si possono riempire i blocchi con schiuma isolante invece che con calcestruzzo?", answer: "S\u00ec, per muri non portanti dove le normative lo consentono. La schiuma PU iniettata offre eccellenti prestazioni termiche (circa 0,022 W/mK) e aiuta a rispettare i requisiti energetici. La vermiculite \u00e8 pi\u00f9 economica ma meno performante. Nessuna fornisce resistenza strutturale." },
+    { question: "Quanti metri cubi di malta per un muro in blocchi?", answer: "Moltiplichi i blocchi da riempire per il volume della cavit\u00e0: 0,007 m\u00b3 per blocco da 20 cm, 0,009 m\u00b3 per blocco da 25 cm o 0,011 m\u00b3 per blocco da 30 cm. Un muro di fondazione tipico da 20 cm con 400 blocchi e riempimento completo necessita di circa 3,1 m\u00b3 di malta includendo il 10% di spreco." },
+  ],
+};
+
+export const mortarMixCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "Questa stima include un fattore di spreco del 10%. Il consumo effettivo di malta varia in base alla dimensione dei blocchi o mattoni, al profilo del giunto, alla qualità della manodopera e alle condizioni meteorologiche. Confermare sempre le quantità con il fornitore prima di ordinare.",
+  howToUse: [
+    "Calcolare la superficie totale della parete in metri quadrati — moltiplicare la lunghezza per l'altezza e sottrarre le aperture di porte e finestre.",
+    "Selezionare il tipo di malta — M2,5 per muratura non portante, M5 per uso generale portante, M10 per fondazioni e muri controterra.",
+    "Scegliere lo spessore del giunto — 10 mm è lo standard per la maggior parte dei lavori in muratura.",
+    "Cliccare su Calcola per ottenere il numero di sacchi premiscelati e le quantità per miscelare da zero con cemento Portland e sabbia.",
+  ],
+  materialInfo:
+    "La malta è il materiale legante utilizzato tra blocchi, mattoni e pietre nella costruzione in muratura. È composta da cemento Portland, calce idrata, sabbia e acqua, miscelati fino a ottenere una consistenza lavorabile che permette ai muratori di posare gli elementi in modo efficiente.\n\nIn Italia, le malte da muratura sono classificate secondo la norma UNI EN 998-2. Le classi più comuni sono: M2,5 (malta bastarda, resistenza ~2,5 MPa) per muratura non portante e tramezzi, M5 (malta comune, ~5 MPa) per la maggior parte delle applicazioni residenziali inclusi muri portanti, e M10/M15 (malta cementizia, ~10-15 MPa) per fondazioni, muri di sostegno e opere interrate.\n\nLa malta premiscelata è disponibile in sacchi da 25 kg e 30 kg. Un sacco da 25 kg produce circa 14 litri di malta impastata e copre circa 8-10 blocchi standard (20x20x50 cm) con giunti da 10 mm. Per cantieri più grandi, il dosaggio in opera con cemento, calce e sabbia è più economico — un dosaggio comune per malta M5 usa 1 volume di cemento, 0,5 volumi di calce e 4,5 volumi di sabbia.\n\nI marchi più comuni in Italia includono Mapei, Kerakoll, Weber (Saint-Gobain) e Fassa Bortolo. I sacchi di malta (25 kg) costano circa 5-10 EUR nei rivenditori edili (Bricoman, Leroy Merlin, OBI). La sabbia da muratura costa circa 25-40 EUR alla tonnellata. Per la conformità normativa, fare riferimento alle NTC 2018 (Norme Tecniche per le Costruzioni) e alla UNI EN 1996 (Eurocodice 6).",
+  nextSteps: [
+    { label: "Calcolatore Calcestruzzo", href: "/calculators/foundation/concrete-calculator/" },
+    { label: "Calcolatore Riempimento Blocchi", href: "/calculators/foundation/block-fill-calculator/" },
+    { label: "Calcolatore Fondazione a Plinto", href: "/calculators/foundation/concrete-footing-calculator/" },
+  ],
+  installationTips: [
+    "Impastare solo la quantità di malta utilizzabile in 90 minuti — oltre quel tempo inizia a fare presa e perde la lavorabilità.",
+    "Bagnare i blocchi o mattoni prima della posa per evitare che assorbano l'acqua dalla malta, causando giunti deboli.",
+    "Mantenere uno spessore di giunto costante usando il filo da muratore e controllando il piombo ogni 3-4 corsi.",
+    "Stilare i giunti quando la malta è ferma al tatto — troppo presto si sbava, troppo tardi non si compatta correttamente.",
+    "Proteggere la muratura appena posata con teli di plastica in condizioni calde, secche o ventose per prevenire la perdita rapida di umidità.",
+  ],
+  commonMistakes: [
+    "Usare il tipo sbagliato di malta — M10 in muri interni è troppo rigida e si fessura; M2,5 in fondazione è troppo debole.",
+    "Aggiungere troppa acqua all'impasto — la malta troppo liquida ha resistenza ridotta e macchia la faccia dei blocchi.",
+    "Ritempare la malta dopo l'inizio della presa — aggiungere acqua alla malta indurita riduce permanentemente l'aderenza.",
+    "Impastare un quantitativo troppo grande — la malta che resta nella carriola per oltre 2 ore è morta e va scartata.",
+    "Non riempire i giunti verticali — i giunti di testa vuoti creano punti di infiltrazione d'acqua e indeboliscono la parete.",
+  ],
+  faqs: [
+    {
+      question: "Quanta malta serve per metro quadrato?",
+      answer: "Per blocchi standard (20x20x50 cm) con giunti da 10 mm, servono circa 1,5 sacchi (25 kg) di malta premiscelata per metro quadrato di parete. Per mattoni pieni (25x12x5,5 cm), il fabbisogno è di circa 30 litri di malta per m2. Giunti più spessi (15 mm) aumentano il consumo di circa il 50%.",
+    },
+    {
+      question: "Qual è la differenza tra malta M2,5, M5 e M10?",
+      answer: "M2,5 (malta bastarda a calce) è una malta flessibile per tramezzi e muratura non portante. M5 (malta comune) è lo standard per muratura portante residenziale. M10/M15 (malta cementizia) offre la massima resistenza per fondazioni, muri di sostegno e opere interrate.",
+    },
+    {
+      question: "Come si dosa la malta da soli?",
+      answer: "Per malta M5 comune, miscelare 1 volume di cemento Portland, 0,5 volumi di calce idrata e 4,5 volumi di sabbia da muratura. Per M10, usare 1 volume di cemento, 0,25 volumi di calce e 3 volumi di sabbia. Aggiungere acqua gradualmente fino a ottenere una consistenza cremosa che si mantiene sulla cazzuola senza colare.",
+    },
+    {
+      question: "Quanto tempo impiega la malta a indurire?",
+      answer: "La malta raggiunge la presa iniziale in 2-4 ore ed è sufficientemente ferma per lavori leggeri dopo 24 ore. L'indurimento completo richiede 28 giorni. Evitare carichi pesanti o rinterri contro muri appena murati per almeno 7 giorni. Sotto i 5 C, l'indurimento rallenta drasticamente.",
+    },
+    {
+      question: "Si può usare la malta al posto del calcestruzzo?",
+      answer: "No. Malta e calcestruzzo sono prodotti diversi. La malta serve a legare elementi di muratura e non contiene ghiaia. Il calcestruzzo contiene inerti grossi ed è progettato per solette, fondazioni e pilastri. Usare malta dove serve calcestruzzo causerà cedimento strutturale.",
+    },
+    {
+      question: "Quale malta per la pietra naturale?",
+      answer: "Per la pietra naturale, utilizzare una malta bastarda (calce-cemento) dosata a circa 200 kg di cemento e 100 kg di calce per m3 di sabbia. La calce fornisce la flessibilità necessaria per assorbire i movimenti differenziali tra pietre irregolari. Per pietre chiare, una malta a base di cemento bianco evita macchie ed efflorescenze.",
+    },
+  ],
+};
+
 // ─── STRUTTURA SOLAIO ───────────────────────────────────────────────────────
 
 export const rimJoistCalculator: CalculatorSEOContent = {
@@ -2060,6 +2159,45 @@ export const deckStairCalculator: CalculatorSEOContent = {
   ],
 };
 
+export const postHoleCalculator: CalculatorSEOContent = {
+  disclaimer: "Volume di calcestruzzo stimato per buche cilindriche. Il consumo reale pu\u00f2 variare in base al terreno e alle dimensioni del palo.",
+  howToUse: [
+    "Inserire il diametro della buca in pollici \u2014 20 cm per pali 9\u00d79 cm, 25\u201330 cm per pali 14\u00d714 cm.",
+    "Inserire la profondit\u00e0 della buca in pollici \u2014 pali di recinzione: 60\u201380 cm, pali strutturali: 80\u2013120 cm (sotto la linea di gelo).",
+    "Inserire il numero totale di buche.",
+    "Cliccare su Calcola per ottenere volume per buca, volume totale e numero di sacchi.",
+  ],
+  materialInfo:
+    "Le buche per pali sono scavi cilindrici riempiti di calcestruzzo per ancorare i pali di recinzioni, caselle postali, supporti per terrazze, cartelli e pergole. Il calcestruzzo avvolge la base del palo e trasferisce i carichi al terreno circostante, impedendo al palo di spostarsi, inclinarsi o sollevarsi a causa del vento, del gelo o delle forze laterali.\n\nPer i pali di recinzione, la regola generale \u00e8 interrare un terzo della lunghezza totale del palo. Una recinzione di 1,80 m con pali da 2,40 m deve avere 60\u201380 cm di palo annegato nel calcestruzzo. Per pali da 9\u00d79 cm, una buca di 20 cm di diametro \u00e8 sufficiente. Per pali da 14\u00d714 cm o pali di cancello soggetti a forze laterali maggiori, utilizzare buche da 25\u201330 cm.\n\nIn Italia, la profondit\u00e0 antigelo varia da 40 cm (coste meridionali) a 80\u2013100 cm (pianura padana e zone montane). I pali portanti per terrazze, pergole e tettoie devono sempre raggiungere la profondit\u00e0 antigelo secondo le NTC 2018.\n\nIl calcestruzzo premiscelato in sacchi da 25 kg e 40 kg (Mapei, Weber, Kerakoll) \u00e8 il prodotto pi\u00f9 utilizzato. Un sacco da 25 kg produce circa 12 litri, un sacco da 40 kg circa 20 litri. Per grandi progetti, il calcestruzzo preconfezionato da autobetoniera costa 80\u2013130 \u20ac/m\u00b3.\n\nPrima di gettare il calcestruzzo, aggiungere 10\u201315 cm di ghiaia sul fondo della buca per il drenaggio. Sagomare il calcestruzzo leggermente sopra il livello del suolo con pendenza verso l'esterno per far defluire l'acqua piovana.",
+  nextSteps: [
+    { label: "Calcolatore Fondazioni Terrazza", href: "/calculators/outdoor/deck-footing-calculator/" },
+    { label: "Calcolatore Ghiaia", href: "/calculators/foundation/gravel-calculator/" },
+    { label: "Calcolatore Calcestruzzo", href: "/calculators/foundation/concrete-calculator/" },
+  ],
+  installationTips: [
+    "Scavare buche 3\u20134 volte la larghezza del palo \u2014 20 cm per un palo da 9\u00d79 cm.",
+    "Aggiungere 10\u201315 cm di ghiaia compattata sul fondo per il drenaggio.",
+    "Verificare la verticalit\u00e0 del palo su due facce con una livella a bolla e puntellare con listelli prima del getto.",
+    "Sagomare il calcestruzzo 2\u20133 cm sopra il livello del suolo, inclinando verso l'esterno.",
+    "Attendere almeno 24\u201348 ore prima di fissare pannelli, ferramenta o carichi al palo.",
+  ],
+  commonMistakes: [
+    "Pali troppo poco profondi \u2014 i pali di recinzione devono essere interrati almeno un terzo della lunghezza; i pali portanti devono raggiungere la profondit\u00e0 antigelo.",
+    "Dimenticare lo strato di ghiaia \u2014 senza drenaggio, l'acqua ristagna alla base e accelera il marciume del legno.",
+    "Non puntellare il palo in posizione verticale prima della presa del calcestruzzo \u2014 un palo inclinato richiede la demolizione del calcestruzzo per correggerlo.",
+    "Gettare il calcestruzzo sotto il livello del suolo \u2014 la sommit\u00e0 deve sporgere sopra il terreno per evitare ristagni d'acqua.",
+    "Usare un diametro di buca troppo piccolo \u2014 una quantit\u00e0 insufficiente di calcestruzzo non resiste alle forze laterali del vento o del cancello.",
+  ],
+  faqs: [
+    { question: "Quanto calcestruzzo per un palo di recinzione?", answer: "Un palo da 9\u00d79 cm in una buca di 20 cm a 60 cm di profondit\u00e0 richiede circa 14 litri di calcestruzzo \u2014 circa 1 sacco da 40 kg o 2 sacchi da 25 kg per palo." },
+    { question: "Quanto profonda deve essere la buca per un palo?", answer: "Regola generale: un terzo della lunghezza totale del palo. Per una recinzione di 1,80 m con pali da 2,40 m: 60\u201380 cm. Pali di cancello e d'angolo 10 cm pi\u00f9 profondi. In zone fredde raggiungere la profondit\u00e0 antigelo (40\u2013100 cm secondo la zona)." },
+    { question: "Quanti sacchi di calcestruzzo per palo?", answer: "Per un palo da 9\u00d79 cm in buca da 20 cm a 60 cm: 1\u20132 sacchi da 25 kg o 1 sacco da 40 kg. Per buche pi\u00f9 profonde (80 cm), 2\u20133 sacchi da 25 kg per palo." },
+    { question: "Si pu\u00f2 usare calcestruzzo a presa rapida per i pali?", answer: "S\u00ec \u2014 il calcestruzzo a presa rapida \u00e8 ideale. Fa presa in 20\u201340 minuti. Versare la miscela secca attorno al palo, aggiungere acqua, tenere in verticale per qualche minuto. Resistenza completa in circa 4 ore." },
+    { question: "Come si calcola il calcestruzzo per le buche?", answer: "Le buche sono cilindri: volume = \u03c0 \u00d7 r\u00b2 \u00d7 profondit\u00e0. Convertire cm in metri. Esempio: 25 cm di diametro, 80 cm di profondit\u00e0: r = 0,125 m, V = 3,14 \u00d7 0,125\u00b2 \u00d7 0,8 = 0,039 m\u00b3 = 39 litri. Un sacco da 25 kg produce circa 12 litri." },
+    { question: "Quale dimensione di buca per un palo di cancello?", answer: "Un palo di cancello richiede una buca di 25\u201330 cm di diametro a 80\u2013100 cm di profondit\u00e0. I cancelli esercitano forze laterali significative. Usare pali da 14\u00d714 cm minimo per cancelli singoli." },
+  ],
+};
+
 // ─── MAPPA REGISTRO ─────────────────────────────────────────────────────────
 
 export const registryIT: Record<string, Record<string, CalculatorSEOContent>> = {
@@ -2074,6 +2212,8 @@ export const registryIT: Record<string, Record<string, CalculatorSEOContent>> = 
     "concrete-steps-calculator": concreteStepsCalculator,
     "gravel-calculator": gravelCalculator,
     "driveway-gravel-calculator": drivewayGravelCalculator,
+    "block-fill-calculator": blockFillCalculator,
+    "mortar-mix-calculator": mortarMixCalculator,
   },
   "floor-framing": {
     "rim-joist-calculator": rimJoistCalculator,
@@ -2131,5 +2271,6 @@ export const registryIT: Record<string, Record<string, CalculatorSEOContent>> = 
     "deck-footing-calculator": deckFootingCalculator,
     "deck-railing-calculator": deckRailingCalculator,
     "deck-stair-calculator": deckStairCalculator,
+    "post-hole-calculator": postHoleCalculator,
   },
 };

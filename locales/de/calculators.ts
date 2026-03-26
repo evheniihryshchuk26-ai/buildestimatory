@@ -87,6 +87,22 @@ export const categories: CategoryMeta[] = [
         category: "Fundament",
         categorySlug: "foundation",
       },
+      {
+        slug: "block-fill-calculator",
+        title: "Hohlblock-Füllrechner",
+        description:
+          "Hohlblock-Füllrechner — wie viel Beton zum Füllen von Hohlblocksteinen? Kostenloses Tool für 20 cm, 25 cm & 30 cm Blöcke. Kubikmeter und Sackzahl sofort.",
+        category: "Fundament",
+        categorySlug: "foundation",
+      },
+      {
+        slug: "mortar-mix-calculator",
+        title: "Mörtel-Rechner",
+        description:
+          "Mörtel-Rechner — kostenloses Tool zur Berechnung von Mörtelsäcken für Mauerwerk, Klinker & Naturstein. Mörtelgruppen I, II & III mit Fugenstärke-Optionen.",
+        category: "Fundament",
+        categorySlug: "foundation",
+      },
     ],
   },
   {
@@ -238,6 +254,14 @@ export const categories: CategoryMeta[] = [
         title: "Terrassentreppe-Rechner",
         description:
           "Terrassentreppe-Rechner: Wie viele Stufen und Wangen? Kostenloses Tool — Terrassenhöhe eingeben für Stufenzahl, Wangenanzahl und Trittbretter.",
+        category: "Außenbereich",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "post-hole-calculator",
+        title: "Pfostenloch-Rechner",
+        description:
+          "Pfostenloch-Rechner — wie viel Beton für Zaunpfosten? Kostenloses Tool für jede Lochgröße. Exakte Sackzahl für 25 kg und 40 kg Fertigbeton.",
         category: "Außenbereich",
         categorySlug: "outdoor",
       },
