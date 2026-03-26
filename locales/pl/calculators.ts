@@ -95,7 +95,7 @@ export const categories: CategoryMeta[] = [
         slug: "floor-joist-calculator",
         title: "Kalkulator Belek Stropowych",
         description:
-          "Kalkulator belek stropowych: oblicz belki wg rozpiętości i rozstawu. Darmowe narzędzie na rozstaw 40 cm i 60 cm \u2014 łączna ilość sztuk.",
+          "Darmowy kalkulator belek stropowych — ilość, rozmiar i rozstaw wg rozpiętości. Na rozstaw 40 cm i 60 cm, wynik natychmiast.",
         category: "Konstrukcja Stropu",
         categorySlug: "floor-framing",
       },
@@ -183,7 +183,7 @@ export const categories: CategoryMeta[] = [
         slug: "truss-calculator",
         title: "Kalkulator Wiązarów Dachowych",
         description:
-          "Ile wiązarów dachowych potrzebuję? Darmowy kalkulator na standardowy rozstaw 60 cm \u2014 podaj długość dachu, otrzymaj liczbę i układ.",
+          "Darmowy kalkulator wiązarów dachowych — ile wiązarów na mój dach? Standardowy rozstaw 60 cm. Podaj długość, otrzymaj liczbę i układ.",
         category: "Pokrycie Dachu",
         categorySlug: "roofing",
       },
@@ -191,7 +191,7 @@ export const categories: CategoryMeta[] = [
         slug: "rafter-calculator",
         title: "Kalkulator Krokwi",
         description:
-          "Kalkulator krokwi: oblicz liczbę krokwi wg długości dachu i rozstawu. Darmowe narzędzie na 40 cm i 60 cm \u2014 do dachów dwuspadowych i kopertowych.",
+          "Darmowy kalkulator krokwi — długość, ilość i rozstaw na dowolny kąt dachu. 40 i 60 cm między osiami, dachy dwuspadowe i kopertowe.",
         category: "Pokrycie Dachu",
         categorySlug: "roofing",
       },
@@ -215,7 +215,7 @@ export const categories: CategoryMeta[] = [
         slug: "shingle-calculator",
         title: "Kalkulator Gontów",
         description:
-          "Kalkulator gontów: ile paczek potrzebuję? Darmowy estymator gontów bitumicznych \u2014 przelicza metry kwadratowe na paczki.",
+          "Darmowy kalkulator gontów — ile paczek potrzebuję? Na gonty bitumiczne standardowe i architektoniczne. Przelicza m² na paczki natychmiast.",
         category: "Pokrycie Dachu",
         categorySlug: "roofing",
       },
@@ -247,7 +247,7 @@ export const categories: CategoryMeta[] = [
         slug: "roof-area-calculator",
         title: "Kalkulator Powierzchni Dachu",
         description:
-          "Kalkulator powierzchni dachu: przelicz rzut poziomy na rzeczywistą powierzchnię. Darmowe narzędzie z mnożnikiem nachylenia.",
+          "Darmowy kalkulator powierzchni dachu — przelicz rzut poziomy na rzeczywistą powierzchnię pokrycia. Z mnożnikiem nachylenia i m² dachu.",
         category: "Pokrycie Dachu",
         categorySlug: "roofing",
       },
@@ -255,7 +255,7 @@ export const categories: CategoryMeta[] = [
         slug: "roof-slope-calculator",
         title: "Kalkulator Spadku Dachu",
         description:
-          "Jak stromy jest mój dach? Darmowy kalkulator spadku \u2014 zmierz wznios i bieg, otrzymaj współczynnik nachylenia i zalecany materiał pokryciowy.",
+          "Darmowy kalkulator spadku dachu — zmierz wznios i bieg, otrzymaj nachylenie, kąt i zalecany materiał pokryciowy. Wynik natychmiast.",
         category: "Pokrycie Dachu",
         categorySlug: "roofing",
       },
@@ -279,7 +279,7 @@ export const categories: CategoryMeta[] = [
         slug: "vinyl-siding-calculator",
         title: "Kalkulator Sidingu Winylowego",
         description:
-          "Kalkulator sidingu winylowego: oblicz panele wg powierzchni ścian. Darmowe narzędzie uwzględniające drzwi, okna i 10% zapasu.",
+          "Darmowy kalkulator sidingu winylowego — podaj m² ścian, otrzymaj dokładną liczbę paneli. Odejmuje drzwi, okna i dodaje 10% zapasu.",
         category: "Powłoka Zewnętrzna",
         categorySlug: "exterior-shell",
       },
@@ -383,7 +383,7 @@ export const categories: CategoryMeta[] = [
         slug: "board-feet-calculator",
         title: "Kalkulator Objętości Drewna",
         description:
-          "Kalkulator objętości drewna: przelicz wymiary na metry sześcienne. Darmowe narzędzie do wyceny drewna twardego \u2014 objętość i koszt.",
+          "Darmowy kalkulator objętości drewna — przelicz wymiary na board feet. Do wyceny drewna twardego z natychmiastowym obliczeniem objętości i kosztu w zł.",
         category: "Okucia i Akcesoria",
         categorySlug: "hardware",
       },
@@ -391,7 +391,7 @@ export const categories: CategoryMeta[] = [
         slug: "plywood-calculator",
         title: "Kalkulator Sklejki",
         description:
-          "Ile arkuszy sklejki potrzebuję? Darmowy kalkulator na grubości od 6 do 18 mm \u2014 ilość arkuszy i szacunek kosztów.",
+          "Darmowy kalkulator sklejki — ile arkuszy potrzebuję? Na grubości od 6 do 18 mm. Ilość arkuszy i szacunek kosztów w zł natychmiast.",
         category: "Okucia i Akcesoria",
         categorySlug: "hardware",
       },
@@ -407,7 +407,7 @@ export const categories: CategoryMeta[] = [
         slug: "paint-coverage-calculator",
         title: "Kalkulator Wydajności Farby",
         description:
-          "Ile farby potrzebuję? Darmowy kalkulator wydajności na ściany i sufity \u2014 uwzględnia warstwy, podaje litry i opakowania.",
+          "Darmowy kalkulator wydajności farby — ile litrów potrzebuję? Na ściany i sufity. Uwzględnia warstwy, podaje litry i opakowania.",
         category: "Wykończenie",
         categorySlug: "finishing",
       },
@@ -415,7 +415,7 @@ export const categories: CategoryMeta[] = [
         slug: "paint-cost-calculator",
         title: "Kalkulator Kosztów Malowania",
         description:
-          "Kalkulator kosztów malowania: szacunek całkowity wg klasy farby. Darmowe narzędzie od ekonomicznej po premium \u2014 z materiałami pomocniczymi.",
+          "Darmowy kalkulator kosztów malowania — szacunek budżetu wg klasy farby. Od ekonomicznej po premium w zł, z materiałami pomocniczymi.",
         category: "Wykończenie",
         categorySlug: "finishing",
       },

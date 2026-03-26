@@ -24,7 +24,7 @@ export const categories: CategoryMeta[] = [
       "Estimate all floor framing materials including rim joists, floor joists, bridging, subfloor adhesive, and OSB panels.",
     calculators: [
       { slug: "rim-joist-calculator", title: "Rim Joist Calculator", description: "Rim joist calculator: How many boards for your floor perimeter? Free tool for 2x8, 2x10 & 2x12 \u2014 includes board count and linear feet.", category: "Floor Framing", categorySlug: "floor-framing" },
-      { slug: "floor-joist-calculator", title: "Floor Joist Calculator", description: "Floor joist calculator: Estimate joists by span and spacing. Free sizing tool for 16\" or 24\" on-centre \u2014 includes total board count.", category: "Floor Framing", categorySlug: "floor-framing" },
+      { slug: "floor-joist-calculator", title: "Floor Joist Calculator", description: "Free floor joist calculator \u2014 get joist count by span & spacing. Covers 16\" and 24\" OC layouts with sizing charts and board totals.", category: "Floor Framing", categorySlug: "floor-framing" },
       { slug: "bridging-calculator", title: "Bridging Calculator", description: "How many rows of bridging do I need? Free calculator for wood cross-bridging & solid blocking by joist span \u2014 instant results.", category: "Floor Framing", categorySlug: "floor-framing" },
       { slug: "subfloor-adhesive-calculator", title: "Subfloor Adhesive Calculator", description: "Subfloor adhesive calculator: How many tubes of construction adhesive? Free estimator based on floor area \u2014 covers 28 oz & 10 oz tubes.", category: "Floor Framing", categorySlug: "floor-framing" },
       { slug: "osb-panel-calculator", title: "OSB Panel Calculator", description: "How many OSB sheets do I need? Free calculator for 4x8 subfloor panels \u2014 accounts for waste and gives exact sheet count instantly.", category: "Floor Framing", categorySlug: "floor-framing" },
@@ -49,16 +49,16 @@ export const categories: CategoryMeta[] = [
     description:
       "Estimate all roofing materials from trusses and rafters to shingles and underlayment.",
     calculators: [
-      { slug: "truss-calculator", title: "Roof Truss Calculator", description: "How many roof trusses do I need? Free calculator for 24\" OC standard spacing \u2014 enter roof length for instant truss count and layout.", category: "Roofing", categorySlug: "roofing" },
-      { slug: "rafter-calculator", title: "Rafter Calculator", description: "Rafter calculator: Estimate rafter count by roof length & spacing. Free tool for 16\" and 24\" OC \u2014 works for gable and hip roofs.", category: "Roofing", categorySlug: "roofing" },
+      { slug: "truss-calculator", title: "Roof Truss Calculator", description: "Free roof truss calculator \u2014 get truss count & spacing for any roof length. Enter span for 24\" OC layout, cost estimate & design tips.", category: "Roofing", categorySlug: "roofing" },
+      { slug: "rafter-calculator", title: "Rafter Calculator", description: "Free rafter calculator \u2014 get rafter length, count & spacing for any roof type. Covers 16\" and 24\" OC for gable, hip & shed roofs.", category: "Roofing", categorySlug: "roofing" },
       { slug: "ridge-board-calculator", title: "Ridge Board Calculator", description: "Ridge board calculator: How many boards for my roof peak? Free tool for 2x8, 2x10 & 2x12 ridge boards \u2014 gives length and count.", category: "Roofing", categorySlug: "roofing" },
       { slug: "roof-sheathing-calculator", title: "Roof Sheathing Calculator", description: "How many OSB sheets to sheathe my roof? Free roof decking calculator for 4x8 panels \u2014 factors in roof pitch and waste percentage.", category: "Roofing", categorySlug: "roofing" },
-      { slug: "shingle-calculator", title: "Shingle Calculator", description: "Shingle calculator: How many bundles do I need? Free estimator for 3-tab & architectural shingles \u2014 converts square footage to bundles.", category: "Roofing", categorySlug: "roofing" },
+      { slug: "shingle-calculator", title: "Shingle Calculator", description: "Free shingle calculator for roof shingles \u2014 get bundles, squares & cost from square feet. Covers 3-tab & architectural asphalt shingles.", category: "Roofing", categorySlug: "roofing" },
       { slug: "underlayment-calculator", title: "Roofing Underlayment Calculator", description: "How many rolls of roofing underlayment? Free calculator for 15 lb felt, 30 lb felt & synthetic \u2014 accounts for overlap and waste.", category: "Roofing", categorySlug: "roofing" },
       { slug: "drip-edge-calculator", title: "Drip Edge Calculator", description: "Drip edge calculator: Estimate linear feet of flashing for your roof. Free tool \u2014 gives piece count for standard 10 ft drip edge strips.", category: "Roofing", categorySlug: "roofing" },
       { slug: "roof-pitch-calculator", title: "Roof Pitch Calculator", description: "What pitch is my roof? Free roof pitch calculator \u2014 enter rise & run for instant angle, slope %, and area multiplier.", category: "Roofing", categorySlug: "roofing" },
-      { slug: "roof-area-calculator", title: "Roof Area Calculator", description: "Roof area calculator: Convert flat dimensions to actual roof area. Free tool \u2014 accounts for pitch multiplier, gives roofing squares.", category: "Roofing", categorySlug: "roofing" },
-      { slug: "roof-slope-calculator", title: "Roof Slope Calculator", description: "How steep is my roof? Free slope calculator \u2014 measure rise & run to get pitch ratio, angle, and recommended roofing material type.", category: "Roofing", categorySlug: "roofing" },
+      { slug: "roof-area-calculator", title: "Roof Area Calculator", description: "Free roof area calculator \u2014 convert flat dimensions to true roof area using pitch multiplier. Get roofing squares & material estimates.", category: "Roofing", categorySlug: "roofing" },
+      { slug: "roof-slope-calculator", title: "Roof Slope Calculator", description: "Roof slope calculator \u2014 free tool to find pitch, angle, and sloped roof area multiplier. Enter rise & run for instant square footage results.", category: "Roofing", categorySlug: "roofing" },
     ],
   },
   {
@@ -68,7 +68,7 @@ export const categories: CategoryMeta[] = [
       "Calculate housewrap, siding, flashing, and seam tape for your home\u2019s exterior envelope.",
     calculators: [
       { slug: "housewrap-calculator", title: "Housewrap Calculator", description: "How many rolls of housewrap do I need? Free Tyvek calculator by wall area \u2014 covers standard roll widths with overlap.", category: "Exterior Shell", categorySlug: "exterior-shell" },
-      { slug: "vinyl-siding-calculator", title: "Vinyl Siding Calculator", description: "Vinyl siding calculator: Estimate panels by wall square footage. Free tool that accounts for doors, windows & 10% waste factor.", category: "Exterior Shell", categorySlug: "exterior-shell" },
+      { slug: "vinyl-siding-calculator", title: "Vinyl Siding Calculator", description: "Free vinyl siding calculator \u2014 enter wall square footage for exact panel count. Accounts for doors, windows & 10% waste factor.", category: "Exterior Shell", categorySlug: "exterior-shell" },
       { slug: "hardie-siding-calculator", title: "Hardie Plank Siding Calculator", description: "How many HardiePlank boards do I need? Free fibre cement siding calculator \u2014 with waste included.", category: "Exterior Shell", categorySlug: "exterior-shell" },
       { slug: "window-flashing-calculator", title: "Window Flashing Calculator", description: "Window flashing tape calculator: Estimate linear feet for all openings. Free tool for 4\", 6\" & 9\" wide self-adhesive flashing.", category: "Exterior Shell", categorySlug: "exterior-shell" },
     ],
@@ -95,8 +95,8 @@ export const categories: CategoryMeta[] = [
       { slug: "joist-hanger-calculator", title: "Joist Hanger Calculator", description: "How many joist hangers do I need? Free calculator for LUS, LU & HU series connectors \u2014 covers floor and ceiling joist framing.", category: "Hardware", categorySlug: "hardware" },
       { slug: "hurricane-tie-calculator", title: "Hurricane Tie Calculator", description: "Hurricane tie calculator: Estimate rafter-to-wall connectors for wind resistance. Free tool for H2.5A & H10 Simpson Strong-Tie clips.", category: "Hardware", categorySlug: "hardware" },
       { slug: "lumber-cost-calculator", title: "Lumber Cost Calculator", description: "How much does lumber cost? Free calculator for 2x4, 2x6, 2x8 & more \u2014 estimates total cost in CAD by quantity and current prices.", category: "Hardware", categorySlug: "hardware" },
-      { slug: "board-feet-calculator", title: "Board Feet Calculator", description: "Board feet calculator: Convert lumber dimensions to board feet. Free tool for hardwood pricing \u2014 instant BF and cost estimate in CAD.", category: "Hardware", categorySlug: "hardware" },
-      { slug: "plywood-calculator", title: "Plywood Calculator", description: "How many plywood sheets do I need? Free calculator for 1/4\" to 3/4\" panels \u2014 gives sheet count and cost estimate in CAD.", category: "Hardware", categorySlug: "hardware" },
+      { slug: "board-feet-calculator", title: "Board Feet Calculator", description: "Board feet calculator \u2014 enter lumber thickness, width & length for instant BF total. Free hardwood pricing tool with cost estimate in CAD for any species.", category: "Hardware", categorySlug: "hardware" },
+      { slug: "plywood-calculator", title: "Plywood Calculator", description: "Free plywood calculator \u2014 get exact sheet count & cost in CAD for any project. Covers 1/4\" to 3/4\" thickness in 4x8 panels with waste.", category: "Hardware", categorySlug: "hardware" },
     ],
   },
   {
@@ -105,7 +105,7 @@ export const categories: CategoryMeta[] = [
     description:
       "Calculate paint, primer, stain, and finishing materials for interior and exterior surfaces.",
     calculators: [
-      { slug: "paint-coverage-calculator", title: "Paint Coverage Calculator", description: "How much paint do I need? Free coverage calculator for walls & ceilings \u2014 accounts for coats, gives litres and can count.", category: "Finishing", categorySlug: "finishing" },
+      { slug: "paint-coverage-calculator", title: "Paint Calculator", description: "Paint calculator \u2014 free square feet paint estimator for walls & ceilings. Select coats, get instant litres and cost based on square footage.", category: "Finishing", categorySlug: "finishing" },
       { slug: "paint-cost-calculator", title: "Paint Cost Calculator", description: "Paint cost calculator: Estimate total project cost by quality level. Free tool for economy to premium \u2014 includes supplies estimate in CAD.", category: "Finishing", categorySlug: "finishing" },
       { slug: "primer-calculator", title: "Primer Calculator", description: "How much primer do I need? Free calculator for new drywall, wood & repaints \u2014 adjusts coverage by surface type.", category: "Finishing", categorySlug: "finishing" },
     ],

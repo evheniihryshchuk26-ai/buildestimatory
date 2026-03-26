@@ -107,7 +107,7 @@ export const categories: CategoryMeta[] = [
         slug: "floor-joist-calculator",
         title: "Calculadora de Viguetas de Piso",
         description:
-          "¿Cuántas viguetas de piso necesito? Calculadora gratis para espaciado de 40 cm y 60 cm entre centros — calcula por ancho de habitación.",
+          "Calculadora de viguetas de piso gratis — obtén cantidad, tamaño y espaciado por tramo. Para 40 cm y 60 cm entre centros al instante.",
         category: "Entramado de Piso",
         categorySlug: "floor-framing",
       },
@@ -195,7 +195,7 @@ export const categories: CategoryMeta[] = [
         slug: "truss-calculator",
         title: "Calculadora de Cerchas de Techo",
         description:
-          "¿Cuántas cerchas necesito para mi techo? Calculadora gratis para espaciado estándar de 60 cm entre centros — ingresa el largo y obtén el total.",
+          "¿Cuántas cerchas de techo necesito? Calculadora gratis para espaciado estándar de 60 cm — ingresa el largo del techo y obtén conteo y distribución.",
         category: "Techado",
         categorySlug: "roofing",
       },
@@ -203,7 +203,7 @@ export const categories: CategoryMeta[] = [
         slug: "rafter-calculator",
         title: "Calculadora de Cabios",
         description:
-          "Calculadora de cabios: Estima cantidad por largo de techo y espaciado. Herramienta gratis para 40 cm y 60 cm — techos a dos aguas o cuatro.",
+          "Calculadora de cabios gratis — obtén largo, cantidad y espaciado para cualquier pendiente de techo. 40 y 60 cm entre centros al instante.",
         category: "Techado",
         categorySlug: "roofing",
       },
@@ -227,7 +227,7 @@ export const categories: CategoryMeta[] = [
         slug: "shingle-calculator",
         title: "Calculadora de Tejas",
         description:
-          "¿Cuántos paquetes de tejas necesito? Calculadora gratis para tejas de 3 lengüetas y arquitectónicas — convierte m² a paquetes al instante.",
+          "Calculadora de tejas gratis — ¿cuántos paquetes necesito? Estima tejas de 3 lengüetas y arquitectónicas. Convierte m² a paquetes al instante.",
         category: "Techado",
         categorySlug: "roofing",
       },
@@ -259,7 +259,7 @@ export const categories: CategoryMeta[] = [
         slug: "roof-area-calculator",
         title: "Calculadora de Área de Techo",
         description:
-          "Calculadora de área de techo: Convierte dimensiones planas al área real del techo. Herramienta gratis — considera multiplicador de pendiente y da cuadros de techado.",
+          "Calculadora de área de techo gratis — convierte dimensiones planas al área real de cobertura. Incluye multiplicador de pendiente y m² totales.",
         category: "Techado",
         categorySlug: "roofing",
       },
@@ -267,7 +267,7 @@ export const categories: CategoryMeta[] = [
         slug: "roof-slope-calculator",
         title: "Calculadora de Inclinación de Techo",
         description:
-          "¿Qué tan empinado es mi techo? Calculadora gratis de inclinación — mide elevación y recorrido para obtener relación de pendiente, ángulo y material recomendado.",
+          "Calculadora de inclinación de techo gratis — mide elevación y recorrido para obtener pendiente, ángulo y material de cobertura recomendado.",
         category: "Techado",
         categorySlug: "roofing",
       },
@@ -291,7 +291,7 @@ export const categories: CategoryMeta[] = [
         slug: "vinyl-siding-calculator",
         title: "Calculadora de Revestimiento Vinílico",
         description:
-          "Calculadora de revestimiento vinílico: Estima paneles por m² de muro. Herramienta gratis que descuenta puertas, ventanas y agrega desperdicio.",
+          "Calculadora de revestimiento vinílico gratis — ingresa m² de muro y obtén paneles exactos. Descuenta puertas, ventanas y 10% de desperdicio.",
         category: "Revestimiento Exterior",
         categorySlug: "exterior-shell",
       },
@@ -395,7 +395,7 @@ export const categories: CategoryMeta[] = [
         slug: "board-feet-calculator",
         title: "Calculadora de Pies Tabla",
         description:
-          "Calculadora de pies tabla: Convierte dimensiones de madera a pies tabla. Herramienta gratis para precios de madera dura — cálculo instantáneo de PT y costo.",
+          "Calculadora de pies tabla gratis — convierte dimensiones de madera a pies tabla. Para precios de madera dura con cálculo instantáneo de PT y costo.",
         category: "Ferretería",
         categorySlug: "hardware",
       },
@@ -403,7 +403,7 @@ export const categories: CategoryMeta[] = [
         slug: "plywood-calculator",
         title: "Calculadora de Triplay",
         description:
-          "¿Cuántas hojas de triplay necesito? Calculadora gratis para paneles de 6 mm a 18 mm — da cantidad de hojas y estimado de costo.",
+          "Calculadora de triplay gratis — ¿cuántas hojas necesito? Para paneles de 6 mm a 18 mm. Da cantidad de hojas y estimado de costo al instante.",
         category: "Ferretería",
         categorySlug: "hardware",
       },
@@ -419,7 +419,7 @@ export const categories: CategoryMeta[] = [
         slug: "paint-coverage-calculator",
         title: "Calculadora de Rendimiento de Pintura",
         description:
-          "¿Cuánta pintura necesito? Calculadora gratis de rendimiento para muros y techos — considera manos de pintura, da litros y cubetas.",
+          "Calculadora de rendimiento de pintura gratis — ¿cuántos litros necesito? Para muros y techos, considera manos y da litros y cubetas.",
         category: "Acabados",
         categorySlug: "finishing",
       },
@@ -427,7 +427,7 @@ export const categories: CategoryMeta[] = [
         slug: "paint-cost-calculator",
         title: "Calculadora de Costo de Pintura",
         description:
-          "Calculadora de costo de pintura: Estima el costo total por nivel de calidad. Herramienta gratis de económica a premium — incluye insumos.",
+          "Calculadora de costo de pintura gratis — estima el presupuesto total por calidad. De económica a premium, incluye insumos y mano de obra.",
         category: "Acabados",
         categorySlug: "finishing",
       },

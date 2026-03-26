@@ -80,7 +80,7 @@ export const categories: CategoryMeta[] = [
       "Stimi tutti i materiali per la struttura del solaio: travetti perimetrali, travetti portanti, controventature, colla per sottopavimento e pannelli OSB.",
     calculators: [
       { slug: "rim-joist-calculator", title: "Calcolatore Travetto Perimetrale", description: "Calcolatore travetto perimetrale: quante tavole per il bordo del solaio? Strumento gratuito per sezioni 6\u00d720, 6\u00d724 e 6\u00d730 cm \u2014 include conteggio tavole e metri lineari.", category: "Struttura Solaio", categorySlug: "floor-framing" },
-      { slug: "floor-joist-calculator", title: "Calcolatore Travetti Solaio", description: "Calcolatore travetti solaio: stimi i travetti in base alla luce e all\u2019interasse. Strumento gratuito per interassi di 40 o 60 cm \u2014 include conteggio totale tavole.", category: "Struttura Solaio", categorySlug: "floor-framing" },
+      { slug: "floor-joist-calculator", title: "Calcolatore Travetti Solaio", description: "Calcolatore travetti solaio gratuito \u2014 numero, sezione e interasse in base alla luce. Per interassi di 40 e 60 cm, calcolo istantaneo.", category: "Struttura Solaio", categorySlug: "floor-framing" },
       { slug: "bridging-calculator", title: "Calcolatore Controventature", description: "Quante file di controventature servono? Calcolatore gratuito per croci di Sant\u2019Andrea e blocchi pieni in base alla luce dei travetti \u2014 risultati immediati.", category: "Struttura Solaio", categorySlug: "floor-framing" },
       { slug: "subfloor-adhesive-calculator", title: "Calcolatore Adesivo Sottopavimento", description: "Calcolatore adesivo sottopavimento: quante cartucce di colla da costruzione? Stimatore gratuito in base alla superficie del solaio \u2014 copre cartucce da 310 ml e 600 ml.", category: "Struttura Solaio", categorySlug: "floor-framing" },
       { slug: "osb-panel-calculator", title: "Calcolatore Pannelli OSB", description: "Quanti pannelli OSB servono? Calcolatore gratuito per pannelli 120\u00d7240 cm per sottopavimento \u2014 tiene conto dello sfrido e fornisce il conteggio esatto.", category: "Struttura Solaio", categorySlug: "floor-framing" },
@@ -105,16 +105,16 @@ export const categories: CategoryMeta[] = [
     description:
       "Stimi tutti i materiali per la copertura: dalle capriate e puntoni fino a tegole e guaina sottotegola.",
     calculators: [
-      { slug: "truss-calculator", title: "Calcolatore Capriate", description: "Quante capriate servono? Calcolatore gratuito per interasse standard di 60 cm \u2014 inserisca la lunghezza del tetto per un conteggio istantaneo e schema di posa.", category: "Copertura", categorySlug: "roofing" },
-      { slug: "rafter-calculator", title: "Calcolatore Puntoni", description: "Calcolatore puntoni: stimi il numero di puntoni in base alla lunghezza del tetto e all\u2019interasse. Strumento gratuito per interassi di 40 e 60 cm \u2014 adatto a tetti a falde e a padiglione.", category: "Copertura", categorySlug: "roofing" },
+      { slug: "truss-calculator", title: "Calcolatore Capriate", description: "Calcolatore capriate gratuito \u2014 quante capriate per il mio tetto? Interasse standard di 60 cm. Inserisca la lunghezza per conteggio e schema di posa.", category: "Copertura", categorySlug: "roofing" },
+      { slug: "rafter-calculator", title: "Calcolatore Puntoni", description: "Calcolatore puntoni gratuito \u2014 lunghezza, numero e interasse per qualsiasi pendenza. 40 e 60 cm tra gli assi, tetti a falde e a padiglione.", category: "Copertura", categorySlug: "roofing" },
       { slug: "ridge-board-calculator", title: "Calcolatore Trave di Colmo", description: "Calcolatore trave di colmo: quante tavole per la linea di colmo del tetto? Strumento gratuito per sezioni 6\u00d720, 6\u00d724 e 6\u00d730 cm \u2014 fornisce lunghezza e conteggio.", category: "Copertura", categorySlug: "roofing" },
       { slug: "roof-sheathing-calculator", title: "Calcolatore Tavolato di Copertura", description: "Quanti pannelli OSB per il tavolato del tetto? Calcolatore gratuito per pannelli 120\u00d7240 cm \u2014 tiene conto della pendenza e della percentuale di sfrido.", category: "Copertura", categorySlug: "roofing" },
-      { slug: "shingle-calculator", title: "Calcolatore Tegole", description: "Calcolatore tegole: quanti pacchi servono? Stimatore gratuito per tegole canadesi e marsigliesi \u2014 converte i metri quadrati in pacchi.", category: "Copertura", categorySlug: "roofing" },
+      { slug: "shingle-calculator", title: "Calcolatore Tegole", description: "Calcolatore tegole gratuito \u2014 quanti pacchi servono? Per tegole canadesi e marsigliesi. Converte i m\u00b2 in pacchi istantaneamente.", category: "Copertura", categorySlug: "roofing" },
       { slug: "underlayment-calculator", title: "Calcolatore Guaina Sottotegola", description: "Quanti rotoli di guaina sottotegola? Calcolatore gratuito per guaina bituminosa e sintetica \u2014 tiene conto di sovrapposizioni e sfrido.", category: "Copertura", categorySlug: "roofing" },
       { slug: "drip-edge-calculator", title: "Calcolatore Gocciolatoio", description: "Calcolatore gocciolatoio: stimi i metri lineari di scossalina per il tetto. Strumento gratuito \u2014 fornisce il numero di barre da 2 m standard.", category: "Copertura", categorySlug: "roofing" },
       { slug: "roof-pitch-calculator", title: "Calcolatore Pendenza Tetto", description: "Qual \u00e8 la pendenza del tetto? Calcolatore gratuito \u2014 inserisca alzata e sviluppo per angolo istantaneo, percentuale e moltiplicatore d\u2019area.", category: "Copertura", categorySlug: "roofing" },
-      { slug: "roof-area-calculator", title: "Calcolatore Superficie Tetto", description: "Calcolatore superficie tetto: converta le dimensioni in pianta nella superficie reale di copertura. Strumento gratuito \u2014 tiene conto del moltiplicatore di pendenza.", category: "Copertura", categorySlug: "roofing" },
-      { slug: "roof-slope-calculator", title: "Calcolatore Inclinazione Tetto", description: "Quanto \u00e8 inclinato il tetto? Calcolatore gratuito \u2014 misuri alzata e sviluppo per ottenere rapporto di pendenza, angolo e materiale consigliato.", category: "Copertura", categorySlug: "roofing" },
+      { slug: "roof-area-calculator", title: "Calcolatore Superficie Tetto", description: "Calcolatore superficie tetto gratuito \u2014 converta le dimensioni in pianta nella superficie reale. Moltiplicatore di pendenza e m\u00b2 totali inclusi.", category: "Copertura", categorySlug: "roofing" },
+      { slug: "roof-slope-calculator", title: "Calcolatore Inclinazione Tetto", description: "Calcolatore inclinazione tetto gratuito \u2014 misuri alzata e sviluppo per rapporto di pendenza, angolo e materiale di copertura consigliato.", category: "Copertura", categorySlug: "roofing" },
     ],
   },
   {
@@ -124,7 +124,7 @@ export const categories: CategoryMeta[] = [
       "Calcoli telo traspirante, rivestimento esterno, scossaline e nastro per giunti per l\u2019involucro della Sua abitazione.",
     calculators: [
       { slug: "housewrap-calculator", title: "Calcolatore Telo Traspirante", description: "Quanti rotoli di telo traspirante servono? Calcolatore gratuito in base alla superficie delle pareti \u2014 copre rotoli da 1 m, 1,5 m e 3 m con sovrapposizione.", category: "Involucro Esterno", categorySlug: "exterior-shell" },
-      { slug: "vinyl-siding-calculator", title: "Calcolatore Rivestimento in PVC", description: "Calcolatore rivestimento in PVC: stimi i pannelli in base alla superficie delle pareti. Strumento gratuito che tiene conto di porte, finestre e 10% di sfrido.", category: "Involucro Esterno", categorySlug: "exterior-shell" },
+      { slug: "vinyl-siding-calculator", title: "Calcolatore Rivestimento in PVC", description: "Calcolatore rivestimento PVC gratuito \u2014 inserisca i m\u00b2 di parete per il conteggio esatto pannelli. Detrae porte, finestre e aggiunge 10% di sfrido.", category: "Involucro Esterno", categorySlug: "exterior-shell" },
       { slug: "hardie-siding-calculator", title: "Calcolatore Rivestimento in Fibrocemento", description: "Quante doghe in fibrocemento servono? Calcolatore gratuito per rivestimenti tipo Eternit Cedral \u2014 copre diverse esposizioni con sfrido incluso.", category: "Involucro Esterno", categorySlug: "exterior-shell" },
       { slug: "window-flashing-calculator", title: "Calcolatore Nastro Impermeabile per Finestre", description: "Calcolatore nastro adesivo per finestre: stimi i metri lineari per tutte le aperture. Strumento gratuito per nastri da 10, 15 e 22 cm autoadesivi.", category: "Involucro Esterno", categorySlug: "exterior-shell" },
     ],
@@ -151,8 +151,8 @@ export const categories: CategoryMeta[] = [
       { slug: "joist-hanger-calculator", title: "Calcolatore Staffe per Travetti", description: "Quante staffe per travetti servono? Calcolatore gratuito per staffe tipo Simpson \u2014 copre travetti di solaio e controsoffitto.", category: "Ferramenta", categorySlug: "hardware" },
       { slug: "hurricane-tie-calculator", title: "Calcolatore Squadrette Antisismiche", description: "Calcolatore squadrette antisismiche: stimi i connettori puntone-parete per la resistenza al vento e al sisma. Strumento gratuito per squadrette Simpson Strong-Tie.", category: "Ferramenta", categorySlug: "hardware" },
       { slug: "lumber-cost-calculator", title: "Calcolatore Costo Legname", description: "Quanto costa il legname? Calcolatore gratuito per tavole da 4\u00d79, 6\u00d714, 6\u00d720 e altre sezioni \u2014 stima il costo totale in base a quantit\u00e0 e prezzi correnti.", category: "Ferramenta", categorySlug: "hardware" },
-      { slug: "board-feet-calculator", title: "Calcolatore Piedi Tavola", description: "Calcolatore piedi tavola: converta le dimensioni del legname in board feet. Strumento gratuito per la tariffazione del legno massello \u2014 stima istantanea di BF e costo.", category: "Ferramenta", categorySlug: "hardware" },
-      { slug: "plywood-calculator", title: "Calcolatore Compensato", description: "Quanti pannelli di compensato servono? Calcolatore gratuito per spessori da 4 a 18 mm \u2014 fornisce conteggio pannelli e stima dei costi.", category: "Ferramenta", categorySlug: "hardware" },
+      { slug: "board-feet-calculator", title: "Calcolatore Piedi Tavola", description: "Calcolatore piedi tavola gratuito \u2014 converta le dimensioni in board feet. Per la tariffazione del legno massello con stima istantanea di BF e costo in \u20ac.", category: "Ferramenta", categorySlug: "hardware" },
+      { slug: "plywood-calculator", title: "Calcolatore Compensato", description: "Calcolatore compensato gratuito \u2014 quanti pannelli servono? Per spessori da 4 a 18 mm. Conteggio pannelli e stima dei costi in \u20ac istantanea.", category: "Ferramenta", categorySlug: "hardware" },
     ],
   },
   {
@@ -165,7 +165,7 @@ export const categories: CategoryMeta[] = [
         slug: "paint-coverage-calculator",
         title: "Calcolatore Resa Pittura",
         description:
-          "Quanta pittura serve? Calcolatore gratuito della resa per pareti e soffitti \u2014 tiene conto delle mani e fornisce litri e latte necessarie.",
+          "Calcolatore resa pittura gratuito \u2014 quanti litri servono? Per pareti e soffitti. Tiene conto delle mani e fornisce litri e latte in \u20ac.",
         category: "Finiture",
         categorySlug: "finishing",
       },
@@ -173,7 +173,7 @@ export const categories: CategoryMeta[] = [
         slug: "paint-cost-calculator",
         title: "Calcolatore Costo Pittura",
         description:
-          "Calcolatore costo pittura: stimi il costo totale del progetto per livello di qualit\u00e0. Strumento gratuito da economica a premium \u2014 include stima accessori.",
+          "Calcolatore costo pittura gratuito \u2014 stimi il budget totale per livello di qualit\u00e0. Da economica a premium in \u20ac, include accessori e materiali.",
         category: "Finiture",
         categorySlug: "finishing",
       },

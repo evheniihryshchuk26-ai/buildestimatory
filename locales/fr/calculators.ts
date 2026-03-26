@@ -107,7 +107,7 @@ export const categories: CategoryMeta[] = [
         slug: "floor-joist-calculator",
         title: "Calculateur de solives",
         description:
-          "Calculateur de solives : estimez le nombre par portée et espacement. Outil gratuit pour entraxe de 40 cm et 60 cm — nombre total de pièces inclus.",
+          "Calculateur de solives gratuit — estimez le nombre, la section et l'entraxe selon la portée. Pour 40 cm et 60 cm, résultat instantané.",
         category: "Plancher",
         categorySlug: "floor-framing",
       },
@@ -195,7 +195,7 @@ export const categories: CategoryMeta[] = [
         slug: "truss-calculator",
         title: "Calculateur de fermettes",
         description:
-          "Combien de fermettes faut-il ? Calculateur gratuit pour entraxe standard de 60 cm — saisissez la longueur du toit et obtenez le nombre instantanément.",
+          "Calculateur de fermettes gratuit — combien de fermettes pour mon toit ? Entraxe standard de 60 cm. Saisissez la longueur et obtenez le total.",
         category: "Couverture",
         categorySlug: "roofing",
       },
@@ -203,7 +203,7 @@ export const categories: CategoryMeta[] = [
         slug: "rafter-calculator",
         title: "Calculateur de chevrons",
         description:
-          "Calculateur de chevrons : estimez le nombre par longueur de toit et espacement. Outil gratuit pour 40 cm et 60 cm — toits à deux et quatre pentes.",
+          "Calculateur de chevrons gratuit — longueur, nombre et entraxe pour toute pente de toit. 40 et 60 cm entre axes, résultat instantané.",
         category: "Couverture",
         categorySlug: "roofing",
       },
@@ -227,7 +227,7 @@ export const categories: CategoryMeta[] = [
         slug: "shingle-calculator",
         title: "Calculateur de bardeaux",
         description:
-          "Calculateur de bardeaux : combien de paquets faut-il ? Estimateur gratuit pour bardeaux bitumés 3 bandes et architecturaux — convertit les m² en paquets.",
+          "Calculateur de bardeaux gratuit — combien de paquets faut-il ? Pour bardeaux bitumés et architecturaux. Convertit les m² en paquets au clic.",
         category: "Couverture",
         categorySlug: "roofing",
       },
@@ -259,7 +259,7 @@ export const categories: CategoryMeta[] = [
         slug: "roof-area-calculator",
         title: "Calculateur de surface de toiture",
         description:
-          "Calculateur de surface de toiture : convertissez les dimensions au sol en surface réelle. Outil gratuit — coefficient de pente et mètres carrés de couverture.",
+          "Calculateur de surface de toiture gratuit — convertissez les dimensions au sol en surface réelle de couverture. Coefficient de pente et m² inclus.",
         category: "Couverture",
         categorySlug: "roofing",
       },
@@ -267,7 +267,7 @@ export const categories: CategoryMeta[] = [
         slug: "roof-slope-calculator",
         title: "Calculateur d'inclinaison de toit",
         description:
-          "Quelle est l'inclinaison de mon toit ? Calculateur gratuit — mesurez la hauteur et la course pour obtenir le ratio, l'angle et le matériau recommandé.",
+          "Calculateur d'inclinaison de toit gratuit — mesurez hauteur et course pour obtenir le ratio de pente, l'angle et le matériau de couverture.",
         category: "Couverture",
         categorySlug: "roofing",
       },
@@ -291,7 +291,7 @@ export const categories: CategoryMeta[] = [
         slug: "vinyl-siding-calculator",
         title: "Calculateur de bardage PVC",
         description:
-          "Calculateur de bardage PVC : estimez les lames par surface de mur. Outil gratuit qui déduit portes, fenêtres et ajoute 10 % de chutes.",
+          "Calculateur de bardage PVC gratuit — entrez les m² de mur pour obtenir le nombre exact de lames. Déduit portes, fenêtres et ajoute 10 % de chutes.",
         category: "Enveloppe extérieure",
         categorySlug: "exterior-shell",
       },
@@ -395,7 +395,7 @@ export const categories: CategoryMeta[] = [
         slug: "board-feet-calculator",
         title: "Calculateur de cubage bois",
         description:
-          "Calculateur de cubage : convertissez les dimensions du bois en volume. Outil gratuit pour le chiffrage du bois massif — cubage et coût instantanés.",
+          "Calculateur de cubage bois gratuit — convertissez les dimensions en board feet. Pour le chiffrage du bois massif avec cubage et coût instantanés.",
         category: "Quincaillerie",
         categorySlug: "hardware",
       },
@@ -403,7 +403,7 @@ export const categories: CategoryMeta[] = [
         slug: "plywood-calculator",
         title: "Calculateur de contreplaqué",
         description:
-          "Combien de panneaux de contreplaqué faut-il ? Calculateur gratuit pour épaisseurs de 6 à 18 mm — nombre de panneaux et estimation du coût.",
+          "Calculateur de contreplaqué gratuit — combien de panneaux faut-il ? Pour épaisseurs de 6 à 18 mm. Nombre de panneaux et estimation du coût.",
         category: "Quincaillerie",
         categorySlug: "hardware",
       },
@@ -419,7 +419,7 @@ export const categories: CategoryMeta[] = [
         slug: "paint-coverage-calculator",
         title: "Calculateur de rendement peinture",
         description:
-          "Combien de peinture faut-il ? Calculateur gratuit de rendement pour murs et plafonds — tient compte des couches, donne les litres et les pots nécessaires.",
+          "Calculateur de rendement peinture gratuit — combien de litres faut-il ? Pour murs et plafonds. Tient compte des couches, donne litres et pots.",
         category: "Finitions",
         categorySlug: "finishing",
       },
@@ -427,7 +427,7 @@ export const categories: CategoryMeta[] = [
         slug: "paint-cost-calculator",
         title: "Calculateur de coût de peinture",
         description:
-          "Calculateur du coût de peinture : estimez le budget total par gamme de qualité. Outil gratuit de l'entrée de gamme au premium — fournitures incluses.",
+          "Calculateur de coût de peinture gratuit — estimez le budget total par gamme de qualité. De l'entrée de gamme au premium, fournitures incluses.",
         category: "Finitions",
         categorySlug: "finishing",
       },

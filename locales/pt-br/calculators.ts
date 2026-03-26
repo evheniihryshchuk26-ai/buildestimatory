@@ -107,7 +107,7 @@ export const categories: CategoryMeta[] = [
         slug: "floor-joist-calculator",
         title: "Calculadora de Vigas de Piso",
         description:
-          "Quantas vigas de piso eu preciso? Calculadora grátis para espaçamento de 40 cm e 60 cm entre eixos — calcula por largura do cômodo.",
+          "Calculadora de vigas de piso grátis — quantidade, tamanho e espaçamento por vão. Para 40 cm e 60 cm entre eixos, resultado instantâneo.",
         category: "Estrutura de Piso",
         categorySlug: "floor-framing",
       },
@@ -195,7 +195,7 @@ export const categories: CategoryMeta[] = [
         slug: "truss-calculator",
         title: "Calculadora de Tesouras",
         description:
-          "Quantas tesouras eu preciso para meu telhado? Calculadora grátis para espaçamento padrão de 60 cm entre eixos — insira o comprimento e obtenha o total.",
+          "Calculadora de tesouras grátis — quantas treliças para meu telhado? Espaçamento padrão de 60 cm. Insira o comprimento e obtenha contagem e layout.",
         category: "Telhado",
         categorySlug: "roofing",
       },
@@ -203,7 +203,7 @@ export const categories: CategoryMeta[] = [
         slug: "rafter-calculator",
         title: "Calculadora de Caibros",
         description:
-          "Calculadora de caibros: Estime a quantidade por comprimento do telhado e espaçamento. Ferramenta grátis para 40 cm e 60 cm — telhados de duas e quatro águas.",
+          "Calculadora de caibros grátis — comprimento, quantidade e espaçamento para qualquer inclinação. 40 e 60 cm entre eixos, resultado instantâneo.",
         category: "Telhado",
         categorySlug: "roofing",
       },
@@ -227,7 +227,7 @@ export const categories: CategoryMeta[] = [
         slug: "shingle-calculator",
         title: "Calculadora de Telhas",
         description:
-          "Quantos pacotes de telhas eu preciso? Calculadora grátis para telhas shingle e telhas cerâmicas — converte m² em pacotes instantaneamente.",
+          "Calculadora de telhas grátis — quantos pacotes eu preciso? Para telhas shingle e cerâmicas. Converte m² em pacotes instantaneamente.",
         category: "Telhado",
         categorySlug: "roofing",
       },
@@ -259,7 +259,7 @@ export const categories: CategoryMeta[] = [
         slug: "roof-area-calculator",
         title: "Calculadora de Área do Telhado",
         description:
-          "Calculadora de área de telhado: Converta dimensões planas em área real do telhado. Ferramenta grátis — considera multiplicador de inclinação.",
+          "Calculadora de área de telhado grátis — converta dimensões planas em área real de cobertura. Com multiplicador de inclinação e m² totais.",
         category: "Telhado",
         categorySlug: "roofing",
       },
@@ -267,7 +267,7 @@ export const categories: CategoryMeta[] = [
         slug: "roof-slope-calculator",
         title: "Calculadora de Caimento do Telhado",
         description:
-          "Qual o caimento do meu telhado? Calculadora grátis — meça altura e extensão para obter relação de inclinação, ângulo e material recomendado.",
+          "Calculadora de caimento do telhado grátis — meça altura e extensão para obter inclinação, ângulo e material de cobertura recomendado.",
         category: "Telhado",
         categorySlug: "roofing",
       },
@@ -291,7 +291,7 @@ export const categories: CategoryMeta[] = [
         slug: "vinyl-siding-calculator",
         title: "Calculadora de Revestimento Vinílico",
         description:
-          "Calculadora de revestimento vinílico: Estime painéis por m² de parede. Ferramenta grátis que desconta portas, janelas e adiciona desperdício.",
+          "Calculadora de revestimento vinílico grátis — insira m² de parede para obter painéis exatos. Desconta portas, janelas e adiciona 10% de desperdício.",
         category: "Envoltória Exterior",
         categorySlug: "exterior-shell",
       },
@@ -395,7 +395,7 @@ export const categories: CategoryMeta[] = [
         slug: "board-feet-calculator",
         title: "Calculadora de Pés Tábua",
         description:
-          "Calculadora de pés tábua: Converta dimensões de madeira em pés tábua. Ferramenta grátis para precificação de madeira de lei — cálculo instantâneo.",
+          "Calculadora de pés tábua grátis — converta dimensões de madeira em board feet. Para precificação de madeira de lei com cálculo instantâneo e custo em R$.",
         category: "Ferragens",
         categorySlug: "hardware",
       },
@@ -403,7 +403,7 @@ export const categories: CategoryMeta[] = [
         slug: "plywood-calculator",
         title: "Calculadora de Compensado",
         description:
-          "Quantas chapas de compensado eu preciso? Calculadora grátis para painéis de 6 mm a 18 mm — dá quantidade de chapas e estimativa de custo.",
+          "Calculadora de compensado grátis — quantas chapas eu preciso? Para painéis de 6 mm a 18 mm. Dá quantidade de chapas e custo estimado em R$.",
         category: "Ferragens",
         categorySlug: "hardware",
       },
@@ -419,7 +419,7 @@ export const categories: CategoryMeta[] = [
         slug: "paint-coverage-calculator",
         title: "Calculadora de Rendimento de Tinta",
         description:
-          "Quanta tinta eu preciso? Calculadora grátis de rendimento para paredes e forros — considera demãos, dá litros e latas.",
+          "Calculadora de rendimento de tinta grátis — quantos litros eu preciso? Para paredes e forros. Considera demãos, dá litros e latas em R$.",
         category: "Acabamento",
         categorySlug: "finishing",
       },
@@ -427,7 +427,7 @@ export const categories: CategoryMeta[] = [
         slug: "paint-cost-calculator",
         title: "Calculadora de Custo de Tinta",
         description:
-          "Calculadora de custo de tinta: Estime o custo total por nível de qualidade. Ferramenta grátis de econômica a premium — inclui insumos.",
+          "Calculadora de custo de tinta grátis — estime o orçamento total por qualidade. De econômica a premium em R$, inclui insumos e materiais.",
         category: "Acabamento",
         categorySlug: "finishing",
       },

@@ -80,7 +80,7 @@ export const categories: CategoryMeta[] = [
       "Schätzen Sie alle Materialien für die Deckenkonstruktion einschließlich Randbalken, Deckenbalken, Aussteifungen, Unterbodenkleber und OSB-Platten.",
     calculators: [
       { slug: "rim-joist-calculator", title: "Randbalken-Rechner", description: "Randbalken-Rechner: Wie viele Bretter für Ihren Deckenrand? Kostenloses Tool für 6×20, 6×24 und 6×30 cm — inklusive Stückzahl und Laufmeter.", category: "Deckenkonstruktion", categorySlug: "floor-framing" },
-      { slug: "floor-joist-calculator", title: "Deckenbalken-Rechner", description: "Deckenbalken-Rechner: Balkenanzahl nach Spannweite und Abstand schätzen. Kostenloses Bemessungstool für 40 cm oder 60 cm Achsabstand — inklusive Gesamtstückzahl.", category: "Deckenkonstruktion", categorySlug: "floor-framing" },
+      { slug: "floor-joist-calculator", title: "Deckenbalken-Rechner", description: "Kostenloser Deckenbalken-Rechner — Anzahl, Größe und Abstand nach Spannweite ermitteln. Für 40 cm und 60 cm Achsabstand sofort berechnen.", category: "Deckenkonstruktion", categorySlug: "floor-framing" },
       { slug: "bridging-calculator", title: "Aussteifungs-Rechner", description: "Wie viele Reihen Aussteifung benötige ich? Kostenloser Rechner für Kreuzaussteifung und Massivblockierung nach Balkenspannweite — sofortige Ergebnisse.", category: "Deckenkonstruktion", categorySlug: "floor-framing" },
       { slug: "subfloor-adhesive-calculator", title: "Unterbodenkleber-Rechner", description: "Unterbodenkleber-Rechner: Wie viele Kartuschen Baukleber? Kostenloser Schätzer basierend auf Bodenfläche — deckt gängige Kartuschengrößen ab.", category: "Deckenkonstruktion", categorySlug: "floor-framing" },
       { slug: "osb-panel-calculator", title: "OSB-Platten-Rechner", description: "Wie viele OSB-Platten benötige ich? Kostenloser Rechner für Unterbodenplatten — berücksichtigt Verschnitt und ergibt exakte Plattenzahl sofort.", category: "Deckenkonstruktion", categorySlug: "floor-framing" },
@@ -105,16 +105,16 @@ export const categories: CategoryMeta[] = [
     description:
       "Schätzen Sie alle Dachmaterialien von Bindern und Sparren bis zu Schindeln und Unterspannbahn.",
     calculators: [
-      { slug: "truss-calculator", title: "Dachbinder-Rechner", description: "Wie viele Dachbinder benötige ich? Kostenloser Rechner für 60 cm Standard-Achsabstand — Dachlänge eingeben für sofortige Binderanzahl und Verlegung.", category: "Dachkonstruktion", categorySlug: "roofing" },
-      { slug: "rafter-calculator", title: "Sparren-Rechner", description: "Sparren-Rechner: Sparrenanzahl nach Dachlänge und Abstand schätzen. Kostenloses Tool für 40 cm und 60 cm Achsabstand — für Sattel- und Walmdächer.", category: "Dachkonstruktion", categorySlug: "roofing" },
+      { slug: "truss-calculator", title: "Dachbinder-Rechner", description: "Kostenloser Dachbinder-Rechner — Anzahl und Verlegung für 60 cm Achsabstand berechnen. Dachlänge eingeben, sofort Binderanzahl erhalten.", category: "Dachkonstruktion", categorySlug: "roofing" },
+      { slug: "rafter-calculator", title: "Sparren-Rechner", description: "Kostenloser Sparrenrechner — Länge, Anzahl & Abstand für jede Dachneigung berechnen. 40 und 60 cm Achsabstand, Sattel- und Walmdach.", category: "Dachkonstruktion", categorySlug: "roofing" },
       { slug: "ridge-board-calculator", title: "Firstbrett-Rechner", description: "Firstbrett-Rechner: Wie viele Bretter für meinen Dachfirst? Kostenloses Tool für verschiedene Firstbrett-Abmessungen — ergibt Länge und Stückzahl.", category: "Dachkonstruktion", categorySlug: "roofing" },
       { slug: "roof-sheathing-calculator", title: "Dachschalung-Rechner", description: "Wie viele OSB-Platten für mein Dach? Kostenloser Dachschalungs-Rechner für Standardplatten — berücksichtigt Dachneigung und Verschnittprozentsatz.", category: "Dachkonstruktion", categorySlug: "roofing" },
-      { slug: "shingle-calculator", title: "Dachschindel-Rechner", description: "Dachschindel-Rechner: Wie viele Pakete benötige ich? Kostenloser Schätzer für Bitumen- und Architekturschindeln — rechnet Quadratmeter in Pakete um.", category: "Dachkonstruktion", categorySlug: "roofing" },
+      { slug: "shingle-calculator", title: "Dachschindel-Rechner", description: "Kostenloser Dachschindel-Rechner — wie viele Pakete brauche ich? Für Bitumen- und Architekturschindeln. Rechnet m² in Pakete um.", category: "Dachkonstruktion", categorySlug: "roofing" },
       { slug: "underlayment-calculator", title: "Unterspannbahn-Rechner", description: "Wie viele Rollen Unterspannbahn? Kostenloser Rechner für Dachpappe und Kunststoff-Unterspannbahn — berücksichtigt Überlappung und Verschnitt.", category: "Dachkonstruktion", categorySlug: "roofing" },
       { slug: "drip-edge-calculator", title: "Traufblech-Rechner", description: "Traufblech-Rechner: Laufmeter Tropfkante für Ihr Dach schätzen. Kostenloses Tool — ergibt Stückzahl für Standard-Traufbleche.", category: "Dachkonstruktion", categorySlug: "roofing" },
       { slug: "roof-pitch-calculator", title: "Dachneigung-Rechner", description: "Welche Neigung hat mein Dach? Kostenloser Dachneigungsrechner — Höhe und Grundlänge eingeben für sofortigen Winkel, Neigung in % und Flächenmultiplikator.", category: "Dachkonstruktion", categorySlug: "roofing" },
-      { slug: "roof-area-calculator", title: "Dachflächen-Rechner", description: "Dachflächen-Rechner: Flache Maße in tatsächliche Dachfläche umrechnen. Kostenloses Tool — berücksichtigt Neigungsmultiplikator, ergibt Quadratmeter.", category: "Dachkonstruktion", categorySlug: "roofing" },
-      { slug: "roof-slope-calculator", title: "Dachgefälle-Rechner", description: "Wie steil ist mein Dach? Kostenloser Gefällerechner — Höhe und Grundlänge messen für Neigungsverhältnis, Winkel und empfohlenes Dacheindeckungsmaterial.", category: "Dachkonstruktion", categorySlug: "roofing" },
+      { slug: "roof-area-calculator", title: "Dachflächen-Rechner", description: "Kostenloser Dachflächen-Rechner — Grundriss in tatsächliche Dachfläche umrechnen. Mit Neigungsmultiplikator und m² sofort berechnen.", category: "Dachkonstruktion", categorySlug: "roofing" },
+      { slug: "roof-slope-calculator", title: "Dachgefälle-Rechner", description: "Kostenloser Dachgefälle-Rechner — Höhe und Grundlänge eingeben für Neigungsverhältnis, Winkel und empfohlenes Eindeckungsmaterial.", category: "Dachkonstruktion", categorySlug: "roofing" },
     ],
   },
   {
@@ -124,7 +124,7 @@ export const categories: CategoryMeta[] = [
       "Berechnen Sie Fassadenbahn, Fassadenverkleidung, Anschlussbleche und Nahtband für die Gebäudehülle.",
     calculators: [
       { slug: "housewrap-calculator", title: "Fassadenbahn-Rechner", description: "Wie viele Rollen Fassadenbahn benötige ich? Kostenloser Rechner nach Wandfläche — deckt verschiedene Rollenbreiten mit Überlappung ab.", category: "Außenhülle", categorySlug: "exterior-shell" },
-      { slug: "vinyl-siding-calculator", title: "Fassadenverkleidung-Rechner", description: "Fassadenverkleidung-Rechner: Paneelschätzung nach Wandfläche. Kostenloses Tool berücksichtigt Türen, Fenster und 10 % Verschnittfaktor.", category: "Außenhülle", categorySlug: "exterior-shell" },
+      { slug: "vinyl-siding-calculator", title: "Fassadenverkleidung-Rechner", description: "Kostenloser Fassadenverkleidung-Rechner — Wandfläche eingeben, Paneelanzahl sofort erhalten. Zieht Türen, Fenster ab und addiert 10 % Verschnitt.", category: "Außenhülle", categorySlug: "exterior-shell" },
       { slug: "hardie-siding-calculator", title: "Faserzement-Fassaden-Rechner", description: "Wie viele Faserzementplatten benötige ich? Kostenloser Rechner für Eternit- und Cedral-Fassade — verschiedene Breiten mit Verschnitt.", category: "Außenhülle", categorySlug: "exterior-shell" },
       { slug: "window-flashing-calculator", title: "Fensteranschlussband-Rechner", description: "Fensteranschlussband-Rechner: Laufmeter für alle Öffnungen schätzen. Kostenloses Tool für 10 cm, 15 cm und 22 cm breites Selbstklebeflashing.", category: "Außenhülle", categorySlug: "exterior-shell" },
     ],
@@ -151,8 +151,8 @@ export const categories: CategoryMeta[] = [
       { slug: "joist-hanger-calculator", title: "Balkenschuh-Rechner", description: "Wie viele Balkenschuhe benötige ich? Kostenloser Rechner für Simpson- und Knapp-Verbinder — für Decken- und Dachbalkenkonstruktionen.", category: "Beschläge", categorySlug: "hardware" },
       { slug: "hurricane-tie-calculator", title: "Sturmklammer-Rechner", description: "Sturmklammer-Rechner: Sparren-Wand-Verbinder für Windwiderstand schätzen. Kostenloses Tool für Simpson Strong-Tie Windverbinder.", category: "Beschläge", categorySlug: "hardware" },
       { slug: "lumber-cost-calculator", title: "Holzkosten-Rechner", description: "Was kostet Bauholz? Kostenloser Rechner für KVH, BSH und Schnittholz — Gesamtkosten nach Menge und aktuellen Preisen in EUR.", category: "Beschläge", categorySlug: "hardware" },
-      { slug: "board-feet-calculator", title: "Schnittholz-Rechner", description: "Schnittholz-Rechner: Holzmaße in Kubikmeter und Kosten umrechnen. Kostenloses Tool für Hartholz — sofortige Mengen- und Kostenschätzung.", category: "Beschläge", categorySlug: "hardware" },
-      { slug: "plywood-calculator", title: "Sperrholz-Rechner", description: "Wie viele Sperrholzplatten benötige ich? Kostenloser Rechner für 4 mm bis 21 mm Platten — ergibt Plattenzahl und Kostenschätzung.", category: "Beschläge", categorySlug: "hardware" },
+      { slug: "board-feet-calculator", title: "Schnittholz-Rechner", description: "Kostenloser Schnittholz-Rechner — Holzmaße in Board Feet und Kosten umrechnen. Für Hartholz-Preise mit sofortiger Kalkulation.", category: "Beschläge", categorySlug: "hardware" },
+      { slug: "plywood-calculator", title: "Sperrholz-Rechner", description: "Kostenloser Sperrholz-Rechner — wie viele Platten brauche ich? Für 4 mm bis 21 mm Stärken. Gibt Plattenzahl und Kostenschätzung sofort.", category: "Beschläge", categorySlug: "hardware" },
     ],
   },
   {
@@ -165,7 +165,7 @@ export const categories: CategoryMeta[] = [
         slug: "paint-coverage-calculator",
         title: "Farbergiebigkeit-Rechner",
         description:
-          "Wie viel Farbe benötige ich? Kostenloser Ergiebigkeitsrechner für Wände und Decken — berücksichtigt Anstriche, ergibt Liter und Gebindezahl.",
+          "Kostenloser Farbergiebigkeit-Rechner — wie viele Liter brauche ich? Für Wände und Decken. Berücksichtigt Anstriche, gibt Liter und Gebinde.",
         category: "Anstrich",
         categorySlug: "finishing",
       },
@@ -173,7 +173,7 @@ export const categories: CategoryMeta[] = [
         slug: "paint-cost-calculator",
         title: "Farbkosten-Rechner",
         description:
-          "Farbkosten-Rechner: Gesamtprojektkosten nach Qualitätsstufe schätzen. Kostenloses Tool von Basis bis Premium — inklusive Zubehörschätzung.",
+          "Kostenloser Farbkosten-Rechner — Gesamtkosten nach Qualitätsstufe schätzen. Von Basis bis Premium inklusive Zubehör und Material in EUR.",
         category: "Anstrich",
         categorySlug: "finishing",
       },
