@@ -65,6 +65,18 @@ const guides: GuidesTranslations = {
           "Kies kostet 15–40 EUR pro Tonne. Vollständiger Preisratgeber für Einfahrten, Terrassen, Wege, Drainage und Landschaftsbau mit Lieferkosten und Mengenberechnung.",
         href: "/guides/gravel-cost-guide",
       },
+      {
+        title: "Was kostet eine Einfahrt? Preisratgeber 2026",
+        description:
+          "Eine neue Einfahrt kostet 2.000–15.000 EUR je nach Material und Größe. Kompletter Preisratgeber für Beton, Asphalt, Kies und Pflastersteine mit Kostenvergleich, Einflussfaktoren und Spartipps.",
+        href: "/guides/driveway-cost-guide",
+      },
+      {
+        title: "Bodenbelag-Kosten: Was kostet neuer Bodenbelag?",
+        description:
+          "Bodenbelag kostet 20\u2013150 \u20ac/m\u00b2 verlegt. Kompletter Preisleitfaden f\u00fcr Parkett, Laminat, Fliesen, Teppich und Vinyl mit Raum-f\u00fcr-Raum-Sch\u00e4tzungen und Spartipps.",
+        href: "/guides/flooring-cost-guide",
+      },
     ],
   },
 
@@ -1166,6 +1178,289 @@ const guides: GuidesTranslations = {
         answer:
           "Ja, deutlich. Eine Kieseinfahrt kostet 8–20 EUR/m² für Material (20–50 EUR/m² fertig verlegt), verglichen mit 60–120 EUR/m² für Beton und 40–80 EUR/m² für Asphalt. Eine 3,5×15 m Kieseinfahrt kostet 1.000–2.500 EUR fertig verlegt vs. 3.200–6.500 EUR für Beton. Allerdings braucht Kies mehr laufende Pflege und alle 2–3 Jahre eine Nachschüttung.",
       },
+    ],
+  },
+
+  drivewayCost: {
+    title: "Was kostet eine Einfahrt? Preisratgeber 2026",
+    metaDescription:
+      "Eine neue Einfahrt kostet 2.000–15.000 EUR in 2026 je nach Material und Größe. Kompletter Preisratgeber: Beton (50–120 EUR/m²), Asphalt (30–70 EUR/m²), Kies (8–25 EUR/m²), Pflastersteine (60–200 EUR/m²). Einflussfaktoren, Eigenleistung vs Fachbetrieb und Spartipps.",
+
+    heroTitle: "Was kostet eine Einfahrt?",
+    heroSubtitle: "Preisratgeber 2026",
+    heroDescription:
+      "Komplette Kostenaufstellung für Einfahrten nach Material, Größe und Region in Deutschland. Abgedeckt werden Beton, Asphalt, Kies und Pflastersteine mit Einbaupreisen, Haltbarkeitsvergleichen, Kostenfaktoren und bewährten Spartipps.",
+
+    quickAnswerHeading: "Schnelle Antwort",
+    quickAnswerText:
+      "Eine neue Einfahrt kostet 2.000 bis 15.000 EUR in 2026, wobei die meisten Hausbesitzer 4.000 bis 10.000 EUR für eine Standard-Doppeleinfahrt zahlen. Kies ist am günstigsten mit 8–25 EUR/m². Asphalt kostet 30–70 EUR/m². Beton liegt bei 50–120 EUR/m². Pflastersteine sind am teuersten mit 60–200 EUR/m². Diese Preise beinhalten Material und fachgerechten Einbau.",
+
+    costByMaterialHeading: "Einfahrtkosten nach Material",
+    costByMaterialIntro:
+      "Das gewählte Material ist der wichtigste Kostenfaktor bei einer Einfahrt. Jede Option bietet eine andere Balance aus Preis, Haltbarkeit, Optik und Pflegeaufwand. Hier sind die Kosten in Deutschland 2026:",
+    costByMaterialColMaterial: "Material",
+    costByMaterialColCostSqFt: "Einbaukosten / m²",
+    costByMaterialColLifespan: "Lebensdauer",
+    costByMaterialColBestFor: "Ideal für",
+    costByMaterialRows: [
+      { material: "Kies / Schotter", costSqFt: "8 – 25 EUR", lifespan: "15–25 Jahre", bestFor: "Ländliche Grundstücke, lange Zufahrten, knappes Budget. Erfordert regelmäßiges Nachschütten." },
+      { material: "Asphalt", costSqFt: "30 – 70 EUR", lifespan: "15–20 Jahre", bestFor: "Gutes Preis-Leistungs-Verhältnis. Flexibler Belag verträgt Frost-Tau-Wechsel gut." },
+      { material: "Beton", costSqFt: "50 – 120 EUR", lifespan: "25–50 Jahre", bestFor: "Die meisten Wohneinfahrten. Langlebig, pflegeleicht, kann eingefärbt oder gestempelt werden." },
+      { material: "Waschbeton", costSqFt: "60 – 130 EUR", lifespan: "25–50 Jahre", bestFor: "Dekorativer Look mit sichtbarer Gesteinskörnung. Rutschfeste Oberfläche." },
+      { material: "Betonsteinpflaster", costSqFt: "60 – 150 EUR", lifespan: "25–50+ Jahre", bestFor: "Gehobene Wohnbereiche. Sehr langlebig, viele Muster, versickerungsfähige Varianten erhältlich." },
+      { material: "Natursteinpflaster", costSqFt: "80 – 200 EUR", lifespan: "50+ Jahre", bestFor: "Repräsentative Einfahrten. Granit, Basalt, Porphyr oder Sandstein. Höchste Wertigkeit." },
+    ],
+
+    costBySizeHeading: "Einfahrtkosten nach Größe",
+    costBySizeIntro:
+      "Die Größe der Einfahrt beeinflusst die Gesamtkosten erheblich. Eine Einzelstellplatz-Einfahrt umfasst etwa 15–30 m², eine Doppeleinfahrt 30–60 m². Runde oder geschwungene Einfahrten können 100 m² überschreiten.",
+    costBySizeColSize: "Einfahrttyp",
+    costBySizeColDimensions: "Typische Größe",
+    costBySizeColConcrete: "Beton",
+    costBySizeColAsphalt: "Asphalt",
+    costBySizeColGravel: "Kies",
+    costBySizeRows: [
+      { size: "Einzelstellplatz", dimensions: "3×5 m (15 m²)", concrete: "750 – 1.800 EUR", asphalt: "450 – 1.050 EUR", gravel: "120 – 375 EUR" },
+      { size: "Standard-Doppel", dimensions: "5×10 m (50 m²)", concrete: "2.500 – 6.000 EUR", asphalt: "1.500 – 3.500 EUR", gravel: "400 – 1.250 EUR" },
+      { size: "Breite Doppeleinfahrt", dimensions: "6×12 m (72 m²)", concrete: "3.600 – 8.640 EUR", asphalt: "2.160 – 5.040 EUR", gravel: "576 – 1.800 EUR" },
+      { size: "Lange ländliche Zufahrt", dimensions: "3,5×30 m (105 m²)", concrete: "5.250 – 12.600 EUR", asphalt: "3.150 – 7.350 EUR", gravel: "840 – 2.625 EUR" },
+      { size: "Runde Einfahrt", dimensions: "~100 – 150 m²", concrete: "5.000 – 18.000 EUR", asphalt: "3.000 – 10.500 EUR", gravel: "800 – 3.750 EUR" },
+    ],
+
+    factorsHeading: "Faktoren, die den Einfahrtpreis beeinflussen",
+    factorsIntro:
+      "Neben Material und Größe können mehrere Faktoren den Preis erhöhen oder senken. Diese zu kennen hilft bei der genauen Budgetplanung:",
+    factorsItems: [
+      "Materialwahl: Der größte Kostentreiber. Kies mit 8–25 EUR/m² ist 5–10× günstiger als Natursteinpflaster mit 80–200 EUR/m².",
+      "Fläche und Form: Größere Einfahrten kosten insgesamt mehr, haben aber oft niedrigere m²-Kosten. Geschwungene Einfahrten erfordern 20–40% Mehraufwand.",
+      "Erdarbeiten und Höhenausgleich: Aushub, Planum und Tragschicht können 5–30 EUR/m² zusätzlich kosten. Hanggrundstücke erfordern Stützmauern.",
+      "Entwässerung: Ordentliche Entwässerung (Rinnen, Sickerschacht) kostet 500–3.000 EUR je nach Aufwand. In Deutschland oft baurechtlich vorgeschrieben.",
+      "Rückbau alter Beläge: Alten Beton entfernen kostet 10–25 EUR/m². Asphalt ist etwas günstiger. Kies kann meist umverteilt werden.",
+      "Regionale Preisunterschiede: Die Preise variieren 30–50% je nach Region. Süddeutschland und Ballungsräume sind 20–40% teurer als ländliche Gebiete.",
+      "Genehmigungen: In manchen Gemeinden ist eine Baugenehmigung für Einfahrten nötig (100–500 EUR). Zufahrtsgenehmigung von der Straßenverkehrsbehörde prüfen.",
+      "Tragschichtaufbau: Eine fachgerechte Frostschutz- und Tragschicht (20–40 cm) ist für Beton und Asphalt unerlässlich. Kostet 5–15 EUR/m² zusätzlich.",
+    ],
+
+    diyVsContractorHeading: "Eigenleistung vs Fachbetrieb",
+    diyVsContractorIntro:
+      "Ob Sie eine Einfahrt selbst anlegen können, hängt vom gewählten Material ab. Hier eine ehrliche Einschätzung:",
+    diyVsContractorText1:
+      "Kieseinfahrten sind die beste Option für Eigenleistung. Mit Grundwerkzeugen (Schaufel, Rechen, Handstampfer oder gemietete Rüttelplatte) kann ein Hausbesitzer eine Kieseinfahrt an einem Wochenende anlegen. Der Prozess umfasst: Fläche vorbereiten, Vlies gegen Unkraut auslegen, Kies in 5-cm-Schichten verteilen und jede Lage verdichten. Die Eigenleistung spart 40–60% gegenüber einem Fachbetrieb.",
+    diyVsContractorText2:
+      "Beton- und Asphalteinfahrten sind für die meisten Heimwerker nicht praktikabel. Beton erfordert Spezialgerät (Mischfahrzeug, Rüttelflasche, Abziehlatte, Glättkelle), exaktes Timing beim Gießen und Erfahrung mit Gefälle und Schalung. Ein schlecht gegossener Beton reißt vorzeitig und kann am Ende teurer werden als die fachmännische Ausführung.",
+    diyVsContractorText3:
+      "Pflastereinfahrten liegen dazwischen. Ein erfahrener Heimwerker kann Pflaster an einem langen Wochenende verlegen, aber der Unterbau (Aushub, Schottertragschicht, Splittbett) ist arbeitsintensiv. Für die meisten empfiehlt es sich, den Unterbau professionell herstellen zu lassen und dann selbst zu pflastern – das spart 25–35%. Holen Sie mindestens drei Angebote ein und prüfen Sie Referenzen.",
+
+    savingTipsHeading: "So sparen Sie bei der neuen Einfahrt",
+    savingTipsIntro:
+      "Eine Einfahrt ist eine erhebliche Investition, aber es gibt bewährte Strategien, um Kosten zu senken, ohne an Qualität einzubüßen:",
+    savingTipsItems: [
+      "Mehrere Angebote einholen: Die Preise können zwischen Betrieben um 30–50% variieren. Mindestens drei schriftliche Angebote mit Angabe von Material, Aufbaustärke und Gewährleistung einholen.",
+      "Außerhalb der Saison beauftragen: Herbst und Winter sind Nebensaison für Pflaster- und Asphaltfirmen. Viele bieten 10–20% Nachlass, um ihre Teams auszulasten.",
+      "Einfaches Design wählen: Gerade, rechteckige Einfahrten sind am günstigsten. Kurven, Einfassungen und Ziermuster kosten 15–25% mehr.",
+      "Bestehenden Unterbau nutzen: Hat die alte Einfahrt einen soliden Schotterunterbau, kann darauf neu aufgebaut werden – spart 5–15 EUR/m².",
+      "Asphalt statt Beton erwägen: Asphalt kostet rund die Hälfte von Beton und verträgt Frost gut. Mit regelmäßiger Versiegelung hält er 15–20 Jahre.",
+      "Kies für lange Zufahrten: Bei Zufahrten über 30 m Kies für die Hauptstrecke verwenden und nur den Eingangsbereich pflastern.",
+      "Mit Nachbarn kombinieren: Gleicher Betrieb für zwei Projekte kann 5–15% Mengenrabatt bringen.",
+    ],
+
+    calculatorCtaHeading: "Berechnen Sie Ihre Einfahrtkosten",
+    calculatorCtaText: "Nutzen Sie unsere kostenlosen Rechner, um die genaue Materialmenge und Kosten für Ihr Einfahrtprojekt zu ermitteln.",
+    calculatorLinks: [
+      { label: "Betonplatten-Rechner", href: "/calculators/foundation/concrete-slab-calculator", description: "Kubikmeter, Säcke und Kosten für eine Betoneinfahrt berechnen." },
+      { label: "Kies-Rechner", href: "/calculators/foundation/gravel-calculator", description: "Tonnen und Kubikmeter für eine Kieseinfahrt mit Kostenspanne berechnen." },
+      { label: "Einfahrt-Kies-Rechner", href: "/calculators/foundation/driveway-gravel-calculator", description: "Spezieller Rechner für Einfahrtkies nach Typ und Größe." },
+    ],
+
+    faqHeading: "Häufig gestellte Fragen",
+    faqs: [
+      {
+        question: "Was kostet eine neue Einfahrt 2026?",
+        answer:
+          "Eine neue Einfahrt kostet 2.000 bis 15.000 EUR in 2026, im Durchschnitt 4.000 bis 10.000 EUR für eine Standard-Doppeleinfahrt aus Beton (50 m²). Kies ist am günstigsten mit 400–1.250 EUR fertig. Asphalt kostet 1.500–3.500 EUR. Beton liegt bei 2.500–6.000 EUR. Pflaster ist am teuersten mit 3.000–10.000+ EUR.",
+      },
+      {
+        question: "Welches ist der günstigste Einfahrtbelag?",
+        answer:
+          "Kies/Schotter ist am günstigsten mit 8–25 EUR/m² Material oder 20–50 EUR/m² eingebaut. Eine Standard-Doppeleinfahrt kostet 400–1.250 EUR in Kies, verglichen mit 2.500–6.000 EUR für Beton. Kies eignet sich auch am besten für Eigenleistung, was die Kosten um 40–60% senken kann. Der Nachteil: regelmäßiges Nachschütten alle 2–3 Jahre.",
+      },
+      {
+        question: "Was kostet eine Betoneinfahrt pro Quadratmeter?",
+        answer:
+          "Eine Betoneinfahrt kostet 50 bis 120 EUR/m² eingebaut in 2026. Einfacher Glattbeton liegt bei 50–80 EUR/m². Waschbeton kostet 60–130 EUR/m². Diese Preise beinhalten eine 15-cm-Betonplatte auf 20–30 cm verdichteter Tragschicht. Eine 50-m²-Doppeleinfahrt in Glattbeton kostet 2.500–6.000 EUR eingebaut.",
+      },
+      {
+        question: "Ist Asphalt oder Beton günstiger für eine Einfahrt?",
+        answer:
+          "Asphalt ist anfangs günstiger mit 30–70 EUR/m² vs 50–120 EUR/m² für Beton. Allerdings braucht Asphalt alle 2–3 Jahre eine Versiegelung und hält 15–20 Jahre vs 25–50 Jahre bei Beton. Über 30 Jahre sind die Gesamtkosten oft ähnlich.",
+      },
+      {
+        question: "Wie berechne ich die Kosten meiner Einfahrt?",
+        answer:
+          "So schätzen Sie die Kosten: (1) Messen Sie Länge und Breite in Metern für die Fläche. (2) Multiplizieren Sie mit dem m²-Preis: Kies 8–25, Asphalt 30–70, Beton 50–120, Pflaster 60–200 EUR. (3) Addieren Sie 10–20% für Erdarbeiten und Reserve. Nutzen Sie unsere kostenlosen Rechner für genaue Mengen- und Kostenermittlung.",
+      },
+      {
+        question: "Wie lange hält eine Einfahrt je nach Material?",
+        answer:
+          "Die Lebensdauer variiert stark. Kies hält 15–25 Jahre, braucht aber alle 2–3 Jahre Nachschüttung. Asphalt hält 15–20 Jahre mit Versiegelung alle 2–3 Jahre. Beton hält 25–50 Jahre bei minimalem Aufwand. Pflastersteine halten 25–50+ Jahre, einzelne Steine können bei Beschädigung ausgetauscht werden. Naturstein hält 50+ Jahre.",
+      },
+    ],
+  },
+  flooringCost: {
+    title: "Bodenbelag-Kosten: Was kostet neuer Bodenbelag?",
+    metaDescription: "Bodenbelag kostet 20\u2013150 \u20ac/m\u00b2 verlegt. Kompletter Preisleitfaden f\u00fcr Parkett, Laminat, Fliesen, Teppich und Vinyl mit Raum-f\u00fcr-Raum-Sch\u00e4tzungen und Spartipps.",
+    heroTitle: "Bodenbelag-Kosten",
+    heroSubtitle: "Preise 2026",
+    heroDescription: "Alles \u00fcber Bodenbelag-Kosten \u2014 von Material und Verlegung bis zu Raum-f\u00fcr-Raum-Budgets und Sparstrategien.",
+    quickAnswerHeading: "Schnelle Antwort",
+    quickAnswerText: "Neuer Bodenbelag kostet 20 bis 150 \u20ac pro Quadratmeter verlegt. Laminat ist am g\u00fcnstigsten mit 20\u201360 \u20ac/m\u00b2, gefolgt von Teppich (25\u201380 \u20ac/m\u00b2), Vinyl (30\u201380 \u20ac/m\u00b2), Fliesen (50\u2013150 \u20ac/m\u00b2) und Parkett (60\u2013150 \u20ac/m\u00b2).",
+    flooringTypesHeading: "Bodenbelag-Kosten nach Materialtyp",
+    flooringTypesIntro: "Die Materialkosten variieren stark. Hier die Preise pro Quadratmeter inklusive Verlegung.",
+    flooringTypesColType: "Bodenbelag-Typ",
+    flooringTypesColCost: "Verlegte Kosten (pro m\u00b2)",
+    flooringTypesColBestFor: "Am besten f\u00fcr",
+    flooringTypesRows: [
+      { type: "Laminat", cost: "20 \u2013 60 \u20ac", bestFor: "Budget, Heimwerker, Mietwohnungen" },
+      { type: "Teppichboden", cost: "25 \u2013 80 \u20ac", bestFor: "Schlafzimmer, Komfort" },
+      { type: "Vinyl-Designboden (LVP)", cost: "30 \u2013 80 \u20ac", bestFor: "K\u00fcche, Bad, stark beanspruchte Bereiche" },
+      { type: "Keramik / Feinsteinzeug", cost: "50 \u2013 150 \u20ac", bestFor: "Bad, K\u00fcche, Eingangsbereich" },
+      { type: "Fertigparkett", cost: "40 \u2013 120 \u20ac", bestFor: "Wohnzimmer, breite Dielen-Optik" },
+      { type: "Massivparkett", cost: "60 \u2013 150 \u20ac", bestFor: "Wohnbereiche, langfristiger Wert" },
+      { type: "Naturstein", cost: "100 \u2013 250 \u20ac", bestFor: "Hochwertige K\u00fcchen, B\u00e4der, Flure" },
+    ],
+    costByRoomHeading: "Bodenbelag-Kosten nach Raumgr\u00f6\u00dfe",
+    costByRoomIntro: "Typische Gesamtprojektkosten (Material + Verlegung) nach Raumtyp mit mittelwertigen Materialien.",
+    costByRoomColRoom: "Raum",
+    costByRoomColTypical: "Typische Gesamtkosten",
+    costByRoomColNotes: "Hinweise",
+    costByRoomRows: [
+      { room: "Bad (5 m\u00b2)", typical: "400 \u2013 1.200 \u20ac", notes: "Fliesen oder Vinyl am h\u00e4ufigsten; Abdichtung erh\u00f6ht Kosten" },
+      { room: "Schlafzimmer (14 m\u00b2)", typical: "600 \u2013 1.800 \u20ac", notes: "Teppich oder Laminat; Unterlage bei Teppich inklusive" },
+      { room: "K\u00fcche (18 m\u00b2)", typical: "1.000 \u2013 3.500 \u20ac", notes: "Fliesen oder Vinyl; Estrichvorbereitung oft n\u00f6tig" },
+      { room: "Wohnzimmer (28 m\u00b2)", typical: "1.200 \u2013 4.500 \u20ac", notes: "Parkett oder Vinyl; gr\u00f6\u00dfter optischer Effekt" },
+      { room: "Ganzes Haus (140 m\u00b2)", typical: "5.000 \u2013 20.000 \u20ac", notes: "Materialmix; Mengenrabatte m\u00f6glich" },
+    ],
+    installationCostsHeading: "Verlegekosten: Selbst verlegen vs. Fachbetrieb",
+    installationCostsIntro: "Die Arbeitskosten machen oft 40\u201360 % der Gesamtkosten aus.",
+    installationCostsText1: "Professionelle Verlegung kostet 15\u201340 \u20ac/m\u00b2 je nach Bodenbelag. Fliesenverlegung ist am teuersten mit 30\u201370 \u20ac/m\u00b2. Teppichverlegung ist am g\u00fcnstigsten mit 8\u201320 \u20ac/m\u00b2.",
+    installationCostsText2: "Selbstverlegen spart 50\u201370 % der Arbeitskosten. Klick-Laminat und Vinyl-Designboden sind am einfachsten \u2014 die meisten Heimwerker schaffen einen Raum an einem Wochenende. Fliesen und Teppich sind deutlich schwieriger.",
+    installationCostsText3: "Zus\u00e4tzliche Kosten: Estrichausgleich (15\u201340 \u20ac/m\u00b2), Altbelag-Entfernung (8\u201320 \u20ac/m\u00b2), M\u00f6belr\u00fccken (50\u2013200 \u20ac), \u00dcbergangsschienen (5\u201315 \u20ac/St\u00fcck). Holen Sie mindestens 3 Angebote ein.",
+    howToCalculateHeading: "Bodenbelag-Bedarf berechnen",
+    howToCalculateIntro: "So sch\u00e4tzen Sie Ihren Materialbedarf genau.",
+    howToCalculateItems: [
+      "Messen Sie L\u00e4nge und Breite jedes Raums in Metern. Multiplizieren f\u00fcr Quadratmeter.",
+      "Unregelm\u00e4\u00dfige R\u00e4ume in Rechtecke aufteilen und Fl\u00e4chen addieren.",
+      "10 % Verschnitt f\u00fcr gerade Verlegung hinzuf\u00fcgen.",
+      "15\u201320 % Verschnitt f\u00fcr diagonale oder Fischgr\u00e4t-Muster.",
+      "Gesamtfl\u00e4che durch Paketinhalt teilen f\u00fcr Paketanzahl.",
+      "Immer aufrunden \u2014 Sie k\u00f6nnen keine halben Pakete kaufen.",
+    ],
+    howToCalculateSummary: "Nutzen Sie unseren kostenlosen Bodenbelag-Rechner f\u00fcr eine sofortige Sch\u00e4tzung mit automatischem Verschnittfaktor.",
+    savingTipsHeading: "Geld sparen beim Bodenbelag",
+    savingTipsIntro: "Cleveres Einkaufen kann die Kosten um 20\u201340 % senken.",
+    savingTipsItems: [
+      "Bei Saisonschlussverkauf und Aktionswochen kaufen f\u00fcr 20\u201330 % Ersparnis.",
+      "Bei Bodenbelag-Fachm\u00e4rkten statt im Baumarkt kaufen.",
+      "Klick-Boden (Laminat oder Vinyl) selbst verlegen und 15\u201340 \u20ac/m\u00b2 Arbeitskosten sparen.",
+      "Verschiedene Materialien f\u00fcr verschiedene R\u00e4ume \u2014 Teppich im Schlafzimmer, Vinyl in der K\u00fcche.",
+      "Alle Materialien auf einmal bestellen f\u00fcr Mengenrabatt.",
+      "Restboden f\u00fcr sp\u00e4tere Reparaturen aufbewahren.",
+    ],
+    calculatorCtaHeading: "Bodenbelag-Materialien berechnen",
+    calculatorCtaText: "Nutzen Sie unsere kostenlosen Rechner f\u00fcr sofortige Materialsch\u00e4tzungen.",
+    calculatorLinks: [
+      { label: "Bodenbelag-Rechner", href: "/calculators/flooring/flooring-calculator/", description: "Allgemeiner m\u00b2- und Paket-Rechner" },
+      { label: "Teppich-Rechner", href: "/calculators/flooring/carpet-calculator/", description: "Quadratmeter, Laufmeter und Unterlage" },
+      { label: "Fliesen-Rechner", href: "/calculators/flooring/tile-calculator/", description: "Fliesenanzahl, Fugenm\u00f6rtel und Kleber" },
+      { label: "Laminat-Rechner", href: "/calculators/flooring/laminate-calculator/", description: "Dielenanzahl, Pakete und Trittschalld\u00e4mmung" },
+    ],
+    faqHeading: "H\u00e4ufig gestellte Fragen",
+    faqs: [
+      { question: "Was ist der g\u00fcnstigste Bodenbelag?", answer: "Laminat ist mit 20\u201360 \u20ac/m\u00b2 verlegt am g\u00fcnstigsten. Bei Selbstverlegung sinken die Kosten auf 8\u201325 \u20ac/m\u00b2 f\u00fcr Material. Vinyl-Designboden ist mit 30\u201380 \u20ac/m\u00b2 die zweitg\u00fcnstigste Option." },
+      { question: "Was kostet es, ein ganzes Haus mit Bodenbelag auszustatten?", answer: "Ein 140 m\u00b2 Haus kostet typischerweise 5.000\u201320.000 \u20ac je nach Material. Ein Mix aus Laminat in Schlafzimmern, Vinyl in K\u00fcche/Bad und Teppich in einzelnen R\u00e4umen liegt meist bei 8.000\u201314.000 \u20ac." },
+      { question: "Welcher Bodenbelag steigert den Hauswert am meisten?", answer: "Parkett steigert den Wiederverkaufswert am meisten. Fertigparkett bietet einen \u00e4hnlichen Look zu niedrigeren Kosten. Fliesen und Vinyl in K\u00fcche/Bad sind ebenfalls wertsteigernd." },
+      { question: "Wie lange h\u00e4lt jeder Bodenbelag?", answer: "Massivparkett h\u00e4lt 50\u2013100 Jahre mit Abschleifen. Naturstein 50+ Jahre. Fliesen 30\u201350 Jahre. Fertigparkett 20\u201340 Jahre. Vinyl 15\u201325 Jahre. Laminat 15\u201325 Jahre. Teppich 5\u201315 Jahre." },
+      { question: "Soll ich den Boden vor dem Hausverkauf erneuern?", answer: "Abgenutzter Teppich sollte ersetzt werden. Besch\u00e4digtes Parkett kann f\u00fcr 25\u201340 \u20ac/m\u00b2 abgeschliffen werden. Neuer Vinylboden in K\u00fcche und Bad ist eine lohnende Investition." },
+      { question: "Welcher Bodenbelag eignet sich am besten f\u00fcr die K\u00fcche?", answer: "Vinyl-Designboden und Feinsteinzeugfliesen sind die besten Optionen f\u00fcr die K\u00fcche. Beide sind wasserfest, langlebig und leicht zu reinigen. Vinyl ist fu\u00dfwarm und einfacher zu verlegen. Fliesen sind widerstandsf\u00e4higer, aber k\u00e4lter." },
+    ],
+  },
+
+  fenceCost: {
+    title: "Was kostet ein Zaun? Preisratgeber 2026",
+    metaDescription: "Ein Zaun kostet 30\u2013100 \u20ac pro laufenden Meter montiert in 2026. Kompletter Preisratgeber f\u00fcr Holz-, Metall- und WPC-Z\u00e4une mit Materialkosten, Arbeitskosten und Spartipps.",
+    heroTitle: "Was kostet ein Zaun?",
+    heroSubtitle: "Preisratgeber 2026",
+    heroDescription: "Komplette Kosten\u00fcbersicht f\u00fcr Z\u00e4une nach Material, Stil und Projektgr\u00f6\u00dfe mit Preisen, Montagekosten und Spartipps.",
+    quickAnswerHeading: "Schnelle Antwort",
+    quickAnswerText: "Ein Zaun kostet 30 bis 100 \u20ac pro laufenden Meter montiert in 2026. Ein 15 Meter Holz-Sichtschutzzaun kostet 450\u2013900 \u20ac Material oder 900\u20131.500 \u20ac mit Montage.",
+    fenceTypesHeading: "Zaunkosten nach Material",
+    fenceTypesIntro: "Das Material ist der gr\u00f6\u00dfte Kostenfaktor:",
+    fenceTypesColType: "Zaunmaterial",
+    fenceTypesColCost: "Kosten pro Meter (montiert)",
+    fenceTypesColBestFor: "Ideal f\u00fcr",
+    fenceTypesRows: [
+      { type: "Druckimpr\u00e4gniertes Holz", cost: "30 \u2013 60 \u20ac", bestFor: "Sichtschutz, beliebteste Wahl. 15\u201320 Jahre." },
+      { type: "L\u00e4rche / Douglasie", cost: "40 \u2013 80 \u20ac", bestFor: "Nat\u00fcrliche Best\u00e4ndigkeit. 15\u201325 Jahre." },
+      { type: "Doppelstabmatte", cost: "40 \u2013 90 \u20ac", bestFor: "Stabil, langlebig. 25\u201340 Jahre." },
+      { type: "Maschendraht", cost: "15 \u2013 35 \u20ac", bestFor: "G\u00fcnstigste Option. 15\u201320 Jahre." },
+      { type: "WPC", cost: "60 \u2013 120 \u20ac", bestFor: "Holzoptik ohne Pflege. 25\u201350 Jahre." },
+      { type: "Aluminium", cost: "50 \u2013 120 \u20ac", bestFor: "Dekorativ, wartungsfrei. 20\u201330 Jahre." },
+    ],
+    costByProjectHeading: "Kosten nach Projektgr\u00f6\u00dfe",
+    costByProjectIntro: "Typische Kosten 2026 f\u00fcr Holzz\u00e4une:",
+    costByProjectColProject: "Projekt",
+    costByProjectColTypical: "Typische Kosten (montiert)",
+    costByProjectColNotes: "Hinweise",
+    costByProjectRows: [
+      { project: "Kleiner Garten (10 m)", typical: "300 \u2013 700 \u20ac", notes: "Material: 150\u2013350 \u20ac." },
+      { project: "Normaler Garten (15 m)", typical: "450 \u2013 1.000 \u20ac", notes: "H\u00e4ufigste Gr\u00f6\u00dfe." },
+      { project: "Gro\u00dfer Garten (25 m)", typical: "750 \u2013 1.700 \u20ac", notes: "Mengenrabatt m\u00f6glich." },
+      { project: "Umrandung (40 m)", typical: "1.200 \u2013 2.800 \u20ac", notes: "Material: 600\u20131.400 \u20ac." },
+      { project: "Zaun mit Tor", typical: "800 \u2013 2.000 \u20ac", notes: "Tor: 100\u2013400 \u20ac extra." },
+      { project: "Vorgarten", typical: "400 \u2013 1.500 \u20ac", notes: "Baurechtliche Vorgaben beachten." },
+    ],
+    laborCostsHeading: "Montagekosten",
+    laborCostsIntro: "Die Montage macht 40\u201360% der Gesamtkosten aus.",
+    laborCostsText1: "Professionelle Montage: 15\u201330 \u20ac pro Meter. 15 Meter dauern 1\u20132 Tage.",
+    laborCostsText2: "Steiniger Boden und Hanglagen erh\u00f6hen die Kosten um 10\u201325%.",
+    laborCostsText3: "Mindestens 3 Angebote einholen. Nebensaison spart 10\u201320%.",
+    diyVsProHeading: "Selbst bauen vs Fachbetrieb",
+    diyVsProIntro: "Selbst bauen spart 40\u201360%:",
+    diyVsProItems: [
+      "Material f\u00fcr 15 m: 225\u2013500 \u20ac.",
+      "Professionell: 450\u20131.000 \u20ac total.",
+      "Werkzeug: Erdbohrer, Wasserwaage, S\u00e4ge, Akkubohrer.",
+      "1\u20132 Wochenenden f\u00fcr 15 Meter.",
+      "H\u00e4ufige Fehler: Pfosten nicht lotrecht.",
+      "Alle Pfosten Tag 1, Felder Tag 2.",
+    ],
+    diyVsProSummary: "Selbstbau spart 200\u2013500 \u20ac. Bei schwierigem Boden Fachbetrieb beauftragen.",
+    savingTipsHeading: "Spartipps",
+    savingTipsIntro: "So sparen Sie beim Zaun:",
+    savingTipsItems: [
+      "Druckimpr\u00e4gniertes Holz statt L\u00e4rche \u2014 30\u201350% g\u00fcnstiger.",
+      "Nebensaison nutzen \u2014 10\u201320% Ersparnis.",
+      "Kosten mit Nachbarn teilen.",
+      "Fertige Zaunfelder statt Einzellatten.",
+      "Beim Holzhandel statt Baumarkt kaufen.",
+      "Baugenehmigung selbst beantragen.",
+    ],
+    calculatorCtaHeading: "Zaunmaterial berechnen",
+    calculatorCtaText: "Nutzen Sie unsere kostenlosen Rechner f\u00fcr eine genaue Materialberechnung.",
+    calculatorLinks: [
+      { label: "Zaun-Rechner", href: "/calculators/outdoor/fence-calculator", description: "Pfosten, Riegel und Latten berechnen." },
+      { label: "Zaunpfosten-Rechner", href: "/calculators/outdoor/fence-post-calculator", description: "Pfostenanzahl und Beton." },
+      { label: "Zaunfeld-Rechner", href: "/calculators/outdoor/fence-panel-calculator", description: "Fertige Zaunelemente." },
+      { label: "Lattenzaun-Rechner", href: "/calculators/outdoor/picket-fence-calculator", description: "Latten mit individuellem Abstand." },
+    ],
+    faqHeading: "H\u00e4ufig gestellte Fragen",
+    faqs: [
+      { question: "Was kostet ein 20 Meter Zaun?", answer: "Holzzaun: 600\u20131.400 \u20ac montiert, 300\u2013700 \u20ac Material." },
+      { question: "Welcher Zaun ist am g\u00fcnstigsten?", answer: "Maschendraht ab 15 \u20ac/m. Sichtschutz: Holz ab 30 \u20ac/m montiert." },
+      { question: "Ist Selbstbau g\u00fcnstiger?", answer: "Ja, spart 40\u201360%." },
+      { question: "Wie lange h\u00e4lt ein Holzzaun?", answer: "Druckimpr\u00e4gniert: 15\u201320 Jahre. L\u00e4rche: 15\u201325 Jahre." },
+      { question: "Brauche ich eine Baugenehmigung?", answer: "Niedrige Z\u00e4une meist genehmigungsfrei. H\u00f6here Z\u00e4une variieren \u2014 Bauamt kontaktieren." },
+      { question: "Welcher Zaun erh\u00f6ht den Hauswert?", answer: "Gepflegter Sichtschutzzaun bringt 50\u201370% als Wertsteigerung." },
     ],
   },
 };

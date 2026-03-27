@@ -65,6 +65,18 @@ const guides: GuidesTranslations = {
           "A brita custa R$60–R$180 por tonelada. Guia completo de preços para entradas, pátios, caminhos, drenagem e paisagismo com frete e cálculo de quantidade.",
         href: "/guides/gravel-cost-guide",
       },
+      {
+        title: "Quanto Custa uma Entrada/Garagem? Guia de Preços 2026",
+        description:
+          "Uma entrada nova custa R$5.000–R$80.000 dependendo do material e tamanho. Guia completo: concreto, asfalto, brita e piso intertravado com tabelas de custo, fatores de preço e dicas de economia.",
+        href: "/guides/driveway-cost-guide",
+      },
+      {
+        title: "Guia de Custos de Piso: Quanto Custa um Piso Novo?",
+        description:
+          "Pisos custam R$30\u2013R$300/m\u00b2 instalados. Guia completo de pre\u00e7os para porcelanato, laminado, carpete, vinilo e madeira com estimativas por c\u00f4modo e dicas de economia.",
+        href: "/guides/flooring-cost-guide",
+      },
     ],
   },
 
@@ -1429,6 +1441,289 @@ const guides: GuidesTranslations = {
         answer:
           "Sim, significativamente. Entrada de brita custa R$25–R$80/m² em material (R$60–R$200/m² instalada), vs R$150–R$350/m² para concreto e R$120–R$280/m² para asfalto. Porém, brita exige mais manutenção e reposição a cada 2–3 anos.",
       },
+    ],
+  },
+
+  drivewayCost: {
+    title: "Quanto Custa uma Entrada/Garagem? Guia de Preços 2026",
+    metaDescription:
+      "Uma entrada nova custa R$5.000–R$80.000 em 2026 dependendo do material e tamanho. Guia completo: concreto (R$150–R$350/m²), asfalto (R$120–R$280/m²), brita (R$25–R$80/m²), piso intertravado (R$200–R$500/m²). Fatores de preço, faça você mesmo vs empreiteiro e dicas de economia.",
+
+    heroTitle: "Quanto Custa uma Entrada?",
+    heroSubtitle: "Guia de Preços 2026",
+    heroDescription:
+      "Análise completa de custos de entrada por material, tamanho e região no Brasil. Cobre concreto, asfalto, brita e piso intertravado com preços instalados, comparações de durabilidade, fatores que afetam o custo e formas comprovadas de economizar.",
+
+    quickAnswerHeading: "Resposta Rápida",
+    quickAnswerText:
+      "Uma entrada nova custa R$5.000 a R$80.000 em 2026, com a maioria dos proprietários pagando R$10.000 a R$40.000 por uma entrada padrão para dois carros. A brita é a mais barata a R$25–R$80/m². O asfalto custa R$120–R$280/m². O concreto custa R$150–R$350/m². O piso intertravado é o mais caro a R$200–R$500/m². Estes preços incluem materiais e instalação profissional.",
+
+    costByMaterialHeading: "Custo de Entrada por Material",
+    costByMaterialIntro:
+      "O material escolhido é o fator mais importante no custo da entrada. Cada opção oferece um equilíbrio diferente entre preço, durabilidade, aparência e manutenção. Confira os custos no Brasil em 2026:",
+    costByMaterialColMaterial: "Material",
+    costByMaterialColCostSqFt: "Custo Instalado / m²",
+    costByMaterialColLifespan: "Vida Útil",
+    costByMaterialColBestFor: "Ideal Para",
+    costByMaterialRows: [
+      { material: "Brita / Cascalho", costSqFt: "R$25 – R$80", lifespan: "15–25 anos", bestFor: "Propriedades rurais, entradas longas, orçamento limitado. Requer reposição periódica." },
+      { material: "Asfalto", costSqFt: "R$120 – R$280", lifespan: "15–20 anos", bestFor: "Bom custo-benefício. Superfície flexível que resiste bem a variações de temperatura." },
+      { material: "Concreto", costSqFt: "R$150 – R$350", lifespan: "25–50 anos", bestFor: "A maioria das entradas residenciais. Durável, baixa manutenção, pode ser estampado ou pigmentado." },
+      { material: "Concreto Estampado", costSqFt: "R$200 – R$450", lifespan: "25–50 anos", bestFor: "Aparência decorativa a custo menor que intertravado. Imita tijolo, pedra ou ardósia." },
+      { material: "Piso Intertravado", costSqFt: "R$200 – R$500", lifespan: "25–50+ anos", bestFor: "Residencial de alto padrão. Muito durável, muitos padrões, opções permeáveis disponíveis." },
+      { material: "Pedra Natural", costSqFt: "R$300 – R$800", lifespan: "50+ anos", bestFor: "Entradas de luxo. Granito, ardósia, quartzito ou miracema. Máximo valor estético." },
+    ],
+
+    costBySizeHeading: "Custo de Entrada por Tamanho",
+    costBySizeIntro:
+      "O tamanho da entrada afeta drasticamente o custo total. Uma entrada para um carro ocupa aproximadamente 15–30 m², enquanto para dois carros requer 30–60 m². Entradas circulares podem ultrapassar 100 m².",
+    costBySizeColSize: "Tipo de Entrada",
+    costBySizeColDimensions: "Tamanho Típico",
+    costBySizeColConcrete: "Concreto",
+    costBySizeColAsphalt: "Asfalto",
+    costBySizeColGravel: "Brita",
+    costBySizeRows: [
+      { size: "Um Carro", dimensions: "3×5 m (15 m²)", concrete: "R$2.250 – R$5.250", asphalt: "R$1.800 – R$4.200", gravel: "R$375 – R$1.200" },
+      { size: "Dois Carros Padrão", dimensions: "5×10 m (50 m²)", concrete: "R$7.500 – R$17.500", asphalt: "R$6.000 – R$14.000", gravel: "R$1.250 – R$4.000" },
+      { size: "Dois Carros Ampla", dimensions: "6×12 m (72 m²)", concrete: "R$10.800 – R$25.200", asphalt: "R$8.640 – R$20.160", gravel: "R$1.800 – R$5.760" },
+      { size: "Entrada Longa Rural", dimensions: "3,5×30 m (105 m²)", concrete: "R$15.750 – R$36.750", asphalt: "R$12.600 – R$29.400", gravel: "R$2.625 – R$8.400" },
+      { size: "Entrada Circular", dimensions: "~100 – 150 m²", concrete: "R$15.000 – R$52.500", asphalt: "R$12.000 – R$42.000", gravel: "R$2.500 – R$12.000" },
+    ],
+
+    factorsHeading: "Fatores que Afetam o Custo da Entrada",
+    factorsIntro:
+      "Além do material e tamanho, vários fatores podem aumentar ou reduzir o custo. Conhecê-los ajuda a orçar com precisão:",
+    factorsItems: [
+      "Escolha do material: O fator mais importante. Brita a R$25–R$80/m² é 5–10× mais barata que pedra natural a R$300–R$800/m².",
+      "Área e formato: Entradas maiores custam mais no total mas geralmente têm menor custo por m². Entradas curvas exigem 20–40% mais mão de obra.",
+      "Preparação do terreno e nivelamento: Se o terreno precisar de escavação ou aterro, espere adicionar R$30–R$100/m². Terrenos em aclive precisam de muros de arrimo.",
+      "Drenagem: Drenagem adequada (canaletas, caixas de passagem) custa R$1.500–R$8.000 dependendo da complexidade.",
+      "Remoção da entrada antiga: Remover concreto antigo custa R$30–R$80/m². Asfalto é um pouco mais barato. Brita geralmente pode ser reaproveitada.",
+      "Custos regionais: Os preços variam 30–50% por região. São Paulo, Rio de Janeiro e Brasília são 20–40% mais caros que cidades menores.",
+      "Alvarás: Verifique com a prefeitura se é necessário alvará para pavimentação da entrada (R$100–R$500).",
+      "Preparação da base: Uma sub-base de brita compactada (15–30 cm) é essencial para concreto e asfalto. Adiciona R$20–R$60/m².",
+    ],
+
+    diyVsContractorHeading: "Faça Você Mesmo vs Contratar Profissional",
+    diyVsContractorIntro:
+      "Se você pode instalar uma entrada sozinho depende do material escolhido. Aqui está uma avaliação honesta:",
+    diyVsContractorText1:
+      "Entradas de brita são a opção mais amigável para fazer você mesmo. Com ferramentas básicas (pá, ancinho e compactador manual ou placa vibratória alugada), um proprietário pode instalar uma entrada de brita em um fim de semana. O processo inclui limpar a área, colocar manta geotêxtil, espalhar a brita em camadas de 5 cm e compactar cada camada. A instalação DIY economiza 40–60%.",
+    diyVsContractorText2:
+      "Entradas de concreto e asfalto não são projetos práticos para a maioria. O concreto exige equipamento especializado (caminhão betoneira, vibrador, régua, desempenadeira), timing preciso durante a concretagem e experiência com nivelamento e formas. Um concreto mal feito vai trincar prematuramente.",
+    diyVsContractorText3:
+      "Entradas de piso intertravado ficam no meio. Um DIYer experiente pode assentar pisos em um fim de semana longo, mas a preparação da base é muito trabalhosa. Para a maioria, ter a base feita profissionalmente e assentar o piso você mesmo oferece o melhor equilíbrio entre economia (25–35%) e qualidade. Sempre peça pelo menos três orçamentos.",
+
+    savingTipsHeading: "Como Economizar em uma Entrada Nova",
+    savingTipsIntro:
+      "Uma entrada é um investimento significativo, mas existem estratégias comprovadas para reduzir o custo sem sacrificar qualidade:",
+    savingTipsItems: [
+      "Peça múltiplos orçamentos: Os preços podem variar 30–50% entre empreiteiros. Peça pelo menos três orçamentos escritos detalhando materiais, espessura e garantia.",
+      "Agende na baixa temporada: Meses chuvosos ou inverno são períodos mais lentos. Muitos profissionais oferecem 10–20% de desconto.",
+      "Escolha design simples: Entradas retas e retangulares são as mais baratas. Curvas e detalhes decorativos acrescentam 15–25%.",
+      "Aproveite a base existente: Se a entrada antiga tem uma boa base de brita, o profissional pode aplicar material novo por cima.",
+      "Considere asfalto em vez de concreto: O asfalto custa aproximadamente metade do concreto e funciona bem na maioria dos climas brasileiros.",
+      "Use brita para entradas longas: Se a entrada tem mais de 30 metros, use brita na parte principal e pavimente apenas os primeiros metros.",
+      "Combine com um vizinho: Contratar o mesmo profissional para dois projetos pode gerar desconto de 5–15%.",
+    ],
+
+    calculatorCtaHeading: "Estime o Custo da Sua Entrada",
+    calculatorCtaText: "Use nossas calculadoras gratuitas para estimar a quantidade exata de material e custo do seu projeto.",
+    calculatorLinks: [
+      { label: "Calculadora de Laje de Concreto", href: "/calculators/foundation/concrete-slab-calculator", description: "Calcule metros cúbicos, sacos e custo para uma entrada de concreto." },
+      { label: "Calculadora de Brita", href: "/calculators/foundation/gravel-calculator", description: "Estime toneladas e metros cúbicos para uma entrada de brita com faixa de custo." },
+      { label: "Calculadora de Brita para Entrada", href: "/calculators/foundation/driveway-gravel-calculator", description: "Calculadora específica para brita de entrada por tipo e tamanho." },
+    ],
+
+    faqHeading: "Perguntas Frequentes",
+    faqs: [
+      {
+        question: "Quanto custa construir uma entrada em 2026?",
+        answer:
+          "Uma entrada nova custa R$5.000 a R$80.000 em 2026, com média de R$10.000 a R$40.000 para uma entrada padrão de dois carros em concreto (50 m²). Brita é a mais barata a R$1.250–R$4.000 instalada. Asfalto custa R$6.000–R$14.000. Concreto custa R$7.500–R$17.500. Intertravado é o mais caro a R$10.000–R$25.000+.",
+      },
+      {
+        question: "Qual é o tipo de entrada mais barato?",
+        answer:
+          "Brita/cascalho é o material mais barato a R$25–R$80/m² em material, ou R$60–R$200/m² instalada. Uma entrada padrão de dois carros em brita custa R$1.250–R$4.000 instalada, vs R$7.500–R$17.500 em concreto. A brita também é a opção mais acessível para fazer você mesmo, economizando 40–60%.",
+      },
+      {
+        question: "Quanto custa uma entrada de concreto por metro quadrado?",
+        answer:
+          "Uma entrada de concreto custa R$150 a R$350/m² instalada em 2026. Concreto simples com acabado vassoura custa R$150–R$250/m². Concreto estampado custa R$200–R$450/m². Uma entrada de 50 m² para dois carros em concreto simples custa R$7.500–R$17.500 instalada. Entradas de concreto duram 25–50 anos.",
+      },
+      {
+        question: "Asfalto ou concreto é mais barato para entrada?",
+        answer:
+          "Asfalto é mais barato inicialmente a R$120–R$280/m² vs R$150–R$350/m² para concreto. Porém, asfalto precisa de manutenção a cada 2–3 anos e dura 15–20 anos vs 25–50 anos do concreto. A longo prazo, o custo total é frequentemente similar.",
+      },
+      {
+        question: "Como calculo quanto vai custar minha entrada?",
+        answer:
+          "Para estimar: (1) Meça comprimento e largura em metros para obter a área. (2) Multiplique pelo custo por m²: brita R$25–R$80, asfalto R$120–R$280, concreto R$150–R$350, intertravado R$200–R$500. (3) Adicione 10–20% para preparação do terreno e contingência. Use nossas calculadoras gratuitas para estimativas precisas.",
+      },
+      {
+        question: "Quanto dura uma entrada por tipo de material?",
+        answer:
+          "A durabilidade varia significativamente. Brita dura 15–25 anos mas precisa de reposição a cada 2–3 anos. Asfalto dura 15–20 anos com manutenção regular. Concreto dura 25–50 anos com manutenção mínima. Piso intertravado dura 25–50+ anos com a vantagem de poder substituir peças individuais. Pedra natural pode durar 50+ anos.",
+      },
+    ],
+  },
+  flooringCost: {
+    title: "Guia de Custos de Piso: Quanto Custa um Piso Novo?",
+    metaDescription: "Pisos custam R$30\u2013R$300/m\u00b2 instalados. Guia completo de pre\u00e7os para porcelanato, laminado, carpete, vinilo e madeira com estimativas por c\u00f4modo e dicas de economia.",
+    heroTitle: "Guia de Custos de Piso",
+    heroSubtitle: "Pre\u00e7os 2026",
+    heroDescription: "Tudo sobre custos de piso \u2014 materiais, instala\u00e7\u00e3o, or\u00e7amentos por c\u00f4modo e estrat\u00e9gias de economia.",
+    quickAnswerHeading: "Resposta R\u00e1pida",
+    quickAnswerText: "Um piso novo custa R$30 a R$300 por m\u00b2 instalado. Laminado \u00e9 o mais barato: R$50\u2013R$150/m\u00b2, seguido de carpete (R$60\u2013R$200), vinilo LVP (R$80\u2013R$250), porcelanato (R$120\u2013R$350) e madeira (R$150\u2013R$400).",
+    flooringTypesHeading: "Custos por Tipo de Material",
+    flooringTypesIntro: "Pre\u00e7os por metro quadrado instalado por tipo de material.",
+    flooringTypesColType: "Tipo de Piso",
+    flooringTypesColCost: "Custo Instalado (por m\u00b2)",
+    flooringTypesColBestFor: "Melhor Para",
+    flooringTypesRows: [
+      { type: "Laminado", cost: "R$50 \u2013 R$150", bestFor: "Or\u00e7amento, DIY, aluguel" },
+      { type: "Carpete", cost: "R$60 \u2013 R$200", bestFor: "Quartos, conforto" },
+      { type: "Vinilo LVP", cost: "R$80 \u2013 R$250", bestFor: "Cozinhas, banheiros, alto tr\u00e1fego" },
+      { type: "Porcelanato", cost: "R$120 \u2013 R$350", bestFor: "Banheiros, cozinhas, halls" },
+      { type: "Madeira engenheirada", cost: "R$100 \u2013 R$300", bestFor: "Salas, visual de t\u00e1bua larga" },
+      { type: "Madeira maci\u00e7a", cost: "R$150 \u2013 R$400", bestFor: "\u00c1reas sociais, valor a longo prazo" },
+      { type: "Pedra natural", cost: "R$250 \u2013 R$600", bestFor: "Alto padr\u00e3o" },
+    ],
+    costByRoomHeading: "Custo por C\u00f4modo",
+    costByRoomIntro: "Custos totais t\u00edpicos por tipo de c\u00f4modo com materiais de padr\u00e3o m\u00e9dio.",
+    costByRoomColRoom: "C\u00f4modo",
+    costByRoomColTypical: "Custo Total",
+    costByRoomColNotes: "Notas",
+    costByRoomRows: [
+      { room: "Banheiro (5 m\u00b2)", typical: "R$1.000 \u2013 R$3.000", notes: "Porcelanato ou vin\u00edlico" },
+      { room: "Quarto (14 m\u00b2)", typical: "R$1.500 \u2013 R$5.000", notes: "Laminado ou carpete" },
+      { room: "Cozinha (18 m\u00b2)", typical: "R$2.500 \u2013 R$8.000", notes: "Porcelanato ou vin\u00edlico" },
+      { room: "Sala (28 m\u00b2)", typical: "R$3.500 \u2013 R$12.000", notes: "Madeira ou vin\u00edlico" },
+      { room: "Casa inteira (140 m\u00b2)", typical: "R$12.000 \u2013 R$50.000", notes: "Mix de materiais" },
+    ],
+    installationCostsHeading: "Custos de Instala\u00e7\u00e3o: DIY vs Profissional",
+    installationCostsIntro: "A m\u00e3o de obra \u00e9 40\u201360% do custo total.",
+    installationCostsText1: "Instala\u00e7\u00e3o profissional custa R$30\u2013R$100/m\u00b2. Porcelanato \u00e9 o mais caro: R$60\u2013R$150/m\u00b2. Carpete \u00e9 o mais barato: R$20\u2013R$50/m\u00b2.",
+    installationCostsText2: "Instalar por conta pr\u00f3pria economiza 50\u201370% na m\u00e3o de obra. Laminado e vin\u00edlico click s\u00e3o os mais f\u00e1ceis.",
+    installationCostsText3: "Custos adicionais: nivelamento (R$30\u2013R$80/m\u00b2), remo\u00e7\u00e3o do piso antigo (R$15\u2013R$40/m\u00b2), movimenta\u00e7\u00e3o de m\u00f3veis (R$200\u2013R$800), perfis de transi\u00e7\u00e3o (R$20\u2013R$60/pe\u00e7a).",
+    howToCalculateHeading: "Como Calcular o Piso Necess\u00e1rio",
+    howToCalculateIntro: "Passos para estimar materiais com precis\u00e3o.",
+    howToCalculateItems: [
+      "Me\u00e7a comprimento e largura de cada c\u00f4modo em metros. Multiplique para m\u00b2.",
+      "C\u00f4modos irregulares: divida em ret\u00e2ngulos e some.",
+      "Adicione 10% de perda para assentamento reto.",
+      "15\u201320% para padr\u00f5es diagonais ou espinha de peixe.",
+      "Divida o total pela cobertura por caixa.",
+      "Sempre arredonde para cima.",
+    ],
+    howToCalculateSummary: "Use nossa calculadora gratuita para estimativas instant\u00e2neas com fator de perda autom\u00e1tico.",
+    savingTipsHeading: "Como Economizar no Piso",
+    savingTipsIntro: "Compras inteligentes podem reduzir custos em 20\u201340%.",
+    savingTipsItems: [
+      "Compre em promo\u00e7\u00f5es de temporada para 20\u201330% de desconto.",
+      "Compre em lojas especializadas e atacado.",
+      "Instale piso click por conta pr\u00f3pria.",
+      "Use materiais diferentes por c\u00f4modo.",
+      "Pe\u00e7a tudo de uma vez para descontos de quantidade.",
+      "Guarde sobras para reparos futuros.",
+    ],
+    calculatorCtaHeading: "Calcule Seus Materiais",
+    calculatorCtaText: "Use nossas calculadoras gratuitas para estimativas instant\u00e2neas.",
+    calculatorLinks: [
+      { label: "Calculadora de Piso", href: "/calculators/flooring/flooring-calculator/", description: "Calculadora geral de m\u00b2 e caixas" },
+      { label: "Calculadora de Carpete", href: "/calculators/flooring/carpet-calculator/", description: "M\u00b2, metros lineares e manta" },
+      { label: "Calculadora de Porcelanato", href: "/calculators/flooring/tile-calculator/", description: "Pe\u00e7as, rejunte e argamassa" },
+      { label: "Calculadora de Laminado", href: "/calculators/flooring/laminate-calculator/", description: "R\u00e9guas, caixas e manta" },
+    ],
+    faqHeading: "Perguntas Frequentes",
+    faqs: [
+      { question: "Qual \u00e9 o piso mais barato?", answer: "Laminado: R$50\u2013R$150/m\u00b2 instalado. DIY: R$25\u2013R$70/m\u00b2 de material." },
+      { question: "Quanto custa colocar piso na casa toda?", answer: "Casa de 140 m\u00b2 custa R$12.000\u2013R$50.000. Mix t\u00edpico: R$20.000\u2013R$35.000." },
+      { question: "Qual piso valoriza mais o im\u00f3vel?", answer: "Madeira gera mais valoriza\u00e7\u00e3o na revenda. Porcelanato e vin\u00edlico em cozinha/banheiro tamb\u00e9m." },
+      { question: "Quanto dura cada tipo de piso?", answer: "Madeira maci\u00e7a: 50\u2013100 anos. Pedra: 50+. Porcelanato: 30\u201350. Laminado/vin\u00edlico: 15\u201325. Carpete: 5\u201315." },
+      { question: "Devo trocar o piso antes de vender?", answer: "Carpete gasto deve ser trocado. Madeira danificada pode ser lixada. Vin\u00edlico novo na cozinha/banheiro \u00e9 bom investimento." },
+      { question: "Qual o melhor piso para cozinha?", answer: "Porcelanato e vin\u00edlico LVP. Imperme\u00e1veis, dur\u00e1veis e f\u00e1ceis de limpar." },
+    ],
+  },
+
+  fenceCost: {
+    title: "Quanto Custa uma Cerca? Guia de Pre\u00e7os 2026",
+    metaDescription: "Uma cerca custa R$ 80\u2013300 por metro linear instalada em 2026. Guia completo de pre\u00e7os para cercas de madeira, alambrado, ferro e compostos com custos de m\u00e3o de obra e dicas de economia.",
+    heroTitle: "Quanto Custa uma Cerca?",
+    heroSubtitle: "Guia de Pre\u00e7os 2026",
+    heroDescription: "Detalhamento completo de custos de cercas por material, estilo e tamanho de projeto com pre\u00e7os, m\u00e3o de obra e dicas de economia.",
+    quickAnswerHeading: "Resposta R\u00e1pida",
+    quickAnswerText: "Uma cerca custa R$ 80 a R$ 300 por metro linear instalada em 2026. Cerca de madeira de privacidade de 30 metros custa R$ 2.400\u2013R$ 4.500 em materiais ou R$ 4.800\u2013R$ 9.000 instalada.",
+    fenceTypesHeading: "Custo por Material",
+    fenceTypesIntro: "O material \u00e9 o maior fator de custo:",
+    fenceTypesColType: "Material",
+    fenceTypesColCost: "Custo/metro (instalado)",
+    fenceTypesColBestFor: "Ideal para",
+    fenceTypesRows: [
+      { type: "Madeira Tratada", cost: "R$ 80 \u2013 R$ 180", bestFor: "Privacidade, mais popular. Dura 15\u201320 anos." },
+      { type: "Madeira de Lei", cost: "R$ 150 \u2013 R$ 300", bestFor: "Resist\u00eancia natural. Dura 20\u201330 anos." },
+      { type: "Alambrado", cost: "R$ 40 \u2013 R$ 100", bestFor: "Seguran\u00e7a, menor custo. Dura 15\u201320 anos." },
+      { type: "Ferro / Metal", cost: "R$ 150 \u2013 R$ 350", bestFor: "Decorativa, seguran\u00e7a. Dura 20\u201330 anos." },
+      { type: "PVC / Vinilo", cost: "R$ 120 \u2013 R$ 250", bestFor: "Sem manuten\u00e7\u00e3o. Dura 20\u201330 anos." },
+      { type: "Composto", cost: "R$ 180 \u2013 R$ 350", bestFor: "Apar\u00eancia de madeira sem manuten\u00e7\u00e3o. Dura 25\u201350 anos." },
+    ],
+    costByProjectHeading: "Custo por Tamanho",
+    costByProjectIntro: "Custos t\u00edpicos 2026 para cercas de madeira tratada:",
+    costByProjectColProject: "Projeto",
+    costByProjectColTypical: "Custo T\u00edpico (Instalado)",
+    costByProjectColNotes: "Notas",
+    costByProjectRows: [
+      { project: "Quintal Pequeno (10 m)", typical: "R$ 1.600 \u2013 R$ 3.500", notes: "Materiais: R$ 800\u2013R$ 1.800." },
+      { project: "Quintal M\u00e9dio (20 m)", typical: "R$ 3.200 \u2013 R$ 7.000", notes: "Tamanho mais comum." },
+      { project: "Quintal Grande (30 m)", typical: "R$ 4.800 \u2013 R$ 10.500", notes: "Desconto por volume poss\u00edvel." },
+      { project: "Per\u00edmetro (50 m)", typical: "R$ 8.000 \u2013 R$ 17.500", notes: "Considere instala\u00e7\u00e3o em fases." },
+      { project: "Cerca com Port\u00e3o", typical: "R$ 5.000 \u2013 R$ 12.000", notes: "Port\u00e3o: R$ 500\u2013R$ 2.000 extra." },
+      { project: "Cerca de Piscina", typical: "R$ 4.000 \u2013 R$ 10.000", notes: "NBR 16776 obrigat\u00f3ria." },
+    ],
+    laborCostsHeading: "Custos de M\u00e3o de Obra",
+    laborCostsIntro: "M\u00e3o de obra representa 40\u201360% do custo total.",
+    laborCostsText1: "Instala\u00e7\u00e3o profissional: R$ 30\u201380 por metro. Uma cerca de 20 m leva 2\u20133 dias.",
+    laborCostsText2: "Solo rochoso e terreno inclinado aumentam custos em 10\u201325%.",
+    laborCostsText3: "Pe\u00e7a pelo menos 3 or\u00e7amentos. Baixa temporada pode economizar 10\u201320%.",
+    diyVsProHeading: "Fa\u00e7a Voc\u00ea Mesmo vs Profissional",
+    diyVsProIntro: "Construir voc\u00ea mesmo economiza 40\u201360%:",
+    diyVsProItems: [
+      "Materiais para 20 m: R$ 1.600\u2013R$ 3.500.",
+      "Profissional: R$ 3.200\u2013R$ 7.000 total.",
+      "Ferramentas: cavadeira, n\u00edvel, serra, furadeira.",
+      "2\u20133 fins de semana para 20 metros.",
+      "Erros comuns: mour\u00f5es fora de prumo.",
+      "Todos os mour\u00f5es dia 1, r\u00e9guas dia 2.",
+    ],
+    diyVsProSummary: "DIY economiza R$ 1.600\u2013R$ 3.500. Contrate profissional para solo dif\u00edcil.",
+    savingTipsHeading: "Dicas de Economia",
+    savingTipsIntro: "Como reduzir custos:",
+    savingTipsItems: [
+      "Madeira tratada vs madeira de lei: 30\u201350% mais barata.",
+      "Construa na baixa temporada: 10\u201320% de economia.",
+      "Divida custo com vizinho 50/50.",
+      "Pain\u00e9is pr\u00e9-fabricados s\u00e3o mais r\u00e1pidos.",
+      "Compre em madeireira para melhor pre\u00e7o.",
+      "Tire a licen\u00e7a voc\u00ea mesmo.",
+    ],
+    calculatorCtaHeading: "Calcule seus Materiais",
+    calculatorCtaText: "Use nossas calculadoras gratuitas para estimar materiais e custo.",
+    calculatorLinks: [
+      { label: "Calculadora de Cerca", href: "/calculators/outdoor/fence-calculator", description: "Mour\u00f5es, travessas e r\u00e9guas." },
+      { label: "Calculadora de Mour\u00f5es", href: "/calculators/outdoor/fence-post-calculator", description: "Mour\u00f5es e concreto." },
+      { label: "Calculadora de Pain\u00e9is", href: "/calculators/outdoor/fence-panel-calculator", description: "Pain\u00e9is pr\u00e9-fabricados." },
+      { label: "Calculadora de Estacas", href: "/calculators/outdoor/picket-fence-calculator", description: "Estacas com espa\u00e7amento livre." },
+    ],
+    faqHeading: "Perguntas Frequentes",
+    faqs: [
+      { question: "Quanto custa cerca de 30 m?", answer: "Madeira: R$ 4.800\u2013R$ 10.500 instalada, R$ 2.400\u2013R$ 4.500 materiais." },
+      { question: "Qual cerca mais barata?", answer: "Alambrado a R$ 40\u2013100/m. Privacidade: madeira tratada a R$ 80\u2013180/m." },
+      { question: "DIY \u00e9 mais barato?", answer: "Sim, economiza 40\u201360%." },
+      { question: "Quanto dura cerca de madeira?", answer: "Tratada: 15\u201320 anos. Madeira de lei: 20\u201330 anos." },
+      { question: "Preciso de licen\u00e7a?", answer: "Depende do munic\u00edpio. Consulte a prefeitura local." },
+      { question: "Qual cerca valoriza mais?", answer: "Cerca de madeira bem mantida recupera 50\u201370% em valor do im\u00f3vel." },
     ],
   },
 };

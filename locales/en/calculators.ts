@@ -103,6 +103,14 @@ export const categories: CategoryMeta[] = [
         category: "Foundation",
         categorySlug: "foundation",
       },
+      {
+        slug: "retaining-wall-calculator",
+        title: "Retaining Wall Calculator",
+        description:
+          "Retaining wall calculator — free tool for block, CMU & stone walls. Get block count, cap blocks, gravel backfill & drainage estimates instantly.",
+        category: "Foundation",
+        categorySlug: "foundation",
+      },
     ],
   },
   {
@@ -217,6 +225,14 @@ export const categories: CategoryMeta[] = [
         category: "Finishing",
         categorySlug: "finishing",
       },
+      {
+        slug: "epoxy-calculator",
+        title: "Epoxy Calculator",
+        description:
+          "Epoxy calculator — how much epoxy for your garage floor? Free tool for any area. Get gallons, kits & cost estimate for 1-coat and 2-coat systems.",
+        category: "Finishing",
+        categorySlug: "finishing",
+      },
     ],
   },
   {
@@ -264,6 +280,86 @@ export const categories: CategoryMeta[] = [
           "Post hole calculator — how much concrete for fence posts? Free tool for any hole size. Get exact bag count for 50 lb & 80 lb Quikrete bags.",
         category: "Outdoor",
         categorySlug: "outdoor",
+      },
+      {
+        slug: "pond-calculator",
+        title: "Pond Calculator",
+        description:
+          "Pond calculator — free tool for volume, liner size & pump capacity. Enter dimensions for rectangular, oval or kidney-shaped ponds instantly.",
+        category: "Outdoor",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "fence-calculator",
+        title: "Fence Calculator",
+        description:
+          "Fence calculator — how many posts, rails & pickets for your fence? Free fence material calculator for wood privacy fences. Get a complete material list instantly.",
+        category: "Outdoor",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "fence-post-calculator",
+        title: "Fence Post Calculator",
+        description:
+          "Fence post calculator — how many posts and bags of concrete? Free fence post concrete calculator gives post count, concrete bags & gravel for any fence length.",
+        category: "Outdoor",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "fence-panel-calculator",
+        title: "Fence Panel Calculator",
+        description:
+          "Fence panel calculator — how many pre-made panels for your fence? Free fence material calculator for 6 ft & 8 ft panels. Get panel count, posts & post caps.",
+        category: "Outdoor",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "picket-fence-calculator",
+        title: "Picket Fence Calculator",
+        description:
+          "Picket fence calculator — how many pickets with custom spacing? Free tool for any picket width & gap. Get picket count, rails, posts & total board feet.",
+        category: "Outdoor",
+        categorySlug: "outdoor",
+      },
+    ],
+  },
+  {
+    slug: "flooring",
+    title: "Flooring Calculators",
+    description:
+      "Calculate materials for flooring projects including hardwood, carpet, tile, and laminate with waste factors and cost estimates.",
+    calculators: [
+      {
+        slug: "flooring-calculator",
+        title: "Flooring Calculator",
+        description:
+          "Flooring calculator — free square footage estimator for any room. Get box count, waste factor & material list for hardwood, LVP, and engineered wood.",
+        category: "Flooring",
+        categorySlug: "flooring",
+      },
+      {
+        slug: "carpet-calculator",
+        title: "Carpet Calculator",
+        description:
+          "Carpet calculator — free tool to estimate square yards, linear feet & pad needed. Works for 12 ft and 15 ft wide rolls with seam planning.",
+        category: "Flooring",
+        categorySlug: "flooring",
+      },
+      {
+        slug: "tile-calculator",
+        title: "Tile Calculator",
+        description:
+          "Tile calculator — free tool for ceramic, porcelain & stone floors. Get tile count, boxes, grout bags & thinset needed for any room size.",
+        category: "Flooring",
+        categorySlug: "flooring",
+      },
+      {
+        slug: "laminate-calculator",
+        title: "Laminate Flooring Calculator",
+        description:
+          "Laminate flooring calculator — free plank & box estimator with underlayment. Enter room size and plank dimensions for instant material list.",
+        category: "Flooring",
+        categorySlug: "flooring",
       },
     ],
   },

@@ -103,6 +103,14 @@ export const categories: CategoryMeta[] = [
         category: "Fundament",
         categorySlug: "foundation",
       },
+      {
+        slug: "retaining-wall-calculator",
+        title: "Stützmauer-Rechner",
+        description:
+          "Stützmauer-Rechner — kostenloses Tool für Pflanzstein-, Schalungsstein- & Natursteinmauern. Steinbedarf, Abdecksteine, Kiesschüttung & Drainage sofort berechnen.",
+        category: "Fundament",
+        categorySlug: "foundation",
+      },
     ],
   },
   {
@@ -217,6 +225,14 @@ export const categories: CategoryMeta[] = [
         category: "Anstrich",
         categorySlug: "finishing",
       },
+      {
+        slug: "epoxy-calculator",
+        title: "Epoxidharz-Rechner",
+        description:
+          "Epoxidharz-Rechner — wie viel Epoxid für Ihre Garagenbodenbeschichtung? Kostenloses Tool für jede Fläche. Liter, Sets & Kosten für 1- und 2-Schicht-Systeme.",
+        category: "Anstrich",
+        categorySlug: "finishing",
+      },
     ],
   },
   {
@@ -265,6 +281,58 @@ export const categories: CategoryMeta[] = [
         category: "Außenbereich",
         categorySlug: "outdoor",
       },
+      {
+        slug: "pond-calculator",
+        title: "Teich-Rechner",
+        description:
+          "Teich-Rechner — kostenloses Tool für Volumen, Foliengröße & Pumpenleistung. Maße eingeben für rechteckige, ovale oder nierenförmige Teiche.",
+        category: "Außenbereich",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "fence-calculator",
+        title: "Zaun-Rechner",
+        description:
+          "Zaun-Rechner — wie viele Pfosten, Riegel & Latten für Ihren Zaun? Kostenloses Zaunmaterial-Tool für Holzzäune. Komplette Materialliste sofort.",
+        category: "Außenbereich",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "fence-post-calculator",
+        title: "Zaunpfosten-Rechner",
+        description:
+          "Zaunpfosten-Rechner — wie viele Pfosten und Säcke Beton? Kostenloses Tool berechnet Pfosten, Betonsäcke & Kies für jede Zaunlänge.",
+        category: "Außenbereich",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "fence-panel-calculator",
+        title: "Zaunfeld-Rechner",
+        description:
+          "Zaunfeld-Rechner — wie viele Fertigzaunelemente? Kostenloses Tool für 1,80 m und 2,50 m Felder. Feldanzahl, Pfosten & Pfostenkappen.",
+        category: "Außenbereich",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "picket-fence-calculator",
+        title: "Lattenzaun-Rechner",
+        description:
+          "Lattenzaun-Rechner — wie viele Latten mit individuellem Abstand? Kostenloses Tool für jede Lattenbreite & Lücke. Latten, Riegel, Pfosten & Holzbedarf.",
+        category: "Außenbereich",
+        categorySlug: "outdoor",
+      },
+    ],
+  },
+  {
+    slug: "flooring",
+    title: "Bodenbelag-Rechner",
+    description:
+      "Materialien für Bodenbelagprojekte berechnen — Parkett, Teppich, Fliesen und Laminat mit Verschnittfaktor und Kostenvoranschlag.",
+    calculators: [
+      { slug: "flooring-calculator", title: "Bodenbelag-Rechner", description: "Bodenbelag-Rechner — kostenloser Quadratmeter-Rechner für jeden Raum. Pakete, Verschnitt & Materialliste für Parkett, Vinyl und Fertigparkett.", category: "Bodenbelag", categorySlug: "flooring" },
+      { slug: "carpet-calculator", title: "Teppich-Rechner", description: "Teppich-Rechner — kostenloses Tool zur Berechnung von Quadratmetern, Laufmetern & Unterlagevlies. Für 4 m und 5 m breite Rollen mit Nahtplanung.", category: "Bodenbelag", categorySlug: "flooring" },
+      { slug: "tile-calculator", title: "Fliesen-Rechner", description: "Fliesen-Rechner — kostenloses Tool für Keramik-, Feinsteinzeug- & Natursteinböden. Fliesenzahl, Pakete, Fugenmörtel & Fliesenkleber berechnen.", category: "Bodenbelag", categorySlug: "flooring" },
+      { slug: "laminate-calculator", title: "Laminat-Rechner", description: "Laminat-Rechner — kostenloser Dielen- & Paketrechner mit Trittschalldämmung. Raumgröße und Dielenmaße eingeben für sofortige Materialliste.", category: "Bodenbelag", categorySlug: "flooring" },
     ],
   },
 ];

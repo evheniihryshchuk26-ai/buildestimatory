@@ -84,3 +84,39 @@ export function calculatePrimer(
     label: `${gallonsRounded} gallons of primer (${cans} can${cans > 1 ? "s" : ""})`,
   };
 }
+
+// ─── EPOXY ──────────────────────────────────────────────────────────────────
+
+export interface EpoxyResult {
+  areaSqFt: number;
+  gallons: number;
+  kits: number;
+  costLow: number;
+  costHigh: number;
+}
+
+export function calculateEpoxy(
+  lengthFt: number,
+  widthFt: number,
+  coats: number,
+  coveragePerGallon = 250,
+): EpoxyResult {
+  const areaSqFt = lengthFt * widthFt;
+  const totalArea = areaSqFt * coats;
+  const gallonsRaw = totalArea / coveragePerGallon;
+  const gallons = Math.ceil(gallonsRaw * 10) / 10;
+  // Standard kit = 1 gallon covering 250 sq ft
+  const kits = Math.ceil(gallonsRaw);
+
+  // Cost range: $45-$75 per gallon kit for standard, $80-$120 for commercial
+  const costLow = Math.round(kits * 45);
+  const costHigh = Math.round(kits * 120);
+
+  return {
+    areaSqFt: Math.round(areaSqFt * 10) / 10,
+    gallons,
+    kits,
+    costLow,
+    costHigh,
+  };
+}

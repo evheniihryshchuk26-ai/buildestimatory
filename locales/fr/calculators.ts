@@ -119,6 +119,14 @@ export const categories: CategoryMeta[] = [
         category: "Fondations",
         categorySlug: "foundation",
       },
+      {
+        slug: "retaining-wall-calculator",
+        title: "Calculateur de Mur de Soutènement",
+        description:
+          "Calculateur de mur de soutènement — outil gratuit pour murs en blocs, parpaings & pierre. Nombre de blocs, chaperons, gravier de remblai & drainage instantanément.",
+        category: "Fondations",
+        categorySlug: "foundation",
+      },
     ],
   },
   {
@@ -471,6 +479,14 @@ export const categories: CategoryMeta[] = [
         category: "Finitions",
         categorySlug: "finishing",
       },
+      {
+        slug: "epoxy-calculator",
+        title: "Calculateur d'Époxy",
+        description:
+          "Calculateur d'époxy — combien d'époxy pour votre sol de garage ? Outil gratuit pour toute surface. Litres, kits & estimation de coût pour 1 ou 2 couches.",
+        category: "Finitions",
+        categorySlug: "finishing",
+      },
     ],
   },
   {
@@ -519,6 +535,58 @@ export const categories: CategoryMeta[] = [
         category: "Extérieur",
         categorySlug: "outdoor",
       },
+      {
+        slug: "pond-calculator",
+        title: "Calculateur de Bassin",
+        description:
+          "Calculateur de bassin — outil gratuit pour volume, taille de bâche & débit de pompe. Dimensions pour bassins rectangulaires, ovales ou en forme de haricot.",
+        category: "Extérieur",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "fence-calculator",
+        title: "Calculateur de Clôture",
+        description:
+          "Calculateur de clôture — combien de poteaux, traverses et lames ? Outil gratuit de calcul de matériaux pour clôtures en bois. Liste complète instantanée.",
+        category: "Extérieur",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "fence-post-calculator",
+        title: "Calculateur de Poteaux de Clôture",
+        description:
+          "Calculateur de poteaux de clôture — combien de poteaux et sacs de béton ? Outil gratuit : nombre de poteaux, béton et gravier pour toute longueur de clôture.",
+        category: "Extérieur",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "fence-panel-calculator",
+        title: "Calculateur de Panneaux de Clôture",
+        description:
+          "Calculateur de panneaux de clôture — combien de panneaux préfabriqués ? Outil gratuit pour panneaux de 1,80 m et 2,50 m. Panneaux, poteaux et chapeaux.",
+        category: "Extérieur",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "picket-fence-calculator",
+        title: "Calculateur de Palissade",
+        description:
+          "Calculateur de palissade — combien de lattes avec espacement personnalisé ? Outil gratuit pour toute largeur et écart. Lattes, traverses, poteaux et volume de bois.",
+        category: "Extérieur",
+        categorySlug: "outdoor",
+      },
+    ],
+  },
+  {
+    slug: "flooring",
+    title: "Calculateurs de Revêtement de Sol",
+    description:
+      "Calculez les matériaux pour vos projets de revêtement de sol — parquet, moquette, carrelage et stratifié avec facteur de perte et estimation des coûts.",
+    calculators: [
+      { slug: "flooring-calculator", title: "Calculateur de Revêtement de Sol", description: "Calculateur de sol — outil gratuit pour les mètres carrés. Nombre de paquets, chutes et liste de matériaux pour parquet, vinyle et contrecollé.", category: "Revêtement de Sol", categorySlug: "flooring" },
+      { slug: "carpet-calculator", title: "Calculateur de Moquette", description: "Calculateur de moquette — outil gratuit pour mètres carrés, mètres linéaires et thibaude. Pour rouleaux de 4 m et 5 m avec planification des joints.", category: "Revêtement de Sol", categorySlug: "flooring" },
+      { slug: "tile-calculator", title: "Calculateur de Carrelage", description: "Calculateur de carrelage — outil gratuit pour grès cérame, faïence et pierre naturelle. Nombre de carreaux, paquets, joints et colle à carrelage.", category: "Revêtement de Sol", categorySlug: "flooring" },
+      { slug: "laminate-calculator", title: "Calculateur de Stratifié", description: "Calculateur de stratifié — estimateur gratuit de lames et paquets avec sous-couche. Entrez les dimensions pour une liste de matériaux instantanée.", category: "Revêtement de Sol", categorySlug: "flooring" },
     ],
   },
 ];

@@ -107,6 +107,14 @@ export const categories: CategoryMeta[] = [
         category: "Fundamenty",
         categorySlug: "foundation",
       },
+      {
+        slug: "retaining-wall-calculator",
+        title: "Kalkulator Muru Oporowego",
+        description:
+          "Kalkulator muru oporowego \u2014 darmowe narzędzie dla murów z bloczków, pustaków i kamienia. Ilość bloczków, daszki, podsypka żwirowa i drenaż natychmiast.",
+        category: "Fundamenty",
+        categorySlug: "foundation",
+      },
     ],
   },
   {
@@ -459,6 +467,14 @@ export const categories: CategoryMeta[] = [
         category: "Wykończenie",
         categorySlug: "finishing",
       },
+      {
+        slug: "epoxy-calculator",
+        title: "Kalkulator Żywicy Epoksydowej",
+        description:
+          "Kalkulator żywicy epoksydowej \u2014 ile żywicy na podłogę garażu? Darmowe narzędzie na każdą powierzchnię. Litry, zestawy i koszt dla 1 lub 2 warstw.",
+        category: "Wykończenie",
+        categorySlug: "finishing",
+      },
     ],
   },
   {
@@ -507,6 +523,58 @@ export const categories: CategoryMeta[] = [
         category: "Zewnętrzne",
         categorySlug: "outdoor",
       },
+      {
+        slug: "pond-calculator",
+        title: "Kalkulator Oczka Wodnego",
+        description:
+          "Kalkulator oczka wodnego \u2014 darmowe narzędzie do objętości, rozmiaru folii i wydajności pompy. Wymiary dla oczek prostokątnych, owalnych lub nerkowatych.",
+        category: "Zewnętrzne",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "fence-calculator",
+        title: "Kalkulator Ogrodzenia",
+        description:
+          "Kalkulator ogrodzenia — ile słupków, rygli i desek na Twoje ogrodzenie? Darmowe narzędzie do ogrodzeń drewnianych. Pełna lista materiałów natychmiast.",
+        category: "Zewnętrzne",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "fence-post-calculator",
+        title: "Kalkulator Słupków Ogrodzeniowych",
+        description:
+          "Kalkulator słupków ogrodzeniowych — ile słupków i worków betonu? Darmowe narzędzie oblicza słupki, beton i żwir na każdą długość ogrodzenia.",
+        category: "Zewnętrzne",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "fence-panel-calculator",
+        title: "Kalkulator Paneli Ogrodzeniowych",
+        description:
+          "Kalkulator paneli ogrodzeniowych — ile gotowych paneli? Darmowe narzędzie dla paneli 1,80 m i 2,50 m. Panele, słupki i nakładki.",
+        category: "Zewnętrzne",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "picket-fence-calculator",
+        title: "Kalkulator Sztachet",
+        description:
+          "Kalkulator sztachet — ile sztachet z niestandardowym rozstawem? Darmowe narzędzie dla dowolnej szerokości i odstępu. Sztachety, rygle, słupki i objętość drewna.",
+        category: "Zewnętrzne",
+        categorySlug: "outdoor",
+      },
+    ],
+  },
+  {
+    slug: "flooring",
+    title: "Kalkulatory Podłóg",
+    description:
+      "Oblicz materiały na podłogi — parkiet, wykładzina, płytki i laminat z uwzględnieniem odpadu i szacunkiem kosztów.",
+    calculators: [
+      { slug: "flooring-calculator", title: "Kalkulator Podłóg", description: "Kalkulator podłóg — darmowe narzędzie do metrów kwadratowych. Paczki, odpad i lista materiałów na parkiet, winyl i deski warstwowe.", category: "Podłogi", categorySlug: "flooring" },
+      { slug: "carpet-calculator", title: "Kalkulator Wykładziny", description: "Kalkulator wykładziny — darmowe narzędzie do metrów kwadratowych, bieżących i podkładu. Dla rolek 4 m i 5 m z planowaniem łączeń.", category: "Podłogi", categorySlug: "flooring" },
+      { slug: "tile-calculator", title: "Kalkulator Płytek", description: "Kalkulator płytek — darmowe narzędzie do gresu, ceramiki i kamienia naturalnego. Liczba płytek, paczki, fuga i klej do płytek.", category: "Podłogi", categorySlug: "flooring" },
+      { slug: "laminate-calculator", title: "Kalkulator Laminatu", description: "Kalkulator laminatu — darmowy kalkulator desek i paczek z podkładem. Wprowadź wymiary pokoju, aby uzyskać natychmiastową listę materiałów.", category: "Podłogi", categorySlug: "flooring" },
     ],
   },
 ];

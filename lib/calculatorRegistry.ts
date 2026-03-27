@@ -14,6 +14,7 @@ import {
   calculateMortarMix,
   calculateGravel,
   calculateDrivewayGravel,
+  calculateRetainingWall,
 } from "./calculations/foundationCalculations";
 import {
   calculateRimJoists,
@@ -78,12 +79,24 @@ import {
   calculateDeckRailing,
   calculateDeckStairs,
   calculatePostHole,
+  calculatePond,
+  calculateFence,
+  calculateFencePost,
+  calculateFencePanel,
+  calculatePicketFence,
 } from "./calculations/outdoorCalculations";
 import {
   calculatePaintCoverage,
   calculatePaintCost,
   calculatePrimer,
+  calculateEpoxy,
 } from "./calculations/finishingCalculations";
+import {
+  calculateFlooring,
+  calculateCarpet,
+  calculateTile,
+  calculateLaminate,
+} from "./calculations/flooringCalculations";
 
 export interface NextStep {
   label: string;
@@ -3207,6 +3220,786 @@ const postHoleCalculator: CalculatorConfig = {
   ],
 };
 
+// ─── RETAINING WALL ─────────────────────────────────────────────────────────
+
+const retainingWallCalculator: CalculatorConfig = {
+  fields: [
+    { id: "wallLength", label: "Wall Length", unit: "ft", placeholder: "20" },
+    { id: "wallHeight", label: "Wall Height", unit: "ft", placeholder: "4" },
+    {
+      id: "blockType",
+      label: "Block Type",
+      type: "select",
+      options: [
+        { label: "Landscape Block (12×4×8 in)", value: "landscape block" },
+        { label: "CMU Block (16×8×8 in)", value: "cmu block" },
+        { label: "Natural Stone", value: "natural stone" },
+      ],
+    },
+  ],
+  calculate: (v) => {
+    const r = calculateRetainingWall(
+      v.wallLength as number,
+      v.wallHeight as number,
+      v.blockType as string,
+    );
+    return [
+      { label: `${r.blocks} blocks needed (includes 10% waste)` },
+      { label: `${r.capBlocks} cap blocks for top row` },
+      { label: `${r.adhesiveTubes} tubes of landscape adhesive` },
+      { label: `${r.gravelTons} tons of gravel backfill` },
+      { label: `${r.drainPipeLinearFeet} linear feet of drain pipe` },
+      { label: `${r.wallAreaSqFt} sq ft wall area` },
+    ];
+  },
+  disclaimer:
+    "This estimate includes a 10% waste factor for blocks. Actual gravel and drainage requirements depend on soil conditions, water table, and local code. Walls over 4 feet tall typically require engineering and permits.",
+  howToUse: [
+    "Measure the total length of your retaining wall in feet.",
+    "Enter the desired wall height in feet — most landscape walls are 2 to 4 feet.",
+    "Select your block type: landscape block for decorative walls, CMU for structural, or natural stone for a rustic look.",
+    "Click Calculate for block count, cap blocks, gravel backfill, and drainage estimates.",
+  ],
+  materialInfo:
+    "Retaining walls hold back soil on sloped terrain and create level areas for landscaping, patios, driveways, and garden beds. The three most common materials are interlocking landscape blocks, concrete masonry units (CMU), and natural stone.\n\nLandscape blocks (such as Allan Block, Versa-Lok, or Pavestone) are the most popular choice for DIY retaining walls up to 4 feet tall. Standard blocks measure 12 inches long by 4 inches high by 8 inches deep and weigh 25 to 35 lbs each. They interlock with a lip or pin system that creates a natural setback (batter) for stability. Typical cost is $2 to $5 per block, or $15 to $30 per square foot of wall face installed.\n\nCMU blocks (cinder blocks) measure 16 inches long by 8 inches high by 8 inches wide and are used for structural retaining walls. They require mortar, rebar, and grout fill for walls over 2 feet. Cost runs $1.50 to $3 per block, but total installed cost is higher due to reinforcement and engineering requirements.\n\nNatural stone walls use fieldstone, flagstone, or cut stone and create the most attractive finish. They are also the most expensive, running $25 to $75 per square foot installed, and require skilled masonry labor for anything over 2 feet tall.\n\nAll retaining walls require proper drainage behind the wall to prevent hydrostatic pressure buildup. This includes a layer of crushed gravel (3/4-inch clear stone) behind the blocks, a perforated drain pipe (4-inch corrugated or PVC) at the base wrapped in filter fabric, and drain outlets at regular intervals. Cap blocks are glued to the top course with construction adhesive (Loctite PL Premium or similar) at approximately 1 tube per 25 linear feet.\n\nWalls over 4 feet in most jurisdictions require a building permit, engineered drawings, and a geogrid reinforcement system. Check local codes before starting any retaining wall project.",
+  nextSteps: [
+    { label: "Concrete Footing Calculator", href: "/calculators/foundation/concrete-footing-calculator/" },
+    { label: "Gravel Calculator", href: "/calculators/foundation/gravel-calculator/" },
+    { label: "Mortar Mix Calculator", href: "/calculators/foundation/mortar-mix-calculator/" },
+  ],
+  installationTips: [
+    "Excavate a trench 6 to 8 inches deep and 24 inches wide for the base course — compact the soil and add 6 inches of crushed gravel base.",
+    "Level the first course carefully — every subsequent course follows the base. Use a 4-foot level and rubber mallet.",
+    "Backfill with 3/4-inch clear crushed stone (not pea gravel) behind the wall as you build each course.",
+    "Install a 4-inch perforated drain pipe at the base of the wall, sloped 1/4 inch per foot toward a daylight outlet.",
+    "Stagger block joints by at least 4 inches between courses, similar to a running bond brick pattern.",
+    "Glue cap blocks with landscape adhesive — apply a continuous bead along the top of the last course.",
+  ],
+  commonMistakes: [
+    "Skipping the gravel base — without a compacted gravel foundation, the wall will settle and lean over time.",
+    "Forgetting drainage — hydrostatic pressure from trapped water is the number one cause of retaining wall failure.",
+    "Building over 4 feet without engineering — most codes require stamped plans, geogrid reinforcement, and permits for taller walls.",
+    "Using topsoil or dirt as backfill — only clean crushed stone should go directly behind the wall for drainage.",
+    "Not compacting the base trench — a loose base leads to uneven settling and wall movement within the first year.",
+  ],
+  faqs: [
+    {
+      question: "How many blocks do I need for a retaining wall?",
+      answer: "The number depends on block size and wall dimensions. For standard 12×4×8 landscape blocks, you need about 3 blocks per square foot of wall face. A 20-foot long, 3-foot high wall (60 sq ft) requires approximately 180 blocks plus 10% waste, for a total of about 198 blocks. CMU blocks at 16×8 inches cover more area — about 1.125 blocks per square foot.",
+    },
+    {
+      question: "How much does a retaining wall cost?",
+      answer: "Retaining wall costs vary by material: landscape blocks run $15 to $30 per square foot of wall face installed, CMU block walls cost $20 to $40 per square foot with reinforcement, and natural stone walls range from $25 to $75 per square foot. A typical 20-foot long, 3-foot high landscape block wall costs $900 to $1,800 for materials only, or $1,800 to $3,600 installed.",
+    },
+    {
+      question: "Do I need a permit for a retaining wall?",
+      answer: "Most jurisdictions require a building permit for retaining walls over 4 feet tall measured from the bottom of the footing to the top of the wall. Some areas set the threshold at 3 feet. Walls requiring a permit also need engineered plans showing footing design, drainage, and geogrid reinforcement. Always check with your local building department before starting.",
+    },
+    {
+      question: "How much gravel do I need behind a retaining wall?",
+      answer: "Plan for a 12-inch wide zone of 3/4-inch clear crushed stone behind the entire wall face, plus 6 inches of compacted gravel base in the trench. For a 20-foot long, 3-foot high wall, this is roughly 60 cubic feet of backfill gravel (about 2.2 cubic yards or 3.1 tons) plus another 0.7 cubic yards for the base trench.",
+    },
+    {
+      question: "What is the best block for a retaining wall?",
+      answer: "For DIY walls under 4 feet, interlocking landscape blocks (Allan Block, Versa-Lok, Pavestone) are the best choice — they require no mortar, are easy to install, and create a naturally stable setback. For structural walls over 4 feet, CMU blocks with rebar and grout or engineered segmental retaining wall systems with geogrid are required.",
+    },
+    {
+      question: "How deep should a retaining wall footing be?",
+      answer: "The base trench should be at least 6 inches deep for walls up to 3 feet tall, with 6 inches of compacted crushed gravel. For taller walls, the footing depth increases — a 4-foot wall needs 8 to 12 inches of buried course below grade. In frost-prone areas, the footing should extend below the frost line or use a free-draining gravel base that prevents frost heave.",
+    },
+  ],
+};
+
+// ─── EPOXY ──────────────────────────────────────────────────────────────────
+
+const epoxyCalculator: CalculatorConfig = {
+  fields: [
+    { id: "length", label: "Floor Length", unit: "ft", placeholder: "20" },
+    { id: "width", label: "Floor Width", unit: "ft", placeholder: "24" },
+    {
+      id: "coats",
+      label: "Number of Coats",
+      type: "select",
+      options: [
+        { label: "1 Coat", value: "1" },
+        { label: "2 Coats", value: "2" },
+      ],
+    },
+    { id: "coveragePerGallon", label: "Coverage per Gallon", unit: "sq ft", defaultValue: 250, placeholder: "250" },
+  ],
+  calculate: (v) => {
+    const coats = parseInt(v.coats as string, 10) || 1;
+    const r = calculateEpoxy(
+      v.length as number,
+      v.width as number,
+      coats,
+      v.coveragePerGallon as number,
+    );
+    return [
+      { label: `${r.areaSqFt} sq ft of floor area` },
+      { label: `${r.gallons} gallons of epoxy needed (${coats} coat${coats > 1 ? "s" : ""})` },
+      { label: `${r.kits} epoxy kit${r.kits > 1 ? "s" : ""} (1-gallon kits)` },
+      { label: `Estimated cost: $${r.costLow} – $${r.costHigh}` },
+    ];
+  },
+  disclaimer:
+    "Coverage rates vary by product, surface porosity, and application method. The default 250 sq ft per gallon is standard for most garage floor epoxies. Highly porous or textured concrete may require more product. Always follow the manufacturer's coverage guidelines.",
+  howToUse: [
+    "Measure the length and width of your floor in feet.",
+    "Select 1 coat for a color base or 2 coats for maximum durability.",
+    "Adjust the coverage per gallon if your product specifies a different rate (default is 250 sq ft/gal).",
+    "Click Calculate for gallons, kit count, and cost estimate.",
+  ],
+  materialInfo:
+    "Epoxy floor coating is a two-part thermosetting resin (Part A resin + Part B hardener) that cures into a hard, chemical-resistant, glossy surface. It is the most popular garage floor coating and is also used in basements, workshops, commercial kitchens, warehouses, and showrooms.\n\nThere are three main types of epoxy floor coatings. Water-based epoxy is the most DIY-friendly — it has low odor, easy cleanup, and costs $30 to $50 per gallon kit covering 250 square feet. It provides a good finish but is thinner and less durable than solvent-based or 100% solids options. Solvent-based epoxy is more durable and chemical-resistant, costs $45 to $80 per gallon, and requires adequate ventilation during application. 100% solids epoxy is the professional-grade option — it contains no water or solvents, builds the thickest film in a single coat, and costs $80 to $120 per gallon. It has a very short pot life (15 to 30 minutes) and requires experience to apply.\n\nSurface preparation is the most critical step in epoxy application. The concrete must be clean, dry, and profiled (roughened) for the epoxy to bond. A failed moisture test (plastic sheet taped to the floor overnight shows condensation) means the slab needs a moisture vapor barrier before epoxy. Grinding or acid etching creates the surface profile needed for adhesion. New concrete must cure at least 28 days before coating.\n\nMost consumer kits include decorative color chips (flakes) that are broadcast into the wet epoxy for a terrazzo-like appearance. A clear topcoat of polyurethane or polyaspartic is applied over the chips for UV resistance and additional durability. Polyaspartic topcoats cure faster (4 to 6 hours vs. 24 hours for epoxy) and resist yellowing from UV exposure.\n\nApplication temperature must be between 50°F and 90°F with concrete temperature above 55°F. Humidity above 85% can cause blushing (a milky haze) in the cured film. Most two-coat systems are drive-on ready in 3 to 5 days.",
+  nextSteps: [
+    { label: "Paint Calculator", href: "/calculators/finishing/paint-coverage-calculator/" },
+    { label: "Concrete Slab Calculator", href: "/calculators/foundation/concrete-slab-calculator/" },
+  ],
+  installationTips: [
+    "Perform a moisture test (tape a 2×2 ft plastic sheet to the floor for 24 hours) before starting — moisture causes epoxy failure.",
+    "Grind or acid-etch the concrete to create a surface profile — epoxy will not bond to smooth, sealed, or painted concrete.",
+    "Mix Part A and Part B thoroughly for the full time specified (usually 3 minutes), then let the mixture induct (rest) for the time on the label.",
+    "Work in sections and keep a wet edge — epoxy self-levels but will show roller marks at seams if one section starts to set.",
+    "Apply decorative chips within 10 to 15 minutes of rolling each section, while the epoxy is still wet.",
+    "Allow 12 to 24 hours between coats, and 72 hours before light foot traffic. Wait 5 to 7 days before parking vehicles.",
+  ],
+  commonMistakes: [
+    "Skipping surface preparation — this is the number one cause of epoxy peeling and flaking. The concrete must be ground or acid-etched.",
+    "Applying over moisture — trapped moisture underneath causes bubbling and delamination. Always test before coating.",
+    "Working outside the temperature range — below 50°F the epoxy cures too slowly and may not harden; above 90°F it cures too fast and shows roller marks.",
+    "Mixing too much product at once — epoxy generates heat as it cures (exothermic reaction). Large batches in a bucket can gel in minutes.",
+    "Not applying a topcoat — bare epoxy yellows and chalks from UV exposure. A polyurethane or polyaspartic clear coat extends the life significantly.",
+  ],
+  faqs: [
+    {
+      question: "How much epoxy do I need for a garage floor?",
+      answer: "A standard 2-car garage is approximately 480 square feet (20×24 ft). At 250 sq ft per gallon, you need about 2 gallons for one coat or 4 gallons for two coats. Most consumer kits cover 200 to 250 sq ft per kit. Plan on 2 kits for a single coat or 4 kits for a two-coat system on a standard garage.",
+    },
+    {
+      question: "How much does it cost to epoxy a garage floor?",
+      answer: "DIY epoxy coating costs $2 to $5 per square foot for materials. A 480 sq ft garage runs $250 to $600 for a basic water-based kit with chips and topcoat, or $600 to $1,500 for commercial-grade 100% solids epoxy. Professional installation costs $4 to $12 per square foot, or $2,000 to $5,000 for a standard 2-car garage.",
+    },
+    {
+      question: "Is 1 coat of epoxy enough for a garage floor?",
+      answer: "One coat provides acceptable coverage for light-use garages and basements. However, two coats deliver significantly better durability, chemical resistance, and appearance — especially for daily-use garages with vehicles. If you are only doing one coat, apply a clear polyurethane or polyaspartic topcoat for additional protection.",
+    },
+    {
+      question: "How long does epoxy floor coating last?",
+      answer: "Properly applied epoxy floor coating lasts 5 to 10 years in a residential garage with normal use. Commercial-grade 100% solids epoxy with a polyaspartic topcoat can last 15 to 20 years. Lifespan depends on preparation quality, product grade, traffic volume, and chemical exposure. Hot tire pickup is the most common cause of premature failure in garages.",
+    },
+    {
+      question: "Do I need to prime concrete before epoxy?",
+      answer: "Most consumer epoxy kits do not require a separate primer — the first coat of epoxy acts as the primer. However, for highly porous concrete, old concrete, or professional 100% solids applications, a dedicated epoxy primer (penetrating sealer) improves adhesion and reduces outgassing bubbles. Follow the product instructions for your specific kit.",
+    },
+    {
+      question: "Can I apply epoxy over old paint or existing epoxy?",
+      answer: "Epoxy cannot bond to most paints or old coatings. You must remove the existing coating by grinding, shot-blasting, or chemical stripping to expose bare concrete. If the old epoxy is well-bonded, lightly sanding the surface and applying a bonding primer may work, but full removal is the safest approach.",
+    },
+  ],
+};
+
+// ─── POND ───────────────────────────────────────────────────────────────────
+
+const pondCalculator: CalculatorConfig = {
+  fields: [
+    { id: "length", label: "Pond Length", unit: "ft", placeholder: "10" },
+    { id: "width", label: "Pond Width", unit: "ft", placeholder: "8" },
+    { id: "depth", label: "Pond Depth", unit: "ft", defaultValue: 3, placeholder: "3" },
+    {
+      id: "pondShape",
+      label: "Pond Shape",
+      type: "select",
+      options: [
+        { label: "Rectangular", value: "rectangular" },
+        { label: "Oval", value: "oval" },
+        { label: "Kidney", value: "kidney" },
+      ],
+    },
+  ],
+  calculate: (v) => {
+    const r = calculatePond(
+      v.length as number,
+      v.width as number,
+      v.depth as number,
+      v.pondShape as string,
+    );
+    return [
+      { label: `${r.gallons.toLocaleString()} gallons total volume` },
+      { label: `Liner size: ${r.linerLengthFt} ft × ${r.linerWidthFt} ft (${r.linerAreaSqFt} sq ft)` },
+      { label: `Pump capacity: ${r.pumpGPH.toLocaleString()} GPH (full turnover every 2 hours)` },
+      { label: `${r.sandUnderlaymentSqFt} sq ft of sand or underlayment fabric` },
+    ];
+  },
+  disclaimer:
+    "Volume calculations are approximate — kidney and freeform shapes vary widely. Liner size includes 2 ft of overlap on each side for anchoring. Pump sizing assumes full circulation every 2 hours; koi ponds may need higher turnover rates. Always consult a pond specialist for large or fish-stocked installations.",
+  howToUse: [
+    "Enter the maximum length of your pond in feet.",
+    "Enter the maximum width in feet.",
+    "Enter the deepest depth in feet — 2 to 3 feet for water gardens, 3 to 4 feet for koi ponds.",
+    "Select the closest shape: rectangular, oval, or kidney.",
+    "Click Calculate for volume, liner size, pump capacity, and underlayment needs.",
+  ],
+  materialInfo:
+    "A backyard pond is an excavated water feature lined with a flexible or rigid material to hold water for ornamental fish (koi, goldfish), aquatic plants, or simply as a decorative focal point. Pond construction involves four key components: the liner, the pump and filtration system, the underlayment, and the surrounding edging.\n\nPond liners are the most critical component. EPDM rubber (45 mil) is the industry standard — it is flexible, UV-resistant, fish-safe, and lasts 20 to 30 years. A typical 45 mil EPDM liner costs $0.50 to $1.00 per square foot. PVC liners (20 mil) are cheaper at $0.25 to $0.50 per square foot but have a shorter lifespan of 10 to 15 years and are less puncture-resistant. Preformed rigid liners (polyethylene or fiberglass) are available for small ponds up to 500 gallons and cost $150 to $600 depending on size.\n\nLiner size is calculated by adding twice the depth plus 2 feet of overlap to both the length and width. The overlap provides material to anchor the liner edges under rock, gravel, or soil. Always order a liner at least 2 feet larger than the calculated size to account for shelf ledges and irregular shapes.\n\nPumps circulate the water through a filtration system and power waterfalls or fountains. The standard rule is to circulate the entire pond volume once every 2 hours — a 1,000-gallon pond needs a 500 GPH pump minimum. For koi ponds, the recommended turnover rate is once every hour due to the higher biological load. Submersible pumps are suitable for ponds up to 2,000 gallons; external pumps are more efficient for larger installations. Pump costs range from $50 for a 500 GPH submersible to $400 or more for a 4,000 GPH external pump.\n\nFiltration systems include mechanical filtration (skimmer boxes that remove leaves and debris) and biological filtration (bio-falls or pressurized filters that house beneficial bacteria to process fish waste). A basic combo unit costs $200 to $500.\n\nUnderlayment fabric (geotextile felt) is placed under the liner to protect it from roots, rocks, and sharp objects. Sand (2-inch layer) can be used as an alternative on smooth excavations. Underlayment costs $0.10 to $0.25 per square foot.\n\nEdging materials (flagstone, boulders, or manufactured stone) conceal the liner edge and create a natural appearance. Budget $200 to $1,000 for edging materials depending on the pond perimeter and stone type.",
+  nextSteps: [
+    { label: "Gravel Calculator", href: "/calculators/foundation/gravel-calculator/" },
+    { label: "Post Hole Calculator", href: "/calculators/outdoor/post-hole-calculator/" },
+  ],
+  installationTips: [
+    "Locate the pond where it receives 4 to 6 hours of partial sunlight — full sun promotes excessive algae growth.",
+    "Call 811 to mark underground utilities before digging — this is a free service and a legal requirement in most areas.",
+    "Dig shelves at 12 inches deep around the perimeter for marginal aquatic plants before excavating the full depth.",
+    "Place a 2-inch layer of sand or geotextile underlayment fabric over the entire excavation before laying the liner.",
+    "Fill the pond slowly with a garden hose, smoothing the liner as it fills — wrinkles are much harder to fix once full.",
+    "Run the pump and filter for at least 2 weeks before adding fish to allow beneficial bacteria to establish.",
+  ],
+  commonMistakes: [
+    "Undersizing the liner — always calculate length + (2 × depth) + 2 ft for each dimension. A liner that is too small cannot be fixed.",
+    "Skipping the underlayment — roots, rocks, and sharp objects puncture liners from below. A single hole drains the entire pond.",
+    "Undersizing the pump — poor circulation leads to stagnant water, algae blooms, and fish kills. Size for full turnover every 2 hours minimum.",
+    "Not providing enough depth — ponds less than 24 inches deep can overheat in summer and freeze solid in winter, killing fish and plants.",
+    "Building too close to trees — falling leaves create organic buildup that depletes oxygen. Keep ponds at least 10 feet from deciduous trees.",
+  ],
+  faqs: [
+    {
+      question: "How many gallons is my pond?",
+      answer: "For rectangular ponds: length × width × depth (all in feet) × 7.48 = gallons. For oval ponds, multiply by 0.8. For kidney shapes, multiply by 0.7. Example: a 10×8×3 ft rectangular pond holds about 1,795 gallons. The same dimensions in an oval shape hold approximately 1,436 gallons.",
+    },
+    {
+      question: "What size pond liner do I need?",
+      answer: "Liner size = (length + 2 × depth + 2 ft) by (width + 2 × depth + 2 ft). For a 10×8×3 ft pond, the liner should be at least 18 ft × 16 ft (288 sq ft). The extra 2 feet on each dimension provides overlap for securing the liner edges under stone or gravel.",
+    },
+    {
+      question: "What size pump do I need for my pond?",
+      answer: "Multiply your pond volume in gallons by 0.5 to get the minimum GPH rating. A 2,000-gallon pond needs at least a 1,000 GPH pump for a 2-hour turnover. For koi ponds, use the full volume as your GPH target (1:1 ratio) for hourly turnover. If you have a waterfall, add 100 GPH per inch of waterfall width.",
+    },
+    {
+      question: "How much does it cost to build a backyard pond?",
+      answer: "A simple 500-gallon water garden costs $500 to $1,500 DIY. A 1,000 to 2,000-gallon pond with pump, filter, and stone edging runs $1,500 to $4,000 DIY or $5,000 to $15,000 professionally installed. Large koi ponds (3,000+ gallons) with bottom drains and multi-stage filtration can exceed $20,000 installed.",
+    },
+    {
+      question: "How deep should a pond be for fish?",
+      answer: "Water gardens with goldfish need a minimum depth of 24 inches. Koi ponds should be at least 36 inches deep, with 48 inches preferred in cold climates to provide an unfrozen zone at the bottom during winter. Deeper ponds also moderate temperature swings and give fish shelter from predators like herons.",
+    },
+    {
+      question: "Do I need a filter for my pond?",
+      answer: "Yes, if you plan to keep fish. A biological filter houses beneficial bacteria that convert toxic ammonia (from fish waste) into harmless nitrates. A mechanical filter or skimmer removes leaves and debris. Even plant-only water gardens benefit from a small pump and filter to prevent stagnant water and mosquito breeding.",
+    },
+  ],
+};
+
+// ─── FLOORING ───────────────────────────────────────────────────────────────
+
+const flooringCalculator: CalculatorConfig = {
+  fields: [
+    { id: "length", label: "Room Length", unit: "ft", placeholder: "15" },
+    { id: "width", label: "Room Width", unit: "ft", placeholder: "12" },
+    { id: "wastePct", label: "Waste Factor", unit: "%", defaultValue: 10, placeholder: "10" },
+  ],
+  calculate: (v) => {
+    const r = calculateFlooring(v.length as number, v.width as number, v.wastePct as number);
+    return [
+      { label: `Room area: ${r.area} sq ft` },
+      { label: `Area with waste: ${r.areaWithWaste} sq ft` },
+      { label: r.label },
+    ];
+  },
+  disclaimer: "Box sizes vary by manufacturer. Verify sq ft per box on the product label before ordering.",
+  howToUse: [
+    "Measure your room length and width in feet.",
+    "Enter a waste percentage (10% is standard, use 15% for diagonal layouts).",
+    "Click Calculate to get total square footage and box count.",
+    "Multiply rooms if you are doing multiple areas with the same product.",
+  ],
+  materialInfo:
+    "Flooring materials are sold by the square foot or by the box. Most hardwood, engineered wood, and luxury vinyl plank (LVP) flooring comes in boxes covering 20 to 25 square feet each. The actual coverage per box varies by brand and plank dimensions — always check the label. Common flooring types include solid hardwood ($4–$12/sq ft), engineered hardwood ($3–$10/sq ft), luxury vinyl plank ($2–$7/sq ft), laminate ($1–$5/sq ft), and bamboo ($3–$8/sq ft). Material cost is only part of the total — professional installation adds $2–$6 per square foot depending on the type. For DIY installations, factor in underlayment, transition strips, baseboards, and adhesive or fasteners. Most manufacturers recommend acclimating flooring in the room for 48–72 hours before installation to prevent expansion or contraction after the floor is laid. Always order 10–15% extra for waste, cuts, and future repairs — keeping a few spare boxes is essential for matching if a plank is damaged later.",
+  nextSteps: [
+    { label: "Carpet Calculator", href: "/calculators/flooring/carpet-calculator/" },
+    { label: "Tile Calculator", href: "/calculators/flooring/tile-calculator/" },
+    { label: "Laminate Calculator", href: "/calculators/flooring/laminate-calculator/" },
+  ],
+  installationTips: [
+    "Acclimate flooring in the room for at least 48 hours before installation.",
+    "Start from the longest, most visible wall and work toward the opposite side.",
+    "Use spacers (1/4 inch) along all walls to allow for expansion.",
+    "Stagger end joints by at least 6 inches between adjacent rows for strength and appearance.",
+    "Check subfloor moisture with a meter — most flooring requires less than 12% moisture content.",
+  ],
+  commonMistakes: [
+    "Not ordering enough waste factor — 10% minimum, 15% for diagonal or herringbone patterns.",
+    "Skipping acclimation — leads to buckling, gaps, or cupping after installation.",
+    "Failing to check subfloor flatness — most flooring requires 3/16 inch tolerance over 10 feet.",
+    "Installing over uneven subfloor without leveling compound.",
+    "Forgetting transition strips at doorways and room changes.",
+  ],
+  faqs: [
+    { question: "How much flooring do I need for a room?", answer: "Multiply the room length by width in feet to get the square footage. Add 10% for waste (15% for diagonal patterns). For example, a 15x12 foot room is 180 sq ft — order 198 sq ft (180 x 1.10) to account for cuts and mistakes." },
+    { question: "How many boxes of flooring do I need?", answer: "Divide your total square footage (including waste) by the coverage per box listed on the product. Most flooring boxes cover 20–25 sq ft. For 200 sq ft of flooring with 20 sq ft boxes, you need 10 boxes." },
+    { question: "What is the cheapest type of flooring?", answer: "Laminate flooring is typically the cheapest at $1–$3 per square foot for materials. Vinyl plank (LVP) is next at $2–$5/sq ft. Both are DIY-friendly, which saves on installation costs. Sheet vinyl is also very affordable but harder to install yourself." },
+    { question: "How much does it cost to install flooring per square foot?", answer: "Professional installation costs vary by type: laminate $2–$4/sq ft, LVP $2–$5/sq ft, hardwood $4–$8/sq ft, tile $5–$10/sq ft, and carpet $1–$3/sq ft. These are labor-only costs — materials are additional. DIY can save 50–70% on installation." },
+    { question: "Should I buy extra flooring for future repairs?", answer: "Yes, always keep 1–2 extra boxes from the same production lot. Flooring colors and textures can vary slightly between manufacturing runs. Having matching spare planks makes future repairs seamless. Store them flat in a climate-controlled area." },
+    { question: "How long does it take to install flooring?", answer: "A DIYer can typically install 100–200 sq ft of click-lock flooring per day. Professional crews average 300–500 sq ft per day. A standard 12x15 room takes most DIYers a full weekend including prep, installation, and trim work." },
+  ],
+};
+
+const carpetCalculator: CalculatorConfig = {
+  fields: [
+    { id: "length", label: "Room Length", unit: "ft", placeholder: "15" },
+    { id: "width", label: "Room Width", unit: "ft", placeholder: "12" },
+    { id: "carpetWidth", label: "Carpet Roll Width", unit: "ft", defaultValue: 12, placeholder: "12" },
+  ],
+  calculate: (v) => {
+    const r = calculateCarpet(v.length as number, v.width as number, v.carpetWidth as number);
+    return [
+      { label: `Room area: ${r.area} sq ft` },
+      { label: `Carpet needed: ${r.carpetSqYards} sq yards` },
+      { label: `Linear feet of carpet: ${r.linearFeet} ft (${r.strips} strip${r.strips > 1 ? "s" : ""})` },
+      { label: `Carpet pad: ${r.padSqYards} sq yards` },
+    ];
+  },
+  disclaimer: "Carpet is sold in 12 ft or 15 ft wide rolls. Seam placement affects total material — consult your installer for optimal layout.",
+  howToUse: [
+    "Measure your room length and width in feet.",
+    "Select the carpet roll width (12 ft is standard, 15 ft is also common).",
+    "Click Calculate to get square yards of carpet and pad needed.",
+    "Note the number of strips — each seam may need seam tape.",
+  ],
+  materialInfo:
+    "Carpet is sold by the square yard (9 sq ft) and comes in rolls that are typically 12 or 15 feet wide. The most common fiber types are nylon (most durable, $3–$8/sq ft), polyester (soft and stain-resistant, $2–$6/sq ft), olefin/polypropylene (budget-friendly, $1–$4/sq ft), and wool (premium, $8–$20/sq ft). Carpet pad is essential and adds $0.50–$1.50 per square foot — an 8 lb, 7/16-inch thick pad is the minimum for residential use, while higher-density pads extend carpet life. Total installed carpet costs range from $3 to $12 per square foot including pad and labor. Carpet seams should run perpendicular to windows to minimize visibility. For stairs, add 1.5 linear feet per step for proper tucking. Commercial carpet tiles (typically 24x24 inches) are an alternative that eliminates waste from roll cuts and allows easy replacement of damaged sections. Most residential carpet carries a 10–25 year warranty depending on fiber type and construction.",
+  nextSteps: [
+    { label: "Flooring Calculator", href: "/calculators/flooring/flooring-calculator/" },
+    { label: "Tile Calculator", href: "/calculators/flooring/tile-calculator/" },
+    { label: "Laminate Calculator", href: "/calculators/flooring/laminate-calculator/" },
+  ],
+  installationTips: [
+    "Always install carpet pad before carpet — it extends carpet life by 50% or more.",
+    "Run seams perpendicular to the main light source (windows) to hide them.",
+    "Stretch carpet properly with a power stretcher, not just a knee kicker, to prevent buckling.",
+    "Use tackless strips around the perimeter, set 1/2 inch from the wall.",
+    "Leave carpet and pad in the room for 24 hours before installation to acclimate.",
+  ],
+  commonMistakes: [
+    "Using a knee kicker only — power stretching is required for proper installation.",
+    "Choosing too thin a carpet pad — 7/16 inch, 8 lb density is the minimum.",
+    "Not accounting for pattern matching — patterned carpet requires 10–20% extra.",
+    "Running seams parallel to windows where light highlights the joint.",
+    "Forgetting to add carpet for closets, hallways, and stairs.",
+  ],
+  faqs: [
+    { question: "How is carpet measured and sold?", answer: "Carpet is measured in square yards (1 sq yard = 9 sq ft) and comes in rolls that are 12 or 15 feet wide. The installer cuts the length needed from the roll. You cannot choose the width — you must work with the standard roll widths, which is why seam planning is important." },
+    { question: "How much does carpet cost per square foot?", answer: "Carpet materials range from $1 to $12 per square foot depending on fiber type. Budget olefin carpet starts at $1–$2/sq ft, mid-range nylon is $3–$6/sq ft, and premium wool runs $8–$20/sq ft. Add $1–$3/sq ft for professional installation and $0.50–$1.50/sq ft for pad." },
+    { question: "How much carpet pad do I need?", answer: "You need the same square footage of pad as carpet. Carpet pad comes in rolls, typically 6 feet wide. The installer will cut and seam the pad to cover the entire floor before laying carpet. Choose at least 7/16-inch thickness with 8 lb density for residential use." },
+    { question: "How long does carpet last?", answer: "Most residential carpet lasts 5–15 years depending on fiber type, traffic, and maintenance. Nylon carpet in low-traffic areas can last 15–20 years. Polyester and olefin typically last 5–10 years. Regular vacuuming and professional cleaning every 12–18 months extends carpet life significantly." },
+    { question: "Can I install carpet myself?", answer: "Carpet installation is one of the harder DIY flooring projects because it requires a power stretcher, seaming iron, and knee kicker. Poor stretching leads to wrinkles and buckling within months. Most homeowners hire professionals — installation typically costs $1–$3 per square foot." },
+    { question: "How do I calculate carpet for stairs?", answer: "For stairs, measure the width of the staircase and multiply by 1.5 feet per step (accounting for the tread depth plus riser height plus tucking). A typical 13-step staircase with 36-inch wide stairs needs about 19.5 linear feet of carpet at 3 feet wide, or roughly 6.5 square yards." },
+  ],
+};
+
+const tileCalculator: CalculatorConfig = {
+  fields: [
+    { id: "length", label: "Room Length", unit: "ft", placeholder: "10" },
+    { id: "width", label: "Room Width", unit: "ft", placeholder: "8" },
+    { id: "tileSize", label: "Tile Size", unit: "inches", defaultValue: 12, placeholder: "12" },
+    { id: "wastePct", label: "Waste Factor", unit: "%", defaultValue: 10, placeholder: "10" },
+  ],
+  calculate: (v) => {
+    const r = calculateTile(v.length as number, v.width as number, v.tileSize as number, v.wastePct as number);
+    return [
+      { label: `Room area: ${r.areaSqFt} sq ft` },
+      { label: `Area with waste: ${r.areaWithWaste} sq ft` },
+      { label: `Tiles needed: ${r.tiles} (${r.tilesPerBox} per box = ${r.boxes} boxes)` },
+      { label: `Grout: ${r.groutBags} bag${r.groutBags > 1 ? "s" : ""} (25 lb)` },
+      { label: `Thinset mortar: ${r.thinsetBags} bag${r.thinsetBags > 1 ? "s" : ""} (50 lb)` },
+    ];
+  },
+  disclaimer: "Tile count assumes square tiles. For rectangular tiles, calculate based on tile area. Grout and thinset estimates assume standard joint widths.",
+  howToUse: [
+    "Measure the room length and width in feet.",
+    "Enter the tile size in inches (e.g., 12 for 12x12 tiles).",
+    "Set waste percentage (10% standard, 15% for diagonal layouts).",
+    "Click Calculate to get tile count, boxes, grout, and thinset estimates.",
+  ],
+  materialInfo:
+    "Tile flooring includes ceramic ($1–$5/sq ft), porcelain ($3–$10/sq ft), natural stone ($5–$20/sq ft), and glass mosaic ($10–$30/sq ft). Porcelain is the most popular for floors because of its durability and water resistance — it has a water absorption rate below 0.5%, making it suitable for bathrooms, kitchens, and outdoor applications. Common floor tile sizes are 12x12, 12x24, 18x18, and 24x24 inches. Larger tiles cover faster but require a flatter subfloor (1/8 inch tolerance over 10 feet for tiles over 15 inches). Thinset mortar is the standard adhesive — use modified (polymer-modified) thinset for porcelain and natural stone. Grout comes in sanded (for joints 1/8 inch and wider) and unsanded (for joints under 1/8 inch). Epoxy grout is more expensive but resists staining and does not need sealing. Budget $0.50–$1.50/sq ft for professional thinset and grout materials. Professional tile installation costs $5–$15 per square foot including labor and materials. A 50 lb bag of thinset covers 60–80 sq ft, and a 25 lb bag of grout covers 50–70 sq ft depending on tile size and joint width.",
+  nextSteps: [
+    { label: "Flooring Calculator", href: "/calculators/flooring/flooring-calculator/" },
+    { label: "Carpet Calculator", href: "/calculators/flooring/carpet-calculator/" },
+    { label: "Laminate Calculator", href: "/calculators/flooring/laminate-calculator/" },
+  ],
+  installationTips: [
+    "Dry-lay tiles before applying thinset to plan cuts and check the layout.",
+    "Use a notched trowel matched to tile size — 1/4x3/8 for 12x12 tiles, 1/2x1/2 for larger.",
+    "Back-butter large-format tiles (over 15 inches) in addition to troweling the floor.",
+    "Use a tile leveling system (clips and wedges) to prevent lippage on large tiles.",
+    "Wait 24 hours after setting tiles before grouting to allow thinset to cure.",
+  ],
+  commonMistakes: [
+    "Not using enough thinset — hollow spots under tiles lead to cracking under load.",
+    "Skipping waterproofing membrane in wet areas like showers and bathroom floors.",
+    "Using unsanded grout in joints wider than 1/8 inch — it will crack.",
+    "Not mixing thinset properly — let it slake for 10 minutes, then remix before applying.",
+    "Cutting waste too low — complex layouts and diagonal patterns need 15–20% waste.",
+  ],
+  faqs: [
+    { question: "How many tiles do I need per square foot?", answer: "It depends on tile size. For 12x12 inch tiles, you need 1 tile per sq ft. For 6x6 tiles, you need 4 per sq ft. For 18x18 tiles, you need 0.44 per sq ft. For 24x24 tiles, you need 0.25 per sq ft. Always add 10–15% for waste and cuts." },
+    { question: "How much does tile flooring cost installed?", answer: "Ceramic tile installed costs $7–$15 per sq ft, porcelain $10–$18/sq ft, and natural stone $15–$30/sq ft. This includes tile, thinset, grout, labor, and basic prep. Complex patterns, heated floors, or membrane systems add $2–$5/sq ft." },
+    { question: "How much grout and thinset do I need?", answer: "A 25 lb bag of grout covers 50–70 sq ft depending on tile size and joint width. A 50 lb bag of thinset covers 60–80 sq ft with a standard notched trowel. For a 100 sq ft bathroom, plan on 2 bags of grout and 2 bags of thinset." },
+    { question: "What size tile is best for a small bathroom?", answer: "Larger tiles (12x24 or 12x12) actually make small bathrooms look bigger because there are fewer grout lines. Avoid very large tiles (24x24) in small spaces due to the number of cuts needed. For shower floors, use 2x2 or mosaic tiles for better slope and drainage." },
+    { question: "Can I tile over existing tile?", answer: "Yes, if the existing tile is firmly bonded, level, and in good condition. Clean thoroughly, sand the surface, and use a polymer-modified thinset. Note that this raises the floor height by 3/8 to 1/2 inch, which may affect door clearances and transitions to adjacent rooms." },
+    { question: "Do I need cement board under floor tile?", answer: "Cement backer board (1/4 or 1/2 inch) is recommended for all tile installations. It provides a stable, moisture-resistant substrate. Use 1/4-inch cement board over plywood subfloor for floors. In wet areas, a waterproofing membrane over the cement board is essential." },
+  ],
+};
+
+const laminateCalculator: CalculatorConfig = {
+  fields: [
+    { id: "length", label: "Room Length", unit: "ft", placeholder: "14" },
+    { id: "width", label: "Room Width", unit: "ft", placeholder: "11" },
+    { id: "plankWidth", label: "Plank Width", unit: "inches", defaultValue: 7, placeholder: "7" },
+    { id: "plankLength", label: "Plank Length", unit: "inches", defaultValue: 48, placeholder: "48" },
+    { id: "wastePct", label: "Waste Factor", unit: "%", defaultValue: 10, placeholder: "10" },
+  ],
+  calculate: (v) => {
+    const r = calculateLaminate(v.length as number, v.width as number, v.plankWidth as number, v.plankLength as number, v.wastePct as number);
+    return [
+      { label: `Room area: ${r.areaSqFt} sq ft` },
+      { label: `Area with waste: ${r.areaWithWaste} sq ft` },
+      { label: `Planks needed: ${r.planks} (${r.planksPerBox}/box = ${r.boxes} boxes)` },
+      { label: `Underlayment: ${r.underlaymentRolls} roll${r.underlaymentRolls > 1 ? "s" : ""} (100 sq ft each)` },
+    ];
+  },
+  disclaimer: "Plank dimensions and planks per box vary by brand. Verify packaging before ordering.",
+  howToUse: [
+    "Measure your room length and width in feet.",
+    "Enter the plank width and length from the product specifications.",
+    "Set waste percentage (10% for straight lay, 15% for diagonal).",
+    "Click Calculate for plank count, box count, and underlayment needs.",
+  ],
+  materialInfo:
+    "Laminate flooring is a multi-layer synthetic product that simulates wood, stone, or tile using a photographic image layer under a clear protective wear layer. It is the most affordable hard-surface flooring option, typically costing $1–$5 per square foot for materials. Laminate uses a click-lock installation system that floats over the subfloor without glue or nails, making it one of the easiest DIY flooring projects. Standard laminate plank dimensions are 5–8 inches wide and 36–54 inches long. Thickness ranges from 6mm (budget) to 12mm (premium), with thicker planks providing better sound dampening and feel underfoot. AC ratings measure durability: AC3 is suitable for residential use, AC4 for high-traffic residential or light commercial, and AC5 for commercial applications. Laminate requires a vapor barrier and foam underlayment beneath it — some products have underlayment pre-attached. Expansion gaps of 1/4 to 3/8 inch are mandatory along all walls, under door frames, and at transitions. Water-resistant laminate (WPC or SPC core) is available for kitchens and bathrooms but is not waterproof — standing water will still damage it over time. Professional installation adds $2–$4 per square foot.",
+  nextSteps: [
+    { label: "Flooring Calculator", href: "/calculators/flooring/flooring-calculator/" },
+    { label: "Carpet Calculator", href: "/calculators/flooring/carpet-calculator/" },
+    { label: "Tile Calculator", href: "/calculators/flooring/tile-calculator/" },
+  ],
+  installationTips: [
+    "Acclimate planks in the room for 48 hours before installation.",
+    "Install a vapor barrier on concrete subfloors, then foam underlayment on top.",
+    "Start with the tongue side facing the starting wall, using 1/4-inch spacers.",
+    "Use a tapping block and pull bar — never hammer directly on the plank edge.",
+    "Undercut door jambs with a jamb saw rather than cutting planks to fit around them.",
+  ],
+  commonMistakes: [
+    "Installing without underlayment — causes noise, moisture damage, and voids the warranty.",
+    "Not leaving expansion gaps — laminate expands and contracts with humidity changes.",
+    "Using the wrong cleaner — never wet-mop laminate or use steam cleaners.",
+    "Forgetting transitions at doorways — T-molding is required between rooms.",
+    "Not staggering end joints enough — minimum 6-inch offset between rows.",
+  ],
+  faqs: [
+    { question: "How many boxes of laminate do I need?", answer: "Divide your total area (with waste) by the square footage per box. Most laminate boxes contain 8 planks covering 18–25 sq ft. For a 200 sq ft room with 10% waste (220 sq ft) and boxes covering 20 sq ft, you need 11 boxes." },
+    { question: "Is laminate flooring waterproof?", answer: "Standard laminate is NOT waterproof — water seeping into seams or edges will cause swelling and permanent damage. Water-resistant laminate (WPC/SPC core) can handle spills and moisture but is still not suitable for standing water. For truly waterproof flooring, consider luxury vinyl plank (LVP) or tile." },
+    { question: "How long does laminate flooring last?", answer: "Quality laminate flooring lasts 15–25 years in residential settings. Budget laminate (6–7mm, AC3) typically lasts 10–15 years. Premium laminate (10–12mm, AC4–AC5) with proper care can last 20–30 years. Unlike hardwood, laminate cannot be refinished — when the wear layer is gone, it must be replaced." },
+    { question: "Do I need underlayment for laminate?", answer: "Yes, underlayment is required for all laminate installations. It provides moisture protection, sound dampening, and a smooth surface. Some laminate has underlayment pre-attached — check the product specs. On concrete subfloors, a separate vapor barrier (6-mil poly) is also required beneath the foam underlayment." },
+    { question: "Can I install laminate over tile?", answer: "Yes, you can install laminate directly over existing tile if the tile is in good condition, firmly bonded, and level. Fill any missing grout lines with floor leveler. The click-lock system floats over the tile — use standard underlayment between the tile and laminate. This raises floor height by about 3/8 inch." },
+    { question: "How much does laminate flooring cost installed?", answer: "Laminate installed costs $3–$8 per square foot total. Materials run $1–$5/sq ft, underlayment adds $0.25–$0.75/sq ft, and professional installation is $2–$4/sq ft. A 500 sq ft project typically costs $1,500–$4,000 fully installed. DIY saves the labor cost, bringing it to $625–$2,875." },
+  ],
+};
+
+// ─── FENCE CALCULATORS ───────────────────────────────────────────────────────
+
+const fenceCalculator: CalculatorConfig = {
+  fields: [
+    { id: "length", label: "Fence Length", unit: "ft", placeholder: "100" },
+    { id: "fenceHeight", label: "Fence Height", unit: "ft", defaultValue: 6, placeholder: "6" },
+    { id: "postSpacing", label: "Post Spacing", unit: "ft", defaultValue: 8, placeholder: "8" },
+  ],
+  calculate: (v) => {
+    const r = calculateFence(v.length as number, v.fenceHeight as number, v.postSpacing as number);
+    return [
+      { label: `${r.sections} fence sections` },
+      { label: `${r.postCount} posts needed (4x4 pressure-treated)` },
+      { label: `${r.railCount} rails needed (2x4 horizontal)` },
+      { label: `${r.picketCount} pickets needed (1x4 dog-ear)` },
+      { label: `${r.totalLinearFeet} total linear feet of fence` },
+    ];
+  },
+  disclaimer:
+    "This fence material calculator provides estimates based on standard picket sizes (3.5 inches wide with 0.25-inch gaps). Actual material needs vary with fence style, terrain slope, and local building codes. Gates, corners, and end posts may require additional hardware. Always check local setback and height regulations before building.",
+  howToUse: [
+    "Measure the total fence length in feet around your property line. Include all straight runs but measure gate openings separately.",
+    "Enter the fence height — standard residential heights are 4 feet (front yard) and 6 feet (backyard privacy).",
+    "Set the post spacing — 8 feet is standard for most wood fences, 6 feet for windy areas or tall fences.",
+    "Click Calculate to get a complete material list including posts, rails, and pickets.",
+  ],
+  materialInfo:
+    "A wood fence consists of three main components: posts, rails, and pickets (or boards). Understanding each component helps you choose the right materials and build a fence that lasts.\n\nPosts are the vertical structural members set in the ground. Standard fence posts are 4x4 pressure-treated lumber (3.5 x 3.5 inches actual). For a 6-foot fence, use 8-foot posts — this allows 2 feet of burial depth plus the 6-foot fence height. For corner posts, gate posts, and end posts, upgrade to 6x6 lumber for extra strength. Pressure-treated posts rated for ground contact (UC4A or higher) are essential — untreated wood rots within 2 to 5 years when buried. Cedar and redwood posts offer natural rot resistance but cost 2 to 3 times more than treated pine. Post prices range from $8 to $15 each for 4x4x8 treated pine, $20 to $35 for cedar, and $15 to $25 for 6x6 treated posts.\n\nRails are the horizontal members that connect posts and support pickets. Standard rails are 2x4 pressure-treated lumber cut to the post spacing length (typically 8 feet). Most fences use 2 rails (top and bottom) for heights up to 5 feet, and 3 rails (top, middle, bottom) for 6-foot and taller fences. The top rail sits 6 to 8 inches below the top of the pickets, and the bottom rail sits 6 to 8 inches above the ground. Rails cost $4 to $8 each for 8-foot treated 2x4 lumber.\n\nPickets are the vertical face boards that provide privacy and define the fence appearance. The most common picket is a 1x6 dog-ear board (0.75 x 5.5 inches actual), though 1x4 boards (0.75 x 3.5 inches actual) are used for traditional picket fences. Dog-ear, flat-top, and French Gothic are popular picket profiles. Standard picket spacing is 0 inches for privacy fences (boards touching) to 2 to 3 inches for decorative picket fences. A 6-foot dog-ear picket costs $2 to $5 each in treated pine, $4 to $8 in cedar. For board-on-board or shadowbox styles, increase picket count by 50% since boards overlap.\n\nFasteners matter more than most people realize. Use hot-dipped galvanized or stainless steel nails and screws — standard zinc-plated fasteners corrode within 1 to 2 years when in contact with pressure-treated wood. Each picket requires 6 to 8 screws (2 per rail connection). Budget $30 to $50 per 100 linear feet of fence for screws alone.",
+  nextSteps: [
+    { label: "Fence Post Calculator", href: "/calculators/outdoor/fence-post-calculator/" },
+    { label: "Fence Panel Calculator", href: "/calculators/outdoor/fence-panel-calculator/" },
+    { label: "Picket Fence Calculator", href: "/calculators/outdoor/picket-fence-calculator/" },
+    { label: "Post Hole Calculator", href: "/calculators/outdoor/post-hole-calculator/" },
+  ],
+  installationTips: [
+    "Call 811 to mark underground utilities at least 3 business days before digging any post holes.",
+    "Set corner and end posts first, then run a string line between them to align intermediate posts perfectly.",
+    "Dig post holes 3 times the post width (10 to 12 inches for 4x4 posts) and one-third the total post length deep.",
+    "Add 4 to 6 inches of gravel at the bottom of each post hole for drainage before setting the post in concrete.",
+    "Plumb each post with a level on two adjacent sides before the concrete sets.",
+  ],
+  commonMistakes: [
+    "Not checking property lines — building a fence even 6 inches over the property line can result in a costly forced removal.",
+    "Setting posts too shallow — posts buried less than 24 inches will lean or heave in freeze-thaw climates.",
+    "Skipping the concrete — posts set in dirt alone will loosen and lean. Use at least 2 bags of 50 lb concrete per post.",
+    "Attaching pickets before concrete fully cures — the weight can push wet-set posts out of plumb. Wait 24 to 48 hours.",
+    "Not accounting for grade changes — on sloped ground, either step the fence panels or rack them to follow the slope.",
+  ],
+  faqs: [
+    {
+      question: "How many fence posts do I need for 100 feet of fence?",
+      answer: "For 100 feet of fence with standard 8-foot post spacing, you need 14 posts (100 / 8 = 12.5, rounded up to 13 sections, plus 1 = 14 posts). With 6-foot spacing, you need 18 posts. Add extra posts for each gate opening (2 per gate) and each corner.",
+    },
+    {
+      question: "How much does it cost to build a 100-foot fence?",
+      answer: "A 100-foot, 6-foot-tall wood privacy fence costs $1,500 to $3,000 in materials for a DIY build. Professional installation adds $1,500 to $3,500 in labor, bringing the total to $3,000 to $6,500. Cedar fences cost 40 to 60% more than pressure-treated pine.",
+    },
+    {
+      question: "How far apart should fence posts be?",
+      answer: "Standard fence post spacing is 8 feet on center for most residential wood fences. Use 6-foot spacing for fences over 6 feet tall, in high-wind areas, or for heavy fence styles like board-on-board. Never exceed 8 feet.",
+    },
+    {
+      question: "How deep should fence posts be buried?",
+      answer: "Fence posts should be buried at least one-third of their total length. For a 6-foot fence using 8-foot posts, bury 24 inches. In cold climates, the post hole should extend below the frost line — 36 to 48 inches in northern states.",
+    },
+    {
+      question: "Do I need a permit to build a fence?",
+      answer: "Most municipalities require a fence permit, especially for fences over 4 feet tall in front yards or 6 feet in backyards. Permit costs range from $20 to $200. Call your local building department before starting.",
+    },
+    {
+      question: "What is the best wood for a fence?",
+      answer: "Pressure-treated pine is the most popular and affordable fence wood ($2 to $5 per picket), lasting 15 to 20 years. Western red cedar is naturally rot-resistant ($4 to $8 per picket), lasting 15 to 25 years. For the best value, use treated pine posts and rails with cedar pickets.",
+    },
+  ],
+};
+
+const fencePostCalculator: CalculatorConfig = {
+  fields: [
+    { id: "length", label: "Fence Length", unit: "ft", placeholder: "100" },
+    { id: "postSpacing", label: "Post Spacing", unit: "ft", defaultValue: 8, placeholder: "8" },
+    { id: "postLength", label: "Post Length", unit: "ft", defaultValue: 8, placeholder: "8" },
+  ],
+  calculate: (v) => {
+    const r = calculateFencePost(v.length as number, v.postSpacing as number, v.postLength as number);
+    return [
+      { label: `${r.postCount} fence posts needed (${r.postLengthFt} ft each)` },
+      { label: `${r.concreteBags} bags of concrete (50 lb bags, 2 per post)` },
+      { label: `${r.gravelBags} bags of drainage gravel (1 per post)` },
+      { label: `Tip: Use 6x6 posts for gate posts and corners for extra strength.` },
+    ];
+  },
+  disclaimer:
+    "This fence post concrete calculator assumes 2 bags of 50 lb concrete per post for standard 4x4 posts in 10-inch diameter holes at 24 inches deep. Larger post sizes, deeper holes, or wider diameters require more concrete. Check local frost depth requirements.",
+  howToUse: [
+    "Measure the total fence length along your property line in feet.",
+    "Enter the post spacing — 8 feet is standard, 6 feet for tall fences or high-wind areas.",
+    "Enter the post length — use 8-foot posts for a 6-foot fence (2 feet buried).",
+    "Click Calculate to get post count, concrete bags, and gravel needed.",
+  ],
+  materialInfo:
+    "Fence posts are the foundation of any fence — they bear the full weight of the fence and resist wind forces that can exceed 20 pounds per square foot during storms. Choosing the right posts and setting them properly determines whether your fence lasts 5 years or 25 years.\n\nStandard residential fence posts are 4x4 pressure-treated lumber (3.5 x 3.5 inches actual). For a 6-foot privacy fence, use 8-foot posts with 24 inches buried in concrete. Gate posts and corner posts should be upgraded to 6x6 lumber (5.5 x 5.5 inches actual) because they bear significantly more lateral stress than line posts.\n\nPressure treatment level matters for buried posts. Look for posts rated UC4A (ground contact) or UC4B (ground contact, heavy duty) — these resist decay in direct soil contact for 15 to 25 years. Posts labeled UC3B (above ground, exterior) will rot within 3 to 5 years if buried. Standard treated 4x4x8 posts cost $8 to $15 each. Cedar posts run $20 to $35 each. Metal post brackets ($15 to $30 each) allow mounting a wood post above ground on a concrete footing, eliminating wood-to-soil contact.\n\nConcrete is essential for post stability. Each standard post hole (10 inches diameter, 24 inches deep) requires approximately 2 bags of 50 lb pre-mixed concrete. Fast-setting concrete is popular for fence posts because it sets in 20 to 40 minutes. For each post, place 4 to 6 inches of gravel at the bottom of the hole for drainage so water does not pool around the base and accelerate rot.\n\nPost hole dimensions follow the rule of 3: the hole diameter should be 3 times the post width (10 to 12 inches for a 4x4 post) and the depth should be one-third the total post length plus 6 inches for gravel. In cold climates, post holes must extend below the frost line.",
+  nextSteps: [
+    { label: "Fence Calculator", href: "/calculators/outdoor/fence-calculator/" },
+    { label: "Post Hole Calculator", href: "/calculators/outdoor/post-hole-calculator/" },
+    { label: "Fence Panel Calculator", href: "/calculators/outdoor/fence-panel-calculator/" },
+  ],
+  installationTips: [
+    "Always call 811 before digging — hitting a buried utility line can be fatal and results in costly repairs.",
+    "Rent a two-person power auger for more than 5 post holes — it saves hours of labor.",
+    "Crown the concrete slightly above ground level and slope it away from the post so water drains away.",
+    "Use a post level to check plumb on two sides simultaneously while the concrete sets.",
+    "For gate posts, set them an extra 6 inches deeper and use 6x6 posts for extra strength.",
+  ],
+  commonMistakes: [
+    "Using posts not rated for ground contact — UC3B posts rot in 3 to 5 years underground.",
+    "Skipping the gravel base — without drainage gravel, water pools at the post base and accelerates rot.",
+    "Not mixing enough concrete — under-filled post holes allow the post to wobble and lean.",
+    "Setting posts on a hot day without working quickly — fast-set concrete can begin hardening before you get the post plumbed.",
+    "Forgetting to account for gates — each gate opening needs 2 extra posts with clearance for hinges and latch hardware.",
+  ],
+  faqs: [
+    {
+      question: "How much concrete do I need per fence post?",
+      answer: "Each standard fence post (4x4 in a 10-inch hole, 24 inches deep) requires approximately 2 bags of 50 lb concrete or 1.3 bags of 80 lb concrete. For 6x6 gate posts in 12-inch holes at 30 inches deep, use 3 to 4 bags of 50 lb concrete per post.",
+    },
+    {
+      question: "How long should fence posts be?",
+      answer: "Fence posts should be the fence height plus burial depth. For a 6-foot fence, use 8-foot posts (24 inches buried). For a 4-foot fence, use 6 or 7-foot posts. In cold climates with frost lines at 36 to 48 inches, use 10-foot posts for a 6-foot fence.",
+    },
+    {
+      question: "Should I use 4x4 or 6x6 fence posts?",
+      answer: "Use 4x4 posts for standard line posts on fences up to 6 feet tall. Use 6x6 posts for all gate posts, corner posts, end posts, and fences over 6 feet tall.",
+    },
+    {
+      question: "Can I set fence posts without concrete?",
+      answer: "Posts can be set in tamped gravel or compacted soil, but concrete provides far superior stability. Posts set without concrete are prone to leaning, especially in soft soil or freeze-thaw climates. For any permanent fence, use concrete.",
+    },
+    {
+      question: "How fast does fence post concrete set?",
+      answer: "Fast-setting concrete sets in 20 to 40 minutes and reaches full strength in 4 hours. Standard pre-mixed concrete sets in 4 to 6 hours and reaches full strength in 24 to 48 hours.",
+    },
+    {
+      question: "What is the best concrete for fence posts?",
+      answer: "Fast-setting concrete is the most popular choice because it sets in 20 to 40 minutes. Quikrete Fast-Setting and Sakrete Fast-Setting are top brands. Standard pre-mix works equally well but requires bracing for 24 to 48 hours. Both reach approximately 4,000 PSI when cured.",
+    },
+  ],
+};
+
+const fencePanelCalculator: CalculatorConfig = {
+  fields: [
+    { id: "length", label: "Fence Length", unit: "ft", placeholder: "100" },
+    { id: "panelWidth", label: "Panel Width", unit: "ft", defaultValue: 8, placeholder: "8" },
+  ],
+  calculate: (v) => {
+    const r = calculateFencePanel(v.length as number, v.panelWidth as number);
+    return [
+      { label: `${r.panelCount} pre-made fence panels needed` },
+      { label: `${r.postCount} posts required (one between each panel plus ends)` },
+      { label: `${r.postCaps} post caps recommended` },
+      { label: `Tip: Buy 1-2 extra panels for cutting at corners and gate openings.` },
+    ];
+  },
+  disclaimer:
+    "This fence panel calculator estimates pre-assembled fence panels and posts. Panel widths vary by manufacturer — common sizes are 6 and 8 feet. Actual count may increase for corners, slopes, or irregular property lines. Gate openings require separate gate kits.",
+  howToUse: [
+    "Measure the total fence length along your property line in feet.",
+    "Enter the panel width — standard pre-made panels are 8 feet wide (most common) or 6 feet wide.",
+    "Click Calculate to get the number of panels, posts, and post caps needed.",
+    "Add gate kits separately — each gate requires its own frame and hardware.",
+  ],
+  materialInfo:
+    "Pre-made fence panels are factory-assembled sections that include pickets already attached to horizontal rails, ready to mount between posts. They offer significant time savings over building a fence board-by-board — a professional crew can install 100 to 150 feet of panel fence per day versus 50 to 75 feet for stick-built fencing.\n\nStandard panel sizes are 8 feet wide by 6 feet tall, though 6-foot-wide and 4-foot-tall panels are also common. Panel styles include solid privacy, shadowbox, lattice-top, dog-ear, flat-top, and scalloped profiles. Prices range from $40 to $80 per panel for treated pine, $70 to $130 for cedar, and $80 to $200 for vinyl or composite panels.\n\nPanel fences use the same 4x4 pressure-treated posts as stick-built fences, but the panels mount between posts rather than on the face. This requires precise post spacing — if your posts are even 1 inch off, the panel will not fit correctly. Most builders set all posts first at exact panel-width spacing, then drop the panels into brackets.\n\nMounting hardware includes panel brackets ($3 to $8 per set), panel screws (8 to 12 per panel), and post caps ($3 to $15 each). For professional results, use panel brackets on every rail rather than toe-nailing — brackets make future panel replacement simple.\n\nPost caps serve both decorative and protective purposes. They shed water away from the post end grain, which is the most vulnerable entry point for moisture and rot. Flat wood caps cost $2 to $5 each, while copper, solar-lit, or decorative metal caps range from $8 to $25 each. Even a basic flat cap extends post life by 3 to 5 years.",
+  nextSteps: [
+    { label: "Fence Calculator", href: "/calculators/outdoor/fence-calculator/" },
+    { label: "Fence Post Calculator", href: "/calculators/outdoor/fence-post-calculator/" },
+    { label: "Post Hole Calculator", href: "/calculators/outdoor/post-hole-calculator/" },
+  ],
+  installationTips: [
+    "Set all posts at exactly the panel width apart, measured from inside face to inside face.",
+    "Use a string line and a spacing jig between posts to maintain consistent spacing.",
+    "Mount panel brackets to posts first, then slide panels into the brackets from the top.",
+    "Keep the bottom of the panel 2 to 4 inches above ground level to prevent moisture wicking.",
+    "For sloped ground, step the panels rather than angling them for a cleaner look.",
+  ],
+  commonMistakes: [
+    "Not measuring post spacing precisely — pre-made panels cannot be adjusted in width.",
+    "Placing panels on the ground — panels touching soil rot within 2 to 3 years, even with treated wood.",
+    "Skipping post caps — exposed end grain absorbs water, causing posts to split and rot from the top.",
+    "Trying to use panels on steeply sloped terrain — standard panels are rectangular and do not follow slopes.",
+    "Not buying extra panels — cutting for corners and angles wastes material. Buy 10% extra.",
+  ],
+  faqs: [
+    {
+      question: "How many fence panels do I need for 100 feet of fence?",
+      answer: "For 100 feet with standard 8-foot panels, you need 13 panels (100 / 8 = 12.5, rounded up to 13). With 6-foot panels, you need 17. Add 1 to 2 extra for cuts at corners or grade changes. You also need 14 posts for 13 panels.",
+    },
+    {
+      question: "Are fence panels better than building board-by-board?",
+      answer: "Panels are faster to install (3 to 5 times faster), have consistent spacing, and cost about the same. Board-by-board allows custom spacing, works better on slopes, and lets you choose exact board placement. For flat terrain, panels are the better choice.",
+    },
+    {
+      question: "What size fence panels are available?",
+      answer: "Standard sizes are 8x6 ft (most common), 6x6 ft, and 8x4 ft. Some manufacturers offer 8x8 ft panels for extra privacy. Always verify exact panel width at the store — some are 7 ft 10 inches rather than a full 8 feet.",
+    },
+    {
+      question: "How much do fence panels cost?",
+      answer: "Treated pine privacy panels cost $40 to $80 each for a 6x8-foot panel. Cedar panels run $70 to $130. Vinyl costs $80 to $150. Composite ranges from $100 to $200. For 100 feet with 13 panels, materials cost $700 to $1,500 for treated pine.",
+    },
+    {
+      question: "Can I install fence panels on a slope?",
+      answer: "Yes, but panels must be stair-stepped on sloping ground since they are rectangular. Each step creates a triangular gap that can be filled with a cut board or lattice. For slopes greater than 1 foot over 8 feet, consider stick-built fencing.",
+    },
+    {
+      question: "How long do fence panels last?",
+      answer: "Treated pine panels last 15 to 20 years with annual staining or sealing. Cedar panels last 15 to 25 years. Vinyl panels last 20 to 30 years with no maintenance beyond washing. Posts typically outlast panels if properly set with post caps.",
+    },
+  ],
+};
+
+const picketFenceCalculator: CalculatorConfig = {
+  fields: [
+    { id: "length", label: "Fence Length", unit: "ft", placeholder: "100" },
+    { id: "fenceHeight", label: "Fence Height", unit: "ft", defaultValue: 4, placeholder: "4" },
+    { id: "picketWidth", label: "Picket Width", unit: "in", defaultValue: 3.5, placeholder: "3.5" },
+    { id: "gap", label: "Gap Between Pickets", unit: "in", defaultValue: 2.5, placeholder: "2.5" },
+  ],
+  calculate: (v) => {
+    const r = calculatePicketFence(v.length as number, v.fenceHeight as number, v.picketWidth as number, v.gap as number);
+    const withWaste = Math.ceil(r.picketCount * 1.1);
+    return [
+      { label: `${r.picketCount} pickets needed (before waste)` },
+      { label: `${withWaste} pickets recommended (includes 10% waste)` },
+      { label: `${r.railCount} horizontal rails needed` },
+      { label: `${r.postCount} posts needed (8 ft spacing)` },
+      { label: `${r.totalBoardFeet} total board feet of lumber` },
+    ];
+  },
+  disclaimer:
+    "This picket fence calculator estimates materials based on your custom picket width and gap spacing. Actual needs vary with terrain, corners, and gate openings. Board foot calculation includes posts, rails, and pickets. Add 10 to 15% waste for cuts and defective boards.",
+  howToUse: [
+    "Measure the total fence length in feet along the property line.",
+    "Enter the fence height — traditional picket fences are 3 to 4 feet tall.",
+    "Enter the picket width in inches — standard 1x4 boards are 3.5 inches wide.",
+    "Enter the gap between pickets — 2 to 3 inches is traditional for a classic look, 0 for solid privacy.",
+  ],
+  materialInfo:
+    "A picket fence is a classic American fence style featuring evenly spaced vertical boards with pointed, rounded, or decorative tops, attached to horizontal rails between posts. Picket fences are primarily decorative and boundary-defining rather than privacy fences — the gaps between pickets allow visibility and airflow.\n\nTraditional picket fences use 1x4 lumber (0.75 x 3.5 inches actual) with 2 to 3 inches of space between boards. The pickets are typically 36 to 48 inches tall. Common picket top profiles include pointed (traditional), dog-ear, French Gothic, and flat-top.\n\nPicket material options include pressure-treated pine ($1.50 to $3.00 each), cedar ($3.00 to $6.00 each), and PVC/vinyl ($3.00 to $8.00 each). Cedar weathers to an attractive silver-gray and never needs painting.\n\nPainting and finishing are a major part of picket fence ownership. White-painted picket fences require repainting every 3 to 5 years. For lowest maintenance, use pre-primed pickets and apply two coats of 100% acrylic exterior paint before installation — it is far easier to paint individual pickets on sawhorses than to brush each one after the fence is assembled.\n\nSpacing affects both appearance and material cost significantly. A 100-foot fence at 3.5-inch pickets with 2.5-inch gaps uses about 200 pickets. The same fence with 1-inch gaps uses about 267 pickets — a 33% increase. No-gap privacy fences use about 343 pickets per 100 feet. The gap size has a dramatic impact on material cost and visual character.\n\nBoard feet is a standard lumber measurement: 1 board foot equals a piece of wood 1 inch thick by 12 inches wide by 12 inches long (144 cubic inches). This calculator provides total board feet so you can compare costs across different lumber dimensions and species.",
+  nextSteps: [
+    { label: "Fence Calculator", href: "/calculators/outdoor/fence-calculator/" },
+    { label: "Fence Post Calculator", href: "/calculators/outdoor/fence-post-calculator/" },
+    { label: "Paint Coverage Calculator", href: "/calculators/finishing/paint-coverage-calculator/" },
+  ],
+  installationTips: [
+    "Pre-paint or pre-stain all pickets before installation — you get better coverage and the work goes 3 to 5 times faster.",
+    "Use a spacer jig cut to your desired gap width for perfectly consistent spacing.",
+    "Attach pickets with the best face facing outward toward the street or neighbor.",
+    "Set the bottom of pickets 2 inches above ground level to prevent moisture wicking and rot.",
+    "For pointed pickets, cut the points before installation using a miter saw with an angle jig.",
+  ],
+  commonMistakes: [
+    "Inconsistent picket spacing — even a quarter-inch variation is visible from 20 feet away. Always use a spacer jig.",
+    "Not pre-finishing pickets — painting an assembled fence takes 3 to 5 times longer and leaves back and edges uncoated.",
+    "Using too few rails — fences over 4 feet tall need 3 rails. Two rails cause pickets to warp and flex.",
+    "Pointing pickets too aggressively — very sharp points split and break easily.",
+    "Forgetting to factor in picket top profiles when calculating height — a pointed 48-inch picket is effectively 45 to 46 inches tall.",
+  ],
+  faqs: [
+    {
+      question: "How many pickets do I need per foot of fence?",
+      answer: "With standard 3.5-inch pickets and 2.5-inch gaps, you need about 2 pickets per linear foot. With 1-inch gaps, about 2.7 per foot. With no gaps (privacy), about 3.4 per foot. Multiply by total fence length and add 10% for waste.",
+    },
+    {
+      question: "How tall should a picket fence be?",
+      answer: "Traditional picket fences are 36 to 48 inches tall (3 to 4 feet). Front yard fences are often limited to 3 or 4 feet by local ordinances. Decorative garden borders can be as short as 24 inches.",
+    },
+    {
+      question: "How much does a picket fence cost per foot?",
+      answer: "A wood picket fence costs $8 to $15 per linear foot for materials (treated pine) or $12 to $25 for cedar. Professional installation adds $10 to $20 per foot. A 100-foot treated pine picket fence costs $800 to $1,500 DIY or $1,800 to $3,500 installed.",
+    },
+    {
+      question: "What is the standard picket spacing?",
+      answer: "Traditional picket fence spacing is 2 to 3 inches between pickets, roughly equal to the picket width. For small dog containment, reduce the gap to 1.5 to 2 inches. Pool enclosures typically require gaps under 1.75 inches.",
+    },
+    {
+      question: "Should picket fences be painted or stained?",
+      answer: "White-painted picket fences are iconic but need repainting every 3 to 5 years. Solid stain lasts 4 to 7 years. Semi-transparent stain lasts 2 to 4 years. For lowest maintenance, use cedar and let it weather naturally, or choose vinyl.",
+    },
+    {
+      question: "Can I build a picket fence without a permit?",
+      answer: "Most municipalities require a fence permit regardless of style, though some exempt fences under 3 or 4 feet tall. Permit costs range from $20 to $200. Call your local building department before starting.",
+    },
+  ],
+};
+
 // ─── REGISTRY MAP ─────────────────────────────────────────────────────────────
 
 export const calculatorRegistry: Record<string, Record<string, CalculatorConfig>> = {
@@ -3223,6 +4016,7 @@ export const calculatorRegistry: Record<string, Record<string, CalculatorConfig>
     "driveway-gravel-calculator": drivewayGravelCalculator,
     "block-fill-calculator": blockFillCalculator,
     "mortar-mix-calculator": mortarMixCalculator,
+    "retaining-wall-calculator": retainingWallCalculator,
   },
   "floor-framing": {
     "rim-joist-calculator": rimJoistCalculator,
@@ -3274,6 +4068,7 @@ export const calculatorRegistry: Record<string, Record<string, CalculatorConfig>
     "paint-coverage-calculator": paintCoverageCalculator,
     "paint-cost-calculator": paintCostCalculator,
     "primer-calculator": primerCalculator,
+    "epoxy-calculator": epoxyCalculator,
   },
   outdoor: {
     "deck-board-calculator": deckBoardCalculator,
@@ -3281,5 +4076,16 @@ export const calculatorRegistry: Record<string, Record<string, CalculatorConfig>
     "deck-railing-calculator": deckRailingCalculator,
     "deck-stair-calculator": deckStairCalculator,
     "post-hole-calculator": postHoleCalculator,
+    "pond-calculator": pondCalculator,
+    "fence-calculator": fenceCalculator,
+    "fence-post-calculator": fencePostCalculator,
+    "fence-panel-calculator": fencePanelCalculator,
+    "picket-fence-calculator": picketFenceCalculator,
+  },
+  flooring: {
+    "flooring-calculator": flooringCalculator,
+    "carpet-calculator": carpetCalculator,
+    "tile-calculator": tileCalculator,
+    "laminate-calculator": laminateCalculator,
   },
 };

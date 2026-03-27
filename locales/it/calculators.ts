@@ -103,6 +103,14 @@ export const categories: CategoryMeta[] = [
         category: "Fondazioni",
         categorySlug: "foundation",
       },
+      {
+        slug: "retaining-wall-calculator",
+        title: "Calcolatore Muro di Contenimento",
+        description:
+          "Calcolatore muro di contenimento \u2014 strumento gratuito per muri in blocchi, calcestruzzo e pietra. Numero blocchi, cappelli, ghiaia di riempimento e drenaggio istantaneo.",
+        category: "Fondazioni",
+        categorySlug: "foundation",
+      },
     ],
   },
   {
@@ -217,6 +225,14 @@ export const categories: CategoryMeta[] = [
         category: "Finiture",
         categorySlug: "finishing",
       },
+      {
+        slug: "epoxy-calculator",
+        title: "Calcolatore Resina Epossidica",
+        description:
+          "Calcolatore resina epossidica \u2014 quanta resina per il pavimento del garage? Strumento gratuito per ogni superficie. Litri, kit e stima costo per 1 o 2 mani.",
+        category: "Finiture",
+        categorySlug: "finishing",
+      },
     ],
   },
   {
@@ -265,6 +281,58 @@ export const categories: CategoryMeta[] = [
         category: "Esterni",
         categorySlug: "outdoor",
       },
+      {
+        slug: "pond-calculator",
+        title: "Calcolatore Laghetto",
+        description:
+          "Calcolatore laghetto \u2014 strumento gratuito per volume, dimensioni telo e portata pompa. Inserisci le dimensioni per laghetti rettangolari, ovali o a rene.",
+        category: "Esterni",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "fence-calculator",
+        title: "Calcolatore Recinzione",
+        description:
+          "Calcolatore recinzione — quanti pali, traverse e tavole per la tua recinzione? Strumento gratuito per recinzioni in legno. Lista materiali completa istantanea.",
+        category: "Esterni",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "fence-post-calculator",
+        title: "Calcolatore Pali Recinzione",
+        description:
+          "Calcolatore pali recinzione — quanti pali e sacchi di cemento? Strumento gratuito calcola pali, cemento e ghiaia per qualsiasi lunghezza di recinzione.",
+        category: "Esterni",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "fence-panel-calculator",
+        title: "Calcolatore Pannelli Recinzione",
+        description:
+          "Calcolatore pannelli recinzione — quanti pannelli prefabbricati? Strumento gratuito per pannelli da 1,80 m e 2,50 m. Pannelli, pali e cappucci.",
+        category: "Esterni",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "picket-fence-calculator",
+        title: "Calcolatore Staccionata",
+        description:
+          "Calcolatore staccionata — quante stecche con spaziatura personalizzata? Strumento gratuito per qualsiasi larghezza e distanza. Stecche, traverse, pali e volume legname.",
+        category: "Esterni",
+        categorySlug: "outdoor",
+      },
+    ],
+  },
+  {
+    slug: "flooring",
+    title: "Calcolatori Pavimentazione",
+    description:
+      "Calcola i materiali per progetti di pavimentazione — parquet, moquette, piastrelle e laminato con fattore di scarto e stima dei costi.",
+    calculators: [
+      { slug: "flooring-calculator", title: "Calcolatore Pavimentazione", description: "Calcolatore pavimentazione — strumento gratuito per metri quadrati. Pacchi, scarto e lista materiali per parquet, vinile e legno prefinito.", category: "Pavimentazione", categorySlug: "flooring" },
+      { slug: "carpet-calculator", title: "Calcolatore Moquette", description: "Calcolatore moquette — strumento gratuito per metri quadrati, metri lineari e sottofondo. Per rotoli da 4 m e 5 m con pianificazione giunture.", category: "Pavimentazione", categorySlug: "flooring" },
+      { slug: "tile-calculator", title: "Calcolatore Piastrelle", description: "Calcolatore piastrelle — strumento gratuito per gres porcellanato, ceramica e pietra naturale. Quantità piastrelle, pacchi, stucco e colla.", category: "Pavimentazione", categorySlug: "flooring" },
+      { slug: "laminate-calculator", title: "Calcolatore Laminato", description: "Calcolatore laminato — stimatore gratuito di doghe e pacchi con sottopavimento. Inserisci le dimensioni per una lista materiali istantanea.", category: "Pavimentazione", categorySlug: "flooring" },
     ],
   },
 ];

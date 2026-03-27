@@ -65,6 +65,18 @@ const guides: GuidesTranslations = {
           "Gravel costs \u00a315\u2013\u00a340 per tonne. Complete price guide for driveways, patios, paths, drainage, and landscaping with delivery costs and how to calculate amounts.",
         href: "/guides/gravel-cost-guide",
       },
+      {
+        title: "How Much Does a Driveway Cost? 2026 Price Guide",
+        description:
+          "A new driveway costs \u00a32,000\u2013\u00a315,000 depending on material and size. Complete price guide covering concrete, tarmac, gravel, and block paving with cost-by-size breakdowns, factors affecting price, DIY vs tradesman, and saving tips.",
+        href: "/guides/driveway-cost-guide",
+      },
+      {
+        title: "Flooring Cost Guide: What Does New Flooring Cost?",
+        description:
+          "Flooring costs \u00a32\u2013\u00a315 per sq ft installed. Complete price guide covering hardwood, laminate, tile, carpet, and LVP with room-by-room estimates, installation costs, and saving tips.",
+        href: "/guides/flooring-cost-guide",
+      },
     ],
   },
 
@@ -1506,6 +1518,290 @@ const guides: GuidesTranslations = {
         answer:
           "Yes, significantly. A gravel driveway costs \u00a38\u2013\u00a320/m\u00b2 for materials (\u00a320\u2013\u00a350/m\u00b2 laid), compared with \u00a360\u2013\u00a3120/m\u00b2 for concrete and \u00a340\u2013\u00a380/m\u00b2 for tarmac. A 3.5 \u00d7 15 m gravel driveway costs \u00a31,000\u2013\u00a32,500 laid versus \u00a33,200\u2013\u00a36,500 for concrete. However, gravel requires more ongoing maintenance and needs topping up every 2\u20133 years.",
       },
+    ],
+  },
+
+  drivewayCost: {
+    title: "How Much Does a Driveway Cost? 2026 Price Guide",
+    metaDescription:
+      "A new driveway costs \u00a32,000\u2013\u00a315,000 in 2026 depending on material and size. Complete price guide: concrete (\u00a350\u2013\u00a3120/m\u00b2), tarmac (\u00a330\u2013\u00a370/m\u00b2), gravel (\u00a38\u2013\u00a325/m\u00b2), block paving (\u00a360\u2013\u00a3150/m\u00b2). Factors affecting price, DIY vs tradesman analysis, and cost-saving tips.",
+
+    heroTitle: "How Much Does a Driveway Cost?",
+    heroSubtitle: "2026 Price Guide",
+    heroDescription:
+      "A complete breakdown of driveway costs by material, size, and region across the UK. Covers concrete, tarmac, gravel, and block paving with installed prices, lifespan comparisons, factors that affect your total cost, and proven ways to save money.",
+
+    quickAnswerHeading: "Quick Answer",
+    quickAnswerText:
+      "A new driveway costs \u00a32,000 to \u00a315,000 in 2026, with most homeowners paying \u00a34,000 to \u00a310,000 for a standard double driveway. Gravel is the cheapest at \u00a38\u2013\u00a325/m\u00b2. Tarmac runs \u00a330\u2013\u00a370/m\u00b2. Concrete costs \u00a350\u2013\u00a3120/m\u00b2. Block paving is the most expensive at \u00a360\u2013\u00a3150/m\u00b2. These prices include materials and professional installation.",
+
+    costByMaterialHeading: "Driveway Cost by Material",
+    costByMaterialIntro:
+      "The material you choose is the single biggest factor in driveway cost. Each option offers a different balance of price, durability, appearance, and maintenance. Here are the costs in the UK in 2026:",
+    costByMaterialColMaterial: "Material",
+    costByMaterialColCostSqFt: "Installed Cost / m\u00b2",
+    costByMaterialColLifespan: "Lifespan",
+    costByMaterialColBestFor: "Best For",
+    costByMaterialRows: [
+      { material: "Gravel", costSqFt: "\u00a38 \u2013 \u00a325", lifespan: "15\u201325 years", bestFor: "Rural properties, long drives, budget-conscious projects. Requires periodic topping up." },
+      { material: "Tarmac (asphalt)", costSqFt: "\u00a330 \u2013 \u00a370", lifespan: "15\u201320 years", bestFor: "Good value. Flexible surface handles freeze-thaw well. Most popular in the UK." },
+      { material: "Concrete", costSqFt: "\u00a350 \u2013 \u00a3120", lifespan: "25\u201350 years", bestFor: "Most residential driveways. Durable, low maintenance, can be patterned or coloured." },
+      { material: "Pattern Imprinted Concrete", costSqFt: "\u00a360 \u2013 \u00a3130", lifespan: "25\u201350 years", bestFor: "Decorative look at lower cost than block paving. Mimics brick, stone, or slate." },
+      { material: "Block Paving", costSqFt: "\u00a360 \u2013 \u00a3150", lifespan: "25\u201350+ years", bestFor: "Premium residential. Extremely durable, many patterns, permeable options available." },
+      { material: "Natural Stone", costSqFt: "\u00a380 \u2013 \u00a3200", lifespan: "50+ years", bestFor: "Period properties, maximum kerb appeal. Granite setts, sandstone, or York stone." },
+    ],
+
+    costBySizeHeading: "Driveway Cost by Size",
+    costBySizeIntro:
+      "Driveway size dramatically affects your total cost. A single-car drive uses roughly 15\u201330 m\u00b2, whilst a double driveway requires 30\u201360 m\u00b2. Circular driveways can exceed 100 m\u00b2.",
+    costBySizeColSize: "Driveway Type",
+    costBySizeColDimensions: "Typical Size",
+    costBySizeColConcrete: "Concrete",
+    costBySizeColAsphalt: "Tarmac",
+    costBySizeColGravel: "Gravel",
+    costBySizeRows: [
+      { size: "Single Car", dimensions: "3\u00d75 m (15 m\u00b2)", concrete: "\u00a3750 \u2013 \u00a31,800", asphalt: "\u00a3450 \u2013 \u00a31,050", gravel: "\u00a3120 \u2013 \u00a3375" },
+      { size: "Standard Double", dimensions: "5\u00d710 m (50 m\u00b2)", concrete: "\u00a32,500 \u2013 \u00a36,000", asphalt: "\u00a31,500 \u2013 \u00a33,500", gravel: "\u00a3400 \u2013 \u00a31,250" },
+      { size: "Wide Double", dimensions: "6\u00d712 m (72 m\u00b2)", concrete: "\u00a33,600 \u2013 \u00a38,640", asphalt: "\u00a32,160 \u2013 \u00a35,040", gravel: "\u00a3576 \u2013 \u00a31,800" },
+      { size: "Long Rural Drive", dimensions: "3.5\u00d730 m (105 m\u00b2)", concrete: "\u00a35,250 \u2013 \u00a312,600", asphalt: "\u00a33,150 \u2013 \u00a37,350", gravel: "\u00a3840 \u2013 \u00a32,625" },
+      { size: "Circular Driveway", dimensions: "~100 \u2013 150 m\u00b2", concrete: "\u00a35,000 \u2013 \u00a318,000", asphalt: "\u00a33,000 \u2013 \u00a310,500", gravel: "\u00a3800 \u2013 \u00a33,750" },
+    ],
+
+    factorsHeading: "Factors That Affect Driveway Cost",
+    factorsIntro:
+      "Beyond material and size, several factors can push your driveway cost higher or lower. Understanding these helps you budget accurately:",
+    factorsItems: [
+      "Material choice: The biggest cost driver. Gravel at \u00a38\u2013\u00a325/m\u00b2 is 5\u201310\u00d7 cheaper than natural stone at \u00a380\u2013\u00a3200/m\u00b2.",
+      "Driveway area and shape: Larger driveways cost more in total but often have a lower per-m\u00b2 cost. Curved or circular driveways require 20\u201340% more labour.",
+      "Groundwork and levelling: If your site needs excavation or levelling, expect to add \u00a35\u2013\u00a330/m\u00b2. Sloped sites may require retaining walls.",
+      "Drainage: Proper drainage (ACO channels, soakaways) costs \u00a3500\u2013\u00a33,000. SUDs-compliant permeable driveways may be required under planning rules.",
+      "Existing driveway removal: Removing old concrete costs \u00a310\u2013\u00a325/m\u00b2. Tarmac is slightly cheaper. Gravel can usually be regraded.",
+      "Regional variations: Prices vary 30\u201350% across the UK. London and the South East are 20\u201340% more expensive than northern regions.",
+      "Planning permission: Driveways over 5 m\u00b2 of impermeable material at the front of a house require planning permission unless drainage goes to a permeable surface. Check with your local council.",
+      "Sub-base preparation: A proper Type 1 MOT sub-base (100\u2013200 mm compacted) is essential for concrete and tarmac. Costs \u00a35\u2013\u00a315/m\u00b2 extra.",
+    ],
+
+    diyVsContractorHeading: "DIY vs Hiring a Tradesman",
+    diyVsContractorIntro:
+      "Whether you can lay a driveway yourself depends entirely on the material. Here is an honest assessment:",
+    diyVsContractorText1:
+      "Gravel driveways are the most DIY-friendly option. With basic tools (a shovel, rake, and hired whacker plate), a homeowner can lay a gravel driveway in a weekend. The process involves clearing the area, laying a weed-suppressing membrane, spreading gravel in 50 mm lifts, and compacting each layer. DIY gravel saves 40\u201360% compared with hiring a contractor.",
+    diyVsContractorText2:
+      "Concrete and tarmac driveways are not practical DIY projects for most homeowners. Concrete requires specialist equipment (ready-mix lorry, poker vibrator, tamping beam, float), precise timing during the pour, and experience with falls and formwork. A poorly poured concrete driveway will crack prematurely. Tarmac is even more specialised, requiring hot-mix equipment and heavy rollers.",
+    diyVsContractorText3:
+      "Block paving falls in between. An experienced DIYer can lay blocks over a long weekend, but the sub-base preparation (excavation, Type 1 MOT, sharp sand) is labour-intensive. For most homeowners, getting the sub-base professionally prepared and then laying the blocks yourself offers the best balance of savings (25\u201335%) and quality. Always get at least three quotes and check references and insurance.",
+
+    savingTipsHeading: "How to Save Money on a New Driveway",
+    savingTipsIntro:
+      "A driveway is a significant investment, but there are proven strategies to reduce the cost without sacrificing quality:",
+    savingTipsItems: [
+      "Get multiple quotes: Driveway prices can vary 30\u201350% between contractors. Get at least three written quotes specifying materials, depths, sub-base, and guarantee.",
+      "Schedule in winter: Late autumn and winter are quiet months for driveway contractors. Many offer 10\u201320% discounts to keep crews busy.",
+      "Choose a simpler design: Straight, rectangular driveways are cheapest. Curves, widening, and decorative borders add 15\u201325%.",
+      "Keep the existing sub-base: If your old driveway has a solid Type 1 sub-base, a contractor can overlay new material rather than digging out \u2014 saving \u00a35\u2013\u00a315/m\u00b2.",
+      "Consider tarmac over concrete: Tarmac costs roughly half as much and handles frost well. With regular sealing it lasts 15\u201320 years.",
+      "Use gravel for long drives: If your drive is over 30 m, gravel for the main length and paving just the apron saves thousands.",
+      "Combine with a neighbour: Hiring the same contractor for two driveways at once can earn a bulk discount of 5\u201315%.",
+    ],
+
+    calculatorCtaHeading: "Estimate Your Driveway Cost",
+    calculatorCtaText: "Use our free calculators to estimate the exact amount of material and cost for your driveway project.",
+    calculatorLinks: [
+      { label: "Concrete Slab Calculator", href: "/calculators/foundation/concrete-slab-calculator", description: "Calculate cubic metres, bags, and cost for a concrete driveway." },
+      { label: "Gravel Calculator", href: "/calculators/foundation/gravel-calculator", description: "Estimate tonnes and cubic metres for a gravel driveway with cost range." },
+      { label: "Driveway Gravel Calculator", href: "/calculators/foundation/driveway-gravel-calculator", description: "Purpose-built calculator for driveway gravel by type and size." },
+    ],
+
+    faqHeading: "Frequently Asked Questions",
+    faqs: [
+      {
+        question: "How much does a new driveway cost in 2026?",
+        answer:
+          "A new driveway costs \u00a32,000 to \u00a315,000 in 2026, with the average around \u00a34,000 to \u00a38,000 for a standard double concrete driveway (50 m\u00b2). Gravel is cheapest at \u00a3400\u2013\u00a31,250 laid. Tarmac runs \u00a31,500\u2013\u00a33,500. Concrete costs \u00a32,500\u2013\u00a36,000. Block paving is the most expensive at \u00a33,000\u2013\u00a310,000+.",
+      },
+      {
+        question: "What is the cheapest type of driveway?",
+        answer:
+          "Gravel is the cheapest driveway material at \u00a38\u2013\u00a325/m\u00b2 for materials, or \u00a320\u2013\u00a350/m\u00b2 laid. A standard double gravel driveway costs \u00a3400\u2013\u00a31,250 laid, compared with \u00a32,500\u2013\u00a36,000 for concrete. Gravel is also the most DIY-friendly option, cutting costs by 40\u201360%. The trade-off is periodic topping up every 2\u20133 years.",
+      },
+      {
+        question: "How much does a concrete driveway cost per square metre?",
+        answer:
+          "A concrete driveway costs \u00a350 to \u00a3120/m\u00b2 laid in 2026. Basic brushed-finish concrete runs \u00a350\u2013\u00a380/m\u00b2. Pattern imprinted concrete costs \u00a360\u2013\u00a3130/m\u00b2. A standard 50 m\u00b2 double driveway in plain concrete costs \u00a32,500\u2013\u00a36,000 laid. Concrete driveways last 25\u201350 years with minimal maintenance.",
+      },
+      {
+        question: "Is tarmac or concrete cheaper for a driveway?",
+        answer:
+          "Tarmac is cheaper upfront at \u00a330\u2013\u00a370/m\u00b2 laid vs \u00a350\u2013\u00a3120/m\u00b2 for concrete. However, tarmac requires sealing every 2\u20133 years and lasts 15\u201320 years vs 25\u201350 years for concrete. Over 30 years, total cost of ownership is often similar.",
+      },
+      {
+        question: "How do I calculate how much my driveway will cost?",
+        answer:
+          "To estimate: (1) Measure length and width in metres for the area. (2) Multiply by the per-m\u00b2 cost: gravel \u00a38\u2013\u00a325, tarmac \u00a330\u2013\u00a370, concrete \u00a350\u2013\u00a3120, block paving \u00a360\u2013\u00a3150. (3) Add 10\u201320% for groundwork and contingency. Use our free calculators for precise estimates.",
+      },
+      {
+        question: "How long does a driveway last by material type?",
+        answer:
+          "Gravel drives last 15\u201325 years but need topping up every 2\u20133 years. Tarmac lasts 15\u201320 years with sealing every 2\u20133 years. Concrete lasts 25\u201350 years with minimal maintenance. Block paving lasts 25\u201350+ years with the advantage that individual blocks can be replaced. Natural stone can last 50+ years.",
+      },
+    ],
+  },
+  flooringCost: {
+    title: "Flooring Cost Guide: What Does New Flooring Cost?",
+    metaDescription: "Flooring costs \u00a32\u2013\u00a315 per sq ft installed. Complete price guide covering hardwood, laminate, tile, carpet, and LVP with room-by-room estimates, installation costs, and saving tips.",
+    heroTitle: "Flooring Cost Guide",
+    heroSubtitle: "2026 Prices",
+    heroDescription: "Everything you need to know about flooring costs \u2014 from materials and installation to room-by-room budgets and money-saving strategies.",
+    quickAnswerHeading: "Quick Answer",
+    quickAnswerText: "New flooring costs \u00a32 to \u00a315 per square foot installed, depending on material type. Laminate is cheapest at \u00a33\u2013\u00a38/sq ft installed, followed by carpet (\u00a33\u2013\u00a311/sq ft), luxury vinyl plank (\u00a34\u2013\u00a310/sq ft), tile (\u00a37\u2013\u00a318/sq ft), and hardwood (\u00a38\u2013\u00a315/sq ft). A typical 50 sq m project runs \u00a31,500\u2013\u00a37,500 total including materials and labour.",
+    flooringTypesHeading: "Flooring Costs by Material Type",
+    flooringTypesIntro: "Material costs vary widely. Here is what each type costs per square metre for materials only, plus typical installed prices.",
+    flooringTypesColType: "Flooring Type",
+    flooringTypesColCost: "Installed Cost (per sq m)",
+    flooringTypesColBestFor: "Best For",
+    flooringTypesRows: [
+      { type: "Laminate", cost: "\u00a320 \u2013 \u00a360", bestFor: "Budget-friendly, DIY projects, rentals" },
+      { type: "Carpet", cost: "\u00a320 \u2013 \u00a380", bestFor: "Bedrooms, comfort underfoot" },
+      { type: "Luxury Vinyl Plank (LVP)", cost: "\u00a330 \u2013 \u00a380", bestFor: "Kitchens, bathrooms, high-traffic areas" },
+      { type: "Ceramic / Porcelain Tile", cost: "\u00a350 \u2013 \u00a3150", bestFor: "Bathrooms, kitchens, hallways" },
+      { type: "Engineered Hardwood", cost: "\u00a340 \u2013 \u00a3120", bestFor: "Living rooms, dining rooms, wide plank look" },
+      { type: "Solid Hardwood", cost: "\u00a360 \u2013 \u00a3140", bestFor: "Main living areas, long-term value" },
+      { type: "Natural Stone", cost: "\u00a3100 \u2013 \u00a3250", bestFor: "High-end kitchens, bathrooms, hallways" },
+    ],
+    costByRoomHeading: "Flooring Cost by Room Size",
+    costByRoomIntro: "Here are typical total project costs (materials + installation) by room type using mid-range materials.",
+    costByRoomColRoom: "Room",
+    costByRoomColTypical: "Typical Total Cost",
+    costByRoomColNotes: "Notes",
+    costByRoomRows: [
+      { room: "Bathroom (5 sq m)", typical: "\u00a3400 \u2013 \u00a31,200", notes: "Tile or LVP most common; waterproofing adds cost" },
+      { room: "Bedroom (14 sq m)", typical: "\u00a3600 \u2013 \u00a31,800", notes: "Carpet or laminate; underlay included for carpet" },
+      { room: "Kitchen (18 sq m)", typical: "\u00a31,000 \u2013 \u00a33,500", notes: "Tile or LVP; subfloor prep often needed" },
+      { room: "Living Room (28 sq m)", typical: "\u00a31,200 \u2013 \u00a34,500", notes: "Hardwood or LVP; largest visual impact" },
+      { room: "Whole House (140 sq m)", typical: "\u00a35,000 \u2013 \u00a320,000", notes: "Mix of materials; volume discounts possible" },
+    ],
+    installationCostsHeading: "Installation Costs: DIY vs Professional",
+    installationCostsIntro: "Labour is often 40\u201360% of total flooring cost. Here is how installation costs break down.",
+    installationCostsText1: "Professional installation typically costs \u00a315\u2013\u00a340 per square metre for most flooring types. Tile installation is the most expensive at \u00a340\u2013\u00a380/sq m due to the skill required for proper adhesive application, levelling, and grouting. Carpet fitting is usually the cheapest at \u00a38\u2013\u00a320/sq m.",
+    installationCostsText2: "DIY installation can save 50\u201370% on labour costs. Click-lock laminate and LVP are the easiest to fit yourself \u2014 most homeowners can complete a room in a weekend. Tile and carpet are significantly harder and mistakes can be costly. Hardwood nail-down installation requires specialised tools.",
+    installationCostsText3: "Additional costs beyond basic installation include: subfloor repair (\u00a315\u2013\u00a340/sq m), old flooring removal (\u00a38\u2013\u00a320/sq m), furniture moving (\u00a350\u2013\u00a3200), and transition strips (\u00a35\u2013\u00a315 each). Always get at least 3 quotes and ask what is included.",
+    howToCalculateHeading: "How to Calculate Flooring Needed",
+    howToCalculateIntro: "Follow these steps to estimate your flooring materials accurately.",
+    howToCalculateItems: [
+      "Measure each room length and width in metres. Multiply to get square metres.",
+      "For irregularly shaped rooms, break into rectangles and add the areas together.",
+      "Add 10% waste factor for standard straight-lay installations.",
+      "Add 15\u201320% waste for diagonal, herringbone, or complex patterns.",
+      "Divide total square metres by the coverage per box to get box count.",
+      "Always round up \u2014 you cannot buy partial boxes.",
+    ],
+    howToCalculateSummary: "Use our free flooring calculator to get an instant estimate for any room size with automatic waste factor and box count.",
+    savingTipsHeading: "How to Save Money on Flooring",
+    savingTipsIntro: "Smart shopping and planning can cut flooring costs by 20\u201340%.",
+    savingTipsItems: [
+      "Shop during sales events (Black Friday, January sales, bank holidays) for 20\u201330% off materials.",
+      "Buy from flooring warehouse outlets or online retailers instead of high street shops.",
+      "Choose click-lock flooring (laminate or LVP) and fit it yourself to save \u00a315\u2013\u00a340/sq m on labour.",
+      "Use different materials in different rooms \u2014 carpet in bedrooms, LVP in kitchens.",
+      "Order all materials at once for volume discounts (10+ boxes often qualify).",
+      "Keep leftover flooring for future repairs instead of returning it.",
+      "Compare total installed price, not just material price \u2014 some cheap flooring costs more to fit.",
+    ],
+    calculatorCtaHeading: "Calculate Your Flooring Materials",
+    calculatorCtaText: "Use our free flooring calculators to get instant material estimates for any room.",
+    calculatorLinks: [
+      { label: "Flooring Calculator", href: "/calculators/flooring/flooring-calculator/", description: "General flooring sq ft and box calculator" },
+      { label: "Carpet Calculator", href: "/calculators/flooring/carpet-calculator/", description: "Square metres, linear metres, and underlay estimate" },
+      { label: "Tile Calculator", href: "/calculators/flooring/tile-calculator/", description: "Tile count, grout, and adhesive estimate" },
+      { label: "Laminate Calculator", href: "/calculators/flooring/laminate-calculator/", description: "Plank count, boxes, and underlay" },
+    ],
+    faqHeading: "Frequently Asked Questions",
+    faqs: [
+      { question: "What is the cheapest flooring to install?", answer: "Laminate flooring is the cheapest to fit at \u00a320\u2013\u00a360 per square metre total (materials + labour). If you fit it yourself, the cost drops to \u00a38\u2013\u00a330/sq m for materials only." },
+      { question: "How much does it cost to floor a whole house?", answer: "Flooring a 140 sq m house typically costs \u00a35,000\u2013\u00a320,000 depending on materials chosen. A mix of laminate in bedrooms, LVP in kitchens and baths, and carpet in a few rooms puts most projects in the \u00a38,000\u2013\u00a314,000 range." },
+      { question: "What flooring adds the most value to a home?", answer: "Hardwood flooring adds the most resale value. Engineered hardwood provides a similar look at lower cost. LVP and tile in kitchens/baths are also strong value adds. Carpet generally does not increase home value." },
+      { question: "How long does each type of flooring last?", answer: "Solid hardwood lasts 50\u2013100 years with sanding and refinishing. Natural stone lasts 50+ years. Tile lasts 30\u201350 years. Engineered hardwood lasts 20\u201340 years. LVP lasts 15\u201325 years. Laminate lasts 15\u201325 years. Carpet lasts 5\u201315 years." },
+      { question: "Should I replace flooring before selling my house?", answer: "It depends on condition. Worn carpet should be replaced \u2014 it is one of the biggest turn-offs for buyers. Damaged hardwood can be sanded and refinished. New LVP in kitchens and baths is a high-ROI improvement." },
+      { question: "What is the best flooring for kitchens?", answer: "Luxury vinyl plank (LVP) and porcelain tile are the best kitchen flooring options. Both are waterproof, durable, and easy to clean. LVP is softer underfoot and easier to fit. Tile is harder wearing but colder and more expensive to fit." },
+    ],
+  },
+
+  fenceCost: {
+    title: "How Much Does a Fence Cost? 2026 Price Guide",
+    metaDescription: "Fence costs \u00a315\u2013\u00a350 per metre installed in 2026. Complete price guide covering timber, metal, and composite fencing with material costs, labour rates, DIY vs professional installation, and saving tips.",
+    heroTitle: "How Much Does a Fence Cost?",
+    heroSubtitle: "2026 Price Guide",
+    heroDescription: "A complete breakdown of fence costs by material, style, and project size. Covers timber, metal, composite, and panel fencing with material prices, labour rates, and tips to save money.",
+    quickAnswerHeading: "Quick Answer",
+    quickAnswerText: "A fence costs \u00a315 to \u00a350 per metre installed in 2026, depending on the material and style. A 15-metre timber privacy fence costs \u00a3600 to \u00a31,500 for materials (DIY) or \u00a31,200 to \u00a33,000 professionally installed.",
+    fenceTypesHeading: "Fence Cost by Material",
+    fenceTypesIntro: "The material you choose is the single biggest factor in fence cost. Here are 2026 prices for the most popular fence materials:",
+    fenceTypesColType: "Fence Material",
+    fenceTypesColCost: "Cost Per Metre (Installed)",
+    fenceTypesColBestFor: "Best For",
+    fenceTypesRows: [
+      { type: "Pressure-Treated Timber", cost: "\u00a315 \u2013 \u00a330", bestFor: "Budget privacy fences, most popular residential choice. Lasts 15\u201320 years." },
+      { type: "Cedar Timber", cost: "\u00a325 \u2013 \u00a345", bestFor: "Natural rot resistance, premium appearance. Lasts 15\u201325 years." },
+      { type: "Close-Board Fencing", cost: "\u00a320 \u2013 \u00a340", bestFor: "Strong, durable, wind-resistant. Ideal for exposed gardens." },
+      { type: "Chain Link", cost: "\u00a310 \u2013 \u00a325", bestFor: "Security, pet containment, lowest cost. Lasts 15\u201320 years." },
+      { type: "Composite", cost: "\u00a330 \u2013 \u00a355", bestFor: "Wood look without maintenance. Lasts 25\u201350 years." },
+      { type: "Metal Railings", cost: "\u00a330 \u2013 \u00a360", bestFor: "Decorative, front gardens, no-maintenance. Lasts 20\u201330 years." },
+    ],
+    costByProjectHeading: "Fence Cost by Project Size",
+    costByProjectIntro: "Total fence cost depends on the total length in metres. Here are typical 2026 costs for common fence projects using pressure-treated timber:",
+    costByProjectColProject: "Project",
+    costByProjectColTypical: "Typical Cost (Installed)",
+    costByProjectColNotes: "Notes",
+    costByProjectRows: [
+      { project: "Small Garden (10 m)", typical: "\u00a3300 \u2013 \u00a3800", notes: "Materials only: \u00a3150\u2013\u00a3400. Common for terraced houses." },
+      { project: "Average Garden (15 m)", typical: "\u00a3500 \u2013 \u00a31,200", notes: "Materials only: \u00a3250\u2013\u00a3600. Most common residential fence." },
+      { project: "Large Garden (25 m)", typical: "\u00a3800 \u2013 \u00a32,000", notes: "Materials only: \u00a3400\u2013\u00a31,000. May qualify for bulk discounts." },
+      { project: "Full Perimeter (40 m)", typical: "\u00a31,200 \u2013 \u00a33,200", notes: "Materials only: \u00a3600\u2013\u00a31,600. Consider phased installation." },
+      { project: "Panel Fence with Gate", typical: "\u00a3800 \u2013 \u00a32,500", notes: "Add \u00a3100\u2013\u00a3300 per gate for hardware and fitting." },
+      { project: "Front Garden Railing", typical: "\u00a3600 \u2013 \u00a32,000", notes: "Metal railings common for front boundaries. Planning rules may apply." },
+    ],
+    laborCostsHeading: "Labour & Installation Costs",
+    laborCostsIntro: "Labour is typically 40 to 60% of the total fence cost. Understanding what drives labour costs helps you budget accurately.",
+    laborCostsText1: "Professional fence installation costs \u00a38 to \u00a320 per metre for labour alone. A standard 15-metre timber fence takes a fencer 1 to 2 days to complete.",
+    laborCostsText2: "Several factors increase labour costs. Rocky or clay soil makes post hole digging harder. Sloped terrain adds 10 to 25% to labour. Removing an old fence costs \u00a35 to \u00a312 per metre for demolition and disposal.",
+    laborCostsText3: "Get at least 3 written quotes from fencing contractors. Ask whether the quote includes post hole digging, postcrete, cleanup, and old fence removal. Late autumn and winter bookings often save 10 to 20%.",
+    diyVsProHeading: "DIY vs Professional Installation",
+    diyVsProIntro: "Building a fence yourself can save 40 to 60% of the total cost, but requires the right tools and physical effort:",
+    diyVsProItems: [
+      "DIY material cost for a 15-metre timber fence: \u00a3250 to \u00a3600 (posts, rails, panels or boards, postcrete, screws).",
+      "Professional installation for the same fence: \u00a3500 to \u00a31,200 total (materials + labour).",
+      "Tools needed: post hole digger or auger, spirit level, string line, saw, drill, and tape measure.",
+      "Physical demands: Digging post holes is the hardest part. Plan for 1 to 2 full weekends for 15 metres.",
+      "Common DIY pitfalls: posts not plumb, inconsistent spacing, posts not deep enough.",
+      "Best DIY approach: Set all posts on day one, let postcrete cure overnight, then attach panels or boards on day two.",
+    ],
+    diyVsProSummary: "DIY makes sense if you are handy and want to save \u00a3300 to \u00a3600. Hire a professional if you have rocky soil, steep slopes, or limited time.",
+    savingTipsHeading: "How to Save Money on Fencing",
+    savingTipsIntro: "These strategies can help reduce fence costs without sacrificing quality:",
+    savingTipsItems: [
+      "Choose pressure-treated softwood over cedar \u2014 it costs 30 to 50% less and lasts nearly as long with maintenance.",
+      "Build during the off-season \u2014 late autumn or winter bookings often save 10 to 20% on labour.",
+      "Share the cost with your neighbour \u2014 boundary fences are commonly split 50/50.",
+      "Use pre-made fence panels instead of close-board \u2014 panels install much faster, reducing labour costs.",
+      "Buy materials from a timber merchant rather than a DIY superstore for 10 to 15% savings.",
+      "Get the permit or planning check yourself if required \u2014 saves \u00a350 to \u00a3100.",
+    ],
+    calculatorCtaHeading: "Calculate Your Fence Materials",
+    calculatorCtaText: "Use our free fence calculators to estimate the exact materials and cost for your project.",
+    calculatorLinks: [
+      { label: "Fence Calculator", href: "/calculators/outdoor/fence-calculator", description: "Calculate posts, rails, and boards for any fence length and height." },
+      { label: "Fence Post Calculator", href: "/calculators/outdoor/fence-post-calculator", description: "Get post count and concrete bags needed for your fence." },
+      { label: "Fence Panel Calculator", href: "/calculators/outdoor/fence-panel-calculator", description: "Estimate pre-made panels and posts for your fence project." },
+      { label: "Picket Fence Calculator", href: "/calculators/outdoor/picket-fence-calculator", description: "Calculate pickets with custom width and gap spacing." },
+    ],
+    faqHeading: "Frequently Asked Questions",
+    faqs: [
+      { question: "How much does a 20-metre fence cost?", answer: "A 20-metre timber privacy fence costs \u00a3600 to \u00a31,600 professionally installed, or \u00a3300 to \u00a3800 for materials only (DIY)." },
+      { question: "What is the cheapest fence to build?", answer: "Chain link is the cheapest at \u00a310 to \u00a325 per metre installed. For privacy, pressure-treated panel fencing is the most affordable at \u00a315 to \u00a330 per metre installed." },
+      { question: "Is it cheaper to build a fence yourself?", answer: "Yes, DIY saves 40 to 60%. A 15-metre fence costs \u00a3250 to \u00a3600 in materials versus \u00a3500 to \u00a31,200 professionally installed." },
+      { question: "How long does a timber fence last?", answer: "Pressure-treated timber fences last 15 to 20 years with annual treatment. Cedar lasts 15 to 25 years. The posts usually fail first." },
+      { question: "Do I need planning permission for a fence?", answer: "Generally no, if the fence is under 2 metres in the back garden or 1 metre at the front boundary. Listed buildings, conservation areas, and new-build estates may have restrictions. Check with your local planning authority." },
+      { question: "Which fence adds the most value to a home?", answer: "A well-maintained timber privacy fence typically recoups 50 to 70% of its cost in added home value. The biggest value add is fencing a previously unfenced garden." },
     ],
   },
 };

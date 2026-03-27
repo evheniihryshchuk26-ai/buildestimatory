@@ -19,6 +19,7 @@ export const categories: CategoryMeta[] = [
       { slug: "driveway-gravel-calculator", title: "Driveway Gravel Calculator", description: "Driveway gravel calculator: Estimate tonnes and cost by type \u2014 crushed stone, pea gravel, road base, or limestone screenings with delivery.", category: "Foundation", categorySlug: "foundation" },
       { slug: "block-fill-calculator", title: "Block Fill Calculator", description: "Block fill calculator \u2014 how much concrete to fill CMU blocks? Free tool for 8\", 10\" & 12\" blocks. Get cubic yards and bag count instantly.", category: "Foundation", categorySlug: "foundation" },
       { slug: "mortar-mix-calculator", title: "Mortar Mix Calculator", description: "Mortar mix calculator \u2014 free tool to estimate bags of mortar for block, brick & stone. Covers Type N, S & M with joint thickness options.", category: "Foundation", categorySlug: "foundation" },
+      { slug: "retaining-wall-calculator", title: "Retaining Wall Calculator", description: "Retaining wall calculator \u2014 free tool for block, CMU & stone walls. Get block count, cap blocks, gravel backfill & drainage estimates instantly.", category: "Foundation", categorySlug: "foundation" },
     ],
   },
   {
@@ -112,6 +113,7 @@ export const categories: CategoryMeta[] = [
       { slug: "paint-coverage-calculator", title: "Paint Calculator", description: "Paint calculator \u2014 free square feet paint estimator for walls & ceilings. Select coats, get instant litres and cost based on square footage.", category: "Finishing", categorySlug: "finishing" },
       { slug: "paint-cost-calculator", title: "Paint Cost Calculator", description: "Paint cost calculator: Estimate total project cost by quality level. Free tool for economy to premium \u2014 includes supplies estimate in CAD.", category: "Finishing", categorySlug: "finishing" },
       { slug: "primer-calculator", title: "Primer Calculator", description: "How much primer do I need? Free calculator for new drywall, wood & repaints \u2014 adjusts coverage by surface type.", category: "Finishing", categorySlug: "finishing" },
+      { slug: "epoxy-calculator", title: "Epoxy Calculator", description: "Epoxy calculator \u2014 how much epoxy for your garage floor? Free tool for any area. Get gallons, kits & cost estimate for 1-coat and 2-coat systems.", category: "Finishing", categorySlug: "finishing" },
     ],
   },
   {
@@ -125,6 +127,23 @@ export const categories: CategoryMeta[] = [
       { slug: "deck-railing-calculator", title: "Deck Railing Calculator", description: "How many railing posts and balusters do I need? Free deck railing calculator \u2014 gives post count, baluster total, and rail linear feet.", category: "Outdoor", categorySlug: "outdoor" },
       { slug: "deck-stair-calculator", title: "Deck Stair Calculator", description: "Deck stair calculator: How many steps and stringers? Free tool \u2014 enter deck height for step count, stringer quantity, and tread boards.", category: "Outdoor", categorySlug: "outdoor" },
       { slug: "post-hole-calculator", title: "Post Hole Calculator", description: "Post hole calculator \u2014 how much concrete for fence posts? Free tool for any hole size. Get exact bag count for 50 lb & 80 lb Quikrete bags.", category: "Outdoor", categorySlug: "outdoor" },
+      { slug: "pond-calculator", title: "Pond Calculator", description: "Pond calculator \u2014 free tool for volume, liner size & pump capacity. Enter dimensions for rectangular, oval or kidney-shaped ponds instantly.", category: "Outdoor", categorySlug: "outdoor" },
+      { slug: "fence-calculator", title: "Fence Calculator", description: "Fence calculator \u2014 how many posts, rails & pickets for your fence? Free fence material calculator for wood privacy fences. Get a complete material list instantly.", category: "Outdoor", categorySlug: "outdoor" },
+      { slug: "fence-post-calculator", title: "Fence Post Calculator", description: "Fence post calculator \u2014 how many posts and bags of concrete? Free tool gives post count, concrete bags & gravel for any fence length.", category: "Outdoor", categorySlug: "outdoor" },
+      { slug: "fence-panel-calculator", title: "Fence Panel Calculator", description: "Fence panel calculator \u2014 how many pre-made panels for your fence? Free tool for 6 ft & 8 ft panels. Get panel count, posts & post caps.", category: "Outdoor", categorySlug: "outdoor" },
+      { slug: "picket-fence-calculator", title: "Picket Fence Calculator", description: "Picket fence calculator \u2014 how many pickets with custom spacing? Free tool for any picket width & gap. Get picket count, rails, posts & total board feet.", category: "Outdoor", categorySlug: "outdoor" },
+    ],
+  },
+  {
+    slug: "flooring",
+    title: "Flooring Calculators",
+    description:
+      "Calculate materials for flooring projects including hardwood, carpet, tile, and laminate with waste factors and cost estimates.",
+    calculators: [
+      { slug: "flooring-calculator", title: "Flooring Calculator", description: "Flooring calculator — free square footage estimator for any room. Get box count, waste factor & material list for hardwood, LVP, and engineered wood.", category: "Flooring", categorySlug: "flooring" },
+      { slug: "carpet-calculator", title: "Carpet Calculator", description: "Carpet calculator — free tool to estimate square yards, linear feet & pad needed. Works for 12 ft and 15 ft wide rolls with seam planning.", category: "Flooring", categorySlug: "flooring" },
+      { slug: "tile-calculator", title: "Tile Calculator", description: "Tile calculator — free tool for ceramic, porcelain & stone floors. Get tile count, boxes, grout bags & thinset needed for any room size.", category: "Flooring", categorySlug: "flooring" },
+      { slug: "laminate-calculator", title: "Laminate Flooring Calculator", description: "Laminate flooring calculator — free plank & box estimator with underlayment. Enter room size and plank dimensions for instant material list.", category: "Flooring", categorySlug: "flooring" },
     ],
   },
 ];

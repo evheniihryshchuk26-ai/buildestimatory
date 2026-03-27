@@ -2387,6 +2387,59 @@ export const postHoleCalculatorFR: CalculatorSEOContent = {
   ],
 };
 
+// ─── RETAINING WALL ─────────────────────────────────────────────────────────
+
+export const retainingWallCalculator: CalculatorSEOContent = {
+  disclaimer: "Cette estimation inclut 10% de perte pour les blocs. Les besoins en gravier et drainage d\u00e9pendent des conditions du sol et de la r\u00e9glementation locale. Les murs de plus de 1,2 m n\u00e9cessitent g\u00e9n\u00e9ralement un calcul de structure et un permis.",
+  howToUse: ["Mesurez la longueur totale de votre mur de sout\u00e8nement en m\u00e8tres.", "Entrez la hauteur souhait\u00e9e \u2014 la plupart des murs de jardin font 0,6 \u00e0 1,2 m.", "S\u00e9lectionnez le type de bloc : blocs paysagers, parpaings ou pierre naturelle.", "Cliquez sur Calculer pour obtenir le nombre de blocs, chaperons, gravier et drainage."],
+  materialInfo: "Les murs de sout\u00e8nement retiennent la terre sur les terrains en pente et cr\u00e9ent des surfaces planes pour les jardins, terrasses et all\u00e9es. Les trois mat\u00e9riaux les plus courants sont les blocs paysagers embo\u00eetables, les parpaings (blocs de b\u00e9ton creux) et la pierre naturelle.\n\nLes blocs paysagers (Alkern, Marlux, Point P) sont le choix le plus populaire pour les murs DIY jusqu\u2019\u00e0 1,2 m. Les dimensions standard sont 40\u00d720\u00d720 cm, pesant 15 \u00e0 25 kg par bloc. Co\u00fbt typique : 3 \u00e0 8 EUR par bloc, ou 50 \u00e0 130 EUR par m\u00b2 de face de mur pos\u00e9.\n\nLes parpaings (20\u00d720\u00d750 cm) sont utilis\u00e9s pour les murs structurels et n\u00e9cessitent mortier, ferraillage et remplissage b\u00e9ton pour les murs de plus de 60 cm. La pierre naturelle (meuli\u00e8re, gr\u00e8s, calcaire) offre le plus bel aspect mais co\u00fbte 80 \u00e0 200 EUR/m\u00b2 pos\u00e9e.\n\nTous les murs de sout\u00e8nement n\u00e9cessitent un drainage : couche de gravier concass\u00e9 16/32 mm, drain perfor\u00e9 DN 100 en pied de mur, et barbacanes r\u00e9guli\u00e8res. Les chaperons sont coll\u00e9s avec un adh\u00e9sif de construction (~1 cartouche par 8 ml).\n\nEn France, un permis de construire ou une d\u00e9claration pr\u00e9alable est n\u00e9cessaire pour les murs de plus de 2 m en limite de propri\u00e9t\u00e9. Un mur de sout\u00e8nement de plus de 1 m de hauteur visible n\u00e9cessite un bureau d\u2019\u00e9tudes techniques (BET).",
+  nextSteps: [{ label: "Calculateur de semelle", href: "/calculators/foundation/concrete-footing-calculator/" }, { label: "Calculateur de gravier", href: "/calculators/foundation/gravel-calculator/" }, { label: "Calculateur de mortier", href: "/calculators/foundation/mortar-mix-calculator/" }],
+  installationTips: ["Creusez une tranch\u00e9e de 15 \u00e0 20 cm de profondeur et 60 cm de large \u2014 compactez le sol et ajoutez 15 cm de gravier concass\u00e9.", "Nivelez soigneusement la premi\u00e8re rang\u00e9e avec un niveau de 1,2 m et un maillet en caoutchouc.", "Remplissez avec du gravier concass\u00e9 16/32 mm derri\u00e8re le mur \u00e0 chaque rang\u00e9e.", "Posez un drain perfor\u00e9 DN 100 en pied de mur avec une pente de 2% vers un exutoire.", "D\u00e9calez les joints d\u2019au moins 10 cm entre les rang\u00e9es.", "Collez les chaperons avec de la colle de construction sur la derni\u00e8re rang\u00e9e."],
+  commonMistakes: ["Oublier la couche de gravier de fondation \u2014 le mur se tassera et s\u2019inclinera.", "N\u00e9gliger le drainage \u2014 la pression hydrostatique est la cause num\u00e9ro 1 de rupture des murs.", "Construire plus de 1,2 m sans bureau d\u2019\u00e9tudes \u2014 la r\u00e9glementation exige un calcul de structure.", "Utiliser de la terre comme remblai \u2014 seul le gravier concass\u00e9 doit aller derri\u00e8re le mur.", "Ne pas compacter la tranch\u00e9e de fondation \u2014 un sol meuble provoque des tassements."],
+  faqs: [
+    { question: "Combien de blocs pour un mur de sout\u00e8nement ?", answer: "Pour des blocs paysagers 40\u00d720\u00d720 cm, comptez environ 12,5 blocs par m\u00b2 de face de mur. Un mur de 6 m de long par 1 m de haut n\u00e9cessite environ 75 blocs plus 10% de perte = 83 blocs." },
+    { question: "Combien co\u00fbte un mur de sout\u00e8nement ?", answer: "Les blocs paysagers co\u00fbtent 50 \u00e0 130 EUR/m\u00b2 pos\u00e9s. Les parpaings avec ferraillage et b\u00e9ton co\u00fbtent 80 \u00e0 180 EUR/m\u00b2. Les murs en pierre naturelle co\u00fbtent 80 \u00e0 200 EUR/m\u00b2." },
+    { question: "Faut-il un permis pour un mur de sout\u00e8nement ?", answer: "En France, une d\u00e9claration pr\u00e9alable est n\u00e9cessaire pour les murs de plus de 2 m en limite de propri\u00e9t\u00e9. Un mur de plus de 1 m n\u00e9cessite une \u00e9tude de BET. V\u00e9rifiez le PLU de votre commune." },
+    { question: "Combien de gravier derri\u00e8re un mur de sout\u00e8nement ?", answer: "Pr\u00e9voyez une zone de 30 cm de large en gravier concass\u00e9 16/32 mm derri\u00e8re toute la face du mur, plus 15 cm de gravier compact\u00e9 en fond de tranch\u00e9e. Pour un mur de 6 m sur 1 m, comptez environ 2 m\u00b3 de gravier." },
+    { question: "Quel bloc pour un mur de sout\u00e8nement ?", answer: "Pour les murs DIY de moins de 1,2 m, les blocs paysagers embo\u00eetables sont le meilleur choix. Pour les murs structurels de plus de 1,2 m, des parpaings avec ferraillage et calcul BET sont n\u00e9cessaires." },
+    { question: "Quelle profondeur pour la fondation d\u2019un mur de sout\u00e8nement ?", answer: "La tranch\u00e9e doit faire au moins 15 cm de profondeur avec 15 cm de gravier compact\u00e9. En zone de gel, le fond de fouille doit descendre sous la profondeur de gel (60 \u00e0 80 cm en France m\u00e9tropolitaine)." },
+  ],
+};
+
+export const epoxyCalculator: CalculatorSEOContent = {
+  disclaimer: "Les taux de rendement varient selon le produit, la porosit\u00e9 du support et la m\u00e9thode d\u2019application. Le standard de 10 m\u00b2 par litre s\u2019applique \u00e0 la plupart des \u00e9poxy pour sol de garage.",
+  howToUse: ["Mesurez la longueur et la largeur de votre sol en m\u00e8tres.", "S\u00e9lectionnez 1 couche pour une base color\u00e9e ou 2 couches pour une durabilit\u00e9 maximale.", "Ajustez le rendement par litre si votre produit indique un taux diff\u00e9rent (d\u00e9faut : 10 m\u00b2/l).", "Cliquez sur Calculer pour obtenir litres, nombre de kits et estimation de co\u00fbt."],
+  materialInfo: "La r\u00e9sine \u00e9poxy pour sol est un rev\u00eatement bi-composant (r\u00e9sine + durcisseur) qui durcit en une surface brillante, dure et r\u00e9sistante aux produits chimiques. C\u2019est le rev\u00eatement de sol de garage le plus populaire en France.\n\nTrois types principaux : l\u2019\u00e9poxy \u00e0 base d\u2019eau (30 \u00e0 60 EUR/litre, 10 m\u00b2 de couverture, faible odeur), l\u2019\u00e9poxy solvanté (50 \u00e0 90 EUR/litre, plus durable), et l\u2019\u00e9poxy 100% solides (80 \u00e0 150 EUR/litre, qualit\u00e9 professionnelle).\n\nLa pr\u00e9paration du support est l\u2019\u00e9tape la plus critique. Le b\u00e9ton doit \u00eatre propre, sec et profil\u00e9. Le pon\u00e7age, grenaillage ou mordancage \u00e0 l\u2019acide cr\u00e9e le profil n\u00e9cessaire \u00e0 l\u2019adh\u00e9rence. Un b\u00e9ton neuf doit s\u00e9cher au moins 28 jours. Test d\u2019humidit\u00e9 obligatoire : coller un film PE 60\u00d760 cm pendant 24 h.\n\nTemp\u00e9rature d\u2019application entre 10\u00b0C et 30\u00b0C. Les syst\u00e8mes 2 couches sont carrossables en 3 \u00e0 5 jours. Produits disponibles dans les grandes surfaces de bricolage (Leroy Merlin, Castorama, Brico D\u00e9p\u00f4t) et chez les distributeurs sp\u00e9cialis\u00e9s.",
+  nextSteps: [{ label: "Calculateur de peinture", href: "/calculators/finishing/paint-coverage-calculator/" }, { label: "Calculateur de dalle b\u00e9ton", href: "/calculators/foundation/concrete-slab-calculator/" }],
+  installationTips: ["R\u00e9alisez un test d\u2019humidit\u00e9 (film PE 60\u00d760 cm coll\u00e9 24 h) avant de commencer.", "Poncez ou mordancez le b\u00e9ton pour cr\u00e9er un profil d\u2019accroche.", "M\u00e9langez partie A et B soigneusement pendant le temps indiqu\u00e9 (g\u00e9n\u00e9ralement 3 min), puis respectez le temps d\u2019induction.", "Travaillez par zones en maintenant un bord mouill\u00e9.", "Attendez 12 \u00e0 24 h entre les couches et 72 h avant circulation pi\u00e9tonne l\u00e9g\u00e8re."],
+  commonMistakes: ["N\u00e9gliger la pr\u00e9paration du support \u2014 cause n\u00b01 de d\u00e9collement.", "Appliquer sur support humide \u2014 provoque cloquage et d\u00e9lamination.", "Travailler hors plage de temp\u00e9rature \u2014 en dessous de 10\u00b0C l\u2019\u00e9poxy durcit trop lentement.", "M\u00e9langer trop de produit \u2014 la r\u00e9action exothermique peut faire g\u00e9lifier le m\u00e9lange en minutes.", "Ne pas appliquer de finition \u2014 l\u2019\u00e9poxy nu jaunit aux UV."],
+  faqs: [
+    { question: "Combien d\u2019\u00e9poxy pour un garage ?", answer: "Un garage double standard fait environ 36 m\u00b2. \u00c0 10 m\u00b2 par litre, il faut environ 3,6 litres pour 1 couche ou 7,2 litres pour 2 couches." },
+    { question: "Combien co\u00fbte un sol \u00e9poxy ?", answer: "En DIY, comptez 15 \u00e0 40 EUR/m\u00b2 en mat\u00e9riel. Un garage de 36 m\u00b2 co\u00fbte 300 \u00e0 700 EUR. La pose professionnelle co\u00fbte 40 \u00e0 100 EUR/m\u00b2." },
+    { question: "Une couche d\u2019\u00e9poxy suffit-elle ?", answer: "Une couche offre une couverture acceptable pour un usage l\u00e9ger. Deux couches offrent une durabilit\u00e9 nettement meilleure." },
+    { question: "Combien de temps dure un sol \u00e9poxy ?", answer: "Correctement appliqu\u00e9, un sol \u00e9poxy dure 5 \u00e0 10 ans dans un garage r\u00e9sidentiel. L\u2019\u00e9poxy professionnel avec finition polyaspartique peut durer 15 \u00e0 20 ans." },
+    { question: "Faut-il un primaire avant l\u2019\u00e9poxy ?", answer: "La plupart des kits grand public n\u2019en n\u00e9cessitent pas \u2014 la premi\u00e8re couche fait office de primaire. Pour un b\u00e9ton tr\u00e8s poreux, un primaire d\u2019accrochage am\u00e9liore l\u2019adh\u00e9rence." },
+    { question: "Peut-on appliquer de l\u2019\u00e9poxy sur une ancienne peinture ?", answer: "Non, l\u2019\u00e9poxy n\u2019adh\u00e8re pas sur la plupart des peintures. Il faut retirer l\u2019ancien rev\u00eatement par pon\u00e7age ou d\u00e9capage chimique." },
+  ],
+};
+
+export const pondCalculator: CalculatorSEOContent = {
+  disclaimer: "Les calculs de volume sont approximatifs. La taille de la b\u00e2che inclut 60 cm de d\u00e9passement par c\u00f4t\u00e9. Le dimensionnement de la pompe suppose un brassage complet toutes les 2 heures.",
+  howToUse: ["Entrez la longueur maximale de votre bassin en m\u00e8tres.", "Entrez la largeur maximale en m\u00e8tres.", "Entrez la profondeur maximale \u2014 0,6 \u00e0 1 m pour jardins aquatiques, 1 \u00e0 1,5 m pour bassins \u00e0 ko\u00ef.", "S\u00e9lectionnez la forme : rectangulaire, ovale ou en haricot.", "Cliquez sur Calculer pour volume, taille de b\u00e2che, d\u00e9bit de pompe et g\u00e9otextile."],
+  materialInfo: "Un bassin de jardin est un plan d\u2019eau cr\u00e9\u00e9 \u00e0 l\u2019aide d\u2019une b\u00e2che souple ou d\u2019un bassin pr\u00e9form\u00e9 pour accueillir poissons, plantes aquatiques ou servir d\u2019\u00e9l\u00e9ment d\u00e9coratif.\n\nLes b\u00e2ches EPDM (1,0 mm) sont le standard \u2014 souples, r\u00e9sistantes aux UV, s\u00fbres pour les poissons, dur\u00e9e de vie 20 \u00e0 30 ans. Co\u00fbt : 5 \u00e0 12 EUR/m\u00b2. Les b\u00e2ches PVC sont moins ch\u00e8res (3 \u00e0 7 EUR/m\u00b2) mais durent 10 \u00e0 15 ans.\n\nLa taille de b\u00e2che se calcule : (longueur + 2\u00d7profondeur + 0,6 m) \u00d7 (largeur + 2\u00d7profondeur + 0,6 m). Les pompes doivent brasser tout le volume toutes les 2 h \u2014 un bassin de 4 000 l n\u00e9cessite 2 000 l/h minimum. Pour les ko\u00ef, brassage toutes les heures.\n\nLe g\u00e9otextile (feutre 300 g/m\u00b2) sous la b\u00e2che prot\u00e8ge des racines et pierres. Bordures en pierre naturelle pour masquer les bords. Budget total pour un bassin de 2 000 l : 500 \u00e0 1 500 EUR en DIY.\n\nEn France, les bassins de plus de 100 m\u00b2 de surface n\u00e9cessitent une d\u00e9claration pr\u00e9alable. La s\u00e9curit\u00e9 des enfants impose une cl\u00f4ture ou barri\u00e8re conforme \u00e0 la norme NF P90-306 pour les plans d\u2019eau de plus de 1 m de profondeur.",
+  nextSteps: [{ label: "Calculateur de gravier", href: "/calculators/foundation/gravel-calculator/" }, { label: "Calculateur de trous de poteau", href: "/calculators/outdoor/post-hole-calculator/" }],
+  installationTips: ["Placez le bassin o\u00f9 il re\u00e7oit 4 \u00e0 6 h de soleil partiel \u2014 le plein soleil favorise les algues.", "V\u00e9rifiez l\u2019emplacement des r\u00e9seaux souterrains avant de creuser.", "Creusez des paliers \u00e0 30 cm pour les plantes de berge avant d\u2019atteindre la profondeur finale.", "Posez 5 cm de sable ou un feutre g\u00e9otextile sur toute l\u2019excavation avant la b\u00e2che.", "Remplissez lentement au tuyau en lissant la b\u00e2che au fur et \u00e0 mesure.", "Faites tourner pompe et filtre au moins 2 semaines avant d\u2019introduire des poissons."],
+  commonMistakes: ["Sous-dimensionner la b\u00e2che \u2014 calculez toujours longueur + (2\u00d7profondeur) + 0,6 m par dimension.", "Omettre le g\u00e9otextile \u2014 racines et cailloux percent la b\u00e2che par en dessous.", "Sous-dimensionner la pompe \u2014 mauvais brassage = eau stagnante et algues.", "Profondeur insuffisante \u2014 les bassins de moins de 60 cm surchauffent en \u00e9t\u00e9 et g\u00e8lent en hiver.", "Construire trop pr\u00e8s des arbres \u2014 les feuilles mortes appauvrissent l\u2019eau en oxyg\u00e8ne."],
+  faqs: [
+    { question: "Combien de litres fait mon bassin ?", answer: "Bassins rectangulaires : longueur \u00d7 largeur \u00d7 profondeur (m\u00e8tres) \u00d7 1 000 = litres. Ovales : multiplier par 0,8. Haricot : multiplier par 0,7. Exemple : 3\u00d72,5\u00d71 m = 7 500 litres." },
+    { question: "Quelle taille de b\u00e2che ?", answer: "B\u00e2che = (longueur + 2\u00d7profondeur + 0,6) \u00d7 (largeur + 2\u00d7profondeur + 0,6). Pour un bassin 3\u00d72,5\u00d71 m : b\u00e2che de 5,6\u00d75,1 m minimum." },
+    { question: "Quelle pompe pour mon bassin ?", answer: "Multipliez le volume en litres par 0,5 pour le d\u00e9bit minimum en l/h. Un bassin de 8 000 l n\u00e9cessite au moins 4 000 l/h." },
+    { question: "Combien co\u00fbte un bassin de jardin ?", answer: "Un jardin aquatique de 2 000 l co\u00fbte 500 \u00e0 1 500 EUR en DIY. Un bassin de 4 000\u20138 000 l avec pompe, filtre et pierres co\u00fbte 1 500 \u00e0 4 000 EUR DIY." },
+    { question: "Quelle profondeur pour un bassin \u00e0 poissons ?", answer: "Poissons rouges : minimum 80 cm. Ko\u00ef : au moins 1,2 m, id\u00e9alement 1,5 m pour une zone hors-gel en hiver." },
+    { question: "Faut-il un filtre pour un bassin ?", answer: "Oui si vous avez des poissons. Un filtre biologique h\u00e9berge les bact\u00e9ries qui convertissent l\u2019ammoniac toxique en nitrates inoffensifs." },
+  ],
+};
+
 // ─── REGISTRY MAP ─────────────────────────────────────────────────────────────
 
 export const registryFR: Record<string, Record<string, CalculatorSEOContent>> = {
@@ -2403,6 +2456,7 @@ export const registryFR: Record<string, Record<string, CalculatorSEOContent>> = 
     "driveway-gravel-calculator": drivewayGravelCalculator,
     "mortar-mix-calculator": mortarMixCalculator,
     "block-fill-calculator": blockFillCalculator,
+    "retaining-wall-calculator": retainingWallCalculator,
   },
   "floor-framing": {
     "rim-joist-calculator": rimJoistCalculator,
@@ -2454,6 +2508,7 @@ export const registryFR: Record<string, Record<string, CalculatorSEOContent>> = 
     "paint-coverage-calculator": paintCoverageCalculatorFR,
     "paint-cost-calculator": paintCostCalculatorFR,
     "primer-calculator": primerCalculatorFR,
+    "epoxy-calculator": epoxyCalculator,
   },
   outdoor: {
     "deck-board-calculator": deckBoardCalculatorFR,
@@ -2461,5 +2516,6 @@ export const registryFR: Record<string, Record<string, CalculatorSEOContent>> = 
     "deck-railing-calculator": deckRailingCalculatorFR,
     "deck-stair-calculator": deckStairCalculatorFR,
     "post-hole-calculator": postHoleCalculatorFR,
+    "pond-calculator": pondCalculator,
   },
 };

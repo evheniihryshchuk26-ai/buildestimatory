@@ -65,6 +65,18 @@ const guides: GuidesTranslations = {
           "La ghiaia costa 15\u201340 EUR a tonnellata. Guida completa ai prezzi per vialetti, terrazze, sentieri, drenaggio e giardino con costi di consegna e calcolo quantit\u00e0.",
         href: "/guides/gravel-cost-guide",
       },
+      {
+        title: "Quanto Costa un Vialetto? Guida ai Prezzi 2026",
+        description:
+          "Un vialetto nuovo costa 2.000\u201315.000 EUR a seconda del materiale e della dimensione. Guida completa: calcestruzzo, asfalto, ghiaia e masselli autobloccanti con tabelle di costo, fattori di prezzo e consigli per risparmiare.",
+        href: "/guides/driveway-cost-guide",
+      },
+      {
+        title: "Guida ai Costi della Pavimentazione",
+        description:
+          "La pavimentazione costa 20\u2013150 \u20ac/m\u00b2 posata. Guida completa per parquet, laminato, piastrelle, moquette e vinile con stime per stanza e consigli per risparmiare.",
+        href: "/guides/flooring-cost-guide",
+      },
     ],
   },
 
@@ -1467,6 +1479,289 @@ const guides: GuidesTranslations = {
         answer:
           "S\u00ec, notevolmente. Un vialetto in ghiaia costa 8\u201320 EUR/m\u00b2 in materiale (20\u201350 EUR/m\u00b2 posato), contro 60\u2013120 EUR/m\u00b2 per il calcestruzzo e 40\u201380 EUR/m\u00b2 per l'asfalto. Un vialetto di 3,5 \u00d7 15 m in ghiaia costa 1.000\u20132.500 EUR posato vs 3.200\u20136.500 EUR per il calcestruzzo. Tuttavia, la ghiaia richiede pi\u00f9 manutenzione e rabbocco ogni 2\u20133 anni.",
       },
+    ],
+  },
+
+  drivewayCost: {
+    title: "Quanto Costa un Vialetto? Guida ai Prezzi 2026",
+    metaDescription:
+      "Un vialetto nuovo costa 2.000\u201315.000 EUR nel 2026 a seconda del materiale e della dimensione. Guida completa: calcestruzzo (50\u2013120 EUR/m\u00b2), asfalto (30\u201370 EUR/m\u00b2), ghiaia (8\u201325 EUR/m\u00b2), masselli autobloccanti (60\u2013200 EUR/m\u00b2). Fattori di prezzo, fai da te vs impresa e consigli per risparmiare.",
+
+    heroTitle: "Quanto Costa un Vialetto?",
+    heroSubtitle: "Guida ai Prezzi 2026",
+    heroDescription:
+      "Analisi completa dei costi di un vialetto per materiale, dimensione e regione in Italia. Copre calcestruzzo, asfalto, ghiaia e masselli autobloccanti con prezzi posati, confronti di durabilit\u00e0, fattori che influenzano il costo e modi comprovati per risparmiare.",
+
+    quickAnswerHeading: "Risposta Rapida",
+    quickAnswerText:
+      "Un vialetto nuovo costa 2.000 a 15.000 EUR nel 2026, con la maggior parte dei proprietari che paga 4.000\u201310.000 EUR per un vialetto doppio standard. La ghiaia \u00e8 la pi\u00f9 economica a 8\u201325 EUR/m\u00b2. L'asfalto costa 30\u201370 EUR/m\u00b2. Il calcestruzzo costa 50\u2013120 EUR/m\u00b2. I masselli autobloccanti sono i pi\u00f9 cari a 60\u2013200 EUR/m\u00b2. Questi prezzi includono materiali e posa professionale.",
+
+    costByMaterialHeading: "Costo del Vialetto per Materiale",
+    costByMaterialIntro:
+      "Il materiale scelto \u00e8 il fattore pi\u00f9 importante nel costo del vialetto. Ogni opzione offre un diverso equilibrio tra prezzo, durabilit\u00e0, estetica e manutenzione. Ecco i costi in Italia nel 2026:",
+    costByMaterialColMaterial: "Materiale",
+    costByMaterialColCostSqFt: "Costo Posato / m\u00b2",
+    costByMaterialColLifespan: "Durata",
+    costByMaterialColBestFor: "Ideale Per",
+    costByMaterialRows: [
+      { material: "Ghiaia", costSqFt: "8 \u2013 25 EUR", lifespan: "15\u201325 anni", bestFor: "Propriet\u00e0 rurali, vialetti lunghi, budget contenuto. Richiede rabbocco periodico." },
+      { material: "Asfalto", costSqFt: "30 \u2013 70 EUR", lifespan: "15\u201320 anni", bestFor: "Buon rapporto qualit\u00e0-prezzo. Superficie flessibile che resiste bene al gelo." },
+      { material: "Calcestruzzo", costSqFt: "50 \u2013 120 EUR", lifespan: "25\u201350 anni", bestFor: "La maggior parte dei vialetti residenziali. Durevole, bassa manutenzione." },
+      { material: "Calcestruzzo Stampato", costSqFt: "60 \u2013 150 EUR", lifespan: "25\u201350 anni", bestFor: "Aspetto decorativo a costo inferiore ai masselli. Imita mattone, pietra o ardesia." },
+      { material: "Masselli Autobloccanti", costSqFt: "60 \u2013 150 EUR", lifespan: "25\u201350+ anni", bestFor: "Residenziale di pregio. Molto durevole, molti motivi, opzioni permeabili disponibili." },
+      { material: "Pietra Naturale", costSqFt: "80 \u2013 200 EUR", lifespan: "50+ anni", bestFor: "Ville e propriet\u00e0 di lusso. Porfido, granito, travertino o pietra locale. Massimo pregio estetico." },
+    ],
+
+    costBySizeHeading: "Costo del Vialetto per Dimensione",
+    costBySizeIntro:
+      "La dimensione del vialetto influisce notevolmente sul costo totale. Un posto auto singolo occupa circa 15\u201330 m\u00b2, mentre un doppio richiede 30\u201360 m\u00b2. I vialetti circolari possono superare i 100 m\u00b2.",
+    costBySizeColSize: "Tipo di Vialetto",
+    costBySizeColDimensions: "Dimensione Tipica",
+    costBySizeColConcrete: "Calcestruzzo",
+    costBySizeColAsphalt: "Asfalto",
+    costBySizeColGravel: "Ghiaia",
+    costBySizeRows: [
+      { size: "Posto Singolo", dimensions: "3\u00d75 m (15 m\u00b2)", concrete: "750 \u2013 1.800 EUR", asphalt: "450 \u2013 1.050 EUR", gravel: "120 \u2013 375 EUR" },
+      { size: "Doppio Standard", dimensions: "5\u00d710 m (50 m\u00b2)", concrete: "2.500 \u2013 6.000 EUR", asphalt: "1.500 \u2013 3.500 EUR", gravel: "400 \u2013 1.250 EUR" },
+      { size: "Doppio Largo", dimensions: "6\u00d712 m (72 m\u00b2)", concrete: "3.600 \u2013 8.640 EUR", asphalt: "2.160 \u2013 5.040 EUR", gravel: "576 \u2013 1.800 EUR" },
+      { size: "Vialetto Lungo Rurale", dimensions: "3,5\u00d730 m (105 m\u00b2)", concrete: "5.250 \u2013 12.600 EUR", asphalt: "3.150 \u2013 7.350 EUR", gravel: "840 \u2013 2.625 EUR" },
+      { size: "Vialetto Circolare", dimensions: "~100 \u2013 150 m\u00b2", concrete: "5.000 \u2013 18.000 EUR", asphalt: "3.000 \u2013 10.500 EUR", gravel: "800 \u2013 3.750 EUR" },
+    ],
+
+    factorsHeading: "Fattori che Influenzano il Costo del Vialetto",
+    factorsIntro:
+      "Oltre al materiale e alla dimensione, diversi fattori possono far variare il prezzo. Conoscerli aiuta a preventivare con precisione:",
+    factorsItems: [
+      "Scelta del materiale: Il fattore pi\u00f9 importante. La ghiaia a 8\u201325 EUR/m\u00b2 \u00e8 5\u201310\u00d7 pi\u00f9 economica della pietra naturale a 80\u2013200 EUR/m\u00b2.",
+      "Superficie e forma: Vialetti pi\u00f9 grandi costano di pi\u00f9 in totale ma spesso meno al m\u00b2. Vialetti curvi richiedono 20\u201340% di manodopera in pi\u00f9.",
+      "Preparazione del terreno: Se il terreno necessita di scavo o livellamento, aggiungere 5\u201330 EUR/m\u00b2. Terreni in pendenza richiedono muri di contenimento.",
+      "Drenaggio: Un drenaggio adeguato (canalette, pozzetti) costa 500\u20133.000 EUR. Spesso richiesto dalla normativa italiana per lo smaltimento delle acque meteoriche.",
+      "Rimozione del vecchio vialetto: Rimuovere vecchio calcestruzzo costa 10\u201325 EUR/m\u00b2. L'asfalto \u00e8 leggermente pi\u00f9 economico. La ghiaia pu\u00f2 essere ridistribuita.",
+      "Differenze regionali: I prezzi variano del 30\u201350% per regione. Milano, Roma e il Nord Italia sono 20\u201340% pi\u00f9 cari delle zone rurali del Sud.",
+      "Permessi: Verificare con il Comune se serve una SCIA o permesso per la pavimentazione (50\u2013500 EUR). Attenzione ai vincoli paesaggistici.",
+      "Sottofondo: Un sottofondo in misto granulare compattato (20\u201340 cm) \u00e8 essenziale per calcestruzzo e asfalto. Costa 5\u201315 EUR/m\u00b2 in pi\u00f9.",
+    ],
+
+    diyVsContractorHeading: "Fai da Te vs Impresa",
+    diyVsContractorIntro:
+      "Se potete realizzare un vialetto da soli dipende dal materiale scelto. Ecco una valutazione onesta:",
+    diyVsContractorText1:
+      "I vialetti in ghiaia sono l'opzione pi\u00f9 adatta al fai da te. Con attrezzi di base (pala, rastrello e piastra vibrante a noleggio), un proprietario pu\u00f2 realizzare un vialetto in ghiaia in un fine settimana. Il processo comprende: preparare l'area, posare il tessuto non tessuto antierba, stendere la ghiaia in strati da 5 cm e compattare ogni strato. Il fai da te fa risparmiare il 40\u201360%.",
+    diyVsContractorText2:
+      "I vialetti in calcestruzzo e asfalto non sono progetti pratici per la maggior parte dei proprietari. Il calcestruzzo richiede attrezzature specializzate (autobetoniera, vibratore, staggia, frattazzo), tempismo preciso durante il getto e esperienza con pendenze e casseforme. Un calcestruzzo mal gettato si fessurerà prematuramente.",
+    diyVsContractorText3:
+      "I vialetti in masselli autobloccanti si collocano a metà strada. Un fai-da-te esperto può posare i masselli in un lungo fine settimana, ma la preparazione del sottofondo è molto impegnativa. Per la maggior parte, far preparare il sottofondo da un professionista e posare i masselli da soli offre il miglior compromesso tra risparmio (25\u201335%) e qualità. Chiedete sempre almeno tre preventivi.",
+
+    savingTipsHeading: "Come Risparmiare su un Vialetto Nuovo",
+    savingTipsIntro:
+      "Un vialetto \u00e8 un investimento significativo, ma ci sono strategie collaudate per ridurre il costo senza sacrificare la qualit\u00e0:",
+    savingTipsItems: [
+      "Chiedere pi\u00f9 preventivi: I prezzi possono variare del 30\u201350% tra imprese. Chiedete almeno tre preventivi scritti con materiali, spessori e garanzia.",
+      "Programmare fuori stagione: Autunno inoltrato e inverno sono periodi tranquilli. Molte imprese offrono sconti del 10\u201320%.",
+      "Scegliere un design semplice: Vialetti rettilinei e rettangolari sono i pi\u00f9 economici. Curve e bordure decorative aggiungono il 15\u201325%.",
+      "Conservare il sottofondo esistente: Se il vecchio vialetto ha un buon sottofondo, si pu\u00f2 posare il nuovo materiale sopra \u2014 risparmio di 5\u201315 EUR/m\u00b2.",
+      "Considerare l'asfalto invece del calcestruzzo: L'asfalto costa circa la met\u00e0 e resiste bene al gelo. Con manutenzione regolare dura 15\u201320 anni.",
+      "Usare la ghiaia per vialetti lunghi: Per vialetti oltre 30 m, ghiaia per il tratto principale e pavimentazione solo all'ingresso fa risparmiare migliaia di euro.",
+      "Combinare con un vicino: Stesso impresa per due progetti pu\u00f2 ottenere uno sconto del 5\u201315%.",
+    ],
+
+    calculatorCtaHeading: "Stima il Costo del Tuo Vialetto",
+    calculatorCtaText: "Usa i nostri calcolatori gratuiti per stimare la quantit\u00e0 esatta di materiale e il costo del tuo progetto.",
+    calculatorLinks: [
+      { label: "Calcolatore Platea in Calcestruzzo", href: "/calculators/foundation/concrete-slab-calculator", description: "Calcola metri cubi, sacchi e costo per un vialetto in calcestruzzo." },
+      { label: "Calcolatore Ghiaia", href: "/calculators/foundation/gravel-calculator", description: "Stima tonnellate e metri cubi per un vialetto in ghiaia con fascia di prezzo." },
+      { label: "Calcolatore Ghiaia per Vialetto", href: "/calculators/foundation/driveway-gravel-calculator", description: "Calcolatore specifico per ghiaia da vialetto per tipo e dimensione." },
+    ],
+
+    faqHeading: "Domande Frequenti",
+    faqs: [
+      {
+        question: "Quanto costa un vialetto nuovo nel 2026?",
+        answer:
+          "Un vialetto nuovo costa 2.000 a 15.000 EUR nel 2026, con una media di 4.000\u201310.000 EUR per un vialetto doppio standard in calcestruzzo (50 m\u00b2). La ghiaia \u00e8 la pi\u00f9 economica a 400\u20131.250 EUR posata. L'asfalto costa 1.500\u20133.500 EUR. Il calcestruzzo costa 2.500\u20136.000 EUR. I masselli sono i pi\u00f9 cari a 3.000\u201310.000+ EUR.",
+      },
+      {
+        question: "Qual \u00e8 il tipo di vialetto pi\u00f9 economico?",
+        answer:
+          "La ghiaia \u00e8 il materiale pi\u00f9 economico a 8\u201325 EUR/m\u00b2 in materiale, o 20\u201350 EUR/m\u00b2 posata. Un vialetto doppio standard in ghiaia costa 400\u20131.250 EUR posato, vs 2.500\u20136.000 EUR in calcestruzzo. La ghiaia \u00e8 anche l'opzione pi\u00f9 adatta al fai da te, risparmiando il 40\u201360%.",
+      },
+      {
+        question: "Quanto costa un vialetto in calcestruzzo al metro quadro?",
+        answer:
+          "Un vialetto in calcestruzzo costa 50 a 120 EUR/m\u00b2 posato nel 2026. Il calcestruzzo liscio semplice costa 50\u201380 EUR/m\u00b2. Il calcestruzzo stampato costa 60\u2013150 EUR/m\u00b2. Un vialetto doppio di 50 m\u00b2 in calcestruzzo semplice costa 2.500\u20136.000 EUR posato.",
+      },
+      {
+        question: "L'asfalto o il calcestruzzo \u00e8 pi\u00f9 economico per un vialetto?",
+        answer:
+          "L'asfalto \u00e8 pi\u00f9 economico inizialmente a 30\u201370 EUR/m\u00b2 vs 50\u2013120 EUR/m\u00b2 per il calcestruzzo. Tuttavia, l'asfalto richiede sigillatura ogni 2\u20133 anni e dura 15\u201320 anni vs 25\u201350 anni per il calcestruzzo. Nel lungo periodo, il costo totale \u00e8 spesso simile.",
+      },
+      {
+        question: "Come calcolo quanto coster\u00e0 il mio vialetto?",
+        answer:
+          "Per stimare: (1) Misurate lunghezza e larghezza in metri per la superficie. (2) Moltiplicate per il costo al m\u00b2: ghiaia 8\u201325, asfalto 30\u201370, calcestruzzo 50\u2013120, masselli 60\u2013200 EUR. (3) Aggiungete 10\u201320% per preparazione terreno e imprevisti. Usate i nostri calcolatori gratuiti per stime precise.",
+      },
+      {
+        question: "Quanto dura un vialetto per tipo di materiale?",
+        answer:
+          "La durata varia significativamente. La ghiaia dura 15\u201325 anni ma richiede rabbocco ogni 2\u20133 anni. L'asfalto dura 15\u201320 anni con sigillatura regolare. Il calcestruzzo dura 25\u201350 anni con manutenzione minima. I masselli durano 25\u201350+ anni con il vantaggio di poter sostituire singoli elementi. La pietra naturale pu\u00f2 durare 50+ anni.",
+      },
+    ],
+  },
+  flooringCost: {
+    title: "Guida ai Costi della Pavimentazione",
+    metaDescription: "La pavimentazione costa 20\u2013150 \u20ac/m\u00b2 posata. Guida completa ai prezzi per parquet, laminato, piastrelle, moquette e vinile con stime per stanza e consigli per risparmiare.",
+    heroTitle: "Guida ai Costi della Pavimentazione",
+    heroSubtitle: "Prezzi 2026",
+    heroDescription: "Tutto sui costi della pavimentazione \u2014 materiali, posa, budget per stanza e strategie di risparmio.",
+    quickAnswerHeading: "Risposta Rapida",
+    quickAnswerText: "Una pavimentazione nuova costa 20\u2013150 \u20ac/m\u00b2 posata. Il laminato \u00e8 il pi\u00f9 economico a 20\u201360 \u20ac/m\u00b2, seguito da moquette (25\u201380 \u20ac), vinile LVP (30\u201380 \u20ac), piastrelle (50\u2013150 \u20ac) e parquet (60\u2013150 \u20ac).",
+    flooringTypesHeading: "Costi per Tipo di Materiale",
+    flooringTypesIntro: "Prezzi al metro quadro posato per tipo di materiale.",
+    flooringTypesColType: "Tipo di Pavimento",
+    flooringTypesColCost: "Costo Posato (per m\u00b2)",
+    flooringTypesColBestFor: "Ideale Per",
+    flooringTypesRows: [
+      { type: "Laminato", cost: "20 \u2013 60 \u20ac", bestFor: "Budget, fai-da-te, affitti" },
+      { type: "Moquette", cost: "25 \u2013 80 \u20ac", bestFor: "Camere da letto, comfort" },
+      { type: "Vinile LVP", cost: "30 \u2013 80 \u20ac", bestFor: "Cucine, bagni, zone di passaggio" },
+      { type: "Piastrelle", cost: "50 \u2013 150 \u20ac", bestFor: "Bagni, cucine, ingressi" },
+      { type: "Parquet prefinito", cost: "40 \u2013 120 \u20ac", bestFor: "Soggiorni, sale da pranzo" },
+      { type: "Parquet massello", cost: "60 \u2013 150 \u20ac", bestFor: "Zone giorno, valore a lungo termine" },
+      { type: "Pietra naturale", cost: "100 \u2013 250 \u20ac", bestFor: "Alta gamma" },
+    ],
+    costByRoomHeading: "Costo per Stanza",
+    costByRoomIntro: "Costi totali tipici per tipo di stanza con materiali di fascia media.",
+    costByRoomColRoom: "Stanza",
+    costByRoomColTypical: "Costo Totale",
+    costByRoomColNotes: "Note",
+    costByRoomRows: [
+      { room: "Bagno (5 m\u00b2)", typical: "400 \u2013 1.200 \u20ac", notes: "Piastrelle o vinile" },
+      { room: "Camera (14 m\u00b2)", typical: "600 \u2013 1.800 \u20ac", notes: "Moquette o laminato" },
+      { room: "Cucina (18 m\u00b2)", typical: "1.000 \u2013 3.500 \u20ac", notes: "Piastrelle o vinile" },
+      { room: "Soggiorno (28 m\u00b2)", typical: "1.200 \u2013 4.500 \u20ac", notes: "Parquet o vinile" },
+      { room: "Intera casa (140 m\u00b2)", typical: "5.000 \u2013 20.000 \u20ac", notes: "Mix di materiali" },
+    ],
+    installationCostsHeading: "Costi di Posa: Fai-da-te vs Professionista",
+    installationCostsIntro: "La manodopera rappresenta il 40\u201360% del costo totale.",
+    installationCostsText1: "La posa professionale costa 15\u201340 \u20ac/m\u00b2. Le piastrelle sono le pi\u00f9 care a 30\u201370 \u20ac/m\u00b2. La moquette \u00e8 la pi\u00f9 economica a 8\u201320 \u20ac/m\u00b2.",
+    installationCostsText2: "Il fai-da-te fa risparmiare 50\u201370% sulla manodopera. Laminato e vinile click sono i pi\u00f9 facili da posare.",
+    installationCostsText3: "Costi aggiuntivi: livellamento (15\u201340 \u20ac/m\u00b2), rimozione vecchio pavimento (8\u201320 \u20ac/m\u00b2), spostamento mobili (50\u2013200 \u20ac), profili di giunzione (5\u201315 \u20ac/pezzo).",
+    howToCalculateHeading: "Come Calcolare il Pavimento Necessario",
+    howToCalculateIntro: "Passi per stimare i materiali con precisione.",
+    howToCalculateItems: [
+      "Misura lunghezza e larghezza di ogni stanza in metri. Moltiplica per i m\u00b2.",
+      "Stanze irregolari: dividi in rettangoli e somma le aree.",
+      "Aggiungi 10% di scarto per posa dritta.",
+      "15\u201320% per posa diagonale o a spina di pesce.",
+      "Dividi il totale per la copertura per pacco.",
+      "Arrotonda sempre per eccesso.",
+    ],
+    howToCalculateSummary: "Usa il nostro calcolatore gratuito per una stima istantanea con fattore di scarto automatico.",
+    savingTipsHeading: "Come Risparmiare sulla Pavimentazione",
+    savingTipsIntro: "Acquisti intelligenti possono ridurre i costi del 20\u201340%.",
+    savingTipsItems: [
+      "Acquista durante i saldi per 20\u201330% di sconto.",
+      "Compra da grossisti specializzati.",
+      "Posa il pavimento click da solo.",
+      "Usa materiali diversi per stanze diverse.",
+      "Ordina tutto insieme per sconti quantit\u00e0.",
+      "Conserva gli avanzi per riparazioni future.",
+    ],
+    calculatorCtaHeading: "Calcola i Tuoi Materiali",
+    calculatorCtaText: "Usa i nostri calcolatori gratuiti per stime istantanee.",
+    calculatorLinks: [
+      { label: "Calcolatore Pavimentazione", href: "/calculators/flooring/flooring-calculator/", description: "Calcolatore generale m\u00b2 e pacchi" },
+      { label: "Calcolatore Moquette", href: "/calculators/flooring/carpet-calculator/", description: "M\u00b2, metri lineari e sottofondo" },
+      { label: "Calcolatore Piastrelle", href: "/calculators/flooring/tile-calculator/", description: "Piastrelle, stucco e colla" },
+      { label: "Calcolatore Laminato", href: "/calculators/flooring/laminate-calculator/", description: "Doghe, pacchi e sottopavimento" },
+    ],
+    faqHeading: "Domande Frequenti",
+    faqs: [
+      { question: "Qual \u00e8 il pavimento pi\u00f9 economico?", answer: "Il laminato a 20\u201360 \u20ac/m\u00b2 posato. Fai-da-te: 8\u201325 \u20ac/m\u00b2 di materiale." },
+      { question: "Quanto costa pavimentare tutta la casa?", answer: "Una casa di 140 m\u00b2 costa 5.000\u201320.000 \u20ac. Mix tipico: 8.000\u201314.000 \u20ac." },
+      { question: "Quale pavimento aumenta di pi\u00f9 il valore dell'immobile?", answer: "Il parquet porta il maggior valore di rivendita. Piastrelle e vinile in cucina/bagno sono ottimi investimenti." },
+      { question: "Quanto dura ogni tipo di pavimento?", answer: "Parquet massello: 50\u2013100 anni. Pietra: 50+. Piastrelle: 30\u201350. Laminato/vinile: 15\u201325. Moquette: 5\u201315." },
+      { question: "Devo rifare il pavimento prima di vendere?", answer: "La moquette consumata va sostituita. Il parquet danneggiato pu\u00f2 essere levigato. Vinile nuovo in cucina/bagno \u00e8 un buon investimento." },
+      { question: "Qual \u00e8 il miglior pavimento per la cucina?", answer: "Vinile LVP e gres porcellanato. Impermeabili, durevoli e facili da pulire." },
+    ],
+  },
+
+  fenceCost: {
+    title: "Quanto Costa una Recinzione? Guida Prezzi 2026",
+    metaDescription: "Una recinzione costa 30\u2013100 \u20ac al metro lineare posata nel 2026. Guida completa per recinzioni in legno, metallo, PVC e composito con costi di manodopera e consigli di risparmio.",
+    heroTitle: "Quanto Costa una Recinzione?",
+    heroSubtitle: "Guida Prezzi 2026",
+    heroDescription: "Dettaglio completo dei costi delle recinzioni per materiale, stile e dimensione del progetto con prezzi, manodopera e consigli di risparmio.",
+    quickAnswerHeading: "Risposta Rapida",
+    quickAnswerText: "Una recinzione costa 30\u2013100 \u20ac al metro posata nel 2026. Recinzione in legno di 15 m: 450\u2013900 \u20ac materiali o 900\u20131.500 \u20ac posata.",
+    fenceTypesHeading: "Costo per Materiale",
+    fenceTypesIntro: "Il materiale \u00e8 il principale fattore di costo:",
+    fenceTypesColType: "Materiale",
+    fenceTypesColCost: "Costo/metro (posato)",
+    fenceTypesColBestFor: "Ideale per",
+    fenceTypesRows: [
+      { type: "Legno trattato", cost: "30 \u2013 60 \u20ac", bestFor: "Recinzioni privacy, pi\u00f9 popolare. 15\u201320 anni." },
+      { type: "Larice / Castagno", cost: "40 \u2013 80 \u20ac", bestFor: "Resistenza naturale. 15\u201325 anni." },
+      { type: "Rete metallica", cost: "15 \u2013 35 \u20ac", bestFor: "Il pi\u00f9 economico. 15\u201320 anni." },
+      { type: "Pannelli rigidi", cost: "30 \u2013 70 \u20ac", bestFor: "Durevoli, sicuri. 25\u201340 anni." },
+      { type: "PVC / Composito", cost: "50 \u2013 120 \u20ac", bestFor: "Senza manutenzione. 25\u201350 anni." },
+      { type: "Alluminio / Ferro", cost: "60 \u2013 150 \u20ac", bestFor: "Decorativo. 20\u201330 anni." },
+    ],
+    costByProjectHeading: "Costo per Dimensione",
+    costByProjectIntro: "Costi tipici 2026 per recinzioni in legno:",
+    costByProjectColProject: "Progetto",
+    costByProjectColTypical: "Costo Tipico (posato)",
+    costByProjectColNotes: "Note",
+    costByProjectRows: [
+      { project: "Giardino piccolo (10 m)", typical: "300 \u2013 700 \u20ac", notes: "Materiali: 150\u2013350 \u20ac." },
+      { project: "Giardino medio (15 m)", typical: "450 \u2013 1.000 \u20ac", notes: "Dimensione pi\u00f9 comune." },
+      { project: "Giardino grande (25 m)", typical: "750 \u2013 1.700 \u20ac", notes: "Sconto volume possibile." },
+      { project: "Perimetro (40 m)", typical: "1.200 \u2013 2.800 \u20ac", notes: "Materiali: 600\u20131.400 \u20ac." },
+      { project: "Con cancelletto", typical: "800 \u2013 2.000 \u20ac", notes: "Cancelletto: 100\u2013400 \u20ac." },
+      { project: "Recinzione piscina", typical: "600 \u2013 2.500 \u20ac", notes: "Normativa UNI EN obbligatoria." },
+    ],
+    laborCostsHeading: "Costi di Posa",
+    laborCostsIntro: "La posa rappresenta 40\u201360% del costo totale.",
+    laborCostsText1: "Posa professionale: 15\u201330 \u20ac/metro. 15 m richiedono 1\u20132 giorni.",
+    laborCostsText2: "Terreno roccioso e pendenze aumentano i costi del 10\u201325%.",
+    laborCostsText3: "Richiedere almeno 3 preventivi. Bassa stagione risparmia 10\u201320%.",
+    diyVsProHeading: "Fai da Te vs Professionista",
+    diyVsProIntro: "Il fai da te risparmia 40\u201360%:",
+    diyVsProItems: [
+      "Materiali per 15 m: 225\u2013500 \u20ac.",
+      "Professionista: 450\u20131.000 \u20ac totale.",
+      "Attrezzi: trivella, livella, sega, trapano.",
+      "1\u20132 weekend per 15 metri.",
+      "Errori comuni: pali non a piombo.",
+      "Pali giorno 1, pannelli giorno 2.",
+    ],
+    diyVsProSummary: "Il fai da te risparmia 200\u2013500 \u20ac. Per terreno difficile affidarsi a un professionista.",
+    savingTipsHeading: "Consigli di Risparmio",
+    savingTipsIntro: "Come ridurre i costi:",
+    savingTipsItems: [
+      "Legno trattato vs larice: 30\u201350% meno caro.",
+      "Bassa stagione: 10\u201320% di risparmio.",
+      "Dividere il costo con il vicino 50/50.",
+      "Pannelli prefabbricati pi\u00f9 veloci da montare.",
+      "Acquistare dal rivenditore di legname.",
+      "Fare la pratica edilizia da soli.",
+    ],
+    calculatorCtaHeading: "Calcola i tuoi Materiali",
+    calculatorCtaText: "Usa i nostri calcolatori gratuiti per stimare materiali e costo.",
+    calculatorLinks: [
+      { label: "Calcolatore Recinzione", href: "/calculators/outdoor/fence-calculator", description: "Pali, traverse e tavole." },
+      { label: "Calcolatore Pali", href: "/calculators/outdoor/fence-post-calculator", description: "Pali e cemento." },
+      { label: "Calcolatore Pannelli", href: "/calculators/outdoor/fence-panel-calculator", description: "Pannelli prefabbricati." },
+      { label: "Calcolatore Staccionata", href: "/calculators/outdoor/picket-fence-calculator", description: "Stecche con spaziatura libera." },
+    ],
+    faqHeading: "Domande Frequenti",
+    faqs: [
+      { question: "Quanto costa 20 m di recinzione?", answer: "Legno: 600\u20131.400 \u20ac posato, 300\u2013700 \u20ac materiali." },
+      { question: "Recinzione pi\u00f9 economica?", answer: "Rete metallica da 15 \u20ac/m. Privacy: legno trattato da 30 \u20ac/m posato." },
+      { question: "Il fai da te \u00e8 pi\u00f9 economico?", answer: "S\u00ec, risparmio del 40\u201360%." },
+      { question: "Quanto dura una recinzione in legno?", answer: "Trattato: 15\u201320 anni. Larice: 15\u201325 anni." },
+      { question: "Serve un permesso?", answer: "Dipende dal comune. Verificare il regolamento edilizio locale." },
+      { question: "Quale recinzione aumenta il valore?", answer: "Recinzione in legno ben mantenuta recupera 50\u201370% del costo." },
     ],
   },
 };

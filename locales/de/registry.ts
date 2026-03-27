@@ -1559,6 +1559,126 @@ export const postHoleCalculatorDE: CalculatorSEOContent = {
   ],
 };
 
+// ─── RETAINING WALL ─────────────────────────────────────────────────────────
+
+export const retainingWallCalculator: CalculatorSEOContent = {
+  disclaimer: "Diese Schätzung enthält 10% Verschnitt für Steine. Der tatsächliche Kies- und Drainagebedarf hängt von Bodenverhältnissen, Grundwasserstand und lokalen Vorschriften ab. Mauern über 1,2 m erfordern in der Regel eine statische Berechnung und Baugenehmigung.",
+  howToUse: [
+    "Messen Sie die Gesamtlänge Ihrer Stützmauer in Metern.",
+    "Geben Sie die gewünschte Mauerhöhe in Metern ein — die meisten Gartenmauern sind 0,6 bis 1,2 m hoch.",
+    "Wählen Sie den Steintyp: Pflanzstein für dekorative Mauern, Schalungsstein für statische, oder Naturstein für rustikale Optik.",
+    "Klicken Sie auf Berechnen für Steinbedarf, Abdecksteine, Kiesschüttung und Drainage-Schätzungen.",
+  ],
+  materialInfo:
+    "Stützmauern halten Erdreich an Hanglagen zurück und schaffen ebene Flächen für Gärten, Terrassen, Einfahrten und Beete. Die drei häufigsten Materialien sind Pflanzsteine (Betonsteine), Schalungssteine und Naturstein.\n\nPflanzsteine und Böschungssteine sind in Deutschland die beliebteste Wahl für DIY-Stützmauern bis 1,2 m Höhe. Standardmaße sind 40×20×20 cm oder 30×20×15 cm, Gewicht 15 bis 25 kg pro Stein. Sie werden trocken aufeinander gesetzt und verriegeln sich durch Form und Eigengewicht. Typische Kosten liegen bei 2 bis 8 EUR pro Stein, oder 40 bis 120 EUR pro Quadratmeter Maueransicht.\n\nSchalungssteine (Mauerschalungssteine) werden mit Bewehrung und Beton ausgefüllt und eignen sich für statisch belastete Mauern über 1 m. Natursteinmauern aus Muschelkalk, Sandstein oder Granit erzeugen die hochwertigste Optik, kosten aber 80 bis 200 EUR pro m² eingebaut.\n\nAlle Stützmauern benötigen eine Drainage hinter der Mauer: Kiespackung aus 16/32 mm Schotter, Drainagerohr DN 100 am Mauerfuß, und Entwässerungsöffnungen in regelmäßigen Abständen. Abdeckplatten werden mit Montagekleber befestigt (ca. 1 Kartusche pro 8 Laufmeter).\n\nMauern über 1,2 m erfordern in den meisten Bundesländern eine Baugenehmigung und statische Berechnung. Beachten Sie die Landesbauordnung Ihres Bundeslandes.",
+  nextSteps: [
+    { label: "Streifenfundament-Rechner", href: "/calculators/foundation/concrete-footing-calculator/" },
+    { label: "Kies-Rechner", href: "/calculators/foundation/gravel-calculator/" },
+    { label: "Mörtel-Rechner", href: "/calculators/foundation/mortar-mix-calculator/" },
+  ],
+  installationTips: [
+    "Heben Sie einen Graben von 15 bis 20 cm Tiefe und 60 cm Breite aus — verdichten Sie den Boden und füllen Sie 15 cm Schotter als Tragschicht ein.",
+    "Richten Sie die erste Reihe sorgfältig aus — jede weitere Reihe folgt der Basis. Verwenden Sie eine 1,2-m-Wasserwaage und einen Gummihammer.",
+    "Verfüllen Sie mit 16/32 mm Schotter hinter der Mauer, während Sie jede Reihe aufbauen.",
+    "Verlegen Sie ein DN 100 Drainagerohr am Mauerfuß mit 2% Gefälle zu einem Ablauf.",
+    "Versetzen Sie die Stoßfugen mindestens 10 cm zwischen den Reihen.",
+    "Befestigen Sie Abdeckplatten mit Montagekleber — tragen Sie eine durchgehende Raupe auf die letzte Reihe auf.",
+  ],
+  commonMistakes: [
+    "Schottertragschicht weglassen — ohne verdichtete Kiesbasis setzt sich die Mauer und kippt mit der Zeit.",
+    "Drainage vergessen — Wasserdruck hinter der Mauer ist die häufigste Ursache für Mauerversagen.",
+    "Über 1,2 m ohne Statik bauen — die Landesbauordnung erfordert Genehmigung und Bewehrung für höhere Mauern.",
+    "Mutterboden als Hinterfüllung verwenden — nur sauberer Schotter gehört direkt hinter die Mauer.",
+    "Tragschicht nicht verdichten — lockerer Untergrund führt zu ungleichmäßiger Setzung im ersten Jahr.",
+  ],
+  faqs: [
+    { question: "Wie viele Steine brauche ich für eine Stützmauer?", answer: "Für Pflanzsteine 40×20×20 cm benötigen Sie ca. 12,5 Steine pro m² Maueransicht. Eine 6 m lange, 1 m hohe Mauer (6 m²) erfordert ca. 75 Steine plus 10% Verschnitt = 83 Steine." },
+    { question: "Was kostet eine Stützmauer?", answer: "Pflanzsteine kosten 40 bis 120 EUR pro m² Maueransicht eingebaut. Schalungssteine mit Bewehrung und Beton kosten 80 bis 160 EUR pro m². Natursteinmauern liegen bei 80 bis 200 EUR pro m²." },
+    { question: "Brauche ich eine Baugenehmigung für eine Stützmauer?", answer: "In den meisten Bundesländern ist eine Baugenehmigung für Stützmauern über 1,2 m Höhe erforderlich. Einige Gemeinden setzen die Grenze bei 1,0 m. Informieren Sie sich bei Ihrem Bauamt." },
+    { question: "Wie viel Kies brauche ich hinter einer Stützmauer?", answer: "Planen Sie eine 30 cm breite Zone mit 16/32 mm Schotter hinter der gesamten Maueransicht plus 15 cm Schottertragschicht im Graben. Für eine 6 m lange, 1 m hohe Mauer sind das ca. 2 m³ Schotter." },
+    { question: "Welcher Stein ist der beste für Stützmauern?", answer: "Für DIY-Mauern unter 1,2 m sind Pflanzsteine und Böschungssteine die beste Wahl — kein Mörtel nötig, einfach zu verlegen. Für statisch belastete Mauern über 1,2 m sind Schalungssteine mit Bewehrung erforderlich." },
+    { question: "Wie tief muss das Fundament einer Stützmauer sein?", answer: "Der Fundamentgraben sollte mindestens 15 cm tief sein mit 15 cm verdichtetem Schotter. In frostgefährdeten Gebieten muss das Fundament unter die Frostgrenze reichen (60 bis 80 cm in Deutschland) oder eine frostsichere Kiespackung verwenden." },
+  ],
+};
+
+export const epoxyCalculator: CalculatorSEOContent = {
+  disclaimer: "Die Ergiebigkeit variiert je nach Produkt, Untergrundporosität und Auftragsmethode. Der Standard von 10 m² pro Liter gilt für die meisten Garagenboden-Epoxidharze. Befolgen Sie stets die Herstellerangaben.",
+  howToUse: [
+    "Messen Sie Länge und Breite Ihres Bodens in Metern.",
+    "Wählen Sie 1 Schicht für Grundbeschichtung oder 2 Schichten für maximale Haltbarkeit.",
+    "Passen Sie die Ergiebigkeit pro Liter an, falls Ihr Produkt andere Werte angibt (Standard: 10 m²/Liter).",
+    "Klicken Sie auf Berechnen für Liter, Setanzahl und Kostenschätzung.",
+  ],
+  materialInfo:
+    "Epoxidharz-Bodenbeschichtung ist ein Zweikomponenten-Reaktionsharz (Teil A Harz + Teil B Härter), das zu einer harten, chemikalienbeständigen, glänzenden Oberfläche aushärtet. Es ist die beliebteste Garagenbodenbeschichtung und wird auch in Kellern, Werkstätten, Gewerbeküchen und Lagerhallen eingesetzt.\n\nEs gibt drei Haupttypen. Wasserbasiertes Epoxid ist am DIY-freundlichsten — geruchsarm, leichte Reinigung, Kosten 30 bis 60 EUR pro Liter/Set mit 10 m² Abdeckung. Lösemittelhaltiges Epoxid ist haltbarer und kostet 50 bis 90 EUR pro Liter. 100% Feststoff-Epoxid ist die Profi-Variante — kein Wasser oder Lösemittel, dickster Filmaufbau, 80 bis 150 EUR pro Liter.\n\nDie Untergrundvorbereitung ist der wichtigste Schritt. Der Beton muss sauber, trocken und aufgeraut sein. Kugelstrahlen, Schleifen oder Säure-Ätzen erzeugen das nötige Profil. Neuer Beton muss mindestens 28 Tage aushärten. Feuchtigkeitstest durchführen: PE-Folie 60×60 cm 24 Stunden auf den Boden kleben und auf Kondensat prüfen.\n\nAuftragungstemperatur zwischen 10°C und 30°C bei Betontemperatur über 13°C. Die meisten 2-Schicht-Systeme sind nach 3 bis 5 Tagen befahrbar. Produkte sind bei Baumärkten (OBI, Bauhaus, Hornbach) und Fachhandel erhältlich.",
+  nextSteps: [
+    { label: "Farb-Rechner", href: "/calculators/finishing/paint-coverage-calculator/" },
+    { label: "Betonplatte-Rechner", href: "/calculators/foundation/concrete-slab-calculator/" },
+  ],
+  installationTips: [
+    "Führen Sie einen Feuchtigkeitstest durch (PE-Folie 60×60 cm 24 Stunden aufkleben) — Feuchtigkeit verursacht Haftungsversagen.",
+    "Schleifen oder ätzen Sie den Beton für ein Oberflächenprofil — Epoxid haftet nicht auf glattem oder versiegeltem Beton.",
+    "Mischen Sie Teil A und B gründlich für die angegebene Zeit (meist 3 Minuten), dann Induktionszeit abwarten.",
+    "Arbeiten Sie in Abschnitten und halten Sie eine nasse Kante — Epoxid verläuft selbst, zeigt aber Nahtspuren wenn ein Abschnitt antrocknet.",
+    "12 bis 24 Stunden zwischen Schichten, 72 Stunden vor leichtem Fußverkehr. 5 bis 7 Tage vor dem Befahren warten.",
+  ],
+  commonMistakes: [
+    "Untergrundvorbereitung auslassen — häufigste Ursache für Ablösung und Abblättern.",
+    "Auf Feuchtigkeit auftragen — eingeschlossene Feuchtigkeit verursacht Blasenbildung und Delamination.",
+    "Außerhalb des Temperaturbereichs arbeiten — unter 10°C härtet Epoxid zu langsam; über 30°C zu schnell.",
+    "Zu viel Produkt auf einmal mischen — Epoxid erzeugt beim Aushärten Wärme. Große Mengen im Eimer können in Minuten gelieren.",
+    "Keine Deckschicht auftragen — ungeschütztes Epoxid vergilbt durch UV-Strahlung.",
+  ],
+  faqs: [
+    { question: "Wie viel Epoxidharz brauche ich für einen Garagenboden?", answer: "Eine Doppelgarage hat ca. 36 m². Bei 10 m² pro Liter benötigen Sie ca. 3,6 Liter für eine Schicht oder 7,2 Liter für zwei Schichten." },
+    { question: "Was kostet eine Epoxidharz-Beschichtung?", answer: "DIY-Beschichtung kostet 15 bis 40 EUR pro m² Material. Eine 36 m² Garage kostet 300 bis 700 EUR für ein Basis-Set. Professionelle Verarbeitung kostet 40 bis 100 EUR pro m²." },
+    { question: "Reicht eine Schicht Epoxid für den Garagenboden?", answer: "Eine Schicht bietet akzeptable Abdeckung für leichte Nutzung. Zwei Schichten liefern deutlich bessere Haltbarkeit und Chemikalienbeständigkeit." },
+    { question: "Wie lange hält eine Epoxidbeschichtung?", answer: "Richtig aufgetragen hält Epoxid-Bodenbeschichtung 5 bis 10 Jahre in einer Privatgarage. Professionelles 100%-Feststoff-Epoxid mit Polyasphartic-Versiegelung kann 15 bis 20 Jahre halten." },
+    { question: "Muss ich Beton vor Epoxid grundieren?", answer: "Die meisten Consumer-Epoxid-Sets benötigen keinen separaten Primer — die erste Epoxid-Schicht fungiert als Grundierung. Bei stark porösem oder altem Beton verbessert ein Epoxid-Tiefengrund die Haftung." },
+    { question: "Kann ich Epoxid über alte Farbe auftragen?", answer: "Epoxid haftet nicht auf den meisten Farben oder alten Beschichtungen. Sie müssen die vorhandene Beschichtung durch Schleifen oder chemisches Abbeizen entfernen, um den nackten Beton freizulegen." },
+  ],
+};
+
+export const pondCalculator: CalculatorSEOContent = {
+  disclaimer: "Volumenberechnungen sind Näherungswerte — Nierenformen variieren stark. Die Foliengröße enthält 60 cm Überlappung pro Seite. Die Pumpendimensionierung basiert auf vollständigem Umwälzen alle 2 Stunden.",
+  howToUse: [
+    "Geben Sie die maximale Länge Ihres Teichs in Metern ein.",
+    "Geben Sie die maximale Breite in Metern ein.",
+    "Geben Sie die tiefste Stelle in Metern ein — 0,6 bis 1 m für Wassergärten, 1 bis 1,5 m für Koiteiche.",
+    "Wählen Sie die nächstliegende Form: rechteckig, oval oder nierenförmig.",
+    "Klicken Sie auf Berechnen für Volumen, Foliengröße, Pumpenleistung und Unterlage-Bedarf.",
+  ],
+  materialInfo:
+    "Ein Gartenteich ist eine ausgegrabene Wasserstelle, die mit flexibler oder starrer Folie ausgelegt wird, um Wasser für Zierfische (Koi, Goldfische), Wasserpflanzen oder als dekoratives Element zu halten.\n\nEPDM-Kautschukfolien (1,0 mm) sind der Industriestandard — flexibel, UV-beständig, fischsicher und mit einer Lebensdauer von 20 bis 30 Jahren. Kosten liegen bei 5 bis 12 EUR pro m². PVC-Folien sind günstiger mit 3 bis 7 EUR pro m², haben aber eine kürzere Lebensdauer von 10 bis 15 Jahren.\n\nDie Foliengröße wird berechnet, indem die doppelte Tiefe plus 60 cm Überlappung zu Länge und Breite addiert wird. Pumpen müssen das gesamte Volumen alle 2 Stunden umwälzen — ein 4.000-Liter-Teich braucht mindestens eine 2.000 l/h Pumpe. Für Koiteiche wird stündliches Umwälzen empfohlen.\n\nEin Schutzvlies (300 g/m²) unter der Folie schützt vor Wurzeln und Steinen. Sand (5 cm Schicht) kann als Alternative dienen. Randsteine aus Naturstein verdecken den Folienrand. Die Gesamtkosten eines 2.000-Liter-Teichs liegen bei 500 bis 1.500 EUR für DIY-Material.\n\nIn Deutschland sind Gartenteiche bis 100 m³ in der Regel genehmigungsfrei. Beachten Sie aber die Verkehrssicherungspflicht — eine Umzäunung oder Absicherung kann erforderlich sein, besonders bei Grundstücken mit Kindern.",
+  nextSteps: [
+    { label: "Kies-Rechner", href: "/calculators/foundation/gravel-calculator/" },
+    { label: "Pfostenloch-Rechner", href: "/calculators/outdoor/post-hole-calculator/" },
+  ],
+  installationTips: [
+    "Platzieren Sie den Teich an einem Standort mit 4 bis 6 Stunden Halbschatten — volle Sonne fördert übermäßiges Algenwachstum.",
+    "Klären Sie die Lage unterirdischer Leitungen vor dem Graben (Versorgungsunternehmen kontaktieren).",
+    "Graben Sie Regale von 30 cm Tiefe am Rand für Uferpflanzen, bevor Sie die volle Tiefe ausheben.",
+    "Verlegen Sie 5 cm Sand oder Schutzvlies über die gesamte Ausgrabung vor der Folie.",
+    "Füllen Sie den Teich langsam mit Gartenschlauch und glätten Sie die Folie beim Füllen.",
+    "Betreiben Sie Pumpe und Filter mindestens 2 Wochen vor dem Einsetzen von Fischen.",
+  ],
+  commonMistakes: [
+    "Folie zu klein — berechnen Sie immer Länge + (2 × Tiefe) + 0,6 m für jede Dimension.",
+    "Schutzvlies weglassen — Wurzeln und Steine durchstoßen die Folie von unten.",
+    "Pumpe zu klein — schlechte Umwälzung führt zu stehendem Wasser und Algenblüte.",
+    "Nicht genug Tiefe — Teiche unter 60 cm überhitzen im Sommer und frieren im Winter komplett durch.",
+    "Zu nah an Bäumen bauen — Falllaub erzeugt organische Ablagerungen, die dem Wasser Sauerstoff entziehen.",
+  ],
+  faqs: [
+    { question: "Wie viele Liter hat mein Teich?", answer: "Für rechteckige Teiche: Länge × Breite × Tiefe (in Metern) × 1.000 = Liter. Für ovale Teiche mit 0,8 multiplizieren. Für Nierenform mit 0,7 multiplizieren. Beispiel: ein 3×2,5×1 m rechteckiger Teich fasst ca. 7.500 Liter." },
+    { question: "Welche Foliengröße brauche ich?", answer: "Foliengröße = (Länge + 2 × Tiefe + 0,6 m) mal (Breite + 2 × Tiefe + 0,6 m). Für einen 3×2,5×1 m Teich sollte die Folie mindestens 5,6 m × 5,1 m sein." },
+    { question: "Welche Pumpe brauche ich für meinen Teich?", answer: "Multiplizieren Sie Ihr Teichvolumen in Litern mit 0,5 für die Mindest-l/h-Leistung. Ein 8.000-Liter-Teich braucht mindestens eine 4.000 l/h Pumpe für 2-stündliches Umwälzen." },
+    { question: "Was kostet ein Gartenteich?", answer: "Ein einfacher 2.000-Liter-Wassergarten kostet 500 bis 1.500 EUR DIY. Ein 4.000-8.000-Liter-Teich mit Pumpe, Filter und Randsteinen kostet 1.500 bis 4.000 EUR DIY oder 5.000 bis 15.000 EUR professionell angelegt." },
+    { question: "Wie tief muss ein Teich für Fische sein?", answer: "Wassergärten mit Goldfischen brauchen mindestens 80 cm Tiefe. Koiteiche sollten mindestens 1,2 m tief sein, vorzugsweise 1,5 m, um im Winter eine frostfreie Zone am Boden zu bieten." },
+    { question: "Brauche ich einen Filter für meinen Teich?", answer: "Ja, wenn Sie Fische halten möchten. Ein Biofilter beherbergt nützliche Bakterien, die giftiges Ammoniak in harmloses Nitrat umwandeln. Auch reine Pflanzgärten profitieren von Pumpe und Filter." },
+  ],
+};
+
 // ─── REGISTRY MAP ─────────────────────────────────────────────────────────────
 
 export const registryDE: Record<string, Record<string, CalculatorSEOContent>> = {
@@ -1575,6 +1695,7 @@ export const registryDE: Record<string, Record<string, CalculatorSEOContent>> = 
     "driveway-gravel-calculator": drivewayGravelCalculator,
     "block-fill-calculator": blockFillCalculator,
     "mortar-mix-calculator": mortarMixCalculator,
+    "retaining-wall-calculator": retainingWallCalculator,
   },
   "floor-framing": {
     "rim-joist-calculator": rimJoistCalculator,
@@ -1626,6 +1747,7 @@ export const registryDE: Record<string, Record<string, CalculatorSEOContent>> = 
     "paint-coverage-calculator": paintCoverageCalculatorDE,
     "paint-cost-calculator": paintCostCalculatorDE,
     "primer-calculator": primerCalculatorDE,
+    "epoxy-calculator": epoxyCalculator,
   },
   outdoor: {
     "deck-board-calculator": deckBoardCalculatorDE,
@@ -1633,5 +1755,6 @@ export const registryDE: Record<string, Record<string, CalculatorSEOContent>> = 
     "deck-railing-calculator": deckRailingCalculatorDE,
     "deck-stair-calculator": deckStairCalculatorDE,
     "post-hole-calculator": postHoleCalculatorDE,
+    "pond-calculator": pondCalculator,
   },
 };

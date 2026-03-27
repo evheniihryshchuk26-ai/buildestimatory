@@ -594,6 +594,125 @@ export interface GravelCostGuideTranslations {
   faqs: GuideFaq[];
 }
 
+export interface DrivewayCostGuideTranslations {
+  title: string;
+  metaDescription: string;
+  heroTitle: string;
+  heroSubtitle: string;
+  heroDescription: string;
+  quickAnswerHeading: string;
+  quickAnswerText: string;
+  costByMaterialHeading: string;
+  costByMaterialIntro: string;
+  costByMaterialColMaterial: string;
+  costByMaterialColCostSqFt: string;
+  costByMaterialColLifespan: string;
+  costByMaterialColBestFor: string;
+  costByMaterialRows: { material: string; costSqFt: string; lifespan: string; bestFor: string }[];
+  costBySizeHeading: string;
+  costBySizeIntro: string;
+  costBySizeColSize: string;
+  costBySizeColDimensions: string;
+  costBySizeColConcrete: string;
+  costBySizeColAsphalt: string;
+  costBySizeColGravel: string;
+  costBySizeRows: { size: string; dimensions: string; concrete: string; asphalt: string; gravel: string }[];
+  factorsHeading: string;
+  factorsIntro: string;
+  factorsItems: string[];
+  diyVsContractorHeading: string;
+  diyVsContractorIntro: string;
+  diyVsContractorText1: string;
+  diyVsContractorText2: string;
+  diyVsContractorText3: string;
+  savingTipsHeading: string;
+  savingTipsIntro: string;
+  savingTipsItems: string[];
+  calculatorCtaHeading: string;
+  calculatorCtaText: string;
+  calculatorLinks: { label: string; href: string; description: string }[];
+  faqHeading: string;
+  faqs: GuideFaq[];
+}
+
+export interface FlooringCostGuideTranslations {
+  title: string;
+  metaDescription: string;
+  heroTitle: string;
+  heroSubtitle: string;
+  heroDescription: string;
+  quickAnswerHeading: string;
+  quickAnswerText: string;
+  flooringTypesHeading: string;
+  flooringTypesIntro: string;
+  flooringTypesColType: string;
+  flooringTypesColCost: string;
+  flooringTypesColBestFor: string;
+  flooringTypesRows: { type: string; cost: string; bestFor: string }[];
+  costByRoomHeading: string;
+  costByRoomIntro: string;
+  costByRoomColRoom: string;
+  costByRoomColTypical: string;
+  costByRoomColNotes: string;
+  costByRoomRows: { room: string; typical: string; notes: string }[];
+  installationCostsHeading: string;
+  installationCostsIntro: string;
+  installationCostsText1: string;
+  installationCostsText2: string;
+  installationCostsText3: string;
+  howToCalculateHeading: string;
+  howToCalculateIntro: string;
+  howToCalculateItems: string[];
+  howToCalculateSummary: string;
+  savingTipsHeading: string;
+  savingTipsIntro: string;
+  savingTipsItems: string[];
+  calculatorCtaHeading: string;
+  calculatorCtaText: string;
+  calculatorLinks: { label: string; href: string; description: string }[];
+  faqHeading: string;
+  faqs: GuideFaq[];
+}
+
+export interface FenceCostGuideTranslations {
+  title: string;
+  metaDescription: string;
+  heroTitle: string;
+  heroSubtitle: string;
+  heroDescription: string;
+  quickAnswerHeading: string;
+  quickAnswerText: string;
+  fenceTypesHeading: string;
+  fenceTypesIntro: string;
+  fenceTypesColType: string;
+  fenceTypesColCost: string;
+  fenceTypesColBestFor: string;
+  fenceTypesRows: { type: string; cost: string; bestFor: string }[];
+  costByProjectHeading: string;
+  costByProjectIntro: string;
+  costByProjectColProject: string;
+  costByProjectColTypical: string;
+  costByProjectColNotes: string;
+  costByProjectRows: { project: string; typical: string; notes: string }[];
+  laborCostsHeading: string;
+  laborCostsIntro: string;
+  laborCostsText1: string;
+  laborCostsText2: string;
+  laborCostsText3: string;
+  diyVsProHeading: string;
+  diyVsProIntro: string;
+  diyVsProItems: string[];
+  diyVsProSummary: string;
+  savingTipsHeading: string;
+  savingTipsIntro: string;
+  savingTipsItems: string[];
+  calculatorCtaHeading: string;
+  calculatorCtaText: string;
+  calculatorLinks: { label: string; href: string; description: string }[];
+  faqHeading: string;
+  faqs: GuideFaq[];
+}
+
 export interface GuidesTranslations {
   index: GuidesIndexTranslations;
   spacingGuide: SpacingGuideTranslations;
@@ -605,6 +724,9 @@ export interface GuidesTranslations {
   lumberPrices: LumberPricesGuideTranslations;
   compositeVsWood: CompositeVsWoodGuideTranslations;
   gravelCost: GravelCostGuideTranslations;
+  drivewayCost: DrivewayCostGuideTranslations;
+  flooringCost: FlooringCostGuideTranslations;
+  fenceCost: FenceCostGuideTranslations;
   breadcrumbGuides: string;
 }
 

@@ -65,6 +65,18 @@ const guides: GuidesTranslations = {
           "Gravel costs $25\u2013$60 CAD per tonne. Complete price guide for driveways, patios, walkways, drainage, and landscaping with delivery costs and how to calculate amounts.",
         href: "/guides/gravel-cost-guide",
       },
+      {
+        title: "How Much Does a Driveway Cost? 2026 Price Guide",
+        description:
+          "A new driveway costs $3,000\u2013$20,000 CAD depending on material and size. Complete price guide covering concrete, asphalt, gravel, and interlocking pavers with cost-by-size breakdowns, factors affecting price, DIY vs contractor, and saving tips.",
+        href: "/guides/driveway-cost-guide",
+      },
+      {
+        title: "Flooring Cost Guide: What Does New Flooring Cost?",
+        description:
+          "Flooring costs $2-$15 per sq ft installed. Complete price guide covering hardwood, laminate, tile, carpet, and LVP with room-by-room estimates, installation costs, and saving tips.",
+        href: "/guides/flooring-cost-guide",
+      },
     ],
   },
 
@@ -1466,6 +1478,290 @@ const guides: GuidesTranslations = {
         answer:
           "Yes. A gravel driveway costs $10\u2013$25 CAD/m\u00b2 for materials ($25\u2013$60 CAD/m\u00b2 installed), vs $80\u2013$150 CAD/m\u00b2 for concrete and $50\u2013$100 CAD/m\u00b2 for asphalt. A 3.5 \u00d7 15 m gravel driveway costs $1,500\u2013$3,500 CAD installed vs $4,500\u2013$8,000 for concrete. Gravel needs more maintenance and periodic top-up every 2\u20133 years.",
       },
+    ],
+  },
+
+  drivewayCost: {
+    title: "How Much Does a Driveway Cost? 2026 Price Guide",
+    metaDescription:
+      "A new driveway costs $3,000\u2013$20,000 CAD in 2026 depending on material and size. Complete price guide: concrete ($80\u2013$150 CAD/m\u00b2), asphalt ($50\u2013$100 CAD/m\u00b2), gravel ($10\u2013$30 CAD/m\u00b2), interlocking pavers ($100\u2013$250 CAD/m\u00b2). Factors affecting price, DIY vs contractor, and cost-saving tips.",
+
+    heroTitle: "How Much Does a Driveway Cost?",
+    heroSubtitle: "2026 Price Guide",
+    heroDescription:
+      "A complete breakdown of driveway costs by material, size, and region across Canada. Covers concrete, asphalt, gravel, and interlocking pavers with installed prices, lifespan comparisons, factors that affect your total cost, and proven ways to save money.",
+
+    quickAnswerHeading: "Quick Answer",
+    quickAnswerText:
+      "A new driveway costs $3,000 to $20,000 CAD in 2026, with most homeowners paying $6,000 to $14,000 CAD for a standard two-car driveway. Gravel is the cheapest at $10\u2013$30 CAD/m\u00b2. Asphalt runs $50\u2013$100 CAD/m\u00b2. Concrete costs $80\u2013$150 CAD/m\u00b2. Interlocking pavers are the most expensive at $100\u2013$250 CAD/m\u00b2. These prices include materials and professional installation.",
+
+    costByMaterialHeading: "Driveway Cost by Material",
+    costByMaterialIntro:
+      "The material you choose is the single biggest factor in driveway cost. Each option offers a different balance of price, durability, appearance, and maintenance. Here are the costs in Canada in 2026:",
+    costByMaterialColMaterial: "Material",
+    costByMaterialColCostSqFt: "Installed Cost / m\u00b2",
+    costByMaterialColLifespan: "Lifespan",
+    costByMaterialColBestFor: "Best For",
+    costByMaterialRows: [
+      { material: "Gravel", costSqFt: "$10 \u2013 $30 CAD", lifespan: "15\u201325 years", bestFor: "Rural properties, long driveways, budget projects. Requires periodic topping up." },
+      { material: "Asphalt", costSqFt: "$50 \u2013 $100 CAD", lifespan: "15\u201320 years", bestFor: "Cold climates (handles freeze-thaw well). Most popular choice in Canada." },
+      { material: "Concrete", costSqFt: "$80 \u2013 $150 CAD", lifespan: "25\u201350 years", bestFor: "Most residential driveways. Durable, low maintenance, can be stamped or coloured." },
+      { material: "Stamped Concrete", costSqFt: "$100 \u2013 $200 CAD", lifespan: "25\u201350 years", bestFor: "Decorative look at lower cost than pavers. Mimics brick, stone, or flagstone." },
+      { material: "Interlocking Pavers", costSqFt: "$100 \u2013 $250 CAD", lifespan: "25\u201350+ years", bestFor: "Premium residential. Extremely durable, many patterns, permeable options available." },
+      { material: "Natural Stone", costSqFt: "$150 \u2013 $350 CAD", lifespan: "50+ years", bestFor: "Luxury properties. Granite, slate, or limestone. Maximum curb appeal." },
+    ],
+
+    costBySizeHeading: "Driveway Cost by Size",
+    costBySizeIntro:
+      "Driveway size dramatically affects your total cost. A single-car driveway uses roughly 15\u201330 m\u00b2, while a two-car driveway requires 30\u201360 m\u00b2. Circular driveways can exceed 100 m\u00b2.",
+    costBySizeColSize: "Driveway Type",
+    costBySizeColDimensions: "Typical Size",
+    costBySizeColConcrete: "Concrete",
+    costBySizeColAsphalt: "Asphalt",
+    costBySizeColGravel: "Gravel",
+    costBySizeRows: [
+      { size: "Single Car", dimensions: "3\u00d76 m (18 m\u00b2)", concrete: "$1,440 \u2013 $2,700 CAD", asphalt: "$900 \u2013 $1,800 CAD", gravel: "$180 \u2013 $540 CAD" },
+      { size: "Standard Two-Car", dimensions: "5\u00d712 m (60 m\u00b2)", concrete: "$4,800 \u2013 $9,000 CAD", asphalt: "$3,000 \u2013 $6,000 CAD", gravel: "$600 \u2013 $1,800 CAD" },
+      { size: "Wide Two-Car", dimensions: "7\u00d712 m (84 m\u00b2)", concrete: "$6,720 \u2013 $12,600 CAD", asphalt: "$4,200 \u2013 $8,400 CAD", gravel: "$840 \u2013 $2,520 CAD" },
+      { size: "Long Rural Driveway", dimensions: "3.5\u00d730 m (105 m\u00b2)", concrete: "$8,400 \u2013 $15,750 CAD", asphalt: "$5,250 \u2013 $10,500 CAD", gravel: "$1,050 \u2013 $3,150 CAD" },
+      { size: "Circular Driveway", dimensions: "~100 \u2013 150 m\u00b2", concrete: "$8,000 \u2013 $22,500 CAD", asphalt: "$5,000 \u2013 $15,000 CAD", gravel: "$1,000 \u2013 $4,500 CAD" },
+    ],
+
+    factorsHeading: "Factors That Affect Driveway Cost",
+    factorsIntro:
+      "Beyond material and size, several factors can push your driveway cost higher or lower. Understanding these helps you budget accurately:",
+    factorsItems: [
+      "Material choice: The biggest cost driver. Gravel at $10\u2013$30 CAD/m\u00b2 is 5\u201310\u00d7 cheaper than natural stone at $150\u2013$350 CAD/m\u00b2.",
+      "Driveway area and shape: Larger driveways cost more in total but often have a lower per-m\u00b2 cost. Curved driveways require 20\u201340% more labour.",
+      "Excavation and grading: If your site needs excavation, grading, or fill, expect to add $5\u2013$30 CAD/m\u00b2. Sloped driveways may require retaining walls.",
+      "Drainage: Proper drainage (French drains, catch basins) costs $500\u2013$4,000 CAD. Important in areas with heavy snowmelt.",
+      "Existing driveway removal: Removing old concrete costs $10\u2013$30 CAD/m\u00b2. Asphalt is slightly cheaper. Gravel can usually be regraded.",
+      "Regional pricing: Prices vary 30\u201350% across Canada. Vancouver and Toronto are 20\u201340% more expensive than the Prairies.",
+      "Permits: Many municipalities require permits for new driveways ($50\u2013$500 CAD). Check local bylaw requirements.",
+      "Sub-base: A proper granular sub-base (150\u2013300 mm compacted) is essential, especially in freeze-thaw climates. Costs $5\u2013$15 CAD/m\u00b2 extra.",
+    ],
+
+    diyVsContractorHeading: "DIY vs Hiring a Contractor",
+    diyVsContractorIntro:
+      "Whether you can install a driveway yourself depends on the material. Here is an honest assessment:",
+    diyVsContractorText1:
+      "Gravel driveways are the most DIY-friendly option. With basic tools (a shovel, rake, and rented plate compactor), a homeowner can install a gravel driveway in a weekend. The process involves clearing the area, laying landscape fabric, spreading gravel in 50 mm lifts, and compacting each layer. DIY gravel saves 40\u201360% compared with hiring a contractor.",
+    diyVsContractorText2:
+      "Concrete and asphalt driveways are not practical DIY projects. Concrete requires specialized equipment (ready-mix truck, vibrator, screed, float), precise timing, and experience with grading and forming. Asphalt is even more specialized, needing hot-mix equipment and heavy rollers not available for rental.",
+    diyVsContractorText3:
+      "Interlocking pavers fall in between. An experienced DIYer can install pavers over a long weekend, but the base preparation (excavation, granular base, bedding sand) is labour-intensive. For most homeowners, getting the base professionally prepared and then laying the pavers yourself offers the best balance of savings (25\u201335%) and quality. Always get at least three quotes and check references.",
+
+    savingTipsHeading: "How to Save Money on a New Driveway",
+    savingTipsIntro:
+      "A driveway is a significant investment, but there are proven strategies to reduce the cost without sacrificing quality:",
+    savingTipsItems: [
+      "Get multiple quotes: Prices can vary 30\u201350% between contractors. Get at least three written quotes specifying materials, depths, and warranty.",
+      "Schedule in the off-season: Late fall is the slow season for paving in most of Canada. Many contractors offer 10\u201320% discounts.",
+      "Choose a simpler design: Straight, rectangular driveways are cheapest. Curves and decorative borders add 15\u201325%.",
+      "Keep the existing sub-base: If your old driveway has a solid granular base, a contractor can overlay new material \u2014 saving $5\u2013$15 CAD/m\u00b2.",
+      "Consider asphalt over concrete: Asphalt costs roughly half and handles Canadian freeze-thaw cycles well. With regular sealing it lasts 15\u201320 years.",
+      "Use gravel for long driveways: If your driveway exceeds 30 metres, gravel for the main stretch and paving just the apron saves thousands.",
+      "Combine with a neighbour: Same contractor for two projects at once can earn a 5\u201315% bulk discount.",
+    ],
+
+    calculatorCtaHeading: "Estimate Your Driveway Cost",
+    calculatorCtaText: "Use our free calculators to estimate the exact amount of material and cost for your driveway project.",
+    calculatorLinks: [
+      { label: "Concrete Slab Calculator", href: "/calculators/foundation/concrete-slab-calculator", description: "Calculate cubic metres, bags, and cost for a concrete driveway." },
+      { label: "Gravel Calculator", href: "/calculators/foundation/gravel-calculator", description: "Estimate tonnes and cubic metres for a gravel driveway with cost range." },
+      { label: "Driveway Gravel Calculator", href: "/calculators/foundation/driveway-gravel-calculator", description: "Purpose-built calculator for driveway gravel by type and size." },
+    ],
+
+    faqHeading: "Frequently Asked Questions",
+    faqs: [
+      {
+        question: "How much does a new driveway cost in Canada in 2026?",
+        answer:
+          "A new driveway costs $3,000 to $20,000 CAD in 2026, averaging $6,000 to $14,000 CAD for a standard two-car concrete driveway (60 m\u00b2). Gravel is cheapest at $600\u2013$1,800 CAD installed. Asphalt runs $3,000\u2013$6,000 CAD. Concrete costs $4,800\u2013$9,000 CAD. Interlocking pavers cost $6,000\u2013$15,000+ CAD.",
+      },
+      {
+        question: "What is the cheapest type of driveway in Canada?",
+        answer:
+          "Gravel is the cheapest at $10\u2013$30 CAD/m\u00b2 for materials, or $25\u2013$60 CAD/m\u00b2 installed. A standard two-car gravel driveway costs $600\u2013$1,800 CAD installed, vs $4,800\u2013$9,000 CAD for concrete. Gravel is also the most DIY-friendly, cutting costs by 40\u201360%. Trade-off: needs topping up every 2\u20133 years.",
+      },
+      {
+        question: "How much does a concrete driveway cost per square metre in Canada?",
+        answer:
+          "A concrete driveway costs $80 to $150 CAD/m\u00b2 installed in 2026. Basic broom-finish concrete runs $80\u2013$110 CAD/m\u00b2. Stamped or coloured concrete costs $100\u2013$200 CAD/m\u00b2. A standard 60 m\u00b2 two-car driveway in plain concrete costs $4,800\u2013$9,000 CAD installed.",
+      },
+      {
+        question: "Is asphalt or concrete cheaper for a driveway in Canada?",
+        answer:
+          "Asphalt is cheaper upfront at $50\u2013$100 CAD/m\u00b2 vs $80\u2013$150 CAD/m\u00b2 for concrete. Asphalt is very popular in Canada because it handles freeze-thaw well. However, it needs sealing every 2\u20133 years and lasts 15\u201320 years vs 25\u201350 for concrete. Over 30 years, total costs are often similar.",
+      },
+      {
+        question: "How do I calculate how much my driveway will cost?",
+        answer:
+          "To estimate: (1) Measure length and width in metres for the area. (2) Multiply by the cost per m\u00b2: gravel $10\u2013$30, asphalt $50\u2013$100, concrete $80\u2013$150, pavers $100\u2013$250 CAD. (3) Add 10\u201320% for groundwork and contingency. Use our free calculators for precise estimates.",
+      },
+      {
+        question: "How long does a driveway last by material type?",
+        answer:
+          "Gravel driveways last 15\u201325 years but need topping up every 2\u20133 years. Asphalt lasts 15\u201320 years with sealing every 2\u20133 years. Concrete lasts 25\u201350 years with minimal maintenance. Interlocking pavers last 25\u201350+ years with the advantage of individual unit replacement. Natural stone can last 50+ years.",
+      },
+    ],
+  },
+  flooringCost: {
+    title: "Flooring Cost Guide: What Does New Flooring Cost?",
+    metaDescription: "Flooring costs $2-$15 per sq ft installed. Complete price guide covering hardwood, laminate, tile, carpet, and LVP with room-by-room estimates, installation costs, and saving tips.",
+    heroTitle: "Flooring Cost Guide",
+    heroSubtitle: "2026 Prices",
+    heroDescription: "Everything you need to know about flooring costs — from materials and installation to room-by-room budgets and money-saving strategies.",
+    quickAnswerHeading: "Quick Answer",
+    quickAnswerText: "New flooring costs $2 to $15 per square foot installed, depending on material type. Laminate is cheapest at $3–$8/sq ft installed, followed by carpet ($3–$11/sq ft), luxury vinyl plank ($4–$10/sq ft), tile ($7–$18/sq ft), and hardwood ($8–$15/sq ft). A typical 500 sq ft project runs $1,500–$7,500 total including materials and labour.",
+    flooringTypesHeading: "Flooring Costs by Material Type",
+    flooringTypesIntro: "Material costs vary widely. Here is what each type costs per square foot for materials only, plus typical installed prices.",
+    flooringTypesColType: "Flooring Type",
+    flooringTypesColCost: "Installed Cost (per sq ft)",
+    flooringTypesColBestFor: "Best For",
+    flooringTypesRows: [
+      { type: "Laminate", cost: "$3 – $8", bestFor: "Budget-friendly, DIY projects, rentals" },
+      { type: "Carpet", cost: "$3 – $11", bestFor: "Bedrooms, basements, comfort underfoot" },
+      { type: "Luxury Vinyl Plank (LVP)", cost: "$4 – $10", bestFor: "Kitchens, bathrooms, high-traffic areas" },
+      { type: "Ceramic / Porcelain Tile", cost: "$7 – $18", bestFor: "Bathrooms, kitchens, entryways" },
+      { type: "Engineered Hardwood", cost: "$6 – $14", bestFor: "Living rooms, dining rooms, wide plank look" },
+      { type: "Solid Hardwood", cost: "$8 – $15", bestFor: "Main living areas, long-term value" },
+      { type: "Natural Stone", cost: "$15 – $30", bestFor: "High-end kitchens, bathrooms, foyers" },
+    ],
+    costByRoomHeading: "Flooring Cost by Room Size",
+    costByRoomIntro: "Here are typical total project costs (materials + installation) by room type using mid-range materials.",
+    costByRoomColRoom: "Room",
+    costByRoomColTypical: "Typical Total Cost",
+    costByRoomColNotes: "Notes",
+    costByRoomRows: [
+      { room: "Bathroom (50 sq ft)", typical: "$500 – $1,500", notes: "Tile or LVP most common; waterproofing adds cost" },
+      { room: "Bedroom (150 sq ft)", typical: "$750 – $2,000", notes: "Carpet or laminate; pad included for carpet" },
+      { room: "Kitchen (200 sq ft)", typical: "$1,200 – $4,000", notes: "Tile or LVP; subfloor prep often needed" },
+      { room: "Living Room (300 sq ft)", typical: "$1,500 – $5,000", notes: "Hardwood or LVP; largest visual impact" },
+      { room: "Whole House (1,500 sq ft)", typical: "$6,000 – $22,000", notes: "Mix of materials; volume discounts possible" },
+    ],
+    installationCostsHeading: "Installation Costs: DIY vs Professional",
+    installationCostsIntro: "Labour is often 40–60% of total flooring cost. Here is how installation costs break down.",
+    installationCostsText1: "Professional installation typically costs $2–$6 per square foot for most flooring types. Tile installation is the most expensive at $5–$10/sq ft due to the skill required for proper thinset application, levelling, and grouting. Carpet installation is usually the cheapest at $1–$3/sq ft.",
+    installationCostsText2: "DIY installation can save 50–70% on labour costs. Click-lock laminate and LVP are the easiest to install yourself — most homeowners can complete a room in a weekend. Tile and carpet are significantly harder and mistakes can be costly. Hardwood nail-down installation requires specialized tools.",
+    installationCostsText3: "Additional costs beyond basic installation include: subfloor repair ($2–$5/sq ft), old flooring removal ($1–$3/sq ft), furniture moving ($50–$200), and transition strips ($5–$15 each). Always get at least 3 quotes and ask what is included.",
+    howToCalculateHeading: "How to Calculate Flooring Needed",
+    howToCalculateIntro: "Follow these steps to estimate your flooring materials accurately.",
+    howToCalculateItems: [
+      "Measure each room length and width in feet. Multiply to get square footage.",
+      "For irregularly shaped rooms, break into rectangles and add the areas together.",
+      "Add 10% waste factor for standard straight-lay installations.",
+      "Add 15–20% waste for diagonal, herringbone, or complex patterns.",
+      "Divide total square footage by the coverage per box to get box count.",
+      "Always round up — you cannot buy partial boxes.",
+    ],
+    howToCalculateSummary: "Use our free flooring calculator to get an instant estimate for any room size with automatic waste factor and box count.",
+    savingTipsHeading: "How to Save Money on Flooring",
+    savingTipsIntro: "Smart shopping and planning can cut flooring costs by 20–40%.",
+    savingTipsItems: [
+      "Shop during holiday sales (Black Friday, Boxing Day, Victoria Day) for 20–30% off materials.",
+      "Buy from flooring warehouse outlets or online retailers instead of big-box stores.",
+      "Choose click-lock flooring (laminate or LVP) and install it yourself to save $2–$6/sq ft on labour.",
+      "Use different materials in different rooms — carpet in bedrooms, LVP in kitchens.",
+      "Order all materials at once for volume discounts (10+ boxes often qualify).",
+      "Keep leftover flooring for future repairs instead of returning it.",
+      "Compare total installed price, not just material price — some cheap flooring costs more to install.",
+    ],
+    calculatorCtaHeading: "Calculate Your Flooring Materials",
+    calculatorCtaText: "Use our free flooring calculators to get instant material estimates for any room.",
+    calculatorLinks: [
+      { label: "Flooring Calculator", href: "/calculators/flooring/flooring-calculator/", description: "General flooring sq ft and box calculator" },
+      { label: "Carpet Calculator", href: "/calculators/flooring/carpet-calculator/", description: "Square yards, linear feet, and pad estimate" },
+      { label: "Tile Calculator", href: "/calculators/flooring/tile-calculator/", description: "Tile count, grout, and thinset estimate" },
+      { label: "Laminate Calculator", href: "/calculators/flooring/laminate-calculator/", description: "Plank count, boxes, and underlayment" },
+    ],
+    faqHeading: "Frequently Asked Questions",
+    faqs: [
+      { question: "What is the cheapest flooring to install?", answer: "Laminate flooring is the cheapest to install at $3–$8 per square foot total (materials + labour). If you install it yourself, the cost drops to $1–$5/sq ft for materials only. Vinyl plank (LVP) is a close second at $4–$10/sq ft installed." },
+      { question: "How much does it cost to floor a 1,500 sq ft house?", answer: "Flooring a 1,500 sq ft house typically costs $6,000–$22,000 depending on materials chosen. Using a mix of laminate in bedrooms ($3–$5/sq ft), LVP in kitchens and baths ($5–$8/sq ft), and carpet in a few rooms ($4–$7/sq ft) puts most projects in the $8,000–$15,000 range." },
+      { question: "What flooring adds the most value to a home?", answer: "Hardwood flooring adds the most resale value — homes with hardwood floors sell for 2.5% more on average. Engineered hardwood provides a similar look at lower cost. LVP and tile in kitchens/baths are also strong value adds. Carpet generally does not increase home value." },
+      { question: "How long does each type of flooring last?", answer: "Solid hardwood lasts 50–100 years with refinishing. Natural stone lasts 50+ years. Tile lasts 30–50 years. Engineered hardwood lasts 20–40 years. LVP lasts 15–25 years. Laminate lasts 15–25 years. Carpet lasts 5–15 years." },
+      { question: "Should I replace flooring before selling my house?", answer: "It depends on condition. Worn carpet should be replaced — it is one of the biggest turnoffs for buyers. Damaged hardwood can be refinished for $3–$5/sq ft instead of replaced. New LVP in kitchens and baths is a high-ROI improvement." },
+      { question: "What is the best flooring for kitchens?", answer: "Luxury vinyl plank (LVP) and porcelain tile are the best kitchen flooring options. Both are waterproof, durable, and easy to clean. LVP is softer underfoot and easier to install ($4–$10/sq ft). Tile is harder wearing but colder and more expensive to install ($7–$18/sq ft)." },
+    ],
+  },
+
+  fenceCost: {
+    title: "How Much Does a Fence Cost? 2026 Price Guide",
+    metaDescription: "Fence costs $20\u2013$60 per linear foot installed in 2026. Complete price guide covering wood, vinyl, chain link, and composite fencing with material costs, labour rates, DIY vs professional installation, and saving tips for Canadian homeowners.",
+    heroTitle: "How Much Does a Fence Cost?",
+    heroSubtitle: "2026 Price Guide",
+    heroDescription: "A complete breakdown of fence costs by material, style, and project size for Canadian homeowners. Covers wood privacy, vinyl, chain link, and composite fencing with material prices, labour rates, and tips to save money.",
+    quickAnswerHeading: "Quick Answer",
+    quickAnswerText: "A fence costs $20 to $60 per linear foot installed in 2026 in Canada, depending on the material and style. A 150-foot wood privacy fence costs $3,000 to $6,000 for materials (DIY) or $6,000 to $12,000 professionally installed. Vinyl fencing runs $25 to $50 per foot installed.",
+    fenceTypesHeading: "Fence Cost by Material",
+    fenceTypesIntro: "The material you choose is the single biggest factor in fence cost. Here are 2026 prices for the most popular fence materials in Canada:",
+    fenceTypesColType: "Fence Material",
+    fenceTypesColCost: "Cost Per Linear Foot (Installed)",
+    fenceTypesColBestFor: "Best For",
+    fenceTypesRows: [
+      { type: "Pressure-Treated Wood", cost: "$20 \u2013 $40", bestFor: "Budget privacy fences, most popular choice. Lasts 15\u201320 years." },
+      { type: "Cedar Wood", cost: "$30 \u2013 $55", bestFor: "Natural rot resistance, premium appearance. Lasts 15\u201325 years." },
+      { type: "Vinyl / PVC", cost: "$25 \u2013 $50", bestFor: "Zero maintenance, never needs painting. Lasts 20\u201330 years." },
+      { type: "Chain Link", cost: "$15 \u2013 $30", bestFor: "Security, pet containment, lowest cost. Lasts 15\u201320 years." },
+      { type: "Composite", cost: "$35 \u2013 $60", bestFor: "Wood look without maintenance. Lasts 25\u201350 years." },
+      { type: "Aluminum / Wrought Iron", cost: "$30 \u2013 $70", bestFor: "Decorative, pool enclosures. Lasts 20\u201330 years." },
+    ],
+    costByProjectHeading: "Fence Cost by Project Size",
+    costByProjectIntro: "Total fence cost depends on the total linear footage. Here are typical 2026 costs for common fence projects using pressure-treated wood:",
+    costByProjectColProject: "Project",
+    costByProjectColTypical: "Typical Cost (Installed)",
+    costByProjectColNotes: "Notes",
+    costByProjectRows: [
+      { project: "Small Backyard (100 ft)", typical: "$2,000 \u2013 $4,000", notes: "Materials only: $1,000\u2013$2,000. Common for townhomes." },
+      { project: "Average Backyard (150 ft)", typical: "$3,000 \u2013 $6,000", notes: "Materials only: $1,500\u2013$3,000. Most common size." },
+      { project: "Large Backyard (200 ft)", typical: "$4,000 \u2013 $8,000", notes: "Materials only: $2,000\u2013$4,000. May qualify for bulk discounts." },
+      { project: "Full Property (300 ft)", typical: "$6,000 \u2013 $12,000", notes: "Materials only: $3,000\u2013$6,000. Consider phased installation." },
+      { project: "Privacy Fence with Gate", typical: "$4,000 \u2013 $9,000", notes: "Add $250\u2013$700 per gate for hardware, hinges, and latch." },
+      { project: "Pool Enclosure (120 ft)", typical: "$4,800 \u2013 $9,600", notes: "Must meet provincial pool fence codes." },
+    ],
+    laborCostsHeading: "Labour & Installation Costs",
+    laborCostsIntro: "Labour is typically 40 to 60% of the total fence cost in Canada.",
+    laborCostsText1: "Professional fence installation costs $8 to $20 per linear foot for labour alone. A standard 150-foot wood privacy fence takes a 2-person crew 2 to 3 days to complete.",
+    laborCostsText2: "Rocky or clay soil, sloped terrain, and old fence removal all add to labour costs. Expect $5 to $10 per linear foot extra for difficult conditions. Frost depth in Canada ranges from 4 to 6 feet, so post holes are deeper than in the US.",
+    laborCostsText3: "Get at least 3 written quotes. The best time to schedule is late fall or early spring when contractors are less busy. Always verify licensing and insurance.",
+    diyVsProHeading: "DIY vs Professional Installation",
+    diyVsProIntro: "Building a fence yourself can save 40 to 60% of the total cost:",
+    diyVsProItems: [
+      "DIY material cost for a 150-foot wood privacy fence: $1,500 to $3,000 (posts, rails, pickets, concrete, hardware).",
+      "Professional installation for the same fence: $3,000 to $6,000 total.",
+      "Tools needed: post hole digger or auger rental ($75\u2013$150/day), level, string line, saw, drill.",
+      "Post holes in Canada must extend below the frost line \u2014 typically 4 to 5 feet in most provinces. This makes digging significantly harder than in warmer climates.",
+      "Common DIY pitfalls: posts not plumb, inconsistent spacing, insufficient post depth for Canadian frost.",
+      "Best DIY approach: Rent a two-person power auger. Set all posts on day one, let concrete cure, then attach rails and boards.",
+    ],
+    diyVsProSummary: "DIY makes sense if you are handy and want to save $1,500 to $3,000. Hire a pro for rocky soil, steep slopes, or if frost depth requirements make post hole digging difficult.",
+    savingTipsHeading: "How to Save Money on Fencing",
+    savingTipsIntro: "These strategies can help reduce fence costs:",
+    savingTipsItems: [
+      "Choose pressure-treated SPF over cedar \u2014 it costs 30 to 50% less and lasts nearly as long with maintenance.",
+      "Build during the off-season \u2014 late fall or early spring bookings save 10 to 20% on labour.",
+      "Share the cost with your neighbour \u2014 boundary fences are commonly split 50/50 in Canada.",
+      "Use pre-made panels instead of building board-by-board \u2014 panels install 3 to 5 times faster.",
+      "Buy materials from a local lumber yard rather than a big box store for better bulk pricing.",
+      "Pull the building permit yourself to save the contractor markup.",
+    ],
+    calculatorCtaHeading: "Calculate Your Fence Materials",
+    calculatorCtaText: "Use our free fence calculators to estimate the exact materials and cost for your project.",
+    calculatorLinks: [
+      { label: "Fence Calculator", href: "/calculators/outdoor/fence-calculator", description: "Calculate posts, rails, and pickets for any fence length and height." },
+      { label: "Fence Post Calculator", href: "/calculators/outdoor/fence-post-calculator", description: "Get post count and concrete bags needed for your fence." },
+      { label: "Fence Panel Calculator", href: "/calculators/outdoor/fence-panel-calculator", description: "Estimate pre-made panels and posts for your fence project." },
+      { label: "Picket Fence Calculator", href: "/calculators/outdoor/picket-fence-calculator", description: "Calculate pickets with custom width and gap spacing." },
+    ],
+    faqHeading: "Frequently Asked Questions",
+    faqs: [
+      { question: "How much does a 200-foot fence cost in Canada?", answer: "A 200-foot wood privacy fence costs $4,000 to $8,000 professionally installed, or $2,000 to $4,000 for materials only (DIY)." },
+      { question: "What is the cheapest fence to build?", answer: "Chain link is the cheapest at $15 to $30 per linear foot installed. For privacy, pressure-treated wood is the most affordable at $20 to $40 per foot installed." },
+      { question: "Is it cheaper to build a fence yourself?", answer: "Yes, DIY saves 40 to 60%. A 150-foot fence costs $1,500 to $3,000 in materials versus $3,000 to $6,000 professionally installed." },
+      { question: "How long does a wood fence last in Canada?", answer: "Pressure-treated fences last 15 to 20 years with annual staining. Cedar lasts 15 to 25 years. Canadian winters are tough on fences \u2014 proper post depth and drainage are critical." },
+      { question: "Do I need a permit for a fence in Canada?", answer: "Most Canadian municipalities require a fence permit for fences over 2 metres. Costs range from $50 to $250. Check your local bylaws." },
+      { question: "How deep should fence posts be in Canada?", answer: "Fence posts must extend below the frost line, which is 4 to 6 feet in most Canadian provinces. In Northern Ontario, Manitoba, Saskatchewan, and Alberta, the frost line can be 5 to 7 feet deep." },
     ],
   },
 };

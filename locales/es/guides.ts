@@ -65,6 +65,18 @@ const guides: GuidesTranslations = {
           "La grava cuesta $300–$900 MXN por tonelada. Guía completa de precios para cocheras, patios, andadores, drenaje y jardinería con costos de envío y cómo calcular la cantidad.",
         href: "/guides/gravel-cost-guide",
       },
+      {
+        title: "¿Cuánto Cuesta una Cochera/Entrada? Guía de Precios 2026",
+        description:
+          "Una cochera cuesta $50,000–$300,000 MXN según material y tamaño. Guía completa de precios para concreto, asfalto, grava y adoquín con desglose por tamaño, factores de costo y consejos de ahorro.",
+        href: "/guides/driveway-cost-guide",
+      },
+      {
+        title: "Gu\u00eda de Costos de Pisos: \u00bfCu\u00e1nto Cuesta un Piso Nuevo?",
+        description:
+          "Los pisos cuestan $2-$15 por pie\u00b2 instalados. Gu\u00eda completa para madera, laminado, baldosas, alfombra y vinilo con estimaciones por habitaci\u00f3n y consejos de ahorro.",
+        href: "/guides/flooring-cost-guide",
+      },
     ],
   },
 
@@ -1467,6 +1479,289 @@ const guides: GuidesTranslations = {
         answer:
           "Sí, significativamente. Una cochera de grava cuesta $80–$250 MXN/m² en material ($250–$700 MXN/m² instalada), comparado con $800–$1,500 MXN/m² para concreto y $600–$1,200 MXN/m² para asfalto. Sin embargo, la grava requiere más mantenimiento continuo y necesita reposición periódica cada 2–3 años.",
       },
+    ],
+  },
+
+  drivewayCost: {
+    title: "¿Cuánto Cuesta una Cochera/Entrada? Guía de Precios 2026",
+    metaDescription:
+      "Una cochera nueva cuesta $50,000–$300,000 MXN en 2026 según material y tamaño. Guía completa: concreto ($600–$1,500 MXN/m²), asfalto ($300–$800 MXN/m²), grava ($80–$250 MXN/m²), adoquín ($1,000–$3,000 MXN/m²). Factores de precio, hazlo tú mismo vs contratista y consejos de ahorro.",
+
+    heroTitle: "¿Cuánto Cuesta una Cochera?",
+    heroSubtitle: "Guía de Precios 2026",
+    heroDescription:
+      "Desglose completo de costos de cochera por material, tamaño y región en México. Cubre concreto, asfalto, grava y adoquín con precios instalados, comparaciones de durabilidad, factores que afectan el costo total y formas comprobadas de ahorrar dinero.",
+
+    quickAnswerHeading: "Respuesta Rápida",
+    quickAnswerText:
+      "Una cochera nueva cuesta $50,000 a $300,000 MXN en 2026, con la mayoría de propietarios pagando $80,000 a $180,000 MXN por una cochera estándar para dos autos. La grava es la más barata a $80–$250 MXN/m². El asfalto cuesta $300–$800 MXN/m². El concreto cuesta $600–$1,500 MXN/m². El adoquín es el más caro a $1,000–$3,000 MXN/m². Estos precios incluyen materiales e instalación profesional.",
+
+    costByMaterialHeading: "Costo de Cochera por Material",
+    costByMaterialIntro:
+      "El material que elijas es el factor más importante en el costo de la cochera. Cada opción ofrece un balance diferente de precio, durabilidad, apariencia y mantenimiento. Estos son los costos en México en 2026:",
+    costByMaterialColMaterial: "Material",
+    costByMaterialColCostSqFt: "Costo Instalado / m²",
+    costByMaterialColLifespan: "Vida Útil",
+    costByMaterialColBestFor: "Ideal Para",
+    costByMaterialRows: [
+      { material: "Grava", costSqFt: "$80 – $250 MXN", lifespan: "15–25 años", bestFor: "Propiedades rurales, cocheras largas, presupuestos limitados. Requiere reposición periódica." },
+      { material: "Asfalto", costSqFt: "$300 – $800 MXN", lifespan: "15–20 años", bestFor: "Climas templados, presupuesto medio. Superficie flexible que resiste bien los cambios de temperatura." },
+      { material: "Concreto", costSqFt: "$600 – $1,500 MXN", lifespan: "25–50 años", bestFor: "La mayoría de cocheras residenciales. Durable, bajo mantenimiento, puede ser estampado o pigmentado." },
+      { material: "Concreto Estampado", costSqFt: "$1,000 – $2,000 MXN", lifespan: "25–50 años", bestFor: "Apariencia decorativa a menor costo que adoquín. Imita ladrillo, piedra o pizarra." },
+      { material: "Adoquín de Concreto", costSqFt: "$1,000 – $2,500 MXN", lifespan: "25–50+ años", bestFor: "Residencial de gama alta. Extremadamente durable, muchos patrones, opciones permeables." },
+      { material: "Piedra Natural", costSqFt: "$1,500 – $3,000 MXN", lifespan: "50+ años", bestFor: "Residencias de lujo, máximo atractivo visual. Cantera, recinto, travertino o laja." },
+    ],
+
+    costBySizeHeading: "Costo de Cochera por Tamaño",
+    costBySizeIntro:
+      "El tamaño de la cochera afecta drásticamente el costo total. Una cochera para un auto usa aproximadamente 18 a 36 m², mientras que una para dos autos requiere 36 a 70 m². Las cocheras circulares pueden superar los 90 m².",
+    costBySizeColSize: "Tipo de Cochera",
+    costBySizeColDimensions: "Tamaño Típico",
+    costBySizeColConcrete: "Concreto",
+    costBySizeColAsphalt: "Asfalto",
+    costBySizeColGravel: "Grava",
+    costBySizeRows: [
+      { size: "Un Auto", dimensions: "3×6 m (18 m²)", concrete: "$10,800 – $27,000 MXN", asphalt: "$5,400 – $14,400 MXN", gravel: "$1,440 – $4,500 MXN" },
+      { size: "Dos Autos Estándar", dimensions: "5×12 m (60 m²)", concrete: "$36,000 – $90,000 MXN", asphalt: "$18,000 – $48,000 MXN", gravel: "$4,800 – $15,000 MXN" },
+      { size: "Dos Autos Amplia", dimensions: "7×12 m (84 m²)", concrete: "$50,400 – $126,000 MXN", asphalt: "$25,200 – $67,200 MXN", gravel: "$6,720 – $21,000 MXN" },
+      { size: "Cochera Larga Rural", dimensions: "3.5×30 m (105 m²)", concrete: "$63,000 – $157,500 MXN", asphalt: "$31,500 – $84,000 MXN", gravel: "$8,400 – $26,250 MXN" },
+      { size: "Cochera Circular", dimensions: "~110 – 170 m²", concrete: "$66,000 – $255,000 MXN", asphalt: "$33,000 – $136,000 MXN", gravel: "$8,800 – $42,500 MXN" },
+    ],
+
+    factorsHeading: "Factores que Afectan el Costo de la Cochera",
+    factorsIntro:
+      "Además del material y tamaño, varios factores pueden aumentar o reducir el costo. Entenderlos te ayuda a presupuestar con precisión:",
+    factorsItems: [
+      "Elección de material: El factor más importante. La grava a $80–$250 MXN/m² es 5-10 veces más barata que la piedra natural a $1,500–$3,000 MXN/m².",
+      "Área y forma de la cochera: Cocheras más grandes cuestan más en total pero a menudo tienen menor costo por m². Cocheras curvas o circulares requieren más mano de obra y desperdicio, agregando 20-40%.",
+      "Preparación del terreno y nivelación: Si el terreno necesita excavación, nivelación o relleno, espera agregar $100–$500 MXN/m². Cocheras en pendiente requieren muros de contención.",
+      "Requisitos de drenaje: El drenaje adecuado previene daños por agua. Agregar drenaje francés o canaletas cuesta $8,000–$50,000 MXN según la complejidad.",
+      "Demolición de cochera existente: Retirar concreto viejo cuesta $150–$400 MXN/m². El asfalto es ligeramente más barato. La grava generalmente se puede renivelar.",
+      "Costos regionales de mano de obra: Los precios varían 30-50% por región. Ciudades grandes como CDMX, Monterrey y Guadalajara son 20-40% más caras que ciudades medianas.",
+      "Permisos: Muchos municipios requieren permisos para cocheras nuevas ($1,000–$10,000 MXN).",
+      "Preparación de base: Una sub-base de grava compactada (10-20 cm) es esencial para concreto y asfalto. Agrega $100–$300 MXN/m².",
+    ],
+
+    diyVsContractorHeading: "Hazlo Tú Mismo vs Contratar Profesional",
+    diyVsContractorIntro:
+      "Si puedes instalar una cochera tú mismo depende del material elegido. Aquí hay una evaluación honesta:",
+    diyVsContractorText1:
+      "Las cocheras de grava son la opción más amigable para el autoconstructor. Con herramientas básicas (pala, rastrillo y compactadora), un propietario puede instalar una cochera de grava en un fin de semana. El proceso incluye limpiar el área, colocar malla antihierbas, esparcir la grava en capas de 5 cm y compactar cada capa. La instalación DIY ahorra 40-60% comparado con contratar un profesional.",
+    diyVsContractorText2:
+      "Las cocheras de concreto y asfalto no son proyectos prácticos para la mayoría. El concreto requiere equipo especializado (camión revolvedora, vibradora, regla, llana), sincronización precisa durante el colado y experiencia con nivelación y cimbra. Un concreto mal colado se agrietará prematuramente y puede costar más reparar que haberlo instalado profesionalmente.",
+    diyVsContractorText3:
+      "Las cocheras de adoquín están en un punto intermedio. Un autoconstructor experimentado puede instalar adoquines en un fin de semana largo, pero la preparación de la base es muy laboriosa. Para la mayoría, hacer la base profesionalmente y colocar los adoquines uno mismo ofrece el mejor balance entre ahorro (25-35%) y calidad. Siempre obtén al menos tres cotizaciones y verifica referencias.",
+
+    savingTipsHeading: "Cómo Ahorrar Dinero en una Cochera Nueva",
+    savingTipsIntro:
+      "Una cochera es una inversión significativa, pero hay estrategias comprobadas para reducir el costo sin sacrificar calidad:",
+    savingTipsItems: [
+      "Obtén múltiples cotizaciones: Los precios pueden variar 30-50% entre contratistas. Obtén al menos tres cotizaciones escritas que especifiquen materiales, espesor, preparación de base y garantía.",
+      "Programa en temporada baja: Otoño e invierno son meses lentos para contratistas. Muchos ofrecen 10-20% de descuento para mantener a sus cuadrillas ocupadas.",
+      "Elige un diseño sencillo: Cocheras rectas y rectangulares son las más baratas de instalar. Curvas y detalles decorativos agregan 15-25% al costo.",
+      "Conserva la base existente: Si tu cochera vieja tiene una base de grava sólida, un contratista puede colocar material nuevo encima en lugar de excavar desde cero.",
+      "Considera asfalto en lugar de concreto: El asfalto cuesta aproximadamente la mitad del concreto y funciona bien en climas templados.",
+      "Usa grava para cocheras largas: Si tu cochera tiene más de 30 metros, usa grava para la parte principal y pavimenta solo la entrada.",
+      "Combina con un vecino: Contratar al mismo profesional para dos proyectos puede generar un descuento de 5-15%.",
+    ],
+
+    calculatorCtaHeading: "Estima el Costo de Tu Cochera",
+    calculatorCtaText: "Usa nuestras calculadoras gratuitas para estimar la cantidad exacta de material y costo para tu proyecto de cochera.",
+    calculatorLinks: [
+      { label: "Calculadora de Losa de Concreto", href: "/calculators/foundation/concrete-slab-calculator", description: "Calcula metros cúbicos, bultos y costo para una cochera de concreto." },
+      { label: "Calculadora de Grava", href: "/calculators/foundation/gravel-calculator", description: "Estima toneladas y metros cúbicos para una cochera de grava con rango de costo." },
+      { label: "Calculadora de Grava para Cochera", href: "/calculators/foundation/driveway-gravel-calculator", description: "Calculadora específica para grava de cochera por tipo y tamaño." },
+    ],
+
+    faqHeading: "Preguntas Frecuentes",
+    faqs: [
+      {
+        question: "¿Cuánto cuesta construir una cochera en 2026?",
+        answer:
+          "Una cochera nueva cuesta $50,000 a $300,000 MXN en 2026, con un promedio de $80,000 a $180,000 MXN para una cochera estándar de dos autos en concreto (60 m²). La grava es la más barata a $4,800–$15,000 MXN instalada. El asfalto cuesta $18,000–$48,000 MXN. El concreto cuesta $36,000–$90,000 MXN. El adoquín es el más caro a $60,000–$150,000+ MXN.",
+      },
+      {
+        question: "¿Cuál es el tipo de cochera más barato?",
+        answer:
+          "La grava es el material más barato para cochera a $80–$250 MXN/m² en material, o $250–$700 MXN/m² instalada. Una cochera estándar de dos autos cuesta $4,800–$15,000 MXN instalada, comparado con $36,000–$90,000 MXN para concreto. La grava también es la opción más amigable para el autoconstructor, lo que puede reducir costos 40-60%.",
+      },
+      {
+        question: "¿Cuánto cuesta una cochera de concreto por metro cuadrado?",
+        answer:
+          "Una cochera de concreto cuesta $600 a $1,500 MXN/m² instalada en 2026. El concreto básico con acabado escobillado cuesta $600–$1,000 MXN/m². El concreto estampado o pigmentado cuesta $1,000–$2,000 MXN/m². Una cochera estándar de 60 m² para dos autos en concreto simple cuesta $36,000–$90,000 MXN instalada. Las cocheras de concreto duran 25–50 años con mantenimiento mínimo.",
+      },
+      {
+        question: "¿Es más barato el asfalto o el concreto para cochera?",
+        answer:
+          "El asfalto es más barato inicialmente a $300–$800 MXN/m² instalado vs $600–$1,500 MXN/m² para concreto. Sin embargo, el asfalto requiere sellado cada 2-3 años y tiene una vida útil más corta de 15-20 años vs 25-50 años para concreto. A largo plazo, el costo total de propiedad es a menudo similar.",
+      },
+      {
+        question: "¿Cómo calculo cuánto costará mi cochera?",
+        answer:
+          "Para estimar el costo: (1) Mide el largo y ancho en metros para obtener los metros cuadrados. (2) Multiplica por el costo por m² de tu material: grava $80–$250, asfalto $300–$800, concreto $600–$1,500, adoquín $1,000–$3,000 MXN. (3) Agrega 10-20% para preparación del terreno y contingencia. Usa nuestras calculadoras gratuitas para estimaciones precisas.",
+      },
+      {
+        question: "¿Cuánto dura una cochera según el material?",
+        answer:
+          "La vida útil varía significativamente. La grava dura 15-25 años pero necesita reposición cada 2-3 años. El asfalto dura 15-20 años con sellado cada 2-3 años. El concreto dura 25-50 años con mantenimiento mínimo. El adoquín dura 25-50+ años con la ventaja de poder reemplazar piezas individuales. La piedra natural puede durar 50+ años.",
+      },
+    ],
+  },
+  flooringCost: {
+    title: "Gu\u00eda de Costos de Pisos: \u00bfCu\u00e1nto Cuesta un Piso Nuevo?",
+    metaDescription: "Los pisos cuestan $2-$15 por pie\u00b2 instalados. Gu\u00eda completa de precios para madera, laminado, baldosas, alfombra y vinilo con estimaciones por habitaci\u00f3n y consejos de ahorro.",
+    heroTitle: "Gu\u00eda de Costos de Pisos",
+    heroSubtitle: "Precios 2026",
+    heroDescription: "Todo sobre costos de pisos \u2014 materiales, instalaci\u00f3n, presupuestos por habitaci\u00f3n y estrategias de ahorro.",
+    quickAnswerHeading: "Respuesta R\u00e1pida",
+    quickAnswerText: "Los pisos nuevos cuestan $2 a $15 por pie\u00b2 instalados. El laminado es el m\u00e1s econ\u00f3mico a $3\u2013$8/pie\u00b2, seguido de alfombra ($3\u2013$11), vinilo LVP ($4\u2013$10), baldosas ($7\u2013$18) y madera ($8\u2013$15).",
+    flooringTypesHeading: "Costos por Tipo de Material",
+    flooringTypesIntro: "Precios por pie cuadrado instalado seg\u00fan tipo de material.",
+    flooringTypesColType: "Tipo de Piso",
+    flooringTypesColCost: "Costo Instalado (por pie\u00b2)",
+    flooringTypesColBestFor: "Mejor Para",
+    flooringTypesRows: [
+      { type: "Laminado", cost: "$3 \u2013 $8", bestFor: "Presupuesto bajo, DIY, alquileres" },
+      { type: "Alfombra", cost: "$3 \u2013 $11", bestFor: "Dormitorios, s\u00f3tanos" },
+      { type: "Vinilo LVP", cost: "$4 \u2013 $10", bestFor: "Cocinas, ba\u00f1os, alto tr\u00e1fico" },
+      { type: "Baldosas", cost: "$7 \u2013 $18", bestFor: "Ba\u00f1os, cocinas, entradas" },
+      { type: "Madera de Ingenier\u00eda", cost: "$6 \u2013 $14", bestFor: "Salas, comedores" },
+      { type: "Madera Maciza", cost: "$8 \u2013 $15", bestFor: "\u00c1reas principales" },
+      { type: "Piedra Natural", cost: "$15 \u2013 $30", bestFor: "Alta gama" },
+    ],
+    costByRoomHeading: "Costo por Habitaci\u00f3n",
+    costByRoomIntro: "Costos totales t\u00edpicos por tipo de habitaci\u00f3n con materiales de gama media.",
+    costByRoomColRoom: "Habitaci\u00f3n",
+    costByRoomColTypical: "Costo Total",
+    costByRoomColNotes: "Notas",
+    costByRoomRows: [
+      { room: "Ba\u00f1o (50 pie\u00b2)", typical: "$500 \u2013 $1,500", notes: "Baldosas o LVP" },
+      { room: "Dormitorio (150 pie\u00b2)", typical: "$750 \u2013 $2,000", notes: "Alfombra o laminado" },
+      { room: "Cocina (200 pie\u00b2)", typical: "$1,200 \u2013 $4,000", notes: "Baldosas o LVP" },
+      { room: "Sala (300 pie\u00b2)", typical: "$1,500 \u2013 $5,000", notes: "Madera o LVP" },
+      { room: "Casa Completa (1,500 pie\u00b2)", typical: "$6,000 \u2013 $22,000", notes: "Mezcla de materiales" },
+    ],
+    installationCostsHeading: "Costos de Instalaci\u00f3n: DIY vs Profesional",
+    installationCostsIntro: "La mano de obra es 40\u201360% del costo total.",
+    installationCostsText1: "La instalaci\u00f3n profesional cuesta $2\u2013$6/pie\u00b2. Baldosas son las m\u00e1s caras a $5\u2013$10/pie\u00b2.",
+    installationCostsText2: "Instalar uno mismo ahorra 50\u201370% en mano de obra. El laminado y vinilo click son los m\u00e1s f\u00e1ciles.",
+    installationCostsText3: "Costos adicionales: subpiso ($2\u2013$5/pie\u00b2), remoci\u00f3n ($1\u2013$3/pie\u00b2), muebles ($50\u2013$200), transiciones ($5\u2013$15 c/u).",
+    howToCalculateHeading: "C\u00f3mo Calcular el Piso",
+    howToCalculateIntro: "Pasos para estimar materiales con precisi\u00f3n.",
+    howToCalculateItems: [
+      "Mida largo y ancho en pies. Multiplique para pie\u00b2.",
+      "Habitaciones irregulares: divida en rect\u00e1ngulos y sume.",
+      "Agregue 10% de desperdicio para instalaci\u00f3n recta.",
+      "15\u201320% para patrones diagonales o espiga.",
+      "Divida total entre cobertura por caja.",
+      "Redondee hacia arriba siempre.",
+    ],
+    howToCalculateSummary: "Use nuestra calculadora gratuita para estimaciones instant\u00e1neas con factor de desperdicio autom\u00e1tico.",
+    savingTipsHeading: "C\u00f3mo Ahorrar en Pisos",
+    savingTipsIntro: "Comprar inteligentemente reduce costos 20\u201340%.",
+    savingTipsItems: [
+      "Compre en ventas de temporada para 20\u201330% de descuento.",
+      "Compre en almacenes especializados.",
+      "Instale pisos click usted mismo.",
+      "Use diferentes materiales por habitaci\u00f3n.",
+      "Ordene todo junto para descuentos por volumen.",
+      "Guarde sobrantes para reparaciones futuras.",
+    ],
+    calculatorCtaHeading: "Calcule Sus Materiales",
+    calculatorCtaText: "Use nuestras calculadoras gratuitas.",
+    calculatorLinks: [
+      { label: "Calculadora de Pisos", href: "/calculators/flooring/flooring-calculator/", description: "Calculadora general de pie\u00b2 y cajas" },
+      { label: "Calculadora de Alfombra", href: "/calculators/flooring/carpet-calculator/", description: "Yardas cuadradas y base" },
+      { label: "Calculadora de Baldosas", href: "/calculators/flooring/tile-calculator/", description: "Baldosas, lechada y pegamento" },
+      { label: "Calculadora de Laminado", href: "/calculators/flooring/laminate-calculator/", description: "Tablones, cajas y subsuelo" },
+    ],
+    faqHeading: "Preguntas Frecuentes",
+    faqs: [
+      { question: "\u00bfCu\u00e1l es el piso m\u00e1s econ\u00f3mico?", answer: "Laminado a $3\u2013$8/pie\u00b2 instalado. DIY baja a $1\u2013$5/pie\u00b2." },
+      { question: "\u00bfCu\u00e1nto cuesta poner piso en toda la casa?", answer: "Casa de 1,500 pie\u00b2 cuesta $6,000\u2013$22,000. Mix t\u00edpico: $8,000\u2013$15,000." },
+      { question: "\u00bfQu\u00e9 piso agrega m\u00e1s valor?", answer: "La madera agrega mayor valor de reventa. LVP y baldosas en cocina/ba\u00f1o tambi\u00e9n." },
+      { question: "\u00bfCu\u00e1nto dura cada tipo?", answer: "Madera: 50\u2013100 a\u00f1os. Piedra: 50+. Baldosas: 30\u201350. Laminado/vinilo: 15\u201325. Alfombra: 5\u201315." },
+      { question: "\u00bfDebo cambiar el piso antes de vender?", answer: "Alfombra gastada s\u00ed. Madera da\u00f1ada puede lijarse. Vinilo nuevo en cocina/ba\u00f1o es buena inversi\u00f3n." },
+      { question: "\u00bfMejor piso para cocinas?", answer: "Vinilo LVP y porcelanato. Impermeables, duraderos y f\u00e1ciles de limpiar." },
+    ],
+  },
+
+  fenceCost: {
+    title: "\u00bfCu\u00e1nto Cuesta una Cerca? Gu\u00eda de Precios 2026",
+    metaDescription: "Una cerca cuesta $300\u2013$1,000 MXN por metro lineal instalada en 2026. Gu\u00eda completa de precios para cercas de madera, malla, herrer\u00eda y compuestos con costos de mano de obra, bricolaje vs profesional y consejos de ahorro.",
+    heroTitle: "\u00bfCu\u00e1nto Cuesta una Cerca?",
+    heroSubtitle: "Gu\u00eda de Precios 2026",
+    heroDescription: "Desglose completo de costos de cercas por material, estilo y tama\u00f1o de proyecto. Madera, malla cicl\u00f3nica, herrer\u00eda y materiales compuestos con precios, mano de obra y consejos de ahorro.",
+    quickAnswerHeading: "Respuesta R\u00e1pida",
+    quickAnswerText: "Una cerca cuesta $300 a $1,000 MXN por metro lineal instalada en 2026. Una cerca de madera de privacidad de 30 metros cuesta $9,000 a $15,000 MXN en materiales o $18,000 a $30,000 MXN con instalaci\u00f3n profesional.",
+    fenceTypesHeading: "Costo de Cerca por Material",
+    fenceTypesIntro: "El material que elijas es el factor m\u00e1s importante en el costo:",
+    fenceTypesColType: "Material",
+    fenceTypesColCost: "Costo por Metro (Instalado)",
+    fenceTypesColBestFor: "Ideal Para",
+    fenceTypesRows: [
+      { type: "Madera Tratada", cost: "$300 \u2013 $600 MXN", bestFor: "Cercas de privacidad econ\u00f3micas. Dura 15\u201320 a\u00f1os." },
+      { type: "Madera de Cedro", cost: "$500 \u2013 $900 MXN", bestFor: "Resistencia natural, apariencia premium. Dura 15\u201325 a\u00f1os." },
+      { type: "Malla Cicl\u00f3nica", cost: "$200 \u2013 $450 MXN", bestFor: "Seguridad, mascotas, menor costo. Dura 15\u201320 a\u00f1os." },
+      { type: "Herrer\u00eda / Metal", cost: "$600 \u2013 $1,200 MXN", bestFor: "Decorativa, seguridad. Dura 20\u201330 a\u00f1os." },
+      { type: "Vinilo / PVC", cost: "$500 \u2013 $1,000 MXN", bestFor: "Cero mantenimiento. Dura 20\u201330 a\u00f1os." },
+      { type: "Compuesto", cost: "$700 \u2013 $1,200 MXN", bestFor: "Apariencia de madera sin mantenimiento. Dura 25\u201350 a\u00f1os." },
+    ],
+    costByProjectHeading: "Costo por Tama\u00f1o de Proyecto",
+    costByProjectIntro: "Costos t\u00edpicos 2026 para cercas de madera tratada:",
+    costByProjectColProject: "Proyecto",
+    costByProjectColTypical: "Costo T\u00edpico (Instalado)",
+    costByProjectColNotes: "Notas",
+    costByProjectRows: [
+      { project: "Patio Peque\u00f1o (10 m)", typical: "$6,000 \u2013 $12,000 MXN", notes: "Materiales: $3,000\u2013$6,000 MXN." },
+      { project: "Patio Promedio (20 m)", typical: "$12,000 \u2013 $24,000 MXN", notes: "Tama\u00f1o m\u00e1s com\u00fan." },
+      { project: "Patio Grande (30 m)", typical: "$18,000 \u2013 $36,000 MXN", notes: "Posible descuento por volumen." },
+      { project: "Per\u00edmetro Completo (50 m)", typical: "$30,000 \u2013 $60,000 MXN", notes: "Considere instalaci\u00f3n por fases." },
+      { project: "Cerca con Port\u00f3n", typical: "$15,000 \u2013 $35,000 MXN", notes: "Agregar $2,000\u2013$5,000 MXN por port\u00f3n." },
+      { project: "Cerca Industrial", typical: "$50,000 \u2013 $120,000 MXN", notes: "Malla con concertina o herrer\u00eda reforzada." },
+    ],
+    laborCostsHeading: "Costos de Mano de Obra",
+    laborCostsIntro: "La mano de obra representa 40 a 60% del costo total.",
+    laborCostsText1: "Instalaci\u00f3n profesional: $100 a $300 MXN por metro lineal en mano de obra. Una cerca de 20 metros toma 2 a 3 d\u00edas.",
+    laborCostsText2: "Suelo rocoso, terreno inclinado y remoci\u00f3n de cerca vieja aumentan los costos.",
+    laborCostsText3: "Solicita al menos 3 cotizaciones escritas. Temporada baja puede ahorrar 10 a 20%.",
+    diyVsProHeading: "Bricolaje vs Profesional",
+    diyVsProIntro: "Construir tu cerca puede ahorrar 40 a 60%:",
+    diyVsProItems: [
+      "Materiales para 20 m: $6,000 a $12,000 MXN.",
+      "Instalaci\u00f3n profesional: $12,000 a $24,000 MXN total.",
+      "Herramientas: cavadora, nivel, hilo, sierra, taladro.",
+      "Planifica 2 a 3 fines de semana para 20 metros.",
+      "Errores comunes: postes no a plomo, espaciado inconsistente.",
+      "Mejor enfoque: todos los postes el d\u00eda 1, tablas el d\u00eda 2.",
+    ],
+    diyVsProSummary: "El bricolaje ahorra $6,000 a $12,000 MXN. Contrata un profesional para suelo dif\u00edcil o pendientes.",
+    savingTipsHeading: "C\u00f3mo Ahorrar",
+    savingTipsIntro: "Estrategias para reducir costos:",
+    savingTipsItems: [
+      "Madera tratada sobre cedro \u2014 30 a 50% menos.",
+      "Construye en temporada baja para ahorrar 10 a 20%.",
+      "Comparte el costo con tu vecino 50/50.",
+      "Paneles prefabricados se instalan m\u00e1s r\u00e1pido.",
+      "Compra en maderer\u00eda para mejor precio.",
+      "Tramita el permiso t\u00fa mismo.",
+    ],
+    calculatorCtaHeading: "Calcula tus Materiales",
+    calculatorCtaText: "Usa nuestras calculadoras gratuitas para estimar materiales y costo.",
+    calculatorLinks: [
+      { label: "Calculadora de Cercas", href: "/calculators/outdoor/fence-calculator", description: "Postes, travesa\u00f1os y tablas para cualquier longitud." },
+      { label: "Calculadora de Postes", href: "/calculators/outdoor/fence-post-calculator", description: "Cantidad de postes y sacos de concreto." },
+      { label: "Calculadora de Paneles", href: "/calculators/outdoor/fence-panel-calculator", description: "Paneles prefabricados y postes." },
+      { label: "Calculadora de Estacas", href: "/calculators/outdoor/picket-fence-calculator", description: "Estacas con espaciado personalizado." },
+    ],
+    faqHeading: "Preguntas Frecuentes",
+    faqs: [
+      { question: "\u00bfCu\u00e1nto cuesta una cerca de 30 metros?", answer: "Madera de privacidad: $18,000\u2013$36,000 MXN instalada, o $9,000\u2013$18,000 MXN en materiales." },
+      { question: "\u00bfCu\u00e1l es la cerca m\u00e1s barata?", answer: "Malla cicl\u00f3nica a $200\u2013$450 MXN por metro. Para privacidad, madera tratada a $300\u2013$600 MXN." },
+      { question: "\u00bfEs m\u00e1s barato hacerla uno mismo?", answer: "S\u00ed, ahorra 40\u201360%. 20 metros: $6,000\u2013$12,000 MXN vs $12,000\u2013$24,000 MXN instalada." },
+      { question: "\u00bfCu\u00e1nto dura una cerca de madera?", answer: "Madera tratada: 15\u201320 a\u00f1os. Cedro: 15\u201325 a\u00f1os. Los postes fallan primero." },
+      { question: "\u00bfNecesito permiso?", answer: "En la mayor\u00eda de los municipios se requiere permiso para cercas altas. Consulta con tu ayuntamiento." },
+      { question: "\u00bfQu\u00e9 cerca agrega m\u00e1s valor?", answer: "Una cerca de madera bien mantenida recupera 50\u201370% de su costo en valor de la propiedad." },
     ],
   },
 };

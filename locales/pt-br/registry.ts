@@ -2292,6 +2292,59 @@ export const postHoleCalculatorPTBR: CalculatorSEOContent = {
   ],
 };
 
+// ─── RETAINING WALL ─────────────────────────────────────────────────────────
+
+export const retainingWallCalculator: CalculatorSEOContent = {
+  disclaimer: "Esta estimativa inclui 10% de desperdicio para blocos. Os requisitos de brita e drenagem dependem das condicoes do solo e regulamentacao local. Muros acima de 1,2 m geralmente requerem projeto estrutural e alvara.",
+  howToUse: ["Meca o comprimento total do muro de arrimo em metros.", "Insira a altura desejada em metros.", "Selecione o tipo de bloco: bloco de paisagismo, bloco de concreto ou pedra natural.", "Clique em Calcular para quantidade de blocos, capas, brita e drenagem."],
+  materialInfo: "Muros de arrimo contem o solo em terrenos inclinados e criam areas niveladas para jardins, patios e acessos. Os materiais mais comuns sao blocos de concreto intertravados, blocos estruturais (alvenaria) e pedra natural.\n\nBlocos de paisagismo intertravados sao a escolha mais popular para muros DIY ate 1,2 m no Brasil. Dimensoes padrao de 35x14x10 cm, pesando 8 a 12 kg. Custo tipico: R$ 3 a R$ 8 por bloco, ou R$ 80 a R$ 250 por m2 de face do muro instalado.\n\nBlocos de concreto estruturais (14x19x39 cm) sao usados para muros que necessitam de armacao e grauteamento. Pedra natural (basalto, granito) e a opcao mais cara, de R$ 150 a R$ 400/m2 instalada.\n\nTodo muro de arrimo necessita de drenagem adequada: camada de brita 1 atras do muro, tubo dreno perfurado DN 100 na base, e barbacas em intervalos regulares. Chapins sao fixados com adesivo de construcao.\n\nNo Brasil, muros de arrimo acima de 1,5 m necessitam de ART (Anotacao de Responsabilidade Tecnica) de um engenheiro civil. Consulte a legislacao municipal.",
+  nextSteps: [{ label: "Calculadora de Sapata", href: "/calculators/foundation/concrete-footing-calculator/" }, { label: "Calculadora de Brita", href: "/calculators/foundation/gravel-calculator/" }, { label: "Calculadora de Argamassa", href: "/calculators/foundation/mortar-mix-calculator/" }],
+  installationTips: ["Cave uma vala de 15 a 20 cm de profundidade e 60 cm de largura — compacte o solo e adicione 15 cm de brita como base.", "Nivele a primeira fiada com nivel de bolha e martelo de borracha.", "Preencha com brita 1 atras do muro a cada fiada.", "Instale tubo dreno perfurado DN 100 na base com caimento de 2%.", "Desencontre as juntas em pelo menos 10 cm entre fiadas.", "Fixe os chapins com adesivo de construcao na ultima fiada."],
+  commonMistakes: ["Pular a base de brita — o muro vai recalcar e inclinar.", "Esquecer a drenagem — pressao hidrostatica e a causa numero 1 de falha.", "Construir acima de 1,5 m sem projeto — a norma exige ART de engenheiro.", "Usar terra como aterro — somente brita limpa deve ficar atras do muro.", "Nao compactar a base — solo solto causa recalque no primeiro ano."],
+  faqs: [
+    { question: "Quantos blocos preciso para um muro de arrimo?", answer: "Para blocos intertravados de 35x14x10 cm, voce precisa de cerca de 28 blocos por m2 de face. Um muro de 6 m x 1 m necessita de aproximadamente 170 blocos mais 10% = 187 blocos." },
+    { question: "Quanto custa um muro de arrimo?", answer: "Blocos intertravados custam R$ 80 a R$ 250/m2 instalados. Alvenaria estrutural com armacao custa R$ 150 a R$ 350/m2. Pedra natural custa R$ 150 a R$ 400/m2." },
+    { question: "Preciso de ART para muro de arrimo?", answer: "No Brasil, muros de arrimo acima de 1,5 m necessitam de ART de engenheiro civil. Alguns municipios exigem para alturas menores. Consulte a prefeitura local." },
+    { question: "Quanta brita preciso atras do muro?", answer: "Planeje uma zona de 30 cm de brita 1 atras de toda a face do muro, mais 15 cm de base compactada na vala. Para um muro de 6 m x 1 m, sao cerca de 2 m3 de brita." },
+    { question: "Qual o melhor bloco para muro de arrimo?", answer: "Para muros DIY ate 1,2 m, blocos intertravados de concreto sao a melhor opcao. Para muros estruturais acima de 1,5 m, use alvenaria estrutural com grauteamento e armacao." },
+    { question: "Qual a profundidade da base do muro de arrimo?", answer: "A vala deve ter no minimo 15 cm com 15 cm de brita compactada. A primeira fiada deve ficar enterrada. Para muros mais altos, a profundidade aumenta proporcionalmente." },
+  ],
+};
+
+export const epoxyCalculator: CalculatorSEOContent = {
+  disclaimer: "A taxa de rendimento varia conforme o produto, porosidade do piso e metodo de aplicacao. O padrao de 10 m2 por litro e tipico para a maioria dos epoxis para piso de garagem.",
+  howToUse: ["Meca o comprimento e largura do piso em metros.", "Selecione 1 demao para base ou 2 demaos para maxima durabilidade.", "Ajuste o rendimento por litro conforme o produto (padrao: 10 m2/l).", "Clique em Calcular para litros, kits e estimativa de custo."],
+  materialInfo: "Revestimento epoxi para piso e uma resina bicomponente (Parte A resina + Parte B catalisador) que cura em superficie dura, brilhante e resistente a quimicos. E o revestimento mais popular para pisos de garagem no Brasil.\n\nTres tipos principais: epoxi base agua (R$ 80 a R$ 200/litro, 10 m2 de rendimento, baixo odor), epoxi base solvente (R$ 120 a R$ 300/litro, mais duravel), e epoxi 100% solidos (R$ 250 a R$ 500/litro, qualidade profissional).\n\nA preparacao do piso e o passo mais critico. O concreto deve estar limpo, seco e rugoso. Lixamento, jateamento ou ataque acido criam o perfil necessario. Concreto novo deve curar pelo menos 28 dias. Teste de umidade obrigatorio: cole um plastico 60x60 cm por 24 horas.\n\nTemperatura de aplicacao entre 15°C e 35°C. Sistemas de 2 demaos ficam prontos para trafego de veiculos em 3 a 5 dias. Produtos disponiveis em lojas de materiais de construcao e distribuidores especializados.",
+  nextSteps: [{ label: "Calculadora de Tinta", href: "/calculators/finishing/paint-coverage-calculator/" }, { label: "Calculadora de Laje", href: "/calculators/foundation/concrete-slab-calculator/" }],
+  installationTips: ["Faca teste de umidade (plastico 60x60 cm colado por 24 h) antes de comecar.", "Lixe ou ataque o concreto com acido para criar perfil de aderencia.", "Misture Parte A e B por completo no tempo indicado (geralmente 3 min).", "Trabalhe em secoes mantendo a borda umida.", "Aguarde 12 a 24 h entre demaos e 72 h antes de trafego leve."],
+  commonMistakes: ["Pular a preparacao do piso — causa numero 1 de descascamento.", "Aplicar sobre umidade — causa bolhas e descolamento.", "Trabalhar fora da faixa de temperatura.", "Misturar muito produto de uma vez — a reacao exotermica pode gelificar em minutos.", "Nao aplicar selador — epoxi nu amarelece com UV."],
+  faqs: [
+    { question: "Quanto epoxi preciso para uma garagem?", answer: "Uma garagem dupla padrao tem cerca de 36 m2. A 10 m2 por litro, voce precisa de 3,6 litros para 1 demao ou 7,2 litros para 2 demaos." },
+    { question: "Quanto custa revestir o piso da garagem com epoxi?", answer: "Em DIY, conte R$ 40 a R$ 100/m2 em materiais. Uma garagem de 36 m2 custa R$ 1.500 a R$ 3.600. Aplicacao profissional custa R$ 80 a R$ 200/m2." },
+    { question: "Uma demao de epoxi e suficiente?", answer: "Uma demao oferece cobertura aceitavel para uso leve. Duas demaos oferecem durabilidade significativamente melhor." },
+    { question: "Quanto tempo dura piso epoxi?", answer: "Bem aplicado, dura 5 a 10 anos em garagem residencial. Epoxi profissional com selador poliasphartico pode durar 15 a 20 anos." },
+    { question: "Preciso de primer antes do epoxi?", answer: "A maioria dos kits nao necessita de primer separado — a primeira demao funciona como primer." },
+    { question: "Posso aplicar epoxi sobre tinta velha?", answer: "Nao, o epoxi nao adere na maioria das tintas. Remova o revestimento antigo por lixamento ou decapagem quimica." },
+  ],
+};
+
+export const pondCalculator: CalculatorSEOContent = {
+  disclaimer: "Calculos de volume sao aproximados. O tamanho da lona inclui 60 cm de sobreposicao em cada lado. O dimensionamento da bomba assume circulacao completa a cada 2 horas.",
+  howToUse: ["Insira o comprimento maximo do lago em metros.", "Insira a largura maxima em metros.", "Insira a profundidade maxima — 0,6 a 1 m para jardins aquaticos, 1 a 1,5 m para lagos de carpas.", "Selecione a forma: retangular, oval ou rim.", "Clique em Calcular para volume, tamanho da lona, vazao da bomba e manta de protecao."],
+  materialInfo: "Um lago de jardim e uma escavacao revestida com lona flexivel ou rigida para conter agua com peixes ornamentais, plantas aquaticas ou como elemento decorativo.\n\nLonas de EPDM (1,0 mm) sao o padrao — flexiveis, resistentes a UV, seguras para peixes, durabilidade de 20 a 30 anos. Custo: R$ 30 a R$ 80/m2. Lonas de PVC sao mais baratas (R$ 15 a R$ 40/m2) mas duram 10 a 15 anos.\n\nO tamanho da lona se calcula: (comprimento + 2x profundidade + 0,6 m) x (largura + 2x profundidade + 0,6 m). Bombas devem circular todo o volume a cada 2 h. A manta geotextil (300 g/m2) protege a lona de raizes e pedras.\n\nNo Brasil, o clima tropical favorece o crescimento de algas — invista em filtracao UV e plantas flutuantes para controle biologico. Lagos de mais de 5.000 litros podem necessitar de outorga de uso de agua em alguns municipios.",
+  nextSteps: [{ label: "Calculadora de Brita", href: "/calculators/foundation/gravel-calculator/" }, { label: "Calculadora de Buracos para Postes", href: "/calculators/outdoor/post-hole-calculator/" }],
+  installationTips: ["Posicione o lago onde receba 4 a 6 horas de sol parcial.", "Verifique a localizacao de tubulacoes subterraneas antes de escavar.", "Cave prateleiras de 30 cm para plantas marginais.", "Coloque 5 cm de areia ou manta geotextil sobre toda a escavacao.", "Encha lentamente com mangueira, alisando a lona conforme enche.", "Opere bomba e filtro por 2 semanas antes de adicionar peixes."],
+  commonMistakes: ["Subdimensionar a lona — calcule comprimento + (2x profundidade) + 0,6 m.", "Pular a manta geotextil — raizes e pedras furam a lona.", "Subdimensionar a bomba — ma circulacao causa agua parada e algas.", "Profundidade insuficiente — lagos rasos superaquecem.", "Construir perto de arvores — folhas em decomposicao consomem oxigenio."],
+  faqs: [
+    { question: "Quantos litros tem meu lago?", answer: "Lagos retangulares: comprimento x largura x profundidade (metros) x 1.000 = litros. Ovais: multiplique por 0,8. Rim: multiplique por 0,7." },
+    { question: "Qual tamanho de lona preciso?", answer: "Lona = (comprimento + 2x profundidade + 0,6) x (largura + 2x profundidade + 0,6). Para um lago 3x2,5x1 m: lona de 5,6 x 5,1 m." },
+    { question: "Qual bomba preciso?", answer: "Multiplique o volume em litros por 0,5 para a vazao minima em l/h. Um lago de 8.000 l precisa de bomba de pelo menos 4.000 l/h." },
+    { question: "Quanto custa construir um lago?", answer: "Um jardim aquatico de 2.000 l custa R$ 2.000 a R$ 6.000 DIY. Um lago de 4.000-8.000 l com bomba e filtro custa R$ 6.000 a R$ 15.000 DIY." },
+    { question: "Qual profundidade para peixes?", answer: "Kinguios: minimo 60 cm. Carpas koi: pelo menos 1 m, idealmente 1,2 m." },
+    { question: "Preciso de filtro?", answer: "Sim, se tiver peixes. O filtro biologico converte amonia toxica em nitratos inofensivos. Mesmo lagos so com plantas se beneficiam de bomba e filtro." },
+  ],
+};
+
 // ─── REGISTRY MAP ─────────────────────────────────────────────────────────────
 
 export const registryPTBR: Record<string, Record<string, CalculatorSEOContent>> = {
@@ -2308,6 +2361,7 @@ export const registryPTBR: Record<string, Record<string, CalculatorSEOContent>> 
     "driveway-gravel-calculator": drivewayGravelCalculator,
     "mortar-mix-calculator": mortarMixCalculator,
     "block-fill-calculator": blockFillCalculator,
+    "retaining-wall-calculator": retainingWallCalculator,
   },
   "floor-framing": {
     "rim-joist-calculator": rimJoistCalculator,
@@ -2359,6 +2413,7 @@ export const registryPTBR: Record<string, Record<string, CalculatorSEOContent>> 
     "paint-coverage-calculator": paintCoverageCalculatorPTBR,
     "paint-cost-calculator": paintCostCalculatorPTBR,
     "primer-calculator": primerCalculatorPTBR,
+    "epoxy-calculator": epoxyCalculator,
   },
   outdoor: {
     "deck-board-calculator": deckBoardCalculatorPTBR,
@@ -2366,5 +2421,6 @@ export const registryPTBR: Record<string, Record<string, CalculatorSEOContent>> 
     "deck-railing-calculator": deckRailingCalculatorPTBR,
     "deck-stair-calculator": deckStairCalculatorPTBR,
     "post-hole-calculator": postHoleCalculatorPTBR,
+    "pond-calculator": pondCalculator,
   },
 };

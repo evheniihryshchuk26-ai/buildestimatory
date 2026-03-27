@@ -624,3 +624,127 @@ export const postHoleCalculator: CalculatorSEOContent = {
     { question: "What size hole for a mailbox post in Canada?", answer: "A Canada Post community mailbox pad typically requires a 200 mm (8 in) hole, 600 mm (24 in) deep. For a standalone rural mailbox post, use a 4×4 pressure-treated post in an 8-inch hole at 36 inches deep with gravel drainage base." },
   ],
 };
+
+// ─── RETAINING WALL ─────────────────────────────────────────────────────────
+
+export const retainingWallCalculator: CalculatorSEOContent = {
+  disclaimer: "This estimate includes a 10% waste factor for blocks. Actual gravel and drainage requirements depend on soil conditions, water table, and local code. Walls over 1.2 m (4 ft) typically require engineering and permits in Canada.",
+  howToUse: [
+    "Measure the total length of your retaining wall in feet.",
+    "Enter the desired wall height in feet — most landscape walls are 2 to 4 feet.",
+    "Select your block type: landscape block for decorative walls, CMU for structural, or natural stone for a rustic look.",
+    "Click Calculate for block count, cap blocks, gravel backfill, and drainage estimates.",
+  ],
+  materialInfo:
+    "Retaining walls hold back soil on sloped terrain and create level areas for landscaping, patios, driveways, and garden beds. The three most common materials are interlocking landscape blocks, concrete masonry units (CMU), and natural stone.\n\nLandscape blocks (such as Barkman, Permacon, or Pavestone) are the most popular choice for DIY retaining walls up to 1.2 m (4 ft) in Canada. Standard blocks measure 300 mm long by 100 mm high by 200 mm deep and weigh 11 to 16 kg each. They interlock with a lip or pin system that creates a natural setback for stability. Typical cost is CAD $3 to $7 per block, or CAD $20 to $45 per square foot of wall face installed.\n\nIn Canada, frost depth is a critical factor for retaining wall footings. The base trench must extend below the frost line — 1.2 m in southern Ontario, 1.5 m in the Prairies, and up to 2.1 m in northern regions — or use a free-draining gravel base that prevents frost heave. Most building departments require a permit for walls over 1.2 m (4 ft). Walls near property lines may also need a site survey.\n\nAll retaining walls require proper drainage behind the wall: a layer of 19 mm clear crushed stone, a 100 mm perforated drain pipe at the base, and drain outlets at regular intervals. Cap blocks are glued with construction adhesive at approximately 1 tube per 7.5 linear metres. Expect to pay CAD $25 to $50 per linear metre for materials on a standard landscape block wall.",
+  nextSteps: [
+    { label: "Concrete Footing Calculator", href: "/calculators/foundation/concrete-footing-calculator/" },
+    { label: "Gravel Calculator", href: "/calculators/foundation/gravel-calculator/" },
+    { label: "Mortar Mix Calculator", href: "/calculators/foundation/mortar-mix-calculator/" },
+  ],
+  installationTips: [
+    "Excavate a trench 150 to 200 mm deep and 600 mm wide for the base course — compact the soil and add 150 mm of crushed gravel base.",
+    "Level the first course carefully — every subsequent course follows the base. Use a 1.2 m level and rubber mallet.",
+    "Backfill with 19 mm clear crushed stone behind the wall as you build each course.",
+    "Install a 100 mm perforated drain pipe at the base of the wall, sloped 2% toward a daylight outlet.",
+    "Stagger block joints by at least 100 mm between courses, similar to a running bond brick pattern.",
+    "Glue cap blocks with landscape adhesive — apply a continuous bead along the top of the last course.",
+  ],
+  commonMistakes: [
+    "Skipping the gravel base — without a compacted gravel foundation, the wall will settle and lean over time.",
+    "Forgetting drainage — hydrostatic pressure from trapped water is the number one cause of retaining wall failure, especially after Canadian freeze-thaw cycles.",
+    "Building over 1.2 m without engineering — most Canadian municipalities require stamped plans and permits for taller walls.",
+    "Using topsoil or dirt as backfill — only clean crushed stone should go directly behind the wall for drainage.",
+    "Not accounting for frost heave — ensure the base trench reaches below the frost line or uses a free-draining gravel pad.",
+  ],
+  faqs: [
+    { question: "How many blocks do I need for a retaining wall in Canada?", answer: "For standard 300×100×200 mm landscape blocks, you need about 33 blocks per square metre of wall face. A 6 m long, 1 m high wall (6 m²) requires approximately 200 blocks plus 10% waste, for a total of about 220 blocks." },
+    { question: "How much does a retaining wall cost in Canada?", answer: "Landscape blocks run CAD $20 to $45 per square foot of wall face installed. A typical 20-foot long, 3-foot high landscape block wall costs CAD $1,200 to $2,700 for materials only, or CAD $2,700 to $5,400 professionally installed." },
+    { question: "Do I need a permit for a retaining wall in Canada?", answer: "Most Canadian municipalities require a building permit for retaining walls over 1.2 m (4 ft) tall. Some set the threshold at 1.0 m. Check with your local building department — walls near property lines may also require a survey." },
+    { question: "How deep should a retaining wall footing be in Canada?", answer: "The base trench should be at least 150 mm deep with 150 mm of compacted gravel. In frost-prone areas (all of Canada), the footing should extend below the frost line or use a free-draining gravel base that prevents heave. Southern Ontario frost depth is 1.2 m; Prairies 1.5 m." },
+    { question: "What is the best block for a retaining wall in Canada?", answer: "For DIY walls under 1.2 m, interlocking landscape blocks from Barkman, Permacon, or Pavestone are the best choice. They require no mortar, are widely available at Home Depot Canada, RONA, and local yards, and handle freeze-thaw cycles well." },
+    { question: "How much gravel do I need behind a retaining wall?", answer: "Plan for a 300 mm wide zone of 19 mm clear crushed stone behind the entire wall face, plus 150 mm of compacted gravel in the base trench. For a 6 m long, 1 m high wall, this is roughly 2 cubic metres of gravel." },
+  ],
+};
+
+// ─── EPOXY ──────────────────────────────────────────────────────────────────
+
+export const epoxyCalculator: CalculatorSEOContent = {
+  disclaimer: "Coverage rates vary by product, surface porosity, and application method. The default 250 sq ft per gallon is standard for most garage floor epoxies. Always follow the manufacturer's coverage guidelines.",
+  howToUse: [
+    "Measure the length and width of your floor in feet.",
+    "Select 1 coat for a colour base or 2 coats for maximum durability.",
+    "Adjust the coverage per gallon if your product specifies a different rate (default is 250 sq ft/gal).",
+    "Click Calculate for gallons, kit count, and cost estimate.",
+  ],
+  materialInfo:
+    "Epoxy floor coating is a two-part thermosetting resin (Part A resin + Part B hardener) that cures into a hard, chemical-resistant, glossy surface. It is the most popular garage floor coating in Canada and is also used in basements, workshops, commercial kitchens, and warehouses.\n\nThere are three main types. Water-based epoxy is the most DIY-friendly — low odour, easy cleanup, and costs CAD $50 to $80 per gallon kit covering 250 square feet. Solvent-based epoxy is more durable at CAD $70 to $120 per gallon. 100% solids epoxy is the professional-grade option at CAD $120 to $180 per gallon — it builds the thickest film but has a very short pot life.\n\nSurface preparation is the most critical step. The concrete must be clean, dry, and profiled for the epoxy to bond. Grinding or acid etching creates the surface profile needed for adhesion. New concrete must cure at least 28 days before coating. In Canada, moisture testing is especially important due to spring thaw conditions — tape a 600×600 mm plastic sheet to the floor for 24 hours and check for condensation.\n\nApplication temperature must be between 10°C and 32°C with concrete temperature above 13°C. Canadian garages can be challenging in spring and fall — plan application for warm, dry periods. Most two-coat systems are drive-on ready in 3 to 5 days. Products are widely available at Home Depot Canada, RONA, Canadian Tire, and specialty flooring suppliers.",
+  nextSteps: [
+    { label: "Paint Calculator", href: "/calculators/finishing/paint-coverage-calculator/" },
+    { label: "Concrete Slab Calculator", href: "/calculators/foundation/concrete-slab-calculator/" },
+  ],
+  installationTips: [
+    "Perform a moisture test (tape a 600×600 mm plastic sheet to the floor for 24 hours) before starting — moisture causes epoxy failure.",
+    "Grind or acid-etch the concrete to create a surface profile — epoxy will not bond to smooth, sealed, or painted concrete.",
+    "Mix Part A and Part B thoroughly for the full time specified (usually 3 minutes), then let the mixture induct for the time on the label.",
+    "Work in sections and keep a wet edge — epoxy self-levels but will show roller marks at seams if one section starts to set.",
+    "Allow 12 to 24 hours between coats, and 72 hours before light foot traffic. Wait 5 to 7 days before parking vehicles.",
+  ],
+  commonMistakes: [
+    "Skipping surface preparation — this is the number one cause of epoxy peeling and flaking.",
+    "Applying over moisture — trapped moisture underneath causes bubbling and delamination. Spring thaw in Canada makes this especially risky.",
+    "Working outside the temperature range — below 10°C the epoxy cures too slowly; above 32°C it cures too fast.",
+    "Mixing too much product at once — epoxy generates heat as it cures. Large batches in a bucket can gel in minutes.",
+    "Not applying a topcoat — bare epoxy yellows and chalks from UV exposure.",
+  ],
+  faqs: [
+    { question: "How much epoxy do I need for a garage floor in Canada?", answer: "A standard 2-car garage is approximately 45 m² (480 sq ft). At 250 sq ft per gallon, you need about 2 gallons for one coat or 4 gallons for two coats. Plan on 2 kits for a single coat or 4 kits for a two-coat system." },
+    { question: "How much does it cost to epoxy a garage floor in Canada?", answer: "DIY epoxy coating costs CAD $3 to $7 per square foot for materials. A 480 sq ft garage runs CAD $400 to $800 for a basic kit. Professional installation costs CAD $6 to $15 per square foot, or CAD $3,000 to $7,000 for a standard 2-car garage." },
+    { question: "Is 1 coat of epoxy enough for a garage floor?", answer: "One coat provides acceptable coverage for light-use garages. Two coats deliver significantly better durability. If doing one coat, apply a clear polyurethane or polyaspartic topcoat for additional protection." },
+    { question: "How long does epoxy floor coating last?", answer: "Properly applied epoxy lasts 5 to 10 years in a residential garage. Commercial-grade 100% solids epoxy with a polyaspartic topcoat can last 15 to 20 years." },
+    { question: "Can I apply epoxy in a cold Canadian garage?", answer: "Epoxy requires a minimum concrete temperature of 13°C (55°F) and air temperature of 10°C (50°F). In Canada, plan your application for late spring through early fall. Use a space heater to warm the garage for 24 hours before and during application if needed." },
+    { question: "Where can I buy epoxy floor coating in Canada?", answer: "Epoxy floor kits are available at Home Depot Canada, RONA, Canadian Tire, and specialty coatings suppliers. Rust-Oleum EpoxyShield and Behr Premium are popular consumer brands. For professional-grade products, check with local industrial coatings distributors." },
+  ],
+};
+
+// ─── POND ───────────────────────────────────────────────────────────────────
+
+export const pondCalculator: CalculatorSEOContent = {
+  disclaimer: "Volume calculations are approximate — kidney and freeform shapes vary widely. Liner size includes 600 mm of overlap on each side for anchoring. Pump sizing assumes full circulation every 2 hours.",
+  howToUse: [
+    "Enter the maximum length of your pond in feet.",
+    "Enter the maximum width in feet.",
+    "Enter the deepest depth in feet — 2 to 3 feet for water gardens, 3 to 4 feet for koi ponds.",
+    "Select the closest shape: rectangular, oval, or kidney.",
+    "Click Calculate for volume, liner size, pump capacity, and underlayment needs.",
+  ],
+  materialInfo:
+    "A backyard pond is an excavated water feature lined with a flexible or rigid material to hold water for ornamental fish, aquatic plants, or as a decorative focal point. In Canada, pond depth is critical — koi ponds must be at least 1.2 m (4 ft) deep to provide an unfrozen zone below the ice line during winter.\n\nEPDM rubber liners (45 mil) are the industry standard — flexible, UV-resistant, fish-safe, and lasting 20 to 30 years. Cost runs CAD $1.00 to $2.00 per square foot. PVC liners are cheaper at CAD $0.50 to $1.00 per square foot but have a shorter lifespan.\n\nPumps must circulate the entire volume every 2 hours minimum. In Canada, consider whether to run the pump year-round (with a de-icer or floating heater to keep an opening in the ice) or shut down for winter (removing the pump and adding a pond heater). Most Canadian pond keepers keep a small opening in the ice to allow gas exchange.\n\nFor Canadian winters, do not drain the pond completely — leave water in place to maintain the ecosystem. Add a pond de-icer (CAD $50–150) and keep at least 1.2 m depth for fish overwinter survival. Products are available at Home Depot Canada, Canadian Tire, and specialty pond suppliers like Laguna and Aquascape dealers.",
+  nextSteps: [
+    { label: "Gravel Calculator", href: "/calculators/foundation/gravel-calculator/" },
+    { label: "Post Hole Calculator", href: "/calculators/outdoor/post-hole-calculator/" },
+  ],
+  installationTips: [
+    "Locate the pond where it receives 4 to 6 hours of partial sunlight — full sun promotes excessive algae growth.",
+    "Call your provincial One Call service (or 811) to mark underground utilities before digging.",
+    "Dig shelves at 300 mm deep around the perimeter for marginal aquatic plants before excavating the full depth.",
+    "Place a 50 mm layer of sand or geotextile underlayment fabric over the entire excavation before laying the liner.",
+    "Fill the pond slowly with a garden hose, smoothing the liner as it fills.",
+    "Run the pump and filter for at least 2 weeks before adding fish to allow beneficial bacteria to establish.",
+  ],
+  commonMistakes: [
+    "Undersizing the liner — always calculate length + (2 × depth) + 2 ft for each dimension.",
+    "Skipping the underlayment — roots and rocks puncture liners from below.",
+    "Undersizing the pump — poor circulation leads to stagnant water and algae blooms.",
+    "Not providing enough depth — in Canada, ponds less than 1.2 m deep will freeze solid and kill fish.",
+    "Building too close to trees — falling leaves create organic buildup that depletes oxygen.",
+  ],
+  faqs: [
+    { question: "How many gallons is my pond?", answer: "For rectangular ponds: length × width × depth (in feet) × 7.48 = gallons. For oval ponds, multiply by 0.8. For kidney shapes, multiply by 0.7. Example: a 10×8×3 ft rectangular pond holds about 1,795 gallons." },
+    { question: "What size pond liner do I need?", answer: "Liner size = (length + 2 × depth + 2 ft) by (width + 2 × depth + 2 ft). For a 10×8×3 ft pond, the liner should be at least 18 ft × 16 ft (288 sq ft)." },
+    { question: "How deep should a pond be for fish in Canada?", answer: "Water gardens with goldfish need a minimum depth of 900 mm (3 ft) in Canada. Koi ponds should be at least 1.2 m (4 ft) deep to ensure an unfrozen zone below the ice line during winter." },
+    { question: "Can fish survive winter in a Canadian pond?", answer: "Yes, if the pond is at least 1.2 m deep and you keep an opening in the ice for gas exchange. Use a floating pond de-icer or heater (CAD $50–150) to maintain an air hole. Do not break ice by force — the shock waves can harm fish." },
+    { question: "What size pump do I need for my pond?", answer: "Multiply your pond volume in gallons by 0.5 for the minimum GPH rating. A 2,000-gallon pond needs at least a 1,000 GPH pump. For koi ponds, use the full volume as your GPH target for hourly turnover." },
+    { question: "How much does it cost to build a backyard pond in Canada?", answer: "A simple 500-gallon water garden costs CAD $700 to $2,000 DIY. A 1,000 to 2,000-gallon pond with pump, filter, and stone edging runs CAD $2,000 to $6,000 DIY or CAD $7,000 to $20,000 professionally installed." },
+  ],
+};

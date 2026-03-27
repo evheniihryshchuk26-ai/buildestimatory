@@ -2198,6 +2198,59 @@ export const postHoleCalculator: CalculatorSEOContent = {
   ],
 };
 
+// ─── MURO DI CONTENIMENTO ───────────────────────────────────────────────────
+
+export const retainingWallCalculator: CalculatorSEOContent = {
+  disclaimer: "Questa stima include il 10% di scarto per i blocchi. I requisiti di ghiaia e drenaggio dipendono dalle condizioni del terreno e dalla normativa locale. Muri oltre 1,2 m richiedono generalmente calcolo strutturale e permesso.",
+  howToUse: ["Misura la lunghezza totale del muro di contenimento in metri.", "Inserisci l\u2019altezza desiderata in metri.", "Seleziona il tipo di blocco: blocchi da giardino, blocchi in calcestruzzo o pietra naturale.", "Clicca su Calcola per numero blocchi, cappelli, ghiaia e drenaggio."],
+  materialInfo: "I muri di contenimento trattengono il terreno sui pendii e creano aree livellate per giardini, terrazze e vialetti. I materiali pi\u00f9 comuni sono i blocchi autobloccanti da giardino, i blocchi in calcestruzzo e la pietra naturale.\n\nI blocchi autobloccanti (tipo Vibrapac, Besser, RDB) sono la scelta pi\u00f9 diffusa per muri DIY fino a 1,2 m in Italia. Dimensioni standard 40\u00d720\u00d720 cm, peso 15-25 kg. Costo tipico: 3-8 EUR/blocco, o 50-130 EUR/m\u00b2 di faccia del muro posato.\n\nI blocchi in calcestruzzo strutturali (20\u00d720\u00d750 cm) richiedono malta, ferri e riempimento per muri oltre 60 cm. La pietra naturale (tufo, travertino, pietra locale) offre il miglior aspetto ma costa 80-200 EUR/m\u00b2 posata.\n\nTutti i muri necessitano di drenaggio: strato di ghiaione 16/32 mm dietro il muro, tubo drenante forato DN 100 alla base, e feritoie regolari. I cappelli si fissano con adesivo da costruzione.\n\nIn Italia, i muri di contenimento oltre 1,5 m di altezza richiedono progetto strutturale a firma di un ingegnere e permesso di costruire. Consultare il regolamento edilizio comunale.",
+  nextSteps: [{ label: "Calcolatore Fondazione", href: "/calculators/foundation/concrete-footing-calculator/" }, { label: "Calcolatore Ghiaia", href: "/calculators/foundation/gravel-calculator/" }, { label: "Calcolatore Malta", href: "/calculators/foundation/mortar-mix-calculator/" }],
+  installationTips: ["Scavare una trincea di 15-20 cm di profondita e 60 cm di larghezza \u2014 compattare e aggiungere 15 cm di ghiaione.", "Livellare la prima fila con livella da 1,2 m e mazzuolo di gomma.", "Riempire con ghiaione 16/32 mm dietro il muro ad ogni corso.", "Posare un tubo drenante forato DN 100 alla base con pendenza del 2%.", "Sfalsare i giunti di almeno 10 cm tra i corsi.", "Fissare i cappelli con adesivo da costruzione."],
+  commonMistakes: ["Omettere la base di ghiaia \u2014 il muro si assester\u00e0 e si inclinera.", "Dimenticare il drenaggio \u2014 la pressione idrostatica \u00e8 la causa principale di cedimento.", "Costruire oltre 1,5 m senza progetto \u2014 la normativa richiede calcolo strutturale.", "Usare terra come riempimento \u2014 solo ghiaione pulito dietro il muro.", "Non compattare la trincea di base."],
+  faqs: [
+    { question: "Quanti blocchi servono per un muro di contenimento?", answer: "Per blocchi 40\u00d720\u00d720 cm, servono circa 12,5 blocchi per m\u00b2 di faccia. Un muro di 6 m per 1 m richiede circa 75 blocchi pi\u00f9 10% = 83 blocchi." },
+    { question: "Quanto costa un muro di contenimento?", answer: "Blocchi autobloccanti: 50-130 EUR/m\u00b2 posati. Blocchi strutturali con armatura: 80-180 EUR/m\u00b2. Pietra naturale: 80-200 EUR/m\u00b2." },
+    { question: "Serve un permesso per un muro di contenimento?", answer: "In Italia, muri oltre 1,5 m richiedono progetto strutturale e permesso di costruire. Verificare il regolamento edilizio comunale." },
+    { question: "Quanta ghiaia dietro un muro di contenimento?", answer: "Prevedere una zona di 30 cm di ghiaione 16/32 mm dietro tutta la faccia, pi\u00f9 15 cm di base compattata. Per un muro 6\u00d71 m: circa 2 m\u00b3 di ghiaia." },
+    { question: "Qual \u00e8 il miglior blocco per muri di contenimento?", answer: "Per muri DIY sotto 1,2 m, i blocchi autobloccanti. Per muri strutturali oltre 1,5 m, blocchi in calcestruzzo con armatura e progetto ingegneristico." },
+    { question: "Quanto profonda la fondazione?", answer: "La trincea almeno 15 cm con 15 cm di ghiaione compattato. In zone soggette a gelo, la base deve scendere sotto la profondit\u00e0 di gelo (40-60 cm in Nord Italia)." },
+  ],
+};
+
+export const epoxyCalculator: CalculatorSEOContent = {
+  disclaimer: "La resa varia in base al prodotto, porosit\u00e0 del supporto e metodo di applicazione. Lo standard di 10 m\u00b2/litro vale per la maggior parte delle resine per pavimenti garage.",
+  howToUse: ["Misura lunghezza e larghezza del pavimento in metri.", "Seleziona 1 mano per base colorata o 2 mani per massima durabilit\u00e0.", "Regola la resa per litro se il prodotto indica valori diversi (default: 10 m\u00b2/l).", "Clicca su Calcola per litri, kit e stima dei costi."],
+  materialInfo: "Il rivestimento epossidico per pavimenti \u00e8 una resina bicomponente (Parte A resina + Parte B induritore) che indurisce in una superficie dura, lucida e resistente ai chimici. \u00c8 il rivestimento pi\u00f9 diffuso per garage in Italia.\n\nTre tipi principali: epossidico base acqua (30-60 EUR/litro, 10 m\u00b2 di resa, basso odore), epossidico a solvente (50-90 EUR/litro, pi\u00f9 resistente), epossidico 100% solidi (80-150 EUR/litro, qualit\u00e0 professionale).\n\nLa preparazione del supporto \u00e8 il passaggio pi\u00f9 critico. Il calcestruzzo deve essere pulito, asciutto e profilato. Levigatura, pallinatura o mordenzatura acida creano il profilo necessario. Calcestruzzo nuovo deve maturare almeno 28 giorni. Test di umidit\u00e0 obbligatorio.\n\nTemperatura di applicazione tra 10\u00b0C e 30\u00b0C. Sistemi a 2 mani sono carrozzabili in 3-5 giorni. Prodotti disponibili presso ferramenta, centri bricolage (Leroy Merlin, Brico) e distributori specializzati.",
+  nextSteps: [{ label: "Calcolatore Pittura", href: "/calculators/finishing/paint-coverage-calculator/" }, { label: "Calcolatore Soletta", href: "/calculators/foundation/concrete-slab-calculator/" }],
+  installationTips: ["Eseguire test di umidit\u00e0 (telo PE 60\u00d760 cm per 24 h) prima di iniziare.", "Levigare o mordenzare il calcestruzzo per creare un profilo di aderenza.", "Mescolare Parte A e B per il tempo indicato, poi rispettare il tempo di induzione.", "Lavorare a sezioni mantenendo il bordo bagnato.", "Attendere 12-24 h tra le mani e 72 h prima del traffico pedonale."],
+  commonMistakes: ["Saltare la preparazione del supporto \u2014 causa n.1 di distacco.", "Applicare su umidit\u00e0 \u2014 causa bolle e delaminazione.", "Lavorare sotto 10\u00b0C.", "Mescolare troppo prodotto \u2014 la reazione esotermica pu\u00f2 gelificare in minuti.", "Non applicare finitura \u2014 l\u2019epossidico nudo ingiallisce ai raggi UV."],
+  faqs: [
+    { question: "Quanta resina epossidica serve per un garage?", answer: "Un garage doppio standard \u00e8 circa 36 m\u00b2. A 10 m\u00b2/litro, servono circa 3,6 litri per 1 mano o 7,2 litri per 2 mani." },
+    { question: "Quanto costa un pavimento in resina?", answer: "DIY: 15-40 EUR/m\u00b2 in materiale. Un garage di 36 m\u00b2 costa 300-700 EUR. Posa professionale: 40-100 EUR/m\u00b2." },
+    { question: "Basta una mano di epossidico?", answer: "Una mano \u00e8 accettabile per uso leggero. Due mani offrono durabilit\u00e0 nettamente superiore." },
+    { question: "Quanto dura un pavimento epossidico?", answer: "Ben applicato: 5-10 anni in garage residenziale. Epossidico professionale con finitura poliasphartica: 15-20 anni." },
+    { question: "Serve un primer prima dell\u2019epossidico?", answer: "La maggior parte dei kit non richiede primer separato. Per calcestruzzo molto poroso, un primer epossidico migliora l\u2019aderenza." },
+    { question: "Si pu\u00f2 applicare su vecchia vernice?", answer: "No \u2014 rimuovere il vecchio rivestimento con levigatura o sverniciante chimico." },
+  ],
+};
+
+export const pondCalculator: CalculatorSEOContent = {
+  disclaimer: "I calcoli del volume sono approssimativi. Le dimensioni del telo includono 60 cm di sovrapposizione per lato. Il dimensionamento della pompa assume ricircolo completo ogni 2 ore.",
+  howToUse: ["Inserisci la lunghezza massima del laghetto in metri.", "Inserisci la larghezza massima.", "Inserisci la profondit\u00e0 massima \u2014 60 cm-1 m per giardini acquatici, 1-1,5 m per laghetti koi.", "Seleziona la forma: rettangolare, ovale o a rene.", "Clicca su Calcola per volume, dimensioni telo, portata pompa e tessuto non tessuto."],
+  materialInfo: "Un laghetto da giardino \u00e8 uno scavo rivestito con telo flessibile o vasca rigida per pesci ornamentali, piante acquatiche o come elemento decorativo.\n\nI teli in EPDM (1,0 mm) sono lo standard \u2014 flessibili, resistenti ai raggi UV, sicuri per i pesci, durata 20-30 anni. Costo: 5-12 EUR/m\u00b2. I teli in PVC sono pi\u00f9 economici (3-7 EUR/m\u00b2) ma durano 10-15 anni.\n\nDimensione telo = (lunghezza + 2\u00d7profondit\u00e0 + 0,6 m) \u00d7 (larghezza + 2\u00d7profondit\u00e0 + 0,6 m). Le pompe devono ricircolare tutto il volume ogni 2 ore. Il tessuto non tessuto (300 g/m\u00b2) sotto il telo protegge da radici e sassi.\n\nIn Italia, il clima temperato favorisce i laghetti tutto l\u2019anno. I laghetti koi dovrebbero avere almeno 1,2 m di profondit\u00e0 per le regioni del Nord Italia dove le temperature invernali possono scendere sotto zero. Budget per un laghetto di 2.000 litri: 500-1.500 EUR in materiali DIY.",
+  nextSteps: [{ label: "Calcolatore Ghiaia", href: "/calculators/foundation/gravel-calculator/" }, { label: "Calcolatore Buche per Pali", href: "/calculators/outdoor/post-hole-calculator/" }],
+  installationTips: ["Posizionare il laghetto dove riceve 4-6 ore di sole parziale.", "Verificare la posizione delle utenze interrate prima di scavare.", "Scavare ripiani a 30 cm per piante marginali.", "Posare 5 cm di sabbia o tessuto non tessuto sull\u2019intera escavazione.", "Riempire lentamente con tubo, lisciando il telo man mano.", "Far funzionare pompa e filtro per 2 settimane prima di inserire i pesci."],
+  commonMistakes: ["Sottodimensionare il telo \u2014 calcolare sempre lunghezza + (2\u00d7profondit\u00e0) + 0,6 m.", "Omettere il tessuto non tessuto \u2014 radici e sassi forano il telo.", "Sottodimensionare la pompa \u2014 scarso ricircolo causa acqua stagnante e alghe.", "Profondit\u00e0 insufficiente \u2014 laghetti sotto 60 cm si surriscaldano d\u2019estate.", "Costruire troppo vicino agli alberi \u2014 le foglie cadute consumano ossigeno."],
+  faqs: [
+    { question: "Quanti litri ha il mio laghetto?", answer: "Rettangolari: lunghezza \u00d7 larghezza \u00d7 profondit\u00e0 (metri) \u00d7 1.000 = litri. Ovali: moltiplicare per 0,8. A rene: per 0,7." },
+    { question: "Quale dimensione di telo serve?", answer: "Telo = (lunghezza + 2\u00d7profondit\u00e0 + 0,6) \u00d7 (larghezza + 2\u00d7profondit\u00e0 + 0,6). Per un laghetto 3\u00d72,5\u00d71 m: telo di 5,6\u00d75,1 m." },
+    { question: "Quale pompa serve?", answer: "Volume in litri \u00d7 0,5 = portata minima in l/h. Un laghetto di 8.000 l necessita di almeno 4.000 l/h." },
+    { question: "Quanto costa un laghetto da giardino?", answer: "Un giardino acquatico di 2.000 l costa 500-1.500 EUR DIY. Un laghetto 4.000-8.000 l con pompa e filtro costa 1.500-4.000 EUR DIY." },
+    { question: "Quale profondit\u00e0 per i pesci?", answer: "Pesci rossi: minimo 60 cm. Koi: almeno 1,2 m, preferibilmente 1,5 m in Nord Italia." },
+    { question: "Serve un filtro?", answer: "S\u00ec con i pesci. Il filtro biologico converte l\u2019ammoniaca tossica in nitrati innocui." },
+  ],
+};
+
 // ─── MAPPA REGISTRO ─────────────────────────────────────────────────────────
 
 export const registryIT: Record<string, Record<string, CalculatorSEOContent>> = {
@@ -2214,6 +2267,7 @@ export const registryIT: Record<string, Record<string, CalculatorSEOContent>> = 
     "driveway-gravel-calculator": drivewayGravelCalculator,
     "block-fill-calculator": blockFillCalculator,
     "mortar-mix-calculator": mortarMixCalculator,
+    "retaining-wall-calculator": retainingWallCalculator,
   },
   "floor-framing": {
     "rim-joist-calculator": rimJoistCalculator,
@@ -2265,6 +2319,7 @@ export const registryIT: Record<string, Record<string, CalculatorSEOContent>> = 
     "paint-coverage-calculator": paintCoverageCalculator,
     "paint-cost-calculator": paintCostCalculator,
     "primer-calculator": primerCalculator,
+    "epoxy-calculator": epoxyCalculator,
   },
   outdoor: {
     "deck-board-calculator": deckBoardCalculator,
@@ -2272,5 +2327,6 @@ export const registryIT: Record<string, Record<string, CalculatorSEOContent>> = 
     "deck-railing-calculator": deckRailingCalculator,
     "deck-stair-calculator": deckStairCalculator,
     "post-hole-calculator": postHoleCalculator,
+    "pond-calculator": pondCalculator,
   },
 };

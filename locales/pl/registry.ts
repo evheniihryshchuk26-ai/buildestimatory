@@ -2202,6 +2202,59 @@ export const postHoleCalculator: CalculatorSEOContent = {
   ],
 };
 
+// ─── MUR OPOROWY ────────────────────────────────────────────────────────────
+
+export const retainingWallCalculator: CalculatorSEOContent = {
+  disclaimer: "Ta kalkulacja zawiera 10% odpadu na bloczki. Rzeczywiste zapotrzebowanie na kruszywo i drena\u017c zale\u017cy od warunk\u00f3w gruntowych i przepis\u00f3w lokalnych. Mury powy\u017cej 1,2 m wymagaj\u0105 zazwyczaj projektu konstrukcyjnego i pozwolenia na budow\u0119.",
+  howToUse: ["Zmierz ca\u0142kowit\u0105 d\u0142ugo\u015b\u0107 muru oporowego w metrach.", "Wpisz po\u017c\u0105dan\u0105 wysoko\u015b\u0107 w metrach.", "Wybierz typ bloczka: bloczki ogrodowe, pustaki betonowe lub kamie\u0144 naturalny.", "Kliknij Oblicz, aby uzyska\u0107 liczb\u0119 bloczk\u00f3w, daszki, \u017cwir i drena\u017c."],
+  materialInfo: "Mury oporowe utrzymuj\u0105 grunt na terenach pochylonych i tworz\u0105 p\u0142askie powierzchnie pod ogrody, tarasy i podjazdy. Najpopularniejsze materia\u0142y to bloczki betonowe \u0142\u0105czone na zamek, pustaki betonowe i kamie\u0144 naturalny.\n\nBloczki ogrodowe (np. Polbruk, Libet, Jadar) s\u0105 najpopularniejsz\u0105 opcj\u0105 DIY do mur\u00f3w do 1,2 m w Polsce. Standardowe wymiary 40\u00d720\u00d720 cm, masa 15-25 kg. Koszt: 5-15 PLN/bloczek lub 80-200 PLN/m\u00b2 \u015bciany gotowej.\n\nPustaki betonowe (24\u00d724\u00d749 cm) wymagaj\u0105 zaprawy, zbrojenia i wype\u0142nienia betonem przy murach powy\u017cej 60 cm. Kamie\u0144 naturalny (granit, piaskowiec, \u0142upek) daje najlepszy efekt wizualny, ale kosztuje 150-400 PLN/m\u00b2.\n\nKa\u017cdy mur oporowy wymaga drenowania: warstwa kruszywa 16/32 mm za murem, drena\u017c perforowany DN 100 u podstawy, i studzienki odprowadzaj\u0105ce. Daszki mocuje si\u0119 klejem monta\u017cowym.\n\nW Polsce mury oporowe powy\u017cej 2,2 m wymagaj\u0105 pozwolenia na budow\u0119. Mury do 2,2 m mog\u0105 by\u0107 realizowane na zg\u0142oszenie. Zawsze skonsultuj z projektantem.",
+  nextSteps: [{ label: "Kalkulator \u0141awy Fundamentowej", href: "/calculators/foundation/concrete-footing-calculator/" }, { label: "Kalkulator \u017bwiru", href: "/calculators/foundation/gravel-calculator/" }, { label: "Kalkulator Zaprawy", href: "/calculators/foundation/mortar-mix-calculator/" }],
+  installationTips: ["Wykop rowy o g\u0142\u0119boko\u015bci 15-20 cm i szeroko\u015bci 60 cm \u2014 zag\u0119\u015b\u0107 grunt i nasypac 15 cm kruszywa.", "Wypoziomuj pierwszy rz\u0105d poziomic\u0105 1,2 m i m\u0142otkiem gumowym.", "Zasypuj kruszywem 16/32 mm za murem przy ka\u017cdym rz\u0119dzie.", "Zamontuj dren perforowany DN 100 u podstawy ze spadkiem 2%.", "Przesuwaj spoiny o minimum 10 cm mi\u0119dzy rz\u0119dami.", "Przymocuj daszki klejem monta\u017cowym."],
+  commonMistakes: ["Pomini\u0119cie podsypki \u017cwirowej \u2014 mur osi\u0105dzie i pochyli si\u0119.", "Zapomnienie o drenach \u2014 ci\u015bnienie hydrostatyczne to g\u0142\u00f3wna przyczyna uszkodze\u0144.", "Budowa powy\u017cej 1,2 m bez projektu.", "U\u017cycie ziemi jako zasypki \u2014 tylko czyste kruszywo za murem.", "Brak zag\u0119szczenia bazy."],
+  faqs: [
+    { question: "Ile bloczk\u00f3w potrzebuj\u0119 na mur oporowy?", answer: "Dla bloczk\u00f3w 40\u00d720\u00d720 cm potrzeba ok. 12,5 bloczk\u00f3w na m\u00b2. Mur 6 m x 1 m wymaga ok. 75 bloczk\u00f3w + 10% = 83 bloczki." },
+    { question: "Ile kosztuje mur oporowy?", answer: "Bloczki ogrodowe: 80-200 PLN/m\u00b2 gotowego muru. Pustaki ze zbrojeniem: 150-300 PLN/m\u00b2. Kamie\u0144 naturalny: 150-400 PLN/m\u00b2." },
+    { question: "Czy potrzebuj\u0119 pozwolenia na mur oporowy?", answer: "W Polsce mury do 2,2 m mog\u0105 by\u0107 realizowane na zg\u0142oszenie. Powy\u017cej 2,2 m wymagane jest pozwolenie na budow\u0119. Sprawd\u017a lokalne warunki zabudowy." },
+    { question: "Ile \u017cwiru za murem oporowym?", answer: "Zaplanuj 30 cm strefy kruszywa 16/32 za ca\u0142\u0105 \u015bcian\u0105, plus 15 cm podsypki w rowie. Na mur 6 m x 1 m: ok. 2 m\u00b3 kruszywa." },
+    { question: "Jaki bloczek na mur oporowy?", answer: "Na mury DIY do 1,2 m \u2014 bloczki ogrodowe na zamek. Na mury konstrukcyjne powy\u017cej 1,5 m \u2014 pustaki betonowe ze zbrojeniem i projektem." },
+    { question: "Jak g\u0142\u0119boka powinna by\u0107 podstawa?", answer: "R\u00f3w minimum 15 cm z 15 cm kruszywa zag\u0119szczonego. W strefie przemarzania (80-100 cm w Polsce) podstawa powinna si\u0119ga\u0107 poni\u017cej." },
+  ],
+};
+
+export const epoxyCalculator: CalculatorSEOContent = {
+  disclaimer: "Wydajno\u015b\u0107 zale\u017cy od produktu, porowato\u015bci pod\u0142o\u017ca i metody aplikacji. Standard 10 m\u00b2/litr dotyczy wi\u0119kszo\u015bci \u017cywic do pod\u0142\u00f3g gara\u017cowych.",
+  howToUse: ["Zmierz d\u0142ugo\u015b\u0107 i szeroko\u015b\u0107 pod\u0142ogi w metrach.", "Wybierz 1 warstw\u0119 na baz\u0119 lub 2 warstwy na maksymaln\u0105 trwa\u0142o\u015b\u0107.", "Dostosuj wydajno\u015b\u0107 na litr je\u015bli produkt podaje inne warto\u015bci (domy\u015blnie: 10 m\u00b2/l).", "Kliknij Oblicz, aby uzyska\u0107 litry, zestawy i szacunek koszt\u00f3w."],
+  materialInfo: "\u017bywica epoksydowa to dwusk\u0142adnikowy system (cz\u0119\u015b\u0107 A \u017cywica + cz\u0119\u015b\u0107 B utwardzacz), kt\u00f3ry utwardza si\u0119 w tward\u0105, b\u0142yszcz\u0105c\u0105 i odporną na chemikalia powierzchni\u0119. To najpopularniejsza pow\u0142oka na pod\u0142ogi gara\u017cowe w Polsce.\n\nTrzy g\u0142\u00f3wne typy: epoksyd wodny (100-200 PLN/litr, 10 m\u00b2 wydajno\u015bci, niski zapach), epoksyd rozpuszczalnikowy (200-400 PLN/litr, trwalszy), epoksyd 100% cia\u0142 sta\u0142ych (400-700 PLN/litr, jako\u015b\u0107 profesjonalna).\n\nPrzygotowanie pod\u0142o\u017ca to najwa\u017cniejszy krok. Beton musi by\u0107 czysty, suchy i szorstki. Szlifowanie, \u015brutowanie lub trawienie kwasem tworz\u0105 wymagany profil. Nowy beton musi dojrzewa\u0107 minimum 28 dni. Test wilgotno\u015bci obowi\u0105zkowy.\n\nTemperatura aplikacji 10-30\u00b0C. Systemy 2-warstwowe s\u0105 gotowe do najazdu po 3-5 dniach. Produkty dost\u0119pne w marketach budowlanych (Castorama, Leroy Merlin, OBI) i u dystrybutor\u00f3w specjalistycznych.",
+  nextSteps: [{ label: "Kalkulator Farby", href: "/calculators/finishing/paint-coverage-calculator/" }, { label: "Kalkulator P\u0142yty Betonowej", href: "/calculators/foundation/concrete-slab-calculator/" }],
+  installationTips: ["Wykonaj test wilgotno\u015bci (folia PE 60\u00d760 cm na 24 h) przed rozpocz\u0119ciem.", "Przeszlifuj lub wytraw beton kwasem dla profilu przyczepno\u015bci.", "Wymieszaj cz\u0119\u015b\u0107 A i B dok\u0142adnie przez wskazany czas.", "Pracuj sekcjami utrzymuj\u0105c mokr\u0105 kraw\u0119d\u017a.", "Odczekaj 12-24 h mi\u0119dzy warstwami i 72 h przed lekkim ruchem."],
+  commonMistakes: ["Pomini\u0119cie przygotowania pod\u0142o\u017ca \u2014 g\u0142\u00f3wna przyczyna \u0142uszczenia.", "Aplikacja na wilgotne pod\u0142o\u017ce \u2014 powoduje p\u0119cherze i delaminacj\u0119.", "Praca poni\u017cej 10\u00b0C.", "Mieszanie zbyt du\u017cej ilo\u015bci \u2014 reakcja egzotermiczna mo\u017ce \u017celowa\u0107 mieszanin\u0119.", "Brak pow\u0142oki wyko\u0144czeniowej \u2014 epoksyd \u017c\u00f3\u0142knie pod wp\u0142ywem UV."],
+  faqs: [
+    { question: "Ile \u017cywicy epoksydowej na gara\u017c?", answer: "Standardowy podw\u00f3jny gara\u017c to ok. 36 m\u00b2. Przy 10 m\u00b2/litr potrzeba ok. 3,6 l na 1 warstw\u0119 lub 7,2 l na 2 warstwy." },
+    { question: "Ile kosztuje pod\u0142oga epoksydowa?", answer: "DIY: 50-150 PLN/m\u00b2 materia\u0142u. Gara\u017c 36 m\u00b2: 1.800-5.400 PLN. Profesjonalna aplikacja: 150-400 PLN/m\u00b2." },
+    { question: "Czy jedna warstwa epoksydu wystarczy?", answer: "Jedna warstwa daje akceptowaln\u0105 ochron\u0119 przy lekkim u\u017cytkowaniu. Dwie warstwy zapewniaj\u0105 znacznie lepsz\u0105 trwa\u0142o\u015b\u0107." },
+    { question: "Jak d\u0142ugo wytrzymuje pod\u0142oga epoksydowa?", answer: "Prawid\u0142owo na\u0142o\u017cona: 5-10 lat w gara\u017cu domowym. Profesjonalny epoksyd z pow\u0142ok\u0105 poliaspartyczn\u0105: 15-20 lat." },
+    { question: "Czy potrzebny jest grunt przed epoksydem?", answer: "Wi\u0119kszo\u015b\u0107 zestaw\u00f3w nie wymaga osobnego gruntu \u2014 pierwsza warstwa pe\u0142ni t\u0119 funkcj\u0119." },
+    { question: "Czy mo\u017cna nak\u0142ada\u0107 epoksyd na star\u0105 farb\u0119?", answer: "Nie \u2014 nale\u017cy usun\u0105\u0107 star\u0105 pow\u0142ok\u0119 szlifowaniem lub chemicznym usuwaniem." },
+  ],
+};
+
+export const pondCalculator: CalculatorSEOContent = {
+  disclaimer: "Obliczenia obj\u0119to\u015bci s\u0105 przybli\u017cone. Rozmiar folii zawiera 60 cm zak\u0142adu na ka\u017cd\u0105 stron\u0119. Wymiarowanie pompy zak\u0142ada pe\u0142ny obieg co 2 godziny.",
+  howToUse: ["Wpisz maksymaln\u0105 d\u0142ugo\u015b\u0107 oczka wodnego w metrach.", "Wpisz maksymaln\u0105 szeroko\u015b\u0107.", "Wpisz najg\u0142\u0119bsze miejsce \u2014 60 cm-1 m na ogrody wodne, 1-1,5 m na oczka z koi.", "Wybierz kszta\u0142t: prostok\u0105tny, owalny lub nerkowaty.", "Kliknij Oblicz, aby uzyska\u0107 obj\u0119to\u015b\u0107, rozmiar folii, wydajno\u015b\u0107 pompy i geow\u0142\u00f3knin\u0119."],
+  materialInfo: "Oczko wodne to wykop wy\u015bcie\u0142any foli\u0105 lub wann\u0105 preformowan\u0105 na ryby ozdobne, ro\u015bliny wodne lub jako element dekoracyjny.\n\nFolie EPDM (1,0 mm) s\u0105 standardem \u2014 elastyczne, odporne na UV, bezpieczne dla ryb, trwa\u0142o\u015b\u0107 20-30 lat. Koszt: 20-50 PLN/m\u00b2. Folie PVC s\u0105 ta\u0144sze (10-25 PLN/m\u00b2) ale wytrzymuj\u0105 10-15 lat.\n\nRozmiar folii = (d\u0142ugo\u015b\u0107 + 2\u00d7g\u0142\u0119boko\u015b\u0107 + 0,6 m) \u00d7 (szeroko\u015b\u0107 + 2\u00d7g\u0142\u0119boko\u015b\u0107 + 0,6 m). Pompy musz\u0105 obr\u00f3ci\u0107 ca\u0142\u0105 obj\u0119to\u015b\u0107 co 2 h. Geow\u0142\u00f3knina (300 g/m\u00b2) pod foli\u0105 chroni przed korzeniami i kamieniami.\n\nW Polsce polskie zimy wymagaj\u0105 oczek o g\u0142\u0119boko\u015bci minimum 1,2 m dla ryb koi, aby zapewni\u0107 stref\u0119 niezamarzaj\u0105c\u0105. Napowietrzacz lub grza\u0142ka stawowa (100-300 PLN) utrzymuje otw\u00f3r w lodzie zimowy. Bud\u017cet na oczko 2.000 l: 1.500-5.000 PLN materia\u0142\u00f3w DIY.",
+  nextSteps: [{ label: "Kalkulator \u017bwiru", href: "/calculators/foundation/gravel-calculator/" }, { label: "Kalkulator Do\u0142\u00f3w na S\u0142upki", href: "/calculators/outdoor/post-hole-calculator/" }],
+  installationTips: ["Umie\u015b\u0107 oczko w miejscu z 4-6 h cz\u0119\u015bciowego s\u0142o\u0144ca.", "Sprawd\u017a lokalizacj\u0119 instalacji podziemnych przed kopaniem.", "Wykop p\u00f3\u0142ki na 30 cm dla ro\u015blin brzegowych.", "Po\u0142\u00f3\u017c 5 cm piasku lub geow\u0142\u00f3knin\u0119 na ca\u0142ym wykopie.", "Nape\u0142niaj powoli w\u0119\u017cem, wyg\u0142adzaj\u0105c foli\u0119.", "Uruchom pomp\u0119 i filtr na 2 tygodnie przed dodaniem ryb."],
+  commonMistakes: ["Zbyt ma\u0142a folia \u2014 zawsze obliczaj d\u0142ugo\u015b\u0107 + (2\u00d7g\u0142\u0119boko\u015b\u0107) + 0,6 m.", "Pomini\u0119cie geow\u0142\u00f3kniny \u2014 korzenie i kamienie przebijaj\u0105 foli\u0119.", "Za ma\u0142a pompa \u2014 s\u0142aby obieg = zastoj wody i glony.", "Niedostateczna g\u0142\u0119boko\u015b\u0107 \u2014 p\u0142ytkie oczka przegrzewaj\u0105 si\u0119 latem i zamarzaj\u0105 zim\u0105.", "Budowa zbyt blisko drzew \u2014 opadaj\u0105ce li\u015bcie zu\u017cywaj\u0105 tlen."],
+  faqs: [
+    { question: "Ile litr\u00f3w ma moje oczko wodne?", answer: "Prostok\u0105tne: d\u0142ugo\u015b\u0107 \u00d7 szeroko\u015b\u0107 \u00d7 g\u0142\u0119boko\u015b\u0107 (metry) \u00d7 1.000 = litry. Owalne: pomn\u00f3\u017c przez 0,8. Nerkowate: przez 0,7." },
+    { question: "Jaki rozmiar folii potrzebuj\u0119?", answer: "Folia = (d\u0142ugo\u015b\u0107 + 2\u00d7g\u0142\u0119boko\u015b\u0107 + 0,6) \u00d7 (szeroko\u015b\u0107 + 2\u00d7g\u0142\u0119boko\u015b\u0107 + 0,6). Na oczko 3\u00d72,5\u00d71 m: folia 5,6\u00d75,1 m." },
+    { question: "Jak\u0105 pomp\u0119 potrzebuj\u0119?", answer: "Obj\u0119to\u015b\u0107 w litrach \u00d7 0,5 = minimalna wydajno\u015b\u0107 w l/h. Oczko 8.000 l wymaga pompy min. 4.000 l/h." },
+    { question: "Ile kosztuje oczko wodne?", answer: "Ogr\u00f3d wodny 2.000 l: 1.500-5.000 PLN DIY. Oczko 4.000-8.000 l z pomp\u0105 i filtrem: 5.000-15.000 PLN DIY." },
+    { question: "Jaka g\u0142\u0119boko\u015b\u0107 dla ryb?", answer: "Z\u0142ote rybki: min. 60 cm. Koi: min. 1,2 m, najlepiej 1,5 m w polskim klimacie." },
+    { question: "Czy potrzebny filtr?", answer: "Tak, je\u015bli trzymasz ryby. Filtr biologiczny przetwarza toksyczny amoniak na nieszkodliwe azotany." },
+  ],
+};
+
 // ─── REGISTRY MAP ───────────────────────────────────────────────────────────
 
 export const registryPL: Record<string, Record<string, CalculatorSEOContent>> = {
@@ -2218,6 +2271,7 @@ export const registryPL: Record<string, Record<string, CalculatorSEOContent>> = 
     "driveway-gravel-calculator": drivewayGravelCalculator,
     "block-fill-calculator": blockFillCalculator,
     "mortar-mix-calculator": mortarMixCalculator,
+    "retaining-wall-calculator": retainingWallCalculator,
   },
   "floor-framing": {
     "rim-joist-calculator": rimJoistCalculator,
@@ -2269,6 +2323,7 @@ export const registryPL: Record<string, Record<string, CalculatorSEOContent>> = 
     "paint-coverage-calculator": paintCoverageCalculator,
     "paint-cost-calculator": paintCostCalculator,
     "primer-calculator": primerCalculator,
+    "epoxy-calculator": epoxyCalculator,
   },
   outdoor: {
     "deck-board-calculator": deckBoardCalculator,
@@ -2276,5 +2331,6 @@ export const registryPL: Record<string, Record<string, CalculatorSEOContent>> = 
     "deck-railing-calculator": deckRailingCalculator,
     "deck-stair-calculator": deckStairCalculator,
     "post-hole-calculator": postHoleCalculator,
+    "pond-calculator": pondCalculator,
   },
 };

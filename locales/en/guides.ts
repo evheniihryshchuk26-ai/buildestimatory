@@ -65,6 +65,24 @@ const guides: GuidesTranslations = {
           "Gravel costs $20-50 per ton, $30-75 per cubic yard. Complete price guide covering driveways, patios, walkways, drainage, landscaping, delivery costs, and how to calculate the amount you need.",
         href: "/guides/gravel-cost-guide",
       },
+      {
+        title: "How Much Does a Driveway Cost? 2026 Price Guide",
+        description:
+          "Driveway costs $3,000-$15,000 depending on material and size. Complete price guide covering concrete, asphalt, gravel, and paver driveways with cost-by-size breakdowns, factors affecting price, DIY vs contractor, and saving tips.",
+        href: "/guides/driveway-cost-guide",
+      },
+      {
+        title: "Flooring Cost Guide: What Does New Flooring Cost?",
+        description:
+          "Flooring costs $2-$15 per sq ft installed. Complete price guide covering hardwood, laminate, tile, carpet, and LVP with room-by-room estimates and saving tips.",
+        href: "/guides/flooring-cost-guide",
+      },
+      {
+        title: "How Much Does a Fence Cost? 2026 Price Guide",
+        description:
+          "Fence costs $15-$50 per linear foot installed. Complete price guide covering wood, vinyl, chain link, and composite fences with DIY vs pro costs, labor rates, and saving tips.",
+        href: "/guides/fence-cost-guide",
+      },
     ],
   },
 
@@ -1475,6 +1493,352 @@ const guides: GuidesTranslations = {
         question: "Is a gravel driveway cheaper than concrete or asphalt?",
         answer:
           "Yes, significantly. A gravel driveway costs $1 to $3 per square foot for materials ($3 to $8 installed), compared to $8 to $15 per square foot for concrete and $7 to $13 per square foot for asphalt. A 12x50-foot gravel driveway costs $1,800-$4,800 installed versus $4,800-$9,000 for concrete. However, gravel requires more ongoing maintenance and needs periodic top-up every 2-3 years.",
+      },
+    ],
+  },
+
+  drivewayCost: {
+    title: "How Much Does a Driveway Cost? 2026 Price Guide",
+    metaDescription:
+      "A new driveway costs $3,000-$15,000 in 2026 depending on material and size. Complete price guide covering concrete ($6-15/sq ft), asphalt ($3-8/sq ft), gravel ($1-3/sq ft), and pavers ($10-30/sq ft). Includes cost-by-size tables, factors affecting price, DIY vs contractor analysis, and cost-saving tips.",
+
+    heroTitle: "How Much Does a Driveway Cost?",
+    heroSubtitle: "2026 Price Guide",
+    heroDescription:
+      "A complete breakdown of driveway costs by material, size, and region. Covers concrete, asphalt, gravel, and paver driveways with installed prices, lifespan comparisons, factors that affect your total cost, DIY considerations, and proven ways to save money.",
+
+    quickAnswerHeading: "Quick Answer",
+    quickAnswerText:
+      "A new driveway costs $3,000 to $15,000 in 2026, with most homeowners paying $5,000 to $10,000 for a standard two-car driveway. Gravel is the cheapest at $1 to $3 per square foot ($600 to $1,800 for materials). Asphalt runs $3 to $8 per square foot ($1,800 to $4,800). Concrete costs $6 to $15 per square foot ($3,600 to $9,000). Pavers are the most expensive at $10 to $30 per square foot ($6,000 to $18,000). These prices include materials only \u2014 professional installation typically doubles the cost.",
+
+    costByMaterialHeading: "Driveway Cost by Material",
+    costByMaterialIntro:
+      "The material you choose is the single biggest factor in driveway cost. Each option offers a different balance of price, durability, appearance, and maintenance. Here is what each material costs in 2026, including both materials-only and professionally installed prices:",
+    costByMaterialColMaterial: "Material",
+    costByMaterialColCostSqFt: "Installed Cost / sq ft",
+    costByMaterialColLifespan: "Lifespan",
+    costByMaterialColBestFor: "Best For",
+    costByMaterialRows: [
+      { material: "Gravel", costSqFt: "$1 \u2013 $3", lifespan: "15\u201325 years", bestFor: "Rural properties, long driveways, budget-conscious projects. Requires periodic top-up." },
+      { material: "Asphalt", costSqFt: "$3 \u2013 $8", lifespan: "15\u201320 years", bestFor: "Cold climates, mid-range budget. Flexible surface handles freeze-thaw well." },
+      { material: "Concrete", costSqFt: "$6 \u2013 $15", lifespan: "25\u201350 years", bestFor: "Most residential driveways. Durable, low maintenance, can be stamped or stained." },
+      { material: "Stamped Concrete", costSqFt: "$10 \u2013 $20", lifespan: "25\u201350 years", bestFor: "Decorative look at lower cost than pavers. Mimics brick, stone, or slate patterns." },
+      { material: "Asphalt Pavers", costSqFt: "$10 \u2013 $20", lifespan: "25\u201350 years", bestFor: "Premium look with easy individual paver replacement. Wide range of styles." },
+      { material: "Concrete Pavers", costSqFt: "$10 \u2013 $25", lifespan: "25\u201350+ years", bestFor: "High-end residential. Extremely durable, many patterns, permeable options available." },
+      { material: "Natural Stone Pavers", costSqFt: "$15 \u2013 $30", lifespan: "50+ years", bestFor: "Luxury estates, maximum curb appeal. Bluestone, granite, travertine, or flagstone." },
+    ],
+
+    costBySizeHeading: "Driveway Cost by Size",
+    costBySizeIntro:
+      "Driveway size dramatically affects your total cost. A single-car driveway uses roughly 200 to 400 square feet, while a two-car driveway requires 400 to 750 square feet. Circular driveways can exceed 1,000 square feet. Here are total installed costs for the three most common materials:",
+    costBySizeColSize: "Driveway Type",
+    costBySizeColDimensions: "Typical Size",
+    costBySizeColConcrete: "Concrete",
+    costBySizeColAsphalt: "Asphalt",
+    costBySizeColGravel: "Gravel",
+    costBySizeRows: [
+      { size: "Single-Car", dimensions: "10\u00d720 ft (200 sq ft)", concrete: "$1,200 \u2013 $3,000", asphalt: "$600 \u2013 $1,600", gravel: "$200 \u2013 $600" },
+      { size: "Standard Two-Car", dimensions: "16\u00d740 ft (640 sq ft)", concrete: "$3,800 \u2013 $9,600", asphalt: "$1,900 \u2013 $5,100", gravel: "$640 \u2013 $1,900" },
+      { size: "Wide Two-Car", dimensions: "24\u00d740 ft (960 sq ft)", concrete: "$5,800 \u2013 $14,400", asphalt: "$2,900 \u2013 $7,700", gravel: "$960 \u2013 $2,900" },
+      { size: "Long Rural Driveway", dimensions: "12\u00d7100 ft (1,200 sq ft)", concrete: "$7,200 \u2013 $18,000", asphalt: "$3,600 \u2013 $9,600", gravel: "$1,200 \u2013 $3,600" },
+      { size: "Circular Driveway", dimensions: "~1,200 \u2013 1,800 sq ft", concrete: "$7,200 \u2013 $27,000", asphalt: "$3,600 \u2013 $14,400", gravel: "$1,200 \u2013 $5,400" },
+    ],
+
+    factorsHeading: "Factors That Affect Driveway Cost",
+    factorsIntro:
+      "Beyond material and size, several factors can push your driveway cost higher or lower. Understanding these helps you budget accurately and avoid surprises:",
+    factorsItems: [
+      "Material choice: The biggest cost driver. Gravel at $1-$3/sq ft is 5-10x cheaper than natural stone pavers at $15-$30/sq ft. Mid-range options like concrete and asphalt fall between $3-$15/sq ft.",
+      "Driveway area and shape: Larger driveways cost more in total but often have a lower per-square-foot cost due to economies of scale. Curved or circular driveways require more labor and material waste, adding 20-40% versus a straight driveway.",
+      "Site preparation and grading: If your site needs excavation, grading, or fill material, expect to add $1 to $5 per square foot. Sloped driveways require retaining walls or stepped sections that can add $2,000 to $10,000 to the project.",
+      "Drainage requirements: Proper drainage prevents water damage to your driveway and home foundation. Adding a French drain, channel drain, or grading for runoff costs $500 to $3,000 depending on complexity.",
+      "Existing driveway removal: Tearing out an old concrete driveway costs $2 to $4 per square foot. Asphalt removal is slightly cheaper at $1 to $3 per square foot. Gravel can usually be regraded rather than removed.",
+      "Regional labor and material costs: Driveway prices vary 30-50% by region. Urban areas and coastal regions are typically 20-40% more expensive than rural and Midwest locations due to higher labor rates and material transportation costs.",
+      "Permits and HOA requirements: Many municipalities require permits for new driveways ($50-$500). Some HOAs restrict materials or require specific colors, which can limit budget-friendly options.",
+      "Base preparation: A proper gravel sub-base (4-8 inches of compacted aggregate) is essential for concrete and asphalt driveways. This adds $1 to $3 per square foot but prevents cracking and settling.",
+    ],
+
+    diyVsContractorHeading: "DIY vs Hiring a Contractor",
+    diyVsContractorIntro:
+      "Whether you can install a driveway yourself depends entirely on the material. Here is an honest assessment of the DIY potential for each option:",
+    diyVsContractorText1:
+      "Gravel driveways are the most DIY-friendly option. With basic tools (a shovel, rake, and hand tamper or rented plate compactor), a homeowner can install a gravel driveway in a weekend. The process involves clearing the area, laying landscape fabric to suppress weeds, spreading the gravel in 2-inch lifts, and compacting each layer. DIY gravel installation saves 40-60% compared to hiring a contractor, bringing a standard driveway from $1,800-$4,800 installed down to $600-$1,800 in materials only.",
+    diyVsContractorText2:
+      "Concrete and asphalt driveways are not practical DIY projects for most homeowners. Concrete requires specialized equipment (concrete truck, vibrator, bull float, finishing tools), precise timing during the pour, and experience with grading and forming. A poorly poured concrete driveway will crack prematurely and can cost more to repair than to have installed professionally in the first place. Asphalt is even more specialized, requiring hot-mix equipment and heavy rollers that are not available for consumer rental.",
+    diyVsContractorText3:
+      "Paver driveways fall in between. An experienced DIYer with good back strength can install pavers over a long weekend, but the base preparation (excavation, gravel sub-base, sand leveling) is labor-intensive. Mistakes in the base cause pavers to shift and settle unevenly. For most homeowners, getting the base professionally prepared and then laying the pavers yourself offers the best balance of savings (25-35%) and quality results. Always get at least three contractor quotes to compare, and check references and insurance before hiring.",
+
+    savingTipsHeading: "How to Save Money on a New Driveway",
+    savingTipsIntro:
+      "A driveway is a significant investment, but there are proven strategies to reduce the cost without sacrificing quality:",
+    savingTipsItems: [
+      "Get multiple quotes: Driveway prices can vary 30-50% between contractors for identical work. Get at least three written quotes that specify materials, thickness, sub-base preparation, and warranty terms.",
+      "Schedule in the off-season: Late fall and winter are slow months for paving contractors in most regions. Many offer 10-20% discounts during these months to keep crews busy. Spring and summer are peak demand periods with higher prices.",
+      "Choose a simpler design: Straight, rectangular driveways are the cheapest to install. Curves, widening at the garage, turnarounds, and decorative borders all add cost. A basic design with clean edges looks good and saves 15-25%.",
+      "Keep the existing sub-base: If your old driveway has a solid gravel base, a contractor can overlay new material on top rather than excavating and rebuilding from scratch. This saves $1-$3 per square foot on base preparation.",
+      "Consider asphalt over concrete: Asphalt costs roughly half as much as concrete and performs well in cold climates. With regular sealing every 2-3 years ($0.15-$0.25/sq ft), an asphalt driveway lasts 15-20 years.",
+      "Use gravel for long driveways: If your driveway is over 100 feet long, using gravel for the main length and paving just the apron (first 10-20 feet near the street) saves thousands while maintaining curb appeal.",
+      "Combine with a neighbor: If your neighbor also needs driveway work, hiring the same contractor for both projects at the same time can earn a bulk discount of 5-15%. Contractors save on mobilization costs and pass some savings along.",
+    ],
+
+    calculatorCtaHeading: "Estimate Your Driveway Cost",
+    calculatorCtaText: "Use our free calculators to estimate the exact amount of material and cost for your driveway project. Enter your dimensions and get instant results.",
+    calculatorLinks: [
+      { label: "Concrete Slab Calculator", href: "/calculators/foundation/concrete-slab-calculator", description: "Calculate cubic yards, bags, and cost for a concrete driveway." },
+      { label: "Gravel Calculator", href: "/calculators/foundation/gravel-calculator", description: "Estimate tons and cubic yards for a gravel driveway with cost range." },
+      { label: "Driveway Gravel Calculator", href: "/calculators/foundation/driveway-gravel-calculator", description: "Purpose-built calculator for driveway gravel by type and size." },
+    ],
+
+    faqHeading: "Frequently Asked Questions",
+    faqs: [
+      {
+        question: "How much does it cost to build a driveway in 2026?",
+        answer:
+          "A new driveway costs $3,000 to $15,000 in 2026, with the national average around $6,000 to $8,000 for a standard two-car concrete driveway (640 sq ft). Gravel driveways are the cheapest at $1,800-$4,800 installed. Asphalt runs $3,000-$7,000. Concrete costs $4,500-$10,000. Paver driveways are the most expensive at $7,000-$18,000+. Prices vary significantly by region, with coastal and urban areas running 20-40% above the national average.",
+      },
+      {
+        question: "What is the cheapest type of driveway to install?",
+        answer:
+          "Gravel is the cheapest driveway material at $1 to $3 per square foot for materials, or $3 to $8 per square foot installed. A standard two-car gravel driveway costs $1,800-$4,800 installed, compared to $4,500-$10,000 for concrete. Gravel is also the most DIY-friendly option, which can cut costs by 40-60%. The trade-off is that gravel requires more maintenance, including periodic top-ups every 2-3 years and regular raking to keep the surface even.",
+      },
+      {
+        question: "How much does a concrete driveway cost per square foot?",
+        answer:
+          "A concrete driveway costs $6 to $15 per square foot installed in 2026. Basic brushed-finish concrete runs $6-$10/sq ft. Stamped or stained concrete costs $10-$20/sq ft. Exposed aggregate is $8-$15/sq ft. These prices include a 4-inch concrete slab on a 4-6 inch compacted gravel base. A standard 640 sq ft two-car driveway in plain concrete costs $3,800-$9,600 installed. Concrete driveways last 25-50 years with minimal maintenance.",
+      },
+      {
+        question: "Is asphalt or concrete cheaper for a driveway?",
+        answer:
+          "Asphalt is cheaper upfront at $3-$8/sq ft installed versus $6-$15/sq ft for concrete. A standard two-car driveway costs $1,900-$5,100 in asphalt versus $3,800-$9,600 in concrete. However, asphalt requires sealing every 2-3 years ($100-$300 per application) and has a shorter lifespan of 15-20 years versus 25-50 years for concrete. Over a 30-year period, the total cost of ownership is often similar, but asphalt has lower initial outlay.",
+      },
+      {
+        question: "How do I calculate how much my driveway will cost?",
+        answer:
+          "To estimate your driveway cost: (1) Measure the length and width in feet to get the square footage. (2) Multiply by the per-square-foot cost for your chosen material: gravel $1-$3, asphalt $3-$8, concrete $6-$15, pavers $10-$30. (3) Add 10-20% for site preparation, drainage, and contingency. (4) If replacing an existing driveway, add $1-$4/sq ft for removal. Use our free Concrete Slab Calculator or Gravel Calculator for precise material quantity and cost estimates.",
+      },
+      {
+        question: "How long does a driveway last by material type?",
+        answer:
+          "Driveway lifespan varies significantly by material and maintenance. Gravel driveways last 15-25 years but need top-up gravel every 2-3 years. Asphalt lasts 15-20 years with sealing every 2-3 years; without sealing, expect 10-12 years. Concrete driveways last 25-50 years with virtually no maintenance beyond occasional cleaning. Paver driveways last 25-50+ years and have the advantage that individual pavers can be replaced if damaged. Natural stone pavers can last 50+ years.",
+      },
+    ],
+  },
+  flooringCost: {
+    title: "Flooring Cost Guide: What Does New Flooring Cost?",
+    metaDescription:
+      "Flooring costs $2-$15 per sq ft installed. Complete price guide covering hardwood, laminate, tile, carpet, and LVP with room-by-room estimates, installation costs, and saving tips.",
+
+    heroTitle: "Flooring Cost Guide",
+    heroSubtitle: "2026 Prices",
+    heroDescription:
+      "Everything you need to know about flooring costs — from materials and installation to room-by-room budgets and money-saving strategies.",
+
+    quickAnswerHeading: "Quick Answer",
+    quickAnswerText:
+      "New flooring costs $2 to $15 per square foot installed, depending on material type. Laminate is cheapest at $3–$8/sq ft installed, followed by carpet ($3–$11/sq ft), luxury vinyl plank ($4–$10/sq ft), tile ($7–$18/sq ft), and hardwood ($8–$15/sq ft). A typical 500 sq ft project runs $1,500–$7,500 total including materials and labor.",
+
+    flooringTypesHeading: "Flooring Costs by Material Type",
+    flooringTypesIntro: "Material costs vary widely. Here is what each type costs per square foot for materials only, plus typical installed prices.",
+    flooringTypesColType: "Flooring Type",
+    flooringTypesColCost: "Installed Cost (per sq ft)",
+    flooringTypesColBestFor: "Best For",
+    flooringTypesRows: [
+      { type: "Laminate", cost: "$3 – $8", bestFor: "Budget-friendly, DIY projects, rentals" },
+      { type: "Carpet", cost: "$3 – $11", bestFor: "Bedrooms, basements, comfort underfoot" },
+      { type: "Luxury Vinyl Plank (LVP)", cost: "$4 – $10", bestFor: "Kitchens, bathrooms, high-traffic areas" },
+      { type: "Ceramic / Porcelain Tile", cost: "$7 – $18", bestFor: "Bathrooms, kitchens, entryways" },
+      { type: "Engineered Hardwood", cost: "$6 – $14", bestFor: "Living rooms, dining rooms, wide plank look" },
+      { type: "Solid Hardwood", cost: "$8 – $15", bestFor: "Main living areas, long-term value" },
+      { type: "Natural Stone", cost: "$15 – $30", bestFor: "High-end kitchens, bathrooms, foyers" },
+    ],
+
+    costByRoomHeading: "Flooring Cost by Room Size",
+    costByRoomIntro: "Here are typical total project costs (materials + installation) by room type using mid-range materials.",
+    costByRoomColRoom: "Room",
+    costByRoomColTypical: "Typical Total Cost",
+    costByRoomColNotes: "Notes",
+    costByRoomRows: [
+      { room: "Bathroom (50 sq ft)", typical: "$500 – $1,500", notes: "Tile or LVP most common; waterproofing adds cost" },
+      { room: "Bedroom (150 sq ft)", typical: "$750 – $2,000", notes: "Carpet or laminate; pad included for carpet" },
+      { room: "Kitchen (200 sq ft)", typical: "$1,200 – $4,000", notes: "Tile or LVP; subfloor prep often needed" },
+      { room: "Living Room (300 sq ft)", typical: "$1,500 – $5,000", notes: "Hardwood or LVP; largest visual impact" },
+      { room: "Whole House (1,500 sq ft)", typical: "$6,000 – $22,000", notes: "Mix of materials; volume discounts possible" },
+    ],
+
+    installationCostsHeading: "Installation Costs: DIY vs Professional",
+    installationCostsIntro: "Labor is often 40–60% of total flooring cost. Here is how installation costs break down.",
+    installationCostsText1:
+      "Professional installation typically costs $2–$6 per square foot for most flooring types. Tile installation is the most expensive at $5–$10/sq ft due to the skill required for proper thinset application, leveling, and grouting. Carpet installation is usually the cheapest at $1–$3/sq ft.",
+    installationCostsText2:
+      "DIY installation can save 50–70% on labor costs. Click-lock laminate and LVP are the easiest to install yourself — most homeowners can complete a room in a weekend. Tile and carpet are significantly harder and mistakes can be costly. Hardwood nail-down installation requires specialized tools.",
+    installationCostsText3:
+      "Additional costs beyond basic installation include: subfloor repair ($2–$5/sq ft), old flooring removal ($1–$3/sq ft), furniture moving ($50–$200), and transition strips ($5–$15 each). Always get at least 3 quotes and ask what is included.",
+
+    howToCalculateHeading: "How to Calculate Flooring Needed",
+    howToCalculateIntro: "Follow these steps to estimate your flooring materials accurately.",
+    howToCalculateItems: [
+      "Measure each room length and width in feet. Multiply to get square footage.",
+      "For irregularly shaped rooms, break into rectangles and add the areas together.",
+      "Add 10% waste factor for standard straight-lay installations.",
+      "Add 15–20% waste for diagonal, herringbone, or complex patterns.",
+      "Divide total square footage by the coverage per box to get box count.",
+      "Always round up — you cannot buy partial boxes.",
+    ],
+    howToCalculateSummary: "Use our free flooring calculator to get an instant estimate for any room size with automatic waste factor and box count.",
+
+    savingTipsHeading: "How to Save Money on Flooring",
+    savingTipsIntro: "Smart shopping and planning can cut flooring costs by 20–40%.",
+    savingTipsItems: [
+      "Shop during holiday sales (Black Friday, Memorial Day, Labor Day) for 20–30% off materials.",
+      "Buy from flooring warehouse outlets or online retailers instead of big-box stores.",
+      "Choose click-lock flooring (laminate or LVP) and install it yourself to save $2–$6/sq ft on labor.",
+      "Use different materials in different rooms — carpet in bedrooms, LVP in kitchens.",
+      "Order all materials at once for volume discounts (10+ boxes often qualify).",
+      "Keep leftover flooring for future repairs instead of returning it.",
+      "Compare total installed price, not just material price — some cheap flooring costs more to install.",
+    ],
+
+    calculatorCtaHeading: "Calculate Your Flooring Materials",
+    calculatorCtaText: "Use our free flooring calculators to get instant material estimates for any room.",
+    calculatorLinks: [
+      { label: "Flooring Calculator", href: "/calculators/flooring/flooring-calculator/", description: "General flooring sq ft and box calculator" },
+      { label: "Carpet Calculator", href: "/calculators/flooring/carpet-calculator/", description: "Square yards, linear feet, and pad estimate" },
+      { label: "Tile Calculator", href: "/calculators/flooring/tile-calculator/", description: "Tile count, grout, and thinset estimate" },
+      { label: "Laminate Calculator", href: "/calculators/flooring/laminate-calculator/", description: "Plank count, boxes, and underlayment" },
+    ],
+
+    faqHeading: "Frequently Asked Questions",
+    faqs: [
+      { question: "What is the cheapest flooring to install?", answer: "Laminate flooring is the cheapest to install at $3–$8 per square foot total (materials + labor). If you install it yourself, the cost drops to $1–$5/sq ft for materials only. Vinyl plank (LVP) is a close second at $4–$10/sq ft installed." },
+      { question: "How much does it cost to floor a 1,500 sq ft house?", answer: "Flooring a 1,500 sq ft house typically costs $6,000–$22,000 depending on materials chosen. Using a mix of laminate in bedrooms ($3–$5/sq ft), LVP in kitchens and baths ($5–$8/sq ft), and carpet in a few rooms ($4–$7/sq ft) puts most projects in the $8,000–$15,000 range." },
+      { question: "What flooring adds the most value to a home?", answer: "Hardwood flooring adds the most resale value — homes with hardwood floors sell for 2.5% more on average. Engineered hardwood provides a similar look at lower cost. LVP and tile in kitchens/baths are also strong value adds. Carpet generally does not increase home value." },
+      { question: "How long does each type of flooring last?", answer: "Solid hardwood lasts 50–100 years with refinishing. Natural stone lasts 50+ years. Tile lasts 30–50 years. Engineered hardwood lasts 20–40 years. LVP lasts 15–25 years. Laminate lasts 15–25 years. Carpet lasts 5–15 years. Lifespan depends heavily on traffic, maintenance, and quality grade." },
+      { question: "Should I replace flooring before selling my house?", answer: "It depends on condition. Worn carpet should be replaced — it is one of the biggest turnoffs for buyers. Damaged hardwood can be refinished for $3–$5/sq ft instead of replaced. New LVP in kitchens and baths is a high-ROI improvement. Cosmetically dated but functional tile is usually fine to leave." },
+      { question: "What is the best flooring for kitchens?", answer: "Luxury vinyl plank (LVP) and porcelain tile are the best kitchen flooring options. Both are waterproof, durable, and easy to clean. LVP is softer underfoot and easier to install ($4–$10/sq ft). Tile is harder wearing but colder and more expensive to install ($7–$18/sq ft). Avoid laminate and hardwood in kitchens due to moisture concerns." },
+    ],
+  },
+  fenceCost: {
+    title: "How Much Does a Fence Cost? 2026 Price Guide",
+    metaDescription:
+      "Fence costs $15-$50 per linear foot installed in 2026. Complete price guide covering wood privacy fences, vinyl, chain link, composite, and aluminum fencing. Includes material costs, labor rates, DIY vs professional installation, permits, and money-saving tips for your fence project.",
+
+    heroTitle: "How Much Does a Fence Cost?",
+    heroSubtitle: "2026 Price Guide",
+    heroDescription:
+      "A complete breakdown of fence costs by material, style, and project size. Covers wood privacy, vinyl, chain link, composite, and aluminum fencing with material prices, labor rates, DIY vs contractor costs, and tips to save money on your next fence project.",
+
+    quickAnswerHeading: "Quick Answer",
+    quickAnswerText:
+      "A fence costs $15 to $50 per linear foot installed in 2026, depending on the material and style. A 150-foot wood privacy fence costs $2,250 to $4,500 for materials (DIY) or $4,500 to $9,000 professionally installed. Vinyl fencing runs $20 to $40 per foot installed. Chain link is the cheapest at $10 to $25 per foot. Composite and aluminum fences are premium options at $30 to $60 per foot installed.",
+
+    fenceTypesHeading: "Fence Cost by Material",
+    fenceTypesIntro:
+      "The material you choose is the single biggest factor in fence cost. Here are 2026 prices for the most popular fence materials, including both material-only and installed costs per linear foot:",
+    fenceTypesColType: "Fence Material",
+    fenceTypesColCost: "Cost Per Linear Foot (Installed)",
+    fenceTypesColBestFor: "Best For",
+    fenceTypesRows: [
+      { type: "Pressure-Treated Wood", cost: "$15 – $30", bestFor: "Budget privacy fences, most popular residential choice. Lasts 15-20 years." },
+      { type: "Cedar Wood", cost: "$20 – $40", bestFor: "Natural rot resistance, premium appearance. Lasts 15-25 years." },
+      { type: "Vinyl / PVC", cost: "$20 – $40", bestFor: "Zero maintenance, never needs painting. Lasts 20-30 years." },
+      { type: "Chain Link", cost: "$10 – $25", bestFor: "Security, pet containment, lowest cost. Lasts 15-20 years." },
+      { type: "Composite", cost: "$30 – $50", bestFor: "Wood look without maintenance. Lasts 25-50 years." },
+      { type: "Aluminum / Wrought Iron", cost: "$25 – $60", bestFor: "Decorative, pool enclosures, no-maintenance metal. Lasts 20-30 years." },
+    ],
+
+    costByProjectHeading: "Fence Cost by Project Size",
+    costByProjectIntro:
+      "Total fence cost depends on the total linear footage. Most residential fences range from 100 to 300 linear feet. Here are typical 2026 costs for common fence projects using pressure-treated wood privacy fencing:",
+    costByProjectColProject: "Project",
+    costByProjectColTypical: "Typical Cost (Installed)",
+    costByProjectColNotes: "Notes",
+    costByProjectRows: [
+      { project: "Small Backyard (100 ft)", typical: "$1,500 – $3,000", notes: "Materials only: $800-$1,500. Common for townhomes and small lots." },
+      { project: "Average Backyard (150 ft)", typical: "$2,250 – $4,500", notes: "Materials only: $1,200-$2,250. Most common residential fence size." },
+      { project: "Large Backyard (200 ft)", typical: "$3,000 – $6,000", notes: "Materials only: $1,600-$3,000. May qualify for bulk material discounts." },
+      { project: "Full Property (300 ft)", typical: "$4,500 – $9,000", notes: "Materials only: $2,400-$4,500. Consider phased installation to spread cost." },
+      { project: "Privacy Fence with Gate", typical: "$3,000 – $7,000", notes: "Add $200-$600 per gate for hardware, hinges, and latch." },
+      { project: "Pool Enclosure (120 ft)", typical: "$3,600 – $7,200", notes: "Must meet local pool fence codes. Aluminum or vinyl common." },
+    ],
+
+    laborCostsHeading: "Labor & Installation Costs",
+    laborCostsIntro:
+      "Labor is typically 40 to 60% of the total fence cost. Understanding what drives labor costs helps you budget accurately and negotiate fair quotes.",
+    laborCostsText1:
+      "Professional fence installation costs $5 to $15 per linear foot for labor alone, depending on your region, terrain, and fence style. A standard 150-foot wood privacy fence takes a 2-person crew 2 to 3 days to complete. Urban areas and high cost-of-living regions run toward the upper end of the range, while rural areas are typically lower. Expect to pay $750 to $2,250 in labor for a 150-foot fence.",
+    laborCostsText2:
+      "Several factors increase labor costs beyond the base rate. Rocky or clay soil makes post hole digging much harder — some contractors charge $25 to $75 per post for difficult soil conditions or require a rock drill at $200 to $500 extra. Sloped terrain adds 10 to 25% to labor because panels must be stepped or racked, and posts need varying depths. Removing an old fence costs $3 to $8 per linear foot for demolition and disposal ($450 to $1,200 for 150 feet). Tree root removal, utility rerouting, and permit expediting are additional costs that can add $200 to $1,000 to the project.",
+    laborCostsText3:
+      "To get the best price on fence installation, get at least 3 written quotes from licensed contractors. Ask whether the quote includes post hole digging, concrete, cleanup, and old fence removal — some contractors quote labor only and charge materials separately. The best time to schedule fence installation is late fall or winter when contractors are less busy — you can often save 10 to 20% versus peak summer pricing. Always verify that your contractor is licensed, insured, and will pull the fence permit.",
+
+    diyVsProHeading: "DIY vs Professional Installation",
+    diyVsProIntro:
+      "Building a fence yourself can save 40 to 60% of the total cost, but it requires the right tools, physical stamina, and 2 to 4 weekends of work. Here is what to consider:",
+    diyVsProItems: [
+      "DIY material cost for a 150-foot wood privacy fence: $1,200 to $2,250 (posts, rails, pickets, concrete, hardware, screws).",
+      "Professional installation cost for the same fence: $2,250 to $4,500 total (materials + labor), saving you $1,050 to $2,250.",
+      "Tools needed for DIY: post hole digger or auger rental ($50-$100/day), level, string line, circular saw, drill, and tape measure. Total tool cost if you need to buy everything: $200 to $400.",
+      "Physical demands: Digging post holes is the hardest part — each hole takes 15 to 30 minutes by hand in good soil, or 5 minutes with a power auger. Plan for 2 full weekends of work for 150 feet.",
+      "Common DIY pitfalls: posts not plumb, inconsistent spacing, posts not deep enough, fence not on property line. These mistakes can cost more to fix than hiring a pro.",
+      "Best DIY approach: Rent a two-person power auger, set all posts on day 1, let concrete cure overnight, then attach rails and pickets on days 2 and 3.",
+    ],
+    diyVsProSummary:
+      "DIY makes sense if you are handy, have a helper, and want to save $1,000 to $2,000. Hire a pro if you have rocky soil, steep slopes, a long fence line, or limited time. Getting at least one professional quote gives you a baseline to compare against DIY costs.",
+
+    savingTipsHeading: "How to Save Money on Fencing",
+    savingTipsIntro:
+      "Fencing is a significant investment, but these strategies can help reduce costs without sacrificing quality:",
+    savingTipsItems: [
+      "Choose pressure-treated pine over cedar — it costs 30 to 50% less and lasts nearly as long with annual maintenance. Reserve cedar for the visible front sections if budget is tight.",
+      "Build during the off-season — scheduling fence installation in late fall or winter can save 10 to 20% on labor as contractors have less work.",
+      "Share the cost with your neighbor — if the fence sits on the property line, splitting the cost 50/50 is common practice and can cut your cost in half.",
+      "Use pre-made panels instead of stick-building — panels install 3 to 5 times faster, reducing labor costs if hiring a contractor.",
+      "Buy materials in bulk — purchasing all posts, pickets, and rails at once from a lumberyard (not a big box store) often saves 10 to 15% versus retail pricing.",
+      "Skip decorative post caps and fancy picket tops — these add $2 to $15 per post and do not affect fence function. Add them later if desired.",
+      "Get the fence permit yourself — contractors often mark up permit costs. Pulling the permit yourself saves $50 to $150.",
+    ],
+
+    calculatorCtaHeading: "Calculate Your Fence Materials",
+    calculatorCtaText:
+      "Use our free fence calculators to estimate the exact materials and cost for your project. Enter your dimensions and get instant results.",
+    calculatorLinks: [
+      { label: "Fence Calculator", href: "/calculators/outdoor/fence-calculator", description: "Calculate posts, rails, and pickets for any fence length and height." },
+      { label: "Fence Post Calculator", href: "/calculators/outdoor/fence-post-calculator", description: "Get post count and concrete bags needed for your fence." },
+      { label: "Fence Panel Calculator", href: "/calculators/outdoor/fence-panel-calculator", description: "Estimate pre-made panels and posts for your fence project." },
+      { label: "Picket Fence Calculator", href: "/calculators/outdoor/picket-fence-calculator", description: "Calculate pickets with custom width and gap spacing." },
+    ],
+
+    faqHeading: "Frequently Asked Questions",
+    faqs: [
+      {
+        question: "How much does a 200-foot fence cost?",
+        answer:
+          "A 200-foot wood privacy fence costs $3,000 to $6,000 professionally installed using pressure-treated pine, or $1,600 to $3,000 for materials only (DIY). Cedar fencing runs $4,000 to $8,000 installed. Vinyl costs $4,000 to $8,000 installed. The total depends on fence height (4 ft vs 6 ft), post spacing, terrain difficulty, and your local labor market.",
+      },
+      {
+        question: "What is the cheapest fence to build?",
+        answer:
+          "Chain link is the cheapest fence material at $10 to $25 per linear foot installed. For privacy fencing, pressure-treated pine is the most affordable at $15 to $30 per foot installed, or $8 to $15 per foot for materials only (DIY). The cheapest DIY option is a basic 4-foot treated pine fence at $800 to $1,200 for 100 feet of materials.",
+      },
+      {
+        question: "Is it cheaper to build a fence yourself?",
+        answer:
+          "Yes, DIY fence building saves 40 to 60% versus hiring a contractor. A 150-foot wood privacy fence costs $1,200 to $2,250 in materials (DIY) versus $2,250 to $4,500 professionally installed. However, DIY requires a post hole digger or auger rental, a helper, and 2 to 4 weekends of physical labor. Mistakes in post placement or depth can be costly to fix.",
+      },
+      {
+        question: "How long does a wood fence last?",
+        answer:
+          "A pressure-treated pine fence lasts 15 to 20 years with annual staining or sealing. Cedar fences last 15 to 25 years with periodic maintenance. Untreated wood fences can fail in as little as 5 to 7 years. The posts are usually the first component to fail — using pressure-treated posts rated for ground contact (UC4A) and setting them in concrete with a gravel drainage base maximizes post life.",
+      },
+      {
+        question: "Do I need a permit for a fence?",
+        answer:
+          "Most municipalities require a fence permit, especially for fences over 4 feet tall in front yards or 6 feet in backyards. Permit costs range from $20 to $200. You also need to comply with setback requirements (usually 2 to 6 inches inside your property line), height restrictions, and HOA covenants. Call 811 to mark underground utilities before digging. Failure to get a permit can result in fines of $100 to $1,000 or forced removal.",
+      },
+      {
+        question: "Which fence adds the most value to a home?",
+        answer:
+          "A well-maintained wood privacy fence (cedar or treated pine) typically recoups 50 to 70% of its cost in added home value. Vinyl fencing returns 50 to 65% because of its clean appearance and zero maintenance. Chain link adds minimal value and can actually reduce curb appeal. The biggest value add comes from fencing a backyard that was previously unfenced — it dramatically expands usable living space for families with children and pets.",
       },
     ],
   },

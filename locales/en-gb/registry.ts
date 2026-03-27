@@ -2033,6 +2033,59 @@ export const postHoleCalculator: CalculatorSEOContent = {
   ],
 };
 
+// ─── RETAINING WALL ─────────────────────────────────────────────────────────
+
+export const retainingWallCalculator: CalculatorSEOContent = {
+  disclaimer: "This estimate includes a 10% waste factor for blocks. Actual aggregate and drainage requirements depend on ground conditions, water table, and local building regulations. Walls over 1.2 m typically require structural calculations and Building Regulations approval.",
+  howToUse: ["Measure the total length of your retaining wall in metres.", "Enter the desired wall height in metres \u2014 most garden walls are 600 mm to 1.2 m.", "Select your block type: landscape block for decorative walls, concrete block for structural, or natural stone for a traditional look.", "Click Calculate for block count, coping stones, aggregate backfill, and drainage estimates."],
+  materialInfo: "Retaining walls hold back earth on sloping sites and create level areas for gardens, patios, driveways, and planting beds. The three most common materials in the UK are interlocking concrete blocks, concrete masonry units (dense blocks), and natural stone.\n\nInterlocking landscape blocks (Marshalls, Brett, Bradstone) are the most popular choice for DIY retaining walls up to 1.2 m in the UK. Standard blocks measure 300 mm long by 100 mm high by 200 mm deep. Typical cost is \u00a33 to \u00a38 per block, or \u00a340 to \u00a3100 per square metre of wall face installed.\n\nDense concrete blocks (440\u00d7215\u00d7100 mm) are used for structural retaining walls and require mortar, reinforcement, and engineering for walls over 600 mm. Natural stone walls (Cotswold, York, sandstone) provide the most attractive finish but cost \u00a380 to \u00a3200 per m\u00b2 installed.\n\nAll retaining walls require drainage behind the wall: a layer of MOT Type 1 or 20 mm clean aggregate, a 100 mm perforated land drain at the base, and weep holes at regular intervals. Coping stones are bedded in mortar or adhesive.\n\nIn England and Wales, retaining walls do not usually require planning permission unless they are over 1 m high adjacent to a highway, or over 2 m elsewhere. However, walls over 1.2 m should have structural calculations to comply with Building Regulations Part A (Structure). In Scotland, a building warrant may be required.",
+  nextSteps: [{ label: "Concrete Footing Calculator", href: "/calculators/foundation/concrete-footing-calculator/" }, { label: "Gravel Calculator", href: "/calculators/foundation/gravel-calculator/" }, { label: "Mortar Mix Calculator", href: "/calculators/foundation/mortar-mix-calculator/" }],
+  installationTips: ["Excavate a trench 150 to 200 mm deep and 600 mm wide \u2014 compact the subgrade and add 150 mm of MOT Type 1 as a base.", "Level the first course carefully using a 1.2 m spirit level and rubber mallet.", "Backfill with 20 mm clean aggregate behind the wall as you build each course.", "Install a 100 mm perforated land drain at the base with a 1:80 fall to a soakaway or outlet.", "Stagger block joints by at least 100 mm between courses.", "Bed coping stones in mortar or fix with construction adhesive."],
+  commonMistakes: ["Skipping the aggregate base \u2014 the wall will settle and lean.", "Forgetting drainage \u2014 hydrostatic pressure is the primary cause of retaining wall failure in the UK's wet climate.", "Building over 1.2 m without structural calculations \u2014 Building Regulations Part A requires engineering for taller walls.", "Using topsoil as backfill \u2014 only clean aggregate should go behind the wall.", "Not compacting the base trench \u2014 loose ground causes uneven settlement."],
+  faqs: [
+    { question: "How many blocks for a retaining wall?", answer: "For standard 300\u00d7100\u00d7200 mm landscape blocks, you need about 33 blocks per square metre of wall face. A 6 m long, 1 m high wall needs approximately 200 blocks plus 10% waste." },
+    { question: "How much does a retaining wall cost UK?", answer: "Landscape blocks cost \u00a340 to \u00a3100/m\u00b2 installed. Dense block walls cost \u00a360 to \u00a3150/m\u00b2. Natural stone walls cost \u00a380 to \u00a3200/m\u00b2 installed." },
+    { question: "Do I need planning permission for a retaining wall UK?", answer: "Generally no, unless it is over 1 m adjacent to a highway or over 2 m elsewhere. However, walls over 1.2 m should have structural calculations for Building Regulations compliance." },
+    { question: "How much aggregate behind a retaining wall?", answer: "Allow a 300 mm wide zone of 20 mm clean aggregate behind the wall face, plus 150 mm of compacted MOT Type 1 in the base trench. For a 6 m \u00d7 1 m wall, approximately 2 m\u00b3 of aggregate." },
+    { question: "What is the best block for a retaining wall UK?", answer: "For DIY walls under 1.2 m, interlocking landscape blocks from Marshalls, Brett, or Bradstone are the best choice \u2014 no mortar needed. For structural walls over 1.2 m, dense concrete blocks with reinforcement are required." },
+    { question: "How deep should a retaining wall foundation be?", answer: "The foundation trench should be at least 150 mm deep with 150 mm of compacted MOT Type 1. In frost-prone areas, ensure the base is below typical frost depth (450 mm in most of the UK)." },
+  ],
+};
+
+export const epoxyCalculator: CalculatorSEOContent = {
+  disclaimer: "Coverage rates vary by product, surface porosity, and application method. The default 10 m\u00b2 per litre is standard for most garage floor epoxies. Always follow the manufacturer's coverage guidelines.",
+  howToUse: ["Measure the length and width of your floor in metres.", "Select 1 coat for a colour base or 2 coats for maximum durability.", "Adjust the coverage per litre if your product specifies a different rate (default: 10 m\u00b2/l).", "Click Calculate for litres, kit count, and cost estimate."],
+  materialInfo: "Epoxy floor coating is a two-part thermosetting resin (Part A resin + Part B hardener) that cures into a hard, chemical-resistant, glossy surface. It is the most popular garage floor coating in the UK.\n\nThree main types: water-based epoxy (\u00a330 to \u00a360/litre, 10 m\u00b2 coverage, low odour, DIY-friendly), solvent-based epoxy (\u00a350 to \u00a390/litre, more durable), and 100% solids epoxy (\u00a380 to \u00a3150/litre, professional grade).\n\nSurface preparation is the most critical step. The concrete must be clean, dry, and profiled. Diamond grinding, shot-blasting, or acid etching creates the surface profile needed for adhesion. New concrete must cure at least 28 days. Moisture testing is essential in the UK climate \u2014 tape a 600\u00d7600 mm polythene sheet to the floor for 24 hours.\n\nApplication temperature must be between 10\u00b0C and 30\u00b0C with concrete temperature above 13\u00b0C. In the UK, plan application for late spring through early autumn. Most two-coat systems are drive-on ready in 3 to 5 days. Products available from Screwfix, Toolstation, and specialist flooring suppliers.",
+  nextSteps: [{ label: "Paint Calculator", href: "/calculators/finishing/paint-coverage-calculator/" }, { label: "Concrete Slab Calculator", href: "/calculators/foundation/concrete-slab-calculator/" }],
+  installationTips: ["Perform a moisture test (polythene sheet taped to the floor for 24 hours) before starting.", "Grind or acid-etch the concrete to create a surface profile for adhesion.", "Mix Part A and Part B thoroughly for the full time specified, then allow induction time.", "Work in sections and keep a wet edge.", "Allow 12 to 24 hours between coats and 72 hours before foot traffic."],
+  commonMistakes: ["Skipping surface preparation \u2014 number one cause of peeling.", "Applying over moisture \u2014 causes bubbling and delamination.", "Working below 10\u00b0C \u2014 common issue in unheated UK garages.", "Mixing too much at once \u2014 the exothermic reaction can gel the batch.", "Not applying a topcoat \u2014 bare epoxy yellows from UV."],
+  faqs: [
+    { question: "How much epoxy for a garage floor UK?", answer: "A standard double garage is approximately 36 m\u00b2. At 10 m\u00b2 per litre, you need about 3.6 litres for one coat or 7.2 litres for two coats." },
+    { question: "How much does it cost to epoxy a garage floor UK?", answer: "DIY epoxy costs \u00a315 to \u00a340/m\u00b2 for materials. A 36 m\u00b2 garage costs \u00a3300 to \u00a3700. Professional installation costs \u00a340 to \u00a3100/m\u00b2." },
+    { question: "Is 1 coat of epoxy enough?", answer: "One coat is acceptable for light use. Two coats deliver significantly better durability and chemical resistance." },
+    { question: "How long does epoxy flooring last?", answer: "Properly applied, 5 to 10 years in a residential garage. Professional 100% solids with polyaspartic topcoat can last 15 to 20 years." },
+    { question: "Do I need primer before epoxy?", answer: "Most consumer kits do not require a separate primer. For porous or old concrete, a penetrating epoxy primer improves adhesion." },
+    { question: "Can I apply epoxy over old paint?", answer: "No \u2014 remove old coatings by grinding or chemical stripping to expose bare concrete." },
+  ],
+};
+
+export const pondCalculator: CalculatorSEOContent = {
+  disclaimer: "Volume calculations are approximate. Liner size includes 600 mm overlap per side. Pump sizing assumes full circulation every 2 hours.",
+  howToUse: ["Enter the maximum length of your pond in metres.", "Enter the maximum width in metres.", "Enter the deepest depth \u2014 600 mm to 1 m for water gardens, 1 to 1.5 m for koi ponds.", "Select the closest shape: rectangular, oval, or kidney.", "Click Calculate for volume, liner size, pump capacity, and underlayment."],
+  materialInfo: "A garden pond is an excavated water feature lined with flexible or rigid material for ornamental fish, aquatic plants, or as a decorative focal point.\n\nEPDM rubber liners (1.0 mm) are the UK industry standard \u2014 flexible, UV-resistant, fish-safe, lasting 20 to 30 years. Cost: \u00a34 to \u00a310/m\u00b2. PVC liners are cheaper at \u00a32 to \u00a35/m\u00b2 but last 10 to 15 years. Preformed GRP liners are available for small ponds.\n\nLiner size = (length + 2\u00d7depth + 0.6 m) \u00d7 (width + 2\u00d7depth + 0.6 m). Pumps must circulate the full volume every 2 hours. A protective underlay (geotextile felt) beneath the liner prevents punctures from stones and roots.\n\nUK winters rarely freeze deeply enough to kill pond fish, but a pond heater or floating de-icer (\u00a320\u2013\u00a350) keeps a breathing hole in ice. Koi ponds should be at least 1.2 m deep for UK conditions. Products are available from aquatic centres, garden centres, and online specialists like Bradshaws and Water Garden.",
+  nextSteps: [{ label: "Gravel Calculator", href: "/calculators/foundation/gravel-calculator/" }, { label: "Post Hole Calculator", href: "/calculators/outdoor/post-hole-calculator/" }],
+  installationTips: ["Locate the pond where it gets 4 to 6 hours of partial sunlight.", "Check for buried services before digging.", "Dig shelves at 300 mm for marginal plants.", "Lay 50 mm of sand or geotextile underlay over the excavation.", "Fill slowly, smoothing the liner as it fills.", "Run the pump and filter for 2 weeks before adding fish."],
+  commonMistakes: ["Undersizing the liner \u2014 always add (2\u00d7depth) + 0.6 m to each dimension.", "Skipping the underlay \u2014 stones puncture liners from below.", "Undersizing the pump \u2014 poor circulation causes algae.", "Insufficient depth \u2014 shallow ponds overheat in summer.", "Too close to trees \u2014 leaves deplete oxygen."],
+  faqs: [
+    { question: "How many litres is my pond?", answer: "Rectangular: length \u00d7 width \u00d7 depth (metres) \u00d7 1,000 = litres. Oval: multiply by 0.8. Kidney: multiply by 0.7." },
+    { question: "What size pond liner do I need?", answer: "Liner = (length + 2\u00d7depth + 0.6) \u00d7 (width + 2\u00d7depth + 0.6). For a 3\u00d72.5\u00d71 m pond: 5.6 \u00d7 5.1 m minimum." },
+    { question: "What size pump for my pond?", answer: "Volume in litres \u00d7 0.5 = minimum l/h. An 8,000-litre pond needs at least 4,000 l/h." },
+    { question: "How much does a garden pond cost UK?", answer: "A 2,000-litre water garden costs \u00a3400 to \u00a31,200 DIY. A 4,000\u20138,000-litre pond with pump, filter, and edging costs \u00a31,200 to \u00a33,500 DIY." },
+    { question: "How deep should a pond be for fish UK?", answer: "Goldfish: minimum 600 mm. Koi: at least 1.2 m for UK winters." },
+    { question: "Do I need a filter?", answer: "Yes if keeping fish. A biofilter converts toxic ammonia into harmless nitrates. Even plant-only ponds benefit from circulation." },
+  ],
+};
+
 // ─── REGISTRY MAP ───────────────────────────────────────────────────────────
 
 export const registryGB: Record<string, Record<string, CalculatorSEOContent>> = {
@@ -2049,6 +2102,7 @@ export const registryGB: Record<string, Record<string, CalculatorSEOContent>> = 
     "driveway-gravel-calculator": drivewayGravelCalculator,
     "block-fill-calculator": blockFillCalculator,
     "mortar-mix-calculator": mortarMixCalculator,
+    "retaining-wall-calculator": retainingWallCalculator,
   },
   "floor-framing": {
     "rim-joist-calculator": rimJoistCalculator,
@@ -2100,6 +2154,7 @@ export const registryGB: Record<string, Record<string, CalculatorSEOContent>> = 
     "paint-coverage-calculator": paintCoverageCalculator,
     "paint-cost-calculator": paintCostCalculator,
     "primer-calculator": primerCalculator,
+    "epoxy-calculator": epoxyCalculator,
   },
   outdoor: {
     "deck-board-calculator": deckBoardCalculator,
@@ -2107,5 +2162,6 @@ export const registryGB: Record<string, Record<string, CalculatorSEOContent>> = 
     "deck-railing-calculator": deckRailingCalculator,
     "deck-stair-calculator": deckStairCalculator,
     "post-hole-calculator": postHoleCalculator,
+    "pond-calculator": pondCalculator,
   },
 };

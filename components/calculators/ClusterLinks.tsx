@@ -51,6 +51,10 @@ const clusters: Record<string, ClusterConfig> = {
     subCalculators: ["driveway-gravel-calculator"],
     guides: [{ href: "/guides/gravel-cost-guide/", title: "Gravel Cost Guide: Prices Per Ton & Yard" }],
   },
+  "fence-calculator": {
+    subCalculators: ["fence-post-calculator", "fence-panel-calculator", "picket-fence-calculator"],
+    guides: [{ href: "/guides/fence-cost-guide/", title: "Fence Cost Guide" }],
+  },
   "deck-board-calculator": {
     subCalculators: [
       "deck-footing-calculator",
@@ -60,6 +64,10 @@ const clusters: Record<string, ClusterConfig> = {
     guides: [
       { href: "/guides/composite-vs-wood-decking/", title: "Composite vs Wood Decking" },
     ],
+  },
+  "flooring-calculator": {
+    subCalculators: ["carpet-calculator", "tile-calculator", "laminate-calculator"],
+    guides: [{ href: "/guides/flooring-cost-guide/", title: "Flooring Cost Guide" }],
   },
 };
 

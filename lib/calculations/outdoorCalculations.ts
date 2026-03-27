@@ -131,6 +131,127 @@ export function calculatePostHole(
   };
 }
 
+// ─── FENCE CALCULATIONS ──────────────────────────────────────────────────────
+
+export interface FenceResult {
+  postCount: number;
+  railCount: number;
+  picketCount: number;
+  totalLinearFeet: number;
+  sections: number;
+}
+
+export function calculateFence(
+  lengthFt: number,
+  fenceHeightFt: number,
+  postSpacingFt: number
+): FenceResult {
+  const sections = Math.ceil(lengthFt / postSpacingFt);
+  const postCount = sections + 1;
+
+  const railsPerSection = fenceHeightFt <= 5 ? 2 : 3;
+  const railCount = railsPerSection * sections;
+
+  const picketSlotInches = 3.75; // 3.5" picket + 0.25" gap
+  const picketsPerSection = Math.ceil((postSpacingFt * 12) / picketSlotInches);
+  const picketCount = picketsPerSection * sections;
+
+  return {
+    postCount,
+    railCount,
+    picketCount,
+    totalLinearFeet: Math.round(lengthFt * 10) / 10,
+    sections,
+  };
+}
+
+export interface FencePostResult {
+  postCount: number;
+  concreteBags: number;
+  gravelBags: number;
+  postLengthFt: number;
+}
+
+export function calculateFencePost(
+  lengthFt: number,
+  postSpacingFt: number,
+  postLengthFt: number
+): FencePostResult {
+  const sections = Math.ceil(lengthFt / postSpacingFt);
+  const postCount = sections + 1;
+
+  const concreteBags = postCount * 2; // 2 bags of 50lb per post
+  const gravelBags = postCount; // 1 bag gravel per post for drainage
+
+  return {
+    postCount,
+    concreteBags,
+    gravelBags,
+    postLengthFt,
+  };
+}
+
+export interface FencePanelResult {
+  panelCount: number;
+  postCount: number;
+  postCaps: number;
+}
+
+export function calculateFencePanel(
+  lengthFt: number,
+  panelWidthFt: number
+): FencePanelResult {
+  const panelCount = Math.ceil(lengthFt / panelWidthFt);
+  const postCount = panelCount + 1;
+  const postCaps = postCount;
+
+  return {
+    panelCount,
+    postCount,
+    postCaps,
+  };
+}
+
+export interface PicketFenceResult {
+  picketCount: number;
+  railCount: number;
+  postCount: number;
+  totalBoardFeet: number;
+}
+
+export function calculatePicketFence(
+  lengthFt: number,
+  fenceHeightFt: number,
+  picketWidthInches: number,
+  gapInches: number
+): PicketFenceResult {
+  const postSpacingFt = 8;
+  const sections = Math.ceil(lengthFt / postSpacingFt);
+  const postCount = sections + 1;
+
+  const railsPerSection = fenceHeightFt <= 4 ? 2 : 3;
+  const railCount = railsPerSection * sections;
+
+  const slotInches = picketWidthInches + gapInches;
+  const picketCount = Math.ceil((lengthFt * 12) / slotInches);
+
+  const picketBoardFeet =
+    picketCount * (0.75 / 12) * (picketWidthInches / 12) * fenceHeightFt;
+  const railBoardFeet =
+    railCount * (1.5 / 12) * (3.5 / 12) * postSpacingFt;
+  const postBoardFeet =
+    postCount * (3.5 / 12) * (3.5 / 12) * (fenceHeightFt + 2);
+
+  const totalBoardFeet = picketBoardFeet + railBoardFeet + postBoardFeet;
+
+  return {
+    picketCount,
+    railCount,
+    postCount,
+    totalBoardFeet: Math.round(totalBoardFeet * 10) / 10,
+  };
+}
+
 export function calculateDeckStairs(
   totalRiseInches: number,
   stairWidthFt: number
@@ -157,5 +278,55 @@ export function calculateDeckStairs(
     treadBoardCount,
     riserBoardCount,
     totalRunInches,
+  };
+}
+
+// ─── POND ───────────────────────────────────────────────────────────────────
+
+export interface PondResult {
+  gallons: number;
+  linerLengthFt: number;
+  linerWidthFt: number;
+  linerAreaSqFt: number;
+  pumpGPH: number;
+  sandUnderlaymentSqFt: number;
+}
+
+const POND_SHAPE_FACTOR: Record<string, number> = {
+  rectangular: 1.0,
+  oval: 0.8,
+  kidney: 0.7,
+};
+
+export function calculatePond(
+  lengthFt: number,
+  widthFt: number,
+  depthFt: number,
+  pondShape: string,
+): PondResult {
+  const shapeFactor = POND_SHAPE_FACTOR[pondShape] ?? 1.0;
+
+  // Volume in gallons: L × W × D × 7.48 gallons per cubic foot × shape factor
+  const cubicFeet = lengthFt * widthFt * depthFt * shapeFactor;
+  const gallons = Math.round(cubicFeet * 7.48);
+
+  // Liner size: add 2× depth + 2 ft overlap on each dimension
+  const linerLengthFt = Math.ceil(lengthFt + 2 * depthFt + 2);
+  const linerWidthFt = Math.ceil(widthFt + 2 * depthFt + 2);
+  const linerAreaSqFt = linerLengthFt * linerWidthFt;
+
+  // Pump GPH: volume × 0.5 for turnover every 2 hours
+  const pumpGPH = Math.ceil(gallons * 0.5);
+
+  // Sand/underlayment: same as liner area for full coverage
+  const sandUnderlaymentSqFt = linerAreaSqFt;
+
+  return {
+    gallons,
+    linerLengthFt,
+    linerWidthFt,
+    linerAreaSqFt,
+    pumpGPH,
+    sandUnderlaymentSqFt,
   };
 }

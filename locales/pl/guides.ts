@@ -65,6 +65,18 @@ const guides: GuidesTranslations = {
           "Żwir kosztuje 60\u2013180 PLN za tonę. Kompletny przewodnik cenowy: podjazdy, tarasy, ścieżki, drenaż, ogród z kosztami dostawy i obliczaniem ilości.",
         href: "/guides/gravel-cost-guide",
       },
+      {
+        title: "Ile kosztuje podjazd? Przewodnik cenowy 2026",
+        description:
+          "Nowy podjazd kosztuje 5 000\u201380 000 PLN w zale\u017cno\u015bci od materia\u0142u i rozmiaru. Kompletny przewodnik: beton, asfalt, \u017cwir i kostka brukowa z tabelami koszt\u00f3w, czynnikami wp\u0142ywaj\u0105cymi na cen\u0119 i sposobami na oszcz\u0119dno\u015bci.",
+        href: "/guides/driveway-cost-guide",
+      },
+      {
+        title: "Przewodnik po Kosztach Pod\u0142\u00f3g",
+        description:
+          "Pod\u0142ogi kosztuj\u0105 80\u2013600 PLN/m\u00b2 z monta\u017cem. Kompletny przewodnik cenowy dla parkietu, laminatu, p\u0142ytek, wyk\u0142adziny i winylu z szacunkami na pomieszczenie i poradami oszcz\u0119dno\u015bciowymi.",
+        href: "/guides/flooring-cost-guide",
+      },
     ],
   },
 
@@ -1466,6 +1478,289 @@ const guides: GuidesTranslations = {
         answer:
           "Tak, znacznie. Podjazd żwirowy kosztuje 30\u201380 PLN/m² w materiale (80\u2013200 PLN/m² z montażem), w porównaniu z 250\u2013500 PLN/m² za beton i 200\u2013400 PLN/m² za asfalt. Podjazd 3,5 \u00d7 15 m z żwiru kosztuje 4.000\u201310.000 PLN z montażem vs 13.000\u201326.000 PLN za beton. Żwir wymaga jednak więcej konserwacji i dosypywania co 2\u20133 lata.",
       },
+    ],
+  },
+
+  drivewayCost: {
+    title: "Ile kosztuje podjazd? Przewodnik cenowy 2026",
+    metaDescription:
+      "Nowy podjazd kosztuje 5 000\u201380 000 PLN w 2026 w zale\u017cno\u015bci od materia\u0142u i rozmiaru. Kompletny przewodnik: beton (200\u2013500 PLN/m\u00b2), asfalt (150\u2013350 PLN/m\u00b2), \u017cwir (30\u2013100 PLN/m\u00b2), kostka brukowa (250\u2013600 PLN/m\u00b2). Czynniki cenowe, samodzielnie vs firma i porady oszcz\u0119dno\u015bciowe.",
+
+    heroTitle: "Ile kosztuje podjazd?",
+    heroSubtitle: "Przewodnik cenowy 2026",
+    heroDescription:
+      "Kompletne zestawienie koszt\u00f3w podjazdu wed\u0142ug materia\u0142u, rozmiaru i regionu w Polsce. Obejmuje beton, asfalt, \u017cwir i kostk\u0119 brukow\u0105 z cenami z monta\u017cem, por\u00f3wnaniem trwa\u0142o\u015bci, czynnikami wp\u0142ywaj\u0105cymi na koszt i sprawdzonymi sposobami na oszcz\u0119dno\u015bci.",
+
+    quickAnswerHeading: "Szybka odpowied\u017a",
+    quickAnswerText:
+      "Nowy podjazd kosztuje 5 000 do 80 000 PLN w 2026, przy czym wi\u0119kszo\u015b\u0107 w\u0142a\u015bcicieli p\u0142aci 15 000\u201340 000 PLN za standardowy podjazd dwustanowiskowy. \u017bwir jest najta\u0144szy \u2014 30\u2013100 PLN/m\u00b2. Asfalt kosztuje 150\u2013350 PLN/m\u00b2. Beton kosztuje 200\u2013500 PLN/m\u00b2. Kostka brukowa jest najdro\u017csza \u2014 250\u2013600 PLN/m\u00b2. Ceny obejmuj\u0105 materia\u0142y i profesjonalny monta\u017c.",
+
+    costByMaterialHeading: "Koszt podjazdu wed\u0142ug materia\u0142u",
+    costByMaterialIntro:
+      "Wybrany materia\u0142 to najwa\u017cniejszy czynnik kosztu podjazdu. Ka\u017cda opcja oferuje inn\u0105 r\u00f3wnowag\u0119 mi\u0119dzy cen\u0105, trwa\u0142o\u015bci\u0105, wygl\u0105dem i konserwacj\u0105. Oto koszty w Polsce w 2026:",
+    costByMaterialColMaterial: "Materia\u0142",
+    costByMaterialColCostSqFt: "Koszt z monta\u017cem / m\u00b2",
+    costByMaterialColLifespan: "Trwa\u0142o\u015b\u0107",
+    costByMaterialColBestFor: "Najlepszy do",
+    costByMaterialRows: [
+      { material: "\u017bwir / t\u0142ucze\u0144", costSqFt: "30 \u2013 100 PLN", lifespan: "15\u201325 lat", bestFor: "Nieruchomo\u015bci wiejskie, d\u0142ugie podjazdy, ograniczony bud\u017cet. Wymaga okresowego dosypywania." },
+      { material: "Asfalt", costSqFt: "150 \u2013 350 PLN", lifespan: "15\u201320 lat", bestFor: "Dobry stosunek jako\u015bci do ceny. Elastyczna nawierzchnia dobrze znosi mrozy." },
+      { material: "Beton", costSqFt: "200 \u2013 500 PLN", lifespan: "25\u201350 lat", bestFor: "Wi\u0119kszo\u015b\u0107 podjazd\u00f3w domowych. Trwa\u0142y, niska konserwacja, mo\u017ce by\u0107 barwiony lub stemplowany." },
+      { material: "Beton stemplowany", costSqFt: "250 \u2013 600 PLN", lifespan: "25\u201350 lat", bestFor: "Dekoracyjny wygl\u0105d ta\u0144szy ni\u017c kostka. Imituje ceg\u0142\u0119, kamie\u0144 lub \u0142upek." },
+      { material: "Kostka brukowa", costSqFt: "250 \u2013 600 PLN", lifespan: "25\u201350+ lat", bestFor: "Najpopularniejszy wyb\u00f3r w Polsce. Bardzo trwa\u0142a, wiele wzorow, opcje a\u017curowe dost\u0119pne." },
+      { material: "Kamie\u0144 naturalny", costSqFt: "400 \u2013 1 000 PLN", lifespan: "50+ lat", bestFor: "Rezydencje i domy z charakterem. Granit, bazalt, piaskowiec. Najwy\u017csza warto\u015b\u0107 estetyczna." },
+    ],
+
+    costBySizeHeading: "Koszt podjazdu wed\u0142ug rozmiaru",
+    costBySizeIntro:
+      "Rozmiar podjazdu znacząco wpływa na koszt całkowity. Podjazd na jedno auto zajmuje ok. 15\u201330 m\u00b2, a na dwa auta wymaga 30\u201360 m\u00b2. Podjazdy okr\u0119\u017cne mog\u0105 przekracza\u0107 100 m\u00b2.",
+    costBySizeColSize: "Typ podjazdu",
+    costBySizeColDimensions: "Typowy rozmiar",
+    costBySizeColConcrete: "Beton",
+    costBySizeColAsphalt: "Asfalt",
+    costBySizeColGravel: "\u017bwir",
+    costBySizeRows: [
+      { size: "Jednostanowiskowy", dimensions: "3\u00d75 m (15 m\u00b2)", concrete: "3 000 \u2013 7 500 PLN", asphalt: "2 250 \u2013 5 250 PLN", gravel: "450 \u2013 1 500 PLN" },
+      { size: "Dwustanowiskowy standard", dimensions: "5\u00d710 m (50 m\u00b2)", concrete: "10 000 \u2013 25 000 PLN", asphalt: "7 500 \u2013 17 500 PLN", gravel: "1 500 \u2013 5 000 PLN" },
+      { size: "Dwustanowiskowy szeroki", dimensions: "6\u00d712 m (72 m\u00b2)", concrete: "14 400 \u2013 36 000 PLN", asphalt: "10 800 \u2013 25 200 PLN", gravel: "2 160 \u2013 7 200 PLN" },
+      { size: "D\u0142ugi podjazd wiejski", dimensions: "3,5\u00d730 m (105 m\u00b2)", concrete: "21 000 \u2013 52 500 PLN", asphalt: "15 750 \u2013 36 750 PLN", gravel: "3 150 \u2013 10 500 PLN" },
+      { size: "Podjazd okr\u0119\u017cny", dimensions: "~100 \u2013 150 m\u00b2", concrete: "20 000 \u2013 75 000 PLN", asphalt: "15 000 \u2013 52 500 PLN", gravel: "3 000 \u2013 15 000 PLN" },
+    ],
+
+    factorsHeading: "Czynniki wp\u0142ywaj\u0105ce na koszt podjazdu",
+    factorsIntro:
+      "Poza materia\u0142em i rozmiarem kilka czynnik\u00f3w mo\u017ce zwi\u0119kszy\u0107 lub zmniejszy\u0107 koszt. Znajomo\u015b\u0107 ich pomaga dok\u0142adnie zaplanowa\u0107 bud\u017cet:",
+    factorsItems: [
+      "Wyb\u00f3r materia\u0142u: Najwa\u017cniejszy czynnik. \u017bwir za 30\u2013100 PLN/m\u00b2 jest 5\u201310\u00d7 ta\u0144szy ni\u017c kamie\u0144 naturalny za 400\u20131 000 PLN/m\u00b2.",
+      "Powierzchnia i kszta\u0142t: Wi\u0119ksze podjazdy kosztuj\u0105 wi\u0119cej w sumie, ale cz\u0119sto maj\u0105 ni\u017cszy koszt za m\u00b2. Podjazdy \u0142ukowe wymagaj\u0105 20\u201340% wi\u0119cej robocizny.",
+      "Przygotowanie terenu: Je\u015bli teren wymaga wykop\u00f3w lub niwelacji, dolicz 20\u2013120 PLN/m\u00b2. Tereny pochylone wymagaj\u0105 mur\u00f3w oporowych.",
+      "Odwodnienie: Prawid\u0142owe odwodnienie (korytka, studzienki) kosztuje 2 000\u201315 000 PLN. Cz\u0119sto wymagane przez prawo budowlane.",
+      "Usuni\u0119cie starego podjazdu: Usuni\u0119cie starego betonu kosztuje 40\u2013100 PLN/m\u00b2. Asfalt jest troch\u0119 ta\u0144szy. \u017bwir mo\u017cna zazwyczaj przerobi\u0107.",
+      "R\u00f3\u017cnice regionalne: Ceny r\u00f3\u017cni\u0105 si\u0119 o 30\u201350% mi\u0119dzy regionami. Warszawa, Krak\u00f3w i Wroc\u0142aw s\u0105 20\u201340% dro\u017csze ni\u017c mniejsze miasta.",
+      "Pozwolenia: Sprawd\u017a w urz\u0119dzie gminy, czy potrzebne jest zg\u0142oszenie rob\u00f3t budowlanych (100\u20131 000 PLN).",
+      "Podbudowa: Podbudowa z kruszywa \u0142amanego (20\u201340 cm) jest niezb\u0119dna dla betonu i asfaltu. Kosztuje 20\u201360 PLN/m\u00b2 dodatkowe.",
+    ],
+
+    diyVsContractorHeading: "Samodzielnie vs firma",
+    diyVsContractorIntro:
+      "Czy mo\u017cesz zrobi\u0107 podjazd samodzielnie, zale\u017cy od wybranego materia\u0142u. Oto uczciwa ocena:",
+    diyVsContractorText1:
+      "Podjazdy \u017cwirowe s\u0105 najbardziej przyjazne do samodzielnego wykonania. Z podstawowymi narz\u0119dziami (\u0142opata, grabie, ubijak r\u0119czny lub wypo\u017cyczona p\u0142yta wibracyjna) w\u0142a\u015bciciel mo\u017ce zrobi\u0107 podjazd \u017cwirowy w weekend. Proces obejmuje: przygotowanie terenu, u\u0142o\u017cenie geow\u0142\u00f3kniny, rozsypanie \u017cwiru warstwami po 5 cm i zag\u0119szczenie ka\u017cdej warstwy. Samodzielne wykonanie pozwala zaoszcz\u0119dzi\u0107 40\u201360%.",
+    diyVsContractorText2:
+      "Podjazdy betonowe i asfaltowe nie s\u0105 praktyczne do samodzielnego wykonania. Beton wymaga specjalistycznego sprz\u0119tu (gruszka betonowa, wibrator, \u0142ata, paca), precyzyjnego czasu podczas wylewania i do\u015bwiadczenia ze spadkami i szalunkami. \u0179le wylany beton p\u0119ka przedwcze\u015bnie.",
+    diyVsContractorText3:
+      "Podjazdy z kostki brukowej s\u0105 po\u015brodku. Do\u015bwiadczony majsterkowicz mo\u017ce u\u0142o\u017cy\u0107 kostk\u0119 w d\u0142ugi weekend, ale przygotowanie podbudowy jest bardzo pracoch\u0142onne. Dla wi\u0119kszo\u015bci os\u00f3b zlecenie podbudowy fachowcowi i samodzielne u\u0142o\u017cenie kostki daje najlepszy balans mi\u0119dzy oszcz\u0119dno\u015bci\u0105 (25\u201335%) a jako\u015bci\u0105. Zawsze zb\u0119rajcie co najmniej trzy oferty.",
+
+    savingTipsHeading: "Jak zaoszcz\u0119dzi\u0107 na nowym podjeździe",
+    savingTipsIntro:
+      "Podjazd to znacz\u0105ca inwestycja, ale istniej\u0105 sprawdzone strategie obni\u017cania koszt\u00f3w bez utraty jako\u015bci:",
+    savingTipsItems: [
+      "Zbierz kilka ofert: Ceny mog\u0105 si\u0119 r\u00f3\u017cni\u0107 o 30\u201350% mi\u0119dzy firmami. Zbierz co najmniej trzy pisemne oferty z materia\u0142ami, grubo\u015bciami i gwarancj\u0105.",
+      "Zaplanuj poza sezonem: P\u00f3\u017ana jesie\u0144 i zima to martwy sezon. Wiele firm oferuje 10\u201320% rabatu.",
+      "Wybierz prosty design: Proste, prostok\u0105tne podjazdy s\u0105 najta\u0144sze. Łuki i ozdobne obrzeża dodają 15\u201325%.",
+      "Zachowaj istniej\u0105c\u0105 podbudow\u0119: Je\u015bli stary podjazd ma solidn\u0105 podbudow\u0119, mo\u017cna po\u0142o\u017cy\u0107 now\u0105 nawierzchni\u0119 na wierzch \u2014 oszcz\u0119dno\u015b\u0107 20\u201360 PLN/m\u00b2.",
+      "Rozwa\u017c asfalt zamiast betonu: Asfalt kosztuje oko\u0142o po\u0142owy ceny betonu i dobrze znosi polskie mrozy. Z regularn\u0105 konserwacj\u0105 wytrzymuje 15\u201320 lat.",
+      "U\u017cyj \u017cwiru na d\u0142ugich podjazdach: Dla podjazd\u00f3w powy\u017cej 30 m, \u017cwir na g\u0142\u00f3wnym odcinku i kostka tylko przy wje\u017adzie oszcz\u0119dza tysi\u0105ce z\u0142otych.",
+      "Po\u0142\u0105cz z s\u0105siadem: Ta sama firma na dwa projekty mo\u017ce da\u0107 rabat 5\u201315% na kosztach mobilizacji.",
+    ],
+
+    calculatorCtaHeading: "Oszacuj koszt swojego podjazdu",
+    calculatorCtaText: "U\u017cyj naszych darmowych kalkulator\u00f3w, aby oszacowa\u0107 dok\u0142adn\u0105 ilo\u015b\u0107 materia\u0142u i koszt projektu.",
+    calculatorLinks: [
+      { label: "Kalkulator p\u0142yty betonowej", href: "/calculators/foundation/concrete-slab-calculator", description: "Oblicz metry sze\u015bcienne, worki i koszt betonowego podjazdu." },
+      { label: "Kalkulator \u017cwiru", href: "/calculators/foundation/gravel-calculator", description: "Oszacuj tony i metry sze\u015bcienne na \u017cwirowy podjazd z zakresem cenowym." },
+      { label: "Kalkulator \u017cwiru na podjazd", href: "/calculators/foundation/driveway-gravel-calculator", description: "Specjalny kalkulator \u017cwiru na podjazd wed\u0142ug typu i rozmiaru." },
+    ],
+
+    faqHeading: "Cz\u0119sto zadawane pytania",
+    faqs: [
+      {
+        question: "Ile kosztuje nowy podjazd w 2026?",
+        answer:
+          "Nowy podjazd kosztuje 5 000 do 80 000 PLN w 2026, \u015brednio 15 000\u201340 000 PLN za standardowy podjazd dwustanowiskowy z betonu (50 m\u00b2). \u017bwir jest najta\u0144szy \u2014 1 500\u20135 000 PLN z monta\u017cem. Asfalt kosztuje 7 500\u201317 500 PLN. Beton kosztuje 10 000\u201325 000 PLN. Kostka brukowa jest najdro\u017csza \u2014 12 500\u201330 000+ PLN.",
+      },
+      {
+        question: "Jaki jest najta\u0144szy typ podjazdu?",
+        answer:
+          "\u017bwir/t\u0142ucze\u0144 jest najta\u0144szy \u2014 30\u2013100 PLN/m\u00b2 w materiale lub 80\u2013200 PLN/m\u00b2 z monta\u017cem. Standardowy podjazd dwustanowiskowy ze \u017cwiru kosztuje 1 500\u20135 000 PLN z monta\u017cem, vs 10 000\u201325 000 PLN za beton. \u017bwir jest te\u017c najbardziej przyjazny do samodzielnego wykonania \u2014 oszcz\u0119dno\u015b\u0107 40\u201360%.",
+      },
+      {
+        question: "Ile kosztuje podjazd betonowy za metr kwadratowy?",
+        answer:
+          "Podjazd betonowy kosztuje 200 do 500 PLN/m\u00b2 z monta\u017cem w 2026. Prosty beton g\u0142adzony kosztuje 200\u2013350 PLN/m\u00b2. Beton stemplowany kosztuje 250\u2013600 PLN/m\u00b2. Standardowy podjazd dwustanowiskowy 50 m\u00b2 z prostego betonu kosztuje 10 000\u201325 000 PLN z monta\u017cem.",
+      },
+      {
+        question: "Asfalt czy beton jest ta\u0144szy na podjazd?",
+        answer:
+          "Asfalt jest ta\u0144szy pocz\u0105tkowo \u2014 150\u2013350 PLN/m\u00b2 vs 200\u2013500 PLN/m\u00b2 za beton. Jednak asfalt wymaga konserwacji co 2\u20133 lata i wytrzymuje 15\u201320 lat vs 25\u201350 lat dla betonu. W perspektywie 30 lat ca\u0142kowity koszt jest cz\u0119sto por\u00f3wnywalny.",
+      },
+      {
+        question: "Jak obliczy\u0107, ile b\u0119dzie kosztowa\u0142 m\u00f3j podjazd?",
+        answer:
+          "Aby oszacowa\u0107: (1) Zmierz d\u0142ugo\u015b\u0107 i szeroko\u015b\u0107 w metrach dla powierzchni. (2) Pomn\u00f3\u017c przez koszt za m\u00b2: \u017cwir 30\u2013100, asfalt 150\u2013350, beton 200\u2013500, kostka 250\u2013600 PLN. (3) Dodaj 10\u201320% na przygotowanie terenu i rezerw\u0119. U\u017cyj naszych darmowych kalkulator\u00f3w do dok\u0142adnych szacunk\u00f3w.",
+      },
+      {
+        question: "Jak d\u0142ugo wytrzymuje podjazd w zale\u017cno\u015bci od materia\u0142u?",
+        answer:
+          "Trwa\u0142o\u015b\u0107 znacznie si\u0119 r\u00f3\u017cni. \u017bwir wytrzymuje 15\u201325 lat, ale wymaga dosypywania co 2\u20133 lata. Asfalt wytrzymuje 15\u201320 lat z regularn\u0105 konserwacj\u0105. Beton wytrzymuje 25\u201350 lat przy minimalnej konserwacji. Kostka brukowa wytrzymuje 25\u201350+ lat z mo\u017cliwo\u015bci\u0105 wymiany pojedynczych element\u00f3w. Kamie\u0144 naturalny mo\u017ce wytrzyma\u0107 50+ lat.",
+      },
+    ],
+  },
+  flooringCost: {
+    title: "Przewodnik po Kosztach Pod\u0142\u00f3g",
+    metaDescription: "Pod\u0142ogi kosztuj\u0105 80\u2013600 PLN/m\u00b2 z monta\u017cem. Kompletny przewodnik cenowy dla parkietu, laminatu, p\u0142ytek, wyk\u0142adziny i winylu z szacunkami na pomieszczenie i poradami oszcz\u0119dno\u015bciowymi.",
+    heroTitle: "Przewodnik po Kosztach Pod\u0142\u00f3g",
+    heroSubtitle: "Ceny 2026",
+    heroDescription: "Wszystko o kosztach pod\u0142\u00f3g \u2014 materia\u0142y, monta\u017c, bud\u017cety na pomieszczenia i strategie oszcz\u0119dzania.",
+    quickAnswerHeading: "Szybka Odpowied\u017a",
+    quickAnswerText: "Nowa pod\u0142oga kosztuje 80\u2013600 PLN/m\u00b2 z monta\u017cem. Laminat jest najta\u0144szy: 80\u2013250 PLN/m\u00b2, potem wyk\u0142adzina (100\u2013300 PLN), winyl LVP (120\u2013350 PLN), p\u0142ytki (200\u2013600 PLN) i parkiet (250\u2013600 PLN).",
+    flooringTypesHeading: "Koszty wed\u0142ug Typu Materia\u0142u",
+    flooringTypesIntro: "Ceny za metr kwadratowy z monta\u017cem wed\u0142ug typu materia\u0142u.",
+    flooringTypesColType: "Typ Pod\u0142ogi",
+    flooringTypesColCost: "Koszt z Monta\u017cem (za m\u00b2)",
+    flooringTypesColBestFor: "Najlepszy Do",
+    flooringTypesRows: [
+      { type: "Laminat", cost: "80 \u2013 250 PLN", bestFor: "Bud\u017cet, DIY, wynajem" },
+      { type: "Wyk\u0142adzina", cost: "100 \u2013 300 PLN", bestFor: "Sypialnie, komfort" },
+      { type: "Winyl LVP", cost: "120 \u2013 350 PLN", bestFor: "Kuchnie, \u0142azienki, intensywny ruch" },
+      { type: "P\u0142ytki", cost: "200 \u2013 600 PLN", bestFor: "\u0141azienki, kuchnie, przedpokoje" },
+      { type: "Parkiet warstwowy", cost: "150 \u2013 500 PLN", bestFor: "Salony, jadalnie" },
+      { type: "Parkiet lity", cost: "250 \u2013 600 PLN", bestFor: "G\u0142\u00f3wne pomieszczenia, warto\u015b\u0107 d\u0142ugoterminowa" },
+      { type: "Kamie\u0144 naturalny", cost: "400 \u2013 1000 PLN", bestFor: "Wysoka p\u00f3\u0142ka" },
+    ],
+    costByRoomHeading: "Koszt na Pomieszczenie",
+    costByRoomIntro: "Typowe koszty ca\u0142kowite wed\u0142ug typu pomieszczenia z materia\u0142ami \u015bredniej klasy.",
+    costByRoomColRoom: "Pomieszczenie",
+    costByRoomColTypical: "Typowy Koszt Ca\u0142kowity",
+    costByRoomColNotes: "Uwagi",
+    costByRoomRows: [
+      { room: "\u0141azienka (5 m\u00b2)", typical: "1 500 \u2013 5 000 PLN", notes: "P\u0142ytki lub winyl" },
+      { room: "Sypialnia (14 m\u00b2)", typical: "2 500 \u2013 7 000 PLN", notes: "Wyk\u0142adzina lub laminat" },
+      { room: "Kuchnia (18 m\u00b2)", typical: "4 000 \u2013 14 000 PLN", notes: "P\u0142ytki lub winyl" },
+      { room: "Salon (28 m\u00b2)", typical: "5 000 \u2013 18 000 PLN", notes: "Parkiet lub winyl" },
+      { room: "Ca\u0142y dom (140 m\u00b2)", typical: "20 000 \u2013 80 000 PLN", notes: "Mix materia\u0142\u00f3w" },
+    ],
+    installationCostsHeading: "Koszty Monta\u017cu: Samodzielnie vs Fachowiec",
+    installationCostsIntro: "Robocizna to 40\u201360% ca\u0142kowitego kosztu pod\u0142ogi.",
+    installationCostsText1: "Profesjonalny monta\u017c kosztuje 60\u2013150 PLN/m\u00b2. P\u0142ytki s\u0105 najdro\u017csze: 120\u2013300 PLN/m\u00b2. Wyk\u0142adzina jest najta\u0144sza: 30\u201380 PLN/m\u00b2.",
+    installationCostsText2: "Samodzielny monta\u017c oszcz\u0119dza 50\u201370% na roboci\u017anie. Laminat i winyl click s\u0105 naj\u0142atwiejsze do samodzielnego u\u0142o\u017cenia.",
+    installationCostsText3: "Dodatkowe koszty: wyr\u00f3wnanie pod\u0142o\u017ca (60\u2013150 PLN/m\u00b2), usuni\u0119cie starej pod\u0142ogi (30\u201380 PLN/m\u00b2), przenoszenie mebli (200\u2013800 PLN), listwy progowe (20\u201360 PLN/szt.).",
+    howToCalculateHeading: "Jak Obliczy\u0107 Potrzebn\u0105 Ilo\u015b\u0107",
+    howToCalculateIntro: "Kroki do dok\u0142adnego oszacowania materia\u0142\u00f3w.",
+    howToCalculateItems: [
+      "Zmierz d\u0142ugo\u015b\u0107 i szeroko\u015b\u0107 ka\u017cdego pomieszczenia. Pomn\u00f3\u017c dla m\u00b2.",
+      "Nieregularne pomieszczenia podziel na prostok\u0105ty i zsumuj.",
+      "Dodaj 10% na odpad przy prostym uk\u0142adaniu.",
+      "15\u201320% przy uk\u0142adaniu diagonalnym lub w jodk\u0119.",
+      "Podziel ca\u0142o\u015b\u0107 przez zawarto\u015b\u0107 opakowania.",
+      "Zawsze zaokr\u0105glaj w g\u00f3r\u0119.",
+    ],
+    howToCalculateSummary: "U\u017cyj naszego darmowego kalkulatora do natychmiastowych szacunk\u00f3w z automatycznym wsp\u00f3\u0142czynnikiem odpadu.",
+    savingTipsHeading: "Jak Oszcz\u0119dza\u0107 na Pod\u0142odze",
+    savingTipsIntro: "M\u0105dre zakupy mog\u0105 obni\u017cy\u0107 koszty o 20\u201340%.",
+    savingTipsItems: [
+      "Kupuj podczas wyprzeda\u017cy sezonowych na 20\u201330% taniej.",
+      "Kupuj w hurtowniach pod\u0142ogowych.",
+      "Uk\u0142adaj pod\u0142og\u0119 click samodzielnie.",
+      "U\u017cywaj r\u00f3\u017cnych materia\u0142\u00f3w w r\u00f3\u017cnych pomieszczeniach.",
+      "Zamawiaj wszystko naraz na rabaty ilo\u015bciowe.",
+      "Zachowaj resztki na przysz\u0142e naprawy.",
+    ],
+    calculatorCtaHeading: "Oblicz Swoje Materia\u0142y",
+    calculatorCtaText: "U\u017cyj naszych darmowych kalkulator\u00f3w do natychmiastowych szacunk\u00f3w.",
+    calculatorLinks: [
+      { label: "Kalkulator Pod\u0142\u00f3g", href: "/calculators/flooring/flooring-calculator/", description: "Og\u00f3lny kalkulator m\u00b2 i opakowań" },
+      { label: "Kalkulator Wyk\u0142adziny", href: "/calculators/flooring/carpet-calculator/", description: "M\u00b2, metry bie\u017c\u0105ce i podk\u0142ad" },
+      { label: "Kalkulator P\u0142ytek", href: "/calculators/flooring/tile-calculator/", description: "P\u0142ytki, fuga i klej" },
+      { label: "Kalkulator Laminatu", href: "/calculators/flooring/laminate-calculator/", description: "Deski, opakowania i podk\u0142ad" },
+    ],
+    faqHeading: "Cz\u0119sto Zadawane Pytania",
+    faqs: [
+      { question: "Jaka pod\u0142oga jest najta\u0144sza?", answer: "Laminat: 80\u2013250 PLN/m\u00b2 z monta\u017cem. Samodzielnie: 40\u2013100 PLN/m\u00b2 za materia\u0142." },
+      { question: "Ile kosztuje pod\u0142oga w ca\u0142ym domu?", answer: "Dom 140 m\u00b2 kosztuje 20 000\u201380 000 PLN. Typowy mix: 30 000\u201355 000 PLN." },
+      { question: "Jaka pod\u0142oga najbardziej podnosi warto\u015b\u0107 domu?", answer: "Parkiet daje najwi\u0119ksz\u0105 warto\u015b\u0107 przy odsprzeda\u017cy. P\u0142ytki i winyl w kuchni/\u0142azience to te\u017c dobra inwestycja." },
+      { question: "Jak d\u0142ugo wytrzymuje ka\u017cdy typ pod\u0142ogi?", answer: "Parkiet lity: 50\u2013100 lat. Kamie\u0144: 50+. P\u0142ytki: 30\u201350. Laminat/winyl: 15\u201325. Wyk\u0142adzina: 5\u201315." },
+      { question: "Czy powinienem wymieni\u0107 pod\u0142og\u0119 przed sprzeda\u017c\u0105?", answer: "Zu\u017cyta wyk\u0142adzina powinna by\u0107 wymieniona. Uszkodzony parkiet mo\u017cna wycyklinowa\u0107. Nowy winyl w kuchni/\u0142azience to dobra inwestycja." },
+      { question: "Jaka pod\u0142oga najlepsza do kuchni?", answer: "Winyl LVP i gres porcelanowy. Wodoodporne, trwa\u0142e i \u0142atwe do czyszczenia." },
+    ],
+  },
+
+  fenceCost: {
+    title: "Ile kosztuje ogrodzenie? Przewodnik cenowy 2026",
+    metaDescription: "Ogrodzenie kosztuje 80\u2013300 z\u0142 za metr bie\u017c\u0105cy z monta\u017cem w 2026. Kompletny przewodnik cenowy dla ogrodze\u0144 drewnianych, metalowych, PVC i kompozytowych.",
+    heroTitle: "Ile kosztuje ogrodzenie?",
+    heroSubtitle: "Przewodnik cenowy 2026",
+    heroDescription: "Szczeg\u00f3\u0142owe zestawienie koszt\u00f3w ogrodze\u0144 wg materia\u0142u, stylu i rozmiaru projektu z cenami, robocizn\u0105 i poradami oszcz\u0119dno\u015bciowymi.",
+    quickAnswerHeading: "Szybka odpowied\u017a",
+    quickAnswerText: "Ogrodzenie kosztuje 80\u2013300 z\u0142/mb z monta\u017cem w 2026. Drewniane ogrodzenie 15 m: 1 200\u20132 500 z\u0142 materia\u0142y lub 2 500\u20135 000 z\u0142 z monta\u017cem.",
+    fenceTypesHeading: "Koszt wg materia\u0142u",
+    fenceTypesIntro: "Materia\u0142 to g\u0142\u00f3wny czynnik kosztu:",
+    fenceTypesColType: "Materia\u0142",
+    fenceTypesColCost: "Koszt/mb (z monta\u017cem)",
+    fenceTypesColBestFor: "Idealne do",
+    fenceTypesRows: [
+      { type: "Drewno impregnowane", cost: "80 \u2013 180 z\u0142", bestFor: "Ogrodzenia prywatno\u015bciowe. 15\u201320 lat." },
+      { type: "Modrzew / D\u0105b", cost: "120 \u2013 250 z\u0142", bestFor: "Naturalna odporno\u015b\u0107. 15\u201325 lat." },
+      { type: "Siatka ogrodzeniowa", cost: "30 \u2013 80 z\u0142", bestFor: "Najta\u0144sza opcja. 15\u201320 lat." },
+      { type: "Panele ogrodzeniowe", cost: "100 \u2013 200 z\u0142", bestFor: "Trwa\u0142e, bezpieczne. 25\u201340 lat." },
+      { type: "PVC / Kompozyt", cost: "150 \u2013 350 z\u0142", bestFor: "Bez konserwacji. 25\u201350 lat." },
+      { type: "Aluminium / Stal", cost: "150 \u2013 400 z\u0142", bestFor: "Dekoracyjne. 20\u201330 lat." },
+    ],
+    costByProjectHeading: "Koszt wg rozmiaru",
+    costByProjectIntro: "Typowe koszty 2026 dla ogrodze\u0144 drewnianych:",
+    costByProjectColProject: "Projekt",
+    costByProjectColTypical: "Typowy koszt (z monta\u017cem)",
+    costByProjectColNotes: "Uwagi",
+    costByProjectRows: [
+      { project: "Ma\u0142y ogr\u00f3d (10 m)", typical: "1 600 \u2013 3 500 z\u0142", notes: "Materia\u0142y: 800\u20131 800 z\u0142." },
+      { project: "\u015aredni ogr\u00f3d (15 m)", typical: "2 400 \u2013 5 250 z\u0142", notes: "Najcz\u0119stszy rozmiar." },
+      { project: "Du\u017cy ogr\u00f3d (25 m)", typical: "4 000 \u2013 8 750 z\u0142", notes: "Rabat hurtowy mo\u017cliwy." },
+      { project: "Ca\u0142y obw\u00f3d (40 m)", typical: "6 400 \u2013 14 000 z\u0142", notes: "Materia\u0142y: 3 200\u20137 000 z\u0142." },
+      { project: "Z furtk\u0105", typical: "3 500 \u2013 8 000 z\u0142", notes: "Furtka: 300\u20131 000 z\u0142 extra." },
+      { project: "Ogrodzenie basenu", typical: "3 000 \u2013 10 000 z\u0142", notes: "Wymogi bezpiecze\u0144stwa." },
+    ],
+    laborCostsHeading: "Koszty monta\u017cu",
+    laborCostsIntro: "Monta\u017c to 40\u201360% kosztu ca\u0142kowitego.",
+    laborCostsText1: "Monta\u017c profesjonalny: 30\u201380 z\u0142/mb. 15 m trwa 1\u20132 dni.",
+    laborCostsText2: "Kamienisty grunt i nachylenie zwi\u0119kszaj\u0105 koszty o 10\u201325%.",
+    laborCostsText3: "Por\u00f3wnaj min. 3 oferty. Sezon zimowy oszcz\u0119dza 10\u201320%.",
+    diyVsProHeading: "Sam vs fachowiec",
+    diyVsProIntro: "Samodzielna budowa oszcz\u0119dza 40\u201360%:",
+    diyVsProItems: [
+      "Materia\u0142y na 15 m: 1 200\u20132 500 z\u0142.",
+      "Fachowiec: 2 500\u20135 000 z\u0142 ca\u0142o\u015b\u0107.",
+      "Narz\u0119dzia: \u015bwider glebowy, poziomica, pi\u0142a, wkr\u0119tarka.",
+      "1\u20132 weekendy na 15 metr\u00f3w.",
+      "B\u0142\u0119dy: s\u0142upki krzywo osadzone.",
+      "S\u0142upki dzie\u0144 1, wype\u0142nienie dzie\u0144 2.",
+    ],
+    diyVsProSummary: "Samodzielnie oszcz\u0119dzasz 1 200\u20132 500 z\u0142. Przy trudnym gruncie zle\u0107 fachowcowi.",
+    savingTipsHeading: "Jak oszcz\u0119dzi\u0107",
+    savingTipsIntro: "Sposoby na redukcj\u0119 koszt\u00f3w:",
+    savingTipsItems: [
+      "Drewno impregnowane zamiast modrzewia: 30\u201350% taniej.",
+      "Buduj poza sezonem: 10\u201320% oszcz\u0119dno\u015bci.",
+      "Podziel koszt z s\u0105siadem 50/50.",
+      "Gotowe panele szybsze w monta\u017cu.",
+      "Kup w sk\u0142adzie drewna, nie w markecie.",
+      "Zg\u0142oszenie budowlane z\u0142\u00f3\u017c sam.",
+    ],
+    calculatorCtaHeading: "Oblicz materia\u0142y",
+    calculatorCtaText: "U\u017cyj naszych darmowych kalkulator\u00f3w do oszacowania materia\u0142\u00f3w i kosztu.",
+    calculatorLinks: [
+      { label: "Kalkulator ogrodzenia", href: "/calculators/outdoor/fence-calculator", description: "S\u0142upki, rygle i deski." },
+      { label: "Kalkulator s\u0142upk\u00f3w", href: "/calculators/outdoor/fence-post-calculator", description: "S\u0142upki i beton." },
+      { label: "Kalkulator paneli", href: "/calculators/outdoor/fence-panel-calculator", description: "Panele gotowe." },
+      { label: "Kalkulator sztachet", href: "/calculators/outdoor/picket-fence-calculator", description: "Sztachety z dowolnym rozstawem." },
+    ],
+    faqHeading: "Cz\u0119sto zadawane pytania",
+    faqs: [
+      { question: "Ile kosztuje 20 m ogrodzenia?", answer: "Drewniane: 3 200\u20137 000 z\u0142 z monta\u017cem, 1 600\u20133 500 z\u0142 materia\u0142y." },
+      { question: "Najta\u0144sze ogrodzenie?", answer: "Siatka od 30 z\u0142/mb. Prywatno\u015bciowe: drewno od 80 z\u0142/mb." },
+      { question: "Samemu taniej?", answer: "Tak, oszcz\u0119dno\u015b\u0107 40\u201360%." },
+      { question: "Ile wytrzymuje ogrodzenie drewniane?", answer: "Impregnowane: 15\u201320 lat. Modrzew: 15\u201325 lat." },
+      { question: "Potrzebne zg\u0142oszenie?", answer: "Ogrodzenia do 2,2 m zwykle nie wymagaj\u0105 pozwolenia, ale zg\u0142oszenie mo\u017ce by\u0107 konieczne. Sprawd\u017a w urz\u0119dzie gminy." },
+      { question: "Kt\u00f3re ogrodzenie podnosi warto\u015b\u0107?", answer: "Zadbane drewniane ogrodzenie odzyskuje 50\u201370% kosztu w warto\u015bci nieruchomo\u015bci." },
     ],
   },
 };

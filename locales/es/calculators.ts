@@ -119,6 +119,14 @@ export const categories: CategoryMeta[] = [
         category: "Cimentación",
         categorySlug: "foundation",
       },
+      {
+        slug: "retaining-wall-calculator",
+        title: "Calculadora de Muro de Contención",
+        description:
+          "Calculadora de muro de contención — herramienta gratis para muros de bloque, CMU y piedra. Cantidad de bloques, tapas, relleno de grava y drenaje al instante.",
+        category: "Cimentación",
+        categorySlug: "foundation",
+      },
     ],
   },
   {
@@ -471,6 +479,14 @@ export const categories: CategoryMeta[] = [
         category: "Acabados",
         categorySlug: "finishing",
       },
+      {
+        slug: "epoxy-calculator",
+        title: "Calculadora de Epóxico",
+        description:
+          "Calculadora de epóxico — ¿cuánto epóxico para tu piso de cochera? Herramienta gratis para cualquier área. Galones, kits y costo para 1 o 2 capas.",
+        category: "Acabados",
+        categorySlug: "finishing",
+      },
     ],
   },
   {
@@ -519,6 +535,58 @@ export const categories: CategoryMeta[] = [
         category: "Exteriores",
         categorySlug: "outdoor",
       },
+      {
+        slug: "pond-calculator",
+        title: "Calculadora de Estanque",
+        description:
+          "Calculadora de estanque — herramienta gratis para volumen, tamaño de lona y capacidad de bomba. Ingresa dimensiones para estanques rectangulares, ovalados o tipo riñón.",
+        category: "Exteriores",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "fence-calculator",
+        title: "Calculadora de Cercas",
+        description:
+          "Calculadora de cercas — ¿cuántos postes, travesaños y tablas necesito? Herramienta gratis para cercas de madera. Lista completa de materiales al instante.",
+        category: "Exteriores",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "fence-post-calculator",
+        title: "Calculadora de Postes para Cerca",
+        description:
+          "Calculadora de postes para cerca — ¿cuántos postes y sacos de concreto? Herramienta gratis que calcula postes, concreto y grava para cualquier longitud de cerca.",
+        category: "Exteriores",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "fence-panel-calculator",
+        title: "Calculadora de Paneles para Cerca",
+        description:
+          "Calculadora de paneles para cerca — ¿cuántos paneles prefabricados? Herramienta gratis para paneles de 1.8 m y 2.4 m. Cantidad de paneles, postes y tapas.",
+        category: "Exteriores",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "picket-fence-calculator",
+        title: "Calculadora de Cerca de Estacas",
+        description:
+          "Calculadora de cerca de estacas — ¿cuántas estacas con espaciado personalizado? Herramienta gratis para cualquier ancho y separación. Estacas, travesaños, postes y pies tabla.",
+        category: "Exteriores",
+        categorySlug: "outdoor",
+      },
+    ],
+  },
+  {
+    slug: "flooring",
+    title: "Calculadoras de Pisos",
+    description:
+      "Calcula materiales para proyectos de pisos incluyendo madera, alfombra, baldosas y laminado con factor de desperdicio y estimación de costos.",
+    calculators: [
+      { slug: "flooring-calculator", title: "Calculadora de Pisos", description: "Calculadora de pisos — herramienta gratuita para metros cuadrados. Cajas, desperdicio y lista de materiales para madera, vinilo y piso de ingeniería.", category: "Pisos", categorySlug: "flooring" },
+      { slug: "carpet-calculator", title: "Calculadora de Alfombra", description: "Calculadora de alfombra — herramienta gratis para metros cuadrados, metros lineales y base. Para rollos de 3,66 m y 4,57 m con planificación de costuras.", category: "Pisos", categorySlug: "flooring" },
+      { slug: "tile-calculator", title: "Calculadora de Baldosas", description: "Calculadora de baldosas — herramienta gratis para pisos de cerámica, porcelanato y piedra natural. Cantidad de baldosas, cajas, lechada y pegamento.", category: "Pisos", categorySlug: "flooring" },
+      { slug: "laminate-calculator", title: "Calculadora de Laminado", description: "Calculadora de piso laminado — estimador gratis de tablones y cajas con subsuelo. Ingresa dimensiones del cuarto para lista de materiales instantánea.", category: "Pisos", categorySlug: "flooring" },
     ],
   },
 ];

@@ -65,6 +65,18 @@ const guides: GuidesTranslations = {
           "Le gravier coûte 15–40 EUR la tonne. Guide complet des prix pour allées, terrasses, chemins, drainage et aménagement avec frais de livraison et calcul des quantités.",
         href: "/guides/gravel-cost-guide",
       },
+      {
+        title: "Combien coûte une allée ? Guide des prix 2026",
+        description:
+          "Une allée neuve coûte 2 000–15 000 EUR selon le matériau et la taille. Guide complet : béton, enrobé, gravier et pavés avec tableaux de coûts, facteurs de prix et astuces pour économiser.",
+        href: "/guides/driveway-cost-guide",
+      },
+      {
+        title: "Guide des Co\u00fbts de Rev\u00eatement de Sol",
+        description:
+          "Le rev\u00eatement de sol co\u00fbte 20\u2013150 \u20ac/m\u00b2 pos\u00e9. Guide complet pour parquet, stratifi\u00e9, carrelage, moquette et vinyle avec estimations par pi\u00e8ce et conseils d'\u00e9conomie.",
+        href: "/guides/flooring-cost-guide",
+      },
     ],
   },
 
@@ -1460,6 +1472,289 @@ const guides: GuidesTranslations = {
         answer:
           "Oui, nettement. Une allée en gravier coûte 8–20 EUR/m² en matériau (20–50 EUR/m² posée), contre 60–120 EUR/m² pour le béton et 40–80 EUR/m² pour l'enrobé. Une allée de 3,5 × 15 m en gravier coûte 1 000–2 500 EUR posée vs 3 200–6 500 EUR en béton. Toutefois, le gravier demande plus d'entretien et nécessite un rechargement tous les 2–3 ans.",
       },
+    ],
+  },
+
+  drivewayCost: {
+    title: "Combien coûte une allée ? Guide des prix 2026",
+    metaDescription:
+      "Une allée neuve coûte 2 000–15 000 EUR en 2026 selon le matériau et la taille. Guide complet : béton (50–120 EUR/m²), enrobé (30–70 EUR/m²), gravier (8–25 EUR/m²), pavés (60–200 EUR/m²). Facteurs de prix, auto-construction vs artisan et astuces pour économiser.",
+
+    heroTitle: "Combien coûte une allée ?",
+    heroSubtitle: "Guide des prix 2026",
+    heroDescription:
+      "Détail complet des coûts d'allée par matériau, taille et région en France. Couvre le béton, l'enrobé, le gravier et les pavés avec prix posés, comparaison de durabilité, facteurs influençant le coût et moyens éprouvés d'économiser.",
+
+    quickAnswerHeading: "Réponse rapide",
+    quickAnswerText:
+      "Une allée neuve coûte 2 000 à 15 000 EUR en 2026, la plupart des propriétaires payant 4 000 à 10 000 EUR pour une allée double standard. Le gravier est le moins cher à 8–25 EUR/m². L'enrobé coûte 30–70 EUR/m². Le béton revient à 50–120 EUR/m². Les pavés sont les plus chers à 60–200 EUR/m². Ces prix incluent matériaux et pose professionnelle.",
+
+    costByMaterialHeading: "Coût d'allée par matériau",
+    costByMaterialIntro:
+      "Le matériau choisi est le facteur de coût le plus important. Chaque option offre un équilibre différent entre prix, durabilité, esthétique et entretien. Voici les coûts en France en 2026 :",
+    costByMaterialColMaterial: "Matériau",
+    costByMaterialColCostSqFt: "Coût posé / m²",
+    costByMaterialColLifespan: "Durée de vie",
+    costByMaterialColBestFor: "Idéal pour",
+    costByMaterialRows: [
+      { material: "Gravier", costSqFt: "8 – 25 EUR", lifespan: "15–25 ans", bestFor: "Propriétés rurales, longues allées, budget serré. Nécessite un rechargement périodique." },
+      { material: "Enrobé (bitume)", costSqFt: "30 – 70 EUR", lifespan: "15–20 ans", bestFor: "Bon rapport qualité-prix. Surface souple qui résiste bien au gel-dégel." },
+      { material: "Béton", costSqFt: "50 – 120 EUR", lifespan: "25–50 ans", bestFor: "La plupart des allées résidentielles. Durable, peu d'entretien, peut être teinté ou imprimé." },
+      { material: "Béton imprimé", costSqFt: "60 – 150 EUR", lifespan: "25–50 ans", bestFor: "Aspect décoratif à moindre coût que les pavés. Imite la brique, la pierre ou l'ardoise." },
+      { material: "Pavés en béton", costSqFt: "60 – 150 EUR", lifespan: "25–50+ ans", bestFor: "Résidentiel haut de gamme. Très durable, nombreux motifs, options perméables disponibles." },
+      { material: "Pavés en pierre naturelle", costSqFt: "80 – 200 EUR", lifespan: "50+ ans", bestFor: "Allées prestigieuses. Granit, grès, calcaire ou porphyre. Valeur maximale." },
+    ],
+
+    costBySizeHeading: "Coût d'allée par taille",
+    costBySizeIntro:
+      "La taille de l'allée affecte considérablement le coût total. Une allée simple fait environ 15–30 m², une allée double 30–60 m². Les allées circulaires peuvent dépasser 100 m².",
+    costBySizeColSize: "Type d'allée",
+    costBySizeColDimensions: "Taille typique",
+    costBySizeColConcrete: "Béton",
+    costBySizeColAsphalt: "Enrobé",
+    costBySizeColGravel: "Gravier",
+    costBySizeRows: [
+      { size: "Simple (1 voiture)", dimensions: "3×5 m (15 m²)", concrete: "750 – 1 800 EUR", asphalt: "450 – 1 050 EUR", gravel: "120 – 375 EUR" },
+      { size: "Double standard", dimensions: "5×10 m (50 m²)", concrete: "2 500 – 6 000 EUR", asphalt: "1 500 – 3 500 EUR", gravel: "400 – 1 250 EUR" },
+      { size: "Double large", dimensions: "6×12 m (72 m²)", concrete: "3 600 – 8 640 EUR", asphalt: "2 160 – 5 040 EUR", gravel: "576 – 1 800 EUR" },
+      { size: "Longue allée rurale", dimensions: "3,5×30 m (105 m²)", concrete: "5 250 – 12 600 EUR", asphalt: "3 150 – 7 350 EUR", gravel: "840 – 2 625 EUR" },
+      { size: "Allée circulaire", dimensions: "~100 – 150 m²", concrete: "5 000 – 18 000 EUR", asphalt: "3 000 – 10 500 EUR", gravel: "800 – 3 750 EUR" },
+    ],
+
+    factorsHeading: "Facteurs influençant le coût d'une allée",
+    factorsIntro:
+      "Au-delà du matériau et de la taille, plusieurs facteurs peuvent faire varier le prix. Les connaître aide à budgéter avec précision :",
+    factorsItems: [
+      "Choix du matériau : Le principal facteur de coût. Le gravier à 8–25 EUR/m² est 5–10× moins cher que la pierre naturelle à 80–200 EUR/m².",
+      "Surface et forme : Les allées plus grandes coûtent plus au total mais souvent moins au m². Les allées courbes nécessitent 20–40 % de main-d'œuvre supplémentaire.",
+      "Terrassement et nivellement : Si le terrain nécessite des travaux de terrassement, comptez 5–30 EUR/m² supplémentaires. Les terrains en pente exigent des murs de soutènement.",
+      "Drainage : Un bon drainage (caniveaux, regards) coûte 500–3 000 EUR selon la complexité. Souvent exigé par la réglementation française.",
+      "Démolition de l'ancienne allée : Retirer du vieux béton coûte 10–25 EUR/m². L'enrobé est un peu moins cher. Le gravier peut être redistribué.",
+      "Différences régionales : Les prix varient de 30–50 % selon la région. L'Île-de-France et la Côte d'Azur sont 20–40 % plus chères que les zones rurales.",
+      "Autorisations : Une déclaration préalable de travaux peut être nécessaire selon le PLU (50–300 EUR). Vérifier auprès de la mairie.",
+      "Fondation : Une couche de fondation en tout-venant compacté (20–40 cm) est indispensable pour le béton et l'enrobé. Coûte 5–15 EUR/m² supplémentaires.",
+    ],
+
+    diyVsContractorHeading: "Faire soi-même vs artisan",
+    diyVsContractorIntro:
+      "Que vous puissiez poser une allée vous-même dépend entièrement du matériau. Voici une évaluation honnête :",
+    diyVsContractorText1:
+      "Les allées en gravier sont l'option la plus accessible en auto-construction. Avec des outils de base (pelle, râteau, dame ou plaque vibrante louée), un particulier peut réaliser une allée en gravier en un week-end. Le processus comprend : préparer la surface, poser un géotextile anti-mauvaises herbes, étaler le gravier en couches de 5 cm et compacter chaque couche. L'auto-construction permet d'économiser 40–60 %.",
+    diyVsContractorText2:
+      "Les allées en béton et en enrobé ne sont pas des projets réalistes pour la plupart des particuliers. Le béton nécessite du matériel spécialisé (camion-toupie, aiguille vibrante, règle de maçon, taloche), un timing précis lors du coulage et de l'expérience en nivellement et coffrage. Un béton mal coulé se fissurera prématurément.",
+    diyVsContractorText3:
+      "Les allées pavées se situent entre les deux. Un bricoleur expérimenté peut poser des pavés sur un long week-end, mais la préparation du fond de forme est très physique. Pour la plupart, faire préparer la fondation par un professionnel puis poser les pavés soi-même offre le meilleur compromis entre économies (25–35 %) et qualité. Demandez toujours au moins trois devis et vérifiez les références.",
+
+    savingTipsHeading: "Comment économiser sur une allée neuve",
+    savingTipsIntro:
+      "Une allée représente un investissement conséquent, mais il existe des stratégies éprouvées pour réduire le coût sans sacrifier la qualité :",
+    savingTipsItems: [
+      "Comparer plusieurs devis : Les prix peuvent varier de 30–50 % entre artisans. Demandez au moins trois devis détaillés précisant matériaux, épaisseurs et garanties.",
+      "Planifier hors saison : L'automne et l'hiver sont les mois creux. Beaucoup d'artisans offrent 10–20 % de remise pour maintenir leurs équipes actives.",
+      "Choisir un design simple : Les allées droites et rectangulaires sont les moins chères. Courbes et bordures décoratives ajoutent 15–25 %.",
+      "Conserver la fondation existante : Si l'ancienne allée a une bonne assise, un artisan peut poser le nouveau revêtement dessus — économie de 5–15 EUR/m².",
+      "Envisager l'enrobé plutôt que le béton : L'enrobé coûte environ moitié prix et résiste bien au gel. Avec un entretien régulier, il dure 15–20 ans.",
+      "Utiliser le gravier pour les longues allées : Pour les allées de plus de 30 m, du gravier sur la partie principale et du pavé uniquement à l'entrée permet d'économiser des milliers d'euros.",
+      "Grouper avec un voisin : Même artisan pour deux chantiers simultanés = remise de 5–15 % sur les frais de mobilisation.",
+    ],
+
+    calculatorCtaHeading: "Estimez le coût de votre allée",
+    calculatorCtaText: "Utilisez nos calculateurs gratuits pour estimer la quantité exacte de matériau et le coût de votre projet d'allée.",
+    calculatorLinks: [
+      { label: "Calculateur de dalle béton", href: "/calculators/foundation/concrete-slab-calculator", description: "Calculez mètres cubes, sacs et coût pour une allée en béton." },
+      { label: "Calculateur de gravier", href: "/calculators/foundation/gravel-calculator", description: "Estimez tonnes et mètres cubes pour une allée en gravier avec fourchette de prix." },
+      { label: "Calculateur gravier d'allée", href: "/calculators/foundation/driveway-gravel-calculator", description: "Calculateur dédié au gravier d'allée par type et taille." },
+    ],
+
+    faqHeading: "Questions fréquentes",
+    faqs: [
+      {
+        question: "Combien coûte une allée neuve en 2026 ?",
+        answer:
+          "Une allée neuve coûte 2 000 à 15 000 EUR en 2026, avec une moyenne de 4 000 à 10 000 EUR pour une allée double standard en béton (50 m²). Le gravier est le moins cher à 400–1 250 EUR posé. L'enrobé coûte 1 500–3 500 EUR. Le béton revient à 2 500–6 000 EUR. Les pavés sont les plus chers à 3 000–10 000+ EUR.",
+      },
+      {
+        question: "Quel est le type d'allée le moins cher ?",
+        answer:
+          "Le gravier est le matériau le moins cher à 8–25 EUR/m² en matériau, ou 20–50 EUR/m² posé. Une allée double standard en gravier coûte 400–1 250 EUR posée, contre 2 500–6 000 EUR en béton. Le gravier est aussi l'option la plus accessible en auto-construction, ce qui réduit les coûts de 40–60 %. L'inconvénient : un rechargement nécessaire tous les 2–3 ans.",
+      },
+      {
+        question: "Combien coûte une allée en béton au mètre carré ?",
+        answer:
+          "Une allée en béton coûte 50 à 120 EUR/m² posée en 2026. Le béton lissé simple revient à 50–80 EUR/m². Le béton imprimé coûte 60–150 EUR/m². Ces prix incluent une dalle de 15 cm sur fondation compactée. Une allée double de 50 m² en béton simple coûte 2 500–6 000 EUR posée.",
+      },
+      {
+        question: "L'enrobé est-il moins cher que le béton pour une allée ?",
+        answer:
+          "Oui, à l'installation : 30–70 EUR/m² pour l'enrobé vs 50–120 EUR/m² pour le béton. Cependant, l'enrobé nécessite un entretien tous les 2–3 ans et dure 15–20 ans contre 25–50 ans pour le béton. Sur 30 ans, le coût total est souvent comparable.",
+      },
+      {
+        question: "Comment calculer le coût de mon allée ?",
+        answer:
+          "Pour estimer : (1) Mesurez longueur et largeur en mètres pour la surface. (2) Multipliez par le prix au m² : gravier 8–25, enrobé 30–70, béton 50–120, pavés 60–200 EUR. (3) Ajoutez 10–20 % pour terrassement et imprévus. Utilisez nos calculateurs gratuits pour des estimations précises.",
+      },
+      {
+        question: "Quelle est la durée de vie d'une allée selon le matériau ?",
+        answer:
+          "La durée de vie varie fortement. Le gravier dure 15–25 ans mais nécessite un rechargement tous les 2–3 ans. L'enrobé dure 15–20 ans avec entretien régulier. Le béton dure 25–50 ans avec un entretien minimal. Les pavés durent 25–50+ ans avec la possibilité de remplacer les éléments endommagés. La pierre naturelle peut durer 50+ ans.",
+      },
+    ],
+  },
+  flooringCost: {
+    title: "Guide des Co\u00fbts de Rev\u00eatement de Sol",
+    metaDescription: "Le rev\u00eatement de sol co\u00fbte 20\u2013150 \u20ac/m\u00b2 pos\u00e9. Guide complet des prix pour parquet, stratifi\u00e9, carrelage, moquette et vinyle avec estimations par pi\u00e8ce et conseils d'\u00e9conomie.",
+    heroTitle: "Guide des Co\u00fbts de Rev\u00eatement de Sol",
+    heroSubtitle: "Prix 2026",
+    heroDescription: "Tout sur les co\u00fbts de rev\u00eatement de sol \u2014 mat\u00e9riaux, pose, budgets par pi\u00e8ce et strat\u00e9gies d'\u00e9conomie.",
+    quickAnswerHeading: "R\u00e9ponse Rapide",
+    quickAnswerText: "Un rev\u00eatement de sol neuf co\u00fbte 20 \u00e0 150 \u20ac/m\u00b2 pos\u00e9. Le stratifi\u00e9 est le moins cher \u00e0 20\u201360 \u20ac/m\u00b2, suivi de la moquette (25\u201380 \u20ac), du vinyle LVP (30\u201380 \u20ac), du carrelage (50\u2013150 \u20ac) et du parquet (60\u2013150 \u20ac).",
+    flooringTypesHeading: "Co\u00fbts par Type de Mat\u00e9riau",
+    flooringTypesIntro: "Prix par m\u00e8tre carr\u00e9 pos\u00e9 selon le type de mat\u00e9riau.",
+    flooringTypesColType: "Type de Sol",
+    flooringTypesColCost: "Co\u00fbt Pos\u00e9 (par m\u00b2)",
+    flooringTypesColBestFor: "Id\u00e9al Pour",
+    flooringTypesRows: [
+      { type: "Stratifi\u00e9", cost: "20 \u2013 60 \u20ac", bestFor: "Budget, bricolage, locations" },
+      { type: "Moquette", cost: "25 \u2013 80 \u20ac", bestFor: "Chambres, confort" },
+      { type: "Vinyle LVP", cost: "30 \u2013 80 \u20ac", bestFor: "Cuisines, salles de bain, zones de passage" },
+      { type: "Carrelage", cost: "50 \u2013 150 \u20ac", bestFor: "Salles de bain, cuisines, entr\u00e9es" },
+      { type: "Parquet contrecoll\u00e9", cost: "40 \u2013 120 \u20ac", bestFor: "S\u00e9jours, salles \u00e0 manger" },
+      { type: "Parquet massif", cost: "60 \u2013 150 \u20ac", bestFor: "Pi\u00e8ces principales, valeur \u00e0 long terme" },
+      { type: "Pierre naturelle", cost: "100 \u2013 250 \u20ac", bestFor: "Haut de gamme" },
+    ],
+    costByRoomHeading: "Co\u00fbt par Pi\u00e8ce",
+    costByRoomIntro: "Co\u00fbts totaux typiques par type de pi\u00e8ce avec des mat\u00e9riaux de gamme moyenne.",
+    costByRoomColRoom: "Pi\u00e8ce",
+    costByRoomColTypical: "Co\u00fbt Total",
+    costByRoomColNotes: "Notes",
+    costByRoomRows: [
+      { room: "Salle de bain (5 m\u00b2)", typical: "400 \u2013 1 200 \u20ac", notes: "Carrelage ou vinyle" },
+      { room: "Chambre (14 m\u00b2)", typical: "600 \u2013 1 800 \u20ac", notes: "Moquette ou stratifi\u00e9" },
+      { room: "Cuisine (18 m\u00b2)", typical: "1 000 \u2013 3 500 \u20ac", notes: "Carrelage ou vinyle" },
+      { room: "S\u00e9jour (28 m\u00b2)", typical: "1 200 \u2013 4 500 \u20ac", notes: "Parquet ou vinyle" },
+      { room: "Maison enti\u00e8re (140 m\u00b2)", typical: "5 000 \u2013 20 000 \u20ac", notes: "Mix de mat\u00e9riaux" },
+    ],
+    installationCostsHeading: "Co\u00fbts de Pose : Soi-m\u00eame vs Professionnel",
+    installationCostsIntro: "La main-d'\u0153uvre repr\u00e9sente 40\u201360% du co\u00fbt total.",
+    installationCostsText1: "La pose professionnelle co\u00fbte 15\u201340 \u20ac/m\u00b2. Le carrelage est le plus cher \u00e0 30\u201370 \u20ac/m\u00b2. La moquette est la moins ch\u00e8re \u00e0 8\u201320 \u20ac/m\u00b2.",
+    installationCostsText2: "Poser soi-m\u00eame \u00e9conomise 50\u201370% de main-d'\u0153uvre. Le stratifi\u00e9 et vinyle clipsable sont les plus faciles.",
+    installationCostsText3: "Co\u00fbts suppl\u00e9mentaires : ragr\u00e9age (15\u201340 \u20ac/m\u00b2), d\u00e9pose ancien sol (8\u201320 \u20ac/m\u00b2), d\u00e9m\u00e9nagement meubles (50\u2013200 \u20ac), barres de seuil (5\u201315 \u20ac/pi\u00e8ce).",
+    howToCalculateHeading: "Comment Calculer le Rev\u00eatement N\u00e9cessaire",
+    howToCalculateIntro: "\u00c9tapes pour estimer vos mat\u00e9riaux avec pr\u00e9cision.",
+    howToCalculateItems: [
+      "Mesurez longueur et largeur de chaque pi\u00e8ce en m\u00e8tres. Multipliez pour les m\u00b2.",
+      "Pi\u00e8ces irr\u00e9guli\u00e8res : d\u00e9coupez en rectangles et additionnez.",
+      "Ajoutez 10% de chutes pour pose droite.",
+      "15\u201320% pour pose diagonale ou chevron.",
+      "Divisez le total par la couverture par paquet.",
+      "Arrondissez toujours au sup\u00e9rieur.",
+    ],
+    howToCalculateSummary: "Utilisez notre calculateur gratuit pour une estimation instantan\u00e9e avec facteur de chute automatique.",
+    savingTipsHeading: "Comment \u00c9conomiser sur le Sol",
+    savingTipsIntro: "Un achat intelligent peut r\u00e9duire les co\u00fbts de 20\u201340%.",
+    savingTipsItems: [
+      "Achetez pendant les soldes pour 20\u201330% de r\u00e9duction.",
+      "Achetez chez des grossistes sp\u00e9cialis\u00e9s.",
+      "Posez le sol clipsable vous-m\u00eame.",
+      "Utilisez diff\u00e9rents mat\u00e9riaux selon les pi\u00e8ces.",
+      "Commandez tout en une fois pour des remises sur quantit\u00e9.",
+      "Conservez les restes pour les r\u00e9parations futures.",
+    ],
+    calculatorCtaHeading: "Calculez Vos Mat\u00e9riaux",
+    calculatorCtaText: "Utilisez nos calculateurs gratuits pour des estimations instantan\u00e9es.",
+    calculatorLinks: [
+      { label: "Calculateur de Sol", href: "/calculators/flooring/flooring-calculator/", description: "Calculateur g\u00e9n\u00e9ral m\u00b2 et paquets" },
+      { label: "Calculateur de Moquette", href: "/calculators/flooring/carpet-calculator/", description: "M\u00b2, m\u00e8tres lin\u00e9aires et thibaude" },
+      { label: "Calculateur de Carrelage", href: "/calculators/flooring/tile-calculator/", description: "Carreaux, joints et colle" },
+      { label: "Calculateur de Stratifi\u00e9", href: "/calculators/flooring/laminate-calculator/", description: "Lames, paquets et sous-couche" },
+    ],
+    faqHeading: "Questions Fr\u00e9quentes",
+    faqs: [
+      { question: "Quel est le sol le moins cher ?", answer: "Le stratifi\u00e9 \u00e0 20\u201360 \u20ac/m\u00b2 pos\u00e9. En pose soi-m\u00eame : 8\u201325 \u20ac/m\u00b2 de mat\u00e9riaux." },
+      { question: "Combien co\u00fbte le sol pour toute une maison ?", answer: "Une maison de 140 m\u00b2 co\u00fbte 5 000\u201320 000 \u20ac. Un mix typique : 8 000\u201314 000 \u20ac." },
+      { question: "Quel sol augmente le plus la valeur du bien ?", answer: "Le parquet apporte la meilleure plus-value. Le carrelage et vinyle en cuisine/SDB aussi." },
+      { question: "Quelle est la dur\u00e9e de vie de chaque sol ?", answer: "Parquet massif : 50\u2013100 ans. Pierre : 50+. Carrelage : 30\u201350. Stratifi\u00e9/vinyle : 15\u201325. Moquette : 5\u201315." },
+      { question: "Dois-je refaire le sol avant de vendre ?", answer: "La moquette us\u00e9e doit \u00eatre remplac\u00e9e. Le parquet ab\u00eem\u00e9 peut \u00eatre ponc\u00e9. Du vinyle neuf en cuisine/SDB est un bon investissement." },
+      { question: "Quel sol pour la cuisine ?", answer: "Vinyle LVP et carrelage gr\u00e8s c\u00e9rame. \u00c9tanches, durables et faciles \u00e0 entretenir." },
+    ],
+  },
+
+  fenceCost: {
+    title: "Combien co\u00fbte une cl\u00f4ture ? Guide des prix 2026",
+    metaDescription: "Une cl\u00f4ture co\u00fbte 30\u2013100 \u20ac par m\u00e8tre pos\u00e9e en 2026. Guide complet pour cl\u00f4tures bois, m\u00e9tal, PVC et composite.",
+    heroTitle: "Combien co\u00fbte une cl\u00f4ture ?",
+    heroSubtitle: "Guide des prix 2026",
+    heroDescription: "D\u00e9tail complet des co\u00fbts de cl\u00f4ture par mat\u00e9riau, style et taille de projet.",
+    quickAnswerHeading: "R\u00e9ponse rapide",
+    quickAnswerText: "Une cl\u00f4ture co\u00fbte 30 \u00e0 100 \u20ac par m\u00e8tre pos\u00e9e en 2026. Cl\u00f4ture bois de 15 m : 450\u2013900 \u20ac mat\u00e9riaux ou 900\u20131 500 \u20ac pos\u00e9e.",
+    fenceTypesHeading: "Co\u00fbt par mat\u00e9riau",
+    fenceTypesIntro: "Le mat\u00e9riau est le principal facteur de co\u00fbt :",
+    fenceTypesColType: "Mat\u00e9riau",
+    fenceTypesColCost: "Co\u00fbt/m\u00e8tre (pos\u00e9)",
+    fenceTypesColBestFor: "Id\u00e9al pour",
+    fenceTypesRows: [
+      { type: "Bois trait\u00e9", cost: "30 \u2013 60 \u20ac", bestFor: "Occultation, le plus populaire. 15\u201320 ans." },
+      { type: "Ch\u00e2taignier", cost: "40 \u2013 80 \u20ac", bestFor: "R\u00e9sistance naturelle. 15\u201325 ans." },
+      { type: "Grillage rigide", cost: "25 \u2013 60 \u20ac", bestFor: "Durable, s\u00e9paratif. 25\u201340 ans." },
+      { type: "Grillage souple", cost: "10 \u2013 25 \u20ac", bestFor: "Le moins cher. 15\u201320 ans." },
+      { type: "PVC / Composite", cost: "50 \u2013 120 \u20ac", bestFor: "Sans entretien. 25\u201350 ans." },
+      { type: "Aluminium", cost: "60 \u2013 150 \u20ac", bestFor: "D\u00e9coratif. 20\u201330 ans." },
+    ],
+    costByProjectHeading: "Co\u00fbt par taille",
+    costByProjectIntro: "Co\u00fbts typiques 2026 cl\u00f4tures bois :",
+    costByProjectColProject: "Projet",
+    costByProjectColTypical: "Co\u00fbt typique (pos\u00e9)",
+    costByProjectColNotes: "Notes",
+    costByProjectRows: [
+      { project: "Petit jardin (10 m)", typical: "300 \u2013 700 \u20ac", notes: "Mat\u00e9riaux : 150\u2013350 \u20ac." },
+      { project: "Jardin moyen (15 m)", typical: "450 \u2013 1 000 \u20ac", notes: "Taille courante." },
+      { project: "Grand jardin (25 m)", typical: "750 \u2013 1 700 \u20ac", notes: "Remise possible." },
+      { project: "P\u00e9rim\u00e8tre (40 m)", typical: "1 200 \u2013 2 800 \u20ac", notes: "Mat\u00e9riaux : 600\u20131 400 \u20ac." },
+      { project: "Avec portillon", typical: "800 \u2013 2 000 \u20ac", notes: "Portillon : 100\u2013400 \u20ac." },
+      { project: "Cl\u00f4ture piscine", typical: "600 \u2013 2 500 \u20ac", notes: "Norme NF P 90-306." },
+    ],
+    laborCostsHeading: "Co\u00fbts de pose",
+    laborCostsIntro: "La pose repr\u00e9sente 40\u201360% du co\u00fbt total.",
+    laborCostsText1: "Pose pro : 15\u201330 \u20ac/m. 15 m prend 1\u20132 jours.",
+    laborCostsText2: "Sol rocheux et terrain en pente augmentent les co\u00fbts de 10\u201325%.",
+    laborCostsText3: "Demandez 3 devis. Basse saison \u00e9conomise 10\u201320%.",
+    diyVsProHeading: "Poser soi-m\u00eame vs pro",
+    diyVsProIntro: "Poser soi-m\u00eame \u00e9conomise 40\u201360% :",
+    diyVsProItems: [
+      "Mat\u00e9riaux 15 m : 225\u2013500 \u20ac.",
+      "Pose pro : 450\u20131 000 \u20ac.",
+      "Outils : tarri\u00e8re, niveau, scie, visseuse.",
+      "1\u20132 week-ends pour 15 m.",
+      "Erreurs : poteaux pas d\u2019aplomb.",
+      "Poteaux jour 1, panneaux jour 2.",
+    ],
+    diyVsProSummary: "\u00c9conomie de 200\u2013500 \u20ac en DIY. Pro pour sol difficile.",
+    savingTipsHeading: "Conseils d\u2019\u00e9conomie",
+    savingTipsIntro: "R\u00e9duire le co\u00fbt :",
+    savingTipsItems: [
+      "Bois trait\u00e9 vs ch\u00e2taignier : 30\u201350% moins cher.",
+      "Basse saison : 10\u201320% d\u2019\u00e9conomie.",
+      "Partage 50/50 avec le voisin.",
+      "Panneaux pr\u00e9fab vs lames.",
+      "Acheter en n\u00e9goce bois.",
+      "D\u00e9claration pr\u00e9alable soi-m\u00eame.",
+    ],
+    calculatorCtaHeading: "Calculez vos mat\u00e9riaux",
+    calculatorCtaText: "Calculateurs gratuits pour votre projet de cl\u00f4ture.",
+    calculatorLinks: [
+      { label: "Calculateur cl\u00f4ture", href: "/calculators/outdoor/fence-calculator", description: "Poteaux, traverses et lames." },
+      { label: "Calculateur poteaux", href: "/calculators/outdoor/fence-post-calculator", description: "Poteaux et b\u00e9ton." },
+      { label: "Calculateur panneaux", href: "/calculators/outdoor/fence-panel-calculator", description: "Panneaux pr\u00e9fabriqu\u00e9s." },
+      { label: "Calculateur palissade", href: "/calculators/outdoor/picket-fence-calculator", description: "Lattes espacement libre." },
+    ],
+    faqHeading: "Questions fr\u00e9quentes",
+    faqs: [
+      { question: "Combien pour 20 m de cl\u00f4ture ?", answer: "Bois : 600\u20131 400 \u20ac pos\u00e9, 300\u2013700 \u20ac mat\u00e9riaux." },
+      { question: "Cl\u00f4ture la moins ch\u00e8re ?", answer: "Grillage souple \u00e0 10 \u20ac/m. Occultation : bois trait\u00e9 \u00e0 30 \u20ac/m pos\u00e9." },
+      { question: "Moins cher en DIY ?", answer: "Oui, 40\u201360% d\u2019\u00e9conomie." },
+      { question: "Dur\u00e9e de vie cl\u00f4ture bois ?", answer: "Bois trait\u00e9 : 15\u201320 ans. Ch\u00e2taignier : 15\u201325 ans." },
+      { question: "Faut-il une autorisation ?", answer: "D\u00e9claration pr\u00e9alable souvent n\u00e9cessaire. V\u00e9rifier PLU communal." },
+      { question: "Quelle cl\u00f4ture augmente la valeur ?", answer: "Cl\u00f4ture bois entretenue r\u00e9cup\u00e8re 50\u201370% en valeur." },
     ],
   },
 };

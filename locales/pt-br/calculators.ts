@@ -119,6 +119,14 @@ export const categories: CategoryMeta[] = [
         category: "Fundação",
         categorySlug: "foundation",
       },
+      {
+        slug: "retaining-wall-calculator",
+        title: "Calculadora de Muro de Arrimo",
+        description:
+          "Calculadora de muro de arrimo — ferramenta gratis para muros de bloco, alvenaria estrutural & pedra. Quantidade de blocos, capas, brita de aterro & drenagem.",
+        category: "Fundação",
+        categorySlug: "foundation",
+      },
     ],
   },
   {
@@ -471,6 +479,14 @@ export const categories: CategoryMeta[] = [
         category: "Acabamento",
         categorySlug: "finishing",
       },
+      {
+        slug: "epoxy-calculator",
+        title: "Calculadora de Epóxi",
+        description:
+          "Calculadora de epóxi — quanto epóxi para o piso da garagem? Ferramenta grátis para qualquer área. Litros, kits & estimativa de custo para 1 ou 2 demãos.",
+        category: "Acabamento",
+        categorySlug: "finishing",
+      },
     ],
   },
   {
@@ -519,6 +535,58 @@ export const categories: CategoryMeta[] = [
         category: "Áreas Externas",
         categorySlug: "outdoor",
       },
+      {
+        slug: "pond-calculator",
+        title: "Calculadora de Lago",
+        description:
+          "Calculadora de lago — ferramenta grátis para volume, tamanho da lona & capacidade da bomba. Insira dimensões para lagos retangulares, ovais ou em forma de rim.",
+        category: "Áreas Externas",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "fence-calculator",
+        title: "Calculadora de Cerca",
+        description:
+          "Calculadora de cerca — quantos mourões, travessas e réguas para sua cerca? Ferramenta grátis para cercas de madeira. Lista completa de materiais instantânea.",
+        category: "Áreas Externas",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "fence-post-calculator",
+        title: "Calculadora de Mourões de Cerca",
+        description:
+          "Calculadora de mourões — quantos mourões e sacos de concreto? Ferramenta grátis calcula mourões, concreto e brita para qualquer comprimento de cerca.",
+        category: "Áreas Externas",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "fence-panel-calculator",
+        title: "Calculadora de Painéis de Cerca",
+        description:
+          "Calculadora de painéis de cerca — quantos painéis pré-fabricados? Ferramenta grátis para painéis de 1,80 m e 2,50 m. Painéis, mourões e capas.",
+        category: "Áreas Externas",
+        categorySlug: "outdoor",
+      },
+      {
+        slug: "picket-fence-calculator",
+        title: "Calculadora de Cerca de Estacas",
+        description:
+          "Calculadora de cerca de estacas — quantas estacas com espaçamento personalizado? Ferramenta grátis para qualquer largura e vão. Estacas, travessas, mourões e volume de madeira.",
+        category: "Áreas Externas",
+        categorySlug: "outdoor",
+      },
+    ],
+  },
+  {
+    slug: "flooring",
+    title: "Calculadoras de Piso",
+    description:
+      "Calcule materiais para projetos de piso — madeira, carpete, porcelanato e laminado com fator de desperdício e estimativa de custos.",
+    calculators: [
+      { slug: "flooring-calculator", title: "Calculadora de Piso", description: "Calculadora de piso — ferramenta grátis para metros quadrados. Caixas, desperdício e lista de materiais para porcelanato, vinílico e engenheirado.", category: "Piso", categorySlug: "flooring" },
+      { slug: "carpet-calculator", title: "Calculadora de Carpete", description: "Calculadora de carpete — ferramenta grátis para metros quadrados, metros lineares e manta. Para rolos de 3,66 m e 4 m com planejamento de emendas.", category: "Piso", categorySlug: "flooring" },
+      { slug: "tile-calculator", title: "Calculadora de Porcelanato", description: "Calculadora de porcelanato — ferramenta grátis para cerâmica, porcelanato e pedra natural. Quantidade de peças, caixas, rejunte e argamassa.", category: "Piso", categorySlug: "flooring" },
+      { slug: "laminate-calculator", title: "Calculadora de Laminado", description: "Calculadora de piso laminado — estimador grátis de réguas e caixas com manta. Insira dimensões do cômodo para lista de materiais instantânea.", category: "Piso", categorySlug: "flooring" },
     ],
   },
 ];

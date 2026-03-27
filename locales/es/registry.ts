@@ -3034,6 +3034,130 @@ export const postHoleCalculatorES: CalculatorSEOContent = {
   ],
 };
 
+// ─── RETAINING WALL ─────────────────────────────────────────────────────────
+
+export const retainingWallCalculator: CalculatorSEOContent = {
+  disclaimer: "Esta estimación incluye un 10% de desperdicio para bloques. Los requisitos reales de grava y drenaje dependen de las condiciones del suelo, nivel freático y normativa local. Muros de más de 1.2 m generalmente requieren ingeniería y permisos.",
+  howToUse: [
+    "Mide la longitud total de tu muro de contención en metros.",
+    "Ingresa la altura deseada del muro en metros — la mayoría de los muros de jardín son de 0.6 a 1.2 m.",
+    "Selecciona el tipo de bloque: bloque de paisajismo para muros decorativos, bloque CMU para estructurales, o piedra natural para acabado rústico.",
+    "Haz clic en Calcular Materiales para obtener cantidad de bloques, tapas, relleno de grava y estimaciones de drenaje.",
+  ],
+  materialInfo:
+    "Los muros de contención retienen el suelo en terrenos inclinados y crean áreas niveladas para jardines, patios, accesos y camas de plantas. Los tres materiales más comunes son bloques de paisajismo entrelazados, bloques de concreto (CMU) y piedra natural.\n\nLos bloques de paisajismo (como Pavestone, Boral o similares) son la opción más popular para muros de hasta 1.2 m de altura. Los bloques estándar miden 30 cm de largo por 10 cm de alto por 20 cm de profundidad y pesan de 11 a 16 kg cada uno. Se entrelazan con un sistema de labio o pasador que crea un talud natural para estabilidad. El costo típico en Latinoamérica es de $30 a $80 MXN por bloque, o $600 a $1,500 MXN por metro cuadrado de muro instalado.\n\nLos bloques CMU miden 40 cm de largo por 20 cm de alto por 20 cm de ancho y se usan para muros estructurales. Requieren mortero, varilla y relleno de concreto para muros de más de 60 cm. El costo es de $15 a $35 MXN por bloque, pero el costo total instalado es mayor por el refuerzo requerido.\n\nTodos los muros de contención requieren un drenaje adecuado detrás del muro para prevenir la acumulación de presión hidrostática. Esto incluye una capa de grava triturada (19 mm) detrás de los bloques, un tubo de drenaje perforado (10 cm) en la base, y salidas de drenaje a intervalos regulares. Las tapas se fijan con adhesivo de construcción a razón de 1 tubo por cada 7.5 metros lineales.\n\nMuros de más de 1.2 m en la mayoría de las jurisdicciones requieren permiso de construcción, planos de ingeniería y sistema de refuerzo con geomalla.",
+  nextSteps: [
+    { label: "Calculadora de Zapata de Concreto", href: "/calculators/foundation/concrete-footing-calculator/" },
+    { label: "Calculadora de Grava", href: "/calculators/foundation/gravel-calculator/" },
+    { label: "Calculadora de Mezcla de Mortero", href: "/calculators/foundation/mortar-mix-calculator/" },
+  ],
+  installationTips: [
+    "Excava una zanja de 15 a 20 cm de profundidad y 60 cm de ancho para la primera hilada — compacta el suelo y agrega 15 cm de grava triturada como base.",
+    "Nivela la primera hilada cuidadosamente — cada hilada subsiguiente sigue la base. Usa un nivel de 1.2 m y mazo de goma.",
+    "Rellena con grava triturada de 19 mm detrás del muro conforme construyes cada hilada.",
+    "Instala un tubo de drenaje perforado de 10 cm en la base del muro, con pendiente de 2% hacia una salida.",
+    "Alterna las juntas al menos 10 cm entre hiladas, similar a un aparejo a soga de ladrillo.",
+    "Fija las tapas con adhesivo para paisajismo — aplica una línea continua sobre la última hilada.",
+  ],
+  commonMistakes: [
+    "Omitir la base de grava — sin una base compactada, el muro se asentará y se inclinará con el tiempo.",
+    "Olvidar el drenaje — la presión hidrostática del agua atrapada es la causa número uno de falla en muros de contención.",
+    "Construir más de 1.2 m sin ingeniería — la mayoría de las normas requieren planos sellados y geomalla de refuerzo para muros más altos.",
+    "Usar tierra como relleno — solo grava triturada limpia debe ir directamente detrás del muro para drenaje.",
+    "No compactar la zanja base — una base suelta provoca asentamientos desiguales y movimiento del muro en el primer año.",
+  ],
+  faqs: [
+    { question: "¿Cuántos bloques necesito para un muro de contención?", answer: "Depende del tamaño del bloque y las dimensiones del muro. Para bloques de paisajismo estándar de 30×10×20 cm, necesitas aproximadamente 33 bloques por metro cuadrado de cara del muro. Un muro de 6 m de largo por 1 m de alto requiere unos 198 bloques más 10% de desperdicio, para un total de 218 bloques." },
+    { question: "¿Cuánto cuesta un muro de contención?", answer: "En Latinoamérica, los bloques de paisajismo cuestan entre $600 y $1,500 MXN por m² instalados. Los muros de bloque CMU cuestan $800 a $2,000 MXN por m² con refuerzo. Los muros de piedra natural van de $1,500 a $4,000 MXN por m² instalados." },
+    { question: "¿Necesito permiso para un muro de contención?", answer: "En la mayoría de las jurisdicciones se requiere permiso para muros de más de 1.2 m medidos desde el fondo de la zapata hasta la parte superior del muro. Algunos municipios fijan el límite en 1 m. Consulta con tu departamento de construcción local." },
+    { question: "¿Cuánta grava necesito detrás de un muro de contención?", answer: "Planifica una zona de 30 cm de ancho con grava triturada de 19 mm detrás de toda la cara del muro, más 15 cm de base de grava compactada en la zanja. Para un muro de 6 m de largo por 1 m de alto, necesitarás aproximadamente 2 m³ de grava." },
+    { question: "¿Cuál es el mejor bloque para un muro de contención?", answer: "Para muros de menos de 1.2 m, los bloques de paisajismo entrelazados son la mejor opción — no requieren mortero, son fáciles de instalar y crean un talud estable. Para muros estructurales de más de 1.2 m, se necesitan bloques CMU con varilla, concreto y sistemas de geomalla." },
+    { question: "¿Qué tan profunda debe ser la base de un muro de contención?", answer: "La zanja base debe tener al menos 15 cm de profundidad para muros de hasta 1 m, con 15 cm de grava triturada compactada. Para muros más altos, la profundidad aumenta — un muro de 1.2 m necesita 20 a 30 cm de hilada enterrada bajo nivel." },
+  ],
+};
+
+// ─── EPOXY ──────────────────────────────────────────────────────────────────
+
+export const epoxyCalculator: CalculatorSEOContent = {
+  disclaimer: "Las tasas de rendimiento varían según el producto, la porosidad de la superficie y el método de aplicación. El rendimiento estándar de 10 m² por litro es típico para la mayoría de los epóxicos para pisos de cochera. Siga siempre las indicaciones del fabricante.",
+  howToUse: [
+    "Mide el largo y ancho de tu piso en metros.",
+    "Selecciona 1 capa para un color base o 2 capas para máxima durabilidad.",
+    "Ajusta el rendimiento por litro si tu producto especifica una tasa diferente (por defecto 10 m²/litro).",
+    "Haz clic en Calcular Materiales para obtener litros, cantidad de kits y estimación de costo.",
+  ],
+  materialInfo:
+    "El recubrimiento epóxico para pisos es una resina termoestable de dos componentes (Parte A resina + Parte B endurecedor) que cura en una superficie dura, resistente a químicos y brillante. Es el recubrimiento más popular para pisos de cochera y también se usa en sótanos, talleres, cocinas comerciales y bodegas.\n\nExisten tres tipos principales. El epóxico base agua es el más amigable para proyectos DIY — tiene poco olor, limpieza fácil y cuesta de $800 a $1,500 MXN por kit de 3.8 litros que cubre 10 m². El epóxico base solvente es más durable y cuesta de $1,200 a $2,500 MXN por galón. El epóxico 100% sólidos es la opción profesional — no contiene agua ni solventes, construye la película más gruesa y cuesta de $2,500 a $5,000 MXN por galón.\n\nLa preparación de superficie es el paso más crítico. El concreto debe estar limpio, seco y perfilado (rugoso) para que el epóxico se adhiera. El esmerilado o grabado ácido crea el perfil necesario. El concreto nuevo debe curar al menos 28 días antes del recubrimiento.\n\nLa temperatura de aplicación debe estar entre 10°C y 32°C. La humedad por encima del 85% puede causar opacidad en la película curada. La mayoría de los sistemas de dos capas están listos para tráfico vehicular en 3 a 5 días.",
+  nextSteps: [
+    { label: "Calculadora de Pintura", href: "/calculators/finishing/paint-coverage-calculator/" },
+    { label: "Calculadora de Losa de Concreto", href: "/calculators/foundation/concrete-slab-calculator/" },
+  ],
+  installationTips: [
+    "Realiza una prueba de humedad (pega un plástico de 60×60 cm al piso por 24 horas) antes de comenzar — la humedad causa falla del epóxico.",
+    "Esmerilar o grabar con ácido el concreto para crear un perfil de superficie — el epóxico no se adhiere a concreto liso o sellado.",
+    "Mezcla la Parte A y B completamente durante el tiempo especificado (generalmente 3 minutos), luego deja reposar la mezcla según las indicaciones.",
+    "Trabaja en secciones manteniendo un borde húmedo — el epóxico se autonivelará pero mostrará marcas de rodillo en las uniones si una sección comienza a fraguar.",
+    "Espera 12 a 24 horas entre capas, y 72 horas antes del tráfico peatonal ligero. Espera 5 a 7 días antes de estacionar vehículos.",
+  ],
+  commonMistakes: [
+    "Omitir la preparación de superficie — esta es la causa número uno de desprendimiento y descamado del epóxico.",
+    "Aplicar sobre humedad — la humedad atrapada causa burbujas y delaminación.",
+    "Trabajar fuera del rango de temperatura — por debajo de 10°C el epóxico cura muy lento; por encima de 32°C cura muy rápido.",
+    "Mezclar demasiado producto a la vez — el epóxico genera calor al curar. Lotes grandes en un balde pueden gelificarse en minutos.",
+    "No aplicar una capa final — el epóxico expuesto se amarillea con los rayos UV. Un sellador de poliuretano extiende la vida significativamente.",
+  ],
+  faqs: [
+    { question: "¿Cuánto epóxico necesito para una cochera?", answer: "Una cochera estándar para 2 autos es de aproximadamente 45 m². A 10 m² por litro, necesitas unos 4.5 litros para una capa o 9 litros para dos capas. La mayoría de los kits comerciales cubren 10 m² por kit. Planifica 5 kits para una capa o 10 kits para dos capas." },
+    { question: "¿Cuánto cuesta cubrir un piso de cochera con epóxico?", answer: "El recubrimiento epóxico DIY cuesta de $150 a $400 MXN por m² en materiales. Una cochera de 45 m² cuesta de $3,000 a $8,000 MXN para un kit base agua con hojuelas y sellador. La instalación profesional cuesta de $400 a $1,200 MXN por m²." },
+    { question: "¿Es suficiente una capa de epóxico para una cochera?", answer: "Una capa proporciona cobertura aceptable para cocheras de uso ligero. Sin embargo, dos capas ofrecen mayor durabilidad y resistencia química. Si aplicas una sola capa, usa un sellador transparente de poliuretano para protección adicional." },
+    { question: "¿Cuánto dura el recubrimiento epóxico?", answer: "Un epóxico bien aplicado dura de 5 a 10 años en una cochera residencial con uso normal. El epóxico profesional 100% sólidos con sellador poliaspártico puede durar de 15 a 20 años." },
+    { question: "¿Necesito primer antes del epóxico?", answer: "La mayoría de los kits de epóxico para consumidor no requieren un primer separado — la primera capa de epóxico actúa como primer. Sin embargo, para concreto muy poroso o viejo, un primer epóxico dedicado mejora la adhesión." },
+    { question: "¿Puedo aplicar epóxico sobre pintura vieja?", answer: "El epóxico no se adhiere a la mayoría de las pinturas o recubrimientos viejos. Debes remover el recubrimiento existente mediante esmerilado o decapado químico para exponer el concreto desnudo." },
+  ],
+};
+
+// ─── POND ───────────────────────────────────────────────────────────────────
+
+export const pondCalculator: CalculatorSEOContent = {
+  disclaimer: "Los cálculos de volumen son aproximados — las formas de riñón varían ampliamente. El tamaño de la lona incluye 60 cm de traslape en cada lado. El dimensionamiento de la bomba asume circulación completa cada 2 horas.",
+  howToUse: [
+    "Ingresa la longitud máxima de tu estanque en metros.",
+    "Ingresa el ancho máximo en metros.",
+    "Ingresa la profundidad máxima en metros — 0.6 a 1 m para jardines acuáticos, 1 a 1.2 m para estanques de koi.",
+    "Selecciona la forma más cercana: rectangular, oval o riñón.",
+    "Haz clic en Calcular para volumen, tamaño de lona, capacidad de bomba y necesidades de base.",
+  ],
+  materialInfo:
+    "Un estanque de jardín es una excavación revestida con material flexible o rígido para contener agua con fines ornamentales — peces (koi, goldfish), plantas acuáticas o como elemento decorativo.\n\nLas lonas de estanque de EPDM (1.14 mm) son el estándar de la industria — flexibles, resistentes a UV, seguras para peces y con vida útil de 20 a 30 años. El costo típico es de $200 a $500 MXN por metro cuadrado. Las lonas de PVC son más económicas a $100 a $250 MXN por m² pero tienen menor vida útil.\n\nEl tamaño de la lona se calcula sumando el doble de la profundidad más 60 cm de traslape al largo y ancho. Las bombas deben circular todo el volumen cada 2 horas — un estanque de 4,000 litros necesita una bomba de 2,000 litros/hora mínimo. Para estanques de koi, la circulación debe ser cada hora.\n\nLa base bajo la lona (geotextil o arena de 5 cm) protege contra raíces y piedras. Los materiales de borde (piedra laja, cantos rodados) ocultan el borde de la lona. El costo total de un estanque de 2,000 litros es de $5,000 a $15,000 MXN para materiales DIY.",
+  nextSteps: [
+    { label: "Calculadora de Grava", href: "/calculators/foundation/gravel-calculator/" },
+    { label: "Calculadora de Hoyos para Postes", href: "/calculators/outdoor/post-hole-calculator/" },
+  ],
+  installationTips: [
+    "Ubica el estanque donde reciba 4 a 6 horas de sol parcial — el sol directo todo el día promueve crecimiento excesivo de algas.",
+    "Verifica la ubicación de servicios subterráneos antes de excavar.",
+    "Excava repisas de 30 cm de profundidad alrededor del perímetro para plantas acuáticas marginales antes de la profundidad final.",
+    "Coloca una capa de 5 cm de arena o tela geotextil sobre toda la excavación antes de la lona.",
+    "Llena el estanque lentamente con manguera, alisando la lona conforme se llena.",
+    "Opera la bomba y filtro al menos 2 semanas antes de agregar peces para establecer bacterias benéficas.",
+  ],
+  commonMistakes: [
+    "Subdimensionar la lona — siempre calcula largo + (2 × profundidad) + 60 cm para cada dimensión.",
+    "Omitir la base protectora — raíces y piedras perforan la lona por debajo.",
+    "Subdimensionar la bomba — mala circulación causa agua estancada y proliferación de algas.",
+    "No dar suficiente profundidad — estanques de menos de 60 cm se sobrecalientan en verano y congelan en invierno.",
+    "Construir demasiado cerca de árboles — las hojas que caen crean acumulación orgánica que agota el oxígeno.",
+  ],
+  faqs: [
+    { question: "¿Cuántos litros tiene mi estanque?", answer: "Para estanques rectangulares: largo × ancho × profundidad (en metros) × 1,000 = litros. Para ovales, multiplica por 0.8. Para forma de riñón, multiplica por 0.7. Ejemplo: un estanque de 3×2.5×1 m rectangular contiene unos 7,500 litros." },
+    { question: "¿Qué tamaño de lona necesito?", answer: "Tamaño de lona = (largo + 2 × profundidad + 0.6 m) por (ancho + 2 × profundidad + 0.6 m). Para un estanque de 3×2.5×1 m, la lona debe ser de al menos 5.6 m × 5.1 m." },
+    { question: "¿Qué bomba necesito para mi estanque?", answer: "Multiplica el volumen de tu estanque en litros por 0.5 para obtener los litros por hora mínimos. Un estanque de 8,000 litros necesita una bomba de al menos 4,000 l/h para recirculación cada 2 horas." },
+    { question: "¿Cuánto cuesta construir un estanque?", answer: "Un jardín acuático de 2,000 litros cuesta de $5,000 a $15,000 MXN en materiales DIY. Un estanque de 4,000 a 8,000 litros con bomba, filtro y borde de piedra cuesta de $15,000 a $40,000 MXN DIY." },
+    { question: "¿Qué profundidad debe tener un estanque para peces?", answer: "Los jardines acuáticos con goldfish necesitan mínimo 60 cm de profundidad. Los estanques de koi deben tener al menos 90 cm, con 1.2 m preferido en climas fríos para proporcionar una zona sin congelamiento en el fondo." },
+    { question: "¿Necesito filtro para mi estanque?", answer: "Sí, si planeas tener peces. Un filtro biológico aloja bacterias benéficas que convierten el amoniaco tóxico en nitratos inofensivos. Incluso los jardines acuáticos solo con plantas se benefician de una bomba y filtro para prevenir agua estancada y reproducción de mosquitos." },
+  ],
+};
+
 // ─── REGISTRY MAP ─────────────────────────────────────────────────────────────
 
 export const registryES: Record<string, Record<string, CalculatorSEOContent>> = {
@@ -3050,6 +3174,7 @@ export const registryES: Record<string, Record<string, CalculatorSEOContent>> = 
     "driveway-gravel-calculator": drivewayGravelCalculator,
     "mortar-mix-calculator": mortarMixCalculator,
     "block-fill-calculator": blockFillCalculator,
+    "retaining-wall-calculator": retainingWallCalculator,
   },
   "floor-framing": {
     "rim-joist-calculator": rimJoistCalculator,
@@ -3101,6 +3226,7 @@ export const registryES: Record<string, Record<string, CalculatorSEOContent>> = 
     "paint-coverage-calculator": paintCoverageCalculatorES,
     "paint-cost-calculator": paintCostCalculatorES,
     "primer-calculator": primerCalculatorES,
+    "epoxy-calculator": epoxyCalculator,
   },
   outdoor: {
     "deck-board-calculator": deckBoardCalculatorES,
@@ -3108,5 +3234,6 @@ export const registryES: Record<string, Record<string, CalculatorSEOContent>> = 
     "deck-railing-calculator": deckRailingCalculatorES,
     "deck-stair-calculator": deckStairCalculatorES,
     "post-hole-calculator": postHoleCalculatorES,
+    "pond-calculator": pondCalculator,
   },
 };

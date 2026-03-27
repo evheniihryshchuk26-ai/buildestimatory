@@ -302,6 +302,61 @@ export function calculateMortarMix(
   };
 }
 
+// ─── RETAINING WALL ─────────────────────────────────────────────────────────
+
+export interface RetainingWallResult {
+  wallAreaSqFt: number;
+  blocks: number;
+  capBlocks: number;
+  adhesiveTubes: number;
+  gravelTons: number;
+  drainPipeLinearFeet: number;
+}
+
+const BLOCK_DIMENSIONS: Record<string, { widthIn: number; heightIn: number; lengthIn: number; blocksPerSqFt: number }> = {
+  "landscape block": { widthIn: 8, heightIn: 4, lengthIn: 12, blocksPerSqFt: 3.0 },
+  "cmu block": { widthIn: 8, heightIn: 8, lengthIn: 16, blocksPerSqFt: 1.125 },
+  "natural stone": { widthIn: 8, heightIn: 6, lengthIn: 12, blocksPerSqFt: 2.0 },
+};
+
+export function calculateRetainingWall(
+  wallLengthFt: number,
+  wallHeightFt: number,
+  blockType: string,
+): RetainingWallResult {
+  const wallAreaSqFt = wallLengthFt * wallHeightFt;
+  const blockInfo = BLOCK_DIMENSIONS[blockType] ?? BLOCK_DIMENSIONS["landscape block"];
+
+  // Blocks needed with 10% waste
+  const blocksRaw = wallAreaSqFt * blockInfo.blocksPerSqFt;
+  const blocks = Math.ceil(blocksRaw * 1.1);
+
+  // Cap blocks for top row: wall length / (block length in feet)
+  const blockLengthFt = blockInfo.lengthIn / 12;
+  const capBlocks = Math.ceil(wallLengthFt / blockLengthFt);
+
+  // Adhesive: 1 tube per 25 linear feet of cap
+  const adhesiveTubes = Math.ceil(wallLengthFt / 25);
+
+  // Gravel backfill: 1/3 of wall area × 1 ft deep behind wall, converted to tons
+  // Roughly 0.5 tons per linear foot of wall per foot of height
+  const gravelCubicFt = wallLengthFt * wallHeightFt * 1; // 1 ft wide backfill zone
+  const gravelCubicYards = gravelCubicFt / 27;
+  const gravelTons = Math.ceil(gravelCubicYards * 1.4 * 10) / 10;
+
+  // Drainage pipe: same length as wall + 10% for fittings
+  const drainPipeLinearFeet = Math.ceil(wallLengthFt * 1.1);
+
+  return {
+    wallAreaSqFt: Math.round(wallAreaSqFt * 10) / 10,
+    blocks,
+    capBlocks,
+    adhesiveTubes,
+    gravelTons,
+    drainPipeLinearFeet,
+  };
+}
+
 // ─── CONCRETE STEPS ─────────────────────────────────────────────────────────
 
 export function calculateConcreteSteps(widthFt: number, riseInches: number, runInches: number, numberOfSteps: number): ConcreteStepsResult {
