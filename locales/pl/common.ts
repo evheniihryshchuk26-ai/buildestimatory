@@ -34,6 +34,8 @@ const common: CommonTranslations = {
     quickTipBody:
       "Zawsze dodaj 10% zapasu na odpady do zamówienia materiałów. Na budowie zawsze powstają odcinki i ścinki, a brak materiału w trakcie prac jest kosztowny.",
     nextStepsHeading: "Następne Kroki:",
+    copyResults: "Kopiuj Wyniki",
+    copiedResults: "Skopiowano!",
     calculatorNotFound: "Nie znaleziono kalkulatora.",
     validationError: (fieldLabel: string) =>
       `Proszę wprowadzić prawidłową liczbę dla pola "${fieldLabel}".`,

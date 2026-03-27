@@ -34,6 +34,8 @@ const common: CommonTranslations = {
     quickTipBody:
       "Agrega siempre un 10% de factor de desperdicio a tus pedidos de materiales. La construcci\u00f3n siempre genera recortes y quedarse corto a mitad de obra sale caro.",
     nextStepsHeading: "Siguientes Pasos:",
+    copyResults: "Copiar Resultados",
+    copiedResults: "u00a1Copiado!",
     calculatorNotFound: "Calculadora no encontrada.",
     validationError: (fieldLabel: string) =>
       `Por favor ingresa un n\u00famero v\u00e1lido para "${fieldLabel}".`,

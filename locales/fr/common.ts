@@ -34,6 +34,8 @@ const common: CommonTranslations = {
     quickTipBody:
       "Ajoutez toujours 10 % de marge pour les chutes et découpes. Un chantier génère inévitablement des pertes, et une rupture de stock en cours de travaux coûte cher.",
     nextStepsHeading: "Étapes suivantes :",
+    copyResults: "Copier les résultats",
+    copiedResults: "Copié !",
     calculatorNotFound: "Calculateur introuvable.",
     validationError: (fieldLabel: string) =>
       `Veuillez saisir un nombre valide pour « ${fieldLabel} ».`,

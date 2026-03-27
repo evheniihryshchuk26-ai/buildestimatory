@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { getCommonTranslations } from "@/lib/i18n/translations";
+import CopyResultsButton from "./CopyResultsButton";
 
 const t = getCommonTranslations();
 
@@ -48,6 +49,14 @@ export default function ResultCard({ items, disclaimer }: ResultCardProps) {
             {"\u26A0\uFE0F"} {disclaimer}
           </p>
         )}
+
+        <CopyResultsButton
+          text={
+            `${t.calculator.yourShoppingList}\n` +
+            items.map((item) => `\u2713 ${item.label}`).join("\n") +
+            (disclaimer ? `\n\u26A0 ${disclaimer}` : "")
+          }
+        />
       </CardContent>
     </Card>
   );

@@ -34,6 +34,8 @@ const common: CommonTranslations = {
     quickTipBody:
       "Rechnen Sie immer 10 % Verschnitt auf Ihre Materialbestellung auf. Beim Bauen entstehen stets Abschnitte, und ein Materialmangel mitten im Projekt wird teuer.",
     nextStepsHeading: "Nächste Schritte:",
+    copyResults: "Ergebnisse kopieren",
+    copiedResults: "Kopiert!",
     calculatorNotFound: "Rechner nicht gefunden.",
     validationError: (fieldLabel: string) =>
       `Bitte geben Sie eine gültige Zahl für „${fieldLabel}" ein.`,

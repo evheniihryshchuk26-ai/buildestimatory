@@ -34,6 +34,8 @@ export interface CalculatorUITranslations {
   quickTipHeading: string;
   quickTipBody: string;
   nextStepsHeading: string;
+  copyResults: string;
+  copiedResults: string;
   calculatorNotFound: string;
   validationError: (fieldLabel: string) => string;
 }

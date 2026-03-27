@@ -34,6 +34,8 @@ const common: CommonTranslations = {
     quickTipBody:
       "Aggiunga sempre un 10% di sfrido al Suo ordine di materiali. In cantiere si producono sempre scarti di taglio e un\u2019interruzione per mancanza di materiale \u00e8 costosa.",
     nextStepsHeading: "Passi Successivi:",
+    copyResults: "Copia Risultati",
+    copiedResults: "Copiato!",
     calculatorNotFound: "Calcolatore non trovato.",
     validationError: (fieldLabel: string) =>
       `Inserisca un valore numerico valido per "${fieldLabel}".`,
