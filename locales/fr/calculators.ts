@@ -25,7 +25,7 @@ export const categories: CategoryMeta[] = [
     calculators: [
       {
         slug: "anchor-bolt-calculator",
-        title: "Calculateur de tiges d'ancrage",
+        title: "Calculateur Tiges d'Ancrage Gratuit — Quantité & Coût (2026)",
         description:
           "Combien de tiges d'ancrage faut-il ? Calculateur gratuit pour tiges filetées type J et chimiques avec espacement standard de 1,80 m — total et répartition inclus.",
         category: "Fondations",
@@ -33,7 +33,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "sill-seal-calculator",
-        title: "Calculateur de bande d'arase",
+        title: "Calculateur Bande d'Arase Gratuit — Rouleaux & m (2026)",
         description:
           "Calculateur de bande d'arase : estimez les rouleaux de joint mousse par périmètre de fondation. Outil gratuit pour largeurs de 90 mm et 140 mm avec recouvrement.",
         category: "Fondations",
@@ -41,7 +41,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "sill-plate-calculator",
-        title: "Calculateur de lisse basse traitée",
+        title: "Calculateur Lisse Basse Gratuit — Pièces & Mètres (2026)",
         description:
           "Combien de bois traité pour la lisse basse ? Calculateur instantané pour sections de 45×95 mm et 45×145 mm — mètres linéaires et nombre de pièces.",
         category: "Fondations",
@@ -49,7 +49,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "concrete-calculator",
-        title: "Calculateur de béton",
+        title: "Calculateur Béton Gratuit — m³, Sacs & Coût (2026)",
         description:
           "Combien de béton faut-il ? Calculateur gratuit pour dalles, semelles et poteaux — donne les mètres cubes et le nombre de sacs avec facteur de perte.",
         category: "Fondations",
@@ -57,7 +57,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "concrete-slab-calculator",
-        title: "Calculateur de dalle béton",
+        title: "Calculateur Dalle Béton Gratuit — m³ & Sacs (2026)",
         description:
           "Combien de béton pour une dalle ? Calculateur gratuit pour garage, terrasse et allée — mètres cubes et nombre de sacs pour toute épaisseur.",
         category: "Fondations",
@@ -65,7 +65,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "concrete-footing-calculator",
-        title: "Calculateur de semelle de fondation",
+        title: "Calculateur Semelle Gratuit — m³ & Perte (2026)",
         description:
           "Calculateur de semelles : estimez les mètres cubes pour semelles filantes et isolées. Outil gratuit pour murs de fondation — facteur de perte inclus.",
         category: "Fondations",
@@ -73,7 +73,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "concrete-column-calculator",
-        title: "Calculateur de poteau béton",
+        title: "Calculateur Poteau Béton Gratuit — m³ & Sacs (2026)",
         description:
           "Combien de béton pour des poteaux ? Calculateur gratuit pour diamètres de 200, 250 et 300 mm — m³ par poteau et total instantané.",
         category: "Fondations",
@@ -81,7 +81,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "concrete-steps-calculator",
-        title: "Calculateur d'escalier béton",
+        title: "Calculateur Escalier Béton Gratuit — m³ & Marches (2026)",
         description:
           "Calculateur d'escalier béton : combien de mètres cubes pour un escalier ? Outil gratuit — saisissez largeur, giron, hauteur de marche et nombre de marches.",
         category: "Fondations",
@@ -89,7 +89,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "gravel-calculator",
-        title: "Calculateur de gravier",
+        title: "Calculateur Gravier Gratuit — m³, Tonnes & Coût (2026)",
         description:
           "Combien de gravier me faut-il ? Calculateur gratuit pour toute surface — mètres cubes, tonnes et estimation du coût avec 10 % de perte.",
         category: "Fondations",
@@ -97,7 +97,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "driveway-gravel-calculator",
-        title: "Calculateur de gravier pour allée",
+        title: "Gravier pour Allée Gratuit — Tonnes & Coût (2026)",
         description:
           "Calculateur de gravier pour allée carrossable : estimez tonnes et coût par type — gravier concassé, gravier roulé, grave ou granit décomposé.",
         category: "Fondations",
@@ -105,7 +105,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "block-fill-calculator",
-        title: "Calculateur de remplissage de blocs",
+        title: "Remplissage Blocs Gratuit — m³ & Sacs (2026)",
         description:
           "Calculateur de remplissage de blocs — combien de béton pour remplir des parpaings ? Outil gratuit pour blocs de 20, 25 et 30 cm. Mètres cubes et nombre de sacs instantanément.",
         category: "Fondations",
@@ -113,7 +113,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "mortar-mix-calculator",
-        title: "Calculateur de Mortier",
+        title: "Calculateur Mortier Gratuit — Sacs & Type (2026)",
         description:
           "Calculateur de mortier — outil gratuit pour estimer les sacs de mortier pour parpaings, briques & pierre. Types N, S & M avec options d'épaisseur de joint.",
         category: "Fondations",
@@ -121,7 +121,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "retaining-wall-calculator",
-        title: "Calculateur de Mur de Soutènement",
+        title: "Mur de Soutènement Gratuit — Blocs & Remblai (2026)",
         description:
           "Calculateur de mur de soutènement — outil gratuit pour murs en blocs, parpaings & pierre. Nombre de blocs, chaperons, gravier de remblai & drainage instantanément.",
         category: "Fondations",
@@ -137,7 +137,7 @@ export const categories: CategoryMeta[] = [
     calculators: [
       {
         slug: "rim-joist-calculator",
-        title: "Calculateur de solive de rive",
+        title: "Solive de Rive Gratuit — Pièces & Mètres (2026)",
         description:
           "Calculateur de solive de rive : combien de pièces pour le périmètre du plancher ? Outil gratuit pour sections 45×200, 45×250 et 45×300 mm — nombre et mètres linéaires.",
         category: "Plancher",
@@ -145,7 +145,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "floor-joist-calculator",
-        title: "Calculateur de solives",
+        title: "Calculateur Solives Gratuit — Nombre & Entraxe (2026)",
         description:
           "Calculateur de solives gratuit — estimez le nombre, la section et l'entraxe selon la portée. Pour 40 cm et 60 cm, résultat instantané.",
         category: "Plancher",
@@ -153,7 +153,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "bridging-calculator",
-        title: "Calculateur d'entretoises",
+        title: "Calculateur Entretoises Gratuit — Rangées & Blocs (2026)",
         description:
           "Combien de rangées d'entretoises faut-il ? Calculateur gratuit pour entretoises croisées et blocage massif selon la portée des solives.",
         category: "Plancher",
@@ -161,7 +161,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "subfloor-adhesive-calculator",
-        title: "Calculateur de colle de plancher",
+        title: "Colle de Plancher Gratuit — Cartouches & m² (2026)",
         description:
           "Combien de cartouches de colle de plancher ? Estimateur gratuit selon la surface du plancher — couvre les cartouches de 310 ml et 828 ml.",
         category: "Plancher",
@@ -169,7 +169,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "osb-panel-calculator",
-        title: "Calculateur de panneaux OSB",
+        title: "Panneaux OSB Gratuit — Panneaux & Chutes (2026)",
         description:
           "Combien de panneaux OSB faut-il ? Calculateur gratuit pour panneaux 2500×1250 mm — tient compte des chutes et donne le nombre exact de panneaux.",
         category: "Plancher",
@@ -185,7 +185,7 @@ export const categories: CategoryMeta[] = [
     calculators: [
       {
         slug: "stud-calculator",
-        title: "Calculateur de montants",
+        title: "Calculateur Montants Gratuit — Nombre & Coût (2026)",
         description:
           "Combien de montants faut-il ? Calculateur gratuit pour entraxe de 40 cm et 60 cm — inclut les suppléments pour angles, portes et fenêtres.",
         category: "Ossature murale",
@@ -193,7 +193,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "bottom-plate-calculator",
-        title: "Calculateur de lisse basse",
+        title: "Lisse Basse Gratuit — Pièces & Mètres (2026)",
         description:
           "Calculateur de lisse basse : estimez les pièces de 45×95 mm ou 45×145 mm par longueur de mur. Outil gratuit avec mètres linéaires et nombre de pièces.",
         category: "Ossature murale",
@@ -201,7 +201,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "top-plate-calculator",
-        title: "Calculateur de lisse haute",
+        title: "Lisse Haute Gratuit — Pièces & Décalage (2026)",
         description:
           "Combien de bois pour la double lisse haute ? Calculateur gratuit pour murs de 45×95 et 45×145 mm — nombre exact de pièces avec décalage inclus.",
         category: "Ossature murale",
@@ -209,7 +209,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "header-calculator",
-        title: "Calculateur de linteaux",
+        title: "Calculateur Linteaux Gratuit — Section & Pièces (2026)",
         description:
           "Calculateur de linteaux : quelle section pour mon ouverture ? Outil gratuit pour baies de portes et fenêtres — 45×150, 45×200 et 45×250 mm.",
         category: "Ossature murale",
@@ -217,7 +217,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "exterior-sheathing-calculator",
-        title: "Calculateur de voile travaillant",
+        title: "Voile Travaillant Gratuit — Panneaux & m² (2026)",
         description:
           "Combien de panneaux de contreventement pour les murs extérieurs ? Calculateur gratuit pour OSB et contreplaqué — facteur de perte inclus.",
         category: "Ossature murale",
@@ -233,7 +233,7 @@ export const categories: CategoryMeta[] = [
     calculators: [
       {
         slug: "truss-calculator",
-        title: "Calculateur de fermettes",
+        title: "Calculateur Fermettes Gratuit — Nombre & Entraxe (2026)",
         description:
           "Calculateur de fermettes gratuit — combien de fermettes pour mon toit ? Entraxe standard de 60 cm. Saisissez la longueur et obtenez le total.",
         category: "Couverture",
@@ -241,7 +241,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "rafter-calculator",
-        title: "Calculateur de chevrons",
+        title: "Calculateur Chevrons Gratuit — Longueur & Nombre (2026)",
         description:
           "Calculateur de chevrons gratuit — longueur, nombre et entraxe pour toute pente de toit. 40 et 60 cm entre axes, résultat instantané.",
         category: "Couverture",
@@ -249,7 +249,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "ridge-board-calculator",
-        title: "Calculateur de faîtage",
+        title: "Calculateur Faîtage Gratuit — Longueur & Pièces (2026)",
         description:
           "Calculateur de planche de faîtage : combien de pièces pour mon faîte ? Outil gratuit pour sections 45×200, 45×250 et 45×300 mm — longueur et nombre.",
         category: "Couverture",
@@ -257,7 +257,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "roof-sheathing-calculator",
-        title: "Calculateur de voligeage",
+        title: "Voligeage Toit Gratuit — Panneaux & m² (2026)",
         description:
           "Combien de panneaux OSB pour le voligeage ? Calculateur de support de couverture pour panneaux 2500×1250 mm — pente et chutes pris en compte.",
         category: "Couverture",
@@ -265,7 +265,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "shingle-calculator",
-        title: "Calculateur de bardeaux",
+        title: "Calculateur Bardeaux Gratuit — Paquets & m² (2026)",
         description:
           "Calculateur de bardeaux gratuit — combien de paquets faut-il ? Pour bardeaux bitumés et architecturaux. Convertit les m² en paquets au clic.",
         category: "Couverture",
@@ -273,7 +273,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "underlayment-calculator",
-        title: "Calculateur d'écran sous-toiture",
+        title: "Écran Sous-Toiture Gratuit — Rouleaux & m² (2026)",
         description:
           "Combien de rouleaux d'écran sous-toiture ? Calculateur gratuit pour feutre bitumé et écran synthétique HPV — recouvrement et chutes pris en compte.",
         category: "Couverture",
@@ -281,7 +281,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "drip-edge-calculator",
-        title: "Calculateur de rive d'égout",
+        title: "Rive d'Égout Gratuit — Mètres & Profils (2026)",
         description:
           "Calculateur de rive d'égout : estimez les mètres linéaires de larmier. Outil gratuit — donne le nombre de profils pour bandes standard de 2 m.",
         category: "Couverture",
@@ -289,7 +289,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "roof-pitch-calculator",
-        title: "Calculateur de pente de toit",
+        title: "Pente de Toit Gratuit — Angle & Facteur (2026)",
         description:
           "Quelle est la pente de mon toit ? Calculateur gratuit — saisissez la hauteur et la portée pour obtenir l'angle, le pourcentage et le coefficient de surface.",
         category: "Couverture",
@@ -297,7 +297,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "roof-area-calculator",
-        title: "Calculateur de surface de toiture",
+        title: "Surface de Toiture Gratuit — m² & Pente (2026)",
         description:
           "Calculateur de surface de toiture gratuit — convertissez les dimensions au sol en surface réelle de couverture. Coefficient de pente et m² inclus.",
         category: "Couverture",
@@ -305,7 +305,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "roof-slope-calculator",
-        title: "Calculateur d'inclinaison de toit",
+        title: "Inclinaison de Toit Gratuit — Angle & Matériau (2026)",
         description:
           "Calculateur d'inclinaison de toit gratuit — mesurez hauteur et course pour obtenir le ratio de pente, l'angle et le matériau de couverture.",
         category: "Couverture",
@@ -321,7 +321,7 @@ export const categories: CategoryMeta[] = [
     calculators: [
       {
         slug: "housewrap-calculator",
-        title: "Calculateur de pare-pluie",
+        title: "Pare-Pluie Gratuit — Rouleaux & m² (2026)",
         description:
           "Combien de rouleaux de pare-pluie faut-il ? Calculateur gratuit par surface de mur — couvre les largeurs de 1 m, 1,5 m et 2,7 m avec recouvrement.",
         category: "Enveloppe extérieure",
@@ -329,7 +329,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "vinyl-siding-calculator",
-        title: "Calculateur de bardage PVC",
+        title: "Bardage PVC Gratuit — Lames & m² (2026)",
         description:
           "Calculateur de bardage PVC gratuit — entrez les m² de mur pour obtenir le nombre exact de lames. Déduit portes, fenêtres et ajoute 10 % de chutes.",
         category: "Enveloppe extérieure",
@@ -337,7 +337,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "hardie-siding-calculator",
-        title: "Calculateur de bardage fibrociment",
+        title: "Bardage Fibrociment Gratuit — Lames & Chutes (2026)",
         description:
           "Combien de lames de fibrociment faut-il ? Calculateur gratuit type Eternit/Cedral pour pureau de 16 cm et 21 cm — chutes incluses.",
         category: "Enveloppe extérieure",
@@ -345,7 +345,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "window-flashing-calculator",
-        title: "Calculateur de bavette de fenêtre",
+        title: "Bavette de Fenêtre Gratuit — Mètres & Rouleaux (2026)",
         description:
           "Calculateur de bande d'étanchéité : estimez les mètres linéaires de membrane auto-adhésive pour fenêtres. Outil gratuit pour largeurs de 100, 150 et 225 mm.",
         category: "Enveloppe extérieure",
@@ -361,7 +361,7 @@ export const categories: CategoryMeta[] = [
     calculators: [
       {
         slug: "cavity-insulation-calculator",
-        title: "Calculateur d'isolant en cavité",
+        title: "Isolant en Cavité Gratuit — Rouleaux & m² (2026)",
         description:
           "Combien de rouleaux d'isolant faut-il ? Calculateur gratuit pour R=3,15 à R=5,5 — couvre les ossatures de 45×95 et 45×145 mm.",
         category: "Isolation et plâtrerie",
@@ -369,7 +369,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "drywall-calculator",
-        title: "Calculateur de plaques de plâtre",
+        title: "Plaques de Plâtre Gratuit — Plaques & m² (2026)",
         description:
           "Combien de plaques de plâtre faut-il ? Calculateur gratuit pour BA13 et BA18 — estime les plaques 2500×1200 mm pour murs et plafonds.",
         category: "Isolation et plâtrerie",
@@ -377,7 +377,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "drywall-screw-calculator",
-        title: "Calculateur de vis à placo",
+        title: "Vis à Placo Gratuit — Quantité & Boîtes (2026)",
         description:
           "Calculateur de vis à placo : combien de vis par plaque ? Estimateur gratuit pour vis de 25 mm et 35 mm — total et boîtes nécessaires.",
         category: "Isolation et plâtrerie",
@@ -385,7 +385,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "joint-compound-calculator",
-        title: "Calculateur d'enduit de jointement",
+        title: "Enduit à Joint Gratuit — Seaux & Coût (2026)",
         description:
           "Combien d'enduit à joint faut-il ? Calculateur gratuit pour finition des plaques de plâtre — estime les seaux pour bande, couche de base et finition.",
         category: "Isolation et plâtrerie",
@@ -401,7 +401,7 @@ export const categories: CategoryMeta[] = [
     calculators: [
       {
         slug: "framing-nail-calculator",
-        title: "Calculateur de pointes de charpente",
+        title: "Pointes de Charpente Gratuit — kg & Coût (2026)",
         description:
           "Calculateur de pointes : combien de kilogrammes de pointes pour mon chantier ? Outil gratuit pour pointes lisses et annelées — basé sur le nombre de montants.",
         category: "Quincaillerie",
@@ -409,7 +409,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "joist-hanger-calculator",
-        title: "Calculateur de sabots de solive",
+        title: "Sabots de Solive Gratuit — Pièces & Type (2026)",
         description:
           "Combien de sabots de solive faut-il ? Calculateur gratuit pour connecteurs Simpson Strong-Tie — couvre le solivage de plancher et de plafond.",
         category: "Quincaillerie",
@@ -417,7 +417,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "hurricane-tie-calculator",
-        title: "Calculateur d'équerres anti-tempête",
+        title: "Équerres Anti-Tempête Gratuit — Pièces & Coût (2026)",
         description:
           "Calculateur d'équerres anti-tempête : estimez les connecteurs chevron-mur pour la résistance au vent. Outil gratuit pour équerres Simpson HTT et A35.",
         category: "Quincaillerie",
@@ -425,7 +425,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "lumber-cost-calculator",
-        title: "Calculateur de coût du bois",
+        title: "Coût du Bois Gratuit — Pièces & Total (2026)",
         description:
           "Combien coûte le bois de charpente ? Calculateur gratuit pour sections 45×95, 45×145, 45×200 et plus — estime le coût total par quantité et prix courants.",
         category: "Quincaillerie",
@@ -433,7 +433,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "board-feet-calculator",
-        title: "Calculateur de cubage bois",
+        title: "Cubage Bois Gratuit — BF & Coût (2026)",
         description:
           "Calculateur de cubage bois gratuit — convertissez les dimensions en board feet. Pour le chiffrage du bois massif avec cubage et coût instantanés.",
         category: "Quincaillerie",
@@ -441,7 +441,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "plywood-calculator",
-        title: "Calculateur de contreplaqué",
+        title: "Contreplaqué Gratuit — Panneaux & Coût (2026)",
         description:
           "Calculateur de contreplaqué gratuit — combien de panneaux faut-il ? Pour épaisseurs de 6 à 18 mm. Nombre de panneaux et estimation du coût.",
         category: "Quincaillerie",
@@ -457,7 +457,7 @@ export const categories: CategoryMeta[] = [
     calculators: [
       {
         slug: "paint-coverage-calculator",
-        title: "Calculateur de rendement peinture",
+        title: "Rendement Peinture Gratuit — Litres & m² (2026)",
         description:
           "Calculateur de rendement peinture gratuit — combien de litres faut-il ? Pour murs et plafonds. Tient compte des couches, donne litres et pots.",
         category: "Finitions",
@@ -465,7 +465,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "paint-cost-calculator",
-        title: "Calculateur de coût de peinture",
+        title: "Coût Peinture Gratuit — Litres & Budget (2026)",
         description:
           "Calculateur de coût de peinture gratuit — estimez le budget total par gamme de qualité. De l'entrée de gamme au premium, fournitures incluses.",
         category: "Finitions",
@@ -473,7 +473,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "primer-calculator",
-        title: "Calculateur de primaire d'accrochage",
+        title: "Primaire d'Accrochage Gratuit — Litres & m² (2026)",
         description:
           "Combien de primaire faut-il ? Calculateur gratuit pour plaque de plâtre neuve, bois et rénovation — ajuste le rendement par type de surface.",
         category: "Finitions",
@@ -481,7 +481,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "epoxy-calculator",
-        title: "Calculateur d'Époxy",
+        title: "Calculateur Époxy Gratuit — Litres & Coût (2026)",
         description:
           "Calculateur d'époxy — combien d'époxy pour votre sol de garage ? Outil gratuit pour toute surface. Litres, kits & estimation de coût pour 1 ou 2 couches.",
         category: "Finitions",
@@ -497,7 +497,7 @@ export const categories: CategoryMeta[] = [
     calculators: [
       {
         slug: "deck-board-calculator",
-        title: "Calculateur de lames de terrasse",
+        title: "Lames de Terrasse Gratuit — Lames & Mètres (2026)",
         description:
           "Combien de lames de terrasse faut-il ? Calculateur gratuit pour bois traité, pin Douglas et composite — nombre de lames, mètres linéaires et chutes.",
         category: "Extérieur",
@@ -505,7 +505,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "deck-footing-calculator",
-        title: "Calculateur de plots de terrasse",
+        title: "Plots de Terrasse Gratuit — Plots & m³ (2026)",
         description:
           "Calculateur de plots : combien de plots béton pour ma terrasse ? Outil gratuit — nombre de plots, poteaux et poutres avec espacement.",
         category: "Extérieur",
@@ -513,7 +513,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "deck-railing-calculator",
-        title: "Calculateur de garde-corps",
+        title: "Garde-Corps Gratuit — Poteaux & Barreaux (2026)",
         description:
           "Combien de poteaux et barreaux faut-il ? Calculateur gratuit de garde-corps — nombre de poteaux, barreaux et mètres linéaires de lisse.",
         category: "Extérieur",
@@ -521,7 +521,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "deck-stair-calculator",
-        title: "Calculateur d'escalier de terrasse",
+        title: "Escalier Terrasse Gratuit — Marches & Limons (2026)",
         description:
           "Calculateur d'escalier : combien de marches et de limons ? Outil gratuit — saisissez la hauteur pour obtenir le nombre de marches, limons et planches.",
         category: "Extérieur",
@@ -529,7 +529,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "post-hole-calculator",
-        title: "Calculateur de trous de poteau",
+        title: "Trous de Poteau Gratuit — Sacs & m³ (2026)",
         description:
           "Calculateur de trous de poteau — combien de béton pour les poteaux de clôture ? Outil gratuit pour toute taille de trou. Nombre exact de sacs de 25 kg et 35 kg.",
         category: "Extérieur",
@@ -537,7 +537,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "pond-calculator",
-        title: "Calculateur de Bassin",
+        title: "Calculateur Bassin Gratuit — Litres & Bâche (2026)",
         description:
           "Calculateur de bassin — outil gratuit pour volume, taille de bâche & débit de pompe. Dimensions pour bassins rectangulaires, ovales ou en forme de haricot.",
         category: "Extérieur",
@@ -545,7 +545,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "fence-calculator",
-        title: "Calculateur de Clôture",
+        title: "Calculateur Clôture Gratuit — Poteaux & Lames (2026)",
         description:
           "Calculateur de clôture — combien de poteaux, traverses et lames ? Outil gratuit de calcul de matériaux pour clôtures en bois. Liste complète instantanée.",
         category: "Extérieur",
@@ -553,7 +553,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "fence-post-calculator",
-        title: "Calculateur de Poteaux de Clôture",
+        title: "Poteaux de Clôture Gratuit — Poteaux & Béton (2026)",
         description:
           "Calculateur de poteaux de clôture — combien de poteaux et sacs de béton ? Outil gratuit : nombre de poteaux, béton et gravier pour toute longueur de clôture.",
         category: "Extérieur",
@@ -561,7 +561,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "fence-panel-calculator",
-        title: "Calculateur de Panneaux de Clôture",
+        title: "Panneaux Clôture Gratuit — Panneaux & Poteaux (2026)",
         description:
           "Calculateur de panneaux de clôture — combien de panneaux préfabriqués ? Outil gratuit pour panneaux de 1,80 m et 2,50 m. Panneaux, poteaux et chapeaux.",
         category: "Extérieur",
@@ -569,7 +569,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "picket-fence-calculator",
-        title: "Calculateur de Palissade",
+        title: "Calculateur Palissade Gratuit — Lattes & Poteaux (2026)",
         description:
           "Calculateur de palissade — combien de lattes avec espacement personnalisé ? Outil gratuit pour toute largeur et écart. Lattes, traverses, poteaux et volume de bois.",
         category: "Extérieur",
@@ -583,10 +583,10 @@ export const categories: CategoryMeta[] = [
     description:
       "Calculez les matériaux pour vos projets de revêtement de sol — parquet, moquette, carrelage et stratifié avec facteur de perte et estimation des coûts.",
     calculators: [
-      { slug: "flooring-calculator", title: "Calculateur de Revêtement de Sol", description: "Calculateur de sol — outil gratuit pour les mètres carrés. Nombre de paquets, chutes et liste de matériaux pour parquet, vinyle et contrecollé.", category: "Revêtement de Sol", categorySlug: "flooring" },
-      { slug: "carpet-calculator", title: "Calculateur de Moquette", description: "Calculateur de moquette — outil gratuit pour mètres carrés, mètres linéaires et thibaude. Pour rouleaux de 4 m et 5 m avec planification des joints.", category: "Revêtement de Sol", categorySlug: "flooring" },
-      { slug: "tile-calculator", title: "Calculateur de Carrelage", description: "Calculateur de carrelage — outil gratuit pour grès cérame, faïence et pierre naturelle. Nombre de carreaux, paquets, joints et colle à carrelage.", category: "Revêtement de Sol", categorySlug: "flooring" },
-      { slug: "laminate-calculator", title: "Calculateur de Stratifié", description: "Calculateur de stratifié — estimateur gratuit de lames et paquets avec sous-couche. Entrez les dimensions pour une liste de matériaux instantanée.", category: "Revêtement de Sol", categorySlug: "flooring" },
+      { slug: "flooring-calculator", title: "Revêtement de Sol Gratuit — Paquets & m² (2026)", description: "Calculateur de sol — outil gratuit pour les mètres carrés. Nombre de paquets, chutes et liste de matériaux pour parquet, vinyle et contrecollé.", category: "Revêtement de Sol", categorySlug: "flooring" },
+      { slug: "carpet-calculator", title: "Calculateur Moquette Gratuit — m² & Rouleaux (2026)", description: "Calculateur de moquette — outil gratuit pour mètres carrés, mètres linéaires et thibaude. Pour rouleaux de 4 m et 5 m avec planification des joints.", category: "Revêtement de Sol", categorySlug: "flooring" },
+      { slug: "tile-calculator", title: "Calculateur Carrelage Gratuit — Pièces & Paquets (2026)", description: "Calculateur de carrelage — outil gratuit pour grès cérame, faïence et pierre naturelle. Nombre de carreaux, paquets, joints et colle à carrelage.", category: "Revêtement de Sol", categorySlug: "flooring" },
+      { slug: "laminate-calculator", title: "Calculateur Stratifié Gratuit — Paquets & m² (2026)", description: "Calculateur de stratifié — estimateur gratuit de lames et paquets avec sous-couche. Entrez les dimensions pour une liste de matériaux instantanée.", category: "Revêtement de Sol", categorySlug: "flooring" },
     ],
   },
 ];

@@ -25,7 +25,7 @@ export const categories: CategoryMeta[] = [
     calculators: [
       {
         slug: "anchor-bolt-calculator",
-        title: "Calculadora de Pernos de Anclaje",
+        title: "Calculadora de Anclajes Gratis — Cantidad y Costo (2026)",
         description:
           "¿Cuántos pernos de anclaje necesito? Calculadora gratis para tipo J y cuña con espaciado estándar de 1.80 m — incluye conteo y distribución.",
         category: "Cimentación",
@@ -33,7 +33,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "sill-seal-calculator",
-        title: "Calculadora de Sello de Solera",
+        title: "Calculadora de Sello de Solera Gratis — Rollos y m (2026)",
         description:
           "Calculadora de sello de solera: Estima rollos de junta de espuma por perímetro. Herramienta gratis para anchos de 9 cm y 14 cm con traslape.",
         category: "Cimentación",
@@ -41,7 +41,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "sill-plate-calculator",
-        title: "Calculadora de Placa de Apoyo Tratada",
+        title: "Calculadora de Placa de Apoyo Gratis — m y Piezas (2026)",
         description:
           "¿Cuánta madera tratada necesito para placas de apoyo? Calculadora instantánea para tablas de 5x10 cm y 5x15 cm — metros lineales y conteo.",
         category: "Cimentación",
@@ -49,7 +49,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "concrete-calculator",
-        title: "Calculadora de Concreto",
+        title: "Calculadora de Concreto Gratis — m³, Bultos y Costo (2026)",
         description:
           "¿Cuánto concreto necesito? Calculadora gratis para losas, zapatas y columnas — metros cúbicos y cantidad de bultos con factor de desperdicio.",
         category: "Cimentación",
@@ -57,7 +57,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "concrete-slab-calculator",
-        title: "Calculadora de Losa de Concreto",
+        title: "Calculadora de Losa Gratis — m³, Bultos y Espesor (2026)",
         description:
           "¿Cuánto concreto para una losa? Calculadora gratis para cochera, patio y banqueta — metros cúbicos y bultos para cualquier espesor.",
         category: "Cimentación",
@@ -65,7 +65,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "concrete-footing-calculator",
-        title: "Calculadora de Zapata de Concreto",
+        title: "Calculadora de Zapatas Gratis — m³ y Desperdicio (2026)",
         description:
           "Calculadora de zapatas: Estima metros cúbicos para zapatas corridas y aisladas. Herramienta gratis para cimentación — incluye desperdicio.",
         category: "Cimentación",
@@ -73,7 +73,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "concrete-column-calculator",
-        title: "Calculadora de Columna de Concreto",
+        title: "Calculadora de Columnas Gratis — m³ y Bultos (2026)",
         description:
           "¿Cuánto concreto para columnas o pilares? Calculadora gratis para diámetros de 20, 25 y 30 cm — m³ por columna y total al instante.",
         category: "Cimentación",
@@ -81,7 +81,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "concrete-steps-calculator",
-        title: "Calculadora de Escalones de Concreto",
+        title: "Calculadora de Escalones Gratis — m³ y Peldaños (2026)",
         description:
           "Calculadora de escalones de concreto: ¿Cuántos metros cúbicos para escaleras? Herramienta gratis — ingresa ancho, huella y peralte.",
         category: "Cimentación",
@@ -89,7 +89,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "gravel-calculator",
-        title: "Calculadora de Grava",
+        title: "Calculadora de Grava Gratis — m³, Toneladas y Costo (2026)",
         description:
           "¿Cuánta grava necesito? Calculadora gratis para cualquier área — metros cúbicos, toneladas y estimación de costo con 10% de desperdicio.",
         category: "Cimentación",
@@ -97,7 +97,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "driveway-gravel-calculator",
-        title: "Calculadora de Grava para Cochera",
+        title: "Grava para Cochera Gratis — Toneladas y Costo (2026)",
         description:
           "Calculadora de grava para cochera/entrada: Estima toneladas y costo por tipo — piedra triturada, gravilla, base hidráulica o granito descompuesto.",
         category: "Cimentación",
@@ -105,7 +105,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "block-fill-calculator",
-        title: "Calculadora de Relleno de Bloques",
+        title: "Relleno de Bloques Gratis — m³, Sacos y Costo (2026)",
         description:
           "Calculadora de relleno de bloques — ¿cuánto concreto para rellenar bloques de hormigón? Herramienta gratuita para bloques de 20, 25 y 30 cm. Metros cúbicos y sacos al instante.",
         category: "Cimentación",
@@ -113,7 +113,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "mortar-mix-calculator",
-        title: "Calculadora de Mezcla de Mortero",
+        title: "Calculadora de Mortero Gratis — Sacos y Tipo (2026)",
         description:
           "Calculadora de mezcla de mortero — herramienta gratuita para estimar sacos de mortero para bloque, ladrillo y piedra. Tipos N, S y M con opciones de espesor de junta.",
         category: "Cimentación",
@@ -121,7 +121,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "retaining-wall-calculator",
-        title: "Calculadora de Muro de Contención",
+        title: "Muro de Contención Gratis — Bloques y Relleno (2026)",
         description:
           "Calculadora de muro de contención — herramienta gratis para muros de bloque, CMU y piedra. Cantidad de bloques, tapas, relleno de grava y drenaje al instante.",
         category: "Cimentación",
@@ -137,7 +137,7 @@ export const categories: CategoryMeta[] = [
     calculators: [
       {
         slug: "rim-joist-calculator",
-        title: "Calculadora de Viga Perimetral",
+        title: "Viga Perimetral Gratis — Piezas y Metros (2026)",
         description:
           "Calculadora de viga perimetral: ¿Cuántas tablas para el contorno del piso? Herramienta gratis para 5x20 cm, 5x25 cm y 5x30 cm al instante.",
         category: "Entramado de Piso",
@@ -145,7 +145,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "floor-joist-calculator",
-        title: "Calculadora de Viguetas de Piso",
+        title: "Viguetas de Piso Gratis — Cantidad y Espaciado (2026)",
         description:
           "Calculadora de viguetas de piso gratis — obtén cantidad, tamaño y espaciado por tramo. Para 40 cm y 60 cm entre centros al instante.",
         category: "Entramado de Piso",
@@ -153,7 +153,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "bridging-calculator",
-        title: "Calculadora de Puentes (Arriostramientos)",
+        title: "Puentes de Piso Gratis — Filas y Bloques (2026)",
         description:
           "Calculadora de puentes: ¿Cuántas filas de arriostramiento necesito? Herramienta gratis según la luz de viguetas — bloques sólidos o cruzados.",
         category: "Entramado de Piso",
@@ -161,7 +161,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "subfloor-adhesive-calculator",
-        title: "Calculadora de Adhesivo de Subpiso",
+        title: "Adhesivo de Subpiso Gratis — Tubos y Área (2026)",
         description:
           "¿Cuántos tubos de adhesivo de subpiso necesito? Calculadora gratis por área de piso — cubre tubos de 828 ml y 300 ml con resultados al instante.",
         category: "Entramado de Piso",
@@ -169,7 +169,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "osb-panel-calculator",
-        title: "Calculadora de Paneles OSB",
+        title: "Paneles OSB Gratis — Láminas y Desperdicio (2026)",
         description:
           "¿Cuántos paneles OSB necesito para el subpiso? Calculadora gratis para láminas de 1.22 x 2.44 m — incluye factor de desperdicio automático.",
         category: "Entramado de Piso",
@@ -185,7 +185,7 @@ export const categories: CategoryMeta[] = [
     calculators: [
       {
         slug: "stud-calculator",
-        title: "Calculadora de Montantes",
+        title: "Calculadora de Montantes Gratis — Cantidad y Costo (2026)",
         description:
           "¿Cuántos montantes necesito? Calculadora gratis para espaciado de 40 cm y 60 cm entre centros — incluye extras para esquinas y aberturas.",
         category: "Entramado de Muros",
@@ -193,7 +193,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "bottom-plate-calculator",
-        title: "Calculadora de Solera Inferior",
+        title: "Solera Inferior Gratis — Tablas y Metros (2026)",
         description:
           "Calculadora de solera inferior: Estima tablas de 5x10 cm o 5x15 cm por longitud de muro. Herramienta gratis con metros lineales y conteo.",
         category: "Entramado de Muros",
@@ -201,7 +201,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "top-plate-calculator",
-        title: "Calculadora de Solera Superior",
+        title: "Solera Superior Gratis — Tablas y Traslape (2026)",
         description:
           "¿Cuánta madera para la doble solera superior? Calculadora gratis para muros de 5x10 y 5x15 cm — incluye traslape y conteo de tablas.",
         category: "Entramado de Muros",
@@ -209,7 +209,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "header-calculator",
-        title: "Calculadora de Dinteles",
+        title: "Calculadora de Dinteles Gratis — Medida y Piezas (2026)",
         description:
           "Calculadora de dinteles: ¿Qué medida de dintel necesito? Herramienta gratis para aberturas de puertas y ventanas — 5x15, 5x20 y 5x25 cm.",
         category: "Entramado de Muros",
@@ -217,7 +217,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "exterior-sheathing-calculator",
-        title: "Calculadora de Revestimiento Estructural Exterior",
+        title: "Revestimiento Exterior Gratis — Láminas y m² (2026)",
         description:
           "¿Cuántas láminas de revestimiento necesito? Calculadora gratis para OSB y contrachapado de 1.22 x 2.44 m — incluye factor de desperdicio.",
         category: "Entramado de Muros",
@@ -233,7 +233,7 @@ export const categories: CategoryMeta[] = [
     calculators: [
       {
         slug: "truss-calculator",
-        title: "Calculadora de Cerchas de Techo",
+        title: "Cerchas de Techo Gratis — Cantidad y Espaciado (2026)",
         description:
           "¿Cuántas cerchas de techo necesito? Calculadora gratis para espaciado estándar de 60 cm — ingresa el largo del techo y obtén conteo y distribución.",
         category: "Techado",
@@ -241,7 +241,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "rafter-calculator",
-        title: "Calculadora de Cabios",
+        title: "Calculadora de Cabios Gratis — Largo y Cantidad (2026)",
         description:
           "Calculadora de cabios gratis — obtén largo, cantidad y espaciado para cualquier pendiente de techo. 40 y 60 cm entre centros al instante.",
         category: "Techado",
@@ -249,7 +249,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "ridge-board-calculator",
-        title: "Calculadora de Tabla Cumbrera",
+        title: "Tabla Cumbrera Gratis — Largo y Piezas (2026)",
         description:
           "¿Cuántas tablas cumbreras necesito? Calculadora gratis para 5x20, 5x25 y 5x30 cm — calcula longitud total y número de piezas al instante.",
         category: "Techado",
@@ -257,7 +257,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "roof-sheathing-calculator",
-        title: "Calculadora de Revestimiento de Techo",
+        title: "Revestimiento de Techo Gratis — Láminas y m² (2026)",
         description:
           "Calculadora de revestimiento de techo: ¿Cuántas láminas OSB de 1.22 x 2.44 m? Herramienta gratis que considera pendiente y desperdicio.",
         category: "Techado",
@@ -265,7 +265,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "shingle-calculator",
-        title: "Calculadora de Tejas",
+        title: "Calculadora de Tejas Gratis — Paquetes y m² (2026)",
         description:
           "Calculadora de tejas gratis — ¿cuántos paquetes necesito? Estima tejas de 3 lengüetas y arquitectónicas. Convierte m² a paquetes al instante.",
         category: "Techado",
@@ -273,7 +273,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "underlayment-calculator",
-        title: "Calculadora de Membrana Impermeabilizante",
+        title: "Membrana de Techo Gratis — Rollos y m² (2026)",
         description:
           "Calculadora de membrana: ¿Cuántos rollos de fieltro o sintético necesito? Herramienta gratis para fieltro 15 lb, 30 lb y membrana sintética.",
         category: "Techado",
@@ -281,7 +281,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "drip-edge-calculator",
-        title: "Calculadora de Gotero de Techo",
+        title: "Gotero de Techo Gratis — Metros y Piezas (2026)",
         description:
           "¿Cuántos metros de gotero necesito? Calculadora gratis de botaguas por perímetro — calcula piezas para tiras estándar de 3 m al instante.",
         category: "Techado",
@@ -289,7 +289,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "roof-pitch-calculator",
-        title: "Calculadora de Pendiente de Techo",
+        title: "Pendiente de Techo Gratis — Ángulo y Factor (2026)",
         description:
           "¿Qué pendiente tiene mi techo? Calculadora gratis — ingresa elevación y distancia para obtener ángulo, porcentaje y multiplicador de área.",
         category: "Techado",
@@ -297,7 +297,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "roof-area-calculator",
-        title: "Calculadora de Área de Techo",
+        title: "Área de Techo Gratis — m² y Pendiente (2026)",
         description:
           "Calculadora de área de techo gratis — convierte dimensiones planas al área real de cobertura. Incluye multiplicador de pendiente y m² totales.",
         category: "Techado",
@@ -305,7 +305,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "roof-slope-calculator",
-        title: "Calculadora de Inclinación de Techo",
+        title: "Inclinación de Techo Gratis — Ángulo y Material (2026)",
         description:
           "Calculadora de inclinación de techo gratis — mide elevación y recorrido para obtener pendiente, ángulo y material de cobertura recomendado.",
         category: "Techado",
@@ -321,7 +321,7 @@ export const categories: CategoryMeta[] = [
     calculators: [
       {
         slug: "housewrap-calculator",
-        title: "Calculadora de Membrana Hidrófuga",
+        title: "Membrana Hidrófuga Gratis — Rollos y m² (2026)",
         description:
           "¿Cuántos rollos de membrana hidrófuga necesito? Calculadora gratis tipo Tyvek por m² de muro — cubre anchos de 1 m, 1.5 m y 2.7 m.",
         category: "Revestimiento Exterior",
@@ -329,7 +329,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "vinyl-siding-calculator",
-        title: "Calculadora de Revestimiento Vinílico",
+        title: "Revestimiento Vinílico Gratis — Paneles y m² (2026)",
         description:
           "Calculadora de revestimiento vinílico gratis — ingresa m² de muro y obtén paneles exactos. Descuenta puertas, ventanas y 10% de desperdicio.",
         category: "Revestimiento Exterior",
@@ -337,7 +337,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "hardie-siding-calculator",
-        title: "Calculadora de Revestimiento de Fibrocemento",
+        title: "Fibrocemento Gratis — Tablas y Desperdicio (2026)",
         description:
           "¿Cuántas tablas de fibrocemento necesito? Calculadora gratis tipo HardiePlank para exposiciones de 21 cm y 16 cm — incluye desperdicio.",
         category: "Revestimiento Exterior",
@@ -345,7 +345,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "window-flashing-calculator",
-        title: "Calculadora de Tapajuntas de Ventana",
+        title: "Tapajuntas de Ventana Gratis — Metros y Rollos (2026)",
         description:
           "Calculadora de tapajuntas: Estima metros lineales de cinta autoadhesiva para ventanas. Herramienta gratis para anchos de 10 cm, 15 cm y 23 cm.",
         category: "Revestimiento Exterior",
@@ -361,7 +361,7 @@ export const categories: CategoryMeta[] = [
     calculators: [
       {
         slug: "cavity-insulation-calculator",
-        title: "Calculadora de Aislamiento de Cavidad",
+        title: "Aislamiento de Cavidad Gratis — Rollos y m² (2026)",
         description:
           "¿Cuántos paneles aislantes necesito? Calculadora gratis para R-13, R-15, R-19 y R-21 — cubre cavidades de muros de 5x10 y 5x15 cm.",
         category: "Aislamiento y Paneles de Yeso",
@@ -369,7 +369,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "drywall-calculator",
-        title: "Calculadora de Láminas de Yeso",
+        title: "Láminas de Yeso Gratis — Paneles y m² (2026)",
         description:
           "¿Cuántas láminas de yeso necesito? Calculadora gratis para 12.7 mm y 15.9 mm — estima paneles de 1.22 x 2.44 m para muros y cielos.",
         category: "Aislamiento y Paneles de Yeso",
@@ -377,7 +377,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "drywall-screw-calculator",
-        title: "Calculadora de Tornillos para Yeso",
+        title: "Tornillos para Yeso Gratis — Cantidad y Cajas (2026)",
         description:
           "Calculadora de tornillos: ¿Cuántos tornillos por lámina de yeso? Herramienta gratis para tornillos de 32 mm y 41 mm — total y cajas necesarias.",
         category: "Aislamiento y Paneles de Yeso",
@@ -385,7 +385,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "joint-compound-calculator",
-        title: "Calculadora de Compuesto para Juntas",
+        title: "Masilla para Juntas Gratis — Cubetas y Costo (2026)",
         description:
           "¿Cuánta masilla para juntas necesito? Calculadora gratis para acabado de yeso — estima cubetas para encintado, base y acabado final.",
         category: "Aislamiento y Paneles de Yeso",
@@ -401,7 +401,7 @@ export const categories: CategoryMeta[] = [
     calculators: [
       {
         slug: "framing-nail-calculator",
-        title: "Calculadora de Clavos para Estructura",
+        title: "Clavos para Estructura Gratis — kg y Costo (2026)",
         description:
           "Calculadora de clavos: ¿Cuántos kilos de clavos necesito? Herramienta gratis para clavos de 3.5\" y 2.5\" — calcula por cantidad de montantes.",
         category: "Ferretería",
@@ -409,7 +409,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "joist-hanger-calculator",
-        title: "Calculadora de Conectores de Viguetas",
+        title: "Conectores de Viguetas Gratis — Piezas y Tipo (2026)",
         description:
           "¿Cuántos conectores de viguetas necesito? Calculadora gratis para series LUS, LU y HU — cubre entramado de piso y cielo al instante.",
         category: "Ferretería",
@@ -417,7 +417,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "hurricane-tie-calculator",
-        title: "Calculadora de Amarres Anti-Huracán",
+        title: "Amarres Anti-Huracán Gratis — Clips y Costo (2026)",
         description:
           "Calculadora de amarres anti-huracán: Estima conectores cabio-muro para resistencia al viento. Herramienta gratis para clips H2.5A y H10.",
         category: "Ferretería",
@@ -425,7 +425,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "lumber-cost-calculator",
-        title: "Calculadora de Costo de Madera",
+        title: "Costo de Madera Gratis — Piezas y Total (2026)",
         description:
           "¿Cuánto cuesta la madera? Calculadora gratis para tablas de 2x4, 2x6, 2x8 y más — estima costo total por cantidad y precios actuales.",
         category: "Ferretería",
@@ -433,7 +433,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "board-feet-calculator",
-        title: "Calculadora de Pies Tabla",
+        title: "Calculadora de Pies Tabla Gratis — PT y Costo (2026)",
         description:
           "Calculadora de pies tabla gratis — convierte dimensiones de madera a pies tabla. Para precios de madera dura con cálculo instantáneo de PT y costo.",
         category: "Ferretería",
@@ -441,7 +441,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "plywood-calculator",
-        title: "Calculadora de Triplay",
+        title: "Calculadora de Triplay Gratis — Hojas y Costo (2026)",
         description:
           "Calculadora de triplay gratis — ¿cuántas hojas necesito? Para paneles de 6 mm a 18 mm. Da cantidad de hojas y estimado de costo al instante.",
         category: "Ferretería",
@@ -457,7 +457,7 @@ export const categories: CategoryMeta[] = [
     calculators: [
       {
         slug: "paint-coverage-calculator",
-        title: "Calculadora de Rendimiento de Pintura",
+        title: "Rendimiento de Pintura Gratis — Litros y m² (2026)",
         description:
           "Calculadora de rendimiento de pintura gratis — ¿cuántos litros necesito? Para muros y techos, considera manos y da litros y cubetas.",
         category: "Acabados",
@@ -465,7 +465,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "paint-cost-calculator",
-        title: "Calculadora de Costo de Pintura",
+        title: "Costo de Pintura Gratis — Litros y Presupuesto (2026)",
         description:
           "Calculadora de costo de pintura gratis — estima el presupuesto total por calidad. De económica a premium, incluye insumos y mano de obra.",
         category: "Acabados",
@@ -473,7 +473,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "primer-calculator",
-        title: "Calculadora de Sellador (Primer)",
+        title: "Calculadora de Sellador Gratis — Litros y m² (2026)",
         description:
           "¿Cuánto sellador necesito? Calculadora gratis para tablaroca nueva, madera y repintado — ajusta rendimiento por tipo de superficie.",
         category: "Acabados",
@@ -481,7 +481,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "epoxy-calculator",
-        title: "Calculadora de Epóxico",
+        title: "Calculadora de Epóxico Gratis — Litros y Costo (2026)",
         description:
           "Calculadora de epóxico — ¿cuánto epóxico para tu piso de cochera? Herramienta gratis para cualquier área. Galones, kits y costo para 1 o 2 capas.",
         category: "Acabados",
@@ -497,7 +497,7 @@ export const categories: CategoryMeta[] = [
     calculators: [
       {
         slug: "deck-board-calculator",
-        title: "Calculadora de Tablas para Deck",
+        title: "Tablas para Deck Gratis — Cantidad y Metros (2026)",
         description:
           "¿Cuántas tablas necesito para mi deck? Calculadora gratis para madera tratada, cedro y composite — cantidad de tablas, metros lineales y desperdicio.",
         category: "Exteriores",
@@ -505,7 +505,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "deck-footing-calculator",
-        title: "Calculadora de Cimentación para Deck",
+        title: "Cimentación para Deck Gratis — Pilares y m³ (2026)",
         description:
           "Calculadora de cimentación para deck: ¿Cuántos pilares de concreto necesito? Herramienta gratis — cantidad de zapatas, postes y trabes.",
         category: "Exteriores",
@@ -513,7 +513,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "deck-railing-calculator",
-        title: "Calculadora de Barandal para Deck",
+        title: "Barandal para Deck Gratis — Postes y Balaustres (2026)",
         description:
           "¿Cuántos postes y balaustres necesito? Calculadora gratis de barandal — da cantidad de postes, balaustres y metros lineales de riel.",
         category: "Exteriores",
@@ -521,7 +521,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "deck-stair-calculator",
-        title: "Calculadora de Escaleras para Deck",
+        title: "Escaleras para Deck Gratis — Peldaños y Largueros (2026)",
         description:
           "Calculadora de escaleras para deck: ¿Cuántos escalones y largueros? Herramienta gratis — ingresa la altura para obtener escalones, largueros y tablas.",
         category: "Exteriores",
@@ -529,7 +529,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "post-hole-calculator",
-        title: "Calculadora de Hoyos para Postes",
+        title: "Hoyos para Postes Gratis — Sacos y m³ (2026)",
         description:
           "Calculadora de hoyos para postes — ¿cuánto concreto para postes de cerca? Herramienta gratis para cualquier tamaño de hoyo. Cantidad exacta de sacos de 25 kg y 50 kg.",
         category: "Exteriores",
@@ -537,7 +537,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "pond-calculator",
-        title: "Calculadora de Estanque",
+        title: "Calculadora de Estanque Gratis — Litros y Lona (2026)",
         description:
           "Calculadora de estanque — herramienta gratis para volumen, tamaño de lona y capacidad de bomba. Ingresa dimensiones para estanques rectangulares, ovalados o tipo riñón.",
         category: "Exteriores",
@@ -545,7 +545,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "fence-calculator",
-        title: "Calculadora de Cercas",
+        title: "Calculadora de Cercas Gratis — Postes y Tablas (2026)",
         description:
           "Calculadora de cercas — ¿cuántos postes, travesaños y tablas necesito? Herramienta gratis para cercas de madera. Lista completa de materiales al instante.",
         category: "Exteriores",
@@ -553,7 +553,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "fence-post-calculator",
-        title: "Calculadora de Postes para Cerca",
+        title: "Postes de Cerca Gratis — Postes y Concreto (2026)",
         description:
           "Calculadora de postes para cerca — ¿cuántos postes y sacos de concreto? Herramienta gratis que calcula postes, concreto y grava para cualquier longitud de cerca.",
         category: "Exteriores",
@@ -561,7 +561,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "fence-panel-calculator",
-        title: "Calculadora de Paneles para Cerca",
+        title: "Paneles de Cerca Gratis — Paneles y Postes (2026)",
         description:
           "Calculadora de paneles para cerca — ¿cuántos paneles prefabricados? Herramienta gratis para paneles de 1.8 m y 2.4 m. Cantidad de paneles, postes y tapas.",
         category: "Exteriores",
@@ -569,7 +569,7 @@ export const categories: CategoryMeta[] = [
       },
       {
         slug: "picket-fence-calculator",
-        title: "Calculadora de Cerca de Estacas",
+        title: "Cerca de Estacas Gratis — Estacas y Travesaños (2026)",
         description:
           "Calculadora de cerca de estacas — ¿cuántas estacas con espaciado personalizado? Herramienta gratis para cualquier ancho y separación. Estacas, travesaños, postes y pies tabla.",
         category: "Exteriores",
@@ -583,10 +583,10 @@ export const categories: CategoryMeta[] = [
     description:
       "Calcula materiales para proyectos de pisos incluyendo madera, alfombra, baldosas y laminado con factor de desperdicio y estimación de costos.",
     calculators: [
-      { slug: "flooring-calculator", title: "Calculadora de Pisos", description: "Calculadora de pisos — herramienta gratuita para metros cuadrados. Cajas, desperdicio y lista de materiales para madera, vinilo y piso de ingeniería.", category: "Pisos", categorySlug: "flooring" },
-      { slug: "carpet-calculator", title: "Calculadora de Alfombra", description: "Calculadora de alfombra — herramienta gratis para metros cuadrados, metros lineales y base. Para rollos de 3,66 m y 4,57 m con planificación de costuras.", category: "Pisos", categorySlug: "flooring" },
-      { slug: "tile-calculator", title: "Calculadora de Baldosas", description: "Calculadora de baldosas — herramienta gratis para pisos de cerámica, porcelanato y piedra natural. Cantidad de baldosas, cajas, lechada y pegamento.", category: "Pisos", categorySlug: "flooring" },
-      { slug: "laminate-calculator", title: "Calculadora de Laminado", description: "Calculadora de piso laminado — estimador gratis de tablones y cajas con subsuelo. Ingresa dimensiones del cuarto para lista de materiales instantánea.", category: "Pisos", categorySlug: "flooring" },
+      { slug: "flooring-calculator", title: "Calculadora de Pisos Gratis — Cajas y m² (2026)", description: "Calculadora de pisos — herramienta gratuita para metros cuadrados. Cajas, desperdicio y lista de materiales para madera, vinilo y piso de ingeniería.", category: "Pisos", categorySlug: "flooring" },
+      { slug: "carpet-calculator", title: "Calculadora de Alfombra Gratis — m² y Rollos (2026)", description: "Calculadora de alfombra — herramienta gratis para metros cuadrados, metros lineares y base. Para rollos de 3,66 m y 4,57 m con planificación de costuras.", category: "Pisos", categorySlug: "flooring" },
+      { slug: "tile-calculator", title: "Calculadora de Baldosas Gratis — Piezas y Cajas (2026)", description: "Calculadora de baldosas — herramienta gratis para pisos de cerámica, porcelanato y piedra natural. Cantidad de baldosas, cajas, lechada y pegamento.", category: "Pisos", categorySlug: "flooring" },
+      { slug: "laminate-calculator", title: "Calculadora de Laminado Gratis — Cajas y m² (2026)", description: "Calculadora de piso laminado — estimador gratis de tablones y cajas con subsuelo. Ingresa dimensiones del cuarto para lista de materiales instantánea.", category: "Pisos", categorySlug: "flooring" },
     ],
   },
 ];

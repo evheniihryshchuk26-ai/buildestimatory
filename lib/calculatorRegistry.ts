@@ -725,6 +725,22 @@ const gravelCalculator: CalculatorConfig = {
       question: "How many cubic yards of gravel fit in a dump truck?",
       answer: "A standard single-axle dump truck holds 8 to 10 cubic yards (11 to 14 tons) of gravel. A tandem-axle dump truck holds 14 to 18 cubic yards (20 to 25 tons). A tri-axle dump truck holds 18 to 22 cubic yards (25 to 31 tons). For small projects, many suppliers offer half-load deliveries or you can haul gravel in a pickup truck (about 1/2 cubic yard per load).",
     },
+    {
+      question: "How much gravel do I need for a 10x10 area?",
+      answer: "A 10x10-foot area (100 sq ft) at 4 inches deep needs approximately 1.2 cubic yards (1.7 tons) of gravel. At 6 inches deep (typical for driveways), you need about 1.9 cubic yards (2.6 tons). These amounts include a 10% waste factor for compaction and uneven ground.",
+    },
+    {
+      question: "How many tons of gravel in a cubic yard?",
+      answer: "One cubic yard of gravel weighs approximately 1.4 tons (2,800 lbs). The exact weight varies by stone type: crushed limestone averages 1.5 tons per yard, pea gravel weighs about 1.35 tons per yard, and decomposed granite weighs about 1.45 tons per yard. Wet gravel can weigh 10 to 15% more than dry.",
+    },
+    {
+      question: "How deep should gravel be for a driveway?",
+      answer: "A gravel driveway should be 6 to 8 inches deep total, applied in layers. The ideal approach is 4 inches of #2 or #3 stone as a base, 4 inches of #57 stone as the middle layer, and 2 inches of fine stone on top. At minimum, use 6 inches of compacted gravel in two 3-inch lifts for a light-use residential driveway.",
+    },
+    {
+      question: "What type of gravel is best for driveways?",
+      answer: "Angular crushed stone (#57 or #411) is the best choice for driveways because its sharp edges interlock when compacted, creating a stable surface. Avoid rounded pea gravel, which shifts under tires. For the base layer, use #2 or road base stone. For the top driving surface, #57 stone or crusher run provides the best combination of drainage and stability.",
+    },
   ],
 };
 
@@ -1220,6 +1236,10 @@ const osbPanelCalculator: CalculatorConfig = {
     { question: "Do I need tongue-and-groove subfloor panels?", answer: "Tongue-and-groove (T&G) edges are strongly recommended for subfloor panels. The interlocking edges eliminate differential deflection between panels, reducing squeaks and creating a stiffer floor. Most builders consider T&G panels standard practice even though square-edge panels are technically code-compliant." },
     { question: "How do I install OSB subfloor panels?", answer: "Lay panels with the long edge perpendicular to the floor joists, stagger end joints by at least one joist bay between rows, and leave 1/8-inch expansion gaps at all edges. Apply subfloor adhesive to the joists, set the panel, and fasten with ring-shank nails or screws every 6 inches on edges and 12 inches in the field." },
     { question: "Can OSB subfloor get wet during construction?", answer: "Exposure 1-rated OSB can handle brief weather exposure during construction, but standing water should be swept off promptly. Standard OSB edges swell when saturated and do not return to their original thickness. If extended rain exposure is expected, use AdvanTech or CDX plywood, which handle moisture significantly better." },
+    { question: "How many OSB sheets for a 10x10 room?", answer: "A 10x10-foot room is 100 sq ft. Each 4x8 OSB panel covers 32 sq ft, so you need 100 / 32 = 3.1 sheets, rounded up to 4 sheets. With a 10% waste factor for cuts and fitting, order 4 to 5 sheets. Offcuts from edge panels can often be used to start the next row." },
+    { question: "What thickness OSB for walls vs floors?", answer: "For wall sheathing, 7/16-inch OSB is the standard thickness and provides adequate racking resistance. For subfloors on 16-inch joist spacing, use 23/32-inch (3/4-inch) tongue-and-groove panels. For subfloors on 24-inch joist spacing, step up to 7/8-inch or 1-inch panels to prevent deflection and bounce underfoot." },
+    { question: "Is OSB or plywood better for subfloor?", answer: "Both are code-compliant and widely used. OSB is 20 to 30% cheaper and is the most common subfloor material in new construction. Plywood handles moisture better and recovers its shape after getting wet, while standard OSB can swell permanently at the edges. Premium OSB like AdvanTech offers moisture resistance comparable to plywood at a moderate price premium." },
+    { question: "How much does a 4x8 sheet of OSB weigh?", answer: "A standard 7/16-inch 4x8 OSB wall sheathing panel weighs about 46 lbs. A 23/32-inch (3/4-inch) tongue-and-groove subfloor panel weighs approximately 70 lbs. AdvanTech subfloor panels weigh about 67 lbs per sheet. The weight matters for planning delivery, jobsite handling, and ensuring adequate structural support during installation." },
   ],
 };
 
@@ -1560,6 +1580,10 @@ const rafterCalculator: CalculatorConfig = {
     { question: "What is a bird's mouth cut on a rafter?", answer: "A bird's mouth is a notch cut into the bottom edge of each rafter where it sits on the wall top plate. It consists of a horizontal seat cut (bearing on the plate) and a vertical plumb cut (against the outside of the wall). The seat cut should be no more than one-third the depth of the rafter to maintain structural integrity." },
     { question: "Do I need collar ties or ceiling joists with rafters?", answer: "Yes. In a traditional rafter roof, opposing rafters push outward on the walls. Collar ties (in the upper third of the rafter span) resist this spreading force. Ceiling joists or rafter ties at the wall plate level are even more effective. Without these horizontal ties, the walls will eventually bow outward. A structural ridge beam eliminates this requirement." },
     { question: "Rafters vs. trusses — which should I choose?", answer: "Choose rafters when you want an open attic, cathedral ceilings, or complex roof shapes. Choose trusses when you want faster installation, lower cost, and engineered load ratings. Trusses are 20-30% less expensive for simple gable roofs, but rafters offer more flexibility and do not require crane access for installation." },
+    { question: "How long should rafters be for a 12 foot span?", answer: "For a 12-foot total span (6-foot run on each side of the ridge), the rafter length depends on the roof pitch. At a 6/12 pitch, each rafter is about 6 feet 8 inches (using the Pythagorean theorem: √(6² + 3²) = 6.71 ft). Add 12 to 24 inches for the overhang (eave tail) to get the total lumber length needed — typically an 8-foot board for each rafter." },
+    { question: "How far apart should roof rafters be?", answer: "Roof rafters are typically spaced at either 16 inches or 24 inches on center. 16-inch spacing is the most common for residential construction, allowing the use of smaller rafter sizes and providing a stiffer roof deck. 24-inch spacing reduces the number of rafters needed but requires larger lumber sizes to span the same distance. Check local span tables for your specific pitch, load, and lumber grade." },
+    { question: "What size rafter do I need for a 20 foot span?", answer: "A 20-foot total span (10-foot run per side) typically requires 2x10 rafters at 16-inch on-center spacing for most residential snow load zones. In heavy snow areas (40+ PSF ground snow load), 2x12 rafters may be necessary. Always verify using the IRC span tables or your local building department's requirements for the specific lumber species, grade, and load conditions." },
+    { question: "Do rafters need a ridge board?", answer: "Yes, in conventional rafter framing, a ridge board is required at the peak to align the opposing rafters and provide a nailing surface. The ridge board must be at least one nominal size deeper than the rafters. Alternatively, a structural ridge beam can replace the ridge board and eliminate the need for collar ties, but it must be engineered to carry the full roof load." },
   ],
 };
 
@@ -1603,6 +1627,10 @@ const ridgeBoardCalculator: CalculatorConfig = {
     { question: "Can I use a 1x board or do I need a 2x ridge board?", answer: "A 1x board (3/4-inch thick) is acceptable for a non-structural ridge board since it only serves as a nailing surface and alignment guide. A 2x board provides more rigidity during construction and is easier to work with. If the ridge must carry any structural load, a full-dimension 2x or engineered beam is required." },
     { question: "Do I need a structural ridge beam for a cathedral ceiling?", answer: "Yes. If you are building a cathedral or vaulted ceiling where collar ties and ceiling joists are not possible, you must use a structural ridge beam. The beam must be sized by an engineer based on the roof span, load, and local code requirements. Posts supporting the ridge beam must transfer loads down to the foundation." },
     { question: "How do I support a ridge board during construction?", answer: "Temporarily brace the ridge board with vertical supports (2x4 braces to the floor or temporary walls) while setting the first few pairs of rafters. Once several pairs of opposing rafters are nailed in place, the ridge board is held stable by the rafter connections. Remove the temporary bracing after the roof is fully framed and sheathed." },
+    { question: "What size ridge board do I need?", answer: "The ridge board must be at least one nominal size deeper than the rafters to provide full bearing contact. For 2x6 rafters, use a 1x8 or 2x8 ridge. For 2x8 rafters, use a 1x10 or 2x10. For 2x10 rafters, use a 1x12 or 2x12. The ridge board thickness can be 1x or 2x since it is non-structural in a conventional rafter roof with collar ties." },
+    { question: "Do I need a ridge board or ridge beam?", answer: "Use a ridge board (non-structural) when your roof has collar ties or ceiling joists that form a structural triangle with the rafters. Use a structural ridge beam when there are no horizontal ties, such as in cathedral or vaulted ceilings. A ridge beam must be engineered (LVL, glulam, or steel) and sized to carry the full roof load, with posts at each end bearing down to the foundation." },
+    { question: "How long can a ridge board span?", answer: "A ridge board can span any length because it is non-structural — it is simply joined end-to-end with butt joints at rafter locations. Each joint must land on a rafter pair for support. A structural ridge beam, however, has span limits based on its size: a 3.5x11.25-inch LVL beam can typically span 16 to 20 feet, while longer spans require deeper beams or intermediate support posts." },
+    { question: "What is the difference between a ridge board and ridge beam?", answer: "A ridge board is a non-structural member (usually 1x or 2x lumber) that aligns opposing rafters at the peak and relies on collar ties or ceiling joists to prevent the roof from spreading. A ridge beam is a structural member (LVL, glulam, or steel) that carries the full weight of the roof, eliminating the need for collar ties and enabling open cathedral ceilings. Ridge beams cost significantly more and require posts to the foundation." },
   ],
 };
 
@@ -1788,6 +1816,10 @@ const dripEdgeCalculator: CalculatorConfig = {
     { question: "Does drip edge go over or under the underlayment?", answer: "At the eaves, drip edge is installed directly on the sheathing, and the underlayment laps over it. At the rakes, drip edge is installed over the underlayment. This installation sequence ensures that any water running down the underlayment is directed onto the drip edge and away from the roof edge." },
     { question: "What material should I choose for drip edge?", answer: "Galvanized steel drip edge is the most common and cost-effective choice at $3 to $5 per 10-foot piece. Aluminum is lighter and does not rust but dents more easily. Copper drip edge is a premium option used on high-end homes and slate roofs. For coastal areas, aluminum or painted galvanized is recommended to resist salt air corrosion." },
     { question: "Can I install drip edge on an existing roof?", answer: "Adding drip edge to an existing roof without a full reroof is difficult because the shingles and underlayment need to lap over the eave drip edge correctly. It is best installed during a full reroofing project. If adding to an existing roof, slide the drip edge under the first course of shingles and nail through the top flange." },
+    { question: "How long is a standard drip edge piece?", answer: "Standard drip edge comes in 10-foot lengths, which is the industry norm across all major manufacturers. Some specialty or commercial drip edge is available in 8-foot lengths. Each piece has a small hem along the bottom edge for rigidity and typically costs $3 to $7 per 10-foot piece in galvanized steel." },
+    { question: "How many drip edge pieces come in a box?", answer: "Drip edge is typically sold individually, not in boxes, at most home improvement stores. However, when ordered in bulk from roofing supply houses, drip edge is often bundled in packs of 25 pieces (250 linear feet per bundle). Buying in bundles can save 15 to 20% compared to individual piece pricing." },
+    { question: "Do I need drip edge on a rake edge?", answer: "Yes. The IRC requires drip edge on both eave edges and rake edges for asphalt shingle roofs. At the rake, the drip edge is installed over the underlayment (the opposite of the eave, where it goes under). Rake drip edge prevents wind-driven rain from getting under the shingles at the gable ends." },
+    { question: "What size drip edge do I need?", answer: "The most common size is Type C/D with a 1.5-inch top flange and a 1.5 to 2-inch face. For standard asphalt shingle roofs with gutters, Type C/D in 26-gauge galvanized steel is the standard choice. Type F (gutter apron) has a longer face drop and is used when the drip edge needs to extend further into the gutter opening." },
   ],
 };
 
@@ -1964,6 +1996,10 @@ const roofSlopeCalculator: CalculatorConfig = {
     { question: "How do I convert roof slope to degrees?", answer: "To convert a slope ratio to degrees, use the arctangent function: degrees = arctan(rise / run) × (180 / π). For a 6:12 slope: degrees = arctan(6/12) × 57.296 = arctan(0.5) × 57.296 = 26.57° ≈ 26.6°. Common conversions: 4:12 = 18.4°, 6:12 = 26.6°, 8:12 = 33.7°, 10:12 = 39.8°, 12:12 = 45°." },
     { question: "What tools do I need to measure roof slope?", answer: "The basic tools are a 2-foot or 4-foot carpenter's level and a tape measure. Place the level horizontal against a rafter or the roof surface, measure out 12 inches along the level, then measure the vertical distance from the end of the level to the roof — that vertical distance in inches is your slope per 12. Digital angle finders and smartphone inclinometer apps provide quick readings but should be verified with a manual measurement." },
     { question: "What roofing material is best for low-slope roofs?", answer: "For roofs below 2:12, TPO (thermoplastic polyolefin) and EPDM (rubber membrane) are the most popular options. TPO is white, energy-efficient, and heat-welded at seams for a watertight bond. EPDM is a black rubber sheet glued or mechanically attached. Modified bitumen is another option, applied in rolls with a torch or adhesive. For 2:12 to 4:12 slopes, architectural shingles with proper low-slope installation can work, but membrane systems are more reliable." },
+    { question: "How do I measure roof slope without going on the roof?", answer: "Go into the attic and measure along a rafter. Hold a level horizontally with one end touching the rafter, mark 12 inches along the level, then measure the vertical distance from the level down to the rafter at that point. That vertical distance in inches is your slope per 12. Alternatively, use a smartphone inclinometer app aimed at the roof edge from the ground for an approximate reading." },
+    { question: "What is a 4/12 roof pitch in degrees?", answer: "A 4/12 roof pitch equals 18.4 degrees. This is calculated using the arctangent of 4 divided by 12: arctan(0.333) = 18.4 degrees. A 4/12 pitch is the minimum slope recommended for standard asphalt shingle installation and is considered a low-slope roof that is easy to walk on." },
+    { question: "What is the minimum roof pitch for shingles?", answer: "The minimum roof pitch for standard asphalt shingles is 4:12 (18.4 degrees). Between 2:12 and 4:12, shingles can be installed but require special low-slope methods including double underlayment, additional sealant at every course, and full ice-and-water shield coverage. Below 2:12, shingles should not be used — switch to a membrane roofing system." },
+    { question: "How does roof pitch affect cost?", answer: "Steeper roofs cost more because they have more surface area, require more materials, and are harder to work on safely. A 12/12 pitch roof has 41% more surface area than a flat roof of the same footprint, directly increasing shingle, underlayment, and labor costs. Labor rates typically increase 15 to 25% for roofs steeper than 8/12 due to safety equipment requirements and slower installation." },
   ],
 };
 
@@ -2008,6 +2044,10 @@ const housewrapCalculator: CalculatorConfig = {
     { question: "What tape should I use for housewrap seams?", answer: "Always use tape recommended by the housewrap manufacturer — Tyvek tape for Tyvek, for example. Contractor sheathing tape (Zip, 3M 8067, or similar) also works on most WRB products. Do not use duct tape, masking tape, or standard packing tape, as these will fail quickly and compromise the air and water barrier." },
     { question: "Does housewrap go over or under window flashing?", answer: "The housewrap is cut at window and door openings in a specific sequence. The sill flashing goes over the housewrap at the bottom, the jamb flashing overlaps the sill flashing, and the head flap of the housewrap laps over the top flashing to create a shingle-lap water management system. Incorrect sequencing is the number one cause of window leaks." },
     { question: "How long can housewrap be left exposed before siding?", answer: "Most housewrap products, including Tyvek HomeWrap, can be left exposed for up to 120 days (4 months) before UV degradation reduces performance. Some premium products offer 6 to 12 month UV exposure ratings. Plan to install siding within the manufacturer's specified timeframe to maintain warranty coverage." },
+    { question: "How many rolls of house wrap do I need?", answer: "Divide your total exterior wall area by the roll coverage — standard Tyvek HomeWrap rolls cover 1,000 sq ft (9 ft × 100 ft) or 1,500 sq ft (9 ft × 150 ft). Add 15% for horizontal and vertical overlaps, window wrapping, and waste. A typical 2,000 sq ft home with about 2,400 sq ft of wall area needs 3 rolls of the 1,000 sq ft size." },
+    { question: "How much does a roll of Tyvek cover?", answer: "A standard Tyvek HomeWrap roll (9 ft × 100 ft) covers 900 sq ft, though it is commonly marketed as 1,000 sq ft. The larger roll (9 ft × 150 ft) covers 1,350 sq ft. After accounting for the required 6-inch horizontal overlaps and 6 to 12-inch vertical overlaps, effective coverage drops to about 850 and 1,250 sq ft respectively." },
+    { question: "Do you overlap house wrap?", answer: "Yes, overlapping is required for a continuous weather barrier. Horizontal seams must overlap at least 6 inches, with the upper course lapping over the lower course (shingle style). Vertical seams require a 6 to 12-inch overlap. All overlaps should be sealed with manufacturer-compatible tape to maintain air and water resistance." },
+    { question: "How many cap nails per roll of house wrap?", answer: "Plan on using approximately 200 to 250 cap nails per 1,000 sq ft roll of housewrap. Cap nails (with 1-inch plastic caps) should be placed every 12 to 18 inches along studs, with extra fasteners around windows, doors, and at all horizontal and vertical overlaps. A 3-roll job typically requires one box of 2,000 cap nails." },
   ],
 };
 
@@ -2777,6 +2817,10 @@ const boardFeetCalculator: CalculatorConfig = {
     { question: "Why is hardwood sold by the board foot instead of by the piece?", answer: "Hardwood lumber comes in random widths and lengths because it is sawn from logs of varying sizes. Unlike dimensional softwood lumber which is standardized (2x4, 2x6, etc.), each hardwood board is unique. Board foot pricing normalizes the cost by volume regardless of individual board dimensions." },
     { question: "How do I convert linear feet to board feet?", answer: "Multiply linear feet by the nominal thickness and width in inches, then divide by 12. Example: 100 linear feet of 1x6 = (1 x 6 x 100) / 12 = 50 board feet. For 2x4: (2 x 4 x 100) / 12 = 66.67 board feet." },
     { question: "What is the cheapest hardwood per board foot?", answer: "Poplar is typically the least expensive domestic hardwood at $3-5 per board foot, followed by soft maple ($4-6) and red oak ($4-7). Alder is affordable on the West Coast. For outdoor projects, white oak ($5-9/BF) is the most cost-effective rot-resistant hardwood. Exotic species like ipe, teak, and mahogany range from $10-25+/BF." },
+    { question: "How many board feet in a 2x4x8?", answer: "A 2x4x8 contains 5.33 board feet: (2 × 4 × 8) / 12 = 5.33 BF. Remember to use nominal dimensions (2 and 4), not the actual surfaced dimensions (1.5 and 3.5). A bundle of ten 2x4x8s equals 53.3 board feet." },
+    { question: "How do you calculate board feet of lumber?", answer: "Use the formula: Board Feet = (Thickness in inches × Width in inches × Length in feet) / 12. Always use nominal (not actual) dimensions. For example, a 2x6x12 = (2 × 6 × 12) / 12 = 12 board feet. For multiple pieces, multiply the per-piece board feet by the quantity." },
+    { question: "What is the difference between board feet and linear feet?", answer: "Linear feet measures only length, regardless of width or thickness — a 12-foot board is 12 linear feet whether it is a 1x4 or a 2x12. Board feet measures volume, accounting for thickness, width, and length. A 12-foot 2x12 is 12 linear feet but 24 board feet. Hardwood is priced by board feet, while softwood framing lumber is typically priced by the piece or linear foot." },
+    { question: "How much does a board foot of walnut cost?", answer: "American black walnut typically costs $8 to $15 per board foot for FAS grade (clear, defect-free). Lower grades (No. 1 Common) run $5 to $8 per board foot. Figured walnut with curly or crotch grain can command $15 to $30+ per board foot. Prices vary by supplier, region, and whether the lumber is kiln-dried or air-dried." },
   ],
 };
 
@@ -3001,6 +3045,22 @@ const deckFootingCalculator: CalculatorConfig = {
       question: "What size Sonotube for a deck?",
       answer: "The most common Sonotube sizes for residential deck footings are 10-inch and 12-inch diameter. A 12-inch Sonotube is the standard choice for most decks — it provides 113 square inches of bearing area and supports typical residential loads on most soil types. Use 10-inch tubes only for small, lightly loaded decks on firm soil. For heavy-load applications such as two-story decks, hot tub supports, or rooftop decks, step up to 16-inch or even 20-inch tubes. The required diameter ultimately depends on the total load per footing and the soil bearing capacity — sandy or clay soils may require larger footings than dense gravel or bedrock. Your building inspector can confirm the minimum size for your specific project.",
     },
+    {
+      question: "How deep should deck footings be?",
+      answer: "Deck footings must extend below the local frost line to prevent frost heave. In the northern United States, this typically means 36 to 48 inches deep — 42 inches in much of the Midwest, 48 inches in Minnesota and Wisconsin, and 60 inches in parts of Alaska. Southern states may only require 12 to 18 inches. Always dig at least 6 inches below the published frost depth as a safety margin.",
+    },
+    {
+      question: "How many bags of concrete for a deck footing?",
+      answer: "A standard 12-inch diameter by 42-inch deep footing requires approximately 4 bags of 80 lb pre-mixed concrete (about 2.3 cubic feet). A 10-inch diameter by 42-inch deep footing uses about 3 bags. Multiply by the number of footings for your total. For 9 footings at 12-inch diameter, plan on 36 bags of 80 lb concrete mix.",
+    },
+    {
+      question: "What size footing for a 6x6 post?",
+      answer: "A 6x6 post (actual 5.5 x 5.5 inches) should sit on a footing at least 12 inches in diameter — preferably 16 inches for heavy-load applications. The footing must extend below the frost line. Use a Simpson ABA66 or equivalent post base to connect the post to the footing, and never embed the wood post directly in the concrete.",
+    },
+    {
+      question: "Do I need rebar in deck footings?",
+      answer: "Rebar is not typically required for standard residential deck footings using Sonotubes. However, adding a single piece of #4 rebar vertically in the center of each footing increases tensile strength and helps resist uplift forces in high-wind areas. Some jurisdictions and engineers require rebar for decks over 4 feet above grade or for hot tub supports.",
+    },
   ],
 };
 
@@ -3070,6 +3130,22 @@ const deckRailingCalculator: CalculatorConfig = {
     {
       question: "Can I install horizontal railing instead of vertical balusters?",
       answer: "Horizontal railing (with cables or boards running side to side) is allowed in many jurisdictions but prohibited in some areas because it can be climbable by children. Check your local code. When allowed, horizontal members must still prevent a 4-inch sphere from passing through. Cable railing typically uses 3/16-inch stainless steel cables spaced 3 inches apart with intermediate posts every 4 feet to prevent cable deflection.",
+    },
+    {
+      question: "How many balusters do I need per foot of railing?",
+      answer: "With standard 1.5-inch square balusters and the code-required 4-inch maximum gap, you need approximately 3 balusters per linear foot of railing. A typical 6-foot railing section uses 17 to 19 balusters. For round 3/4-inch balusters, the count is similar because the spacing is measured between the balusters, not from center to center.",
+    },
+    {
+      question: "What is the maximum gap between deck balusters?",
+      answer: "The IRC requires that a 4-inch sphere cannot pass through any opening in the railing at any point. This applies between balusters, between the bottom rail and the deck surface, and at any decorative opening. The 4-inch rule is designed to prevent small children from getting their heads stuck between balusters.",
+    },
+    {
+      question: "How far apart should deck railing posts be?",
+      answer: "Deck railing posts should be spaced no more than 6 feet apart for standard wood railings and up to 8 feet for reinforced metal or composite systems. Posts must also be placed at every corner, at the top and bottom of each stairway, and at both sides of any gate opening. Closer spacing of 4 feet may be needed for heavy drink-rail applications.",
+    },
+    {
+      question: "Do I need a railing on a deck less than 30 inches?",
+      answer: "Under the IRC, a guard rail is not required when the deck surface is less than 30 inches above the adjacent grade. However, some local jurisdictions set a lower threshold of 24 inches. Even when not required by code, adding a railing to a low deck improves safety, especially for young children and elderly residents.",
     },
   ],
 };
