@@ -21,6 +21,15 @@ export const metadata: Metadata = {
     template: "%s | BuildEstimatory",
   },
   description: siteConfig.description,
+  keywords: [
+    "building calculator",
+    "construction calculator",
+    "construction estimator",
+    "material calculator",
+    "building cost calculator",
+    "free construction calculator",
+    "building material estimator",
+  ],
   metadataBase: new URL(siteConfig.url),
   openGraph: {
     type: "website",

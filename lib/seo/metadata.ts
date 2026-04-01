@@ -28,19 +28,30 @@ export function generateCalculatorMetadata({
   description,
   slug,
   category,
+  keywords,
 }: {
   title: string;
   description: string;
   slug: string;
   category: string;
+  keywords?: string[];
 }): Metadata {
   const fullTitle = `${title} | BuildEstimatory`;
   const path = `/calculators/${category}/${slug}/`;
   const url = `${siteConfig.url}${path}`;
 
+  // Auto-generate keywords from slug and title if not provided
+  const autoKeywords = keywords || [
+    slug.replace(/-/g, " "),
+    title.replace(/Free |Gratis |Kostenloser |Gratuit |Gratuito |Darmowy |\(2026\)/g, "").trim(),
+    `free ${slug.replace(/-/g, " ")}`,
+    `${category.replace(/-/g, " ")} calculator`,
+  ];
+
   return {
     title: fullTitle,
     description,
+    keywords: autoKeywords,
     openGraph: {
       title: fullTitle,
       description,
@@ -85,6 +96,12 @@ export function generateCategoryMetadata({
   return {
     title: fullTitle,
     description,
+    keywords: [
+      `${category.replace(/-/g, " ")} calculators`,
+      `free ${category.replace(/-/g, " ")} calculator`,
+      "construction calculator",
+      "building material estimator",
+    ],
     openGraph: {
       title: fullTitle,
       description,
