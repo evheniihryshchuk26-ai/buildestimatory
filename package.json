@@ -15,7 +15,8 @@
     "build:en-ca": "NEXT_PUBLIC_LOCALE=en-ca next build",
 "build:pl": "NEXT_PUBLIC_LOCALE=pl next build",
     "build:it": "NEXT_PUBLIC_LOCALE=it next build",
-    "start": "next start"
+    "start": "next start",
+    "indexnow": "npx tsx scripts/indexnow.ts"
   },
   "dependencies": {
     "@base-ui/react": "^1.2.0",
