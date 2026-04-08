@@ -2345,6 +2345,121 @@ export const pondCalculator: CalculatorSEOContent = {
   ],
 };
 
+
+// ─── STAIRS ──────────────────────────────────────────────────────────────────
+
+const stairCalculatorPTBR: CalculatorSEOContent = {
+  disclaimer: "Este calculador fornece estimativas baseadas nas normas brasileiras de construção (ABNT NBR 9077 e NBR 15575). Sempre consulte o corpo de bombeiros e prefeitura local. Altura do espelho máx. 180 mm e piso mín. 250 mm.",
+  howToUse: [
+    "Meça a altura total entre pisos acabados em milímetros.",
+    "Insira a profundidade do piso desejada (mínimo 250 mm).",
+    "Insira a largura da escada (mínimo 1.100 mm para residencial conforme ABNT NBR 9077).",
+    "Clique em Calcular para obter quantidade de degraus, espelho, piso e comprimento da longarina.",
+  ],
+  materialInfo: "A construção de escadas envolve vários componentes-chave: longarinas (ou cosciais), pisos (degraus), espelhos (contrapisos) e corrimãos. As longarinas são os elementos estruturais diagonais que suportam a escada, tipicamente cortadas de tábuas de 50×300 mm para lances retos. A ABNT NBR 9077/15575 rege o projeto de escadas residenciais com requisitos específicos: altura do espelho máxima de 180 mm, profundidade do piso mínima de 250 mm, largura mínima de 1.100 mm. A fórmula de conforto 2A + P = 630 mm (fórmula de Blondel) garante subida confortável. Os pisos são comumente construídos em madeira maciça de 35–40 mm (ipê, cumaru, peroba) ou duas tábuas de 50×150 mm. Os espelhos usam tábuas de 20–25 mm. Para escadas externas, madeira tratada (pinus autoclavado classe IV) ou composite resistem às intempéries. Escadas internas frequentemente usam pisos de madeira de lei (ipê, cumaru, jatobá) para durabilidade. Uma escada interna padrão custa R$ 5.000 – R$ 20.000 em materiais para um lance reto, com pisos premium de madeira de lei adicionando 30–50%. Sempre verifique a altura livre mínima de 2.100 mm medida verticalmente. No Brasil, a madeira é comprada em metros e milímetros. As longarinas devem ser de qualidade estrutural. Para condições tropicais brasileiras, escadas externas se beneficiam de pisos antiderrapantes e drenagem adequada na base.",
+  nextSteps: [
+    { label: "Calculadora de Longarinas", href: "/calculators/stairs/stair-stringer-calculator/" },
+    { label: "Calculadora Espelho/Piso", href: "/calculators/stairs/rise-over-run-calculator/" },
+    { label: "Calculadora com Patamar", href: "/calculators/stairs/stair-landing-calculator/" },
+    { label: "Calculadora de Escadas para Deck", href: "/calculators/outdoor/deck-stair-calculator/" },
+  ],
+  installationTips: [
+    "Use sempre um esquadro de carpinteiro com batentes fixados nas medidas de espelho e piso para cortes consistentes.",
+    "Reduza o primeiro espelho pela espessura de um piso para que todos os espelhos visíveis fiquem iguais.",
+    "Fixe as longarinas à viga de cabeceira com conectores metálicos (tipo Simpson LSC ou equivalente).",
+    "Pré-fure todos os furos de parafuso em pisos e espelhos para evitar rachaduras.",
+    "Instale um corrimão temporário durante a construção para segurança.",
+  ],
+  commonMistakes: [
+    "Não considerar a espessura do piso acabado — isso altera o primeiro e último espelho.",
+    "Espelhos inconsistentes — variação máxima de 5 mm. Desníveis são risco de tropeço.",
+    "Usar tábuas de 50×250 mm em vez de 50×300 mm — material estrutural insuficiente após os cortes.",
+    "Esquecer a altura livre — meça 2.100 mm verticalmente de cada nariz de degrau ao teto.",
+    "Não verificar normas locais — o corpo de bombeiros pode ter requisitos adicionais.",
+  ],
+  faqs: [
+    { question: "Como calculo quantos degraus preciso?", answer: "Meça a altura total entre pisos acabados em mm e divida pela altura ideal de espelho (175–190 mm). Arredonde. Exemplo: 2.700 mm / 180 = 15 espelhos e 14 pisos. O piso superior serve como último degrau." },
+    { question: "O que diz a norma para escadas residenciais?", answer: "A ABNT NBR 9077 e NBR 15575 exigem: espelho máx. 180 mm, piso mín. 250 mm, largura mín. 1.100 mm, altura livre 2.100 mm, corrimão de 800 a 920 mm. Variação máx. entre espelhos: 5 mm." },
+    { question: "Qual é o ângulo ideal de uma escada?", answer: "O ângulo ideal é entre 30° e 37°, correspondendo a um espelho de 170–190 mm com piso de 250–280 mm. Este intervalo proporciona a subida mais confortável e segura." },
+    { question: "Qual o comprimento da longarina?", answer: "Comprimento = raiz quadrada de (altura² + percurso²). Exemplo: 2.700 mm de altura e 3.780 mm de percurso = √(2.700² + 3.780²) ≈ 4.645 mm. Compre tábuas pelo menos 300 mm mais longas." },
+    { question: "Quanto custa construir uma escada?", answer: "Escada interna: R$ 5.000 – R$ 20.000 em materiais. Externa: R$ 2.000 – R$ 8.000. Instalação profissional adiciona 50–100%. Pisos premium de madeira de lei adicionam 30–50%." },
+    { question: "Quantas longarinas preciso?", answer: "Espaçamento máx. 600 mm entre centros, 400 mm recomendado. Para escada de 1.100 mm: 3 longarinas. Acima de 1.400 mm: 4 longarinas." },
+  ],
+};
+
+// Repeat similar pattern for the other 4 stair calculators (stringer, rise-over-run, spiral, landing)
+// But keep them shorter with just disclaimer + howToUse + materialInfo + nextSteps + tips + mistakes + faqs
+
+const stairStringerCalcPTBR: CalculatorSEOContent = {
+  disclaimer: "Cálculos de longarina assumem longarinas dentadas padrão de tábuas de 50×300 mm. Sempre verifique que o material restante após o corte seja pelo menos 90 mm. Consulte sua norma local.",
+  howToUse: ["Insira a altura total da escada em mm.", "Insira o piso por degrau (mínimo 250 mm).", "Insira o número total de degraus.", "Insira a largura para calcular longarinas.",],
+  materialInfo: "As longarinas são a espinha dorsal de qualquer escada. Longarinas padrão são cortadas de tábuas 50×300 mm, mantendo os 90 mm mínimos após os cortes. Para exteriores, use madeira tratada em autoclave classe IV (pinus autoclavado) em 50×300 mm. Nunca use 50×250 mm para longarinas dentadas. Longarinas fechadas com rebaixos fresados podem usar 50×250 mm. Suportes metálicos eliminam a necessidade de cortes. Longarinas pré-fabricadas em aço custam R$ 100–300 cada. Uma tábua 50×300×5.000 mm custa R$ 80–200 dependendo da espécie. Orçe R$ 250–700 por escada apenas para madeira de longarina.",
+  nextSteps: [
+    { label: "Calculadora de Escadas", href: "/calculators/stairs/stair-calculator/" },
+    { label: "Calculadora Espelho/Piso", href: "/calculators/stairs/rise-over-run-calculator/" },
+    { label: "Calculadora de Custo de Madeira", href: "/calculators/hardware/lumber-cost-calculator/" },
+  ],
+  installationTips: ["Use esquadro de carpinteiro com batentes.", "Faça todos os cortes com serra circular e finalize cantos com serrote.", "Teste a primeira longarina antes de cortar as demais.", "Use conectores metálicos na conexão superior.",],
+  commonMistakes: ["Cortar demais com serra circular — finalize com serrote.", "Usar 50×250 mm — material insuficiente após corte.", "Não reduzir primeiro espelho pela espessura do piso.", "Espaçamento de longarinas muito grande — máx. 600 mm entre centros.",],
+  faqs: [
+    { question: "Qual madeira usar para longarinas?", answer: "Tábuas de 50×300 mm para longarinas dentadas. Após os cortes, devem restar pelo menos 90 mm de madeira. 50×300 mm é adequado. Nunca use 50×250 mm para longarinas dentadas." },
+    { question: "Quantas longarinas para escada de 1.100 mm?", answer: "Para 1.100 mm: 3 longarinas. Espaçamento máx. 600 mm entre centros, 400 mm recomendado." },
+    { question: "Como cortar longarinas?", answer: "Marque espelho e piso em uma tábua 50×300 mm com esquadro e batentes. Corte com serra circular, finalize cantos com serrote. Reduza primeiro espelho pela espessura do piso." },
+    { question: "Posso usar 50×250 mm?", answer: "Não para longarinas dentadas. Com corte de 190 mm, restam apenas ~45 mm. Use 50×250 mm apenas para longarinas fechadas com suportes metálicos." },
+    { question: "Qual espaçamento entre longarinas?", answer: "Máximo 600 mm entre centros, 400 mm recomendado. Menor espaçamento reduz flexão." },
+    { question: "Quanto custam as longarinas?", answer: "Tábua 50×300×5.000 mm: R$ 80–200. Para escada de 3 longarinas: R$ 250–700 só de madeira." },
+  ],
+};
+
+
+const riseOverRunCalcPTBR: CalculatorSEOContent = {
+  disclaimer: "Cálculos de espelho/piso funcionam para escadas, rampas, telhados e qualquer superfície inclinada. Para escadas, a norma exige espelho máx. 180 mm e piso mín. 250 mm. Para rampas acessíveis: inclinação máx. 8,33%.",
+  howToUse: ["Insira o espelho (altura vertical) em mm.", "Insira o piso (distância horizontal) em mm.", "Clique em Calcular para razão, porcentagem, ângulo e descrição.", "Funciona para escadas, rampas, telhados e qualquer superfície inclinada."],
+  materialInfo: "A relação espelho/piso é a medida fundamental para calcular a inclinação de qualquer superfície. Para escadas, o espelho é a altura vertical de cada degrau e o piso é a profundidade horizontal. A ABNT especifica espelho máximo de 180 mm e piso mínimo de 250 mm. A fórmula de Blondel (2E + P = 630 mm) assegura o conforto. Para inclinação de telhados, a relação é expressa em porcentagem ou graus. Para rampas de acessibilidade (NBR 9050), a inclinação máxima é 8,33% (1:12). Calçadas não devem exceder 15% de inclinação para acesso seguro de veículos. Compreender a relação espelho/piso ajuda a verificar conformidade normativa, calcular comprimentos de material e garantir segurança em qualquer projeto com inclinação.",
+  nextSteps: [{ label: "Calculadora de Escadas", href: "/calculators/stairs/stair-calculator/" }, { label: "Calculadora de Longarinas", href: "/calculators/stairs/stair-stringer-calculator/" }, { label: "Calculadora Pendiente Telhado", href: "/calculators/roofing/roof-pitch-calculator/" }],
+  installationTips: ["Verifique espelho e piso com nível e trena após a instalação.", "Para escadas, todos os espelhos devem estar dentro de 5 mm.", "Use inclinômetro digital para confirmar ângulos.", "Para rampas, verifique a inclinação em vários pontos."],
+  commonMistakes: ["Confundir espelho com piso — espelho é sempre vertical, piso é sempre horizontal.", "Não considerar espessura do acabamento de piso.", "Usar unidades diferentes para espelho e piso.", "Esquecer que inclinação de telhado usa 100 cm como referência."],
+  faqs: [
+    { question: "O que é relação espelho/piso?", answer: "É a razão entre a altura vertical (espelho) e a distância horizontal (piso). Exemplo: 180 mm de espelho sobre 270 mm de piso = 0,67, 67% ou 33,7°." },
+    { question: "Como calcular espelho e piso?", answer: "Meça a altura total entre pisos. Divida pela altura ideal (175–190 mm). Piso mínimo 250 mm. Percurso = (espelhos - 1) × piso." },
+    { question: "Qual é confortável?", answer: "Fórmula de Blondel: 2E + P = 600–640 mm (ideal 630). Exemplo: E=175, P=280 = 630 mm." },
+    { question: "Inclinação de rampa acessível?", answer: "NBR 9050: máx. 8,33% (1:12). Ou seja, 83 mm de subida por 1.000 mm de percurso." },
+    { question: "Como converter em graus?", answer: "Ângulo = arctan(espelho/piso) × 180/π. Exemplo: 180/270 = arctan(0,667) = 33,7°." },
+    { question: "Inclinação máxima para garagem?", answer: "15% recomendado (8,5°). Algumas prefeituras permitem até 25% em trechos curtos." },
+  ],
+};
+const spiralStaircaseCalcPTBR: CalculatorSEOContent = {
+  disclaimer: "Escadas caracol têm requisitos normativos específicos. ABNT NBR 9077 exige largura livre mín. 600 mm, altura livre 2.100 mm e espelho máx. 180 mm. Consulte o corpo de bombeiros local.",
+  howToUse: ["Meça a altura de piso a piso.", "Insira o diâmetro da abertura circular.", "Insira a rotação total em graus (360° para uma volta).", "Clique em Calcular para degraus, espelho e dimensões."],
+  materialInfo: "Escadas caracol são alternativas compactas, cabendo em abertura de 1.200 mm (1.500 mm recomendado). A ABNT exige: largura livre mín. 600 mm, espelho máx. 180 mm, profundidade mín. de piso 150 mm na linha de pisada. Kits de aço prefabricados custam R$ 5.000–20.000. Sob medida em madeira ou ferro: R$ 15.000–80.000. A coluna central deve ser ancorada com chumbadores. A maioria gira no sentido horário subindo.",
+  nextSteps: [{ label: "Calculadora de Escadas", href: "/calculators/stairs/stair-calculator/" }, { label: "Calculadora Espelho/Piso", href: "/calculators/stairs/rise-over-run-calculator/" }],
+  installationTips: ["Verifique que a abertura é perfeitamente circular e nivelada.", "Ancore a base da coluna com pelo menos 4 chumbadores M12.", "Monte degraus de baixo para cima verificando nível a cada passo.", "Instale corrimão contínuo de baixo a cima."],
+  commonMistakes: ["Diâmetro pequeno demais — 1.200 mm é mínimo, use 1.500 mm para uso diário.", "Abertura não circular cria espaçamento irregular.", "Esquecer a plataforma de chegada na rotação.", "Não considerar transporte de móveis."],
+  faqs: [
+    { question: "Diâmetro mínimo?", answer: "Largura livre mín. 600 mm. Com coluna e corrimão: abertura mín. ~1.200 mm. Recomendado: 1.500 mm." },
+    { question: "Quantos degraus?", answer: "Depende da altura e espelho máx. (180 mm). Para 2.700 mm: mín. 15 degraus." },
+    { question: "Escada caracol é aprovada pelo bombeiro?", answer: "Sim, com requisitos específicos. Pode não ser aceita como principal em algumas jurisdições." },
+    { question: "Quanto custa?", answer: "Kit aço: R$ 5.000–20.000. Sob medida madeira: R$ 15.000–60.000. Ferro forjado/vidro: R$ 80.000+." },
+    { question: "Pode ser a única escada?", answer: "Depende do corpo de bombeiros local. Verifique antes de projetar." },
+    { question: "Sentido de rotação?", answer: "Geralmente horário subindo. Escolha de design — considere o layout do andar superior." },
+  ],
+};
+const stairLandingCalcPTBR: CalculatorSEOContent = {
+  disclaimer: "Escadas com patamar devem atender todos os requisitos para cada lance. O patamar deve ter pelo menos a largura da escada e 1.100 mm de profundidade. Algumas normas exigem patamar quando a altura supera 3.700 mm.",
+  howToUse: ["Meça a altura total entre pisos em mm.", "Insira a profundidade do patamar (mín. 1.100 mm).", "Insira o piso desejado (mín. 250 mm).", "Clique em Calcular para degraus por lance, altura do patamar e percurso total."],
+  materialInfo: "Patamares são plataformas intermediárias que dividem uma escada longa em dois ou mais lances. O patamar deve ter pelo menos a largura da escada e 1.100 mm de profundidade na direção de circulação. Patamares servem como ponto de descanso, permitem mudanças de direção (escadas em L e em U) e melhoram a segurança. Muitas normas locais exigem patamar quando a altura vertical supera 3.700 mm. Patamares são estruturados como pequenas seções de piso, com vigas, cabeçais e assoalho. Para escadas em L (90°): patamar de 1.100×1.100 mm. Para escadas em U (180°): patamar mais largo. O custo adicional é de R$ 1.000–4.000 em materiais e R$ 2.000–6.000 de mão de obra.",
+  nextSteps: [{ label: "Calculadora de Escadas", href: "/calculators/stairs/stair-calculator/" }, { label: "Calculadora de Longarinas", href: "/calculators/stairs/stair-stringer-calculator/" }],
+  installationTips: ["Estruture o patamar como mini-piso — vigas a 400 mm entre centros.", "Fixe o patamar às paredes com parafusos estruturais.", "Nível perfeito — verifique com nível de 1,2 m.", "Construa o patamar antes dos longarinos do lance superior."],
+  commonMistakes: ["Patamar raso demais — mínimo 1.100 mm na direção de circulação.", "Não tratar como elemento estrutural.", "Espelhos desiguais na transição do patamar.", "Esquecer a espessura do patamar nos cálculos."],
+  faqs: [
+    { question: "Quando preciso de patamar?", answer: "Muitas normas exigem quando a altura supera 3.700 mm (~19 degraus). Sempre obrigatório em mudanças de direção e em portas." },
+    { question: "Tamanho do patamar?", answer: "Mín. largura da escada × 1.100 mm de profundidade. Escada em U: toda a largura dos dois lances." },
+    { question: "Escada em L vs U?", answer: "L: giro 90° com patamar quadrado. U: giro 180° com patamar retangular mais largo." },
+    { question: "Como calcular com patamar?", answer: "Altura total / espelho ideal = total de degraus. Divida em dois lances iguais. Percurso total = dois lances + profundidade do patamar." },
+    { question: "Patamar conta como degrau?", answer: "Não. É uma plataforma plana no nível da última pisada do lance inferior." },
+    { question: "Custo do patamar?", answer: "Materiais: R$ 1.000–4.000. Mão de obra: R$ 2.000–6.000. L: R$ 3.000–10.000 a mais. U: R$ 5.000–15.000 a mais." },
+  ],
+};
 // ─── REGISTRY MAP ─────────────────────────────────────────────────────────────
 
 export const registryPTBR: Record<string, Record<string, CalculatorSEOContent>> = {
@@ -2422,5 +2537,12 @@ export const registryPTBR: Record<string, Record<string, CalculatorSEOContent>> 
     "deck-stair-calculator": deckStairCalculatorPTBR,
     "post-hole-calculator": postHoleCalculatorPTBR,
     "pond-calculator": pondCalculator,
+  },
+  stairs: {
+    "stair-calculator": stairCalculatorPTBR,
+    "stair-stringer-calculator": stairStringerCalcPTBR,
+    "rise-over-run-calculator": riseOverRunCalcPTBR,
+    "spiral-staircase-calculator": spiralStaircaseCalcPTBR,
+    "stair-landing-calculator": stairLandingCalcPTBR,
   },
 };

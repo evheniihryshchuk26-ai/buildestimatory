@@ -2440,6 +2440,207 @@ export const pondCalculator: CalculatorSEOContent = {
   ],
 };
 
+// ─── STAIRS ──────────────────────────────────────────────────────────────────
+
+const stairCalculatorFR: CalculatorSEOContent = {
+  disclaimer:
+    "Ce calculateur fournit des estimations bas\u00e9es sur les normes de construction r\u00e9sidentielle fran\u00e7aises (DTU, NF P 01-012). V\u00e9rifiez toujours aupr\u00e8s de votre mairie avant la construction. Hauteur de marche max. 210 mm, giron min. 220 mm.",
+  howToUse: [
+    "Mesurez la hauteur totale (distance verticale entre les sols finis) en mm.",
+    "Entrez le giron souhait\u00e9 (220 mm minimum recommand\u00e9).",
+    "Entrez la largeur de l'escalier (800 mm minimum pour r\u00e9sidentiel).",
+    "Cliquez sur Calculer pour obtenir le nombre de marches, hauteur, giron et longueur de limon.",
+  ],
+  materialInfo:
+    "La construction d'escalier comprend plusieurs composants cl\u00e9s : limons (cr\u00e9maill\u00e8res), marches (girons), contremarches et mains courantes. Les limons sont les \u00e9l\u00e9ments structuraux diagonaux qui supportent l'escalier, g\u00e9n\u00e9ralement d\u00e9coup\u00e9s dans des planches de 50\u00d7300 mm pour les vol\u00e9es droites. La norme fran\u00e7aise (DTU et NF P 01-012) r\u00e9git la conception des escaliers r\u00e9sidentiels : hauteur de marche id\u00e9ale 170\u2013210 mm, giron minimum 220 mm, largeur minimum 800 mm (900 mm recommand\u00e9). La formule de Blondel (2 \u00d7 hauteur + giron = 600\u2013640 mm) garantit le confort. Les marches sont souvent en bois massif de 36\u201340 mm (ch\u00eane, h\u00eatre, fr\u00eane) ou en composite. Le nez de marche d\u00e9passe de 20\u201330 mm. Les contremarches utilisent des planches de 18\u201325 mm. Pour les escaliers ext\u00e9rieurs, le bois trait\u00e9 autoclave (classe 4) ou le composite r\u00e9siste aux intemp\u00e9ries. Les escaliers int\u00e9rieurs utilisent souvent des marches en bois dur (ch\u00eane, h\u00eatre, fr\u00eane) pour la durabilit\u00e9 et l'esth\u00e9tique. Un escalier int\u00e9rieur standard co\u00fbte 2 000\u20138 000 \u20ac en mat\u00e9riaux pour une vol\u00e9e droite. Les marches massives en ch\u00eane ajoutent 500\u20132 000 \u20ac. La hauteur libre minimum est de 2 100 mm (NF P 01-012).",
+  nextSteps: [
+    { label: "Calculateur de Limons", href: "/calculators/stairs/stair-stringer-calculator/" },
+    { label: "Calculateur Giron/Hauteur", href: "/calculators/stairs/rise-over-run-calculator/" },
+    { label: "Calculateur avec Palier", href: "/calculators/stairs/stair-landing-calculator/" },
+    { label: "Calculateur Escalier Terrasse", href: "/calculators/outdoor/deck-stair-calculator/" },
+  ],
+  installationTips: [
+    "Utilisez toujours une \u00e9querre de charpentier avec des butoirs de marche pour des d\u00e9coupes r\u00e9guli\u00e8res.",
+    "R\u00e9duisez la premi\u00e8re contremarche de l'\u00e9paisseur d'une marche pour \u00e9galiser toutes les hauteurs visibles.",
+    "Fixez les limons au chevron d'entr\u00e9e avec des connecteurs m\u00e9talliques (type Simpson).",
+    "Pr\u00e9-percez tous les trous de vis pour \u00e9viter les fissures.",
+    "Installez une main courante provisoire pendant la construction pour la s\u00e9curit\u00e9.",
+  ],
+  commonMistakes: [
+    "Ne pas tenir compte de l'\u00e9paisseur du rev\u00eatement de sol en haut et en bas \u2014 cela modifie la premi\u00e8re et derni\u00e8re hauteur.",
+    "Hauteurs de marche irr\u00e9guli\u00e8res \u2014 la norme autorise max. 5 mm d'\u00e9cart. Les in\u00e9galit\u00e9s sont un risque de tr\u00e9buchement.",
+    "Utiliser des planches de 50\u00d7250 mm au lieu de 50\u00d7300 mm \u2014 apr\u00e8s les entailles, il ne reste pas assez de bois porteur.",
+    "Oublier la hauteur libre \u2014 mesurez 2 100 mm verticalement depuis chaque nez de marche au plafond.",
+    "Ne pas v\u00e9rifier la r\u00e9glementation locale \u2014 les DTU peuvent varier selon le d\u00e9partement.",
+  ],
+  faqs: [
+    { question: "Comment calculer le nombre de marches ?", answer: "Mesurez la hauteur totale entre sols finis en mm et divisez par la hauteur id\u00e9ale (170\u2013180 mm). Arrondissez au nombre entier. Exemple : 2 700 mm / 180 = 15 contremarches et 14 girons (un giron de moins car le palier sup\u00e9rieur sert de derni\u00e8re marche)." },
+    { question: "Que dit la norme pour les escaliers r\u00e9sidentiels ?", answer: "La NF P 01-012 et les DTU exigent : hauteur de marche 170\u2013210 mm, giron min. 220 mm, largeur min. 800 mm (900 mm recommand\u00e9), hauteur libre 2 100 mm, main courante d'un c\u00f4t\u00e9 (900\u20131 000 mm) pour 3+ marches. \u00c9cart max. entre hauteurs : 5 mm." },
+    { question: "Quel est l'angle id\u00e9al d'un escalier ?", answer: "L'angle id\u00e9al est entre 25\u00b0 et 37\u00b0, correspondant \u00e0 une hauteur de 170\u2013190 mm avec un giron de 250\u2013280 mm. La formule de Blondel (2h + g = 600\u2013640 mm) garantit le confort. Au-del\u00e0 de 42\u00b0, l'escalier devient difficile." },
+    { question: "Quelle longueur de limon faut-il ?", answer: "Longueur du limon = racine carr\u00e9e de (hauteur\u00b2 + longueur de foul\u00e9e\u00b2). Exemple : hauteur 2 700 mm, foul\u00e9e 3 780 mm = \u221a(2 700\u00b2 + 3 780\u00b2) \u2248 4 645 mm. Pr\u00e9voyez 300 mm de plus pour les ajustements." },
+    { question: "Combien co\u00fbte un escalier en France ?", answer: "Escalier int\u00e9rieur droit (14 marches) : 2 000\u20138 000 \u20ac en mat\u00e9riaux. Ext\u00e9rieur en bois trait\u00e9 : 800\u20133 000 \u20ac. Pose professionnelle : 1 500\u20135 000 \u20ac de main-d'\u0153uvre. Marches en ch\u00eane massif : +500\u20132 000 \u20ac." },
+    { question: "Combien de limons faut-il ?", answer: "Espacement max. 600 mm entre axes, 400 mm recommand\u00e9. Pour un escalier de 800 mm : 2 limons. Au-del\u00e0 de 1 000 mm : 3 limons (deux ext\u00e9rieurs + un central). Au-del\u00e0 de 1 200 mm : 4 limons." },
+  ],
+};
+
+const stairStringerCalculatorFR: CalculatorSEOContent = {
+  disclaimer:
+    "Les calculs de limons supposent des limons \u00e0 cr\u00e9maill\u00e8re standard en planches de 50\u00d7300 mm. V\u00e9rifiez qu'il reste au moins 90 mm de bois apr\u00e8s les entailles. Consultez votre DTU local.",
+  howToUse: [
+    "Entrez la hauteur totale en mm.",
+    "Entrez le giron par marche (min. 220 mm recommand\u00e9).",
+    "Entrez le nombre total de marches (utilisez le Calculateur d'Escalier).",
+    "Entrez la largeur de l'escalier pour calculer le nombre de limons.",
+  ],
+  materialInfo:
+    "Les limons d'escalier sont la colonne vert\u00e9brale de tout escalier, supportant le poids des marches, contremarches et tous les utilisateurs. Les limons standard sont d\u00e9coup\u00e9s dans des planches de 50\u00d7300 mm (2\u00d712 pouces), offrant suffisamment de mati\u00e8re pour les entailles tout en maintenant les 90 mm de bois non entaill\u00e9 requis. Pour les applications ext\u00e9rieures, utilisez du bois trait\u00e9 autoclave classe 4 (pin sylvestre ou Douglas) en 50\u00d7300 mm. Pour les escaliers int\u00e9rieurs, le bois s\u00e9ch\u00e9 en \u00e9tuve (sapin, \u00e9pic\u00e9a ou Douglas) est standard. N'utilisez jamais du 50\u00d7250 mm pour des limons \u00e0 cr\u00e9maill\u00e8re. Les limons ferm\u00e9s (non entaill\u00e9s) avec rainures frais\u00e9es peuvent \u00eatre en 50\u00d7250 mm ou bois lamell\u00e9-coll\u00e9. Les \u00e9querres m\u00e9talliques pour limons \u00e9liminent le besoin d'entailles. Les limons pr\u00e9fabriqu\u00e9s en acier co\u00fbtent 50\u2013120 \u20ac pi\u00e8ce. Une planche 50\u00d7300\u00d75 000 mm co\u00fbte 30\u201370 \u20ac selon l'essence. Budget : 100\u2013300 \u20ac par escalier pour le bois de limon seul.",
+  nextSteps: [
+    { label: "Calculateur d'Escalier", href: "/calculators/stairs/stair-calculator/" },
+    { label: "Calculateur Giron/Hauteur", href: "/calculators/stairs/rise-over-run-calculator/" },
+    { label: "Calculateur Co\u00fbt Bois", href: "/calculators/hardware/lumber-cost-calculator/" },
+    { label: "Calculateur Escalier Terrasse", href: "/calculators/outdoor/deck-stair-calculator/" },
+  ],
+  installationTips: [
+    "Utilisez une \u00e9querre de charpentier avec butoirs pour des d\u00e9coupes r\u00e9p\u00e9tables.",
+    "D\u00e9coupez avec une scie circulaire et finissez les angles int\u00e9rieurs \u00e0 la scie \u00e9go\u00efne \u2014 ne d\u00e9passez pas avec la circulaire.",
+    "Testez le premier limon avant de couper les autres.",
+    "Utilisez des connecteurs m\u00e9talliques de limon \u00e0 la connexion haute.",
+    "Poncez et traitez tous les bois de bout sur les limons ext\u00e9rieurs.",
+  ],
+  commonMistakes: [
+    "D\u00e9passer les entailles avec la scie circulaire \u2014 cela fragilise le limon. Finir \u00e0 l'\u00e9go\u00efne.",
+    "Utiliser 50\u00d7250 au lieu de 50\u00d7300 \u2014 moins de 90 mm de bois restant apr\u00e8s entaille.",
+    "Ne pas r\u00e9duire la premi\u00e8re contremarche d'une \u00e9paisseur de marche.",
+    "Espacement de limons trop grand \u2014 max. 600 mm entre axes, 400 mm recommand\u00e9.",
+  ],
+  faqs: [
+    { question: "Quel bois pour les limons ?", answer: "Planches 50\u00d7300 mm. Apr\u00e8s entailles, min. 90 mm restant. 50\u00d7300 (285 mm r\u00e9el) convient. 50\u00d7250 (235 mm r\u00e9el) insuffisant. Qualit\u00e9 C24 minimum." },
+    { question: "Combien de limons pour 800 mm de large ?", answer: "2 limons pour 800 mm. 3 limons \u00e0 partir de 1 000 mm. 4 limons \u00e0 partir de 1 200 mm. Entraxe max. 600 mm, 400 mm recommand\u00e9." },
+    { question: "Comment d\u00e9couper des limons ?", answer: "Tracez hauteur et giron sur une planche 50\u00d7300 avec \u00e9querre et butoirs. D\u00e9coupez \u00e0 la circulaire en s'arr\u00eatant aux angles. Finissez \u00e0 l'\u00e9go\u00efne." },
+    { question: "Peut-on utiliser du 50\u00d7250 pour les limons ?", answer: "Non, pas pour les limons \u00e0 cr\u00e9maill\u00e8re. Avec 190 mm d'entaille, il ne reste que 45 mm. Utilisez 50\u00d7250 uniquement pour les limons ferm\u00e9s avec \u00e9querres m\u00e9talliques." },
+    { question: "Quel espacement entre limons ?", answer: "Max. 600 mm entre axes. 400 mm recommand\u00e9 pour r\u00e9sidentiel. 300 mm pour escaliers commerciaux \u00e0 fort trafic." },
+    { question: "Combien co\u00fbtent les limons ?", answer: "Planche 50\u00d7300\u00d75 m : 30\u201370 \u20ac. Bois trait\u00e9 ext\u00e9rieur : 40\u201385 \u20ac. Limons acier pr\u00e9fabriqu\u00e9s : 50\u2013120 \u20ac pi\u00e8ce. Pour un escalier 2 limons : 60\u2013170 \u20ac de bois." },
+  ],
+};
+
+const riseOverRunCalculatorFR: CalculatorSEOContent = {
+  disclaimer:
+    "Les calculs de giron/hauteur fonctionnent pour escaliers, rampes, toits et toute surface inclin\u00e9e. Pour les escaliers, la norme exige une hauteur max. de 210 mm et un giron min. de 220 mm. Pour les rampes PMR : pente max. 5 %.",
+  howToUse: [
+    "Entrez la hauteur (distance verticale) en mm.",
+    "Entrez le giron (distance horizontale) en mm.",
+    "Cliquez sur Calculer pour le rapport de pente, pourcentage, angle et description.",
+    "Fonctionne pour escaliers, rampes, toits, all\u00e9es et toute surface inclin\u00e9e.",
+  ],
+  materialInfo:
+    "Le rapport giron/hauteur est la mesure fondamentale de la pente de toute surface inclin\u00e9e. Pour les escaliers, la hauteur est la distance verticale de chaque marche et le giron est la profondeur horizontale. La norme fran\u00e7aise sp\u00e9cifie une hauteur de 170\u2013210 mm et un giron minimum de 220 mm. La formule de Blondel (2 \u00d7 hauteur + giron = 600\u2013640 mm) assure le confort, id\u00e9al \u00e0 630 mm. Pour les toits, la pente est exprim\u00e9e en degr\u00e9s ou pourcentage. Pour les rampes d'accessibilit\u00e9 PMR, la norme NF P 98-350 exige une pente max. de 5 % (2,9\u00b0) pour les rampes longues et 8 % pour les rampes courtes (<2 m). Les all\u00e9es ne doivent pas d\u00e9passer 15 % de pente pour un acc\u00e8s s\u00fbr. Comprendre le rapport giron/hauteur permet de v\u00e9rifier la conformit\u00e9, calculer les longueurs de mat\u00e9riaux et assurer la s\u00e9curit\u00e9 de tout projet en pente.",
+  nextSteps: [
+    { label: "Calculateur d'Escalier", href: "/calculators/stairs/stair-calculator/" },
+    { label: "Calculateur de Limons", href: "/calculators/stairs/stair-stringer-calculator/" },
+    { label: "Calculateur Pente de Toit", href: "/calculators/roofing/roof-pitch-calculator/" },
+    { label: "Calculateur Inclinaison Toit", href: "/calculators/roofing/roof-slope-calculator/" },
+  ],
+  installationTips: [
+    "V\u00e9rifiez toujours hauteur et giron au niveau et au m\u00e8tre apr\u00e8s installation.",
+    "Pour les escaliers, v\u00e9rifiez que toutes les hauteurs sont \u00e0 5 mm pr\u00e8s.",
+    "Utilisez un rapporteur num\u00e9rique pour confirmer les angles pendant la construction.",
+    "Pour les rampes, v\u00e9rifiez la pente en plusieurs points \u2014 les tassements modifient l'angle.",
+  ],
+  commonMistakes: [
+    "Confondre hauteur et giron \u2014 la hauteur est toujours verticale, le giron toujours horizontal.",
+    "Ne pas compter l'\u00e9paisseur du rev\u00eatement de sol dans la hauteur totale.",
+    "M\u00e9langer les unit\u00e9s \u2014 hauteur et giron doivent \u00eatre dans la m\u00eame unit\u00e9.",
+    "Oublier que la pente de toit se r\u00e9f\u00e8re \u00e0 100 cm de course horizontale.",
+  ],
+  faqs: [
+    { question: "Qu'est-ce que le rapport giron/hauteur ?", answer: "C'est le rapport entre la hauteur verticale et la distance horizontale d'une surface inclin\u00e9e. Exemple : 180 mm de hauteur sur 270 mm de giron = ratio 0,67, 67 %, ou 33,7\u00b0." },
+    { question: "Comment calculer giron et hauteur ?", answer: "Mesurez la hauteur totale entre sols finis. Divisez par 170\u2013180 mm = nombre de marches. Hauteur r\u00e9elle = hauteur totale / nombre. Giron min. 220 mm. Foul\u00e9e = (marches - 1) \u00d7 giron." },
+    { question: "Quel giron/hauteur confortable ?", answer: "Formule de Blondel : 2h + g = 600\u2013640 mm (id\u00e9al 630 mm). Exemple : h = 175 mm, g = 280 mm \u2192 630 mm. Hauteurs < 140 mm trop plates, > 210 mm trop raides." },
+    { question: "Quelle pente pour une rampe PMR ?", answer: "Norme NF P 98-350 : max. 5 % (2,9\u00b0) pour rampes longues, 8 % pour rampes courtes < 2 m. Soit 50 mm de mont\u00e9e pour 1 000 mm de course." },
+    { question: "Comment convertir en degr\u00e9s ?", answer: "Angle = arctan(hauteur / giron) \u00d7 180 / \u03c0. Exemple : 180/270 = arctan(0,667) = 33,7\u00b0." },
+    { question: "Pente maximale pour une all\u00e9e ?", answer: "15 % recommand\u00e9 (8,5\u00b0), certaines communes autorisent 25 % sur courte distance. 10 % id\u00e9al pour all\u00e9es r\u00e9sidentielles." },
+  ],
+};
+
+const spiralStaircaseCalculatorFR: CalculatorSEOContent = {
+  disclaimer:
+    "Les escaliers en colima\u00e7on ont des exigences sp\u00e9cifiques diff\u00e9rentes des escaliers droits. Largeur libre min. 700 mm, hauteur libre 2 100 mm, hauteur de marche max. 210 mm. V\u00e9rifiez votre r\u00e9glementation locale.",
+  howToUse: [
+    "Mesurez la hauteur d'\u00e9tage (distance verticale entre sols finis).",
+    "Entrez le diam\u00e8tre de la tr\u00e9mie (ouverture circulaire dans le plancher).",
+    "Entrez la rotation totale en degr\u00e9s (360\u00b0 pour un tour complet).",
+    "Cliquez sur Calculer pour le nombre de marches, hauteur et dimensions.",
+  ],
+  materialInfo:
+    "Les escaliers en colima\u00e7on sont des alternatives compactes aux escaliers droits, s'ins\u00e9rant dans une tr\u00e9mie circulaire \u00e0 partir de 1 200 mm de diam\u00e8tre (1 500\u20131 800 mm recommand\u00e9). La r\u00e9glementation fran\u00e7aise exige : largeur libre min. 700 mm du poteau central au garde-corps, hauteur de marche max. 210 mm, profondeur de marche min. 150 mm \u00e0 la ligne de foul\u00e9e (300 mm du bord \u00e9troit), marches identiques. Hauteur libre min. 2 100 mm. Les escaliers en colima\u00e7on sont disponibles en acier, aluminium, bois et composite. Les kits pr\u00e9fabriqu\u00e9s en acier co\u00fbtent 1 500\u20136 000 \u20ac. Les escaliers sur mesure en bois ou fer forg\u00e9 : 5 000\u201325 000 \u20ac. Le poteau central (f\u00fbt) est l'\u00e9l\u00e9ment porteur principal, ancr\u00e9 au sol avec des boulons ou platine. La plupart tournent dans le sens horaire (mont\u00e9e), favorisant les droitiers.",
+  nextSteps: [
+    { label: "Calculateur d'Escalier", href: "/calculators/stairs/stair-calculator/" },
+    { label: "Calculateur Giron/Hauteur", href: "/calculators/stairs/rise-over-run-calculator/" },
+    { label: "Calculateur avec Palier", href: "/calculators/stairs/stair-landing-calculator/" },
+  ],
+  installationTips: [
+    "V\u00e9rifiez que la tr\u00e9mie est parfaitement circulaire et de niveau avant de poser le poteau central.",
+    "Ancrez la platine du poteau avec au moins quatre boulons M12 dans la structure du plancher.",
+    "Assemblez les marches de bas en haut, en v\u00e9rifiant le niveau et l'angle \u00e0 chaque marche.",
+    "Installez la main courante en continu du bas jusqu'en haut.",
+    "V\u00e9rifiez la hauteur libre \u00e0 chaque point de la spirale.",
+  ],
+  commonMistakes: [
+    "Choisir un diam\u00e8tre trop petit \u2014 1 200 mm est le minimum mais tr\u00e8s \u00e9troit. 1 500 mm minimum pour usage quotidien.",
+    "Ne pas v\u00e9rifier la circularit\u00e9 de la tr\u00e9mie \u2014 une ouverture ovale cr\u00e9e des espacements in\u00e9gaux.",
+    "Oublier la plate-forme d'arriv\u00e9e qui remplace une marche dans la rotation.",
+    "Ignorer la difficult\u00e9 de d\u00e9m\u00e9nagement \u2014 les colima\u00e7ons ne conviennent pas aux gros meubles.",
+  ],
+  faqs: [
+    { question: "Quel diam\u00e8tre minimum pour un colima\u00e7on ?", answer: "Largeur libre min. 700 mm du poteau au garde-corps. Avec poteau 100 mm, le diam\u00e8tre minimum est env. 1 200 mm. Recommand\u00e9 : 1 500\u20131 800 mm pour un usage quotidien confortable." },
+    { question: "Combien de marches pour un colima\u00e7on ?", answer: "D\u00e9pend de la hauteur d'\u00e9tage et de la hauteur max. (210 mm). Pour 2 700 mm : min. 13 marches (2 700 / 210). 360\u00b0 avec 13 marches = 28\u00b0 par marche." },
+    { question: "Un colima\u00e7on est-il conforme ?", answer: "Oui, autoris\u00e9 pour usage r\u00e9sidentiel : 700 mm largeur libre, 210 mm hauteur max., 150 mm profondeur min. \u00e0 la ligne de foul\u00e9e, 2 100 mm hauteur libre, marches identiques. Peut ne pas \u00eatre accept\u00e9 comme escalier principal dans certaines communes." },
+    { question: "Combien co\u00fbte un escalier en colima\u00e7on ?", answer: "Kit acier : 1 500\u20136 000 \u20ac. Sur mesure bois : 5 000\u201320 000 \u20ac. Haute gamme fer forg\u00e9/verre : 25 000+ \u20ac. Pose : 500\u20132 000 \u20ac (kit), 2 000\u20136 000 \u20ac (sur mesure)." },
+    { question: "Un colima\u00e7on peut-il \u00eatre le seul escalier ?", answer: "Cela d\u00e9pend de la r\u00e9glementation locale. Certaines communes l'acceptent comme escalier principal, d'autres le r\u00e9servent au secondaire. Le r\u00e8glement s\u00e9curit\u00e9 incendie peut exiger un escalier classique de 900 mm minimum." },
+    { question: "Sens de rotation ?", answer: "G\u00e9n\u00e9ralement horaire en montant (droitiers). Le sens est un choix de conception \u2014 consid\u00e9rez l'agencement de l'\u00e9tage sup\u00e9rieur." },
+  ],
+};
+
+const stairLandingCalculatorFR: CalculatorSEOContent = {
+  disclaimer:
+    "Les escaliers avec palier doivent respecter toutes les exigences pour chaque vol\u00e9e. Le palier doit \u00eatre au moins aussi large que l'escalier et 900 mm de profondeur. Certaines r\u00e9glementations exigent un palier au-del\u00e0 de 3 700 mm de hauteur.",
+  howToUse: [
+    "Mesurez la hauteur totale entre sols finis en mm.",
+    "Entrez la profondeur du palier (min. 900 mm).",
+    "Entrez le giron souhait\u00e9 par marche (min. 220 mm).",
+    "Cliquez sur Calculer pour les marches par vol\u00e9e, hauteur du palier et longueur totale.",
+  ],
+  materialInfo:
+    "Les paliers d'escalier sont des plates-formes interm\u00e9diaires divisant un escalier long en deux vol\u00e9es ou plus. La norme exige que le palier soit au moins aussi large que l'escalier et 900 mm de profondeur dans le sens de circulation. Les paliers servent de point de repos, permettent les changements de direction (escaliers en L et en U) et am\u00e9liorent la s\u00e9curit\u00e9. De nombreuses r\u00e9glementations locales exigent un palier quand la hauteur d\u00e9passe 3 700 mm. Les paliers sont structur\u00e9s comme de petites sections de plancher avec solives, chevrons et plancher, support\u00e9s par des poteaux ou des murs. Pour les escaliers en L (virage 90\u00b0), le palier est g\u00e9n\u00e9ralement de 900\u00d7900 mm. Pour les escaliers en U (virage 180\u00b0), le palier est plus large. La structure utilise des solives 60\u00d7240 ou 60\u00d7300 mm. La surface du palier correspond au mat\u00e9riau de marche : panneau avec moquette ou parquet pour l'int\u00e9rieur, bois trait\u00e9 pour l'ext\u00e9rieur. Un palier ajoute 300\u20131 000 \u20ac en mat\u00e9riaux et 500\u20131 500 \u20ac de main-d'\u0153uvre.",
+  nextSteps: [
+    { label: "Calculateur d'Escalier", href: "/calculators/stairs/stair-calculator/" },
+    { label: "Calculateur de Limons", href: "/calculators/stairs/stair-stringer-calculator/" },
+    { label: "Calculateur Giron/Hauteur", href: "/calculators/stairs/rise-over-run-calculator/" },
+    { label: "Calculateur Escalier Terrasse", href: "/calculators/outdoor/deck-stair-calculator/" },
+  ],
+  installationTips: [
+    "Structurez le palier comme une mini-section de plancher \u2014 solives 60\u00d7240 ou 60\u00d7300 mm \u00e0 400 mm d'entraxe.",
+    "Fixez le palier aux murs adjacents avec une lambourde et tire-fonds ou vis structurelles.",
+    "Le palier doit \u00eatre parfaitement de niveau \u2014 v\u00e9rifiez avec un niveau de 1,2 m dans les deux sens.",
+    "La hauteur du palier doit correspondre exactement \u00e0 la hauteur calcul\u00e9e de la vol\u00e9e inf\u00e9rieure.",
+    "Pour les escaliers en L ou U, construisez le palier avant de couper les limons de la vol\u00e9e sup\u00e9rieure.",
+  ],
+  commonMistakes: [
+    "Palier trop peu profond \u2014 minimum 900 mm dans le sens de circulation.",
+    "Ne pas traiter le palier comme un \u00e9l\u00e9ment structurel \u2014 il faut une vraie charpente, pas juste un panneau.",
+    "Hauteurs in\u00e9gales \u00e0 la transition du palier.",
+    "Oublier l'\u00e9paisseur du palier dans le calcul des hauteurs de vol\u00e9e.",
+  ],
+  faqs: [
+    { question: "Quand faut-il un palier ?", answer: "Paliers obligatoires en haut et en bas. De nombreuses r\u00e9glementations exigent un palier au-del\u00e0 de 3 700 mm de hauteur (\u224819 marches). Obligatoire \u00e0 tout changement de direction. Escaliers ext\u00e9rieurs avec porte : palier 900 mm." },
+    { question: "Quelle taille pour un palier ?", answer: "Au moins aussi large que l'escalier et 900 mm de profondeur. Pour un escalier de 800 mm : palier min. 800\u00d7900 mm. Escalier en U : le palier couvre la largeur des deux vol\u00e9es." },
+    { question: "Diff\u00e9rence entre escalier en L et en U ?", answer: "L : virage 90\u00b0 avec palier carr\u00e9 (900\u00d7900 mm). U : virage 180\u00b0 avec palier rectangulaire plus large. Le U prend plus de largeur mais moins de longueur." },
+    { question: "Comment calculer avec palier ?", answer: "Hauteur totale / hauteur id\u00e9ale = marches totales. Divisez en deux vol\u00e9es \u00e9gales. Hauteur palier = marches vol\u00e9e basse \u00d7 hauteur r\u00e9elle. Longueur totale = foul\u00e9es des deux vol\u00e9es + profondeur palier." },
+    { question: "Le palier compte comme marche ?", answer: "Non. Le palier est une plate-forme au m\u00eame niveau que la derni\u00e8re marche de la vol\u00e9e inf\u00e9rieure. La premi\u00e8re contremarche de la vol\u00e9e sup\u00e9rieure part du palier." },
+    { question: "Co\u00fbt d'un palier ?", answer: "Mat\u00e9riaux : 300\u20131 000 \u20ac. Main-d'\u0153uvre : 500\u20131 500 \u20ac. Total suppl\u00e9mentaire L : 800\u20132 500 \u20ac vs escalier droit. U : 1 200\u20133 500 \u20ac suppl\u00e9mentaires." },
+  ],
+};
+
 // ─── REGISTRY MAP ─────────────────────────────────────────────────────────────
 
 export const registryFR: Record<string, Record<string, CalculatorSEOContent>> = {
@@ -2517,5 +2718,12 @@ export const registryFR: Record<string, Record<string, CalculatorSEOContent>> = 
     "deck-stair-calculator": deckStairCalculatorFR,
     "post-hole-calculator": postHoleCalculatorFR,
     "pond-calculator": pondCalculator,
+  },
+  stairs: {
+    "stair-calculator": stairCalculatorFR,
+    "stair-stringer-calculator": stairStringerCalculatorFR,
+    "rise-over-run-calculator": riseOverRunCalculatorFR,
+    "spiral-staircase-calculator": spiralStaircaseCalculatorFR,
+    "stair-landing-calculator": stairLandingCalculatorFR,
   },
 };

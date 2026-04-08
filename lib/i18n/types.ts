@@ -715,6 +715,48 @@ export interface FenceCostGuideTranslations {
   faqs: GuideFaq[];
 }
 
+export interface StairBuildingGuideTranslations {
+  title: string;
+  metaDescription: string;
+  heroTitle: string;
+  heroSubtitle: string;
+  heroDescription: string;
+  quickAnswerHeading: string;
+  quickAnswerText: string;
+  anatomyHeading: string;
+  anatomyIntro: string;
+  anatomyItems: string[];
+  anatomySummary: string;
+  buildingCodeHeading: string;
+  buildingCodeIntro: string;
+  buildingCodeItems: string[];
+  buildingCodeSummary: string;
+  howToCalculateHeading: string;
+  howToCalculateIntro: string;
+  howToCalculateItems: string[];
+  howToCalculateSummary: string;
+  stairTypesHeading: string;
+  stairTypesIntro: string;
+  stairTypesItems: string[];
+  stairTypesSummary: string;
+  materialsHeading: string;
+  materialsIntro: string;
+  materialsColMaterial: string;
+  materialsColCost: string;
+  materialsColBestFor: string;
+  materialsRows: { material: string; cost: string; bestFor: string }[];
+  costBreakdownHeading: string;
+  costBreakdownIntro: string;
+  costBreakdownText1: string;
+  costBreakdownText2: string;
+  costBreakdownText3: string;
+  calculatorCtaHeading: string;
+  calculatorCtaText: string;
+  calculatorLinks: { label: string; href: string; description: string }[];
+  faqHeading: string;
+  faqs: GuideFaq[];
+}
+
 export interface GuidesTranslations {
   index: GuidesIndexTranslations;
   spacingGuide: SpacingGuideTranslations;
@@ -729,6 +771,7 @@ export interface GuidesTranslations {
   drivewayCost: DrivewayCostGuideTranslations;
   flooringCost: FlooringCostGuideTranslations;
   fenceCost: FenceCostGuideTranslations;
+  stairBuildingGuide?: StairBuildingGuideTranslations;
   breadcrumbGuides: string;
 }
 

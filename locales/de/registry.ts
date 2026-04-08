@@ -1679,6 +1679,207 @@ export const pondCalculator: CalculatorSEOContent = {
   ],
 };
 
+// ─── STAIRS ──────────────────────────────────────────────────────────────────
+
+const stairCalculatorDE: CalculatorSEOContent = {
+  disclaimer:
+    "Dieser Rechner basiert auf den Anforderungen der DIN 18065 für Wohngebäude. Bitte prüfen Sie stets die geltende Landesbauordnung Ihres Bundeslandes. Steigungshöhe 140–200 mm, Auftritt 230–370 mm nach DIN 18065.",
+  howToUse: [
+    "Messen Sie die Geschosshöhe (vertikaler Abstand von Fertigfußboden zu Fertigfußboden) in mm.",
+    "Geben Sie die gewünschte Auftritttiefe ein (mindestens 230 mm nach DIN 18065).",
+    "Geben Sie die Treppenbreite ein (mindestens 800 mm für Wohngebäude nach DIN 18065).",
+    "Klicken Sie auf Berechnen für Stufenzahl, Steigungshöhe, Auftritt & Wangenlänge.",
+  ],
+  materialInfo:
+    "Der Treppenbau umfasst mehrere Schlüsselkomponenten: Wangen (Tragholme), Trittstufen, Setzstufen und Handläufe. Die Wangen sind die diagonalen Tragelemente, die die Treppe stützen — bei geraden Treppen typischerweise aus Bohlen 50×300 mm (entspricht 2×12 Zoll) geschnitten. Die DIN 18065 regelt den Wohnungstreppenbau mit folgenden Anforderungen: Steigungshöhe 140–200 mm, Auftritt 230–370 mm, Mindestbreite 800 mm (1.000 mm empfohlen). Die Schrittmaßregel besagt: 2 × Steigung + Auftritt = 590–650 mm (Idealwert 630 mm). Trittstufen werden häufig aus 40 mm Massivholz (Buche, Eiche) oder 2 × Bretter 50×150 mm gefertigt. Die Unterschneidung (Nasenvorsprung) beträgt 15–30 mm. Setzstufen bestehen aus 20–25 mm Brettern. Für Außentreppen sind druckimprägnierte Hölzer oder WPC-Materialien (Wood-Plastic-Composite) witterungsbeständig. Innentreppen verwenden häufig Hartholzstufen (Buche, Eiche, Esche) für Haltbarkeit und Optik. Eine Standard-Innentreppe kostet in Deutschland ca. 2.000–8.000 € an Material für einen geraden Lauf, hochwertige Massivholzstufen erhöhen den Preis um 500–2.000 €. Lichte Durchgangshöhe: mindestens 2.000 mm nach DIN 18065.",
+  nextSteps: [
+    { label: "Treppenwangen-Rechner", href: "/calculators/stairs/stair-stringer-calculator/" },
+    { label: "Steigung/Auftritt-Rechner", href: "/calculators/stairs/rise-over-run-calculator/" },
+    { label: "Podest-Rechner", href: "/calculators/stairs/stair-landing-calculator/" },
+    { label: "Deck-Treppen-Rechner", href: "/calculators/outdoor/deck-stair-calculator/" },
+  ],
+  installationTips: [
+    "Verwenden Sie stets ein Anschlagwinkel mit Stufenlehren für gleichmäßige Schnitte an Steigung und Auftritt.",
+    "Kürzen Sie die erste Setzstufe um die Dicke einer Trittstufe, damit alle sichtbaren Steigungen gleich bleiben.",
+    "Befestigen Sie die Wangen am Deckenbalken mit Metallverbindern (z. B. Simpson-Wangenverbinder).",
+    "Bohren Sie alle Schraubenlöcher in Tritt- und Setzstufen vor, um Rissbildung zu vermeiden.",
+    "Montieren Sie während der Bauphase ein provisorisches Geländer für die Arbeitssicherheit.",
+  ],
+  commonMistakes: [
+    "Fertigfußbodendicke oben und unten nicht berücksichtigt — dies verändert die erste und letzte Steigungshöhe.",
+    "Ungleichmäßige Steigungen — DIN 18065 erlaubt max. 5 mm Abweichung. Unterschiedliche Steigungen sind Stolperfallen.",
+    "Bohlen 50×250 mm statt 50×300 mm verwenden — nach dem Zahnschnitt bleibt zu wenig tragendes Material übrig.",
+    "Kopfhöhe vergessen — mindestens 2.000 mm lichte Durchgangshöhe an jedem Punkt messen.",
+    "Landesbauordnung nicht geprüft — viele Bundesländer haben strengere Vorschriften als die DIN 18065.",
+  ],
+  faqs: [
+    { question: "Wie berechne ich die Stufenzahl?", answer: "Messen Sie die Geschosshöhe (Rohbaumaß + Bodenbelag) in mm und teilen Sie durch die ideale Steigungshöhe von 170–180 mm. Runden Sie auf die nächste ganze Zahl. Beispiel: 2.700 mm / 180 mm = 15 Steigungen und 14 Auftritte (ein Auftritt weniger, da die obere Geschossdecke als letzte Stufe dient)." },
+    { question: "Was sagt die DIN 18065 für Wohnungstreppen?", answer: "DIN 18065 fordert: Steigungshöhe 140–200 mm, Auftritt 230–370 mm, Mindestbreite 800 mm (Fluchtwege 1.000 mm), lichte Durchgangshöhe ≥ 2.000 mm, Handlauf auf mindestens einer Seite ab 3 Steigungen, Höhe 800–1.150 mm. Maximal 5 mm Abweichung zwischen Steigungen." },
+    { question: "Welcher Treppenwinkel ist ideal?", answer: "Der ideale Steigungswinkel liegt zwischen 30° und 37°, entsprechend einer Steigung von ca. 170–190 mm bei 250–280 mm Auftritt. Dieser Bereich bietet die bequemste und sicherste Benutzung. Treppen steiler als 42° werden für die meisten Personen beschwerlich." },
+    { question: "Wie lang muss eine Treppenwange sein?", answer: "Die Wangenlänge ergibt sich aus dem Satz des Pythagoras: Wurzel aus (Geschosshöhe² + Gesamtlauflänge²). Beispiel: Bei 2.700 mm Geschosshöhe und 3.780 mm Lauflänge = Wurzel(2.700² + 3.780²) ≈ 4.645 mm. Bestellen Sie mindestens 300 mm länger zum Zuschneiden." },
+    { question: "Was kostet eine Treppe in Deutschland?", answer: "Eine Standard-Innentreppe (gerader Lauf, 14 Stufen) kostet ca. 2.000–8.000 € an Material. Außentreppen aus druckimprägniertem Holz kosten 800–3.000 €. Professioneller Einbau: 1.500–5.000 € Arbeitskosten. Premium-Massivholzstufen (Eiche, Buche) erhöhen um 500–2.000 €." },
+    { question: "Wie viele Wangen brauche ich?", answer: "DIN 18065 empfiehlt Wangen im Abstand von max. 600 mm (Mitte-Mitte), 400 mm ist besser. Für eine 800 mm breite Treppe: 2 Wangen (beidseitig). Für Treppen breiter als 1.000 mm: 3 Wangen (links, Mitte, rechts). Bei Podest-Treppen jeder Lauf mit eigenen Wangen." },
+  ],
+};
+
+const stairStringerCalculatorDE: CalculatorSEOContent = {
+  disclaimer:
+    "Wangenberechnungen basieren auf gezahnten Standard-Wangen aus 50×300 mm Bohlen. Prüfen Sie, dass nach dem Zahnschnitt mindestens 90 mm tragendes Holz verbleiben. Beachten Sie die Landesbauordnung für Wangenabstände.",
+  howToUse: [
+    "Geben Sie die Geschosshöhe (vertikaler Abstand) in mm ein.",
+    "Geben Sie den Auftritt pro Stufe ein (mindestens 230 mm nach DIN 18065).",
+    "Geben Sie die Gesamtanzahl der Stufen ein (nutzen Sie den Treppen-Rechner dafür).",
+    "Geben Sie die Treppenbreite ein, um die Wangenanzahl zu berechnen.",
+  ],
+  materialInfo:
+    "Treppenwangen sind das Rückgrat jeder Treppe und tragen das Gewicht von Trittstufen, Setzstufen und allen Nutzern. Standard-Wangen werden aus 50×300 mm Bohlen geschnitten, die nach dem Zahnschnitt noch die erforderlichen 90 mm Restholz für die Tragfähigkeit bieten. Für Außenanwendungen verwenden Sie druckimprägnierte Bohlen der Qualität C24 oder besser aus Fichte oder Douglasie 50×300 mm. Für Innentreppen ist technisch getrocknete KVH-Fichte oder Douglasie Standard. Verwenden Sie niemals 50×250 mm Bohlen für gezahnte Wangen — nach dem Schnitt verbleibt zu wenig tragendes Material. Geschlossene Wangen (ohne Zähne) mit gefrästen Nuten können aus 50×250 mm oder Brettschichtholz bestehen. Metallverbinder für Wangen eliminieren die Notwendigkeit des Zahnschnitts und können belastbarer sein. Vorgefertigte Stahlwangen für Terrassen und Außenanwendungen kosten 50–100 € pro Stück. Eine Bohle 50×300×5.000 mm kostet 25–60 € je nach Holzart und Güte. Kalkulieren Sie 100–250 € pro Treppe nur für das Wangenholz.",
+  nextSteps: [
+    { label: "Treppen-Rechner", href: "/calculators/stairs/stair-calculator/" },
+    { label: "Steigung/Auftritt-Rechner", href: "/calculators/stairs/rise-over-run-calculator/" },
+    { label: "Holzkosten-Rechner", href: "/calculators/hardware/lumber-cost-calculator/" },
+    { label: "Deck-Treppen-Rechner", href: "/calculators/outdoor/deck-stair-calculator/" },
+  ],
+  installationTips: [
+    "Verwenden Sie ein Anschlagwinkel mit Stufenlehren für wiederholbare Schnitte an Steigung und Auftritt.",
+    "Alle Schnitte mit der Handkreissäge ausführen und die Innenecken mit dem Fuchsschwanz nachschneiden — nicht mit der Kreissäge überschneiden.",
+    "Erste Wange als Muster prüfen, bevor die restlichen geschnitten werden — sauberer Sitz am Deckenbalken und Boden kontrollieren.",
+    "Metallverbinder (z. B. Simpson-Wangenverbinder) an der oberen Anbindung verwenden für normgerechte Befestigung.",
+    "Alle Schnittkanten bei Außenwangen schleifen und mit Hirnholzschutz behandeln.",
+  ],
+  commonMistakes: [
+    "Zahnschnitte mit der Kreissäge überschneiden — dies schwächt die Wange an den Ecken. Mit Fuchsschwanz nacharbeiten.",
+    "50×250 mm statt 50×300 mm verwenden — nach dem Schnitt verbleibt weniger als 90 mm tragendes Holz.",
+    "Erste Setzstufe nicht um eine Trittdicke kürzen — die erste Stufe wird höher als der Rest.",
+    "Wangenabstand zu groß — maximal 600 mm Achsabstand, 400 mm empfohlen für breitere Treppen.",
+  ],
+  faqs: [
+    { question: "Welches Holz für Treppenwangen?", answer: "Verwenden Sie 50×300 mm (2×12\") Bohlen für gezahnte Wangen. Nach dem Schnitt müssen mindestens 90 mm Restholz verbleiben. Eine 50×300 mm Bohle (285 mm real) bietet genug Material, eine 50×250 mm (235 mm real) typischerweise nicht. Qualität C24 oder besser." },
+    { question: "Wie viele Wangen brauche ich für 800 mm Breite?", answer: "Für 800 mm breite Treppen: 2 Wangen (beidseitig). Ab 1.000 mm Breite: 3 Wangen (beidseitig plus Mitte). Ab 1.200 mm Breite: ggf. 4 Wangen. Achsabstand maximal 600 mm, empfohlen 400 mm." },
+    { question: "Wie werden Treppenwangen geschnitten?", answer: "Steigung und Auftritt auf einer 50×300 mm Bohle mit Anschlagwinkel und Stufenlehren anzeichnen. Am Ende beginnen und das Winkelmaß entlang der Bohle weiterlegen. Mit der Handkreissäge entlang der Markierungen schneiden, an der Innenecke stoppen. Ecken mit Fuchsschwanz fertig schneiden." },
+    { question: "Kann man 50×250 mm für Wangen verwenden?", answer: "Nein, für gezahnte Wangen nicht empfohlen. Bei einer typischen Steigung von 190 mm verbleiben nach dem Schnitt nur ca. 45 mm — weit unter den erforderlichen 90 mm. 50×250 mm nur für geschlossene Wangen mit Metallkonsolen oder gefrästen Nuten verwenden." },
+    { question: "Welcher Abstand zwischen Treppenwangen?", answer: "Maximal 600 mm Achsabstand nach Norm, empfohlen 400 mm für Wohnungstreppen. Engerer Abstand reduziert Durchbiegung der Trittstufen. Für gewerbliche Treppen mit hoher Belastung 300 mm üblich." },
+    { question: "Was kosten Treppenwangen?", answer: "Eine Bohle 50×300×5.000 mm kostet 25–60 € je nach Holzart. Druckimprägnierte Wangen für Außen: 35–70 € pro Bohle. Stahl-Fertigwangen: 50–100 € pro Stück. Für eine 2-Wangen-Treppe: 50–140 € nur Wangenholz, plus 80–200 € für Tritt- und Setzstufen." },
+  ],
+};
+
+const riseOverRunCalculatorDE: CalculatorSEOContent = {
+  disclaimer:
+    "Steigung/Auftritt-Berechnungen gelten für Treppen, Rampen, Dächer und jede geneigte Fläche. Für Treppen fordert DIN 18065: Steigung 140–200 mm, Auftritt 230–370 mm. Für barrierefreie Rampen nach DIN 18040: max. 6 % Neigung.",
+  howToUse: [
+    "Geben Sie die Steigung (vertikale Höhe) in mm ein.",
+    "Geben Sie den Auftritt (horizontale Strecke) in mm ein.",
+    "Klicken Sie auf Berechnen für Neigungsverhältnis, Prozent, Winkel und eine Beschreibung der Neigungsart.",
+    "Funktioniert für Treppen, Rampen, Dächer, Auffahrten und jede geneigte Fläche.",
+  ],
+  materialInfo:
+    "Das Verhältnis Steigung/Auftritt ist die grundlegende Messung zur Berechnung der Neigung jeder geneigten Fläche. Bei Treppen ist die Steigung die vertikale Höhe jeder Stufe und der Auftritt die horizontale Tiefe. Die DIN 18065 legt eine Steigung von 140–200 mm und einen Auftritt von 230–370 mm fest. Die Schrittmaßregel (2 × Steigung + Auftritt = 590–650 mm, ideal 630 mm) gewährleistet komfortables Begehen. Für Dachneigungen wird das Verhältnis in Grad oder Prozent angegeben (z. B. 30° oder 58 % bedeutet, das Dach steigt 58 cm pro 100 cm Horizontalstrecke). Für barrierefreie Rampen nach DIN 18040-1 gilt eine Maximalneigung von 6 % (ca. 3,4°) für Innenrampen und 6 % für Außenrampen — das bedeutet 60 mm Anstieg auf 1.000 mm Strecke. Einfahrten und Auffahrten sollten 15 % Neigung (ca. 8,5°) nicht überschreiten für sichere Zufahrt. Das Verständnis von Steigung/Auftritt hilft Ihnen, Normkonformität zu prüfen, Materiallängen zu berechnen und Sicherheit bei jedem geneigten Bauprojekt zu gewährleisten.",
+  nextSteps: [
+    { label: "Treppen-Rechner", href: "/calculators/stairs/stair-calculator/" },
+    { label: "Treppenwangen-Rechner", href: "/calculators/stairs/stair-stringer-calculator/" },
+    { label: "Dachneigung-Rechner", href: "/calculators/roofing/roof-pitch-calculator/" },
+    { label: "Dachschräge-Rechner", href: "/calculators/roofing/roof-slope-calculator/" },
+  ],
+  installationTips: [
+    "Prüfen Sie Steigung und Auftritt nach der Montage stets mit Wasserwaage und Maßband — verlassen Sie sich nicht allein auf die Berechnung.",
+    "Bei Treppen sicherstellen, dass alle Steigungen innerhalb von 5 mm übereinstimmen, um Norm und Stolpersicherheit zu gewährleisten.",
+    "Digitale Winkelmesser (Neigungsmesser) verwenden, um Neigungswinkel während der Bauphase zu bestätigen.",
+    "Bei Rampen die Neigung an mehreren Punkten prüfen — Setzungen können den Winkel verändern.",
+  ],
+  commonMistakes: [
+    "Steigung und Auftritt verwechseln — Steigung ist immer das vertikale Maß, Auftritt immer das horizontale.",
+    "Fertigfußbodendicke bei der Messung der Geschosshöhe nicht berücksichtigt.",
+    "Unterschiedliche Einheiten — Steigung und Auftritt müssen in derselben Einheit sein (beide in mm).",
+    "Bei Dächern vergessen, dass die Neigung auf 100 cm Horizontalstrecke bezogen wird.",
+  ],
+  faqs: [
+    { question: "Was bedeutet Steigung/Auftritt?", answer: "Es ist das Verhältnis der vertikalen Höhe (Steigung) zur horizontalen Strecke (Auftritt) einer geneigten Fläche. Bei Treppen bedeutet z. B. 180 mm Steigung bei 270 mm Auftritt, dass jede Stufe 180 mm ansteigt bei 270 mm Tiefe. Das Verhältnis kann als Bruch (0,67), Prozent (67 %) oder Winkel (33,7°) ausgedrückt werden." },
+    { question: "Wie berechnet man Steigung und Auftritt?", answer: "Geschosshöhe (Fertigfußboden zu Fertigfußboden) messen. Durch ideale Steigung (170–180 mm) teilen = Anzahl Steigungen. Tatsächliche Steigung = Geschosshöhe / Anzahl. Auftritt mindestens 230 mm. Gesamtlauflänge = Anzahl Auftritte (= Steigungen - 1) × Auftritt." },
+    { question: "Was ist ein bequemes Steigung/Auftritt-Verhältnis?", answer: "Die Schrittmaßregel: 2 × Steigung + Auftritt = 590–650 mm. Ideal ist 630 mm, z. B. 175 mm Steigung + 280 mm Auftritt = 630 mm. Steigungen unter 140 mm fühlen sich flach an, über 200 mm unangenehm steil." },
+    { question: "Welche Neigung hat eine barrierefreie Rampe?", answer: "DIN 18040-1 fordert max. 6 % Neigung (ca. 3,4°) für Rampen in öffentlichen Gebäuden. Das bedeutet 60 mm Anstieg auf 1.000 mm Strecke. Rampen steiler als 6 % sind nicht barrierefrei. Für kurze Rampen unter 150 mm Höhendifferenz kann 10 % erlaubt sein." },
+    { question: "Wie rechnet man Steigung/Auftritt in Grad um?", answer: "Arcustangens (Umkehrfunktion des Tangens): Winkel = arctan(Steigung / Auftritt) × 180 / π. Beispiel: 180 mm Steigung / 270 mm Auftritt: arctan(0,667) = 33,7°. Jeder wissenschaftliche Taschenrechner hat eine arctan-Taste." },
+    { question: "Maximale Neigung für eine Auffahrt?", answer: "Die empfohlene Maximalneigung beträgt 15 % (ca. 8,5°), einige Gemeinden erlauben bis 25 % auf kurzen Strecken. 10 % ist ideal für Wohnhauseinfahrten. Bei Neigungen über 12 % kann ein rutschfester Belag erforderlich sein, besonders in winterlichen Regionen." },
+  ],
+};
+
+const spiralStaircaseCalculatorDE: CalculatorSEOContent = {
+  disclaimer:
+    "Wendeltreppen haben spezifische baurechtliche Anforderungen, die von geraden Treppen abweichen. DIN 18065 fordert für Wendeltreppen eine lichte Breite von mindestens 700 mm, lichte Durchgangshöhe von 2.000 mm und Steigung max. 210 mm. Prüfen Sie Ihre Landesbauordnung.",
+  howToUse: [
+    "Messen Sie die Geschosshöhe (vertikaler Abstand zwischen Fertigfußböden).",
+    "Geben Sie den Durchmesser der Deckenöffnung ein (runde Öffnung für die Wendeltreppe).",
+    "Geben Sie die Gesamtdrehung in Grad ein (360° für eine volle Umdrehung, 720° für zwei).",
+    "Klicken Sie auf Berechnen für Stufenzahl, Steigung pro Stufe & Abmessungen.",
+  ],
+  materialInfo:
+    "Wendeltreppen sind platzsparende Alternativen zu geraden Treppen und passen in eine runde Deckenöffnung ab 1.200 mm Durchmesser (empfohlen 1.500–1.800 mm). Die DIN 18065 legt fest: lichte Breite mindestens 700 mm (gemessen von der Mittelsäule bis zur Innenkante des Handlaufs), maximale Steigung 210 mm, Mindestauftritttiefe 150 mm an der Lauflinie (300 mm vom schmalen Ende), alle Stufen identisch. Lichte Durchgangshöhe mindestens 2.000 mm. Wendeltreppen sind in Stahl, Aluminium, Holz und Verbundwerkstoffen erhältlich. Vorgefertigte Stahl-Wendeltreppen-Bausätze kosten 1.500–6.000 € für Standardgrößen (1.200–1.500 mm Durchmesser). Maßgeschneiderte Wendeltreppen aus Holz oder Schmiedeeisen kosten 5.000–25.000 € oder mehr. Die Mittelsäule (Spindel) ist das primäre Tragelement und muss fest im Boden mit Schwerlastankern verankert werden. Die meisten Wendeltreppen drehen rechtsherum (aufwärts), was Rechtshändern entgegenkommt, die den äußeren Handlauf greifen.",
+  nextSteps: [
+    { label: "Treppen-Rechner", href: "/calculators/stairs/stair-calculator/" },
+    { label: "Steigung/Auftritt-Rechner", href: "/calculators/stairs/rise-over-run-calculator/" },
+    { label: "Podest-Rechner", href: "/calculators/stairs/stair-landing-calculator/" },
+  ],
+  installationTips: [
+    "Prüfen Sie, dass die Deckenöffnung perfekt rund und waagerecht ist, bevor die Mittelsäule montiert wird.",
+    "Verankern Sie die Fußplatte der Mittelsäule mit mindestens vier M12-Schwerlastankern in der Deckenkonstruktion.",
+    "Stufen von unten nach oben montieren, Waagerecht- und Drehwinkel bei jeder Stufe kontrollieren.",
+    "Handlauf durchgehend von unten nach oben installieren — Lücken bei Wendeltreppe-Handläufen sind ein Sicherheitsrisiko.",
+    "Kopfhöhe an jedem Punkt der Spirale prüfen, nicht nur am Ein- und Ausstieg.",
+  ],
+  commonMistakes: [
+    "Zu kleinen Durchmesser wählen — 1.200 mm ist Minimum, fühlt sich aber sehr eng an. Ab 1.500 mm für täglichen Gebrauch wählen.",
+    "Nicht prüfen, ob die Deckenöffnung tatsächlich rund ist — ovale oder unregelmäßige Öffnungen erzeugen ungleiche Stufenabstände.",
+    "Obere Podestplatte vergessen, die den Platz einer Stufe in der Drehung einnimmt.",
+    "Möbeltransport-Probleme ignorieren — Wendeltreppen können keine großen Möbel oder Geräte aufnehmen.",
+  ],
+  faqs: [
+    { question: "Welcher Mindestdurchmesser für eine Wendeltreppe?", answer: "DIN 18065 fordert mindestens 700 mm lichte Breite von Mittelsäule bis Handlauf. Mit Standard-Mittelsäule (100 mm) und Handlauf ergibt sich eine Mindestöffnung von ca. 1.200 mm. Empfohlen für täglichen Gebrauch: 1.500–1.800 mm. Unter 1.300 mm extrem eng, nur für gelegentlichen Zugang." },
+    { question: "Wie viele Stufen braucht eine Wendeltreppe?", answer: "Die Stufenzahl hängt von der Geschosshöhe und der maximalen Steigung (210 mm) ab. Bei 2.700 mm Geschosshöhe: mindestens 13 Stufen (2.700 / 210 ≈ 13). Eine 360°-Drehung mit 13 Stufen gibt jeder Stufe einen Winkel von ca. 28°. Mehr Stufen = niedrigere Steigung = mehr Komfort." },
+    { question: "Sind Wendeltreppen baurechtlich zulässig?", answer: "Ja, Wendeltreppen sind nach DIN 18065 für Wohngebäude zulässig mit spezifischen Anforderungen: 700 mm lichte Breite, 210 mm max. Steigung, 150 mm Mindestauftritt an der Lauflinie, 2.000 mm lichte Durchgangshöhe, identische Stufen. In manchen Bundesländern nicht als einziger Zugang zulässig — Landesbauordnung prüfen." },
+    { question: "Was kostet eine Wendeltreppe?", answer: "Stahl-Bausätze: 1.500–6.000 € für 1.200–1.500 mm Durchmesser. Maßgeschneiderte Holz-Wendeltreppen: 5.000–20.000 €. Hochwertige Designs aus Schmiedeeisen oder Glas: über 25.000 €. Montagekosten: 500–2.000 € für Bausätze, 2.000–6.000 € für Maßanfertigungen." },
+    { question: "Kann eine Wendeltreppe die einzige Treppe sein?", answer: "Das hängt von Ihrer Landesbauordnung ab. Die DIN 18065 erlaubt Wendeltreppen als Haupttreppe in Einfamilienhäusern, aber manche Bauordnungen beschränken sie auf Nebenzugang (Dachböden, Keller). Brandschutzvorschriften können eine konventionelle Treppe mit mindestens 800 mm Breite als Fluchtweg fordern." },
+    { question: "In welche Richtung soll eine Wendeltreppe drehen?", answer: "Die meisten Wendeltreppen drehen rechtsherum aufwärts (Rechtsdrehung). Dies kommt Rechtshändern entgegen, die den äußeren Handlauf mit der rechten Hand greifen. Die Drehrichtung ist jedoch hauptsächlich eine Designentscheidung. Bedenken Sie die Grundrissanbindung im Obergeschoss." },
+  ],
+};
+
+const stairLandingCalculatorDE: CalculatorSEOContent = {
+  disclaimer:
+    "Treppen mit Podest müssen alle Anforderungen der DIN 18065 für jeden Lauf erfüllen. Das Podest muss mindestens so breit wie die Treppe und 900 mm tief in Laufrichtung sein. Viele Landesbauordnungen fordern ein Podest bei Geschosshöhen über 3.000 mm.",
+  howToUse: [
+    "Messen Sie die Geschosshöhe (Fertigfußboden zu Fertigfußboden) in mm.",
+    "Geben Sie die Podesttiefe ein (mindestens 900 mm, entsprechend der Treppenbreite).",
+    "Geben Sie den gewünschten Auftritt pro Stufe ein (mindestens 230 mm nach DIN 18065).",
+    "Klicken Sie auf Berechnen für Gesamtstufenzahl, Stufen pro Lauf, Podesthöhe und Gesamtlauflänge.",
+  ],
+  materialInfo:
+    "Treppenpodeste sind Zwischenplattformen, die eine lange Treppe in zwei oder mehr Läufe unterteilen. Die DIN 18065 fordert, dass das Podest mindestens so breit wie die Treppe und mindestens 900 mm tief in Laufrichtung ist. Podeste dienen mehreren Zwecken: Sie bieten einen Ruhepunkt bei langen Treppen, ermöglichen Richtungswechsel (L-Treppen und U-Treppen) und verbessern die Sicherheit, indem sie die Sturzstrecke begrenzen. Viele Landesbauordnungen fordern ein Podest, wenn die Geschosshöhe 3.000 mm übersteigt. Podeste werden wie kleine Deckenabschnitte konstruiert, mit Balken, Wechsel und Beplankung, gestützt durch Pfosten oder Wände. Bei L-Treppen (90°-Drehung) ist das Podest typischerweise 900×900 mm. Bei U-Treppen (180°-Drehung) ist das Podest breiter. Die Podestunterkonstruktion verwendet 60×240 mm oder 60×300 mm Balken, gestützt durch ein Auflagerholz an einer Wand und Pfosten auf den offenen Seiten. Die Podestoberfläche entspricht dem Trittmaterial: Spanplatte mit Teppich oder Parkett für Innen, druckimprägniertes Holz für Außen. Ein Podest erhöht die Materialkosten um 300–1.000 € und die Arbeitskosten um 500–1.500 € bei Fachbetrieb-Einbau.",
+  nextSteps: [
+    { label: "Treppen-Rechner", href: "/calculators/stairs/stair-calculator/" },
+    { label: "Treppenwangen-Rechner", href: "/calculators/stairs/stair-stringer-calculator/" },
+    { label: "Steigung/Auftritt-Rechner", href: "/calculators/stairs/rise-over-run-calculator/" },
+    { label: "Deck-Treppen-Rechner", href: "/calculators/outdoor/deck-stair-calculator/" },
+  ],
+  installationTips: [
+    "Podest wie eine kleine Deckenkonstruktion ausführen — Balken 60×240 oder 60×300 mm im Abstand von 400 mm.",
+    "Podest an angrenzende Wände mit einem Auflagerholz mittels Schwerlastanker oder Bauschrauben befestigen.",
+    "Podestfläche muss perfekt waagerecht sein — mit 1,2 m Wasserwaage in beiden Richtungen prüfen.",
+    "Podesthöhe muss exakt mit der berechneten Steigung des unteren Laufs übereinstimmen.",
+    "Bei L- oder U-Treppen das Podest zuerst konstruieren, dann die Wangen des oberen Laufs zuschneiden und montieren.",
+  ],
+  commonMistakes: [
+    "Podest zu flach — muss mindestens 900 mm tief in Laufrichtung sein.",
+    "Podest nicht als tragendes Element behandeln — es braucht eine eigene Balkenkonstruktion, nicht nur eine Platte.",
+    "Ungleiche Steigungen am Podest-Übergang — Steigung auf und vom Podest muss mit allen anderen übereinstimmen.",
+    "Podestdicke bei der Berechnung der Laufhöhen vergessen — die Plattform selbst hat eine Aufbauhöhe.",
+  ],
+  faqs: [
+    { question: "Wann braucht man ein Podest?", answer: "Die DIN 18065 schreibt kein maximales Steigungsverhältnis vor, aber viele Landesbauordnungen fordern ein Podest bei Geschosshöhen über 3.000 mm (ca. 17 Stufen). Podeste sind immer oben und unten jeder Treppe erforderlich und an jedem Richtungswechsel. Außentreppen mit Türanschluss brauchen ein Podest von mindestens 900 mm Tiefe." },
+    { question: "Wie groß muss ein Treppenpodest sein?", answer: "Mindestens so breit wie die Treppe und 900 mm tief in Laufrichtung. Bei einer 800 mm breiten Treppe: Podest mindestens 800×900 mm. Bei U-Treppen erstreckt sich das Podest über die Gesamtbreite beider Läufe plus Zwischenwand." },
+    { question: "Unterschied zwischen L-Treppe und U-Treppe?", answer: "L-Treppen haben einen 90°-Richtungswechsel am Podest (typisch 900×900 mm). U-Treppen haben einen 180°-Richtungswechsel mit zwei parallelen Läufen und breiterem Podest. U-Treppen brauchen mehr Breite aber weniger Länge. Beide häufig bei begrenztem Platz für einen geraden Lauf." },
+    { question: "Wie berechnet man eine Treppe mit Podest?", answer: "Geschosshöhe durch ideale Steigung (170–180 mm) teilen = Gesamtstufenzahl. Stufen gleichmäßig auf zwei Läufe verteilen. Podesthöhe = Stufen im unteren Lauf × tatsächliche Steigung. Gesamtlauflänge = Lauflänge beider Läufe + Podesttiefe." },
+    { question: "Zählt das Podest als Stufe?", answer: "Nein, das Podest zählt nicht als Stufe. Es ist eine ebene Plattform auf gleicher Höhe wie die letzte Trittstufe des unteren Laufs. Die erste Steigung des oberen Laufs beginnt von der Podestoberfläche. Bei der Steigungsberechnung hat das Podest keine eigene Steigung." },
+    { question: "Wie viel kostet ein Treppenpodest?", answer: "Ein Podest erhöht die Materialkosten um 300–1.000 € für Balken, Beplankung und Belag. Fachbetrieb-Arbeit: 500–1.500 € zusätzlich. Gesamtmehrkosten für ein L-Podest: 800–2.500 € gegenüber einer geraden Treppe. U-Podest: 1.200–3.500 € zusätzlich." },
+  ],
+};
+
 // ─── REGISTRY MAP ─────────────────────────────────────────────────────────────
 
 export const registryDE: Record<string, Record<string, CalculatorSEOContent>> = {
@@ -1756,5 +1957,12 @@ export const registryDE: Record<string, Record<string, CalculatorSEOContent>> = 
     "deck-stair-calculator": deckStairCalculatorDE,
     "post-hole-calculator": postHoleCalculatorDE,
     "pond-calculator": pondCalculator,
+  },
+  stairs: {
+    "stair-calculator": stairCalculatorDE,
+    "stair-stringer-calculator": stairStringerCalculatorDE,
+    "rise-over-run-calculator": riseOverRunCalculatorDE,
+    "spiral-staircase-calculator": spiralStaircaseCalculatorDE,
+    "stair-landing-calculator": stairLandingCalculatorDE,
   },
 };

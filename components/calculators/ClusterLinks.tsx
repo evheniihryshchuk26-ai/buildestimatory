@@ -69,6 +69,10 @@ const clusters: Record<string, ClusterConfig> = {
     subCalculators: ["carpet-calculator", "tile-calculator", "laminate-calculator"],
     guides: [{ href: "/guides/flooring-cost-guide/", title: "Flooring Cost Guide" }],
   },
+  "stair-calculator": {
+    subCalculators: ["stair-stringer-calculator", "rise-over-run-calculator", "spiral-staircase-calculator", "stair-landing-calculator"],
+    guides: [{ href: "/guides/stair-building-guide/", title: "Complete Stair Building Guide" }],
+  },
 };
 
 interface ClusterLinksProps {

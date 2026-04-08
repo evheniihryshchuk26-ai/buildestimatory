@@ -77,6 +77,12 @@ const guides: GuidesTranslations = {
           "Bodenbelag kostet 20\u2013150 \u20ac/m\u00b2 verlegt. Kompletter Preisleitfaden f\u00fcr Parkett, Laminat, Fliesen, Teppich und Vinyl mit Raum-f\u00fcr-Raum-Sch\u00e4tzungen und Spartipps.",
         href: "/guides/flooring-cost-guide",
       },
+      {
+        title: "Kompletter Treppenbau-Ratgeber: DIN, Berechnungen & Materialien",
+        description:
+          "Wie man Treppen baut \u2014 kompletter Ratgeber \u00fcber Treppenanatomie, DIN 18065 Bauvorschriften, Steigung & Auftritt, Treppentypen (gerade, L-, U-, Wendel), Materialien und Kosten.",
+        href: "/guides/stair-building-guide",
+      },
     ],
   },
 
@@ -1461,6 +1467,115 @@ const guides: GuidesTranslations = {
       { question: "Wie lange h\u00e4lt ein Holzzaun?", answer: "Druckimpr\u00e4gniert: 15\u201320 Jahre. L\u00e4rche: 15\u201325 Jahre." },
       { question: "Brauche ich eine Baugenehmigung?", answer: "Niedrige Z\u00e4une meist genehmigungsfrei. H\u00f6here Z\u00e4une variieren \u2014 Bauamt kontaktieren." },
       { question: "Welcher Zaun erh\u00f6ht den Hauswert?", answer: "Gepflegter Sichtschutzzaun bringt 50\u201370% als Wertsteigerung." },
+    ],
+  },
+  stairBuildingGuide: {
+    title: "Kompletter Treppenbau-Ratgeber: DIN 18065, Berechnungen & Materialien (2026)",
+    metaDescription:
+      "Treppen bauen \u2014 kompletter Ratgeber zu Treppenanatomie, DIN 18065, Steigung & Auftritt, Treppentypen (gerade, L, U, Wendel), Materialien und Kosten. Inklusive kostenloser Treppen-Rechner.",
+    heroTitle: "Kompletter Treppenbau-Ratgeber",
+    heroSubtitle: "DIN 18065, Berechnungen & Materialien",
+    heroDescription:
+      "Alles \u00fcber den Treppenbau \u2014 vom Messen von Steigung und Auftritt bis zur Erf\u00fcllung der DIN 18065. Treppenanatomie, Berechnungsmethoden, Treppentypen, Materialoptionen und Kostenaufstellung.",
+    quickAnswerHeading: "Schnelle Antwort",
+    quickAnswerText:
+      "F\u00fcr normgerechte Wohnungstreppen nach DIN 18065: Steigung 140\u2013200 mm, Auftritt 230\u2013370 mm, Breite mind. 800 mm, Durchgangsh\u00f6he mind. 2.000 mm. Geschossh\u00f6he durch 180 mm teilen = Stufenzahl. Wangenl\u00e4nge mit Pythagoras berechnen. 50\u00d7300 mm Bohlen f\u00fcr gezahnte Wangen.",
+    anatomyHeading: "Treppenanatomie: Alle Komponenten",
+    anatomyIntro:
+      "Vor dem Treppenbau m\u00fcssen Sie die Schl\u00fcsselkomponenten und Fachbegriffe verstehen. Jede Treppe \u2014 ob einfache Au\u00dfentreppe oder komplexer Innenlauf \u2014 verwendet dieselben Grundbauteile.",
+    anatomyItems: [
+      "Steigung (Setzstufe): Vertikaler Abstand zwischen zwei Trittstufen. DIN-Maximum: 200 mm. Alle Steigungen eines Laufs innerhalb 5 mm.",
+      "Auftritt (Trittstufe): Horizontaler Abstand von Vorderkante zu Vorderkante. DIN-Minimum: 230 mm.",
+      "Wange (Holm): Diagonales Tragelement. Gezahnte Wangen aus 50\u00d7300 mm, geschlossene aus 50\u00d7250 mm oder BSH. Achsabstand max. 600 mm.",
+      "Trittstufe: Horizontales Brett. Standard: 40 mm Massivholz (Buche/Eiche) oder 2\u00d750\u00d7150 mm. Unterschneidung 15\u201330 mm.",
+      "Setzstufe: Vertikales Brett zwischen Trittstufen. 20\u201325 mm Brett. Offene Treppen (ohne Setzstufe) zul\u00e4ssig wenn \u00d6ffnung < 120 mm.",
+      "Unterschneidung: Vorderkante der Trittstufe \u00fcber der Setzstufe. 15\u201330 mm Vorsprung nach DIN.",
+      "Handlauf: Pflicht ab 3 Steigungen auf mindestens einer Seite. H\u00f6he 800\u20131.150 mm, grifff\u00e4hig mit 32\u201350 mm Durchmesser.",
+      "Gel\u00e4nderstab: Vertikale Elemente zwischen Handlauf und Stufen. Abstand max. 120 mm (keine 100 mm Kugel durchlassend).",
+    ],
+    anatomySummary:
+      "Das Verst\u00e4ndnis dieser Komponenten ist wesentlich f\u00fcr pr\u00e4zise Berechnungen und Normerf\u00fcllung.",
+    buildingCodeHeading: "DIN 18065 \u2014 Anforderungen f\u00fcr Wohnungstreppen",
+    buildingCodeIntro:
+      "Die DIN 18065 regelt den Treppenbau in Deutschland. Zus\u00e4tzlich gelten die jeweiligen Landesbauordnungen (LBO), die strengere Anforderungen haben k\u00f6nnen.",
+    buildingCodeItems: [
+      "Steigung: 140\u2013200 mm. Alle Steigungen innerhalb 5 mm gleich.",
+      "Auftritt: 230\u2013370 mm, gemessen von Vorderkante zu Vorderkante.",
+      "Breite: Mind. 800 mm (notwendige Treppen mind. 1.000 mm). Handlaufvorsprung bis 100 mm erlaubt.",
+      "Durchgangsh\u00f6he: Mind. 2.000 mm vertikal von der Stufenvorderkante bis Decke.",
+      "Handlauf: Ab 3 Steigungen auf mindestens einer Seite. H\u00f6he 800\u20131.150 mm. Durchgehend \u00fcber die gesamte Laufl\u00e4nge.",
+      "Podeste: Oben und unten jeder Treppe erforderlich. Mindestens so breit wie Treppe, 900 mm tief.",
+      "Gel\u00e4nder: Bei Abst\u00fcrzen > 1 m H\u00f6he. Mindestens 900 mm hoch. Stababstand max. 120 mm.",
+      "Beleuchtung: Treppen m\u00fcssen oben, unten und an Podesten beleuchtet sein. Ab 6 Steigungen Wechselschaltung.",
+    ],
+    buildingCodeSummary:
+      "Dies sind Mindestanforderungen \u2014 viele LBOs sind strenger. Immer Baugenehmigung beantragen und Abnahme bei permanentem Treppenbau einplanen.",
+    howToCalculateHeading: "Treppe berechnen: Schritt f\u00fcr Schritt",
+    howToCalculateIntro:
+      "Die Treppenberechnung umfasst Stufenzahl, Steigung, Auftritt und Wangenl\u00e4nge. Folgen Sie diesen Schritten f\u00fcr eine pr\u00e4zise Planung.",
+    howToCalculateItems: [
+      "Schritt 1 \u2014 Geschossh\u00f6he messen: Vertikaler Abstand von Fertigfu\u00dfboden zu Fertigfu\u00dfboden. Bodenbelagdicke beider Geschosse ber\u00fccksichtigen.",
+      "Schritt 2 \u2014 Stufenzahl berechnen: Geschossh\u00f6he / ideale Steigung (170\u2013180 mm). Auf ganze Zahl runden. Beispiel: 2.700 / 180 = 15 Steigungen.",
+      "Schritt 3 \u2014 Tats\u00e4chliche Steigung: Geschossh\u00f6he / Stufenzahl. 2.700 / 15 = 180 mm. Muss \u2264 200 mm sein.",
+      "Schritt 4 \u2014 Auftritt bestimmen: Mind. 230 mm. Schrittma\u00dfregel: 2 \u00d7 Steigung + Auftritt = 590\u2013650 mm (ideal 630). Bei 180 mm Steigung: Auftritt 270 mm.",
+      "Schritt 5 \u2014 Anzahl Auftritte: Steigungen minus 1 = 14 Auftritte.",
+      "Schritt 6 \u2014 Gesamtlaufl\u00e4nge: Auftritte \u00d7 Auftrittstiefe. 14 \u00d7 270 = 3.780 mm.",
+      "Schritt 7 \u2014 Wangenl\u00e4nge: Pythagoras: \u221a(2.700\u00b2 + 3.780\u00b2) = 4.645 mm.",
+      "Schritt 8 \u2014 Kopfh\u00f6he pr\u00fcfen: An jedem Punkt 2.000 mm Abstand von Stufenvorderkante bis Decke.",
+    ],
+    howToCalculateSummary:
+      "Nutzen Sie unseren kostenlosen Treppen-Rechner f\u00fcr sofortige Ergebnisse. Geschossh\u00f6he und Auftritt eingeben \u2014 fertig.",
+    stairTypesHeading: "G\u00e4ngige Treppentypen",
+    stairTypesIntro:
+      "Der Treppentyp h\u00e4ngt von Platzangebot, Budget, Baurecht und \u00c4sthetik ab. Die vier h\u00e4ufigsten Wohnungstreppentypen:",
+    stairTypesItems: [
+      "Gerade Treppe: Einfachster und h\u00e4ufigster Typ. Ein Lauf ohne Richtungswechsel. Braucht den meisten Platz in der L\u00e4nge (3\u20134,5 m). Am einfachsten zu bauen und g\u00fcnstigsten.",
+      "L-Treppe (Viertelgewendelt): Gerader Lauf mit 90\u00b0-Richtungswechsel am Podest. Reduziert die L\u00e4nge. H\u00e4ufig in Einfamilienh\u00e4usern.",
+      "U-Treppe (Halbgewendelt): Zwei parallele L\u00e4ufe mit 180\u00b0-Podest. Weniger L\u00e4nge, mehr Breite. H\u00e4ufig in Mehrfamilienh\u00e4usern.",
+      "Wendeltreppe: Kompakt um Mittels\u00e4ule. Ab 1.200 mm Durchmesser. Strengere Normen. Ideal f\u00fcr Nebenzugang zu Dachb\u00f6den oder Kellerr\u00e4umen.",
+    ],
+    stairTypesSummary:
+      "W\u00e4hlen Sie gerade Treppen bei ausreichend Platz. L- oder U-Treppen bei begrenztem Platz. Wendeltreppen f\u00fcr Nebenzugang oder als Designelement.",
+    materialsHeading: "Materialoptionen & Kosten",
+    materialsIntro:
+      "Das gew\u00e4hlte Material beeinflusst Kosten, Haltbarkeit, Optik und Pflege. Die f\u00fcnf h\u00e4ufigsten Treppenmaterialien:",
+    materialsColMaterial: "Material",
+    materialsColCost: "Kosten pro Stufe",
+    materialsColBestFor: "Ideal f\u00fcr",
+    materialsRows: [
+      { material: "Druckimpr\u00e4gnierte Fichte", cost: "10 \u2013 20 \u20ac", bestFor: "Au\u00dfentreppen, Terrassen, Budget-Projekte" },
+      { material: "Fichte/Kiefer (KVH)", cost: "15 \u2013 30 \u20ac", bestFor: "Innentreppen, Teppich- oder Lackierung" },
+      { material: "Buche/Eiche Massivholz", cost: "40 \u2013 80 \u20ac", bestFor: "Fertige Innentreppen, ge\u00f6lt oder lackiert" },
+      { material: "WPC/Verbundwerkstoff", cost: "50 \u2013 100 \u20ac", bestFor: "Au\u00dfentreppen, pflegeleichte Terrassen" },
+      { material: "Beton (Fertigteil/Ortbeton)", cost: "60 \u2013 150 \u20ac", bestFor: "Au\u00dfeneingangstreppen, Keller, Gewerbe" },
+    ],
+    costBreakdownHeading: "Kostenaufstellung Treppenbau",
+    costBreakdownIntro:
+      "Treppenkosten variieren stark je nach Design, Material und Eigenleistung vs. Fachbetrieb.",
+    costBreakdownText1:
+      "Einfache Terrassentreppe (4\u20136 Stufen): 200\u2013600 \u20ac Material. Standard-Innentreppe (12\u201315 Stufen): 2.000\u20138.000 \u20ac Material. Premium-Massivholzstufen: +500\u20132.000 \u20ac. Fachbetrieb-Montage: +1.500\u20135.000 \u20ac.",
+    costBreakdownText2:
+      "L-/U-Treppen mit Podest kosten 20\u201340% mehr als gerade. Wendeltreppen: 1.500\u20136.000 \u20ac (Stahl-Bausatz) bis 25.000+ \u20ac (Ma\u00dfanfertigung). Bogenf\u00f6rmige Treppen: 10.000\u201350.000 \u20ac.",
+    costBreakdownText3:
+      "Eigenleistung spart 40\u201360%. Eine gerade Au\u00dfen- oder Innentreppe ist an 1\u20132 Wochenenden machbar. Wendel- und Bogentreppen dem Fachbetrieb \u00fcberlassen oder als Bausatz kaufen.",
+    calculatorCtaHeading: "Ihr Treppenprojekt berechnen",
+    calculatorCtaText:
+      "Nutzen Sie unsere kostenlosen Treppen-Rechner f\u00fcr normgerechte Ma\u00dfe \u2014 ohne Registrierung.",
+    calculatorLinks: [
+      { label: "Treppen-Rechner", href: "/calculators/stairs/stair-calculator/", description: "Stufen, Steigung, Auftritt & Wangenl\u00e4nge" },
+      { label: "Wangen-Rechner", href: "/calculators/stairs/stair-stringer-calculator/", description: "Wangenl\u00e4nge, Anzahl & Aufteilung" },
+      { label: "Steigung/Auftritt", href: "/calculators/stairs/rise-over-run-calculator/", description: "Neigungsverh\u00e4ltnis, Prozent & Winkel" },
+      { label: "Wendeltreppe", href: "/calculators/stairs/spiral-staircase-calculator/", description: "Stufen, Steigung & Drehung f\u00fcr Wendeltreppen" },
+      { label: "Podest-Rechner", href: "/calculators/stairs/stair-landing-calculator/", description: "L\u00e4ufe mit Zwischenpodest f\u00fcr L- & U-Treppen" },
+    ],
+    faqHeading: "H\u00e4ufig gestellte Fragen",
+    faqs: [
+      { question: "Wie baue ich eine Terrassentreppe?", answer: "Terrassenh\u00f6he messen. Durch 180 mm teilen = Steigungen. Wangen aus 50\u00d7300 mm impr\u00e4gniertem Holz schneiden. Wangen mit Metallverbindern am Terrassenbalken befestigen. Trittstufen montieren. Kiesbett am Fu\u00df f\u00fcr Drainage. Nutzen Sie unseren Treppen-Rechner." },
+      { question: "Was sagt die DIN 18065?", answer: "Steigung 140\u2013200 mm, Auftritt 230\u2013370 mm, Breite mind. 800 mm, Durchgangsh\u00f6he 2.000 mm, Handlauf ab 3 Steigungen (800\u20131.150 mm), Podeste oben und unten 900 mm tief, Gel\u00e4nder ab 1 m Abst\u00fcrz, max. 5 mm Steigungsunterschied." },
+      { question: "Wie nutzt man den Treppen-Rechner?", answer: "Geschossh\u00f6he und gew\u00fcnschten Auftritt eingeben. Der Rechner berechnet Stufenzahl, Steigung, Laufl\u00e4nge und Wangenl\u00e4nge und pr\u00fcft die DIN-Konformit\u00e4t automatisch." },
+      { question: "Wie viele Stufen bei 2,70 m Geschossh\u00f6he?", answer: "2.700 mm + 300 mm Deckenaufbau = 3.000 mm. 3.000 / 180 = 16,7 \u2192 17 Steigungen (176 mm) und 16 Auftritte. Laufl\u00e4nge: 16 \u00d7 270 = 4.320 mm." },
+      { question: "Was ist die g\u00fcnstigste Treppe?", answer: "Gerade Treppe aus impr\u00e4gnierter Fichte: Wangen 50\u00d7300 (25\u201360 \u20ac/St\u00fcck, 2\u20133 St.), Trittstufen (8\u201315 \u20ac/St.), Setzstufen (5\u201310 \u20ac/St.). 14 Stufen au\u00dfen: 200\u2013500 \u20ac Material." },
+      { question: "Brauche ich eine Baugenehmigung?", answer: "F\u00fcr permanente Treppen in der Regel ja, besonders bei Geb\u00e4ude\u00e4nderungen. Geb\u00fchren 50\u2013300 \u20ac. Kleine Au\u00dfentreppen (1\u20132 Stufen) oft genehmigungsfrei. Bauamt kontaktieren." },
     ],
   },
 };

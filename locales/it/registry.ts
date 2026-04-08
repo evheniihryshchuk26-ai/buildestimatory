@@ -2251,6 +2251,93 @@ export const pondCalculator: CalculatorSEOContent = {
   ],
 };
 
+// ─── SCALE ───────────────────────────────────────────────────────────────────
+
+const stairCalculatorIT: CalculatorSEOContent = {
+  disclaimer: "Questo calcolatore fornisce stime basate sulle norme italiane NTC 2018. Verificare sempre con il comune locale. Alzata max. 180 mm, pedata min. 250 mm.",
+  howToUse: ["Misurare l'altezza totale tra pavimenti finiti in mm.", "Inserire la pedata desiderata (min. 250 mm).", "Inserire la larghezza scala (min. 800 mm residenziale).", "Cliccare su Calcola per gradini, alzata, pedata e lunghezza cosciale."],
+  materialInfo: "La costruzione di scale comprende cosciali, pedate, alzate e corrimano. I cosciali sono gli elementi diagonali portanti, tagliati da tavole 50\u00d7300 mm. Il NTC 2018 regola le scale residenziali: alzata max. 180 mm, pedata min. 250 mm, larghezza min. 800 mm (1.200 mm per uso pubblico). La formula 2a + p = 620\u2013640 mm garantisce il comfort. Le pedate sono in legno massello 36\u201340 mm (rovere, faggio, frassino) con aggetto di 20\u201330 mm. Le alzate usano tavole 20\u201325 mm. Per scale esterne, legno trattato in autoclave classe 4 o WPC resistono alle intemperie. Le scale interne usano spesso pedate in legno duro per durabilit\u00e0 ed estetica. Una scala interna standard costa \u20ac2.000\u20138.000 in materiali. Premium pedate in rovere aggiungono 30\u201350%. Altezza libera minima 2.100 mm. I cosciali devono essere di qualit\u00e0 strutturale C24 o superiore.",
+  nextSteps: [{ label: "Calcolatore Cosciali", href: "/calculators/stairs/stair-stringer-calculator/" }, { label: "Calcolatore Alzata/Pedata", href: "/calculators/stairs/rise-over-run-calculator/" }, { label: "Scala con Pianerottolo", href: "/calculators/stairs/stair-landing-calculator/" }, { label: "Calcolatore Scale Terrazza", href: "/calculators/outdoor/deck-stair-calculator/" }],
+  installationTips: ["Usare squadra con battute per tagli precisi su alzata e pedata.", "Ridurre prima alzata dello spessore di una pedata.", "Fissare cosciali con connettori metallici (tipo Simpson).", "Pre-forare tutti i fori per viti in pedate e alzate.", "Corrimano provvisorio durante la costruzione per sicurezza."],
+  commonMistakes: ["Non considerare lo spessore del pavimento finito \u2014 cambia la prima e ultima alzata.", "Alzate irregolari \u2014 max. 5 mm di variazione. Dislivelli sono rischio di inciampo.", "Usare tavole 50\u00d7250 mm invece di 50\u00d7300 mm \u2014 materiale strutturale insufficiente.", "Dimenticare altezza libera \u2014 misurare 2.100 mm da ogni naso di gradino.", "Non verificare norme comunali \u2014 possono essere pi\u00f9 restrittive del NTC."],
+  faqs: [
+    { question: "Come calcolo i gradini?", answer: "Altezza totale / 180 mm = numero alzate. Arrotondare. Esempio: 2.700 / 180 = 15 alzate e 14 pedate (il piano superiore funge da ultimo gradino)." },
+    { question: "Cosa dice il NTC per le scale?", answer: "NTC 2018: alzata max. 180 mm, pedata min. 250 mm, larghezza min. 800 mm, altezza libera 2.100 mm, corrimano 900\u20131.000 mm per 3+ gradini. Variazione max. tra alzate: 5 mm." },
+    { question: "Angolo ideale della scala?", answer: "30\u00b0\u201337\u00b0, con alzata 170\u2013190 mm e pedata 250\u2013280 mm. Questo intervallo offre la salita pi\u00f9 confortevole." },
+    { question: "Lunghezza cosciale?", answer: "\u221a(altezza\u00b2 + percorso\u00b2). Esempio: \u221a(2.700\u00b2 + 3.780\u00b2) \u2248 4.645 mm. Acquistare tavole 300 mm pi\u00f9 lunghe." },
+    { question: "Costo scala in Italia?", answer: "Interna: \u20ac2.000\u20138.000 materiali. Esterna: \u20ac800\u20133.000. Posa professionale: +\u20ac1.500\u20135.000. Pedate rovere: +30\u201350%." },
+    { question: "Quanti cosciali servono?", answer: "Per 800 mm: 2. Oltre 1.000 mm: 3. Interasse max. 600 mm, 400 mm raccomandato." },
+  ],
+};
+
+const stairStringerCalcIT: CalculatorSEOContent = {
+  disclaimer: "Calcoli cosciali basati su cosciali dentati da 50\u00d7300 mm. Verificare che restino almeno 90 mm dopo le tacche.",
+  howToUse: ["Inserire altezza totale in mm.", "Inserire pedata per gradino (min. 250 mm).", "Inserire numero totale gradini.", "Inserire larghezza per calcolare cosciali."],
+  materialInfo: "I cosciali sono la spina dorsale della scala, portando il peso di pedate, alzate e utenti. Standard da 50\u00d7300 mm, mantenendo 90 mm minimi dopo le tacche per la resistenza strutturale. Per esterni: legno trattato in autoclave classe 4 (pino) in 50\u00d7300 mm. Per interni: legno essiccato (abete, Douglas) \u00e8 standard. Mai 50\u00d7250 mm per cosciali dentati. Cosciali chiusi con fresature possono usare 50\u00d7250 mm o lamellare. Staffe metalliche eliminano la necessit\u00e0 di tacche. Prefabbricati in acciaio: \u20ac50\u2013120/pezzo. Tavola 50\u00d7300\u00d75.000 mm: \u20ac25\u201360 a seconda dell'essenza. Budget \u20ac100\u2013250 per scala solo per il legno dei cosciali.",
+  nextSteps: [{ label: "Calcolatore Scale", href: "/calculators/stairs/stair-calculator/" }, { label: "Calcolatore Alzata/Pedata", href: "/calculators/stairs/rise-over-run-calculator/" }, { label: "Calcolatore Costo Legno", href: "/calculators/hardware/lumber-cost-calculator/" }],
+  installationTips: ["Squadra con battute per tagli ripetibili.", "Circolare + sega a mano per angoli interni.", "Provare primo cosciale prima di tagliare gli altri.", "Connettori metallici alla connessione superiore."],
+  commonMistakes: ["Oltrepassare tacche con la circolare \u2014 finire a mano.", "50\u00d7250 mm insufficiente dopo le tacche.", "Non ridurre prima alzata dello spessore pedata.", "Interasse cosciali troppo grande \u2014 max. 600 mm."],
+  faqs: [
+    { question: "Quale legno per i cosciali?", answer: "Tavole 50\u00d7300 mm. Dopo le tacche min. 90 mm restanti. 50\u00d7300 (285 mm reale) \u00e8 sufficiente. Mai 50\u00d7250 per dentati. Qualit\u00e0 C24." },
+    { question: "Quanti cosciali per 800 mm?", answer: "2 cosciali. Oltre 1.000 mm: 3. Interasse max. 600 mm, 400 mm raccomandato." },
+    { question: "Come tagliare i cosciali?", answer: "Tracciare alzata e pedata con squadra. Tagliare con circolare. Angoli con sega a mano. Ridurre prima alzata." },
+    { question: "Si pu\u00f2 usare 50\u00d7250 mm?", answer: "Solo per cosciali chiusi con staffe metalliche. Per dentati: solo 50\u00d7300 mm." },
+    { question: "Interasse dei cosciali?", answer: "Max. 600 mm, 400 mm raccomandato. Minore interasse riduce flessione delle pedate." },
+    { question: "Costo cosciali?", answer: "Tavola 50\u00d7300\u00d75 m: \u20ac25\u201360. Per scala a 2 cosciali: \u20ac50\u2013140 solo legno." },
+  ],
+};
+
+const riseOverRunCalcIT: CalculatorSEOContent = {
+  disclaimer: "I calcoli alzata/pedata funzionano per scale, rampe, tetti e qualsiasi superficie inclinata. NTC richiede alzata max. 180 mm e pedata min. 250 mm. Per rampe accessibili: max 8%.",
+  howToUse: ["Inserire l'alzata (altezza verticale) in mm.", "Inserire la pedata (distanza orizzontale) in mm.", "Cliccare su Calcola per rapporto, percentuale, angolo e descrizione.", "Funziona per scale, rampe, tetti e qualsiasi superficie inclinata."],
+  materialInfo: "Il rapporto alzata/pedata \u00e8 la misura fondamentale della pendenza. Per le scale, l'alzata \u00e8 l'altezza verticale per gradino e la pedata \u00e8 la profondit\u00e0 orizzontale. Il NTC specifica alzata max. 180 mm e pedata min. 250 mm. La formula 2a + p = 620\u2013640 mm assicura il comfort, ideale a 630 mm. Per pendenze di tetti, il rapporto si esprime in gradi o percentuale. Per rampe accessibili (DM 236/89), pendenza max. 8%. Le rampe di accesso veicolare non devono superare il 15%. Comprendere il rapporto alzata/pedata aiuta a verificare la conformit\u00e0 normativa, calcolare lunghezze materiali e garantire sicurezza in ogni progetto con pendenza.",
+  nextSteps: [{ label: "Calcolatore Scale", href: "/calculators/stairs/stair-calculator/" }, { label: "Calcolatore Pendenza Tetto", href: "/calculators/roofing/roof-pitch-calculator/" }],
+  installationTips: ["Verificare alzata e pedata con livella dopo l'installazione.", "Tutte le alzate entro 5 mm.", "Usare goniometro digitale per confermare angoli.", "Verificare pendenza rampa in pi\u00f9 punti."],
+  commonMistakes: ["Confondere alzata e pedata.", "Non considerare spessore pavimento finito.", "Mescolare unit\u00e0 di misura.", "Dimenticare riferimento pendenza tetto."],
+  faqs: [
+    { question: "Cos'\u00e8 il rapporto alzata/pedata?", answer: "Il rapporto tra altezza verticale e distanza orizzontale. Es: 180 mm alzata su 270 mm pedata = 0,67, 67% o 33,7\u00b0." },
+    { question: "Alzata/pedata confortevole?", answer: "2a + p = 620\u2013640 mm (ideale 630). Es: a=175, p=280 = 630 mm." },
+    { question: "Pendenza max rampa accessibile?", answer: "DM 236/89: max 8%. Rampe corte sotto 150 mm: 10%." },
+    { question: "Come convertire in gradi?", answer: "Angolo = arctan(alzata/pedata) \u00d7 180/\u03c0. Es: 180/270 = arctan(0,667) = 33,7\u00b0." },
+    { question: "Pendenza max rampa garage?", answer: "15% raccomandato. Alcuni comuni permettono 25% su tratti corti." },
+    { question: "Pendenza per scale?", answer: "30\u00b0\u201337\u00b0 ideale. Alzata 170\u2013190 mm con pedata 250\u2013280 mm." },
+  ],
+};
+
+const spiralStaircaseCalcIT: CalculatorSEOContent = {
+  disclaimer: "Le scale a chiocciola hanno requisiti specifici. Larghezza libera min. 700 mm, altezza libera 2.100 mm, alzata max. 180 mm. Verificare con il comune.",
+  howToUse: ["Misurare l'altezza da pavimento a pavimento.", "Inserire il diametro dell'apertura circolare.", "Inserire la rotazione totale in gradi (360\u00b0 per un giro completo).", "Cliccare su Calcola per gradini, alzata e dimensioni."],
+  materialInfo: "Le scale a chiocciola entrano in aperture da 1.200 mm di diametro (1.500\u20131.800 mm raccomandato). Le norme richiedono: larghezza libera min. 700 mm dal palo centrale al parapetto, alzata max. 180 mm, pedata min. 150 mm alla linea di calpestio (300 mm dal bordo stretto), gradini identici. Altezza libera min. 2.100 mm. Disponibili in acciaio, alluminio, legno e composito. Kit prefabbricati in acciaio: \u20ac1.500\u20136.000 per dimensioni standard. Su misura in legno o ferro battuto: \u20ac5.000\u201325.000+. La colonna centrale (palo) \u00e8 l'elemento portante principale, ancorato al pavimento con tasselli. La maggior parte gira in senso orario salendo.",
+  nextSteps: [{ label: "Calcolatore Scale", href: "/calculators/stairs/stair-calculator/" }, { label: "Calcolatore Alzata/Pedata", href: "/calculators/stairs/rise-over-run-calculator/" }],
+  installationTips: ["Verificare che l'apertura sia perfettamente circolare e livellata.", "Ancorare la piastra base con almeno 4 tasselli M12.", "Montare gradini dal basso verso l'alto verificando livello e angolo.", "Corrimano continuo obbligatorio dal basso verso l'alto."],
+  commonMistakes: ["Diametro troppo piccolo \u2014 min. 1.500 mm per uso quotidiano.", "Apertura non circolare crea spaziature irregolari.", "Dimenticare la piattaforma di arrivo nella rotazione.", "Difficolt\u00e0 trasporto mobili attraverso scale a chiocciola."],
+  faqs: [
+    { question: "Diametro minimo?", answer: "Larghezza libera min. 700 mm. Con colonna 100 mm e parapetto: apertura min. ~1.200 mm. Raccomandato: 1.500\u20131.800 mm." },
+    { question: "Quanti gradini?", answer: "Dipende da altezza e alzata max. (180 mm). Per 2.700 mm: min. 15 gradini. 360\u00b0 con 15 = 24\u00b0 per gradino." },
+    { question: "Le chiocciole sono a norma?", answer: "S\u00ec, con requisiti specifici. Potrebbe non essere accettata come scala principale in alcuni comuni." },
+    { question: "Costo?", answer: "Kit acciaio: \u20ac1.500\u20136.000. Su misura legno: \u20ac5.000\u201320.000. Ferro battuto/vetro: \u20ac25.000+. Posa: \u20ac500\u20132.000 kit, \u20ac2.000\u20136.000 su misura." },
+    { question: "Pu\u00f2 essere l'unica scala?", answer: "Dipende dal comune e dalla normativa antincendio. Verificare prima della progettazione." },
+    { question: "Direzione di rotazione?", answer: "Solitamente orario salendo (favorisce i destrimani). Scelta progettuale \u2014 considerare disposizione piano superiore." },
+  ],
+};
+
+const stairLandingCalcIT: CalculatorSEOContent = {
+  disclaimer: "Scale con pianerottolo devono rispettare tutti i requisiti per ogni rampa. Pianerottolo min. 800 mm di profondit\u00e0 nel senso di marcia. Molte norme richiedono pianerottolo quando l'altezza supera 3.000 mm.",
+  howToUse: ["Misurare altezza totale tra pavimenti finiti in mm.", "Inserire profondit\u00e0 pianerottolo (min. 800 mm, pari alla larghezza scala).", "Inserire pedata desiderata (min. 250 mm).", "Cliccare su Calcola per gradini per rampa, altezza pianerottolo e percorso totale."],
+  materialInfo: "I pianerottoli sono piattaforme intermedie che dividono una scala lunga in due o pi\u00f9 rampe. La norma richiede che il pianerottolo sia largo almeno quanto la scala e profondo almeno 800 mm nel senso di marcia. I pianerottoli servono come punto di riposo, permettono cambi di direzione (scale a L e a U) e migliorano la sicurezza limitando la distanza di caduta. Molte norme locali richiedono un pianerottolo quando l'altezza supera 3.000 mm. I pianerottoli sono strutturati come piccole sezioni di solaio, con travetti e tavolato. Per scale a L (90\u00b0): pianerottolo 800\u00d7800 mm. Per U (180\u00b0): pi\u00f9 largo. Costo aggiuntivo: \u20ac300\u20131.000 materiali, \u20ac500\u20131.500 manodopera.",
+  nextSteps: [{ label: "Calcolatore Scale", href: "/calculators/stairs/stair-calculator/" }, { label: "Calcolatore Cosciali", href: "/calculators/stairs/stair-stringer-calculator/" }, { label: "Calcolatore Alzata/Pedata", href: "/calculators/stairs/rise-over-run-calculator/" }],
+  installationTips: ["Strutturare pianerottolo come mini-solaio \u2014 travetti a 400 mm interasse.", "Fissare a pareti con lambourde e tasselli.", "Deve essere perfettamente livellato.", "Altezza pianerottolo deve corrispondere esattamente all'alzata calcolata.", "Costruire pianerottolo prima dei cosciali della rampa superiore."],
+  commonMistakes: ["Pianerottolo troppo poco profondo \u2014 min. 800 mm.", "Non trattare come elemento strutturale.", "Alzate diseguali alla transizione del pianerottolo.", "Dimenticare lo spessore del pianerottolo nei calcoli."],
+  faqs: [
+    { question: "Quando serve un pianerottolo?", answer: "Sempre in alto e in basso di ogni scala. Molte norme richiedono uno quando l'altezza supera 3.000 mm. Obbligatorio a ogni cambio di direzione." },
+    { question: "Dimensioni pianerottolo?", answer: "Min. larghezza scala \u00d7 800 mm profondit\u00e0. Scale a U: larghezza completa di entrambe le rampe." },
+    { question: "Scala a L vs U?", answer: "L: virata 90\u00b0 con pianerottolo quadrato (800\u00d7800 mm). U: virata 180\u00b0 con pianerottolo rettangolare pi\u00f9 largo. La U occupa pi\u00f9 larghezza ma meno lunghezza." },
+    { question: "Come calcolare con pianerottolo?", answer: "Altezza totale / alzata ideale = gradini totali. Dividere equamente tra rampe. Percorso totale = percorso delle due rampe + profondit\u00e0 pianerottolo." },
+    { question: "Il pianerottolo conta come gradino?", answer: "No. \u00c8 una piattaforma piana al livello dell'ultima pedata della rampa inferiore." },
+    { question: "Costo pianerottolo?", answer: "Materiali: \u20ac300\u20131.000. Manodopera: \u20ac500\u20131.500. Costo aggiuntivo L: \u20ac800\u20132.500 vs scala dritta. U: \u20ac1.200\u20133.500." },
+  ],
+};
+
 // ─── MAPPA REGISTRO ─────────────────────────────────────────────────────────
 
 export const registryIT: Record<string, Record<string, CalculatorSEOContent>> = {
@@ -2328,5 +2415,12 @@ export const registryIT: Record<string, Record<string, CalculatorSEOContent>> = 
     "deck-stair-calculator": deckStairCalculator,
     "post-hole-calculator": postHoleCalculator,
     "pond-calculator": pondCalculator,
+  },
+  stairs: {
+    "stair-calculator": stairCalculatorIT,
+    "stair-stringer-calculator": stairStringerCalcIT,
+    "rise-over-run-calculator": riseOverRunCalcIT,
+    "spiral-staircase-calculator": spiralStaircaseCalcIT,
+    "stair-landing-calculator": stairLandingCalcIT,
   },
 };

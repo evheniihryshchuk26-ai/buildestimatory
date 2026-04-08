@@ -748,3 +748,90 @@ export const pondCalculator: CalculatorSEOContent = {
     { question: "How much does it cost to build a backyard pond in Canada?", answer: "A simple 500-gallon water garden costs CAD $700 to $2,000 DIY. A 1,000 to 2,000-gallon pond with pump, filter, and stone edging runs CAD $2,000 to $6,000 DIY or CAD $7,000 to $20,000 professionally installed." },
   ],
 };
+
+// ─── STAIRS ──────────────────────────────────────────────────────────────────
+
+export const stairCalculator: CalculatorSEOContent = {
+  disclaimer: "This calculator provides estimates based on NBC 9.8.2 requirements. Always verify with your local building department. Maximum riser height is 200 mm (7-7/8\") and minimum tread run is 235 mm (9-1/4\") per NBC.",
+  howToUse: ["Measure the total rise from finished floor to finished floor in inches or mm.", "Enter the desired tread run (235 mm / 9-1/4\" minimum per NBC).", "Enter the stair width (860 mm / 34\" minimum for residential per NBC).", "Click Calculate for step count, riser height, tread depth, and stringer length."],
+  materialInfo: "Stair construction involves several key components: stringers, treads, risers, and handrails. Stringers are the diagonal structural members, typically cut from 2×12 SPF lumber for straight runs. The NBC Section 9.8.2 governs residential stair design: maximum riser height 200 mm (7-7/8\"), minimum tread run 235 mm (9-1/4\"), and minimum width 860 mm (34\"). The comfort formula (rise + run = 430–460 mm) ensures comfortable climbing. Treads are commonly built from 5/4×12 lumber or 40 mm hardwood with a 20–30 mm nosing overhang. Risers use 1×8 boards. For exterior stairs, pressure-treated SPF (commonly available at Home Depot Canada, RONA, Home Hardware, and Castle) resists rot and weathering. Interior stairs often use hardwood treads (oak, maple, birch) for durability. A standard interior staircase costs CAD $2,000–6,000 in materials for a straight run. Premium hardwood treads add 30–50%. Always verify headroom of at least 1,950 mm (6'5\") per NBC. Canadian winters require anti-slip treads and proper drainage at the base of exterior stairs. SPF lumber is the standard framing material across Canada.",
+  nextSteps: [{ label: "Stair Stringer Calculator", href: "/calculators/stairs/stair-stringer-calculator/" }, { label: "Rise Over Run Calculator", href: "/calculators/stairs/rise-over-run-calculator/" }, { label: "Stair Landing Calculator", href: "/calculators/stairs/stair-landing-calculator/" }, { label: "Deck Stair Calculator", href: "/calculators/outdoor/deck-stair-calculator/" }],
+  installationTips: ["Always use a framing square with stair gauges clamped at the rise and run dimensions for consistent cuts.", "Drop the bottom riser by the thickness of one tread to keep all visible rises equal.", "Attach stringers to the header joist with metal stringer connectors (Simpson LSC or equivalent).", "Pre-drill all screw holes in treads and risers to prevent splitting.", "Install a temporary rail during construction for safety while working on the stairs."],
+  commonMistakes: ["Not accounting for finished floor thickness at top and bottom — this changes the first and last riser height.", "Inconsistent riser heights — NBC allows a maximum 6 mm variance. Uneven rises are a tripping hazard.", "Using 2×10 (50×250 mm) stringers instead of 2×12 (50×300 mm) — insufficient structural material after notching.", "Forgetting headroom clearance — measure 1,950 mm (6'5\") vertically from each tread nosing to the ceiling.", "Not checking provincial building code amendments — provinces may have stricter requirements than NBC."],
+  faqs: [
+    { question: "How do I calculate the number of stairs I need?", answer: "Measure the total rise (vertical distance from finished floor to finished floor) and divide by the ideal riser height of 170–190 mm (6-3/4\" to 7-1/2\"). Round to the nearest whole number. Example: 2,700 mm / 190 mm = 14.2, round to 14 risers and 13 treads. The upper floor serves as the final step." },
+    { question: "What is the NBC building code for residential stairs?", answer: "NBC 9.8.2 requires: maximum riser height 200 mm (7-7/8\"), minimum tread run 235 mm (9-1/4\"), minimum width 860 mm (34\"), minimum headroom 1,950 mm (6'5\"), and handrails between 865 and 1,070 mm (34\"–42\") high. Maximum variation between risers is 6 mm." },
+    { question: "What is the ideal stair angle?", answer: "The ideal angle is between 30° and 37°, corresponding to a rise of about 170–190 mm with a 250–280 mm run. This provides the most comfortable and safe climbing. Stairs steeper than 42° become difficult." },
+    { question: "How long of a stringer do I need?", answer: "Stringer length = square root of (total rise² + total run²). Example: 2,700 mm rise and 3,250 mm run gives √(2,700² + 3,250²) ≈ 4,223 mm (about 14 ft). Buy lumber at least 300 mm longer." },
+    { question: "How much does it cost to build stairs in Canada?", answer: "Interior staircase: CAD $2,000–6,000 in materials. Exterior: CAD $600–2,500. Professional installation adds 50–100% to material costs. Premium hardwood treads (oak, maple) add 30–50%." },
+    { question: "How many stringers do I need?", answer: "Maximum 600 mm (24\") on centre spacing, 400 mm (16\") recommended. For a standard 860 mm (34\") wide stair: 3 stringers. Over 1,200 mm: 4 stringers." },
+  ],
+};
+
+export const stairStringerCalculator: CalculatorSEOContent = {
+  disclaimer: "Stringer calculations assume standard notch-cut stringers from 2×12 SPF lumber. Always verify that remaining wood after notching is at least 90 mm (3-1/2\"). Check your provincial building code for spacing requirements.",
+  howToUse: ["Enter the total rise of the staircase.", "Enter the run per step (235 mm / 9-1/4\" minimum per NBC).", "Enter the total number of steps (use the Stair Calculator to determine this).", "Enter the stair width to calculate the number of stringers needed."],
+  materialInfo: "Stair stringers are the backbone of any staircase. Standard stringers are cut from 2×12 SPF lumber, providing enough material for notch cuts while maintaining the required 90 mm (3-1/2\") of uncut wood. For exterior use, pressure-treated SPF 2×12 is standard — commonly available at Home Depot Canada, RONA, Home Hardware, and Castle Building Centres. Never use 2×10 for notched stringers. Closed stringers with routed housings can use 2×10 or engineered lumber. Metal stringer brackets eliminate notch-cutting. Pre-made steel stringers cost CAD $50–100 each. A 2×12×16 ft SPF board costs CAD $25–55 depending on grade. Budget CAD $75–250 per staircase for stringer lumber alone. In colder Canadian climates, use ACQ or CA-C treated lumber rated for ground contact on exterior stringers.",
+  nextSteps: [{ label: "Stair Calculator", href: "/calculators/stairs/stair-calculator/" }, { label: "Rise Over Run Calculator", href: "/calculators/stairs/rise-over-run-calculator/" }, { label: "Lumber Cost Calculator", href: "/calculators/hardware/lumber-cost-calculator/" }],
+  installationTips: ["Use a framing square with stair gauges for repeatable cuts.", "Make all cuts with a circular saw and finish corners with a handsaw — do not overcut.", "Test-fit the first stringer before cutting the rest.", "Use metal stringer hangers (Simpson LSC) at the top connection."],
+  commonMistakes: ["Overcutting notches with circular saw — finish with handsaw.", "Using 2×10 instead of 2×12 — insufficient material after notching.", "Not dropping bottom riser by one tread thickness.", "Spacing stringers too far apart — max 600 mm (24\") on centre."],
+  faqs: [
+    { question: "What size lumber for stair stringers in Canada?", answer: "Use 2×12 SPF (Spruce-Pine-Fir) for notched stringers. After notching, at least 90 mm (3-1/2\") of uncut wood must remain. A 2×12 (actual 286 mm) provides enough material. Never use 2×10." },
+    { question: "How many stringers for 860 mm (34\") wide stairs?", answer: "3 stringers: one on each outside edge and one centred. Spacing about 430 mm on centre. Over 1,200 mm wide: 4 stringers." },
+    { question: "How do you cut stair stringers?", answer: "Mark rise and run on a 2×12 using a framing square with stair gauges. Cut with circular saw, finish corners with handsaw. Drop bottom riser by one tread thickness." },
+    { question: "Can I use a 2×10 for stringers?", answer: "No, not for notched stringers. After a typical 190 mm notch from a 2×10 (actual 235 mm), only ~45 mm remains. Only use 2×10 for closed stringers with metal brackets." },
+    { question: "How far apart should stringers be?", answer: "Maximum 600 mm (24\") on centre, 400 mm (16\") recommended. Closer spacing reduces bounce and flex." },
+    { question: "How much do stringers cost in Canada?", answer: "A 2×12×16 ft SPF board costs CAD $25–55. Treated for exterior: CAD $35–70. Steel pre-made: CAD $50–100 each. For a 3-stringer staircase: CAD $75–210 for stringer lumber." },
+  ],
+};
+
+export const riseOverRunCalculator: CalculatorSEOContent = {
+  disclaimer: "Rise over run calculations work for stairs, ramps, roofs, and any sloped surface. NBC requires max 200 mm rise and min 235 mm run for stairs. For barrier-free ramps: max 1:12 slope.",
+  howToUse: ["Enter the rise (vertical height).", "Enter the run (horizontal distance).", "Click Calculate for slope ratio, percentage, angle, and description.", "Works for stairs, ramps, roofs, driveways, and any sloped surface."],
+  materialInfo: "Rise over run is the fundamental slope measurement. For stairs, rise is the vertical height per step and run is the horizontal tread depth. NBC specifies max 200 mm rise and min 235 mm run. The comfort formula (rise + run = 430–460 mm) ensures comfortable climbing. For roof pitch, the ratio is expressed per 12 inches of run (e.g., 6:12). For barrier-free ramps per NBC and CSA B651, maximum slope is 1:12 (8.33%). Driveways should not exceed 15% gradient. In Canadian winter conditions, gentler slopes are recommended for exterior stairs and ramps to reduce ice-related slip hazards. Understanding rise over run helps verify compliance, calculate material lengths, and ensure safety.",
+  nextSteps: [{ label: "Stair Calculator", href: "/calculators/stairs/stair-calculator/" }, { label: "Stair Stringer Calculator", href: "/calculators/stairs/stair-stringer-calculator/" }, { label: "Roof Pitch Calculator", href: "/calculators/roofing/roof-pitch-calculator/" }],
+  installationTips: ["Check rise and run with a spirit level after installation.", "Verify all risers are within 6 mm of each other per NBC.", "Use a digital angle finder to confirm angles.", "For ramps, check slope at multiple points."],
+  commonMistakes: ["Confusing rise with run.", "Not accounting for finished floor thickness.", "Mixing imperial and metric units.", "Forgetting roof pitch uses 12 inches as the standard run."],
+  faqs: [
+    { question: "What is rise over run?", answer: "The ratio of vertical height to horizontal distance. E.g., 190 mm rise over 250 mm run = 0.76, 76%, or 37.2°." },
+    { question: "Comfortable rise and run?", answer: "Rise + run = 430–460 mm. E.g., 190 mm rise with 250 mm run = 440 mm — ideal comfort." },
+    { question: "Maximum ramp slope in Canada?", answer: "NBC and CSA B651: 1:12 (8.33%) for barrier-free ramps. Short ramps under 75 mm rise may use 1:8." },
+    { question: "How to convert to degrees?", answer: "Angle = arctan(rise/run) × 180/π. E.g., 190/250 = arctan(0.76) = 37.2°." },
+    { question: "Maximum driveway slope?", answer: "15% recommended. Some municipalities allow 25% on short sections. In icy conditions, 10% is safer." },
+    { question: "What slope for stairs?", answer: "30°–37° ideal. Rise 170–190 mm with 250–280 mm run." },
+  ],
+};
+
+export const spiralStaircaseCalculator: CalculatorSEOContent = {
+  disclaimer: "Spiral staircases must comply with NBC 9.8.7. Min clear width 660 mm (26\"), headroom 1,900 mm (6'3\"), max rise 240 mm (9-1/2\"). Check with your local building department.",
+  howToUse: ["Measure the floor-to-floor height.", "Enter the well opening diameter.", "Enter total rotation in degrees (360° for one full turn).", "Click Calculate for tread count, rise per step, and dimensions."],
+  materialInfo: "Spiral staircases fit in circular openings from 1,100 mm (44\") diameter, though 1,500 mm (60\") is recommended. NBC 9.8.7 requires: min 660 mm (26\") clear width from centre column to inner handrail, max 240 mm (9-1/2\") rise, min 190 mm (7-1/2\") tread depth at 300 mm from narrow edge, identical treads. Headroom min 1,900 mm (6'3\"). Steel kits cost CAD $2,000–7,000. Custom wood or wrought iron: CAD $7,000–30,000+. The centre column must be anchored with lag bolts. Most spirals turn clockwise ascending. In Canada, spiral stairs may serve as a secondary staircase — check your provincial code for primary stair requirements.",
+  nextSteps: [{ label: "Stair Calculator", href: "/calculators/stairs/stair-calculator/" }, { label: "Rise Over Run Calculator", href: "/calculators/stairs/rise-over-run-calculator/" }],
+  installationTips: ["Verify opening is perfectly circular and level.", "Anchor centre column base plate with at least four 1/2\" lag bolts.", "Assemble treads bottom-up checking level and rotation at each step.", "Install handrail continuously — gaps are a safety hazard."],
+  commonMistakes: ["Too small diameter — 1,100 mm (44\") is minimum but very tight. Choose 1,500 mm (60\") for daily use.", "Non-circular opening creates uneven tread spacing.", "Forgetting landing platform at the top.", "Ignoring furniture-moving challenges."],
+  faqs: [
+    { question: "Minimum diameter in Canada?", answer: "NBC requires 660 mm (26\") clear width. Opening minimum ~1,100 mm (44\"), but 1,500 mm (60\") strongly recommended." },
+    { question: "How many treads?", answer: "Depends on height and max rise (240 mm / 9-1/2\"). For 2,700 mm (9 ft): min 12 treads." },
+    { question: "Are spiral stairs code-compliant in Canada?", answer: "Yes, per NBC 9.8.7 with specific requirements. Some provinces restrict them to secondary access." },
+    { question: "Cost in Canada?", answer: "Steel kit: CAD $2,000–7,000. Custom: CAD $7,000–30,000+. Installation: CAD $1,000–5,000." },
+    { question: "Can it be the only stair?", answer: "Depends on provincial code. NBC allows it in some cases for single-family homes. Check with your municipality." },
+    { question: "Which direction?", answer: "Usually clockwise ascending. Design choice — consider upper floor layout." },
+  ],
+};
+
+export const stairLandingCalculator: CalculatorSEOContent = {
+  disclaimer: "Stairs with landings must meet all NBC 9.8.2 requirements for each flight. Landing must be at least as wide as the stairway and at least 860 mm (34\") deep. NBC may require landings for stairs exceeding 3,700 mm (12 ft) of vertical rise.",
+  howToUse: ["Measure total rise from finished floor to finished floor.", "Enter landing depth (min 860 mm / 34\", matching stair width).", "Enter desired tread run (min 235 mm / 9-1/4\" per NBC).", "Click Calculate for steps per flight, landing height, and total run."],
+  materialInfo: "Stair landings are intermediate platforms that break a long staircase into flights. NBC requires the landing to be at least as wide as the stair and at least 860 mm (34\") deep in the direction of travel. Landings provide rest points, allow direction changes (L-shaped and U-shaped stairs), and improve safety. Many provinces require a landing when vertical rise exceeds 3,700 mm (12 ft). Landings are framed like small floor sections using 2×10 or 2×12 joists. For L-shaped stairs (90° turn): landing typically 860×860 mm (34\"×34\"). For U-shaped (180° turn): wider landing. The landing surface matches the tread material. A landing adds CAD $300–1,000 in materials and CAD $500–1,500 in labour. In Canadian climates, exterior landings need proper drainage and snow-load considerations.",
+  nextSteps: [{ label: "Stair Calculator", href: "/calculators/stairs/stair-calculator/" }, { label: "Stair Stringer Calculator", href: "/calculators/stairs/stair-stringer-calculator/" }, { label: "Rise Over Run Calculator", href: "/calculators/stairs/rise-over-run-calculator/" }],
+  installationTips: ["Frame landing like a mini floor system — 2×10 or 2×12 joists at 16\" on centre.", "Secure to walls with ledger board and lag bolts.", "Must be perfectly level — check with 4-foot level.", "Build landing before cutting upper flight stringers."],
+  commonMistakes: ["Landing too shallow — min 860 mm (34\") deep.", "Not treating as structural element.", "Unequal risers at landing transition.", "Forgetting landing thickness in height calculations."],
+  faqs: [
+    { question: "When do you need a landing in Canada?", answer: "Always at top and bottom of every stair. Many provinces require a landing when rise exceeds 3,700 mm (12 ft). Required at any direction change. Exterior stairs connecting to a door need a landing at least 860 mm deep." },
+    { question: "How big should a landing be?", answer: "Min width of stair × 860 mm (34\") deep. For standard 860 mm wide stairs: 860×860 mm. U-stairs: full width of both flights." },
+    { question: "L-shaped vs U-shaped stairs?", answer: "L: 90° turn with square landing. U: 180° turn with wider landing. U uses more width but less length." },
+    { question: "How to calculate with a landing?", answer: "Total rise / ideal rise = total steps. Split equally between flights. Total run = both flights + landing depth." },
+    { question: "Does landing count as a step?", answer: "No. It is a flat platform at the level of the last tread of the lower flight." },
+    { question: "Landing cost in Canada?", answer: "Materials: CAD $300–1,000. Labour: CAD $500–1,500. L-shaped total extra: CAD $800–2,500. U-shaped: CAD $1,200–3,500." },
+  ],
+};

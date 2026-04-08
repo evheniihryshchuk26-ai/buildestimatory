@@ -2138,6 +2138,124 @@ export const pondCalculator: CalculatorSEOContent = {
   ],
 };
 
+
+// ─── STAIRS ──────────────────────────────────────────────────────────────────
+
+const stairCalculatorGB: CalculatorSEOContent = {
+  disclaimer: "This calculator provides estimates based on UK Building Regulations Approved Document K. Always verify with your local Building Control. Maximum rise 220 mm, minimum going 220 mm for private stairs.",
+  howToUse: [
+    "Measure the total rise from finished floor to finished floor.",
+    "Enter the desired tread run (220 mm going minimum per UK).",
+    "Enter the stair width (800 mm minimum for residential).",
+    "Click Calculate for step count, riser height, tread depth, and stringer length.",
+  ],
+  materialInfo: "Stair construction involves several key components: stringers, treads, risers, and handrails. Stringers are the diagonal structural members that support the stairs, typically cut from 2×12 (50×300 mm) lumber for straight runs. The UK Building Regulations Approved Document K governs residential stair design with specific requirements: maximum riser height 220 mm (private), minimum tread run 220 mm going, and minimum width 800 mm. The comfort formula 2R + G = 550–700 mm ensures comfortable climbing. Treads are commonly built from 5/4×12 lumber or 40 mm hardwood boards with a 20–30 mm nosing overhang. Risers use 1×8 (20 mm) boards. For exterior stairs, pressure-treated lumber (SPF in Canada) or composite decking resists rot. Interior stairs often use hardwood treads (oak, maple, birch) for durability and appearance. A standard interior staircase costs £1,500 – £5,000 in materials for a straight run, with premium hardwood treads adding 30–50%. Always verify headroom clearance of at least 2,000 mm measured vertically from the stair nosing. In the UK, timber is purchased in metric (mm). Stair stringers should be structural grade C24 or better. For UK winter conditions, exterior stairs benefit from anti-slip treads and proper drainage at the base.",
+  nextSteps: [
+    { label: "Stair Stringer Calculator", href: "/calculators/stairs/stair-stringer-calculator/" },
+    { label: "Rise Over Run Calculator", href: "/calculators/stairs/rise-over-run-calculator/" },
+    { label: "Stair Landing Calculator", href: "/calculators/stairs/stair-landing-calculator/" },
+    { label: "Deck Stair Calculator", href: "/calculators/outdoor/deck-stair-calculator/" },
+  ],
+  installationTips: [
+    "Always use a framing square with stair gauges clamped at the rise and run dimensions for consistent cuts.",
+    "Drop the bottom riser by the thickness of one tread to keep all visible rises equal.",
+    "Attach stringers to the header joist with metal stringer connectors (Simpson LSC or equivalent).",
+    "Pre-drill all screw holes in treads and risers to prevent splitting.",
+    "Install a temporary rail during construction for safety while working on the stairs.",
+  ],
+  commonMistakes: [
+    "Not accounting for finished floor thickness at top and bottom — this changes the first and last riser height.",
+    "Inconsistent riser heights — maximum 5 mm variance allowed. Uneven rises are a tripping hazard.",
+    "Using 2×10 (50×250 mm) stringers instead of 2×12 (50×300 mm) — insufficient structural material after notching.",
+    "Forgetting headroom clearance — measure 2,000 mm vertically from each tread nosing to the ceiling.",
+    "Not checking local building code amendments — local authorities may have stricter requirements.",
+  ],
+  faqs: [
+    { question: "How do I calculate the number of stairs I need?", answer: "Measure the total rise (vertical distance from finished floor to finished floor) and divide by the ideal riser height of 170–190 mm. Round to the nearest whole number. Example: 2,700 mm / 180 = 15 risers and 14 treads. The upper floor serves as the final step." },
+    { question: "What is the building code for residential stairs?", answer: "The UK Building Regulations Approved Document K requires: maximum rise 220 mm (private), minimum going 220 mm going, minimum width 800 mm, minimum headroom 2,000 mm, and handrails between 900 and 1,000 mm high. Maximum variation between risers is 5 mm." },
+    { question: "What is the ideal stair angle?", answer: "The ideal angle is between 30° and 37°, corresponding to a rise of about 170–190 mm with a 250–280 mm going. This provides the most comfortable and safe climbing. Stairs steeper than 42° become difficult." },
+    { question: "How long of a stringer do I need?", answer: "Stringer length = square root of (total rise² + total run²). Example: 2,700 mm rise and 3,780 mm run gives √(2,700² + 3,780²) ≈ 4,645 mm. Buy lumber at least 300 mm longer." },
+    { question: "How much does it cost to build stairs?", answer: "Interior staircase: £1,500 – £5,000 in materials. Exterior: £500 – £2,000. Professional installation adds 50–100% to material costs. Premium hardwood treads add 30–50%." },
+    { question: "How many stringers do I need?", answer: "Maximum 600 mm on centre spacing, 400 mm recommended. For an 800 mm wide stair: 2 stringers. Over 1,000 mm: 3 stringers. Over 1,200 mm: 4 stringers." },
+  ],
+};
+
+// Repeat similar pattern for the other 4 stair calculators (stringer, rise-over-run, spiral, landing)
+// But keep them shorter with just disclaimer + howToUse + materialInfo + nextSteps + tips + mistakes + faqs
+
+const stairStringerCalcGB: CalculatorSEOContent = {
+  disclaimer: "Stringer calculations assume standard notch-cut stringers from 2×12 (50×300 mm) lumber. Always verify that remaining wood after notching is at least 90 mm. Check your local building code for spacing requirements.",
+  howToUse: ["Enter the total rise of the staircase.", "Enter the run per step (220 mm going minimum).", "Enter the total number of steps.", "Enter the stair width to calculate stringer count.",],
+  materialInfo: "Stair stringers are the backbone of any staircase, carrying all loads. Standard stringers are cut from 2×12 (50×300 mm) lumber, providing enough material for notch cuts while maintaining the required 90 mm of uncut wood. For exterior use, pressure-treated SPF (commonly available at B&Q, Wickes, and Jewson) in 50×300 mm is standard. Never use 50×250 mm for notched stringers. Closed stringers with routed housings can use 50×250 mm or engineered timber. Metal stringer brackets eliminate notch-cutting. Pre-made steel stringers cost £30–80 each. A 50×300×5000 mm board costs £15–40 depending on species. Budget £50–200 per staircase for stringer timber alone.",
+  nextSteps: [
+    { label: "Stair Calculator", href: "/calculators/stairs/stair-calculator/" },
+    { label: "Rise Over Run Calculator", href: "/calculators/stairs/rise-over-run-calculator/" },
+    { label: "Lumber Cost Calculator", href: "/calculators/hardware/lumber-cost-calculator/" },
+  ],
+  installationTips: ["Use a framing square with stair gauges.", "Make all cuts with a circular saw and finish corners with a handsaw.", "Test-fit the first stringer before cutting the rest.", "Use metal stringer hangers at the top connection.",],
+  commonMistakes: ["Overcutting notches with circular saw — finish with handsaw.", "Using 50×250 mm — insufficient material remaining.", "Not dropping bottom riser by tread thickness.", "Spacing stringers too far apart — max 600 mm on centre.",],
+  faqs: [
+    { question: "What size lumber for stair stringers?", answer: "Use 2×12 (50×300 mm) for notched stringers. After notching, at least 90 mm of uncut wood must remain. A 50×300 mm board provides enough material. Never use 50×250 mm for notched stringers." },
+    { question: "How many stringers for 800 mm wide stairs?", answer: "For 800 mm: 2 stringers. Over 1,000 mm: 3 stringers. Maximum spacing 600 mm on centre, 400 mm recommended." },
+    { question: "How do you cut stair stringers?", answer: "Mark rise and run on a 50×300 mm board using a framing square with stair gauges. Cut with circular saw, finish corners with handsaw. Drop bottom riser by one tread thickness." },
+    { question: "Can I use 50×250 mm for stringers?", answer: "No, not for notched stringers. After a typical 190 mm notch, only ~45 mm remains — far less than the 90 mm minimum. Only use for closed stringers with metal brackets." },
+    { question: "How far apart should stringers be?", answer: "Maximum 600 mm on centre, 400 mm recommended. Closer spacing reduces bounce and flex in treads." },
+    { question: "How much do stringers cost?", answer: "A 50×300×5000 mm board costs £8 – £50. For a typical 2–3 stringer staircase, budget £500 – £2,000 for stringer timber plus treads and risers." },
+  ],
+};
+
+
+const riseOverRunCalcGB: CalculatorSEOContent = {
+  disclaimer: "Rise over run calculations work for stairs, ramps, roofs, and any sloped surface. UK Building Regs require max 220 mm rise and min 220 mm going. For DDA ramps: max 1:12 slope.",
+  howToUse: ["Enter the rise (vertical height).", "Enter the run (horizontal distance).", "Click Calculate for slope ratio, percentage, angle, and description.", "Works for stairs, ramps, roofs, and any sloped surface."],
+  materialInfo: "Rise over run is the fundamental slope measurement. For stairs, rise is the vertical height per step and run is the horizontal tread depth. UK Building Regs specify max 220 mm rise and min 220 mm going for private stairs. The 2R + G = 550–700 mm formula ensures comfort. For roof pitch, the ratio is expressed in degrees. For DDA-compliant ramps, maximum slope is 1:12 (8.33%). Driveways should not exceed 15% gradient. Understanding rise over run helps verify compliance, calculate material lengths, and ensure safety for any sloped construction project.",
+  nextSteps: [{ label: "Stair Calculator", href: "/calculators/stairs/stair-calculator/" }, { label: "Roof Pitch Calculator", href: "/calculators/roofing/roof-pitch-calculator/" }],
+  installationTips: ["Check rise and run with a spirit level after installation.", "Verify all risers are within 5 mm of each other.", "Use a digital angle finder.", "Check ramp slope at multiple points."],
+  commonMistakes: ["Confusing rise with run.", "Not accounting for floor finish thickness.", "Mixing units.", "Forgetting roof pitch reference."],
+  faqs: [
+    { question: "What is rise over run?", answer: "The ratio of vertical height to horizontal distance. E.g., 180 mm rise over 270 mm run = 0.67, 67%, or 33.7°." },
+    { question: "What is comfortable rise and run?", answer: "2R + G = 550–700 mm. 180 mm rise with 270 mm going = 630 mm — ideal." },
+    { question: "Maximum ramp slope?", answer: "DDA: 1:12 (8.33%). Short ramps under 300 mm rise may be 1:10." },
+    { question: "How to convert to degrees?", answer: "Angle = arctan(rise/run) × 180/π. E.g., 180/270 = arctan(0.667) = 33.7°." },
+    { question: "Maximum driveway slope?", answer: "15% recommended. Some councils allow 25% on short sections." },
+    { question: "What slope for stairs?", answer: "30°–37° is ideal. Rise 170–190 mm with 250–280 mm going." },
+  ],
+};
+
+const spiralStaircaseCalcGB: CalculatorSEOContent = {
+  disclaimer: "Spiral staircases must comply with Approved Document K. Min clear width 600 mm, headroom 2,000 mm, max rise 220 mm. Check with Building Control.",
+  howToUse: ["Measure the floor-to-floor height.", "Enter the well opening diameter.", "Enter total rotation in degrees.", "Click Calculate for tread count and dimensions."],
+  materialInfo: "Spiral staircases fit in circular openings from 1,200 mm diameter (1,500 mm recommended). UK Building Regs require: min 600 mm clear width, max 220 mm rise, min 50 mm tread depth at the walk line, identical treads. Headroom min 2,000 mm. Steel kits cost £1,500–6,000. Custom wood or wrought iron: £5,000–25,000+. The centre column must be securely anchored. Most spirals turn clockwise ascending.",
+  nextSteps: [{ label: "Stair Calculator", href: "/calculators/stairs/stair-calculator/" }],
+  installationTips: ["Verify opening is circular and level.", "Anchor centre column with M12 bolts.", "Assemble bottom-up checking level.", "Continuous handrail required."],
+  commonMistakes: ["Too small diameter — use 1,500 mm minimum for daily use.", "Non-circular opening.", "Forgetting landing platform.", "Furniture transport difficulties."],
+  faqs: [
+    { question: "Minimum diameter?", answer: "Min clear width 600 mm. Opening ~1,200 mm minimum, 1,500 mm recommended." },
+    { question: "How many treads?", answer: "Depends on height and max rise (220 mm). For 2,700 mm: min 13 treads." },
+    { question: "Are spirals Building Regs compliant?", answer: "Yes, with specific requirements. May not be accepted as primary stair by some local authorities." },
+    { question: "Cost?", answer: "Steel kit: £1,500–6,000. Custom: £5,000–25,000+." },
+    { question: "Can it be the only stair?", answer: "Depends on local Building Control. Check before planning." },
+    { question: "Which direction?", answer: "Usually clockwise ascending. Design choice — consider upper floor layout." },
+  ],
+};
+
+const stairLandingCalcGB: CalculatorSEOContent = {
+  disclaimer: "Stairs with landings must meet all requirements per Approved Document K. Landing min 800 mm deep. Some local authorities require landings for stairs exceeding 36 risers.",
+  howToUse: ["Measure total rise from finished floor to finished floor.", "Enter landing depth (min 800 mm, matching stair width).", "Enter desired tread run (min 220 mm going).", "Click Calculate for steps per flight, landing height, and total run."],
+  materialInfo: "Stair landings are intermediate platforms that break a long staircase into flights. Building Regs require the landing to be at least as wide as the stair and at least 800 mm deep in the direction of travel. Landings provide rest points, allow direction changes (L-shaped and U-shaped stairs), and improve safety. Many local authorities require a landing when vertical rise exceeds 3,600 mm. Landings are framed like small floor sections using joists and decking. For L-shaped stairs (90° turn): landing typically 800×800 mm. For U-shaped (180° turn): wider landing. The landing surface matches the tread material. A landing adds £200–800 in materials and £400–1,200 in labour.",
+  nextSteps: [{ label: "Stair Calculator", href: "/calculators/stairs/stair-calculator/" }, { label: "Stair Stringer Calculator", href: "/calculators/stairs/stair-stringer-calculator/" }],
+  installationTips: ["Frame landing like a mini floor.", "Secure to walls with ledger board.", "Must be perfectly level.", "Build landing before upper flight stringers."],
+  commonMistakes: ["Landing too shallow — min 800 mm deep.", "Not treating as structural element.", "Unequal risers at landing transition.", "Forgetting landing thickness in calculations."],
+  faqs: [
+    { question: "When do you need a landing?", answer: "Always at top and bottom. Many authorities require one when rise exceeds 3,600 mm. Required at any direction change." },
+    { question: "How big should a landing be?", answer: "Min width of stair × 800 mm deep. U-stairs: full width of both flights." },
+    { question: "L-shaped vs U-shaped?", answer: "L: 90° turn with square landing. U: 180° turn with wider landing. U uses more width but less length." },
+    { question: "How to calculate with landing?", answer: "Total rise / ideal rise = total steps. Split equally between flights. Total run = both flights + landing depth." },
+    { question: "Does landing count as step?", answer: "No. It is a flat platform at the level of the last tread of the lower flight." },
+    { question: "Landing cost?", answer: "Materials: £200–800. Labour: £400–1,200. L-shaped total extra: £600–2,000. U-shaped: £1,000–3,000." },
+  ],
+};
+
 // ─── REGISTRY MAP ───────────────────────────────────────────────────────────
 
 export const registryGB: Record<string, Record<string, CalculatorSEOContent>> = {
@@ -2215,5 +2333,12 @@ export const registryGB: Record<string, Record<string, CalculatorSEOContent>> = 
     "deck-stair-calculator": deckStairCalculator,
     "post-hole-calculator": postHoleCalculator,
     "pond-calculator": pondCalculator,
+  },
+  stairs: {
+    "stair-calculator": stairCalculatorGB,
+    "stair-stringer-calculator": stairStringerCalcGB,
+    "rise-over-run-calculator": riseOverRunCalcGB,
+    "spiral-staircase-calculator": spiralStaircaseCalcGB,
+    "stair-landing-calculator": stairLandingCalcGB,
   },
 };

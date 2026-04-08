@@ -335,6 +335,19 @@ export const categories: CategoryMeta[] = [
       { slug: "laminate-calculator", title: "Calcolatore Laminato Gratuito — Pacchi & m² (2026)", description: "Calcolatore laminato — stimatore gratuito di doghe e pacchi con sottopavimento. Inserisci le dimensioni per una lista materiali istantanea.", category: "Pavimentazione", categorySlug: "flooring" },
     ],
   },
+  {
+    slug: "stairs",
+    title: "Calcolatori per Scale",
+    description:
+      "Calcola dimensioni scale, lunghezza cosciali, alzata/pedata, scale a chiocciola e pianerottoli. Calcolatori gratuiti conformi al NTC 2018.",
+    calculators: [
+      { slug: "stair-calculator", title: "Calcolatore Scale Gratuito — Gradini, Alzata & Cosciale (2026)", description: "Calcolatore scale gratuito — inserisci l'altezza totale per numero gradini, alzata, pedata e lunghezza cosciale. Conforme NTC.", category: "Scale", categorySlug: "stairs" },
+      { slug: "stair-stringer-calculator", title: "Calcolatore Cosciali Gratuito — Lunghezza & Numero (2026)", description: "Calcolatore cosciali gratuito — lunghezza, numero e disposizione per qualsiasi larghezza scala. Per tavole 50×250 e 50×300 mm.", category: "Scale", categorySlug: "stairs" },
+      { slug: "rise-over-run-calculator", title: "Calcolatore Alzata/Pedata Gratuito — Pendenza & Angolo (2026)", description: "Calcolatore alzata/pedata gratuito — rapporto, percentuale, angolo e descrizione istantanei. Per scale, rampe e tetti.", category: "Scale", categorySlug: "stairs" },
+      { slug: "spiral-staircase-calculator", title: "Scala a Chiocciola Gratuito — Gradini & Dimensioni (2026)", description: "Calcolatore scala a chiocciola gratuito — diametro e altezza per numero gradini, alzata e rotazione. Conforme alle norme.", category: "Scale", categorySlug: "stairs" },
+      { slug: "stair-landing-calculator", title: "Scala con Pianerottolo Gratuito — Rampe & Dimensioni (2026)", description: "Calcolatore scala con pianerottolo gratuito — dividi rampe con pianerottolo intermedio. Gradini per rampa, altezza pianerottolo e percorso totale.", category: "Scale", categorySlug: "stairs" },
+    ],
+  },
 ];
 
 export function getCategoryBySlug(slug: string) {

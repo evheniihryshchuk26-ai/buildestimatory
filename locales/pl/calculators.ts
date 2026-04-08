@@ -577,6 +577,19 @@ export const categories: CategoryMeta[] = [
       { slug: "laminate-calculator", title: "Darmowy Kalkulator Laminatu — Paczki & m² (2026)", description: "Kalkulator laminatu — darmowy kalkulator desek i paczek z podkładem. Wprowadź wymiary pokoju, aby uzyskać natychmiastową listę materiałów.", category: "Podłogi", categorySlug: "flooring" },
     ],
   },
+  {
+    slug: "stairs",
+    title: "Kalkulatory Schodów",
+    description:
+      "Oblicz wymiary schodów, długość podłużnic, stosunek wysokość/głębokość, schody kręcone i spoczniki. Darmowe kalkulatory zgodne z PN-EN.",
+    calculators: [
+      { slug: "stair-calculator", title: "Darmowy Kalkulator Schodów — Stopnie, Wysokość & Podłużnica (2026)", description: "Darmowy kalkulator schodów — wpisz całkowitą wysokość, aby uzyskać liczbę stopni, wysokość, głębokość i długość podłużnicy. Zgodny z PN-EN.", category: "Schody", categorySlug: "stairs" },
+      { slug: "stair-stringer-calculator", title: "Darmowy Kalkulator Podłużnic — Długość & Ilość (2026)", description: "Darmowy kalkulator podłużnic — długość, ilość i rozkład dla każdej szerokości schodów. Dla desek 50×250 i 50×300 mm.", category: "Schody", categorySlug: "stairs" },
+      { slug: "rise-over-run-calculator", title: "Darmowy Kalkulator Wysokość/Głębokość — Nachylenie & Kąt (2026)", description: "Kalkulator wysokość/głębokość — stosunek, procent, kąt i opis natychmiast. Dla schodów, ramp i dachów.", category: "Schody", categorySlug: "stairs" },
+      { slug: "spiral-staircase-calculator", title: "Darmowy Schody Kręcone — Stopnie & Wymiary (2026)", description: "Kalkulator schodów kręconych — średnica i wysokość kondygnacji dla liczby stopni, wysokości i obrotu. Zgodny z normami.", category: "Schody", categorySlug: "stairs" },
+      { slug: "stair-landing-calculator", title: "Darmowy Schody ze Spocznikiem — Biegi & Wymiary (2026)", description: "Kalkulator schodów ze spocznikiem — podziel biegi ze spocznikiem pośrednim. Stopnie na bieg, wysokość spocznika i całkowity bieg.", category: "Schody", categorySlug: "stairs" },
+    ],
+  },
 ];
 
 export function getCategoryBySlug(slug: string) {

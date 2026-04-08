@@ -335,6 +335,54 @@ export const categories: CategoryMeta[] = [
       { slug: "laminate-calculator", title: "Kostenloser Laminat-Rechner — Pakete & m² (2026)", description: "Laminat-Rechner — kostenloser Dielen- & Paketrechner mit Trittschalldämmung. Raumgröße und Dielenmaße eingeben für sofortige Materialliste.", category: "Bodenbelag", categorySlug: "flooring" },
     ],
   },
+  {
+    slug: "stairs",
+    title: "Treppen-Rechner",
+    description:
+      "Treppenmaße, Wangenlängen, Steigung/Auftritt, Wendeltreppen und Podeste berechnen. Kostenlose Treppen-Rechner nach DIN 18065.",
+    calculators: [
+      {
+        slug: "stair-calculator",
+        title: "Kostenloser Treppen-Rechner — Stufen, Steigung & Wange (2026)",
+        description:
+          "Kostenloser Treppen-Rechner — Geschosshöhe eingeben für sofortige Stufenzahl, Steigung, Auftritt & Wangenlänge. Nach DIN 18065.",
+        category: "Treppen",
+        categorySlug: "stairs",
+      },
+      {
+        slug: "stair-stringer-calculator",
+        title: "Kostenloser Treppenwangen-Rechner — Länge & Anzahl (2026)",
+        description:
+          "Kostenloser Treppenwangen-Rechner — Wangenlänge, Anzahl & Aufteilung für jede Treppenbreite. Für Bretter 50x250 & 50x300 mm.",
+        category: "Treppen",
+        categorySlug: "stairs",
+      },
+      {
+        slug: "rise-over-run-calculator",
+        title: "Kostenloser Steigung/Auftritt-Rechner — Neigung & Winkel (2026)",
+        description:
+          "Steigung/Auftritt-Rechner — kostenloses Neigungstool. Verhältnis, Prozent, Winkel & Beschreibung sofort. Für Treppen, Rampen & Dächer.",
+        category: "Treppen",
+        categorySlug: "stairs",
+      },
+      {
+        slug: "spiral-staircase-calculator",
+        title: "Kostenloser Wendeltreppe-Rechner — Stufen & Maße (2026)",
+        description:
+          "Kostenloser Wendeltreppe-Rechner — Durchmesser & Geschosshöhe eingeben für Stufenzahl, Steigung & Drehung. Normkonform nach DIN.",
+        category: "Treppen",
+        categorySlug: "stairs",
+      },
+      {
+        slug: "stair-landing-calculator",
+        title: "Kostenloser Podest-Rechner — Läufe & Maße (2026)",
+        description:
+          "Kostenloser Treppen-Podest-Rechner — Treppenläufe mit Zwischenpodest aufteilen. Stufen pro Lauf, Podesthöhe & Gesamtlauflänge.",
+        category: "Treppen",
+        categorySlug: "stairs",
+      },
+    ],
+  },
 ];
 
 export function getCategoryBySlug(slug: string) {

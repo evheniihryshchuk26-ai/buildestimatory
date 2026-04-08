@@ -83,6 +83,12 @@ const guides: GuidesTranslations = {
           "Fence costs $15-$50 per linear foot installed. Complete price guide covering wood, vinyl, chain link, and composite fences with DIY vs pro costs, labor rates, and saving tips.",
         href: "/guides/fence-cost-guide",
       },
+      {
+        title: "Complete Stair Building Guide: Code, Calculations & Materials",
+        description:
+          "How to build stairs — complete guide covering stair anatomy, IRC building code (R311.7), rise & run calculations, stair types (straight, L-shaped, U-shaped, spiral), materials, and costs.",
+        href: "/guides/stair-building-guide",
+      },
     ],
   },
 
@@ -1839,6 +1845,149 @@ const guides: GuidesTranslations = {
         question: "Which fence adds the most value to a home?",
         answer:
           "A well-maintained wood privacy fence (cedar or treated pine) typically recoups 50 to 70% of its cost in added home value. Vinyl fencing returns 50 to 65% because of its clean appearance and zero maintenance. Chain link adds minimal value and can actually reduce curb appeal. The biggest value add comes from fencing a backyard that was previously unfenced — it dramatically expands usable living space for families with children and pets.",
+      },
+    ],
+  },
+  stairBuildingGuide: {
+    title: "Complete Stair Building Guide: Code, Calculations & Materials (2026)",
+    metaDescription:
+      "How to build stairs — complete guide covering stair anatomy, IRC building code requirements (R311.7), how to calculate rise & run, stair types, materials, and costs. Free stair calculator links included.",
+
+    heroTitle: "Complete Stair Building Guide",
+    heroSubtitle: "Code, Calculations & Materials",
+    heroDescription:
+      "Everything you need to know about building stairs — from measuring rise and run to meeting IRC building code. Covers stair anatomy, calculation methods, common stair types, material options, and cost breakdowns for residential construction.",
+
+    quickAnswerHeading: "Quick Answer",
+    quickAnswerText:
+      "To build code-compliant residential stairs, you need a maximum riser height of 7-3/4 inches, a minimum tread depth of 10 inches, a minimum width of 36 inches, and at least 6 feet 8 inches of headroom. Divide total rise by 7.5 inches to get the number of steps, then calculate stringer length using the Pythagorean theorem. Use 2x12 lumber for cut stringers and 5/4 tread stock for stepping surfaces.",
+
+    anatomyHeading: "Stair Anatomy: Understanding Every Component",
+    anatomyIntro:
+      "Before building stairs, you need to understand the key components and terminology. Every staircase — whether a simple deck stair or a complex interior flight — uses the same fundamental parts.",
+    anatomyItems: [
+      "Rise (Riser Height): The vertical distance between the top of one tread and the top of the next. IRC maximum is 7-3/4 inches. All risers in a flight must be within 3/8 inch of each other.",
+      "Run (Tread Depth): The horizontal distance from the front edge (nosing) of one tread to the front edge of the next. IRC minimum is 10 inches. This is the flat surface where you place your foot.",
+      "Stringer: The diagonal structural member that supports the treads and risers. Cut from 2x12 lumber for notched (open) stringers, or 2x10 or larger for closed (housed) stringers. Typically spaced 16 inches on center.",
+      "Tread: The horizontal board you step on. Standard residential treads are 5/4x12 lumber (actual 1 inch x 11-1/4 inches) or two 2x6 boards. Treads include a 3/4 to 1-1/4 inch nosing overhang beyond the riser face.",
+      "Riser: The vertical board between treads. Made from 1x8 lumber for closed-riser stairs. Open-riser stairs (no riser boards) are allowed by code if the opening does not permit a 4-inch sphere to pass through.",
+      "Nosing: The front edge of the tread that overhangs the riser below. IRC requires 3/4 to 1-1/4 inches of nosing projection. Nosing provides additional foot room and creates a visual shadow line.",
+      "Handrail: Required on at least one side of stairs with 4 or more risers. Must be 34 to 38 inches above the stair nosing, graspable with a cross section of 1-1/4 to 2 inches diameter.",
+      "Baluster (Spindle): Vertical members between the handrail and treads or bottom rail. Spacing must not allow a 4-inch sphere to pass between them (approximately 4 inches on center).",
+    ],
+    anatomySummary:
+      "Understanding these components is essential for accurate calculations and code compliance. Each part has specific size and spacing requirements governed by the IRC Section R311.7.",
+
+    buildingCodeHeading: "IRC Building Code Requirements for Stairs (R311.7)",
+    buildingCodeIntro:
+      "The International Residential Code (IRC) Section R311.7 establishes minimum safety standards for residential stairways. Local jurisdictions may adopt stricter requirements, so always check with your building department.",
+    buildingCodeItems: [
+      "Maximum Riser Height: 7-3/4 inches (196 mm). This is the most commonly cited stair dimension. All risers in a flight must be within 3/8 inch of the tallest riser.",
+      "Minimum Tread Depth: 10 inches (254 mm). Measured horizontally from nosing to nosing. Deeper treads (11 inches) are more comfortable but increase the total horizontal run.",
+      "Minimum Width: 36 inches clear, measured between finished walls or from the wall to the handrail. Handrail projections up to 4.5 inches on each side are permitted.",
+      "Minimum Headroom: 6 feet 8 inches (2032 mm) measured vertically from the sloped plane of the tread nosings to the ceiling above. This is measured at every point along the stairway.",
+      "Handrails: Required on at least one side of stairways with 4 or more risers. Height between 34 and 38 inches measured from the tread nosing. Must be continuous for the full length of the flight.",
+      "Landings: Required at the top and bottom of every stairway. Must be at least as wide as the stair and at least 36 inches deep in the direction of travel.",
+      "Guards (Guardrails): Required when the stair is more than 30 inches above grade. Minimum 36 inches high (42 inches in some jurisdictions). Balusters must not allow a 4-inch sphere to pass.",
+      "Lighting: Stairways must have illumination at the top, bottom, and any landings. Stairs with 6 or more risers require 3-way switches at each end.",
+    ],
+    buildingCodeSummary:
+      "These are minimum IRC requirements — many local codes are stricter. For example, some jurisdictions require handrails on both sides, wider treads, or landings when the flight exceeds 12 feet of rise. Always pull a permit and schedule an inspection for permanent staircase construction.",
+
+    howToCalculateHeading: "How to Calculate Stairs Step by Step",
+    howToCalculateIntro:
+      "Calculating stairs involves determining the number of steps, the exact rise and run per step, and the stringer length. Follow these steps for an accurate stair layout.",
+    howToCalculateItems: [
+      "Step 1 — Measure Total Rise: Measure the vertical distance from the finished lower floor to the finished upper floor. Include the thickness of any flooring material (hardwood, carpet, tile) on both levels. This is your total rise in inches.",
+      "Step 2 — Calculate Number of Risers: Divide the total rise by the ideal riser height (7 to 7.5 inches). Round to the nearest whole number. Example: 108 inches / 7.5 = 14.4, round to 14 risers.",
+      "Step 3 — Calculate Actual Rise Per Step: Divide the total rise by the number of risers. Example: 108 / 14 = 7.714 inches per riser. Verify this is at or below the 7.75-inch maximum.",
+      "Step 4 — Determine Tread Run: Choose a tread run of at least 10 inches. The rise-plus-run rule says one rise plus one run should equal 17 to 18 inches. With a 7.71-inch rise, a 10.25-inch run gives 17.96 — ideal comfort.",
+      "Step 5 — Calculate Number of Treads: Number of treads = number of risers minus 1. With 14 risers, you have 13 treads. The upper floor acts as the final step.",
+      "Step 6 — Calculate Total Run: Total run = number of treads x tread run. Example: 13 x 10.25 = 133.25 inches (about 11 feet 1 inch). This is the horizontal floor space needed.",
+      "Step 7 — Calculate Stringer Length: Use the Pythagorean theorem: stringer = square root of (total rise squared + total run squared). Example: sqrt(108² + 133.25²) = sqrt(11664 + 17755.56) = sqrt(29419.56) = 171.5 inches (about 14 feet 4 inches).",
+      "Step 8 — Verify Headroom: At every point along the stair, measure 6 feet 8 inches vertically from the tread nosing to the ceiling. Adjust the stairwell opening size if headroom is insufficient.",
+    ],
+    howToCalculateSummary:
+      "Use our free Stair Calculator to perform all these calculations instantly. Enter your total rise and desired tread run to get step count, riser height, and stringer length in seconds.",
+
+    stairTypesHeading: "Common Stair Types",
+    stairTypesIntro:
+      "The type of staircase you build depends on available space, budget, building code, and aesthetic preferences. Here are the four most common residential stair configurations.",
+    stairTypesItems: [
+      "Straight Stairs: The simplest and most common design. One continuous flight from bottom to top with no turns. Requires the most horizontal floor space (typically 10 to 14 feet of run for a standard floor height). Easiest to build and most cost-effective. Best for basements, exterior decks, and simple floor plans.",
+      "L-Shaped Stairs: A straight flight with a 90-degree turn at an intermediate landing. Reduces the overall linear footprint by turning a corner. The landing provides a rest point and can be positioned at any height in the flight. Common in two-story homes where the stair fits against two perpendicular walls.",
+      "U-Shaped Stairs: Two parallel flights connected by a 180-degree landing. Takes up less floor length than a straight stair but more width. Common in multi-story homes and commercial buildings. The wide landing at the turn provides a generous rest area. Also called switchback or half-turn stairs.",
+      "Spiral Stairs: A compact design that winds around a central column. Fits in a circular well opening as small as 44 inches diameter, though 60 inches is recommended. Subject to stricter code requirements (IRC R311.7.10.1): maximum 9.5-inch rise, minimum 26-inch clear width, and 6-foot-6-inch headroom. Best for secondary access to lofts, basements, or attics.",
+    ],
+    stairTypesSummary:
+      "Choose straight stairs when you have the floor space — they are the easiest to build and most comfortable to climb. Use L-shaped or U-shaped designs when space is limited, and reserve spiral stairs for secondary access or design statements.",
+
+    materialsHeading: "Stair Material Options & Costs",
+    materialsIntro:
+      "The material you choose for your staircase affects cost, durability, appearance, and maintenance. Here is a comparison of the five most common stair materials for residential construction.",
+    materialsColMaterial: "Material",
+    materialsColCost: "Cost per Step",
+    materialsColBestFor: "Best For",
+    materialsRows: [
+      { material: "Pressure-Treated Pine", cost: "$8 – $15", bestFor: "Exterior stairs, decks, budget projects" },
+      { material: "Douglas Fir / SPF", cost: "$10 – $20", bestFor: "Interior framing, carpeted stairs, painted stairs" },
+      { material: "Red Oak Hardwood", cost: "$25 – $50", bestFor: "Interior finished stairs, stained or clear-coated" },
+      { material: "Composite / PVC", cost: "$30 – $60", bestFor: "Exterior stairs, low-maintenance decks" },
+      { material: "Concrete (Precast/Poured)", cost: "$40 – $100", bestFor: "Exterior entries, basements, commercial" },
+    ],
+
+    costBreakdownHeading: "Stair Construction Cost Breakdown",
+    costBreakdownIntro:
+      "Stair costs vary widely based on design complexity, materials, and whether you hire a contractor or build DIY.",
+    costBreakdownText1:
+      "A basic exterior deck staircase (4 to 6 steps) costs $200 to $600 in materials using pressure-treated lumber. A standard interior straight staircase (12 to 15 steps) costs $1,500 to $3,500 in materials for framing lumber, treads, and basic handrail. Premium hardwood treads add $300 to $800. Professional installation adds $1,000 to $3,000 in labor.",
+    costBreakdownText2:
+      "L-shaped and U-shaped stairs with landings cost 20 to 40% more than straight stairs due to the additional framing and landing platform. Spiral staircases range from $1,500 for a basic steel kit to $20,000+ for custom wood or iron designs. Curved staircases are the most expensive at $10,000 to $50,000 due to the complex engineering and custom-bent stringers.",
+    costBreakdownText3:
+      "DIY stair construction saves 40 to 60% over contractor pricing. A homeowner with intermediate carpentry skills can build a straight exterior or interior staircase in 1 to 2 weekends. L-shaped and U-shaped stairs are moderately challenging DIY projects. Spiral and curved stairs should be left to professionals or purchased as pre-fabricated kits.",
+
+    calculatorCtaHeading: "Calculate Your Stair Project",
+    calculatorCtaText:
+      "Use our free stair calculators to get instant, code-compliant dimensions for your project. No signup required.",
+    calculatorLinks: [
+      { label: "Stair Calculator", href: "/calculators/stairs/stair-calculator/", description: "Step count, riser height, tread depth & stringer length" },
+      { label: "Stair Stringer Calculator", href: "/calculators/stairs/stair-stringer-calculator/", description: "Stringer length, count & layout for any width" },
+      { label: "Rise Over Run Calculator", href: "/calculators/stairs/rise-over-run-calculator/", description: "Slope ratio, percentage & angle for stairs, ramps & roofs" },
+      { label: "Spiral Staircase Calculator", href: "/calculators/stairs/spiral-staircase-calculator/", description: "Tread count, rise per step & rotation for spiral designs" },
+      { label: "Stair Landing Calculator", href: "/calculators/stairs/stair-landing-calculator/", description: "Split flights with landing for L-shaped & U-shaped stairs" },
+    ],
+
+    faqHeading: "Frequently Asked Questions",
+    faqs: [
+      {
+        question: "How do I build stairs for a deck?",
+        answer:
+          "Measure the deck height from the ground to the deck surface (total rise). Divide by 7.5 inches to get the number of risers. Cut stringers from 2x12 pressure-treated lumber using a framing square with stair gauges set to your rise and run dimensions. Attach stringers to the deck rim joist with metal stringer connectors. Install 5/4x6 composite or treated tread boards (two per step for an 11-inch depth). Add a gravel pad at the base for drainage. Use our Stair Calculator for precise dimensions.",
+      },
+      {
+        question: "What does the stair building code require?",
+        answer:
+          "IRC R311.7 requires: maximum 7-3/4 inch riser height, minimum 10-inch tread depth, minimum 36-inch stair width, minimum 6 foot 8 inch headroom, handrails on one side (34-38 inches high) for 4+ risers, and landings at top and bottom at least 36 inches deep. The maximum riser variation in any flight is 3/8 inch. Guards (36 inches minimum) are required when stairs are more than 30 inches above grade. Check local amendments — many jurisdictions add requirements.",
+      },
+      {
+        question: "How do you use a stair calculator?",
+        answer:
+          "Enter the total rise (vertical height from finished floor to finished floor) and the desired tread run (10 inches minimum). The calculator divides the total rise by the ideal riser height to determine the number of steps, then calculates the actual rise per step, total horizontal run, and stringer length. Our free stair calculator at BuildEstimatory handles all the math and verifies IRC code compliance automatically.",
+      },
+      {
+        question: "How many steps do I need for 8-foot ceilings?",
+        answer:
+          "An 8-foot ceiling (96 inches) plus typical floor framing (about 12 inches for joists and subfloor) gives a total rise of approximately 108 inches. Dividing 108 by 7.5 inches per riser gives 14.4, which rounds to 14 risers (actual rise of 7.71 inches each) and 13 treads. The total horizontal run would be 13 treads x 10 inches = 130 inches (about 10 feet 10 inches).",
+      },
+      {
+        question: "What is the cheapest way to build stairs?",
+        answer:
+          "The cheapest approach is a straight staircase using pressure-treated lumber: 2x12 stringers ($20-$35 each, need 3), 5/4x6 tread boards ($5-$8 each, 2 per step), and 1x8 riser boards ($4-$7 each) if needed. For a 14-step exterior staircase, materials cost $200 to $500 total. Skip the riser boards for an open-riser design to save 15-20%. Use pre-cut stair stringers from home improvement stores ($25-$50 each) to save time if your rise matches a standard height.",
+      },
+      {
+        question: "Do I need a permit to build stairs?",
+        answer:
+          "Yes, most jurisdictions require a building permit for permanent staircase construction, including exterior deck stairs exceeding 30 inches above grade. The permit ensures your stairs meet IRC R311.7 requirements and will be inspected for safety. Permit costs range from $50 to $300. Temporary stairs, short stoops (1-2 steps), and interior cosmetic modifications (replacing treads without structural changes) typically do not require permits, but check with your local building department.",
       },
     ],
   },

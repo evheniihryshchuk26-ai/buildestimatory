@@ -146,6 +146,19 @@ export const categories: CategoryMeta[] = [
       { slug: "laminate-calculator", title: "Free Laminate Calculator — Planks, Boxes & Cost (2026)", description: "Laminate flooring calculator — free plank & box estimator with underlayment. Enter room size and plank dimensions for instant material list.", category: "Flooring", categorySlug: "flooring" },
     ],
   },
+  {
+    slug: "stairs",
+    title: "Stair Calculators",
+    description:
+      "Calculate stair dimensions, stringer lengths, rise over run, spiral staircases, and landings. Free stair calculators compliant with NBC and provincial building codes.",
+    calculators: [
+      { slug: "stair-calculator", title: "Free Stair Calculator — Steps, Rise, Run & Stringer (2026)", description: "Free stair calculator — enter total rise for instant step count, riser height, tread depth & stringer length. Meets NBC building code.", category: "Stairs", categorySlug: "stairs" },
+      { slug: "stair-stringer-calculator", title: "Free Stair Stringer Calculator — Length, Count & Layout (2026)", description: "Free stair stringer calculator — get stringer length, count & layout for any staircase width. Covers 2×10 & 2×12 stringers.", category: "Stairs", categorySlug: "stairs" },
+      { slug: "rise-over-run-calculator", title: "Free Rise Over Run Calculator — Slope, Angle & Ratio (2026)", description: "Rise over run calculator — free slope tool. Get ratio, percentage, angle & description instantly. Works for stairs, ramps & roofs.", category: "Stairs", categorySlug: "stairs" },
+      { slug: "spiral-staircase-calculator", title: "Free Spiral Staircase Calculator — Treads & Dimensions (2026)", description: "Free spiral staircase calculator — enter diameter & floor height for tread count, rise per step & rotation. Meets building code.", category: "Stairs", categorySlug: "stairs" },
+      { slug: "stair-landing-calculator", title: "Free Stair Landing Calculator — Flights & Dimensions (2026)", description: "Free stair landing calculator — split flights with intermediate landing. Get steps per flight, landing height & total run.", category: "Stairs", categorySlug: "stairs" },
+    ],
+  },
 ];
 
 export function getCategoryBySlug(slug: string) {

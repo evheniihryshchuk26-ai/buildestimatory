@@ -77,6 +77,12 @@ const guides: GuidesTranslations = {
           "Los pisos cuestan $2-$15 por pie\u00b2 instalados. Gu\u00eda completa para madera, laminado, baldosas, alfombra y vinilo con estimaciones por habitaci\u00f3n y consejos de ahorro.",
         href: "/guides/flooring-cost-guide",
       },
+      {
+        title: "Guía Completa de Construcción de Escaleras: Normas, Cálculos y Materiales",
+        description:
+          "Cómo construir escaleras — guía completa sobre anatomía de escaleras, normas de construcción, cálculos de huella y peralte, tipos de escaleras (rectas, en L, en U, de caracol), materiales y costos.",
+        href: "/guides/stair-building-guide",
+      },
     ],
   },
 
@@ -1762,6 +1768,149 @@ const guides: GuidesTranslations = {
       { question: "\u00bfCu\u00e1nto dura una cerca de madera?", answer: "Madera tratada: 15\u201320 a\u00f1os. Cedro: 15\u201325 a\u00f1os. Los postes fallan primero." },
       { question: "\u00bfNecesito permiso?", answer: "En la mayor\u00eda de los municipios se requiere permiso para cercas altas. Consulta con tu ayuntamiento." },
       { question: "\u00bfQu\u00e9 cerca agrega m\u00e1s valor?", answer: "Una cerca de madera bien mantenida recupera 50\u201370% de su costo en valor de la propiedad." },
+    ],
+  },
+  stairBuildingGuide: {
+    title: "Gu\u00eda Completa de Construcci\u00f3n de Escaleras: Normas, C\u00e1lculos y Materiales (2026)",
+    metaDescription:
+      "C\u00f3mo construir escaleras \u2014 gu\u00eda completa sobre anatom\u00eda de escaleras, normas de construcci\u00f3n residencial, c\u00e1lculos de huella y peralte, tipos de escaleras, materiales y costos. Incluye calculadoras gratis.",
+
+    heroTitle: "Gu\u00eda Completa de Construcci\u00f3n de Escaleras",
+    heroSubtitle: "Normas, C\u00e1lculos y Materiales",
+    heroDescription:
+      "Todo lo que necesitas saber sobre construcci\u00f3n de escaleras \u2014 desde medir huella y peralte hasta cumplir la norma de construcci\u00f3n. Cubre anatom\u00eda, m\u00e9todos de c\u00e1lculo, tipos comunes, opciones de materiales y desglose de costos para construcci\u00f3n residencial.",
+
+    quickAnswerHeading: "Respuesta R\u00e1pida",
+    quickAnswerText:
+      "Para construir escaleras que cumplan la norma residencial, necesitas un peralte m\u00e1ximo de 180\u2013200 mm, una huella m\u00ednima de 250 mm, un ancho m\u00ednimo de 900 mm y al menos 2,050 mm de altura libre. Divide la altura total entre 180 mm para obtener el n\u00famero de pelda\u00f1os, luego calcula el largo del larguero con el teorema de Pit\u00e1goras. Usa tablas de 5x30 cm para largueros dentados y tablas de 3x30 cm para huellas.",
+
+    anatomyHeading: "Anatom\u00eda de la Escalera: Cada Componente",
+    anatomyIntro:
+      "Antes de construir escaleras, necesitas entender los componentes clave y la terminolog\u00eda. Toda escalera \u2014 ya sea una simple escalera de deck o un tramo interior complejo \u2014 usa las mismas partes fundamentales.",
+    anatomyItems: [
+      "Peralte (Contrahuella): La distancia vertical entre la parte superior de una huella y la siguiente. El m\u00e1ximo normativo es 180\u2013200 mm. Todos los peraltes en un tramo deben estar dentro de 10 mm entre s\u00ed.",
+      "Huella: La distancia horizontal desde el borde frontal (nariz) de un pelda\u00f1o al siguiente. El m\u00ednimo es 250 mm. Es la superficie plana donde colocas el pie.",
+      "Larguero (Zanca): El elemento diagonal estructural que soporta huellas y contrahuellas. Se corta de tablas de 5x30 cm para largueros dentados (abiertos), o de 5x25 cm o m\u00e1s para largueros cerrados. T\u00edpicamente espaciados a 400 mm entre centros.",
+      "Pelda\u00f1o: La tabla horizontal donde pisas. Las huellas residenciales est\u00e1ndar son de 3x30 cm o dos tablas de 5x15 cm. Las huellas incluyen un voladizo de nariz de 20 a 30 mm m\u00e1s all\u00e1 de la cara de la contrahuella.",
+      "Contrahuella: La tabla vertical entre huellas. Hecha de tabla de 2.5x20 cm para escaleras cerradas. Las escaleras abiertas (sin contrahuella) est\u00e1n permitidas si la abertura no permite el paso de una esfera de 100 mm.",
+      "Nariz (Volado): El borde frontal de la huella que sobresale de la contrahuella inferior. La norma requiere de 20 a 30 mm de proyecci\u00f3n. Proporciona espacio adicional para el pie.",
+      "Pasamanos: Requerido en al menos un lado de escaleras con 4 o m\u00e1s peraltes. Debe estar entre 850 y 950 mm sobre la nariz del pelda\u00f1o, con secci\u00f3n de 32 a 50 mm de di\u00e1metro.",
+      "Balaustre: Elementos verticales entre el pasamanos y las huellas. El espaciado no debe permitir el paso de una esfera de 100 mm.",
+    ],
+    anatomySummary:
+      "Comprender estos componentes es esencial para c\u00e1lculos precisos y cumplimiento normativo. Cada parte tiene requisitos espec\u00edficos de tama\u00f1o y espaciado.",
+
+    buildingCodeHeading: "Requisitos Normativos para Escaleras Residenciales",
+    buildingCodeIntro:
+      "Las normas de construcci\u00f3n en Latinoam\u00e9rica (NTC en Colombia, RCDF en M\u00e9xico, NCh en Chile, RNE en Per\u00fa) establecen est\u00e1ndares m\u00ednimos de seguridad para escaleras residenciales. Las jurisdicciones locales pueden adoptar requisitos m\u00e1s estrictos.",
+    buildingCodeItems: [
+      "Peralte M\u00e1ximo: 180\u2013200 mm seg\u00fan la norma local. Todos los peraltes en un tramo deben estar dentro de 10 mm del m\u00e1s alto.",
+      "Huella M\u00ednima: 250\u2013280 mm medida horizontalmente de nariz a nariz. Huellas m\u00e1s profundas (280 mm) son m\u00e1s c\u00f3modas pero aumentan el recorrido.",
+      "Ancho M\u00ednimo: 900 mm libre, medido entre muros terminados o del muro al pasamanos.",
+      "Altura Libre M\u00ednima: 2,050 mm medida verticalmente desde el plano inclinado de las narices hasta el techo.",
+      "Pasamanos: Requerido en al menos un lado para 4+ peraltes. Altura entre 850 y 950 mm desde la nariz. Continuo en toda la longitud del tramo.",
+      "Descansos: Requeridos arriba y abajo. Al menos tan anchos como la escalera y 900 mm de profundidad.",
+      "Guardas: Requeridas cuando la escalera est\u00e1 a m\u00e1s de 750 mm sobre el terreno. M\u00ednimo 900 mm de altura. Balaustres no deben permitir paso de esfera de 100 mm.",
+      "Iluminaci\u00f3n: Escaleras deben tener iluminaci\u00f3n arriba, abajo y en descansos. Con 6+ peraltes, interruptores de tres v\u00edas en cada extremo.",
+    ],
+    buildingCodeSummary:
+      "Estos son requisitos m\u00ednimos \u2014 muchas normas locales son m\u00e1s estrictas. Siempre tramita un permiso y programa una inspecci\u00f3n para construcci\u00f3n permanente de escaleras.",
+
+    howToCalculateHeading: "C\u00f3mo Calcular Escaleras Paso a Paso",
+    howToCalculateIntro:
+      "Calcular escaleras implica determinar el n\u00famero de pelda\u00f1os, la huella y peralte exactos, y el largo del larguero. Sigue estos pasos para un trazado preciso.",
+    howToCalculateItems: [
+      "Paso 1 \u2014 Mide la Altura Total: Mide la distancia vertical desde el piso terminado inferior hasta el superior. Incluye el espesor del acabado de piso en ambos niveles.",
+      "Paso 2 \u2014 Calcula el N\u00famero de Peraltes: Divide la altura total entre 175\u2013190 mm. Redondea al entero m\u00e1s cercano. Ejemplo: 2,700 mm / 180 = 15 peraltes.",
+      "Paso 3 \u2014 Calcula el Peralte Real: Altura total / n\u00famero de peraltes. Ejemplo: 2,700 / 15 = 180 mm. Verifica que est\u00e9 en o por debajo de 200 mm.",
+      "Paso 4 \u2014 Determina la Huella: Al menos 250 mm. Regla de confort: huella + 2 \u00d7 peralte = 600\u2013640 mm. Con 180 mm de peralte, huella de 270 mm da 630.",
+      "Paso 5 \u2014 N\u00famero de Huellas: Peraltes menos 1. Con 15 peraltes, tienes 14 huellas.",
+      "Paso 6 \u2014 Recorrido Total: Huellas \u00d7 profundidad de huella. 14 \u00d7 270 = 3,780 mm.",
+      "Paso 7 \u2014 Largo del Larguero: Ra\u00edz cuadrada de (altura\u00b2 + recorrido\u00b2). Ra\u00edz(2,700\u00b2 + 3,780\u00b2) = 4,645 mm.",
+      "Paso 8 \u2014 Verifica Altura Libre: En cada punto, mide 2,050 mm desde la nariz del pelda\u00f1o al techo.",
+    ],
+    howToCalculateSummary:
+      "Usa nuestra Calculadora de Escaleras gratuita para realizar todos estos c\u00e1lculos al instante. Ingresa tu altura total y huella deseada para obtener resultados en segundos.",
+
+    stairTypesHeading: "Tipos Comunes de Escaleras",
+    stairTypesIntro:
+      "El tipo de escalera depende del espacio disponible, presupuesto, norma de construcci\u00f3n y preferencias est\u00e9ticas. Estos son los cuatro tipos residenciales m\u00e1s comunes.",
+    stairTypesItems: [
+      "Escalera Recta: El dise\u00f1o m\u00e1s simple y com\u00fan. Un tramo continuo sin giros. Requiere 3 a 4.5 m de recorrido. La m\u00e1s f\u00e1cil de construir. Ideal para s\u00f3tanos, terrazas y plantas simples.",
+      "Escalera en L: Un tramo recto con giro de 90\u00b0 en un descanso intermedio. Reduce la extensi\u00f3n lineal. Com\u00fan en viviendas de dos pisos.",
+      "Escalera en U: Dos tramos paralelos con descanso de 180\u00b0. Menos largo pero m\u00e1s ancho. Com\u00fan en edificios residenciales y comerciales.",
+      "Escalera de Caracol: Dise\u00f1o compacto que gira alrededor de una columna central. Cabe en abertura de 1,100 mm m\u00ednimo. Requisitos m\u00e1s estrictos. Ideal para acceso secundario.",
+    ],
+    stairTypesSummary:
+      "Elige escaleras rectas cuando tengas espacio \u2014 son las m\u00e1s f\u00e1ciles y c\u00f3modas. Usa dise\u00f1os en L o en U cuando el espacio sea limitado, y reserva las de caracol para acceso secundario.",
+
+    materialsHeading: "Opciones de Materiales y Costos",
+    materialsIntro:
+      "El material que elijas afecta el costo, durabilidad, apariencia y mantenimiento. Aqu\u00ed una comparaci\u00f3n de los cinco materiales m\u00e1s comunes.",
+    materialsColMaterial: "Material",
+    materialsColCost: "Costo por Pelda\u00f1o",
+    materialsColBestFor: "Ideal Para",
+    materialsRows: [
+      { material: "Pino Tratado a Presi\u00f3n", cost: "$150 \u2013 $300 MXN", bestFor: "Escaleras exteriores, decks, proyectos econ\u00f3micos" },
+      { material: "Abeto Douglas / Pino", cost: "$200 \u2013 $400 MXN", bestFor: "Estructura interior, escaleras alfombradas o pintadas" },
+      { material: "Encino / Roble", cost: "$500 \u2013 $1,000 MXN", bestFor: "Escaleras interiores terminadas, entintadas o barnizadas" },
+      { material: "Composite / PVC", cost: "$600 \u2013 $1,200 MXN", bestFor: "Escaleras exteriores, decks de bajo mantenimiento" },
+      { material: "Concreto (Prefabricado/Colado)", cost: "$800 \u2013 $2,000 MXN", bestFor: "Entradas exteriores, s\u00f3tanos, comercial" },
+    ],
+
+    costBreakdownHeading: "Desglose de Costos de Construcci\u00f3n",
+    costBreakdownIntro:
+      "Los costos var\u00edan seg\u00fan complejidad del dise\u00f1o, materiales y si contratas un profesional o construyes t\u00fa mismo.",
+    costBreakdownText1:
+      "Una escalera exterior b\u00e1sica (4\u20136 pelda\u00f1os) cuesta $3,000\u2013$10,000 MXN en materiales. Una interior recta (12\u201315 pelda\u00f1os) cuesta $15,000\u2013$50,000 MXN. Huellas premium agregan $5,000\u2013$15,000 MXN. Instalaci\u00f3n profesional agrega $10,000\u2013$30,000 MXN.",
+    costBreakdownText2:
+      "Escaleras en L y en U cuestan 20\u201340% m\u00e1s. Escaleras de caracol van de $25,000 MXN (kit b\u00e1sico) hasta $300,000+ MXN (dise\u00f1o personalizado). Las curvas son las m\u00e1s costosas: $150,000\u2013$800,000 MXN.",
+    costBreakdownText3:
+      "La autoconstrucci\u00f3n ahorra 40\u201360%. Un propietario con habilidades intermedias puede construir una escalera recta en 1\u20132 fines de semana. Las de caracol y curvas deben dejarse a profesionales.",
+
+    calculatorCtaHeading: "Calcula Tu Proyecto de Escaleras",
+    calculatorCtaText:
+      "Usa nuestras calculadoras gratis para obtener dimensiones normativas al instante. Sin registro.",
+    calculatorLinks: [
+      { label: "Calculadora de Escaleras", href: "/calculators/stairs/stair-calculator/", description: "Pelda\u00f1os, peralte, huella y largo de larguero" },
+      { label: "Calculadora de Largueros", href: "/calculators/stairs/stair-stringer-calculator/", description: "Largo, cantidad y distribuci\u00f3n de largueros" },
+      { label: "Calculadora Huella/Peralte", href: "/calculators/stairs/rise-over-run-calculator/", description: "Relaci\u00f3n de pendiente, porcentaje y \u00e1ngulo" },
+      { label: "Escalera de Caracol", href: "/calculators/stairs/spiral-staircase-calculator/", description: "Pelda\u00f1os, peralte y rotaci\u00f3n para dise\u00f1os en espiral" },
+      { label: "Escalera con Descanso", href: "/calculators/stairs/stair-landing-calculator/", description: "Tramos divididos con descanso para escaleras en L y en U" },
+    ],
+
+    faqHeading: "Preguntas Frecuentes",
+    faqs: [
+      {
+        question: "\u00bfC\u00f3mo construyo escaleras para un deck?",
+        answer:
+          "Mide la altura del deck desde el suelo hasta la superficie (altura total). Divide entre 180 mm para peraltes. Corta largueros de tablas de 5x30 cm tratadas. Fija los largueros a la viga frontal con conectores met\u00e1licos. Instala tablas de huella. Coloca base de grava abajo para drenaje. Usa nuestra Calculadora de Escaleras para dimensiones precisas.",
+      },
+      {
+        question: "\u00bfQu\u00e9 exige la norma para escaleras?",
+        answer:
+          "Las normas requieren: peralte m\u00e1ximo 180\u2013200 mm, huella m\u00ednima 250\u2013280 mm, ancho m\u00ednimo 900 mm, altura libre 2,050 mm, pasamanos en un lado (850\u2013950 mm) para 4+ peraltes, descansos arriba y abajo de 900 mm. Variaci\u00f3n m\u00e1xima de peralte: 10 mm. Guardas cuando la escalera supera 750 mm sobre terreno.",
+      },
+      {
+        question: "\u00bfC\u00f3mo se usa una calculadora de escaleras?",
+        answer:
+          "Ingresa la altura total entre pisos y la huella deseada (250 mm m\u00ednimo). La calculadora determina pelda\u00f1os, peralte real, recorrido total y largo de larguero. Nuestra calculadora gratis verifica cumplimiento normativo autom\u00e1ticamente.",
+      },
+      {
+        question: "\u00bfCu\u00e1ntos pelda\u00f1os para un techo de 2.70 m?",
+        answer:
+          "Un techo de 2.70 m m\u00e1s estructura de piso (300 mm) da 3,000 mm total. Dividiendo entre 180 mm = 16.7, redondeado a 17 peraltes (176 mm cada uno) y 16 huellas. Recorrido: 16 \u00d7 270 mm = 4,320 mm.",
+      },
+      {
+        question: "\u00bfCu\u00e1l es la forma m\u00e1s econ\u00f3mica?",
+        answer:
+          "Escalera recta de madera tratada: largueros de 5x30 cm ($400\u2013$700 MXN c/u, 3 necesarios), huellas de 3x15 cm ($100\u2013$150 MXN c/u), contrahuellas de 2.5x20 cm ($80\u2013$140 MXN c/u). 14 pelda\u00f1os: $5,000\u2013$12,000 MXN total. Omite contrahuellas y ahorra 15\u201320%.",
+      },
+      {
+        question: "\u00bfNecesito permiso para construir escaleras?",
+        answer:
+          "S\u00ed, la mayor\u00eda de los municipios lo requieren para escaleras permanentes. El permiso cuesta $500\u2013$5,000 MXN. Escaleras temporales y escalones cortos (1\u20132 pelda\u00f1os) t\u00edpicamente no lo requieren.",
+      },
     ],
   },
 };

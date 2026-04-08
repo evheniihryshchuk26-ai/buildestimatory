@@ -589,6 +589,54 @@ export const categories: CategoryMeta[] = [
       { slug: "laminate-calculator", title: "Calculadora de Laminado Gratis — Cajas y m² (2026)", description: "Calculadora de piso laminado — estimador gratis de tablones y cajas con subsuelo. Ingresa dimensiones del cuarto para lista de materiales instantánea.", category: "Pisos", categorySlug: "flooring" },
     ],
   },
+  {
+    slug: "stairs",
+    title: "Calculadoras de Escaleras",
+    description:
+      "Calcula dimensiones de escaleras, largo de largueros, relación huella-peralte, escaleras de caracol y descansos. Calculadoras gratis que cumplen con normas de construcción residencial.",
+    calculators: [
+      {
+        slug: "stair-calculator",
+        title: "Calculadora de Escaleras Gratis — Peldaños, Huella y Peralte (2026)",
+        description:
+          "Calculadora de escaleras gratis — ingresa la altura total para obtener cantidad de peldaños, peralte, huella y largo de larguero al instante. Cumple normas de construcción.",
+        category: "Escaleras",
+        categorySlug: "stairs",
+      },
+      {
+        slug: "stair-stringer-calculator",
+        title: "Calculadora de Largueros Gratis — Largo, Cantidad y Diseño (2026)",
+        description:
+          "Calculadora de largueros de escalera gratis — obtén largo, cantidad y distribución para cualquier ancho de escalera. Para tablas de 5x25 y 5x30 cm.",
+        category: "Escaleras",
+        categorySlug: "stairs",
+      },
+      {
+        slug: "rise-over-run-calculator",
+        title: "Calculadora Huella/Peralte Gratis — Pendiente, Ángulo y Relación (2026)",
+        description:
+          "Calculadora de huella y peralte gratis — obtén relación, porcentaje, ángulo y descripción al instante. Para escaleras, rampas y techos.",
+        category: "Escaleras",
+        categorySlug: "stairs",
+      },
+      {
+        slug: "spiral-staircase-calculator",
+        title: "Escalera de Caracol Gratis — Peldaños y Dimensiones (2026)",
+        description:
+          "Calculadora de escalera de caracol gratis — ingresa diámetro y altura entre pisos para obtener cantidad de peldaños, peralte y rotación. Cumple normas.",
+        category: "Escaleras",
+        categorySlug: "stairs",
+      },
+      {
+        slug: "stair-landing-calculator",
+        title: "Escalera con Descanso Gratis — Tramos y Dimensiones (2026)",
+        description:
+          "Calculadora de escalera con descanso gratis — divide tramos con descanso intermedio. Obtén peldaños por tramo, altura del descanso y recorrido total.",
+        category: "Escaleras",
+        categorySlug: "stairs",
+      },
+    ],
+  },
 ];
 
 export function getCategoryBySlug(slug: string) {

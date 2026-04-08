@@ -97,6 +97,13 @@ import {
   calculateTile,
   calculateLaminate,
 } from "./calculations/flooringCalculations";
+import {
+  calculateStairs,
+  calculateStairStringer,
+  calculateRiseOverRun,
+  calculateSpiralStaircase,
+  calculateStairWithLanding,
+} from "./calculations/stairCalculations";
 
 export interface NextStep {
   label: string;
@@ -4096,6 +4103,292 @@ const picketFenceCalculator: CalculatorConfig = {
   ],
 };
 
+// ─── STAIRS ──────────────────────────────────────────────────────────────────
+
+const stairCalculator: CalculatorConfig = {
+  fields: [
+    { id: "totalRise", label: "Total Rise (Floor to Floor)", unit: "in", placeholder: "108" },
+    { id: "desiredRun", label: "Desired Run per Step", unit: "in", defaultValue: 10, placeholder: "10" },
+    { id: "stairWidth", label: "Stair Width", unit: "in", defaultValue: 36, placeholder: "36" },
+  ],
+  calculate: (v) => {
+    const r = calculateStairs(v.totalRise as number, v.desiredRun as number, v.stairWidth as number);
+    return [
+      { label: `${r.risers} risers (steps up)` },
+      { label: `${r.treads} treads (stepping surfaces)` },
+      { label: `${r.actualRiseInches}" actual rise per step` },
+      { label: `${r.actualRunInches}" actual run per step` },
+      { label: `${r.totalRunInches}" total horizontal run (${(r.totalRunInches / 12).toFixed(1)} ft)` },
+      { label: `${r.stringerLengthInches}" stringer length (${(r.stringerLengthInches / 12).toFixed(1)} ft)` },
+    ];
+  },
+  disclaimer:
+    "This calculator provides estimates based on IRC residential building code guidelines. Always verify with your local building department before construction. Maximum riser height is 7.75 inches and minimum tread depth is 10 inches per IRC R311.7.",
+  howToUse: [
+    "Measure the total rise from finished floor to finished floor in inches.",
+    "Enter your desired tread run (10 inches is the IRC minimum).",
+    "Enter the stair width (36 inches minimum for residential per IRC).",
+    "Click Calculate for step count, riser height, tread depth, and stringer length.",
+  ],
+  materialInfo:
+    "Stair construction involves several key components: stringers, treads, risers, and handrails. Stringers are the diagonal structural members that support the stairs, typically cut from 2x12 lumber for straight runs. The IRC (International Residential Code) Section R311.7 governs residential stair design with specific requirements: maximum riser height of 7-3/4 inches, minimum tread depth of 10 inches, and minimum width of 36 inches. The rise-plus-run rule states that the sum of one riser and one tread should equal 17 to 18 inches for comfortable climbing. Treads are commonly built from 5/4x12 lumber (actual 1\" x 11-1/4\") or two pieces of 2x6 with a 1\" nosing overhang. Risers use 1x8 boards. For exterior stairs, pressure-treated lumber or composite decking materials resist rot and weathering. Interior stairs often use hardwood treads (oak, maple, poplar) for durability and appearance. A standard interior staircase costs $1,500 to $5,000 in materials for a straight run, with premium hardwood treads adding $300 to $800. Always verify headroom clearance of at least 6 feet 8 inches measured vertically from the stair nosing.",
+  nextSteps: [
+    { label: "Stair Stringer Calculator", href: "/calculators/stairs/stair-stringer-calculator/" },
+    { label: "Rise Over Run Calculator", href: "/calculators/stairs/rise-over-run-calculator/" },
+    { label: "Stair Landing Calculator", href: "/calculators/stairs/stair-landing-calculator/" },
+    { label: "Deck Stair Calculator", href: "/calculators/outdoor/deck-stair-calculator/" },
+  ],
+  installationTips: [
+    "Always use a framing square with stair gauges clamped at the rise and run dimensions for consistent cuts.",
+    "Drop the bottom riser by the thickness of one tread to keep all visible rises equal.",
+    "Attach stringers to the header joist with metal stringer connectors (Simpson LSC or equivalent).",
+    "Pre-drill all screw holes in treads and risers to prevent splitting.",
+    "Install a temporary rail during construction for safety while working on the stairs.",
+  ],
+  commonMistakes: [
+    "Not accounting for finished floor thickness at the top and bottom — this changes the first and last riser height.",
+    "Inconsistent riser heights — IRC allows a maximum 3/8\" variance between any two risers. Uneven rises are a tripping hazard.",
+    "Using 2x10 stringers instead of 2x12 — after the notch cuts, 2x10 does not leave enough structural material.",
+    "Forgetting headroom clearance — measure 6'8\" vertically from each tread nosing to the ceiling above.",
+    "Not checking local code amendments — some jurisdictions have stricter requirements than IRC.",
+  ],
+  faqs: [
+    { question: "How do I calculate the number of stairs I need?", answer: "Measure the total rise (vertical distance from finished floor to finished floor) in inches and divide by the ideal riser height of 7 to 7.75 inches. Round to the nearest whole number. For example, a 108-inch total rise divided by 7.5 inches gives 14.4, which rounds to 14 risers and 13 treads (one fewer tread than risers because the top floor serves as the final step)." },
+    { question: "What is the building code for residential stairs?", answer: "The IRC R311.7 requires: maximum riser height of 7-3/4 inches, minimum tread depth of 10 inches, minimum stair width of 36 inches, minimum headroom of 6 feet 8 inches, and handrails between 34 and 38 inches high. The greatest riser height within any flight cannot exceed the smallest by more than 3/8 inch. Landings must be at least as wide as the stairway." },
+    { question: "What is the ideal stair angle?", answer: "The ideal stair angle is between 30 and 37 degrees, which corresponds to a riser height of about 7 to 7.5 inches with a 10 to 11 inch tread run. This range provides the most comfortable and safe climbing experience. Stairs steeper than 42 degrees become difficult for most people, while slopes below 20 degrees are better suited as ramps." },
+    { question: "How long of a stringer do I need?", answer: "Stringer length is calculated using the Pythagorean theorem: the square root of (total rise squared plus total run squared). For example, with a 108-inch total rise and 130-inch total run, the stringer length is the square root of (108² + 130²) = approximately 169 inches, or about 14 feet. Always buy lumber at least 12 inches longer than the calculated length for trimming." },
+    { question: "How much does it cost to build stairs?", answer: "A standard interior staircase costs $1,500 to $5,000 in materials for a straight run. Exterior stairs using pressure-treated lumber cost $500 to $2,000. Professional installation adds $1,000 to $3,000 for labor. Premium hardwood treads (oak, maple) add $300 to $800 to the material cost. Spiral staircases and curved designs cost $3,000 to $10,000 or more." },
+    { question: "How many stringers do I need for stairs?", answer: "IRC code requires stringers spaced no more than 24 inches on center, but 16 inches on center is recommended for residential stairs wider than 36 inches. For a standard 36-inch-wide staircase, use 3 stringers (one on each side and one in the center). For 48-inch-wide stairs, use 4 stringers. The outside stringers can be closed (uncut) for a finished look." },
+  ],
+};
+
+const stairStringerCalculator: CalculatorConfig = {
+  fields: [
+    { id: "totalRise", label: "Total Rise", unit: "in", placeholder: "108" },
+    { id: "runPerStep", label: "Run per Step", unit: "in", defaultValue: 10, placeholder: "10" },
+    { id: "numberOfSteps", label: "Number of Steps", unit: "", placeholder: "14" },
+    { id: "stairWidth", label: "Stair Width", unit: "in", defaultValue: 36, placeholder: "36" },
+  ],
+  calculate: (v) => {
+    const r = calculateStairStringer(
+      v.totalRise as number,
+      v.runPerStep as number,
+      v.numberOfSteps as number,
+      v.stairWidth as number
+    );
+    return [
+      { label: `${r.stringerLengthInches}" stringer length (${(r.stringerLengthInches / 12).toFixed(1)} ft)` },
+      { label: `${r.stringerCount} stringers needed` },
+      { label: `${r.treadBoards} tread boards (2 per step using 5.5" boards)` },
+      { label: `${r.riserBoards} riser boards (1x8)` },
+    ];
+  },
+  disclaimer:
+    "Stringer calculations assume standard notch-cut stringers from 2x12 lumber. Always verify that the remaining wood after notching is at least 3.5 inches for structural integrity. Consult your local building code for stringer spacing requirements.",
+  howToUse: [
+    "Enter the total rise (vertical height) of the staircase in inches.",
+    "Enter the run per step (horizontal tread depth) — 10 inches minimum per IRC.",
+    "Enter the total number of steps (use the Stair Calculator to determine this).",
+    "Enter the stair width to calculate the number of stringers needed.",
+  ],
+  materialInfo:
+    "Stair stringers are the backbone of any staircase, carrying the weight of the treads, risers, and everyone using the stairs. Standard stringers are cut from 2x12 dimensional lumber, which provides enough material for the notch cuts while maintaining the required 3.5 inches of uncut wood below each notch for structural strength. For exterior applications, use pressure-treated #1 or better 2x12 Southern Yellow Pine or Douglas Fir. For interior stairs, kiln-dried SPF (Spruce-Pine-Fir) or Douglas Fir 2x12 is standard. Never use 2x10 lumber for cut stringers — after notching, there is not enough structural material remaining. Closed (uncut) stringers use a housed design with routed dadoes and can be made from 2x10 or engineered lumber. Metal stringer brackets (Simpson LS) eliminate the need for notch-cutting and can be stronger than traditional cut stringers. Pre-made steel stair stringers are also available for deck and exterior applications at $40 to $80 per stringer. A standard 2x12x16 board for stringers costs $20 to $45 depending on species and grade. Budget $100 to $250 per staircase for stringer lumber alone.",
+  nextSteps: [
+    { label: "Stair Calculator", href: "/calculators/stairs/stair-calculator/" },
+    { label: "Rise Over Run Calculator", href: "/calculators/stairs/rise-over-run-calculator/" },
+    { label: "Lumber Cost Calculator", href: "/calculators/hardware/lumber-cost-calculator/" },
+    { label: "Deck Stair Calculator", href: "/calculators/outdoor/deck-stair-calculator/" },
+  ],
+  installationTips: [
+    "Use a framing square with stair gauges clamped to the rise and run dimensions for repeatable cuts.",
+    "Make all cuts with a circular saw and finish corners with a handsaw — do not overcut with the circular saw.",
+    "Test-fit the first stringer before cutting the rest — verify it sits flush against the header and floor.",
+    "Use metal stringer hangers (Simpson LSC) at the top connection for a secure, code-compliant attachment.",
+    "Sand all cut edges on exterior stringers and apply end-cut preservative to prevent moisture wicking.",
+  ],
+  commonMistakes: [
+    "Overcutting stringer notches with a circular saw — this weakens the stringer at the corners. Finish with a handsaw.",
+    "Using 2x10 instead of 2x12 — after notching, the remaining wood depth will be less than the required 3.5 inches.",
+    "Not dropping the bottom riser by one tread thickness — the first step will be taller than the rest.",
+    "Spacing stringers too far apart — maximum 24 inches on center, 16 inches recommended for wider stairs.",
+  ],
+  faqs: [
+    { question: "What size lumber do I use for stair stringers?", answer: "Use 2x12 lumber for cut (notched) stringers. After cutting the rise and run notches, you need at least 3.5 inches of uncut wood remaining below each notch for structural strength. A 2x12 (actual 11.25 inches wide) provides enough material, while a 2x10 (actual 9.25 inches) typically does not. Use #1 grade or better for stringers — avoid #2 or utility grade." },
+    { question: "How many stringers do I need for 36-inch wide stairs?", answer: "For 36-inch wide stairs, use 3 stringers: one on each outside edge and one centered. This provides stringer spacing of 18 inches on center, which is within the recommended 16 to 24 inch maximum spacing. For stairs wider than 36 inches, add additional intermediate stringers to maintain 16 inches on center." },
+    { question: "How do you cut stair stringers?", answer: "Mark the rise and run on a 2x12 using a framing square with stair gauges. Start at one end and step the square along the board, marking each rise and run. Cut along the marks with a circular saw, stopping at the inside corner. Finish each corner cut with a handsaw to avoid overcutting. Drop the bottom riser by subtracting one tread thickness from the first riser mark." },
+    { question: "Can I use a 2x10 for stair stringers?", answer: "No, 2x10 lumber is not recommended for cut (notched) stringers. With a typical 7.5-inch rise notch cut from a 2x10 (actual width 9.25 inches), only 1.75 inches of wood remains — far less than the 3.5-inch minimum required for structural integrity. Only use 2x10 for closed (uncut) stringers where the treads attach with metal brackets or routed dadoes." },
+    { question: "How far apart should stair stringers be spaced?", answer: "Stair stringers should be spaced a maximum of 24 inches on center per most building codes, but 16 inches on center is recommended for residential stairs. Closer spacing reduces bounce and flex in the treads, especially with 5/4 tread stock. For heavy-traffic commercial stairs, 12-inch spacing is common." },
+    { question: "How much do stair stringers cost?", answer: "A standard 2x12x16 stringer board costs $20 to $45 depending on species and grade. Pressure-treated stringers for outdoor stairs cost $25 to $55 per board. Pre-made steel stringers cost $40 to $80 each. For a typical 3-stringer staircase, budget $60 to $165 for the stringer lumber alone, plus $50 to $150 for tread and riser boards." },
+  ],
+};
+
+const riseOverRunCalculator: CalculatorConfig = {
+  fields: [
+    { id: "rise", label: "Rise (Vertical)", unit: "in", placeholder: "7.5" },
+    { id: "run", label: "Run (Horizontal)", unit: "in", placeholder: "10" },
+  ],
+  calculate: (v) => {
+    const r = calculateRiseOverRun(v.rise as number, v.run as number);
+    return [
+      { label: `Slope ratio: ${r.ratio}` },
+      { label: `Slope percentage: ${r.percentage}%` },
+      { label: `Angle: ${r.angle} degrees` },
+      { label: r.description },
+    ];
+  },
+  disclaimer:
+    "Rise over run calculations work for stairs, ramps, roofs, and any sloped surface. For stairs, the IRC requires a maximum 7.75-inch rise and minimum 10-inch run. For ADA ramps, the maximum slope is 1:12 (8.33%).",
+  howToUse: [
+    "Enter the rise (vertical height) in inches.",
+    "Enter the run (horizontal distance) in inches.",
+    "Click Calculate for slope ratio, percentage, angle, and a description of the slope type.",
+    "Works for stairs, ramps, roofs, driveways, and any inclined surface.",
+  ],
+  materialInfo:
+    "Rise over run is the fundamental measurement for calculating the slope or pitch of any inclined surface. For stairs, the rise is the vertical height of each step and the run is the horizontal depth of each tread. The IRC specifies a maximum riser height of 7-3/4 inches and a minimum tread run of 10 inches, which produces a slope of approximately 37.75 degrees — near the upper limit of comfortable stair climbing. The classic comfort rule states that one rise plus one run should equal 17 to 18 inches (for example, 7.5-inch rise plus 10.5-inch run equals 18 inches). For roof pitch, rise over run is expressed as a ratio per 12 inches of run (for example, 6:12 means the roof rises 6 inches for every 12 inches of horizontal run). For wheelchair ramps, the ADA requires a maximum slope of 1:12, meaning 1 inch of rise for every 12 inches of run (about 4.76 degrees). Driveways should not exceed a 15% slope (about 8.5 degrees) for safe vehicle access. Understanding rise over run helps you verify code compliance, calculate material lengths, and ensure safety for any sloped construction project.",
+  nextSteps: [
+    { label: "Stair Calculator", href: "/calculators/stairs/stair-calculator/" },
+    { label: "Stair Stringer Calculator", href: "/calculators/stairs/stair-stringer-calculator/" },
+    { label: "Roof Pitch Calculator", href: "/calculators/roofing/roof-pitch-calculator/" },
+    { label: "Roof Slope Calculator", href: "/calculators/roofing/roof-slope-calculator/" },
+  ],
+  installationTips: [
+    "Always check rise and run with a level and tape measure after installation — do not rely solely on calculations.",
+    "For stairs, verify that all risers are within 3/8 inch of each other to meet code and prevent tripping.",
+    "Use a digital angle finder tool to confirm slope angles during construction.",
+    "For ramps, check the slope at multiple points along the run — slight foundation settling can change the angle.",
+  ],
+  commonMistakes: [
+    "Confusing rise over run with run over rise — rise is always the vertical measurement, run is always horizontal.",
+    "Not accounting for finished floor thickness when measuring total rise for stairs.",
+    "Using the wrong units — make sure both rise and run are in the same unit (both inches or both feet).",
+    "Forgetting that roof pitch uses 12 inches as the standard run, not the actual run of the roof.",
+  ],
+  faqs: [
+    { question: "What is rise over run?", answer: "Rise over run is the ratio of vertical height (rise) to horizontal distance (run) of any sloped surface. It expresses how steep a slope is. For stairs, a 7.5-inch rise over a 10-inch run means each step goes up 7.5 inches for every 10 inches forward. The ratio can be expressed as a fraction (7.5/10 = 0.75), a percentage (75%), or an angle (36.87 degrees)." },
+    { question: "How do you calculate rise and run for stairs?", answer: "Measure the total vertical distance (total rise) from finished floor to finished floor. Divide by the ideal riser height (7 to 7.75 inches) to get the number of risers. The actual rise per step equals total rise divided by the number of risers. The run per step is the horizontal tread depth, which must be at least 10 inches per IRC code. Total run equals the number of treads (risers minus one) multiplied by the run per step." },
+    { question: "What is a comfortable rise and run for stairs?", answer: "The most comfortable stair dimensions follow the 17-18 inch rule: one riser plus one tread should equal 17 to 18 inches. A 7-inch rise with an 11-inch run (sum = 18) is widely considered the most comfortable. The IRC allows up to 7.75-inch rise with a minimum 10-inch run. Rises below 7 inches feel shallow, while rises above 8 inches feel uncomfortably steep for most people." },
+    { question: "What is the rise over run for a ramp?", answer: "The ADA requires a maximum slope of 1:12 for wheelchair ramps, meaning 1 inch of rise for every 12 inches of run (8.33% grade, 4.76 degrees). Ramps steeper than 1:12 are not ADA-compliant and may be unsafe for wheelchair users. For short ramps under 6 inches of rise, a slope of 1:8 (12.5%) may be permitted. Commercial parking garages typically use 5% to 6% slopes." },
+    { question: "How do you convert rise over run to degrees?", answer: "Use the arctangent (inverse tangent) function: angle in degrees = arctan(rise / run) x (180 / pi). For example, a 7.5-inch rise over 10-inch run: arctan(7.5/10) = arctan(0.75) = 36.87 degrees. Most scientific calculators have an arctan or tan-inverse button. You can also use our calculator above to get the angle instantly." },
+    { question: "What is the maximum slope for a driveway?", answer: "The maximum recommended driveway slope is 15% (about 8.5 degrees), though some municipalities allow up to 25% for short sections. A 10% slope is considered ideal for residential driveways — steep enough for drainage but manageable in icy conditions. For reference, 15% means the driveway rises 15 feet over a 100-foot horizontal run. Heated driveway systems may be required for slopes exceeding 12% in cold climates." },
+  ],
+};
+
+const spiralStaircaseCalculator: CalculatorConfig = {
+  fields: [
+    { id: "floorToFloor", label: "Floor-to-Floor Height", unit: "in", placeholder: "108" },
+    { id: "wellDiameter", label: "Well Opening Diameter", unit: "in", defaultValue: 60, placeholder: "60" },
+    { id: "rotation", label: "Total Rotation", unit: "degrees", defaultValue: 360, placeholder: "360" },
+  ],
+  calculate: (v) => {
+    const r = calculateSpiralStaircase(
+      v.floorToFloor as number,
+      v.wellDiameter as number,
+      v.rotation as number
+    );
+    return [
+      { label: `${r.treads} treads (pie-shaped steps)` },
+      { label: `${r.risePerTreadInches}" rise per tread` },
+      { label: `${r.treadDepthAtWalkInches}" tread depth at walk line (12" from center)` },
+      { label: `${r.centerColumnHeightInches}" center column height (${(r.centerColumnHeightInches / 12).toFixed(1)} ft)` },
+    ];
+  },
+  disclaimer:
+    "Spiral staircases have specific building code requirements that differ from straight stairs. The IRC R311.7.10.1 requires a minimum clear width of 26 inches, minimum 6 feet 6 inches headroom, and maximum 9.5-inch riser height. Check local codes before construction.",
+  howToUse: [
+    "Measure the floor-to-floor height (vertical distance between finished floors).",
+    "Enter the well opening diameter (the circular floor opening for the staircase).",
+    "Enter the total rotation in degrees (360 for one full turn, 720 for two turns).",
+    "Click Calculate for tread count, rise per step, and tread dimensions.",
+  ],
+  materialInfo:
+    "Spiral staircases are space-efficient alternatives to straight stairs, fitting in a circular well opening as small as 44 inches in diameter (though 60 to 66 inches is more comfortable). The IRC Section R311.7.10.1 sets specific requirements for spiral stairs: minimum clear width of 26 inches measured from the center column to the inner edge of the handrail, maximum riser height of 9-1/2 inches, minimum tread depth of 7-1/2 inches at a point 12 inches from the narrow edge, and all treads must be identical. Headroom clearance must be at least 6 feet 6 inches. Spiral stairs are available in steel, aluminum, wood, and composite materials. Pre-fabricated steel spiral stair kits cost $1,500 to $5,000 for standard sizes (42 to 60 inch diameter). Custom-designed spiral staircases in wood or wrought iron range from $5,000 to $20,000 or more. The center column (newel post) is the primary structural element and must be securely anchored to the floor with lag bolts or a base plate. Most spiral stairs rotate clockwise (ascending), which favors right-handed users gripping the outer handrail. In multi-story applications, the center column extends continuously through both floors for maximum structural integrity.",
+  nextSteps: [
+    { label: "Stair Calculator", href: "/calculators/stairs/stair-calculator/" },
+    { label: "Rise Over Run Calculator", href: "/calculators/stairs/rise-over-run-calculator/" },
+    { label: "Stair Landing Calculator", href: "/calculators/stairs/stair-landing-calculator/" },
+  ],
+  installationTips: [
+    "Verify the floor opening is perfectly circular and level before installing the center column.",
+    "Anchor the center column base plate with at least four 1/2-inch lag bolts into the subfloor and joist.",
+    "Assemble treads from the bottom up, checking level and rotation angle at each step.",
+    "Install the handrail continuously from bottom to top — gaps in spiral stair handrails are a safety hazard.",
+    "Check headroom clearance at every point along the spiral, not just at the entry and exit.",
+  ],
+  commonMistakes: [
+    "Choosing too small a diameter — 44 inches is the minimum but feels very tight. Choose 60 inches or larger for comfortable daily use.",
+    "Not verifying the floor opening is actually circular — an oval or irregular opening creates uneven tread spacing.",
+    "Forgetting to account for the landing platform at the top, which takes the place of one tread in the rotation.",
+    "Ignoring furniture-moving challenges — spiral stairs cannot accommodate large furniture or appliances.",
+  ],
+  faqs: [
+    { question: "What is the minimum diameter for a spiral staircase?", answer: "The IRC requires a minimum clear walking width of 26 inches from the center column to the handrail. With a standard 4-inch center column and handrail clearance, the minimum well opening diameter is approximately 44 inches. However, 60 to 66 inches is strongly recommended for comfortable daily use. Spiral stairs under 52 inches diameter are extremely tight and should only be used for occasional access (like loft or attic stairs)." },
+    { question: "How many treads does a spiral staircase need?", answer: "The number of treads depends on the floor-to-floor height and the maximum riser height (9.5 inches per IRC). For a standard 9-foot ceiling (108 inches floor to floor), you need at least 12 treads (108 / 9 = 12). A 360-degree rotation with 12 treads gives each tread a 30-degree wedge angle. Adding more treads reduces the rise per step and increases comfort." },
+    { question: "Are spiral staircases up to code?", answer: "Yes, spiral staircases are allowed by the IRC for residential use with specific requirements: 26-inch minimum clear width, 9.5-inch maximum riser height, 7.5-inch minimum tread depth at 12 inches from the narrow edge, 6 feet 6 inches minimum headroom, and identical tread dimensions throughout. They cannot serve as the primary staircase in some jurisdictions — check your local building code." },
+    { question: "How much does a spiral staircase cost?", answer: "Pre-fabricated steel spiral stair kits cost $1,500 to $5,000 for 42 to 60 inch diameters. Custom wood spiral staircases run $5,000 to $15,000. High-end custom designs in wrought iron or glass can exceed $20,000. Installation labor adds $500 to $2,000 for kit staircases and $2,000 to $5,000 for custom designs. Budget $3,000 to $8,000 total for a quality installed spiral staircase." },
+    { question: "Can a spiral staircase be the only staircase in a house?", answer: "It depends on your local building code. The IRC allows spiral staircases as the primary stair in single-family homes, but some municipalities restrict them to secondary access only (lofts, basements, attics). Fire codes may also require a minimum 36-inch-wide conventional staircase as the primary egress. Always check with your local building department before planning a spiral staircase as your only stair." },
+    { question: "Which direction should a spiral staircase turn?", answer: "Most spiral staircases rotate clockwise when ascending (turning to the right as you climb). This favors right-handed users who naturally grip the outer handrail with their right hand. However, the direction is primarily a design choice — counterclockwise spirals work equally well. Consider the layout of your upper floor and which direction provides the best entry and exit alignment." },
+  ],
+};
+
+const stairLandingCalculator: CalculatorConfig = {
+  fields: [
+    { id: "totalRise", label: "Total Rise (Floor to Floor)", unit: "in", placeholder: "108" },
+    { id: "landingDepth", label: "Landing Depth", unit: "in", defaultValue: 36, placeholder: "36" },
+    { id: "desiredRun", label: "Desired Run per Step", unit: "in", defaultValue: 10, placeholder: "10" },
+  ],
+  calculate: (v) => {
+    const r = calculateStairWithLanding(
+      v.totalRise as number,
+      v.landingDepth as number,
+      v.desiredRun as number
+    );
+    return [
+      { label: `${r.totalSteps} total steps` },
+      { label: `${r.stepsPerFlight} steps per flight` },
+      { label: `${r.landingHeightInches}" landing height (${(r.landingHeightInches / 12).toFixed(1)} ft from floor)` },
+      { label: `${r.totalRunInches}" total horizontal run (${(r.totalRunInches / 12).toFixed(1)} ft) including landing` },
+    ];
+  },
+  disclaimer:
+    "Stairs with landings must meet all IRC R311.7 requirements for each flight. The landing must be at least as wide as the stairway and at least 36 inches deep measured in the direction of travel. Some jurisdictions require landings for staircases exceeding 12 feet of vertical rise.",
+  howToUse: [
+    "Measure the total rise from finished floor to finished floor in inches.",
+    "Enter the landing depth (minimum 36 inches per IRC, matching stair width).",
+    "Enter the desired tread run per step (10 inches minimum per IRC).",
+    "Click Calculate for total steps, steps per flight, landing height, and total run.",
+  ],
+  materialInfo:
+    "Stair landings are intermediate platforms that break a long staircase into two or more flights. The IRC requires a landing at least as wide as the stairway and at least 36 inches deep in the direction of travel. Landings serve multiple purposes: they provide a rest point on long staircases, allow directional changes (L-shaped and U-shaped stairs), and improve safety by limiting the distance a person could fall. The IRC does not specify a maximum flight height before requiring a landing, but many local codes require a landing when the vertical rise exceeds 12 feet or 147 inches. Landings are framed like small floor sections, using joists, headers, and decking supported by posts or walls. For L-shaped stairs (90-degree turn), the landing is typically a 36x36-inch platform. For U-shaped stairs (180-degree turn), the landing is wider to accommodate the direction reversal — usually 36 inches deep by the combined width of both flights plus the wall between them. Landing framing uses 2x10 or 2x12 joists, supported by a ledger board on one wall and posts or a bearing wall on the open sides. The landing surface matches the tread material: plywood subfloor with carpet or hardwood for interior stairs, or pressure-treated decking for exterior applications. A landing adds $200 to $800 to the staircase material cost, plus $300 to $1,000 in labor for a contractor installation.",
+  nextSteps: [
+    { label: "Stair Calculator", href: "/calculators/stairs/stair-calculator/" },
+    { label: "Stair Stringer Calculator", href: "/calculators/stairs/stair-stringer-calculator/" },
+    { label: "Rise Over Run Calculator", href: "/calculators/stairs/rise-over-run-calculator/" },
+    { label: "Deck Stair Calculator", href: "/calculators/outdoor/deck-stair-calculator/" },
+  ],
+  installationTips: [
+    "Frame the landing as a miniature floor system — use 2x10 or 2x12 joists at 16 inches on center.",
+    "Secure the landing to adjacent walls with a ledger board using lag bolts or structural screws.",
+    "Ensure the landing surface is perfectly level — use a 4-foot level in both directions.",
+    "Match the landing height exactly to the calculated rise of the lower flight to avoid uneven risers.",
+    "For L-shaped or U-shaped stairs, frame the landing before cutting and installing the upper flight stringers.",
+  ],
+  commonMistakes: [
+    "Making the landing too shallow — it must be at least 36 inches deep in the direction of travel (IRC R311.7.6).",
+    "Not treating the landing as a structural element — it needs proper joist framing, not just a sheet of plywood.",
+    "Unequal riser heights at the landing transition — the riser onto and off the landing must match all other risers.",
+    "Forgetting to account for landing thickness when calculating flight heights — the landing platform itself has height.",
+  ],
+  faqs: [
+    { question: "When do you need a landing on stairs?", answer: "The IRC does not mandate a specific maximum flight height before requiring a landing, but many local codes require one when vertical rise exceeds 12 feet (approximately 147 inches or about 19 steps). Landings are always required at the top and bottom of every staircase, and at any point where the stair changes direction. Exterior stairs connecting to a door also require a landing at least 36 inches deep." },
+    { question: "How big does a stair landing need to be?", answer: "Per IRC R311.7.6, a stair landing must be at least as wide as the stairway it serves and at least 36 inches deep measured in the direction of travel. For a standard 36-inch wide staircase, the minimum landing size is 36 x 36 inches. For U-shaped stairs, the landing spans the full width of both flights plus the wall between them." },
+    { question: "What is the difference between L-shaped and U-shaped stairs?", answer: "L-shaped stairs make a 90-degree turn at the landing, requiring a single square landing platform (typically 36x36 inches). U-shaped stairs make a 180-degree turn, with two parallel flights connected by a wider rectangular landing. U-shaped stairs take up more width but less length than straight stairs. Both types are common when there is not enough room for a full straight run." },
+    { question: "How do you calculate stairs with a landing?", answer: "Divide the total rise by the ideal riser height (7 to 7.75 inches) to get the total number of steps. Split the steps equally between two flights. The landing height equals the number of steps in the lower flight multiplied by the actual rise per step. Total horizontal run equals the run of both flights plus the landing depth." },
+    { question: "Does a landing count as a step?", answer: "No, a landing does not count as a step or tread. The landing is a flat platform at the same level as the last tread of the lower flight. The first riser of the upper flight rises from the landing surface. When calculating riser heights, the landing itself has no riser — it is simply a wider tread at the transition between flights." },
+    { question: "How much does adding a landing to stairs cost?", answer: "Adding a landing increases staircase material costs by $200 to $800 for framing lumber, subfloor, and finish materials. Professional labor adds $300 to $1,000 for the landing alone, as it requires structural framing similar to a small floor section. Total additional cost for an L-shaped landing is $500 to $1,800 versus a straight stair, with U-shaped landings costing $800 to $2,500 extra due to the wider platform required." },
+  ],
+};
+
 // ─── REGISTRY MAP ─────────────────────────────────────────────────────────────
 
 export const calculatorRegistry: Record<string, Record<string, CalculatorConfig>> = {
@@ -4183,5 +4476,12 @@ export const calculatorRegistry: Record<string, Record<string, CalculatorConfig>
     "carpet-calculator": carpetCalculator,
     "tile-calculator": tileCalculator,
     "laminate-calculator": laminateCalculator,
+  },
+  stairs: {
+    "stair-calculator": stairCalculator,
+    "stair-stringer-calculator": stairStringerCalculator,
+    "rise-over-run-calculator": riseOverRunCalculator,
+    "spiral-staircase-calculator": spiralStaircaseCalculator,
+    "stair-landing-calculator": stairLandingCalculator,
   },
 };

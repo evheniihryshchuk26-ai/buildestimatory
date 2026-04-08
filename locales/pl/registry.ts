@@ -2255,6 +2255,124 @@ export const pondCalculator: CalculatorSEOContent = {
   ],
 };
 
+
+// ─── STAIRS ──────────────────────────────────────────────────────────────────
+
+const stairCalculatorPL: CalculatorSEOContent = {
+  disclaimer: "Ten kalkulator podaje szacunki oparte na polskich normach budowlanych (PN-EN / Warunki Techniczne). Zawsze skonsultuj się z lokalnym nadzorem budowlanym. Wysokość stopnia maks. 190 mm, głębokość min. 250 mm.",
+  howToUse: [
+    "Zmierz całkowitą wysokość między wykończonymi podłogami w milimetrach.",
+    "Wpisz żądaną głębokość stopnia (minimum 250 mm).",
+    "Wpisz szerokość schodów (minimum 800 mm (1.200 mm klatka schodowa) dla budynków mieszkalnych).",
+    "Kliknij Oblicz, aby uzyskać liczbę stopni, wysokość, głębokość i długość podłużnicy.",
+  ],
+  materialInfo: "Budowa schodów obejmuje kilka kluczowych elementów: podłużnice (policzki), stopnice (biegi), podstopnice (czołówki) i poręcze. Podłużnice to diagonalne elementy nośne, zwykle cięte z desek 50×300 mm dla biegów prostych. PN-EN / Warunki Techniczne (Dz.U. 2019 poz. 1065) reguluje projektowanie schodów mieszkalnych: maksymalna wysokość stopnia 190 mm, minimalna głębokość 250 mm, minimalna szerokość 800 mm (1.200 mm klatka schodowa). Formuła komfortu 2w + s = 600–650 mm zapewnia wygodne wchodzenie. Stopnice wykonuje się zwykle z litego drewna 36–40 mm (dąb, buk, jesion) z noskiem 20–30 mm. Podstopnice z desek 20–25 mm. Do schodów zewnętrznych drewno impregnowane ciśnieniowo (klasa 4) lub WPC. Schody wewnętrzne często używają stopnic z drewna twardego (dąb, buk, jesion). Standardowe schody wewnętrzne kosztują 5.000 – 20.000 zł w materiałach. Premium stopnice z dębu dodają 30–50%. Minimalna wysokość przejścia 2.000 mm. W Polsce drewno kupuje się w metrach i milimetrach. Podłużnice powinny być klasy wytrzymałościowej C24 lub lepszej.",
+  nextSteps: [
+    { label: "Kalkulator Podłużnic", href: "/calculators/stairs/stair-stringer-calculator/" },
+    { label: "Kalkulator Wysokość/Głębokość", href: "/calculators/stairs/rise-over-run-calculator/" },
+    { label: "Schody ze Spocznikiem", href: "/calculators/stairs/stair-landing-calculator/" },
+    { label: "Kalkulator Schodów Tarasowych", href: "/calculators/outdoor/deck-stair-calculator/" },
+  ],
+  installationTips: [
+    "Zawsze używaj kątownika ciesielskiego z ogranicznikami ustawionymi na wymiary wysokości i głębokości.",
+    "Zmniejsz pierwszy podstopień o grubość jednej stopnicy, aby wszystkie widoczne wysokości były równe.",
+    "Przymocuj podłużnice do belki stropowej łącznikami metalowymi (typ Simpson LSC lub równoważny).",
+    "Nawierć wstępnie wszystkie otwory na śruby w stopnicach i podstopnicach, aby zapobiec pękaniu.",
+    "Zamontuj tymczasową poręcz podczas budowy dla bezpieczeństwa.",
+  ],
+  commonMistakes: [
+    "Nieuwzględnienie grubości wykończenia podłogi — zmienia to pierwszą i ostatnią wysokość stopnia.",
+    "Nierówne wysokości stopni — maksymalna różnica 5 mm. Nierówności to zagrożenie potknięciem.",
+    "Używanie desek 50×250 mm zamiast 50×300 mm — niewystarczający materiał nośny po wycięciach.",
+    "Zapomnienie o wysokości przejścia — mierz 2.000 mm pionowo od nosa każdego stopnia do sufitu.",
+    "Niesprawdzenie lokalnych przepisów budowlanych — gmina może mieć dodatkowe wymagania.",
+  ],
+  faqs: [
+    { question: "Jak obliczyć liczbę stopni?", answer: "Zmierz całkowitą wysokość między podłogami w mm i podziel przez idealną wysokość stopnia (175–190 mm). Zaokrąglij. Przykład: 2.700 mm / 180 = 15 wysokości i 14 głębokości. Podłoga piętra służy jako ostatni stopień." },
+    { question: "Co mówią normy o schodach mieszkalnych?", answer: "PN-EN / Warunki Techniczne (Dz.U. 2019 poz. 1065) wymaga: wysokość stopnia max. 190 mm, głębokość min. 250 mm, szerokość min. 800 mm (1.200 mm klatka schodowa), wysokość przejścia 2.000 mm, poręcz 900–1.100 mm. Max. odchylenie między stopniami: 5 mm." },
+    { question: "Jaki jest idealny kąt schodów?", answer: "Idealny kąt to 30°–37°, odpowiadający wysokości 170–190 mm przy głębokości 250–280 mm. Ten zakres zapewnia najbardziej komfortowe i bezpieczne wchodzenie." },
+    { question: "Jak długa musi być podłużnica?", answer: "Długość = pierwiastek z (wysokość² + bieg²). Przykład: 2.700 mm wysokości i 3.780 mm biegu = √(2.700² + 3.780²) ≈ 4.645 mm. Kup deski co najmniej 300 mm dłuższe." },
+    { question: "Ile kosztuje budowa schodów?", answer: "Schody wewnętrzne: 5.000 – 20.000 zł w materiałach. Zewnętrzne: 2.000 – 8.000 zł. Montaż profesjonalny dodaje 50–100%. Premium stopnice z dębu dodają 30–50%." },
+    { question: "Ile podłużnic potrzebuję?", answer: "Rozstaw max. 600 mm w osiach, 400 mm zalecany. Dla schodów 800 mm (1.200 mm klatka schodowa): 2 podłużnice. Powyżej 1.000 mm: 3. Powyżej 1.200 mm: 4." },
+  ],
+};
+
+// Repeat similar pattern for the other 4 stair calculators (stringer, rise-over-run, spiral, landing)
+// But keep them shorter with just disclaimer + howToUse + materialInfo + nextSteps + tips + mistakes + faqs
+
+const stairStringerCalcPL: CalculatorSEOContent = {
+  disclaimer: "Obliczenia podłużnic zakładają standardowe podłużnice z wcięciami z desek 50×300 mm. Zawsze sprawdzaj, czy po wycięciach pozostaje co najmniej 90 mm drewna nośnego.",
+  howToUse: ["Wpisz całkowitą wysokość schodów w mm.", "Wpisz głębokość stopnia (min. 250 mm).", "Wpisz całkowitą liczbę stopni.", "Wpisz szerokość schodów, aby obliczyć liczbę podłużnic.",],
+  materialInfo: "Podłużnice są kręgosłupem każdych schodów. Standardowe podłużnice są cięte z desek 50×300 mm, zachowując minimum 90 mm po wycięciach. Do zastosowań zewnętrznych używaj drewna impregnowanego ciśnieniowo klasy 4 w 50×300 mm. Nigdy nie używaj 50×250 mm do podłużnic z wcięciami. Podłużnice zamknięte z frezowanymi rowkami mogą używać 50×250 mm. Łączniki metalowe eliminują potrzebę wycięć. Prefabrykowane podłużnice stalowe kosztują 100–300 zł za sztukę. Deska 50×300×5.000 mm kosztuje 60–150 zł. Budżet 200–600 zł na schody tylko na drewno podłużnic.",
+  nextSteps: [
+    { label: "Kalkulator Schodów", href: "/calculators/stairs/stair-calculator/" },
+    { label: "Kalkulator Wysokość/Głębokość", href: "/calculators/stairs/rise-over-run-calculator/" },
+    { label: "Kalkulator Kosztów Drewna", href: "/calculators/hardware/lumber-cost-calculator/" },
+  ],
+  installationTips: ["Użyj kątownika ciesielskiego z ogranicznikami.", "Wszystkie cięcia piłą tarczową, narożniki piłą ręczną.", "Przymierz pierwszą podłużnicę przed cięciem reszty.", "Użyj łączników metalowych przy górnym połączeniu.",],
+  commonMistakes: ["Przecięcie wcięć piłą tarczową — dokończ piłą ręczną.", "Używanie 50×250 mm — niewystarczający materiał.", "Nieredukowanie pierwszego podstopnia o grubość stopnicy.", "Zbyt duży rozstaw podłużnic — maks. 600 mm w osiach.",],
+  faqs: [
+    { question: "Jakie drewno na podłużnice?", answer: "Deski 50×300 mm do podłużnic z wcięciami. Po wycięciach musi zostać min. 90 mm. Nigdy nie używaj 50×250 mm do podłużnic z wcięciami." },
+    { question: "Ile podłużnic na 800 mm?", answer: "Dla 800 mm: 2 podłużnice. Powyżej 1.000 mm: 3. Rozstaw max. 600 mm, 400 mm zalecany." },
+    { question: "Jak ciąć podłużnice?", answer: "Nanieś wysokość i głębokość na deskę 50×300 mm kątownikiem. Tnij piłą tarczową, narożniki piłą ręczną. Zmniejsz pierwszy podstopień o grubość stopnicy." },
+    { question: "Czy można użyć 50×250 mm?", answer: "Nie do podłużnic z wcięciami. Przy wycięciu 190 mm zostaje ~45 mm. Używaj 50×250 tylko do podłużnic zamkniętych z łącznikami." },
+    { question: "Rozstaw podłużnic?", answer: "Max. 600 mm w osiach, 400 mm zalecany. Mniejszy rozstaw zmniejsza ugięcie stopnic." },
+    { question: "Ile kosztują podłużnice?", answer: "Deska 50×300×5 m: 60–150 zł. Na schody z 2 podłużnicami: 120–300 zł drewna." },
+  ],
+};
+
+
+const riseOverRunCalcPL: CalculatorSEOContent = {
+  disclaimer: "Obliczenia wysokość/głębokość działają dla schodów, ramp, dachów i każdej pochyłej powierzchni. PN-EN wymaga wysokości max. 190 mm i głębokości min. 250 mm. Dla ramp dostępnych: max 5%.",
+  howToUse: ["Wpisz wysokość (odległość pionową) w mm.", "Wpisz głębokość (odległość poziomą) w mm.", "Kliknij Oblicz, aby uzyskać stosunek, procent, kąt i opis.", "Działa dla schodów, ramp, dachów i każdej pochyłej powierzchni."],
+  materialInfo: "Stosunek wysokość/głębokość jest podstawową miarą nachylenia. Dla schodów, wysokość to pionowa odległość na stopień, głębokość to pozioma. PN-EN określa wysokość max. 190 mm i głębokość min. 250 mm. Formuła 2w + s = 600–650 mm zapewnia komfort. Dla dachów nachylenie wyrażane w stopniach lub procentach. Dla ramp dostępnych max. 5%. Podjazdy nie powinny przekraczać 15%. Zrozumienie tego stosunku pomaga weryfikować zgodność z normami i bezpieczeństwo.",
+  nextSteps: [{ label: "Kalkulator Schodów", href: "/calculators/stairs/stair-calculator/" }, { label: "Kalkulator Nachylenia Dachu", href: "/calculators/roofing/roof-pitch-calculator/" }],
+  installationTips: ["Sprawdź wysokość i głębokość poziomicą po montażu.", "Wszystkie stopnie w zakresie 5 mm.", "Użyj kątomierza cyfrowego.", "Sprawdź nachylenie rampy w kilku punktach."],
+  commonMistakes: ["Mylenie wysokości z głębokością.", "Nieuwzględnienie grubości wykończenia.", "Mieszanie jednostek.", "Zapomnienie o odniesieniu nachylenia dachu."],
+  faqs: [
+    { question: "Co to stosunek wysokość/głębokość?", answer: "Stosunek wysokości pionowej do odległości poziomej. Np. 180 mm na 270 mm = 0,67, 67% lub 33,7°." },
+    { question: "Wygodna wysokość/głębokość?", answer: "2w + s = 600–650 mm. 175 mm wysokości z 280 mm głębokości = 630 mm — idealne." },
+    { question: "Max nachylenie rampy?", answer: "Dostępność: max 5%. Krótkie rampy poniżej 150 mm: 8%." },
+    { question: "Jak przeliczyć na stopnie?", answer: "Kąt = arctan(wysok./głęb.) × 180/π. Np. 180/270 = arctan(0,667) = 33,7°." },
+    { question: "Max nachylenie podjazdu?", answer: "15% zalecane. Niektóre gminy pozwalają do 25% na krótkich odcinkach." },
+    { question: "Nachylenie dla schodów?", answer: "30°–37° idealne. Wysokość 170–190 mm z głębokością 250–280 mm." },
+  ],
+};
+
+const spiralStaircaseCalcPL: CalculatorSEOContent = {
+  disclaimer: "Schody kręcone mają specyficzne wymagania. Szerokość min. 700 mm, wysokość przejścia 2.000 mm, wysokość stopnia max. 190 mm. Sprawdź z nadzorem budowlanym.",
+  howToUse: ["Zmierz wysokość między kondygnacjami.", "Wpisz średnicę otworu.", "Wpisz całkowity obrót w stopniach.", "Kliknij Oblicz dla liczby stopni i wymiarów."],
+  materialInfo: "Schody kręcone mieszczą się w otworach od 1.200 mm (1.500 mm zalecane). Normy: szerokość min. 700 mm, wysokość max. 190 mm, głębokość min. 150 mm na linii chodu, identyczne stopnie. Wysokość przejścia min. 2.000 mm. Zestawy stalowe: 3.000–12.000 zł. Na wymiar drewno/żelazo: 10.000–50.000+ zł. Słup centralny musi być solidnie zakotwiony.",
+  nextSteps: [{ label: "Kalkulator Schodów", href: "/calculators/stairs/stair-calculator/" }],
+  installationTips: ["Sprawdź, czy otwór jest okrągły i wypoziomowany.", "Zakotwij słup śrubami M12.", "Montuj od dołu sprawdzając poziom.", "Wymagana ciągła poręcz."],
+  commonMistakes: ["Za mała średnica — min. 1.500 mm na co dzień.", "Niekołowy otwór.", "Zapomnienie o platformie.", "Trudności z transportem mebli."],
+  faqs: [
+    { question: "Minimalna średnica?", answer: "Szerokość min. 700 mm. Otwór min. ~1.200 mm, 1.500 mm zalecany." },
+    { question: "Ile stopni?", answer: "Zależy od wysokości i max. stopnia (190 mm). Dla 2.700 mm: min. 15 stopni." },
+    { question: "Czy kręcone są zgodne z normami?", answer: "Tak, z określonymi wymaganiami. Mogą nie być akceptowane jako główne schody." },
+    { question: "Koszt?", answer: "Zestaw stalowy: 3.000–12.000 zł. Na wymiar: 10.000–50.000+ zł." },
+    { question: "Czy mogą być jedyne?", answer: "Zależy od nadzoru budowlanego. Sprawdź przed projektowaniem." },
+    { question: "Kierunek obrotu?", answer: "Zwykle zgodnie z zegarem w górę. Decyzja projektowa — rozważ układ piętra." },
+  ],
+};
+
+const stairLandingCalcPL: CalculatorSEOContent = {
+  disclaimer: "Schody ze spocznikiem muszą spełniać wszystkie wymagania dla każdego biegu. Spocznik min. 800 mm głębokości.",
+  howToUse: ["Zmierz całkowitą wysokość między podłogami.", "Wpisz głębokość spocznika (min. 800 mm).", "Wpisz żądaną głębokość stopnia (min. 250 mm).", "Kliknij Oblicz dla stopni na bieg, wysokości spocznika i biegu całkowitego."],
+  materialInfo: "Spoczniki to pośrednie platformy dzielące schody na biegi. Normy wymagają, aby spocznik był co najmniej tak szeroki jak schody i 800 mm głęboki w kierunku ruchu. Spoczniki zapewniają punkt odpoczynku, umożliwiają zmiany kierunku (L i U) i poprawiają bezpieczeństwo. Wiele norm wymaga spocznika gdy wysokość przekracza 3.000 mm. Dla L (90°): spocznik 800×800 mm. Dla U (180°): szerszy. Koszt dodatkowy: 800–2.500 zł materiały, 1.200–3.500 zł robocizna.",
+  nextSteps: [{ label: "Kalkulator Schodów", href: "/calculators/stairs/stair-calculator/" }, { label: "Kalkulator Podłużnic", href: "/calculators/stairs/stair-stringer-calculator/" }],
+  installationTips: ["Zbuduj spocznik jak mini-strop.", "Przymocuj do ścian listwą nośną.", "Musi być idealnie wypoziomowany.", "Zbuduj spocznik przed górnymi podłużnicami."],
+  commonMistakes: ["Spocznik za płytki — min. 800 mm.", "Nietraktowanie jako element nośny.", "Nierówne stopnie na przejściu.", "Zapomnienie grubości spocznika."],
+  faqs: [
+    { question: "Kiedy potrzebny spocznik?", answer: "Zawsze na górze i na dole. Wiele norm wymaga, gdy wysokość przekracza 3.000 mm. Wymagany przy każdej zmianie kierunku." },
+    { question: "Wymiary spocznika?", answer: "Min. szerokość schodów × 800 mm głębokości. Schody U: pełna szerokość obu biegów." },
+    { question: "Schody L vs U?", answer: "L: obrót 90° z kwadratowym spocznikiem. U: obrót 180° z szerszym spocznikiem." },
+    { question: "Jak obliczyć ze spocznikiem?", answer: "Całkowita wysokość / idealna wysokość = stopnie. Podziel równo na biegi. Bieg całkowity = oba biegi + głębokość spocznika." },
+    { question: "Czy spocznik liczy się jako stopień?", answer: "Nie. To płaska platforma na poziomie ostatniego stopnia dolnego biegu." },
+    { question: "Koszt spocznika?", answer: "Materiały: 800–2.500 zł. Robocizna: 1.200–3.500 zł. Dodatkowy koszt L: 2.000–6.000 zł. U: 3.000–9.000 zł." },
+  ],
+};
+
 // ─── REGISTRY MAP ───────────────────────────────────────────────────────────
 
 export const registryPL: Record<string, Record<string, CalculatorSEOContent>> = {
@@ -2332,5 +2450,12 @@ export const registryPL: Record<string, Record<string, CalculatorSEOContent>> = 
     "deck-stair-calculator": deckStairCalculator,
     "post-hole-calculator": postHoleCalculator,
     "pond-calculator": pondCalculator,
+  },
+  stairs: {
+    "stair-calculator": stairCalculatorPL,
+    "stair-stringer-calculator": stairStringerCalcPL,
+    "rise-over-run-calculator": riseOverRunCalcPL,
+    "spiral-staircase-calculator": spiralStaircaseCalcPL,
+    "stair-landing-calculator": stairLandingCalcPL,
   },
 };

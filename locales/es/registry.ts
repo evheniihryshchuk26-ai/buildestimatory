@@ -3158,6 +3158,207 @@ export const pondCalculator: CalculatorSEOContent = {
   ],
 };
 
+// ─── STAIRS ──────────────────────────────────────────────────────────────────
+
+const stairCalculatorES: CalculatorSEOContent = {
+  disclaimer:
+    "Esta calculadora proporciona estimaciones basadas en normas de construcción residencial. Siempre verifica con tu autoridad local de construcción antes de iniciar la obra. El peralte máximo es 200 mm y la huella mínima es 250 mm según la mayoría de las normas latinoamericanas.",
+  howToUse: [
+    "Mide la altura total entre pisos terminados en milímetros.",
+    "Ingresa la profundidad de huella deseada (250 mm es el mínimo recomendado).",
+    "Ingresa el ancho de la escalera (900 mm mínimo para residencial).",
+    "Haz clic en Calcular para obtener cantidad de peldaños, peralte, huella y largo de larguero.",
+  ],
+  materialInfo:
+    "La construcción de escaleras involucra varios componentes clave: largueros (zancas), huellas (peldaños), contrahuellas (peraltes) y pasamanos. Los largueros son los elementos diagonales estructurales que soportan la escalera, típicamente cortados de tablas de 5x30 cm (2x12) para tramos rectos. Las normas de construcción en Latinoamérica (NTC en Colombia, RCDF en México, NCh en Chile) establecen requisitos específicos: peralte máximo de 180-200 mm, huella mínima de 250-280 mm, y ancho mínimo de 900 mm. La regla de confort establece que la suma de una huella más dos peraltes debe estar entre 600 y 640 mm. Las huellas se construyen comúnmente con tablas de 3x30 cm o tablones de madera maciza con un voladizo de nariz de 20 a 30 mm. Las contrahuellas usan tablas de 2.5x20 cm. Para escaleras exteriores, la madera tratada a presión o la madera composite resisten la humedad y el deterioro. Las escaleras interiores suelen usar huellas de madera dura (roble, encino, cedro) para durabilidad y apariencia. Una escalera interior estándar cuesta entre $15,000 y $50,000 MXN en materiales para un tramo recto, con huellas premium de madera dura agregando $5,000 a $15,000 MXN. Siempre verifica la altura libre mínima de 2,050 mm medida verticalmente desde la nariz del peldaño.",
+  nextSteps: [
+    { label: "Calculadora de Largueros", href: "/calculators/stairs/stair-stringer-calculator/" },
+    { label: "Calculadora Huella/Peralte", href: "/calculators/stairs/rise-over-run-calculator/" },
+    { label: "Calculadora con Descanso", href: "/calculators/stairs/stair-landing-calculator/" },
+    { label: "Calculadora de Escaleras para Deck", href: "/calculators/outdoor/deck-stair-calculator/" },
+  ],
+  installationTips: [
+    "Usa siempre una escuadra de carpintero con topes fijados en las medidas de huella y peralte para cortes consistentes.",
+    "Reduce el primer peralte por el espesor de una huella para que todos los peraltes visibles sean iguales.",
+    "Fija los largueros al cabezal con conectores metálicos (tipo Simpson LSC o equivalente).",
+    "Pre-perfora todos los agujeros de tornillo en huellas y contrahuellas para evitar que se rajen.",
+    "Instala un barandal temporal durante la construcción para seguridad mientras trabajas en la escalera.",
+  ],
+  commonMistakes: [
+    "No considerar el espesor del piso terminado arriba y abajo — esto cambia la altura del primer y último peralte.",
+    "Peraltes inconsistentes — la norma permite una variación máxima de 10 mm entre peraltes. Los desniveles son peligro de tropiezo.",
+    "Usar tablas de 5x25 cm en lugar de 5x30 cm — después de los cortes dentados, no queda suficiente material estructural.",
+    "Olvidar la altura libre — mide 2,050 mm verticalmente desde cada nariz de peldaño hasta el techo arriba.",
+    "No verificar normas locales — muchos municipios tienen requisitos más estrictos que la norma nacional.",
+  ],
+  faqs: [
+    { question: "¿Cómo calculo cuántos escalones necesito?", answer: "Mide la altura total (distancia vertical entre pisos terminados) en milímetros y divide entre la altura ideal de peralte de 175 a 190 mm. Redondea al número entero más cercano. Ejemplo: 2,700 mm / 180 mm = 15 peraltes y 14 huellas (una huella menos que peraltes porque el piso superior actúa como último peldaño)." },
+    { question: "¿Cuál es la norma de construcción para escaleras residenciales?", answer: "Las normas latinoamericanas (NTC, RCDF, NCh) requieren: peralte máximo de 180-200 mm, huella mínima de 250-280 mm, ancho mínimo de 900 mm, altura libre de 2,050 mm mínimo, y pasamanos entre 850 y 950 mm de altura. La variación máxima entre peraltes en un mismo tramo es de 10 mm." },
+    { question: "¿Cuál es el ángulo ideal de una escalera?", answer: "El ángulo ideal es entre 30 y 37 grados, correspondiente a un peralte de 170 a 190 mm con una huella de 250 a 280 mm. Este rango proporciona la experiencia de subida más cómoda y segura. Escaleras más empinadas de 42 grados se vuelven difíciles para la mayoría de las personas." },
+    { question: "¿Cuánto mide un larguero de escalera?", answer: "El largo del larguero se calcula con el teorema de Pitágoras: raíz cuadrada de (altura total al cuadrado + recorrido total al cuadrado). Por ejemplo, con 2,700 mm de altura y 3,500 mm de recorrido, el larguero mide raíz de (2,700² + 3,500²) = aproximadamente 4,420 mm. Siempre compra madera al menos 300 mm más larga para ajustes." },
+    { question: "¿Cuánto cuesta construir una escalera?", answer: "Una escalera interior estándar cuesta entre $15,000 y $50,000 MXN en materiales para un tramo recto. Escaleras exteriores de madera tratada cuestan $8,000 a $25,000 MXN. La instalación profesional agrega $10,000 a $30,000 MXN por mano de obra. Huellas premium de madera dura (encino, cedro) agregan $5,000 a $15,000 MXN al costo de materiales." },
+    { question: "¿Cuántos largueros necesito para una escalera?", answer: "La norma exige largueros espaciados a no más de 600 mm entre centros, pero se recomienda 400 mm para escaleras residenciales de más de 900 mm de ancho. Para una escalera estándar de 900 mm, usa 3 largueros (uno a cada lado y uno al centro). Para escaleras de 1,200 mm, usa 4 largueros." },
+  ],
+};
+
+const stairStringerCalculatorES: CalculatorSEOContent = {
+  disclaimer:
+    "Los cálculos de largueros asumen largueros dentados estándar de tablas de 5x30 cm. Siempre verifica que la madera restante después del corte sea al menos 90 mm para integridad estructural. Consulta tu norma local para requisitos de espaciado de largueros.",
+  howToUse: [
+    "Ingresa la altura total (distancia vertical) de la escalera en milímetros.",
+    "Ingresa la huella por peldaño (profundidad horizontal) — mínimo 250 mm recomendado.",
+    "Ingresa la cantidad total de peldaños (usa la Calculadora de Escaleras para determinar esto).",
+    "Ingresa el ancho de la escalera para calcular cuántos largueros necesitas.",
+  ],
+  materialInfo:
+    "Los largueros (zancas) de escalera son la columna vertebral de cualquier escalera, soportando el peso de las huellas, contrahuellas y todas las personas que las usan. Los largueros estándar se cortan de tablas de 5x30 cm (2x12), que proporcionan suficiente material para los cortes dentados manteniendo los 90 mm mínimos de madera sin cortar debajo de cada muesca para resistencia estructural. Para aplicaciones exteriores, usa madera tratada a presión #1 o mejor de pino o abeto Douglas de 5x30 cm. Para escaleras interiores, la madera seca en horno SPF (abeto-pino) o abeto Douglas de 5x30 cm es estándar. Nunca uses tablas de 5x25 cm para largueros dentados — después del corte, no queda suficiente material estructural. Los largueros cerrados (sin cortar) usan un diseño con ranuras fresadas y pueden hacerse de tablas de 5x25 cm o madera de ingeniería. Los soportes metálicos para largueros (tipo Simpson LS) eliminan la necesidad de cortes dentados y pueden ser más resistentes. Los largueros prefabricados de acero también están disponibles para aplicaciones de deck y exteriores a $800 a $1,600 MXN por pieza. Una tabla de 5x30 cm de 5 m para largueros cuesta $400 a $900 MXN dependiendo de la especie y grado. Presupuesta $2,000 a $5,000 MXN por escalera solo para madera de largueros.",
+  nextSteps: [
+    { label: "Calculadora de Escaleras", href: "/calculators/stairs/stair-calculator/" },
+    { label: "Calculadora Huella/Peralte", href: "/calculators/stairs/rise-over-run-calculator/" },
+    { label: "Calculadora de Costo de Madera", href: "/calculators/hardware/lumber-cost-calculator/" },
+    { label: "Calculadora de Escaleras para Deck", href: "/calculators/outdoor/deck-stair-calculator/" },
+  ],
+  installationTips: [
+    "Usa una escuadra de carpintero con topes fijados en las medidas de huella y peralte para cortes repetibles.",
+    "Haz todos los cortes con sierra circular y termina las esquinas con serrucho — no sobrecortes con la circular.",
+    "Prueba el primer larguero antes de cortar los demás — verifica que asiente perfectamente contra el cabezal y el piso.",
+    "Usa conectores metálicos para largueros (tipo Simpson LSC) en la conexión superior para una fijación segura y normativa.",
+    "Lija todos los bordes cortados en largueros exteriores y aplica preservador de cortes para prevenir absorción de humedad.",
+  ],
+  commonMistakes: [
+    "Sobrecortar las muescas con sierra circular — esto debilita el larguero en las esquinas. Termina con serrucho.",
+    "Usar tablas de 5x25 cm en lugar de 5x30 cm — después del corte, la profundidad restante será menor a los 90 mm requeridos.",
+    "No reducir el primer peralte por el espesor de una huella — el primer escalón quedará más alto que los demás.",
+    "Espaciar los largueros demasiado separados — máximo 600 mm entre centros, 400 mm recomendado para escaleras anchas.",
+  ],
+  faqs: [
+    { question: "¿Qué medida de madera uso para largueros?", answer: "Usa tablas de 5x30 cm (2x12) para largueros dentados (con muescas). Después de cortar las muescas de huella y peralte, necesitas al menos 90 mm de madera sin cortar restante debajo de cada muesca para resistencia estructural. Una tabla de 5x30 cm (28.6 cm real) proporciona suficiente material, mientras que una de 5x25 cm (23.5 cm real) típicamente no." },
+    { question: "¿Cuántos largueros necesito para una escalera de 900 mm?", answer: "Para una escalera de 900 mm de ancho, usa 3 largueros: uno a cada borde exterior y uno centrado. Esto da un espaciado de 450 mm entre centros, dentro del máximo recomendado de 400 a 600 mm. Para escaleras de más de 900 mm, agrega largueros intermedios adicionales para mantener 400 mm entre centros." },
+    { question: "¿Cómo se cortan los largueros?", answer: "Marca la huella y peralte en una tabla de 5x30 cm usando una escuadra de carpintero con topes. Empieza en un extremo y avanza la escuadra a lo largo de la tabla, marcando cada huella y peralte. Corta a lo largo de las marcas con sierra circular, deteniéndote en la esquina interior. Termina cada corte de esquina con serrucho para no sobrecortar." },
+    { question: "¿Puedo usar una tabla de 5x25 cm para largueros?", answer: "No, las tablas de 5x25 cm no se recomiendan para largueros dentados. Con un peralte típico de 190 mm cortado de una tabla de 5x25 cm (23.5 cm real), solo quedan 45 mm de madera — muy por debajo del mínimo de 90 mm requerido para integridad estructural. Solo usa tablas de 5x25 cm para largueros cerrados donde las huellas se fijan con ménsulas metálicas." },
+    { question: "¿A qué distancia deben ir los largueros?", answer: "Los largueros deben espaciarse a un máximo de 600 mm entre centros según la mayoría de las normas, pero se recomienda 400 mm para escaleras residenciales. Un espaciado más cerrado reduce el rebote y flexión en las huellas, especialmente con tablas de huella de 32 mm. Para escaleras comerciales de alto tráfico, 300 mm es común." },
+    { question: "¿Cuánto cuestan los largueros de escalera?", answer: "Una tabla estándar de 5x30 cm de 5 m cuesta entre $400 y $900 MXN según la especie y grado. Los largueros de madera tratada para exteriores cuestan $500 a $1,100 MXN por tabla. Los largueros prefabricados de acero cuestan $800 a $1,600 MXN cada uno. Para una escalera típica de 3 largueros, presupuesta $1,200 a $3,300 MXN solo para madera de largueros." },
+  ],
+};
+
+const riseOverRunCalculatorES: CalculatorSEOContent = {
+  disclaimer:
+    "Los cálculos de huella/peralte funcionan para escaleras, rampas, techos y cualquier superficie inclinada. Para escaleras, la norma requiere un peralte máximo de 200 mm y huella mínima de 250 mm. Para rampas accesibles, la pendiente máxima es 1:12 (8.33%).",
+  howToUse: [
+    "Ingresa el peralte (altura vertical) en milímetros.",
+    "Ingresa la huella (distancia horizontal) en milímetros.",
+    "Haz clic en Calcular para obtener relación de pendiente, porcentaje, ángulo y una descripción del tipo de pendiente.",
+    "Funciona para escaleras, rampas, techos, cocheras y cualquier superficie inclinada.",
+  ],
+  materialInfo:
+    "La relación huella/peralte (rise over run) es la medida fundamental para calcular la pendiente de cualquier superficie inclinada. Para escaleras, el peralte es la altura vertical de cada peldaño y la huella es la profundidad horizontal de cada peldaño. Las normas especifican un peralte máximo de 180-200 mm y una huella mínima de 250-280 mm, lo que produce una pendiente de aproximadamente 35-38 grados — cerca del límite superior de una escalera cómoda. La regla clásica de confort establece que una huella más dos peraltes debe sumar entre 600 y 640 mm (por ejemplo, huella de 280 mm + 2 × peralte de 175 mm = 630 mm). Para pendiente de techos, la relación se expresa como porcentaje o grados (por ejemplo, 25% significa que el techo sube 25 cm por cada 100 cm horizontales). Para rampas de accesibilidad, la norma NMX o equivalente local requiere una pendiente máxima de 1:12, es decir, 1 mm de subida por cada 12 mm de recorrido (aproximadamente 4.76 grados). Las entradas vehiculares no deben exceder una pendiente de 15% (aproximadamente 8.5 grados) para acceso seguro. Comprender la relación huella/peralte te ayuda a verificar cumplimiento normativo, calcular longitudes de material y garantizar seguridad en cualquier proyecto de construcción con pendiente.",
+  nextSteps: [
+    { label: "Calculadora de Escaleras", href: "/calculators/stairs/stair-calculator/" },
+    { label: "Calculadora de Largueros", href: "/calculators/stairs/stair-stringer-calculator/" },
+    { label: "Calculadora de Pendiente de Techo", href: "/calculators/roofing/roof-pitch-calculator/" },
+    { label: "Calculadora de Inclinación de Techo", href: "/calculators/roofing/roof-slope-calculator/" },
+  ],
+  installationTips: [
+    "Siempre verifica huella y peralte con nivel y cinta métrica después de la instalación — no confíes solo en los cálculos.",
+    "Para escaleras, comprueba que todos los peraltes estén dentro de 10 mm entre sí para cumplir norma y prevenir tropiezos.",
+    "Usa un goniómetro digital para confirmar ángulos de pendiente durante la construcción.",
+    "Para rampas, revisa la pendiente en múltiples puntos a lo largo del recorrido — el asentamiento puede cambiar el ángulo.",
+  ],
+  commonMistakes: [
+    "Confundir peralte/huella con huella/peralte — el peralte siempre es la medida vertical, la huella siempre es la horizontal.",
+    "No considerar el espesor del piso terminado al medir la altura total para escaleras.",
+    "Usar unidades diferentes — asegúrate de que peralte y huella estén en la misma unidad (ambos en mm o ambos en cm).",
+    "Olvidar que la pendiente de techo usa 12 pulgadas o 100 cm como referencia estándar de recorrido.",
+  ],
+  faqs: [
+    { question: "¿Qué es la relación huella/peralte?", answer: "Es la relación entre la altura vertical (peralte) y la distancia horizontal (huella) de cualquier superficie inclinada. Expresa qué tan empinada es una pendiente. Para escaleras, un peralte de 180 mm sobre una huella de 280 mm significa que cada peldaño sube 180 mm por cada 280 mm hacia adelante. La relación puede expresarse como fracción (180/280 = 0.64), porcentaje (64%) o ángulo (32.7 grados)." },
+    { question: "¿Cómo se calcula la huella y peralte para escaleras?", answer: "Mide la distancia vertical total entre pisos terminados. Divide entre la altura ideal de peralte (175 a 190 mm) para obtener el número de peraltes. El peralte real por peldaño es la altura total dividida entre el número de peraltes. La huella debe ser al menos 250 mm. El recorrido total es el número de huellas (peraltes menos uno) multiplicado por la huella." },
+    { question: "¿Cuál es la huella y peralte cómodo para escaleras?", answer: "Las dimensiones más cómodas siguen la regla de 600-640 mm: una huella más dos peraltes debe sumar entre 600 y 640 mm. Un peralte de 175 mm con una huella de 280 mm (suma = 630 mm) es ampliamente considerado como el más cómodo. Peraltes menores de 150 mm se sienten superficiales, mientras que mayores de 200 mm se sienten incómodamente empinados." },
+    { question: "¿Cuál es la pendiente de una rampa accesible?", answer: "La norma de accesibilidad requiere una pendiente máxima de 1:12 para rampas, es decir, 1 mm de subida por cada 12 mm de recorrido (8.33% de grado, 4.76 grados). Rampas más empinadas de 1:12 no cumplen la norma. Para rampas cortas con menos de 150 mm de subida, puede permitirse 1:8 (12.5%)." },
+    { question: "¿Cómo se convierte huella/peralte a grados?", answer: "Usa la función arcotangente (tangente inversa): ángulo en grados = arctan(peralte / huella) × (180 / pi). Ejemplo: un peralte de 180 mm sobre una huella de 280 mm: arctan(180/280) = arctan(0.643) = 32.7 grados. La mayoría de las calculadoras científicas tienen un botón arctan o tan inversa." },
+    { question: "¿Cuál es la pendiente máxima para una cochera?", answer: "La pendiente máxima recomendada para una entrada vehicular es 15% (unos 8.5 grados), aunque algunos municipios permiten hasta 25% en tramos cortos. Una pendiente de 10% se considera ideal para cocheras residenciales — suficiente para drenaje pero manejable en condiciones de lluvia. Con pendientes de más de 12%, puede requerirse acabado antideslizante." },
+  ],
+};
+
+const spiralStaircaseCalculatorES: CalculatorSEOContent = {
+  disclaimer:
+    "Las escaleras de caracol tienen requisitos normativos específicos que difieren de las escaleras rectas. La norma requiere un ancho libre mínimo de 650 mm, altura libre de 2,000 mm mínimo y peralte máximo de 240 mm. Verifica las normas locales antes de construir.",
+  howToUse: [
+    "Mide la altura de piso a piso (distancia vertical entre pisos terminados).",
+    "Ingresa el diámetro de la abertura circular (el hueco en el piso para la escalera).",
+    "Ingresa la rotación total en grados (360 para una vuelta completa, 720 para dos vueltas).",
+    "Haz clic en Calcular para obtener cantidad de peldaños, peralte por peldaño y dimensiones.",
+  ],
+  materialInfo:
+    "Las escaleras de caracol son alternativas eficientes en espacio a las escaleras rectas, caben en una abertura circular de tan solo 1,100 mm de diámetro (aunque 1,500 a 1,650 mm es más cómodo). Las normas de construcción establecen requisitos específicos para escaleras de caracol: ancho libre mínimo de 650 mm medido desde la columna central al borde interior del pasamanos, peralte máximo de 240 mm, profundidad mínima de huella de 190 mm a un punto de 300 mm del borde angosto, y todos los peldaños deben ser idénticos. La altura libre debe ser al menos 2,000 mm. Las escaleras de caracol están disponibles en acero, aluminio, madera y materiales compuestos. Los kits prefabricados de escalera de caracol de acero cuestan de $25,000 a $80,000 MXN para tamaños estándar (1,100 a 1,500 mm de diámetro). Las escaleras de caracol personalizadas en madera o hierro forjado van de $80,000 a $300,000 MXN o más. La columna central (poste central) es el elemento estructural principal y debe anclarse firmemente al piso con pernos de anclaje o placa base. La mayoría de las escaleras de caracol giran en sentido horario (subiendo), lo que favorece a los usuarios diestros que sujetan el pasamanos exterior con la mano derecha.",
+  nextSteps: [
+    { label: "Calculadora de Escaleras", href: "/calculators/stairs/stair-calculator/" },
+    { label: "Calculadora Huella/Peralte", href: "/calculators/stairs/rise-over-run-calculator/" },
+    { label: "Calculadora con Descanso", href: "/calculators/stairs/stair-landing-calculator/" },
+  ],
+  installationTips: [
+    "Verifica que la abertura en el piso sea perfectamente circular y nivelada antes de instalar la columna central.",
+    "Ancla la placa base de la columna central con al menos cuatro pernos de anclaje de 12 mm a la estructura del piso.",
+    "Ensambla los peldaños de abajo hacia arriba, verificando nivel y ángulo de rotación en cada paso.",
+    "Instala el pasamanos de manera continua desde abajo hasta arriba — los huecos en pasamanos de escaleras de caracol son un peligro de seguridad.",
+    "Verifica la altura libre en cada punto a lo largo de la espiral, no solo en la entrada y salida.",
+  ],
+  commonMistakes: [
+    "Elegir un diámetro demasiado pequeño — 1,100 mm es el mínimo pero se siente muy estrecho. Elige 1,500 mm o más para uso diario cómodo.",
+    "No verificar que la abertura del piso sea realmente circular — una abertura oval o irregular crea espaciado desigual de peldaños.",
+    "Olvidar considerar la plataforma de llegada arriba, que ocupa el lugar de un peldaño en la rotación.",
+    "Ignorar las dificultades para mover muebles — las escaleras de caracol no pueden acomodar muebles grandes ni electrodomésticos.",
+  ],
+  faqs: [
+    { question: "¿Cuál es el diámetro mínimo para una escalera de caracol?", answer: "La norma requiere un ancho libre mínimo de 650 mm desde la columna central al pasamanos. Con una columna estándar de 100 mm y holgura de pasamanos, el diámetro mínimo de abertura es aproximadamente 1,100 mm. Sin embargo, 1,500 a 1,650 mm es altamente recomendado para uso diario cómodo. Las escaleras de caracol de menos de 1,300 mm son extremadamente estrechas y solo deben usarse para acceso ocasional." },
+    { question: "¿Cuántos peldaños necesita una escalera de caracol?", answer: "El número de peldaños depende de la altura entre pisos y el peralte máximo (240 mm). Para un techo estándar de 2,700 mm (2,700 mm de piso a piso), necesitas al menos 12 peldaños (2,700 / 225 = 12). Una rotación de 360 grados con 12 peldaños da a cada peldaño un ángulo de 30 grados. Agregar más peldaños reduce el peralte y aumenta la comodidad." },
+    { question: "¿Las escaleras de caracol cumplen la norma?", answer: "Sí, las escaleras de caracol están permitidas para uso residencial con requisitos específicos: 650 mm de ancho libre mínimo, 240 mm de peralte máximo, 190 mm de profundidad mínima de huella a 300 mm del borde angosto, 2,000 mm de altura libre mínima, y dimensiones de peldaños idénticas. No pueden servir como escalera principal en algunas jurisdicciones — consulta tu norma local." },
+    { question: "¿Cuánto cuesta una escalera de caracol?", answer: "Los kits prefabricados de acero cuestan de $25,000 a $80,000 MXN para diámetros de 1,100 a 1,500 mm. Las escaleras de caracol personalizadas de madera cuestan de $80,000 a $250,000 MXN. Los diseños de alta gama en hierro forjado o vidrio pueden superar los $300,000 MXN. La instalación agrega de $10,000 a $40,000 MXN para kits y de $30,000 a $80,000 MXN para diseños personalizados." },
+    { question: "¿Puede una escalera de caracol ser la única escalera de una casa?", answer: "Depende de tu norma local. Algunas normas permiten escaleras de caracol como escalera principal en viviendas unifamiliares, pero muchos municipios las restringen a acceso secundario (entrepisos, sótanos, azoteas). Las normas de protección contra incendios pueden exigir una escalera convencional de mínimo 900 mm como salida de emergencia. Siempre consulta con tu autoridad de construcción local." },
+    { question: "¿En qué dirección debe girar una escalera de caracol?", answer: "La mayoría de las escaleras de caracol giran en sentido horario al subir (giro a la derecha). Esto favorece a los usuarios diestros que naturalmente sujetan el pasamanos exterior con su mano derecha. Sin embargo, la dirección es principalmente una decisión de diseño — las espirales en sentido antihorario funcionan igualmente bien. Considera la distribución de tu piso superior y qué dirección ofrece la mejor alineación de entrada y salida." },
+  ],
+};
+
+const stairLandingCalculatorES: CalculatorSEOContent = {
+  disclaimer:
+    "Las escaleras con descanso deben cumplir todos los requisitos normativos para cada tramo. El descanso debe ser al menos tan ancho como la escalera y al menos 900 mm de profundidad en la dirección de circulación. Algunas jurisdicciones exigen descanso cuando el tramo supera 3,700 mm de altura vertical.",
+  howToUse: [
+    "Mide la altura total de piso terminado a piso terminado en milímetros.",
+    "Ingresa la profundidad del descanso (mínimo 900 mm, igual al ancho de la escalera).",
+    "Ingresa la huella deseada por peldaño (250 mm mínimo).",
+    "Haz clic en Calcular para obtener peldaños totales, peldaños por tramo, altura del descanso y recorrido total.",
+  ],
+  materialInfo:
+    "Los descansos de escalera son plataformas intermedias que dividen una escalera larga en dos o más tramos. La norma requiere que el descanso sea al menos tan ancho como la escalera y al menos 900 mm de profundidad en la dirección de circulación. Los descansos sirven múltiples propósitos: proporcionan un punto de descanso en escaleras largas, permiten cambios de dirección (escaleras en L y en U), y mejoran la seguridad al limitar la distancia de una posible caída. Aunque la norma básica no siempre especifica una altura máxima de tramo antes de requerir descanso, muchas normas locales lo exigen cuando la altura vertical supera 3,700 mm o aproximadamente 19 peldaños. Los descansos se estructuran como secciones pequeñas de piso, usando viguetas, cabezales y entarimado soportados por postes o muros. Para escaleras en L (giro de 90°), el descanso es típicamente una plataforma de 900x900 mm. Para escaleras en U (giro de 180°), el descanso es más ancho para acomodar la reversión de dirección. La estructura del descanso usa viguetas de 5x25 cm o 5x30 cm, soportadas por una solera empotrada en un muro y postes o muro de carga en los lados abiertos. La superficie del descanso coincide con el material de la huella: contrapiso de triplay con alfombra o madera dura para interiores, o madera tratada para exteriores. Un descanso agrega de $3,000 a $12,000 MXN al costo de materiales de la escalera, más $5,000 a $15,000 MXN en mano de obra para instalación por contratista.",
+  nextSteps: [
+    { label: "Calculadora de Escaleras", href: "/calculators/stairs/stair-calculator/" },
+    { label: "Calculadora de Largueros", href: "/calculators/stairs/stair-stringer-calculator/" },
+    { label: "Calculadora Huella/Peralte", href: "/calculators/stairs/rise-over-run-calculator/" },
+    { label: "Calculadora de Escaleras para Deck", href: "/calculators/outdoor/deck-stair-calculator/" },
+  ],
+  installationTips: [
+    "Estructura el descanso como un sistema de piso en miniatura — usa viguetas de 5x25 cm o 5x30 cm a 400 mm entre centros.",
+    "Fija el descanso a los muros adyacentes con una solera empotrada usando pernos de anclaje o tornillos estructurales.",
+    "Asegura que la superficie del descanso esté perfectamente nivelada — usa un nivel de 1.2 m en ambas direcciones.",
+    "Haz coincidir la altura del descanso exactamente con el peralte calculado del tramo inferior para evitar peraltes desiguales.",
+    "Para escaleras en L o en U, estructura el descanso antes de cortar e instalar los largueros del tramo superior.",
+  ],
+  commonMistakes: [
+    "Hacer el descanso demasiado poco profundo — debe ser al menos 900 mm de profundidad en la dirección de circulación.",
+    "No tratar el descanso como elemento estructural — necesita estructura propia de viguetas, no solo una lámina de triplay.",
+    "Peraltes desiguales en la transición del descanso — el peralte hacia y desde el descanso debe coincidir con todos los demás peraltes.",
+    "Olvidar considerar el espesor del descanso al calcular alturas de tramo — la propia plataforma del descanso tiene altura.",
+  ],
+  faqs: [
+    { question: "¿Cuándo se necesita un descanso en una escalera?", answer: "La norma básica no siempre especifica una altura máxima de tramo, pero muchas normas locales requieren un descanso cuando la altura vertical supera 3,700 mm (aproximadamente 19 peldaños). Los descansos siempre se requieren arriba y abajo de cada escalera, y en cualquier punto donde la escalera cambie de dirección. Las escaleras exteriores que conectan con una puerta también requieren un descanso de al menos 900 mm de profundidad." },
+    { question: "¿Qué tamaño debe tener un descanso de escalera?", answer: "El descanso debe ser al menos tan ancho como la escalera y al menos 900 mm de profundidad en la dirección de circulación. Para una escalera estándar de 900 mm, el descanso mínimo es de 900 x 900 mm. Para escaleras en U, el descanso abarca el ancho total de ambos tramos más el muro entre ellos." },
+    { question: "¿Cuál es la diferencia entre escalera en L y en U?", answer: "Las escaleras en L hacen un giro de 90° en el descanso, requiriendo una plataforma cuadrada (típicamente 900x900 mm). Las escaleras en U hacen un giro de 180°, con dos tramos paralelos conectados por un descanso rectangular más ancho. Las escaleras en U ocupan más ancho pero menos largo que las rectas. Ambos tipos son comunes cuando no hay espacio para un tramo recto completo." },
+    { question: "¿Cómo se calcula una escalera con descanso?", answer: "Divide la altura total entre la altura ideal de peralte (175 a 190 mm) para obtener el total de peldaños. Divide los peldaños equitativamente entre dos tramos. La altura del descanso es el número de peldaños del tramo inferior multiplicado por el peralte real. El recorrido horizontal total es la suma del recorrido de ambos tramos más la profundidad del descanso." },
+    { question: "¿El descanso cuenta como un peldaño?", answer: "No, el descanso no cuenta como peldaño ni huella. Es una plataforma plana al mismo nivel que la última huella del tramo inferior. El primer peralte del tramo superior sube desde la superficie del descanso. Al calcular alturas de peralte, el descanso en sí no tiene peralte — es simplemente una huella más ancha en la transición entre tramos." },
+    { question: "¿Cuánto cuesta agregar un descanso a una escalera?", answer: "Agregar un descanso incrementa el costo de materiales de la escalera en $3,000 a $12,000 MXN por estructura de madera, contrapiso y acabados. La mano de obra profesional agrega $5,000 a $15,000 MXN solo por el descanso. El costo adicional total para un descanso en L es de $8,000 a $27,000 MXN versus una escalera recta, con descansos en U costando $12,000 a $40,000 MXN extra por la plataforma más amplia." },
+  ],
+};
+
 // ─── REGISTRY MAP ─────────────────────────────────────────────────────────────
 
 export const registryES: Record<string, Record<string, CalculatorSEOContent>> = {
@@ -3235,5 +3436,12 @@ export const registryES: Record<string, Record<string, CalculatorSEOContent>> = 
     "deck-stair-calculator": deckStairCalculatorES,
     "post-hole-calculator": postHoleCalculatorES,
     "pond-calculator": pondCalculator,
+  },
+  stairs: {
+    "stair-calculator": stairCalculatorES,
+    "stair-stringer-calculator": stairStringerCalculatorES,
+    "rise-over-run-calculator": riseOverRunCalculatorES,
+    "spiral-staircase-calculator": spiralStaircaseCalculatorES,
+    "stair-landing-calculator": stairLandingCalculatorES,
   },
 };

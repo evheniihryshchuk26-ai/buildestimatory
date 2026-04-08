@@ -589,6 +589,19 @@ export const categories: CategoryMeta[] = [
       { slug: "laminate-calculator", title: "Calculateur Stratifié Gratuit — Paquets & m² (2026)", description: "Calculateur de stratifié — estimateur gratuit de lames et paquets avec sous-couche. Entrez les dimensions pour une liste de matériaux instantanée.", category: "Revêtement de Sol", categorySlug: "flooring" },
     ],
   },
+  {
+    slug: "stairs",
+    title: "Calculateurs d'Escaliers",
+    description:
+      "Calculez les dimensions d'escalier, longueur de limons, giron/hauteur de marche, escaliers en colima\u00e7on et paliers. Calculateurs gratuits conformes au DTU.",
+    calculators: [
+      { slug: "stair-calculator", title: "Calculateur d'Escalier Gratuit — Marches, Giron & Limon (2026)", description: "Calculateur d'escalier gratuit — entrez la hauteur totale pour obtenir le nombre de marches, hauteur, giron et longueur de limon. Conforme DTU.", category: "Escaliers", categorySlug: "stairs" },
+      { slug: "stair-stringer-calculator", title: "Calculateur de Limons Gratuit — Longueur & Nombre (2026)", description: "Calculateur de limons d'escalier gratuit — longueur, nombre et disposition pour toute largeur d'escalier. Pour planches 50\u00d7250 et 50\u00d7300 mm.", category: "Escaliers", categorySlug: "stairs" },
+      { slug: "rise-over-run-calculator", title: "Calculateur Giron/Hauteur Gratuit — Pente & Angle (2026)", description: "Calculateur giron/hauteur gratuit — rapport, pourcentage, angle et description instantan\u00e9s. Pour escaliers, rampes et toits.", category: "Escaliers", categorySlug: "stairs" },
+      { slug: "spiral-staircase-calculator", title: "Escalier Colima\u00e7on Gratuit — Marches & Dimensions (2026)", description: "Calculateur d'escalier en colima\u00e7on gratuit — diam\u00e8tre et hauteur pour nombre de marches, hauteur et rotation. Conforme aux normes.", category: "Escaliers", categorySlug: "stairs" },
+      { slug: "stair-landing-calculator", title: "Escalier avec Palier Gratuit — Vol\u00e9es & Dimensions (2026)", description: "Calculateur d'escalier avec palier gratuit — divisez les vol\u00e9es avec palier interm\u00e9diaire. Marches par vol\u00e9e, hauteur du palier et longueur totale.", category: "Escaliers", categorySlug: "stairs" },
+    ],
+  },
 ];
 
 export function getCategoryBySlug(slug: string) {

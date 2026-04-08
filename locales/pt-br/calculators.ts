@@ -589,6 +589,19 @@ export const categories: CategoryMeta[] = [
       { slug: "laminate-calculator", title: "Calculadora de Laminado Grátis — Caixas & m² (2026)", description: "Calculadora de piso laminado — estimador grátis de réguas e caixas com manta. Insira dimensões do cômodo para lista de materiais instantânea.", category: "Piso", categorySlug: "flooring" },
     ],
   },
+  {
+    slug: "stairs",
+    title: "Calculadoras de Escadas",
+    description:
+      "Calcule dimensões de escadas, comprimento de longarinas, relação espelho/piso, escadas caracol e patamares. Calculadoras grátis que atendem à ABNT NBR 9077.",
+    calculators: [
+      { slug: "stair-calculator", title: "Calculadora de Escadas Grátis — Degraus, Espelho & Longarina (2026)", description: "Calculadora de escadas grátis — insira a altura total para obter quantidade de degraus, espelho, piso e comprimento da longarina. Conforme ABNT.", category: "Escadas", categorySlug: "stairs" },
+      { slug: "stair-stringer-calculator", title: "Calculadora de Longarinas Grátis — Comprimento & Quantidade (2026)", description: "Calculadora de longarinas grátis — comprimento, quantidade e distribuição para qualquer largura de escada. Para tábuas de 50×250 e 50×300 mm.", category: "Escadas", categorySlug: "stairs" },
+      { slug: "rise-over-run-calculator", title: "Calculadora Espelho/Piso Grátis — Inclinação & Ângulo (2026)", description: "Calculadora de espelho e piso grátis — razão, porcentagem, ângulo e descrição instantâneos. Para escadas, rampas e telhados.", category: "Escadas", categorySlug: "stairs" },
+      { slug: "spiral-staircase-calculator", title: "Escada Caracol Grátis — Degraus & Dimensões (2026)", description: "Calculadora de escada caracol grátis — diâmetro e pé-direito para quantidade de degraus, espelho e rotação. Conforme normas.", category: "Escadas", categorySlug: "stairs" },
+      { slug: "stair-landing-calculator", title: "Escada com Patamar Grátis — Lances & Dimensões (2026)", description: "Calculadora de escada com patamar grátis — divida lances com patamar intermediário. Degraus por lance, altura do patamar e percurso total.", category: "Escadas", categorySlug: "stairs" },
+    ],
+  },
 ];
 
 export function getCategoryBySlug(slug: string) {
