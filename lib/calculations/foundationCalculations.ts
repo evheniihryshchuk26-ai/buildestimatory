@@ -357,6 +357,120 @@ export function calculateRetainingWall(
   };
 }
 
+// ─── REBAR ──────────────────────────────────────────────────────────────────
+
+export interface RebarResult {
+  barsLong: number;
+  barsWide: number;
+  totalLinearFeet: number;
+  totalBars: number;
+  weight: number;
+}
+
+const REBAR_DIAMETER_INCHES: Record<string, number> = {
+  "#3": 0.375,
+  "#4": 0.5,
+  "#5": 0.625,
+};
+
+const REBAR_WEIGHT_PER_FOOT: Record<string, number> = {
+  "#3": 0.376,
+  "#4": 0.668,
+  "#5": 1.043,
+};
+
+const REBAR_BAR_DIAMETER_INCHES: Record<string, number> = {
+  "#3": 0.375,
+  "#4": 0.5,
+  "#5": 0.625,
+};
+
+export function calculateRebar(
+  slabLengthFt: number,
+  slabWidthFt: number,
+  rebarSpacingInches: number,
+  rebarSize: string,
+): RebarResult {
+  const spacingFt = rebarSpacingInches / 12;
+
+  // Bars running along the length (spaced across the width)
+  const barsLong = Math.ceil(slabWidthFt / spacingFt) + 1;
+  // Bars running along the width (spaced across the length)
+  const barsWide = Math.ceil(slabLengthFt / spacingFt) + 1;
+
+  // Standard rebar comes in 20 ft lengths
+  const standardLength = 20;
+  // Overlap per splice: 40 bar diameters
+  const barDiameter = REBAR_BAR_DIAMETER_INCHES[rebarSize] ?? 0.5;
+  const spliceLength = (40 * barDiameter) / 12; // convert to feet
+
+  // Number of pieces needed per bar run (with splices)
+  const piecesPerLongBar = slabLengthFt <= standardLength ? 1 : Math.ceil(slabLengthFt / (standardLength - spliceLength));
+  const piecesPerWideBar = slabWidthFt <= standardLength ? 1 : Math.ceil(slabWidthFt / (standardLength - spliceLength));
+
+  const totalBars = barsLong * piecesPerLongBar + barsWide * piecesPerWideBar;
+
+  // Linear feet: each bar direction covers slab dimension + splice overlap
+  const linearFeetLong = barsLong * (slabLengthFt + (piecesPerLongBar - 1) * spliceLength);
+  const linearFeetWide = barsWide * (slabWidthFt + (piecesPerWideBar - 1) * spliceLength);
+  const totalLinearFeet = linearFeetLong + linearFeetWide;
+
+  const weightPerFoot = REBAR_WEIGHT_PER_FOOT[rebarSize] ?? 0.668;
+  const weight = Math.round(totalLinearFeet * weightPerFoot);
+
+  return {
+    barsLong,
+    barsWide,
+    totalLinearFeet: Math.round(totalLinearFeet),
+    totalBars,
+    weight,
+  };
+}
+
+// ─── REBAR SPACING ──────────────────────────────────────────────────────────
+
+export interface RebarSpacingResult {
+  spacing: number;
+  barsNeeded: number;
+  linearFeet: number;
+  chairsNeeded: number;
+}
+
+const LOAD_TYPE_SPACING: Record<string, number> = {
+  "residential slab": 18,
+  "driveway": 12,
+  "structural": 8,
+};
+
+export function calculateRebarSpacing(
+  slabLengthFt: number,
+  slabWidthFt: number,
+  rebarSize: string,
+  loadType: string,
+): RebarSpacingResult {
+  const spacingInches = LOAD_TYPE_SPACING[loadType] ?? 12;
+  const spacingFt = spacingInches / 12;
+
+  // Bars in each direction
+  const barsLong = Math.ceil(slabWidthFt / spacingFt) + 1;
+  const barsWide = Math.ceil(slabLengthFt / spacingFt) + 1;
+  const barsNeeded = barsLong + barsWide;
+
+  // Linear feet
+  const linearFeet = barsLong * slabLengthFt + barsWide * slabWidthFt;
+
+  // Rebar chairs/supports: 1 per 4 sq ft of slab area
+  const slabArea = slabLengthFt * slabWidthFt;
+  const chairsNeeded = Math.ceil(slabArea / 4);
+
+  return {
+    spacing: spacingInches,
+    barsNeeded,
+    linearFeet: Math.round(linearFeet),
+    chairsNeeded,
+  };
+}
+
 // ─── CONCRETE STEPS ─────────────────────────────────────────────────────────
 
 export function calculateConcreteSteps(widthFt: number, riseInches: number, runInches: number, numberOfSteps: number): ConcreteStepsResult {

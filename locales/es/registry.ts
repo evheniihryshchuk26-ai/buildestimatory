@@ -3359,6 +3359,449 @@ const stairLandingCalculatorES: CalculatorSEOContent = {
   ],
 };
 
+// ─── VARILLA / ARMADURA ─────────────────────────────────────────────────────
+
+export const rebarCalculator: CalculatorSEOContent = {
+  disclaimer: "Esta estimación asume una malla plana de una sola capa. Los requisitos reales de armadura dependen de las especificaciones de ingeniería, condiciones del suelo y la normativa local. Consulta siempre a un ingeniero estructural para aplicaciones con carga y zonas sísmicas.",
+  howToUse: [
+    "Ingresa el largo y ancho de la losa en metros.",
+    "Establece el espaciado deseado — 30 cm entre centros es común para losas residenciales.",
+    "Selecciona el diámetro de la varilla: 3/8\" para carga ligera, 1/2\" para residencial estándar, 5/8\" para estructural.",
+    "Haz clic en Calcular para obtener la cantidad de barras, metros lineales y peso total.",
+  ],
+  materialInfo:
+    "La varilla corrugada (también llamada armadura o acero de refuerzo) es una barra de acero deformada que se embebe en el concreto para proporcionar resistencia a la tracción que el concreto por sí solo no puede soportar. El concreto es fuerte a la compresión pero débil a la tracción — la varilla actúa como puente en las grietas y mantiene la losa unida bajo carga. Los diámetros más comunes para obra residencial y comercial ligera en Latinoamérica son: 3/8\" (9.5 mm, 0.56 kg/m), 1/2\" (12.7 mm, 1.0 kg/m) y 5/8\" (15.9 mm, 1.55 kg/m). La varilla estándar se comercializa en barras de 12 metros en México y la mayoría de países de la región. Cuando la dimensión de la losa excede la longitud de la barra, se deben hacer empalmes con un traslape mínimo de 40 diámetros — es decir 50 cm para varilla de 1/2\". El acero grado 42 (fy=4,200 kg/cm²) es el estándar para construcción residencial en México y gran parte de Latinoamérica. Se encuentra en acero negro (sin recubrimiento), galvanizado y con recubrimiento epóxico para ambientes corrosivos. El espaciado típico es 30 cm entre centros para losas residenciales de 10 cm, 20 cm para cocheras y 15 cm para losas estructurales. La varilla debe elevarse del firme con silletas o calzas para que quede en el tercio inferior del espesor de la losa — colocar la varilla sobre el suelo no aporta beneficio estructural. El costo promedio es de $15 a $25 MXN por metro lineal de varilla de 1/2\", o $180 a $300 MXN por barra de 12 m.",
+  nextSteps: [
+    { label: "Calculadora de Espaciado de Varilla", href: "/calculators/foundation/rebar-spacing-calculator/" },
+    { label: "Calculadora de Losa de Concreto", href: "/calculators/foundation/concrete-slab-calculator/" },
+    { label: "Calculadora de Zapatas", href: "/calculators/foundation/concrete-footing-calculator/" },
+  ],
+  installationTips: [
+    "Coloca la varilla sobre silletas o calzas para que quede en el tercio inferior de la losa — nunca la apoyes directamente sobre el suelo.",
+    "Traslapa los empalmes 40 diámetros (50 cm para 1/2\") y amarra con alambre recocido en cada intersección.",
+    "Amarra cada cruce de varilla con alambre recocido calibre 18 usando amarrador o pinzas.",
+    "Mantén un recubrimiento mínimo de 7.5 cm de concreto en todos los lados para prevenir la corrosión del acero.",
+    "Corta la varilla con cortadora de varilla o sierra recíproca con disco de metal — nunca uses soplete, ya que debilita el acero.",
+    "Dobla la varilla en frío usando dobladora manual o hidráulica — calentar debilita la barra y anula las especificaciones de ingeniería.",
+  ],
+  commonMistakes: [
+    "Colocar la varilla sobre el suelo en vez de elevarla con silletas — sin la colocación adecuada la armadura no aporta valor estructural.",
+    "Traslape insuficiente — empalmes menores a 40 diámetros se separarán bajo carga.",
+    "Usar el diámetro incorrecto — varilla de 3/8\" es muy ligera para cocheras y losas de garaje; usa mínimo 1/2\".",
+    "No amarrar las intersecciones — la varilla sin amarrar se desplaza durante el colado y termina desalineada.",
+    "Olvidar el factor de desperdicio — pide 10–15% extra por cortes, dobleces y traslapes.",
+  ],
+  faqs: [
+    { question: "¿Cuánta varilla necesito para una losa de 6x6 m?", answer: "Una losa de 6×6 m con varilla de 1/2\" a 30 cm entre centros necesita 21 barras en cada dirección — 42 barras en total más piezas de empalme, aproximadamente 44 barras de 12 m. El metraje total es de unos 252 metros lineales con un peso de aproximadamente 252 kg. Agrega 10% de desperdicio." },
+    { question: "¿Qué diámetro de varilla para una losa de 10 cm?", answer: "Varilla de 1/2\" (12.7 mm) es la opción estándar para losas residenciales de 10 cm, incluyendo pisos de garaje, losas de cimentación y cocheras. Para patios y andadores con poca carga, la de 3/8\" (9.5 mm) puede ser suficiente. Para losas estructurales o bases de maquinaria, sube a 5/8\" (15.9 mm) o consulta un ingeniero estructural." },
+    { question: "¿Qué espaciado debo usar para la varilla?", answer: "El espaciado más común es 30 cm entre centros en ambas direcciones para losas residenciales de 10 cm. Usa 45 cm para patios con poca carga y 20 cm para cocheras, garajes o aplicaciones estructurales. El ingeniero estructural o la normativa local pueden especificar espaciados diferentes según condiciones del suelo y cargas." },
+    { question: "¿Cuánto cuesta la varilla corrugada?", answer: "La varilla de 1/2\" cuesta entre $15 y $25 MXN por metro lineal, o $180 a $300 MXN por barra de 12 m. Una losa de 6×6 m necesita unas 44 barras, costando $7,920 a $13,200 MXN en materiales. La varilla galvanizada cuesta 30–50% más. Las silletas cuestan $3 a $8 MXN cada una — presupuesta 1 por cada 0.4 m² de losa." },
+    { question: "¿Necesito varilla o malla electrosoldada?", answer: "La varilla es más resistente y preferida para cocheras, garajes, losas estructurales y concreto de más de 10 cm de espesor. La malla electrosoldada 6x6-10/10 es aceptable para patios, banquetas y losas no estructurales menores a 10 cm. Para aplicaciones críticas, la varilla ofrece un control de grietas y resistencia a la tracción muy superiores." },
+    { question: "¿Cómo calculo el peso de la varilla?", answer: "Multiplica los metros lineales totales por el peso por metro de tu diámetro: 3/8\" = 0.56 kg/m, 1/2\" = 1.0 kg/m, 5/8\" = 1.55 kg/m. Por ejemplo, 252 metros lineales de varilla de 1/2\" pesan 252 × 1.0 = 252 kg. Conocer el peso ayuda a planificar el transporte y estimar si necesitas camión o puedes llevar la varilla en remolque." },
+  ],
+};
+
+export const rebarSpacingCalculator: CalculatorSEOContent = {
+  disclaimer: "Las recomendaciones de espaciado son pautas generales para uso residencial y comercial ligero. El espaciado real debe ser determinado por un ingeniero estructural con base en las cargas, condiciones del suelo y normativa local.",
+  howToUse: [
+    "Ingresa el largo y ancho de la losa en metros.",
+    "Selecciona el diámetro de la varilla — 1/2\" es estándar para la mayoría del trabajo residencial.",
+    "Elige el tipo de carga para obtener el espaciado recomendado.",
+    "Haz clic en Calcular para obtener espaciado óptimo, cantidad de barras y silletas.",
+  ],
+  materialInfo:
+    "El espaciado de la varilla determina qué tan cerca se colocan las barras de refuerzo en una losa de concreto, afectando directamente la capacidad de carga y la resistencia al agrietamiento. Un espaciado adecuado asegura que las fuerzas de tracción se distribuyan uniformemente en toda la sección de concreto. Para losas residenciales (patios, pisos de planta baja, andadores), el espaciado de 45 cm entre centros con varilla de 1/2\" es común. Cocheras y garajes típicamente usan 30 cm de espaciado para soportar las cargas vehiculares sin agrietarse. Losas estructurales para bases de maquinaria, pisos comerciales o entrepisos requieren 20 cm de espaciado o menor, según el diseño del ingeniero estructural. Las silletas (también llamadas calzas o separadores) son esenciales para mantener la varilla a la altura correcta dentro de la losa. La regla estándar es una silleta por cada 0.4 m² de área de losa. Las silletas vienen en varios tipos: individuales para barras sueltas, continuas para tendidos largos y plataformas para mallas. Se requieren silletas con punta plástica cuando la varilla queda cerca de la superficie del concreto para evitar manchas de óxido. El recubrimiento — la distancia de la varilla a la superficie más cercana del concreto — debe ser de al menos 7.5 cm para losas sobre terreno y 4 cm para superficies encofradas según la norma NTC o ACI 318. Un recubrimiento insuficiente provoca corrosión y desprendimiento en 5 a 10 años. Para losas de más de 6 m en cualquier dirección, las barras deben empalmarse con un traslape mínimo de 40 diámetros. Los empalmes deben escalonarse para que no más del 50% de las barras se empalmen en la misma sección. El costo de instalación de la varilla (mano de obra y materiales) oscila entre $80 y $160 MXN por m² para una cuadrícula estándar de 30 cm, incluyendo silletas y alambre de amarre.",
+  nextSteps: [
+    { label: "Calculadora de Varilla", href: "/calculators/foundation/rebar-calculator/" },
+    { label: "Calculadora de Losa", href: "/calculators/foundation/concrete-slab-calculator/" },
+    { label: "Calculadora de Concreto", href: "/calculators/foundation/concrete-calculator/" },
+  ],
+  installationTips: [
+    "Marca las líneas de espaciado en la cimbra con crayón antes de colocar la varilla — esto asegura una cuadrícula uniforme.",
+    "Coloca silletas cada 1.2 m en ambas direcciones antes de tender cualquier barra.",
+    "Tiende primero las barras en la dirección larga, luego las transversales encima — amarra cada intersección.",
+    "Mantén 7.5 cm de recubrimiento de concreto desde la varilla hasta cualquier borde o fondo de la losa.",
+    "En losas con juntas de control, pasa la varilla de forma continua por la junta — no cortes la varilla en las juntas.",
+    "Recorre la cuadrícula terminada antes del colado para verificar que ninguna barra se haya desprendido de las silletas.",
+  ],
+  commonMistakes: [
+    "Usar un espaciado demasiado amplio para el tipo de carga — 45 cm es excesivo para cocheras y garajes.",
+    "Colocar silletas muy separadas — la varilla sin soporte se hunde en la grava, eliminando su valor estructural.",
+    "Cortar la varilla en las juntas de control — las juntas están diseñadas para agrietarse; la varilla debe pasar de forma continua.",
+    "No escalonar los empalmes — colocar todos los empalmes en el mismo punto crea un plano débil en la losa.",
+    "Ignorar los requisitos de recubrimiento — menos de 7.5 cm de recubrimiento provoca corrosión prematura y desprendimiento.",
+  ],
+  faqs: [
+    { question: "¿Cuál es el espaciado estándar de varilla para una losa de concreto?", answer: "El espaciado más común es 30 cm entre centros en ambas direcciones para losas residenciales de 10 cm. Patios y andadores pueden usar 45 cm. Cocheras y garajes usan 30 cm. Losas estructurales y bases de maquinaria típicamente requieren 20 cm o según lo especifique el ingeniero estructural." },
+    { question: "¿Cuántas silletas necesito?", answer: "Planifica 1 silleta por cada 0.4 m² de área de losa. Una losa de 6×6 m (36 m²) necesita unas 90 silletas. Para varilla gruesa (5/8\" y mayor), usa silletas con capacidad para el peso de la barra. Coloca las silletas en cuadrícula a no más de 1.2 m de separación en cada dirección." },
+    { question: "¿Qué pasa si el espaciado de la varilla es demasiado amplio?", answer: "Si el espaciado excede los requisitos de ingeniería, la losa desarrollará grietas más anchas bajo carga porque las fuerzas de tracción no se distribuyen adecuadamente. Esto reduce la capacidad de carga y permite la infiltración de agua, acelerando el daño por heladas en climas fríos. En cocheras, un espaciado excesivo puede provocar grietas en los primeros años." },
+    { question: "¿Puedo usar malla electrosoldada en vez de varilla?", answer: "La malla electrosoldada 6x6-10/10 es aceptable para patios, banquetas y losas menores a 10 cm de espesor con poca carga. Sin embargo, la varilla ofrece un control de grietas superior y se requiere para cocheras, garajes y cualquier losa estructural. La malla también es más difícil de mantener elevada en silletas durante el colado, por lo que frecuentemente termina en el suelo sin aportar beneficio." },
+    { question: "¿Cómo afecta el tipo de carga al espaciado de la varilla?", answer: "Cargas mayores requieren espaciados más cerrados. Losas residenciales (tránsito peatonal) usan 45 cm. Cocheras (vehículos hasta 3 toneladas) usan 30 cm. Aplicaciones estructurales (bases de maquinaria, pisos comerciales, entrepisos) usan 20 cm o menor. El espaciado controla directamente cuánta fuerza de tracción debe soportar cada barra." },
+    { question: "¿Cuál es el recubrimiento mínimo de concreto para la varilla?", answer: "La norma ACI 318 requiere un mínimo de 7.5 cm de recubrimiento para varilla en losas coladas directamente sobre terreno (losa sobre firme). Para superficies encofradas no expuestas a la intemperie, el mínimo es 4 cm. Para losas expuestas a sales de deshielo o ambientes marinos, el mínimo aumenta a 5 cm con varilla con recubrimiento epóxico recomendada." },
+  ],
+};
+
+// ─── HIP ROOF ─────────────────────────────────────────────────────────────
+
+export const hipRoofCalculatorES: CalculatorSEOContent = {
+  disclaimer: "La geometría de techos a cuatro aguas es aproximada. Los cabios de lima varían en longitud — corte cada uno a medida. Agregue 10–15% de desperdicio en madera.",
+  howToUse: [
+    "Mida el largo y ancho total del edificio en metros.",
+    "Ingrese la pendiente del techo (elevación por cada 12 de recorrido).",
+    "Seleccione el espaciado de cabios (40 cm entre centros es estándar).",
+    "Haga clic en Calcular para obtener cantidad de cabios, largo de limas, área de techo y cumbrera.",
+  ],
+  materialInfo:
+    "El techo a cuatro aguas (o techo de cadera) tiene cuatro pendientes — dos laterales trapezoidales y dos frontales triangulares — que se encuentran en una cumbrera central más corta que el largo del edificio. Su forma brinda resistencia superior al viento, pudiendo soportar vientos de más de 180 km/h mejor que los techos a dos aguas, por lo que son preferidos en regiones propensas a huracanes y zonas de alta exposición eólica. Cada pared queda protegida por un alero, lo que reduce la exposición a la lluvia. La estructura requiere cuatro cabios de lima que corren diagonalmente desde cada esquina hasta la cumbrera, cabios comunes centrados en cada extremo triangular y numerosos cabios de lima corta (jack rafters) que son progresivamente más cortos al acercarse a la lima. El cabio de lima es típicamente un tamaño mayor que los cabios comunes (por ejemplo, 5x25 cm para lima con 5x20 cm para comunes) porque carga ambos lados. La longitud de la cumbrera equivale al largo del edificio menos el ancho. Para un techo a cuatro aguas de 9x12 m con pendiente de 6/12, los materiales de estructura cuestan entre $60,000 y $120,000 MXN, con mano de obra profesional agregando $80,000 a $160,000 MXN.",
+  nextSteps: [
+    { label: "Calculadora Revestimiento de Techo", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Calculadora de Tejas", href: "/calculators/roofing/shingle-calculator/" },
+    { label: "Calculadora de Pendiente", href: "/calculators/roofing/roof-pitch-calculator/" },
+    { label: "Calculadora Techo a Dos Aguas", href: "/calculators/roofing/gable-roof-calculator/" },
+  ],
+  installationTips: [
+    "Use cabios de lima un tamaño más profundo que los comunes para soportar la carga doble.",
+    "Utilice escuadra de carpintero o calculadora de construcción para ángulos compuestos de cabios de lima corta.",
+    "Instale los cabios de lima primero, luego rellene con cabios cortos del más largo al más corto.",
+    "Bisele la parte superior de las limas (rebaje de lima) para que el revestimiento quede plano.",
+    "Apuntale las limas temporalmente hasta instalar el revestimiento — pueden torcerse por su propio peso.",
+  ],
+  commonMistakes: [
+    "Usar la misma sección para limas y comunes — las limas cargan el doble y necesitan ser un tamaño mayor.",
+    "No considerar el rebaje de lima — el revestimiento no quedará plano y creará una protuberancia.",
+    "Olvidar que los cabios cortos requieren cortes de ángulo compuesto, no simples cortes a plomo.",
+    "Subestimar materiales — los techos a cuatro aguas usan 10–15% más madera y revestimiento que un techo a dos aguas equivalente.",
+  ],
+  faqs: [
+    { question: "¿Qué es un techo a cuatro aguas?", answer: "Un techo a cuatro aguas tiene cuatro pendientes inclinadas que descienden hacia las paredes. Los dos lados más largos son trapezoides y los dos más cortos son triángulos. Todos se encuentran en una cumbrera más corta que el largo del edificio. Son más resistentes al viento que los techos a dos aguas." },
+    { question: "¿Cómo calculo el área de un techo a cuatro aguas?", answer: "Mida la planta del edificio (largo x ancho) y multiplique por el factor de pendiente. Para pendiente 6/12 el factor es 1.118. Un edificio de 9x12 m con pendiente 6/12 tiene aproximadamente 9 x 12 x 1.118 = 120.7 m² de área de techo." },
+    { question: "¿Cuántos cabios de lima tiene un techo a cuatro aguas?", answer: "Un techo a cuatro aguas estándar tiene exactamente 4 cabios de lima — uno desde cada esquina del edificio diagonalmente hasta el extremo de la cumbrera. Cada cabio de lima es más largo que los comunes porque corre a 45 grados en planta." },
+    { question: "¿Techo a cuatro aguas vs dos aguas — cuál es mejor?", answer: "Los techos a cuatro aguas son más resistentes al viento, protegen las cuatro paredes y se auto-arriostan. Los de dos aguas son más simples, baratos y brindan más espacio en ático. En zonas de huracanes se prefieren los de cuatro aguas." },
+    { question: "¿Cuánto mide un cabio de lima?", answer: "Un cabio de lima corre diagonalmente desde la esquina hasta la cumbrera. Su recorrido horizontal es el recorrido del cabio común multiplicado por raíz de 2 (aprox. 1.414). Para un edificio de 9 m de ancho con pendiente 6/12, el recorrido del cabio común es 4.5 m, el de lima es 6.36 m." },
+    { question: "¿Cuál es la longitud de la cumbrera en un techo a cuatro aguas?", answer: "La longitud de la cumbrera equivale al largo del edificio menos el ancho. Para un edificio de 12x9 m, la cumbrera mide 12 - 9 = 3 m. Si el edificio es cuadrado, no hay cumbrera — las cuatro limas se encuentran en un punto formando un techo piramidal." },
+  ],
+};
+
+// ─── GAMBREL ROOF ─────────────────────────────────────────────────────────────
+
+export const gambrelRoofCalculatorES: CalculatorSEOContent = {
+  disclaimer: "Las proporciones del techo mansarda usan una división estándar 67/33 inferior/superior. Las proporciones reales pueden variar según el diseño. Consulte un ingeniero estructural para los planos definitivos.",
+  howToUse: [
+    "Ingrese el largo y ancho del edificio en metros.",
+    "Ingrese la pendiente inferior (empinada) — típicamente 18/12 a 24/12 para paredes estilo granero.",
+    "Ingrese la pendiente superior (suave) — típicamente 4/12 a 8/12 para la cubierta.",
+    "Seleccione el espaciado de cabios y haga clic en Calcular.",
+  ],
+  materialInfo:
+    "El techo mansarda — comúnmente llamado techo de granero — presenta dos pendientes distintas en cada lado: una sección inferior empinada (típicamente 60–70 grados) y una sección superior más suave (típicamente 20–30 grados). Este diseño de doble pendiente maximiza el espacio útil en el piso superior, siendo la opción clásica para graneros, edificios agrícolas y casas de estilo colonial. La pendiente inferior empinada funciona casi como una pared, proporcionando espacio habitable a altura completa en el altillo, mientras que la pendiente superior suave proporciona un techo convencional. Estructuralmente, la transición entre las dos pendientes (el quiebre mansarda) requiere una placa horizontal de apoyo que actúa como repisa para soportar los cabios superiores y transferir cargas a los inferiores. Los cabios inferiores son típicamente de 5x20 o 5x25 cm, mientras que los superiores pueden ser de 5x15 o 5x20 cm. El diseño mansarda usa 20–30% menos material que agregar un segundo piso completo con techo a dos aguas convencional. Los costos de material para una estructura mansarda de 9x12 m oscilan entre $80,000 y $160,000 MXN para madera. Una desventaja es la resistencia al viento — la pendiente inferior empinada atrapa el viento, por lo que no se recomiendan para zonas de huracanes.",
+  nextSteps: [
+    { label: "Calculadora Revestimiento de Techo", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Calculadora de Cabios", href: "/calculators/roofing/rafter-calculator/" },
+    { label: "Calculadora de Tejas", href: "/calculators/roofing/shingle-calculator/" },
+    { label: "Calculadora Techo a Dos Aguas", href: "/calculators/roofing/gable-roof-calculator/" },
+  ],
+  installationTips: [
+    "Construya las cerchas mansarda sobre una superficie plana (plantilla) para asegurar consistencia en todas las cerchas.",
+    "La placa de apoyo en el quiebre mansarda es estructural — use una viga adecuada o doble madera.",
+    "Instale riostras en la transición inferior-superior para mayor rigidez.",
+    "Revista a través del quiebre con cuidado — el cambio de ángulo requiere cortes precisos.",
+    "Use tirantes o vigas de techo en la sección superior para evitar empuje lateral.",
+  ],
+  commonMistakes: [
+    "Subdimensionar la placa de apoyo en la transición — esta carga significativas fuerzas estructurales.",
+    "No arriostrar la transición inferior-superior — el punto de quiebre es la parte más débil del mansarda.",
+    "Usar la misma pendiente en ambas secciones — la inferior debe ser significativamente más empinada.",
+    "Ignorar la exposición al viento — los techos mansarda funcionan mal en zonas de alto viento.",
+  ],
+  faqs: [
+    { question: "¿Qué es un techo mansarda?", answer: "Un techo mansarda tiene dos pendientes diferentes en cada lado — una inferior empinada (60 a 70 grados) y una superior suave (20 a 30 grados). Este diseño de granero maximiza el espacio interior útil en el piso superior." },
+    { question: "¿Qué pendientes se usan en un techo mansarda?", answer: "La sección inferior usa típicamente 18/12 a 24/12 (56 a 63 grados), mientras que la superior usa 4/12 a 8/12 (18 a 33 grados). Una combinación común es 20/12 inferior y 6/12 superior." },
+    { question: "¿Cuánto espacio extra brinda un techo mansarda?", answer: "Un techo mansarda proporciona aproximadamente 70 a 80 por ciento del área de un segundo piso completo, comparado con 40 a 50 por ciento para un ático de techo a dos aguas." },
+    { question: "¿Son resistentes los techos mansarda?", answer: "Son resistentes cuando están bien diseñados y arriostrados, pero son más vulnerables al viento que los techos a cuatro aguas o a dos aguas debido a la pendiente inferior empinada. No se recomiendan en zonas de huracanes." },
+    { question: "¿Cuál es la diferencia entre mansarda y techo francés?", answer: "El techo mansarda tiene dos pendientes en dos lados con frontones. El techo francés (mansard) tiene dos pendientes en los cuatro lados, como un híbrido entre cuatro aguas y mansarda." },
+    { question: "¿Cuánto cuesta construir un techo mansarda?", answer: "Un techo mansarda cuesta 15 a 25 por ciento más que un techo a dos aguas simple del mismo tamaño por la complejidad adicional. Para un edificio de 9x12 m, espere $100,000 a $200,000 MXN en madera y herrajes, más $120,000 a $300,000 MXN en mano de obra." },
+  ],
+};
+
+// ─── GABLE ROOF ─────────────────────────────────────────────────────────────
+
+export const gableRoofCalculatorES: CalculatorSEOContent = {
+  disclaimer: "Agregue 10–15% de desperdicio para cortes y aleros. Las longitudes de cabios no incluyen alero — agregue 30–60 cm por cabio para los aleros.",
+  howToUse: [
+    "Ingrese el largo del edificio (a lo largo de la cumbrera) y el ancho (a través del frontón) en metros.",
+    "Ingrese la pendiente del techo (elevación por cada 12 de recorrido).",
+    "Seleccione el espaciado de cabios (40 cm entre centros es estándar residencial).",
+    "Haga clic en Calcular para obtener cantidad de cabios, área de techo, longitud de cumbrera y área de frontón.",
+  ],
+  materialInfo:
+    "El techo a dos aguas es el tipo de techo residencial más común en América, presentando dos pendientes que se encuentran en una cumbrera central que recorre todo el largo del edificio. Las secciones triangulares de pared en cada extremo — los frontones — dan nombre a este estilo. Los techos a dos aguas son populares porque son simples de diseñar, fáciles de construir, económicos en materiales y proporcionan excelente escurrimiento de lluvia y nieve. Las dos pendientes opuestas crean ventilación natural combinadas con ventilaciones de sofito y cumbrera. Las pendientes residenciales estándar van de 4/12 a 8/12, siendo 6/12 la más común. Los cabios van desde la placa superior del muro hasta la tabla cumbrera, con un corte de asiento en la placa del muro y un corte a plomo en la cumbrera. Los tamaños comunes de cabios son 5x15 cm (hasta 3 m de recorrido), 5x20 cm (hasta 4 m), 5x25 cm (hasta 5 m) y 5x30 cm (hasta 6 m) a 40 cm entre centros. Las paredes de frontón deben revestirse y cubrirse, lo que agrega material. Para un techo a dos aguas de 9x12 m con pendiente 6/12, la madera estructural cuesta típicamente $50,000 a $100,000 MXN, con mano de obra agregando $70,000 a $140,000 MXN.",
+  nextSteps: [
+    { label: "Calculadora de Cumbrera", href: "/calculators/roofing/ridge-board-calculator/" },
+    { label: "Calculadora Revestimiento de Techo", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Calculadora de Tejas", href: "/calculators/roofing/shingle-calculator/" },
+    { label: "Calculadora Techo a Cuatro Aguas", href: "/calculators/roofing/hip-roof-calculator/" },
+  ],
+  installationTips: [
+    "Corte primero un cabio patrón y pruébelo antes de cortar el juego completo.",
+    "Use escuadra rápida para marcar cortes de asiento y a plomo consistentes.",
+    "Instale la tabla cumbrera en soportes temporales antes de colocar los cabios.",
+    "Trabaje desde ambos extremos hacia el centro al colocar pares opuestos.",
+    "Instale tirantes en el tercio superior de los cabios para evitar la separación de muros.",
+  ],
+  commonMistakes: [
+    "Olvidar agregar la longitud del alero al cabio — agregue 30 a 60 cm por cabio más allá del muro.",
+    "No incluir revestimiento y acabado de frontón en la estimación de materiales.",
+    "Usar el ancho del edificio como recorrido del cabio — el recorrido es la mitad del ancho para cada lado.",
+    "Omitir tirantes o vigas de techo — sin ellos los cabios empujarán los muros hacia afuera con el tiempo.",
+  ],
+  faqs: [
+    { question: "¿Qué es un techo a dos aguas?", answer: "Un techo a dos aguas es el clásico techo triangular formado por dos planos inclinados que se encuentran en una cumbrera central. Las secciones triangulares verticales en cada extremo se llaman frontones. Es el tipo más común por su simplicidad y bajo costo." },
+    { question: "¿Cómo calculo el área de un techo a dos aguas?", answer: "Multiplique la mitad del ancho (el recorrido) por el factor de pendiente, luego por el largo del edificio para obtener un lado. Duplique para ambos lados. Para 9x12 m con pendiente 6/12: recorrido = 4.5 m, factor = 1.118, un lado = 4.5 x 1.118 x 12 = 60.4 m², total = 120.8 m²." },
+    { question: "¿Qué es el área de frontón y por qué importa?", answer: "El frontón es la sección triangular de pared entre las dos pendientes. Su área es la mitad del ancho del edificio multiplicada por la elevación del techo. Debe revestirse y cubrirse. Para un edificio de 9 m con pendiente 6/12, cada frontón mide 9 x 2.25 / 2 = 10.1 m²." },
+    { question: "¿Qué pendiente es mejor para un techo a dos aguas?", answer: "Una pendiente de 6/12 es la más popular, ofreciendo buen equilibrio entre apariencia, eficiencia de materiales y facilidad para caminar. De 4/12 a 6/12 son fáciles de transitar. De 8/12 a 12/12 crean apariencia más dramática pero aumentan costos." },
+    { question: "¿Cuántos cabios necesito para un techo a dos aguas?", answer: "Divida el largo del edificio entre el espaciado de cabios (en metros), sume uno, luego multiplique por dos para ambos lados. Para 12 m con espaciado de 40 cm: (12 / 0.4) + 1 = 31 por lado, 62 en total. Agregue 10% para desperdicio." },
+    { question: "¿Cuatro aguas vs dos aguas — cuál cuesta menos?", answer: "Los techos a dos aguas cuestan 15 a 25 por ciento menos porque usan menos madera, tienen cortes más simples y se construyen más rápido. Sin embargo, son menos resistentes al viento y exponen los frontones a la intemperie." },
+  ],
+};
+
+// ─── LEAN-TO ROOF ─────────────────────────────────────────────────────────────
+
+export const leanToRoofCalculatorES: CalculatorSEOContent = {
+  disclaimer: "Las medidas de techo de cobertizo asumen una pendiente simple sin valles ni limas. Agregue 10–15% de desperdicio. La longitud del cabio no incluye alero.",
+  howToUse: [
+    "Ingrese el largo del techo (dimensión a lo largo del muro de apoyo).",
+    "Ingrese el recorrido del techo (qué tanto se extiende desde el muro).",
+    "Ingrese la pendiente (elevación por cada 12 de recorrido horizontal).",
+    "Seleccione el espaciado de cabios y haga clic en Calcular.",
+  ],
+  materialInfo:
+    "El techo de cobertizo (también llamado techo de un agua, pendiente simple o techo adosado) es la forma de techo más simple — un solo plano inclinado que se apoya contra una estructura existente o abarca entre muros de diferente altura. Es la opción estándar para ampliaciones, porches cubiertos, cocheras, bodegas y leñeros. El lado alto se fija típicamente al muro existente mediante una viga durmiente empotrada en los montantes, mientras el lado bajo descansa sobre una viga soportada por postes. Debido a que tiene una sola pendiente, es el más económico de construir — requiere aproximadamente la mitad de cabios que un techo a dos aguas y no tiene cumbrera, limas ni cortes compuestos. Las pendientes típicas van de 2/12 a 6/12, siendo 3/12 a 4/12 las más comunes. La pendiente mínima depende del material: 1/4:12 para membranas (TPO, EPDM), 2/12 para lámina metálica con sellador, y 4/12 para tejas asfálticas estándar. Los tamaños de cabios siguen las mismas tablas: 5x15 cm para recorridos hasta 3 m, 5x20 cm hasta 4 m y 5x25 cm hasta 5 m a 40 cm entre centros. Un cobertizo de 3.6x6 m cuesta $16,000 a $40,000 MXN en madera y $6,000 a $16,000 MXN en materiales de cubierta, con mano de obra agregando $30,000 a $70,000 MXN.",
+  nextSteps: [
+    { label: "Calculadora de Cabios", href: "/calculators/roofing/rafter-calculator/" },
+    { label: "Calculadora Revestimiento de Techo", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Calculadora de Pendiente", href: "/calculators/roofing/roof-pitch-calculator/" },
+    { label: "Calculadora Techo a Dos Aguas", href: "/calculators/roofing/gable-roof-calculator/" },
+  ],
+  installationTips: [
+    "Fije la viga durmiente a los montantes o solera del muro existente con pernos de anclaje — nunca ancle solo al revestimiento.",
+    "Instale tapajuntas escalonado o lámina Z sobre la viga durmiente para evitar filtración de agua.",
+    "Use hilo de línea desde la viga durmiente hasta la viga de apoyo para verificar la pendiente antes de cortar.",
+    "Incline el techo alejándose del edificio existente para dirigir el agua hacia el lado bajo.",
+    "Para recorridos mayores a 3.6 m, considere una viga de apoyo intermedia para reducir la sección del cabio.",
+  ],
+  commonMistakes: [
+    "Fijar la viga durmiente al revestimiento en vez de la estructura — debe ir empotrada en montantes o solera.",
+    "Olvidar tapajuntas sobre la viga durmiente — causa más daño por agua que cualquier otro error.",
+    "Inclinar el techo hacia el edificio existente en vez de alejándolo — el agua debe drenar hacia el lado exterior.",
+    "Usar pendiente muy baja para el material de cubierta elegido — las tejas asfálticas necesitan al menos 4/12.",
+  ],
+  faqs: [
+    { question: "¿Qué es un techo de cobertizo?", answer: "Un techo de cobertizo es un techo de una sola pendiente que típicamente se apoya contra un muro de edificio existente. Un extremo es más alto (fijado al muro mediante viga durmiente) y el otro más bajo (soportado por postes y viga). Es el tipo más simple y económico." },
+    { question: "¿Cuál es la pendiente mínima para un techo de cobertizo?", answer: "Depende del material: 1/4:12 para membranas, 2/12 para lámina metálica con sellador, y 4/12 para tejas asfálticas. Para la mayoría de cobertizos, 3/12 a 4/12 da buen equilibrio entre drenaje y altura libre." },
+    { question: "¿Cómo calculo el área de un techo de cobertizo?", answer: "Multiplique el largo del techo por el recorrido, luego por el factor de pendiente. Para un cobertizo de 6x3.6 m con pendiente 4/12, el factor es 1.054, el área es 6 x 3.6 x 1.054 = 22.8 m²." },
+    { question: "¿Cuánto sube un techo de cobertizo?", answer: "La elevación es el recorrido multiplicado por la razón de pendiente. Para un recorrido de 3.6 m con pendiente 4/12: 3.6 x (4/12) = 1.2 m de elevación. El lado alto será 1.2 m más alto que el lado bajo." },
+    { question: "¿Puedo fijar un techo adosado a cualquier muro?", answer: "Puede fijarlo a cualquier muro estructural que soporte las cargas de la viga durmiente. El muro debe tener montantes accesibles. Muros de mampostería requieren anclas de expansión. Siempre verifique que el muro existente pueda manejar la carga adicional." },
+    { question: "¿Cuánto cuesta un techo de cobertizo?", answer: "Un cobertizo básico de 3.6x6 m cuesta $16,000 a $40,000 MXN en madera, $6,000 a $16,000 MXN en materiales de cubierta y $30,000 a $70,000 MXN en mano de obra. Costo total instalado típicamente $50,000 a $130,000 MXN." },
+  ],
+};
+
+// ─── BALUSTER SPACING ─────────────────────────────────────────────────────────
+
+export const balusterSpacingCalculatorES: CalculatorSEOContent = {
+  disclaimer: "Los cálculos se basan en la norma IRC R312.1.3 que limita la separación a máximo 10 cm (4 pulgadas). Verifique los requisitos locales con su departamento de construcción.",
+  howToUse: [
+    "Ingrese el largo total del barandal en centímetros.",
+    "Ingrese el ancho del balaustre (típico 3.8 cm / 1.5 pulgadas para cuadrados).",
+    "Ingrese el ancho del poste (típico 8.9 cm / 3.5 pulgadas para postes 4x4).",
+    "Ingrese la cantidad de postes y haga clic en Calcular para obtener el número de balaustres y la separación exacta.",
+  ],
+  materialInfo:
+    "Los balaustres (también llamados barrotes o husillos) son los elementos verticales del barandal de escaleras y terrazas que evitan caídas y cumplen con los códigos de construcción. La norma IRC establece que una esfera de 10 cm (4 pulgadas) no debe poder pasar por ninguna abertura del barandal — esto incluye entre balaustres, entre el barandal inferior y la superficie, y en cualquier abertura decorativa. Para balaustres cuadrados estándar de 3.8 cm, esto significa aproximadamente 3 balaustres por cada 30 cm lineales de barandal. Los materiales comunes incluyen madera tratada a presión, aluminio, acero inoxidable y materiales compuestos. Los balaustres de madera cuestan entre $30 y $80 MXN cada uno, los de aluminio $50 a $120, y los de acero inoxidable $100 a $250. Para un barandal de terraza típico de 12 metros lineales, necesitará entre 100 y 130 balaustres dependiendo del ancho y la separación elegida. El espaciado uniforme mejora la apariencia y el cumplimiento del código — use una plantilla espaciadora para mantener distancias consistentes durante la instalación.",
+  nextSteps: [
+    { label: "Calculadora de Barandal", href: "/calculators/outdoor/deck-railing-calculator/" },
+    { label: "Calculadora de Escaleras", href: "/calculators/stairs/stair-calculator/" },
+    { label: "Calculadora Tablas de Deck", href: "/calculators/outdoor/deck-board-calculator/" },
+  ],
+  installationTips: [
+    "Corte un bloque espaciador de 10 cm (4 pulgadas) para verificar que ninguna abertura exceda el máximo del código.",
+    "Pre-taladre agujeros para tornillos en balaustres de madera para evitar rajaduras.",
+    "Instale el riel inferior primero, luego inserte todos los balaustres y fije el riel superior.",
+    "Use pegamento para exteriores además de tornillos para mayor durabilidad.",
+  ],
+  commonMistakes: [
+    "Espaciar balaustres demasiado separados — el código requiere que una esfera de 10 cm no pase por ninguna abertura.",
+    "No considerar el ancho del balaustre al calcular la separación — mida de borde a borde.",
+    "Instalar balaustres sin pre-taladrar — causa rajaduras especialmente en madera dura.",
+    "Olvidar que la separación entre la superficie y el riel inferior también debe cumplir la regla de 10 cm.",
+  ],
+  faqs: [
+    { question: "¿Cuál es la separación máxima entre balaustres?", answer: "La IRC requiere que una esfera de 10 cm (4 pulgadas) no pueda pasar por ninguna abertura del barandal. Para balaustres cuadrados de 3.8 cm, esto significa un espacio máximo de aproximadamente 10 cm entre balaustres." },
+    { question: "¿Cuántos balaustres necesito por metro?", answer: "Con balaustres cuadrados estándar de 3.8 cm y separación máxima de 10 cm, necesita aproximadamente 8 a 9 balaustres por metro lineal de barandal." },
+    { question: "¿Los balaustres pueden ser horizontales?", answer: "Algunos códigos permiten barandales horizontales, pero la mayoría requiere que una esfera de 10 cm no pase entre las barras. Consulte su código local — algunos prohíben diseños horizontales porque facilitan que los niños trepen." },
+    { question: "¿A qué altura debe estar el barandal?", answer: "La IRC requiere una altura mínima de 91 cm (36 pulgadas) para barandales residenciales de terraza y 107 cm (42 pulgadas) para comerciales o multifamiliares." },
+    { question: "¿Qué material es mejor para balaustres exteriores?", answer: "Para durabilidad exterior, el aluminio y el acero inoxidable son los mejores. La madera tratada a presión es económica pero requiere mantenimiento. Los balaustres compuestos no se pudren pero pueden decolorarse." },
+    { question: "¿Necesito permisos para instalar barandales?", answer: "Sí, en la mayoría de jurisdicciones los barandales de terraza requieren permiso de construcción e inspección. Los inspectores verifican la altura, separación de balaustres, fijación de postes y resistencia estructural." },
+  ],
+};
+
+// ─── SOFFIT ─────────────────────────────────────────────────────────────
+
+export const soffitCalculatorES: CalculatorSEOContent = {
+  disclaimer: "La estimación asume paneles de sofito estándar de 30 cm (12 pulgadas) de ancho. Los anchos y coberturas reales varían por fabricante. Agregue 10% de desperdicio.",
+  howToUse: [
+    "Mida el perímetro total de la casa en metros.",
+    "Ingrese el ancho del sofito (típicamente 30–60 cm desde la pared hasta la fascia).",
+    "Ingrese la longitud del panel de sofito (típicamente 3.66 m / 12 pies).",
+    "Haga clic en Calcular para obtener la cantidad de paneles, canal J y área de sofito.",
+  ],
+  materialInfo:
+    "El sofito es el revestimiento inferior del alero del techo, cubriendo el espacio entre la pared exterior y el borde de la fascia. Su función principal es proteger los cabios y la estructura del techo de la intemperie, la humedad y plagas como aves y avispas, mientras permite la ventilación del ático cuando se usan paneles ventilados. Los paneles de sofito vienen en tres estilos principales: sólido (sin ventilación), ventilado (con perforaciones para flujo de aire) y totalmente ventilado. Los materiales incluyen vinilo (el más común y económico a $150–300 MXN por panel), aluminio ($200–500 MXN), fibrocemento ($300–600 MXN) y madera ($400–800 MXN). Los paneles estándar miden 30 cm de ancho y 3.66 m de largo. La instalación requiere canal J a lo largo de la pared y un canal F o fascia receptora en el borde exterior. Para una casa con 40 m de perímetro y alero de 45 cm, necesitará aproximadamente 50 paneles, 80 metros de canal J y 2–3 días de trabajo. La ventilación adecuada del sofito combinada con ventilación de cumbrera es esencial para prevenir problemas de humedad y moho en el ático.",
+  nextSteps: [
+    { label: "Calculadora de Revestimiento Vinílico", href: "/calculators/exterior-shell/vinyl-siding-calculator/" },
+    { label: "Calculadora de Gotero", href: "/calculators/roofing/drip-edge-calculator/" },
+    { label: "Calculadora de Fascia", href: "/calculators/exterior-shell/hardie-siding-calculator/" },
+  ],
+  installationTips: [
+    "Instale el canal J a lo largo de la pared primero, nivelado y recto.",
+    "Deje 6 mm de holgura en cada extremo del panel para la expansión térmica.",
+    "Alterne paneles ventilados y sólidos si necesita ventilación parcial.",
+    "Corte los paneles con una sierra circular con disco fino o con tijeras para lámina.",
+  ],
+  commonMistakes: [
+    "No dejar espacio para expansión — los paneles de vinilo se combaran si se instalan muy ajustados.",
+    "Instalar todos los paneles sólidos cuando se necesita ventilación — use al menos un tercio ventilados.",
+    "No nivelar el canal J — cualquier desnivel se nota en los paneles instalados.",
+    "Olvidar instalar tapas en los extremos del sofito donde queda expuesto.",
+  ],
+  faqs: [
+    { question: "¿Qué es el sofito?", answer: "El sofito es el panel que cubre la parte inferior del alero del techo, desde la pared exterior hasta el borde de la fascia. Protege la estructura del techo y permite la ventilación del ático." },
+    { question: "¿Necesito sofito ventilado?", answer: "Sí, si su ático tiene ventilación de cumbrera. La combinación de ventilación de sofito y cumbrera crea un flujo de aire natural que previene acumulación de humedad y calor. Use al menos un tercio de paneles ventilados." },
+    { question: "¿Cuánto cuesta instalar sofito?", answer: "El sofito de vinilo cuesta $150–300 MXN por panel más instalación. Para una casa típica con 40 m de perímetro, los materiales cuestan $7,500–15,000 MXN y la mano de obra $8,000–16,000 MXN." },
+    { question: "¿Puedo instalar sofito sobre sofito existente?", answer: "Sí, si el sofito existente está en buenas condiciones. Fije el canal J nuevo sobre el sofito viejo. Si el sofito viejo está dañado o podrido, retírelo completamente." },
+    { question: "¿Qué ancho de sofito es estándar?", answer: "El ancho del sofito depende del vuelo del alero. Los aleros residenciales típicos son de 30 a 60 cm. Los paneles estándar de 30 cm cubren aleros estándar; para aleros más anchos use dos filas." },
+    { question: "¿Cuántos metros de canal J necesito?", answer: "Necesita canal J en ambos lados del sofito (lado de la pared y lado de la fascia), así que multiplique el perímetro por 2. Para 40 m de perímetro, necesita 80 m de canal J." },
+  ],
+};
+
+// ─── BOARD AND BATTEN ─────────────────────────────────────────────────────────
+
+export const boardAndBattenCalculatorES: CalculatorSEOContent = {
+  disclaimer: "El cálculo asume instalación vertical estándar con tablas lado a lado y listones cubriendo las juntas. Agregue 10% de desperdicio para cortes.",
+  howToUse: [
+    "Ingrese el área total de pared a cubrir en metros cuadrados.",
+    "Ingrese el ancho de tabla (típicamente 15–30 cm / 6–12 pulgadas).",
+    "Ingrese el ancho de listón (típicamente 3.8–5 cm / 1.5–2 pulgadas).",
+    "Ingrese la altura de la pared y haga clic en Calcular.",
+  ],
+  materialInfo:
+    "El revestimiento de tabla y listón (board and batten) es un estilo clásico de revestimiento vertical que consiste en tablas anchas instaladas verticalmente con listones angostos cubriendo las juntas entre ellas. Este diseño permite que la madera se expanda y contraiga con los cambios de humedad sin abrir brechas visibles. Históricamente fue el revestimiento más común en graneros y casas rurales americanas. Hoy se ofrece en madera natural (cedro, pino tratado), fibrocemento (Hardie Panel), vinilo y materiales compuestos. Las tablas típicas miden 15 a 30 cm de ancho y los listones 3.8 a 5 cm. En madera de cedro, las tablas cuestan $200–500 MXN por metro lineal y los listones $50–150 MXN. El fibrocemento cuesta 30–40% menos que el cedro con mejor durabilidad. La instalación vertical facilita el escurrimiento de agua, reduce la retención de humedad y proporciona un aspecto rústico-moderno muy popular en la arquitectura contemporánea. Para una pared de 3x12 m, necesitará aproximadamente 40 tablas de 30 cm y 41 listones de 3.8 cm, más 5–10% adicional para cortes alrededor de ventanas y puertas.",
+  nextSteps: [
+    { label: "Calculadora de Revestimiento Vinílico", href: "/calculators/exterior-shell/vinyl-siding-calculator/" },
+    { label: "Calculadora de Fibrocemento", href: "/calculators/exterior-shell/hardie-siding-calculator/" },
+    { label: "Calculadora de Membrana Hidrófuga", href: "/calculators/exterior-shell/housewrap-calculator/" },
+  ],
+  installationTips: [
+    "Instale una membrana hidrófuga (Tyvek o similar) sobre el revestimiento estructural antes del tabla y listón.",
+    "Fije las tablas al centro con un solo clavo para permitir expansión lateral.",
+    "Los listones deben fijarse a través de las tablas, no entre ellas, para asegurar buena sujeción.",
+    "Deje 3 mm de espacio entre tabla y listón en la parte inferior para drenaje.",
+    "Pre-selle todos los cortes y extremos antes de la instalación para prevenir absorción de humedad.",
+  ],
+  commonMistakes: [
+    "Clavar las tablas en ambos bordes — esto impide la expansión y causa rajaduras.",
+    "No instalar membrana hidrófuga debajo — es esencial para prevenir daño por agua en la estructura.",
+    "Usar listones demasiado angostos que no cubran adecuadamente la junta entre tablas.",
+    "Olvidar tratar los cortes de extremo — la madera sin sellar absorbe humedad y se pudre prematuramente.",
+  ],
+  faqs: [
+    { question: "¿Qué es el revestimiento de tabla y listón?", answer: "Es un estilo de revestimiento vertical con tablas anchas colocadas de pie y listones angostos que cubren las juntas entre ellas. El diseño permite la expansión natural de la madera y proporciona un aspecto rústico o moderno muy atractivo." },
+    { question: "¿Qué materiales se usan para tabla y listón?", answer: "Los materiales incluyen cedro (el más tradicional), pino tratado a presión, fibrocemento (Hardie Panel), vinilo y materiales compuestos. Cada uno tiene diferentes costos, durabilidad y requisitos de mantenimiento." },
+    { question: "¿Cuánto cuesta el revestimiento de tabla y listón?", answer: "En cedro: $200–500 MXN por metro lineal para tablas. En fibrocemento: $150–350 MXN. En vinilo: $100–250 MXN. La instalación profesional agrega $150–400 MXN por metro cuadrado." },
+    { question: "¿Es duradero el revestimiento de tabla y listón?", answer: "Sí, cuando se instala correctamente con membrana hidrófuga debajo. La madera de cedro dura 20–30 años con mantenimiento. El fibrocemento dura 30–50 años. El vinilo dura 20–40 años sin mantenimiento significativo." },
+    { question: "¿Puedo instalar tabla y listón horizontalmente?", answer: "El tabla y listón tradicional es vertical, pero puede instalarse horizontalmente. Sin embargo, la instalación horizontal requiere más cuidado con el drenaje ya que los listones pueden atrapar agua contra las tablas." },
+    { question: "¿Qué ancho de tabla y listón debo usar?", answer: "Las tablas de 20–25 cm con listones de 3.8 cm son las más populares. Tablas más anchas (30 cm) dan un aspecto más rústico. Tablas más angostas (15 cm) dan un aspecto más refinado." },
+  ],
+};
+
+// ─── RAKE WALL ─────────────────────────────────────────────────────────────
+
+export const rakeWallCalculatorES: CalculatorSEOContent = {
+  disclaimer: "Los montantes de muro inclinado requieren cortes individuales en ángulo. Las alturas son teóricas — mida cada montante in situ antes de cortar. Agregue 10% de desperdicio.",
+  howToUse: [
+    "Ingrese el largo de la pared inclinada en metros.",
+    "Ingrese la altura del extremo más bajo (corto) en metros.",
+    "Ingrese la altura del extremo más alto (largo) en metros.",
+    "Ingrese el espaciado de montantes (40 cm o 60 cm entre centros) y haga clic en Calcular.",
+  ],
+  materialInfo:
+    "Un muro inclinado (rake wall o gable wall) es una pared que sigue la pendiente del techo, típicamente encontrada en los extremos de un techo a dos aguas, en muros que soportan techos de cobertizo, o en la parte superior de muros con techo de diferentes alturas. A diferencia de un muro rectangular estándar donde todos los montantes tienen la misma altura, cada montante en un muro inclinado tiene una altura diferente que aumenta progresivamente desde el extremo más bajo al más alto. La placa superior sigue un ángulo que coincide con la pendiente del techo. Esto requiere que cada montante sea cortado a una longitud específica y que la placa superior tenga un corte en bisel para que el techo o el revestimiento asiente correctamente. Los montantes típicos son de 5x10 cm (2x4) o 5x15 cm (2x6) al mismo espaciado que el resto de la estructura (40 cm o 60 cm entre centros). Los montantes más cortos pueden ser demasiado cortos para clavar — en ese caso se instalan bloques de relleno horizontales entre montantes adyacentes para proporcionar superficie de clavado para el revestimiento. Para un muro inclinado de 6 m de largo con alturas de 2.4 m a 4.8 m, necesitará 16 montantes de diferentes longitudes a 40 cm entre centros, con el más corto de 2.4 m y el más largo de 4.8 m.",
+  nextSteps: [
+    { label: "Calculadora de Montantes", href: "/calculators/wall-framing/stud-calculator/" },
+    { label: "Calculadora Techo a Dos Aguas", href: "/calculators/roofing/gable-roof-calculator/" },
+    { label: "Calculadora de Revestimiento", href: "/calculators/wall-framing/exterior-sheathing-calculator/" },
+  ],
+  installationTips: [
+    "Marque todas las posiciones de montantes en la placa inferior antes de comenzar.",
+    "Use una línea de tiza entre los puntos alto y bajo para marcar el ángulo de la placa superior.",
+    "Corte la placa superior con el bisel correcto para que coincida con la pendiente del techo.",
+    "Mida y corte cada montante individualmente — las alturas teóricas pueden variar en la práctica.",
+    "Para montantes muy cortos (menos de 60 cm), agregue bloques horizontales de relleno para clavado de revestimiento.",
+  ],
+  commonMistakes: [
+    "Cortar todos los montantes a la misma altura — cada montante tiene una longitud diferente en un muro inclinado.",
+    "No biselar la placa superior — el revestimiento y el techo no asentarán correctamente sin el ángulo correcto.",
+    "Olvidar instalar bloques de relleno para montantes cortos — el revestimiento necesita superficie de clavado.",
+    "No verificar que el ángulo del muro coincida con la pendiente del techo — errores aquí causan problemas de ajuste.",
+  ],
+  faqs: [
+    { question: "¿Qué es un muro inclinado?", answer: "Un muro inclinado (rake wall) es una pared donde la placa superior sigue un ángulo en vez de ser horizontal. Cada montante tiene una altura diferente. Se encuentran típicamente en frontones de techos a dos aguas y muros bajo techos de cobertizo." },
+    { question: "¿Cómo calculo las alturas de los montantes?", answer: "La diferencia de altura entre los extremos se divide entre el número de espacios de montantes. Cada montante sucesivo aumenta esa cantidad. Para un muro de 6 m que va de 2.4 a 4.8 m con 15 espacios, cada montante aumenta (4.8-2.4)/15 = 16 cm." },
+    { question: "¿Necesito biselar la placa superior?", answer: "Sí, la placa superior debe cortarse en bisel al ángulo de la pendiente del techo para que los cabios y el revestimiento asienten correctamente. Use un transportador o escuadra de carpintero para marcar el ángulo." },
+    { question: "¿Qué hago con los montantes muy cortos?", answer: "Los montantes menores a 60 cm pueden ser difíciles de clavar y no brindan superficie de clavado adecuada para el revestimiento. Instale bloques horizontales de relleno entre montantes adyacentes." },
+    { question: "¿El espaciado de montantes cambia en muros inclinados?", answer: "No, el espaciado horizontal entre montantes permanece igual (40 cm o 60 cm entre centros). Solo cambia la altura de cada montante individual." },
+    { question: "¿Cuánto material extra necesito para un muro inclinado?", answer: "Planifique 10–15% de desperdicio adicional porque cada montante tiene un corte diferente y las piezas de recorte raramente se pueden reutilizar. Los bloques de relleno para montantes cortos agregan material adicional." },
+  ],
+};
+
+// ─── DECK BOARD SPACING ─────────────────────────────────────────────────────
+
+export const deckBoardSpacingCalculatorES: CalculatorSEOContent = {
+  disclaimer: "El espaciado recomendado varía según el material de la tabla. La madera natural requiere más espacio para expansión que los materiales compuestos. Siga las especificaciones del fabricante.",
+  howToUse: [
+    "Ingrese el largo total del deck (la dimensión a lo largo de la cual van las tablas) en metros.",
+    "Ingrese el ancho de la tabla en centímetros (típico 14 cm / 5.5 pulgadas).",
+    "Ingrese el tamaño de junta deseado en milímetros (típico 5–8 mm para madera, 3–5 mm para compuesto).",
+    "Haga clic en Calcular para obtener la cantidad de tablas y la separación real uniforme.",
+  ],
+  materialInfo:
+    "El espaciado correcto entre tablas de deck es esencial para la durabilidad, seguridad y apariencia del deck. Las juntas entre tablas permiten el drenaje de agua, la expansión y contracción del material, y la circulación de aire debajo del deck para prevenir pudrición. La madera tratada a presión necesita juntas de 5 a 8 mm (3/16 a 5/16 de pulgada) para permitir la expansión cuando la madera absorbe humedad. La madera de cedro o IPE necesita 5 a 6 mm. Los materiales compuestos (Trex, TimberTech) típicamente necesitan 3 a 5 mm dependiendo de la temperatura de instalación — más espacio en climas fríos porque los compuestos se expanden con el calor. La tabla de deck más común mide 14 cm (5.5 pulgadas) de ancho y 3.6 m (12 pies) de largo. Para un deck de 4 m de ancho con tablas de 14 cm y junta de 6 mm, necesitará aproximadamente 27 tablas con juntas uniformes de 5.8 mm. Los sujetadores ocultos (tipo Camo o Kreg) facilitan el espaciado uniforme y proporcionan una superficie sin tornillos visibles. El costo de tablas de deck varía de $100–250 MXN por metro lineal para tratada, $200–500 MXN para cedro y $300–800 MXN para compuesto.",
+  nextSteps: [
+    { label: "Calculadora Tablas de Deck", href: "/calculators/outdoor/deck-board-calculator/" },
+    { label: "Calculadora de Cimentación para Deck", href: "/calculators/outdoor/deck-footing-calculator/" },
+    { label: "Calculadora de Barandal para Deck", href: "/calculators/outdoor/deck-railing-calculator/" },
+  ],
+  installationTips: [
+    "Use un separador de espesor constante (un clavo, moneda o espaciador comercial) para mantener juntas uniformes.",
+    "Instale la primera tabla perfectamente paralela a la casa y recta — todas las demás seguirán esta referencia.",
+    "En madera tratada húmeda, instale las tablas tocándose — se contraerán al secarse y crearán la junta natural.",
+    "Para compuestos, siga estrictamente las indicaciones del fabricante sobre junta según la temperatura de instalación.",
+  ],
+  commonMistakes: [
+    "Instalar tablas de madera tratada húmeda con junta — al secarse la junta será demasiado grande y podrían caer objetos pequeños.",
+    "No considerar la expansión térmica de compuestos — los decks de compuesto instalados en invierno pueden pandear en verano.",
+    "Juntas desiguales — se notan mucho y dan apariencia descuidada. Use siempre un espaciador consistente.",
+    "Junta demasiado grande que atrapa tacones de zapatos o permite que objetos caigan debajo del deck.",
+  ],
+  faqs: [
+    { question: "¿Cuál es la junta correcta entre tablas de deck?", answer: "Para madera tratada a presión: 5–8 mm. Para cedro o IPE: 5–6 mm. Para compuestos: 3–5 mm según temperatura de instalación y especificaciones del fabricante." },
+    { question: "¿Por qué es importante el espaciado de tablas de deck?", answer: "El espaciado permite el drenaje de agua, la expansión del material, y la circulación de aire. Sin juntas adecuadas, el agua se estanca, la madera se pudre y los compuestos pueden pandear." },
+    { question: "¿Debo instalar tablas de madera tratada con o sin junta?", answer: "Depende del contenido de humedad. La madera tratada recién comprada está húmeda y se contraerá — instale tocándose. Si la madera ya está seca (semanas después de comprarla), instale con junta de 5–8 mm." },
+    { question: "¿Qué espaciador debo usar?", answer: "Un clavo de 16d (4 mm) es el espaciador más común para compuestos. Para madera tratada, use un clavo de 8d o un separador comercial de 6 mm. Los sujetadores ocultos tipo Camo tienen espaciador integrado." },
+    { question: "¿Las juntas cambian con el tiempo?", answer: "Sí. La madera se contrae al secarse y se expande con la humedad. Los compuestos se expanden con el calor y se contraen con el frío. Las juntas iniciales cambiarán estacionalmente." },
+    { question: "¿Cuántas tablas necesito para mi deck?", answer: "Divida el ancho del deck entre (ancho de tabla + junta). Para un deck de 4 m con tablas de 14 cm y junta de 6 mm: 4000 / (140 + 6) = 27.4, redondee a 28 tablas." },
+  ],
+};
+
 // ─── REGISTRY MAP ─────────────────────────────────────────────────────────────
 
 export const registryES: Record<string, Record<string, CalculatorSEOContent>> = {
@@ -3376,6 +3819,8 @@ export const registryES: Record<string, Record<string, CalculatorSEOContent>> = 
     "mortar-mix-calculator": mortarMixCalculator,
     "block-fill-calculator": blockFillCalculator,
     "retaining-wall-calculator": retainingWallCalculator,
+    "rebar-calculator": rebarCalculator,
+    "rebar-spacing-calculator": rebarSpacingCalculator,
   },
   "floor-framing": {
     "rim-joist-calculator": rimJoistCalculator,
@@ -3390,6 +3835,7 @@ export const registryES: Record<string, Record<string, CalculatorSEOContent>> = 
     "top-plate-calculator": topPlateCalculator,
     "header-calculator": headerCalculator,
     "exterior-sheathing-calculator": exteriorSheathingCalculator,
+    "rake-wall-calculator": rakeWallCalculatorES,
   },
   roofing: {
     "truss-calculator": trussCalculator,
@@ -3408,6 +3854,8 @@ export const registryES: Record<string, Record<string, CalculatorSEOContent>> = 
     "vinyl-siding-calculator": vinylSidingCalculator,
     "hardie-siding-calculator": hardieSidingCalculator,
     "window-flashing-calculator": windowFlashingCalculator,
+    "soffit-calculator": soffitCalculatorES,
+    "board-and-batten-calculator": boardAndBattenCalculatorES,
   },
   "insulation-drywall": {
     "cavity-insulation-calculator": cavityInsulationCalculator,
@@ -3436,6 +3884,7 @@ export const registryES: Record<string, Record<string, CalculatorSEOContent>> = 
     "deck-stair-calculator": deckStairCalculatorES,
     "post-hole-calculator": postHoleCalculatorES,
     "pond-calculator": pondCalculator,
+    "deck-board-spacing-calculator": deckBoardSpacingCalculatorES,
   },
   stairs: {
     "stair-calculator": stairCalculatorES,
@@ -3443,5 +3892,6 @@ export const registryES: Record<string, Record<string, CalculatorSEOContent>> = 
     "rise-over-run-calculator": riseOverRunCalculatorES,
     "spiral-staircase-calculator": spiralStaircaseCalculatorES,
     "stair-landing-calculator": stairLandingCalculatorES,
+    "baluster-spacing-calculator": balusterSpacingCalculatorES,
   },
 };

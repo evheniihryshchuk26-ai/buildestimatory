@@ -2460,6 +2460,449 @@ const stairLandingCalcPTBR: CalculatorSEOContent = {
     { question: "Custo do patamar?", answer: "Materiais: R$ 1.000–4.000. Mão de obra: R$ 2.000–6.000. L: R$ 3.000–10.000 a mais. U: R$ 5.000–15.000 a mais." },
   ],
 };
+
+// ─── VERGALHÃO ──────────────────────────────────────────────────────────────
+
+export const rebarCalculator: CalculatorSEOContent = {
+  disclaimer: "Esta estimativa assume uma malha plana de camada única. Os requisitos reais de armadura dependem das especificações de engenharia, condições do solo e normas locais. Consulte sempre um engenheiro estrutural para aplicações com carga e zonas sísmicas.",
+  howToUse: [
+    "Insira o comprimento e a largura da laje em metros.",
+    "Defina o espaçamento desejado — 15 cm é comum para lajes residenciais.",
+    "Selecione o diâmetro do vergalhão: 8 mm para carga leve, 10 mm para residencial padrão, 12,5 mm para estrutural.",
+    "Clique em Calcular para quantidade de barras, metros lineares e peso total.",
+  ],
+  materialInfo:
+    "O vergalhão (barra de aço CA-50 ou CA-60) é uma barra de aço nervurada embutida no concreto para fornecer resistência à tração que o concreto sozinho não pode suportar. O concreto é forte à compressão mas fraco à tração — o vergalhão funciona como ponte nas fissuras e mantém a laje unida sob carga. Os diâmetros mais comuns para construção residencial e comercial leve no Brasil são: 6,3 mm (0,245 kg/m), 8 mm (0,395 kg/m), 10 mm (0,617 kg/m) e 12,5 mm (0,963 kg/m). O vergalhão padrão é comercializado em barras de 12 metros. Quando a dimensão da laje excede o comprimento da barra, são necessárias emendas com transpasse mínimo de 40 diâmetros — ou seja, 50 cm para vergalhão de 12,5 mm. O aço CA-50 (limite de escoamento 500 MPa) é o padrão pela ABNT NBR 7480 para construção residencial no Brasil. Está disponível em aço preto (sem revestimento), galvanizado e com revestimento epóxi para ambientes corrosivos. O espaçamento típico é de 15 cm entre eixos em ambas as direções para lajes residenciais de 10-12 cm, 20 cm para calçadas e 10 cm para garagens ou lajes estruturais. O vergalhão deve ser elevado do lastro com espaçadores (pastilhas ou treliças) para ficar no terço inferior da espessura da laje — colocar o vergalhão no chão não proporciona nenhum benefício estrutural. O custo atual é de aproximadamente R$ 3,50–6,00 por metro linear de vergalhão de 10 mm, ou R$ 42–72 por barra de 12 m.",
+  nextSteps: [
+    { label: "Calculadora de Espaçamento de Vergalhão", href: "/calculators/foundation/rebar-spacing-calculator/" },
+    { label: "Calculadora de Laje de Concreto", href: "/calculators/foundation/concrete-slab-calculator/" },
+    { label: "Calculadora de Sapatas", href: "/calculators/foundation/concrete-footing-calculator/" },
+  ],
+  installationTips: [
+    "Coloque o vergalhão sobre espaçadores para que fique no terço inferior da laje — nunca apoie diretamente no solo.",
+    "Emende as barras com transpasse de 40 diâmetros (50 cm para 12,5 mm) e amarre cada cruzamento com arame recozido.",
+    "Amarre cada cruzamento com arame recozido BWG 18 usando torquês ou amarrador.",
+    "Mantenha cobrimento mínimo de 3,0 cm (laje interna) a 5,0 cm (laje em contato com solo) conforme NBR 6118.",
+    "Corte o vergalhão com tesoura de corte ou esmerilhadeira com disco de corte — nunca use maçarico.",
+    "Dobre o vergalhão a frio com dobradeira manual ou hidráulica — aquecer enfraquece a barra.",
+  ],
+  commonMistakes: [
+    "Colocar o vergalhão no chão em vez de elevá-lo com espaçadores — sem posicionamento correto a armadura não tem valor estrutural.",
+    "Transpasse insuficiente — emendas menores que 40 diâmetros se separarão sob carga.",
+    "Usar diâmetro errado — vergalhão de 6,3 mm é muito leve para garagens; use mínimo 8-10 mm.",
+    "Não amarrar os cruzamentos — vergalhão solto se desloca durante a concretagem.",
+    "Esquecer o fator de desperdício — peça 10–15% a mais para cortes, dobras e transpasses.",
+  ],
+  faqs: [
+    { question: "Quanto vergalhão preciso para uma laje de 6×6 m?", answer: "Uma laje de 6×6 m com vergalhão de 10 mm a 15 cm entre eixos precisa de 41 barras em cada direção — 82 barras no total, cerca de 44 barras de 12 m. O total é de aproximadamente 252 metros lineares pesando cerca de 156 kg. Acrescente 10% de desperdício." },
+    { question: "Qual diâmetro para uma laje de 10 cm?", answer: "Vergalhão de 10 mm (CA-50) é a escolha padrão para lajes residenciais de 10 cm (piso de garagem, laje de piso). Para calçadas leves, 8 mm pode ser suficiente. Para lajes estruturais, suba para 12,5 mm ou consulte um engenheiro estrutural." },
+    { question: "Qual espaçamento devo usar?", answer: "O espaçamento mais comum é 15 cm entre eixos em ambas as direções para lajes residenciais de 10 cm. Calçadas leves: 20 cm. Garagens e lajes estruturais: 10 cm. O engenheiro ou a ABNT NBR 6118 podem especificar espaçamentos diferentes." },
+    { question: "Quanto custa o vergalhão?", answer: "Vergalhão de 10 mm custa R$ 3,50–6,00/m linear, ou R$ 42–72 por barra de 12 m. Uma laje de 6×6 m precisa de ~44 barras, custando R$ 1.848–3.168 em materiais. Galvanizado custa 30–50% mais. Espaçadores: R$ 0,50–2,00 cada." },
+    { question: "Vergalhão ou tela soldada?", answer: "O vergalhão oferece melhor controle de fissuras e é obrigatório para garagens, lajes estruturais e concreto acima de 10 cm. A tela soldada (Q-92, Q-138) é aceitável para calçadas e lajes leves abaixo de 10 cm. A tela é mais difícil de manter elevada durante a concretagem." },
+    { question: "Como calculo o peso do vergalhão?", answer: "Multiplique os metros lineares pelo peso por metro: 6,3 mm = 0,245 kg/m, 8 mm = 0,395 kg/m, 10 mm = 0,617 kg/m, 12,5 mm = 0,963 kg/m. Exemplo: 252 m de 10 mm = 252 × 0,617 = 156 kg." },
+  ],
+};
+
+export const rebarSpacingCalculator: CalculatorSEOContent = {
+  disclaimer: "As recomendações de espaçamento são diretrizes gerais para uso residencial e comercial leve. O espaçamento real deve ser determinado por um engenheiro estrutural com base nas cargas, condições do solo e normas locais.",
+  howToUse: [
+    "Insira o comprimento e a largura da laje em metros.",
+    "Selecione o diâmetro — 10 mm é padrão para a maioria dos trabalhos residenciais.",
+    "Escolha o tipo de carga para obter o espaçamento recomendado.",
+    "Clique em Calcular para espaçamento ideal, quantidade de barras e espaçadores.",
+  ],
+  materialInfo:
+    "O espaçamento do vergalhão determina a proximidade das barras de aço em uma laje de concreto, afetando diretamente a capacidade de carga e a resistência à fissuração. Um espaçamento adequado garante que as forças de tração sejam distribuídas uniformemente em toda a seção de concreto. Para lajes residenciais (calçadas, pisos internos, áreas de lazer), espaçamento de 20 cm com vergalhão de 10 mm é comum. Garagens e áreas de estacionamento usam 15 cm para suportar cargas de veículos. Lajes estruturais para bases de máquinas, pisos comerciais ou lajes nervuradas requerem 10 cm ou menos, conforme projeto do engenheiro estrutural. Os espaçadores (pastilhas de concreto ou treliças metálicas) são essenciais para manter o vergalhão na altura correta dentro da laje. A regra padrão é um espaçador a cada 0,4 m² de área de laje. Existem vários tipos: individuais para barras isoladas, contínuos para comprimentos longos e treliças para armaduras positivas e negativas. Espaçadores com ponta plástica são necessários quando o vergalhão fica próximo à superfície para evitar manchas de ferrugem. O cobrimento — a distância do vergalhão à superfície de concreto mais próxima — deve ser de pelo menos 3,0 cm para lajes internas e 5,0 cm para lajes em contato com solo, conforme ABNT NBR 6118. Cobrimento insuficiente leva à corrosão e desplacamento em 5 a 10 anos. Para lajes com mais de 12 m em qualquer direção, as barras devem ser emendadas com transpasse mínimo de 40 diâmetros. As emendas devem ser escalonadas para que no máximo 50% das barras sejam emendadas na mesma seção. O custo de instalação do vergalhão (mão de obra e materiais) fica entre R$ 25–50/m² para uma malha padrão de 15 cm, incluindo espaçadores e arame.",
+  nextSteps: [
+    { label: "Calculadora de Vergalhão", href: "/calculators/foundation/rebar-calculator/" },
+    { label: "Calculadora de Laje", href: "/calculators/foundation/concrete-slab-calculator/" },
+    { label: "Calculadora de Concreto", href: "/calculators/foundation/concrete-calculator/" },
+  ],
+  installationTips: [
+    "Marque as linhas de espaçamento na fôrma com giz antes de posicionar o vergalhão.",
+    "Coloque espaçadores a cada 1,2 m em ambas as direções antes de posicionar as barras.",
+    "Posicione primeiro as barras no sentido mais longo, depois as transversais — amarre cada cruzamento.",
+    "Mantenha 3,0 a 5,0 cm de cobrimento entre o vergalhão e qualquer borda ou fundo da laje.",
+    "Em lajes com juntas de controle, passe o vergalhão de forma contínua — não corte nas juntas.",
+    "Caminhe sobre a malha antes da concretagem para verificar se nenhuma barra se soltou dos espaçadores.",
+  ],
+  commonMistakes: [
+    "Espaçamento muito largo para o tipo de carga — 20 cm é excessivo para garagens e estacionamentos.",
+    "Espaçadores muito distantes — vergalhão sem apoio afunda na brita e perde valor estrutural.",
+    "Cortar vergalhão nas juntas de controle — as juntas devem fissurar; o vergalhão deve ser contínuo.",
+    "Não escalonar as emendas — todas as emendas no mesmo ponto criam um plano fraco na laje.",
+    "Ignorar os requisitos de cobrimento — menos de 3,0 cm de cobrimento causa corrosão prematura.",
+  ],
+  faqs: [
+    { question: "Qual é o espaçamento padrão de vergalhão para laje?", answer: "O mais comum é 15 cm em ambas as direções para lajes residenciais de 10 cm. Calçadas leves: 20 cm. Garagens: 15 cm. Lajes estruturais: 10 cm ou conforme projeto." },
+    { question: "Quantos espaçadores preciso?", answer: "Planeje 1 espaçador por 0,4 m². Uma laje de 6×6 m (36 m²) precisa de ~90 espaçadores. Para vergalhão grosso (12,5 mm+), use espaçadores com capacidade adequada. Máximo 1,2 m entre espaçadores." },
+    { question: "O que acontece se o espaçamento for muito largo?", answer: "A laje desenvolverá fissuras mais largas sob carga porque as forças de tração não são distribuídas adequadamente. Isso reduz a capacidade e permite infiltração de água." },
+    { question: "Tela soldada ou vergalhão?", answer: "Tela soldada (Q-92, Q-138) é aceitável para lajes leves abaixo de 10 cm. Vergalhão CA-50 oferece melhor controle de fissuras e é obrigatório para garagens, lajes estruturais e concreto acima de 10 cm." },
+    { question: "Como o tipo de carga afeta o espaçamento?", answer: "Cargas maiores requerem espaçamentos menores. Lajes residenciais (pedestres): 20 cm. Garagens (veículos): 15 cm. Estrutural (máquinas, comercial): 10 cm ou menor." },
+    { question: "Qual é o cobrimento mínimo para vergalhão?", answer: "Conforme ABNT NBR 6118: 3,0 cm para lajes internas (classe I), 4,0 cm para lajes externas (classe II), e 5,0 cm para lajes em contato com solo ou água (classe III-IV). Cobrimento insuficiente causa corrosão em 5–10 anos." },
+  ],
+};
+
+// ─── HIP ROOF (TELHADO QUATRO ÁGUAS) ─────────────────────────────────────────
+
+export const hipRoofCalculatorPTBR: CalculatorSEOContent = {
+  disclaimer: "A geometria do telhado quatro águas é aproximada. Os caibros de espigão variam em comprimento — corte cada um sob medida. Adicione 10–15% de fator de desperdício para madeira.",
+  howToUse: [
+    "Meça o comprimento e a largura total da edificação em metros.",
+    "Insira a inclinação do telhado (elevação por 12 de percurso horizontal).",
+    "Selecione o espaçamento dos caibros (40 cm entre eixos é o padrão).",
+    "Clique em Calcular para obter quantidade de caibros, comprimento dos espigões, área do telhado e comprimento da cumeeira.",
+  ],
+  materialInfo:
+    "O telhado quatro águas possui quatro lados inclinados — dois trapezoidais e dois triangulares — que se encontram em uma cumeeira central mais curta que o comprimento da edificação. Como todas as paredes ficam protegidas por beirais, os telhados quatro águas oferecem resistência superior ao vento (suportam ventos de 180+ km/h melhor que telhados duas águas) e são preferidos em regiões litorâneas e zonas de alta exposição eólica. A estrutura requer quatro caibros de espigão que correm diagonalmente de cada canto até a cumeeira, caibros comuns centrais em cada extremidade triangular e numerosos caibros de espigão curtos (jack rafters) progressivamente menores. O caibro de espigão é tipicamente uma seção maior que os caibros comuns (ex.: 6x20 cm para espigão com 6x16 cm para comuns) porque recebe carga dos dois lados. Conforme a ABNT NBR 7190, todas as ligações devem ser dimensionadas para as cargas atuantes. A cumeeira tem comprimento igual ao comprimento da edificação menos a largura. Para um telhado quatro águas de 9x12 m com inclinação 30%, os materiais de estrutura custam entre R$ 12.000 e R$ 25.000, com mão de obra profissional adicionando R$ 15.000 a R$ 30.000.",
+  nextSteps: [
+    { label: "Calculadora de Forro de Telhado", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Calculadora de Telhas", href: "/calculators/roofing/shingle-calculator/" },
+    { label: "Calculadora de Inclinação", href: "/calculators/roofing/roof-pitch-calculator/" },
+    { label: "Calculadora Telhado Duas Águas", href: "/calculators/roofing/gable-roof-calculator/" },
+  ],
+  installationTips: [
+    "Use caibros de espigão uma seção mais profunda que os comuns para suportar a carga dupla.",
+    "Utilize esquadro de carpinteiro ou calculadora de construção para ângulos compostos dos caibros curtos.",
+    "Instale os caibros de espigão primeiro, depois preencha com caibros curtos do mais longo ao mais curto.",
+    "Chanfre a parte superior dos espigões (rebaixamento do espigão) para que o forro assente plano na linha do espigão.",
+    "Escora temporária nos espigões até a instalação do forro — eles podem torcer pelo próprio peso.",
+  ],
+  commonMistakes: [
+    "Usar a mesma seção para espigões e comuns — espigões carregam o dobro e precisam ser uma seção maior.",
+    "Não considerar o rebaixamento do espigão — o forro não assentará plano e criará uma protuberância.",
+    "Esquecer que caibros curtos requerem cortes de ângulo composto, não simples cortes a prumo.",
+    "Subestimar materiais — telhados quatro águas usam 10–15% mais madeira e forro que um telhado duas águas equivalente.",
+  ],
+  faqs: [
+    { question: "O que é um telhado quatro águas?", answer: "Um telhado quatro águas tem quatro lados inclinados que descem em direção às paredes. Os dois lados mais longos são trapézios e os dois mais curtos são triângulos. Todos se encontram em uma cumeeira mais curta que o comprimento da edificação. São mais resistentes ao vento que os telhados duas águas e protegem todas as quatro paredes com beirais." },
+    { question: "Como calcular a área de um telhado quatro águas?", answer: "Meça a planta baixa (comprimento x largura) e multiplique pelo fator de inclinação. Para inclinação de 30% (6/12), o fator é 1,118. Uma edificação de 9x12 m com inclinação 30% tem aproximadamente 9 x 12 x 1,118 = 120,7 m² de área de telhado." },
+    { question: "Quantos caibros de espigão um telhado quatro águas tem?", answer: "Um telhado quatro águas padrão tem exatamente 4 caibros de espigão — um de cada canto da edificação diagonalmente até o extremo da cumeeira. Cada espigão é mais longo que os caibros comuns porque corre a 45 graus em planta." },
+    { question: "Telhado quatro águas vs duas águas — qual é melhor?", answer: "Telhados quatro águas são mais resistentes ao vento, protegem todas as paredes e são estruturalmente autotravados. Telhados duas águas são mais simples, baratos e oferecem mais espaço no sótão. Em regiões litorâneas e com ventos fortes, os quatro águas são preferidos." },
+    { question: "Qual o comprimento de um caibro de espigão?", answer: "O caibro de espigão corre diagonalmente do canto até a cumeeira. Seu percurso horizontal é o percurso do caibro comum multiplicado por raiz de 2 (cerca de 1,414). Para uma edificação de 9 m de largura com inclinação 30%, o percurso do caibro comum é 4,5 m, o do espigão é 6,36 m." },
+    { question: "Qual o comprimento da cumeeira em um telhado quatro águas?", answer: "A cumeeira equivale ao comprimento da edificação menos a largura. Para uma edificação de 12x9 m, a cumeeira mede 12 - 9 = 3 m. Se a edificação for quadrada, não há cumeeira — os quatro espigões se encontram em um ponto único, formando um telhado piramidal." },
+  ],
+};
+
+// ─── GAMBREL ROOF (TELHADO MANSARDA) ──────────────────────────────────────────
+
+export const gambrelRoofCalculatorPTBR: CalculatorSEOContent = {
+  disclaimer: "As proporções do telhado mansarda usam uma divisão padrão 67/33 inferior/superior. As proporções reais podem variar conforme o projeto. Consulte um engenheiro estrutural para os projetos definitivos.",
+  howToUse: [
+    "Insira o comprimento e a largura da edificação em metros.",
+    "Insira a inclinação inferior (íngreme) — tipicamente 18/12 a 24/12 para as paredes estilo celeiro.",
+    "Insira a inclinação superior (suave) — tipicamente 4/12 a 8/12 para a cobertura.",
+    "Selecione o espaçamento de caibros e clique em Calcular.",
+  ],
+  materialInfo:
+    "O telhado mansarda — comumente chamado de telhado de celeiro — possui duas inclinações distintas em cada lado: uma seção inferior íngreme (tipicamente 60–70 graus) e uma seção superior mais suave (tipicamente 20–30 graus). Esse design de dupla inclinação maximiza o espaço utilizável no andar superior, sendo a escolha clássica para celeiros, edificações agrícolas e casas em estilo colonial. A inclinação inferior íngreme funciona quase como uma parede, proporcionando altura total no sótão. Estruturalmente, a transição entre as duas inclinações (a quebra mansarda) requer uma terça horizontal que serve de apoio para os caibros superiores e transfere cargas aos inferiores. Conforme a ABNT NBR 7190, todas as ligações devem ser verificadas. Os caibros inferiores são tipicamente 6x20 ou 6x25 cm, enquanto os superiores podem ser 6x16 ou 6x20 cm. O design mansarda usa 20–30% menos material que adicionar um segundo pavimento completo com telhado duas águas convencional. Os custos de material para uma estrutura mansarda de 9x12 m variam de R$ 15.000 a R$ 30.000 para madeira. Uma desvantagem é a resistência ao vento — a inclinação inferior íngreme captura o vento.",
+  nextSteps: [
+    { label: "Calculadora de Forro de Telhado", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Calculadora de Caibros", href: "/calculators/roofing/rafter-calculator/" },
+    { label: "Calculadora de Telhas", href: "/calculators/roofing/shingle-calculator/" },
+    { label: "Calculadora Telhado Duas Águas", href: "/calculators/roofing/gable-roof-calculator/" },
+  ],
+  installationTips: [
+    "Construa as tesouras mansarda sobre superfície plana (gabarito) para garantir consistência em todas as tesouras.",
+    "A terça na quebra mansarda é estrutural — use viga adequada ou madeira dupla.",
+    "Instale mãos-francesas na transição inferior-superior para maior rigidez.",
+    "Revesta cuidadosamente através da quebra mansarda — a mudança de ângulo requer cortes precisos.",
+    "Use tirantes ou vigas de forro na seção superior para evitar empuxo lateral.",
+  ],
+  commonMistakes: [
+    "Subdimensionar a terça na transição — ela carrega forças estruturais significativas.",
+    "Não contraventar a transição inferior-superior — o ponto de quebra é a parte mais fraca da mansarda.",
+    "Usar a mesma inclinação em ambas as seções — a inferior deve ser significativamente mais íngreme.",
+    "Ignorar a exposição ao vento — telhados mansarda têm desempenho ruim em áreas com ventos fortes.",
+  ],
+  faqs: [
+    { question: "O que é um telhado mansarda?", answer: "Um telhado mansarda tem duas inclinações diferentes em cada lado — uma inferior íngreme (60 a 70 graus) e uma superior suave (20 a 30 graus). Esse design de celeiro maximiza o espaço interior utilizável no andar superior." },
+    { question: "Que inclinações são usadas em um telhado mansarda?", answer: "A seção inferior usa tipicamente 18/12 a 24/12 (56 a 63 graus), enquanto a superior usa 4/12 a 8/12 (18 a 33 graus). Uma combinação comum é 20/12 inferior e 6/12 superior." },
+    { question: "Quanto espaço extra um telhado mansarda proporciona?", answer: "Um telhado mansarda proporciona aproximadamente 70 a 80 por cento da área de um segundo pavimento completo, comparado com 40 a 50 por cento para um sótão de telhado duas águas." },
+    { question: "Telhados mansarda são resistentes?", answer: "São resistentes quando bem dimensionados e contraventados conforme ABNT NBR 7190, mas são mais vulneráveis ao vento que telhados quatro águas ou duas águas devido à inclinação inferior íngreme." },
+    { question: "Qual a diferença entre mansarda e telhado francês?", answer: "O telhado mansarda tem duas inclinações em dois lados com oitões. O telhado francês (mansard) tem duas inclinações nos quatro lados, como um híbrido entre quatro águas e mansarda." },
+    { question: "Quanto custa construir um telhado mansarda?", answer: "Um telhado mansarda custa 15 a 25 por cento mais que um telhado duas águas simples pelo mesmo tamanho. Para uma edificação de 9x12 m, espere R$ 20.000 a R$ 45.000 em madeira e ferragens, mais R$ 25.000 a R$ 55.000 em mão de obra profissional." },
+  ],
+};
+
+// ─── GABLE ROOF (TELHADO DUAS ÁGUAS) ──────────────────────────────────────────
+
+export const gableRoofCalculatorPTBR: CalculatorSEOContent = {
+  disclaimer: "Adicione 10–15% de fator de desperdício para cortes e beirais. Os comprimentos dos caibros não incluem beiral — adicione 30–60 cm por caibro para beirais.",
+  howToUse: [
+    "Insira o comprimento da edificação (ao longo da cumeeira) e a largura (perpendicular ao oitão) em metros.",
+    "Insira a inclinação do telhado (elevação por 12 de percurso).",
+    "Selecione o espaçamento de caibros (40 cm entre eixos é o padrão residencial).",
+    "Clique em Calcular para obter quantidade de caibros, área do telhado, comprimento da cumeeira e área do oitão.",
+  ],
+  materialInfo:
+    "O telhado duas águas é o tipo de cobertura residencial mais comum no Brasil, apresentando dois lados inclinados que se encontram em uma cumeeira central ao longo de toda a extensão da edificação. As seções de parede triangulares em cada extremidade — os oitões — dão nome a esse estilo. São populares por sua simplicidade de projeto, economia de materiais e excelente escoamento de água da chuva. As duas inclinações opostas criam ventilação natural quando combinadas com aberturas no beiral e cumeeira. Inclinações residenciais padrão variam de 20% a 45%, com 30% sendo a mais comum. Caibros correm da frechal até a cumeeira, com encaixe de boca de lobo na frechal e corte a prumo na cumeeira. Seções comuns conforme ABNT NBR 7190 são 6x12 (até 3 m de vão), 6x16 (até 4 m), 6x20 (até 5 m) a espaçamento de 40 cm. A área dos oitões deve ser incluída na estimativa de revestimento e fechamento lateral. Para um telhado duas águas de 9x12 m com inclinação 30%, a madeira estrutural custa tipicamente R$ 8.000 a R$ 18.000, com mão de obra adicionando R$ 12.000 a R$ 25.000.",
+  nextSteps: [
+    { label: "Calculadora de Cumeeira", href: "/calculators/roofing/ridge-board-calculator/" },
+    { label: "Calculadora de Forro de Telhado", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Calculadora de Telhas", href: "/calculators/roofing/shingle-calculator/" },
+    { label: "Calculadora Telhado Quatro Águas", href: "/calculators/roofing/hip-roof-calculator/" },
+  ],
+  installationTips: [
+    "Corte um caibro padrão primeiro e teste o encaixe antes de cortar o conjunto completo.",
+    "Use esquadro rápido para marcar os cortes de boca de lobo e a prumo de forma consistente.",
+    "Instale a cumeeira sobre apoios temporários antes de posicionar os caibros.",
+    "Trabalhe de ambas as extremidades em direção ao centro ao posicionar os pares opostos de caibros.",
+    "Instale tirantes no terço superior dos caibros para evitar abertura das paredes.",
+  ],
+  commonMistakes: [
+    "Esquecer de adicionar o comprimento do beiral à medida do caibro — adicione 30 a 60 cm além da parede.",
+    "Não incluir o fechamento e revestimento do oitão na estimativa de materiais.",
+    "Usar a largura da edificação como percurso do caibro — o percurso é metade da largura para cada lado.",
+    "Omitir tirantes ou vigas de forro — sem eles os caibros empurrarão as paredes para fora com o tempo.",
+  ],
+  faqs: [
+    { question: "O que é um telhado duas águas?", answer: "Um telhado duas águas é a clássica forma triangular de duas faces inclinadas que se encontram em uma cumeeira central. As seções de parede triangulares verticais em cada extremidade são os oitões. É o tipo de telhado mais comum no Brasil por sua simplicidade, baixo custo e eficiente drenagem de água." },
+    { question: "Como calcular a área de um telhado duas águas?", answer: "Multiplique metade da largura da edificação (o percurso do caibro) pelo fator de inclinação, depois multiplique pelo comprimento para obter a área de uma face. Dobre para ambos os lados. Para uma edificação de 9x12 m com inclinação 30% (6/12): percurso = 4,5 m, fator = 1,118, uma face = 4,5 x 1,118 x 12 = 60,4 m², total = 120,8 m²." },
+    { question: "O que é a área do oitão e por que importa?", answer: "O oitão é a seção triangular de parede entre as duas faces do telhado em cada extremidade. Sua área deve ser considerada para revestimento, fechamento e ventilação. Para uma edificação de 9 m de largura com inclinação 30%, cada oitão tem 9 x 2,25 / 2 = 10,1 m², totalizando 20,2 m² para ambos." },
+    { question: "Qual a melhor inclinação para um telhado duas águas?", answer: "Uma inclinação de 30% (6/12) é a mais popular para telhados residenciais, oferecendo bom equilíbrio entre aparência, eficiência de materiais e capacidade de caminhamento. Inclinações de 20% a 30% são fáceis de caminhar. Telhas cerâmicas requerem mínimo de 30% conforme normas brasileiras." },
+    { question: "Quantos caibros eu preciso para um telhado duas águas?", answer: "Divida o comprimento da edificação pelo espaçamento dos caibros (em metros), adicione um, depois multiplique por dois para ambos os lados. Para uma edificação de 12 m com espaçamento de 40 cm: (12 / 0,40) + 1 = 31 por lado, 62 no total. Adicione 10% para desperdício, pedindo 68 caibros." },
+    { question: "Telhado duas águas vs quatro águas — qual custa menos?", answer: "Telhados duas águas custam 15 a 25 por cento menos que quatro águas porque usam menos madeira, têm cortes mais simples e são mais rápidos de montar. Porém, são menos resistentes ao vento e expõem as paredes dos oitões ao tempo." },
+  ],
+};
+
+// ─── LEAN-TO / SHED ROOF (TELHADO MEIA-ÁGUA) ─────────────────────────────────
+
+export const leanToRoofCalculatorPTBR: CalculatorSEOContent = {
+  disclaimer: "As medidas da meia-água assumem um telhado de inclinação única sem vales ou espigões. Adicione 10–15% de desperdício para materiais. O comprimento do caibro não inclui beiral.",
+  howToUse: [
+    "Insira o comprimento do telhado (dimensão ao longo da parede de apoio) em metros.",
+    "Insira o percurso do telhado (distância que se estende a partir da parede) em metros.",
+    "Insira a inclinação (elevação por 12 de percurso horizontal).",
+    "Selecione o espaçamento de caibros e clique em Calcular para obter quantidade, comprimento, área e altura de elevação.",
+  ],
+  materialInfo:
+    "O telhado meia-água (também chamado de telhado de uma água, shed ou skillion) é a forma mais simples de cobertura — um único plano inclinado que se apoia em uma estrutura existente ou vence entre paredes de alturas diferentes. É a escolha padrão para ampliações, varandas cobertas, garagens e galpões. O lado alto é tipicamente fixado à parede existente usando uma viga dormente aparafusada aos montantes, enquanto o lado baixo apoia em uma viga sustentada por pilares. Por ter apenas uma inclinação, a meia-água é a mais econômica de estruturar — requer aproximadamente metade dos caibros de um telhado duas águas da mesma planta e não tem cumeeira, espigões ou cortes compostos. Inclinações típicas variam de 10% a 30%, com 15% a 20% sendo as mais comuns para estruturas encostadas. Conforme a ABNT NBR 15575, a inclinação mínima depende do tipo de telha: 1% para manta impermeabilizante, 5% para telha metálica com vedação e 30% para telha cerâmica. Uma meia-água de 3,6x6 m custa R$ 3.000 a R$ 8.000 em madeira estrutural e R$ 1.500 a R$ 3.500 em materiais de cobertura, com mão de obra adicionando R$ 5.000 a R$ 12.000.",
+  nextSteps: [
+    { label: "Calculadora de Caibros", href: "/calculators/roofing/rafter-calculator/" },
+    { label: "Calculadora de Forro de Telhado", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Calculadora de Inclinação", href: "/calculators/roofing/roof-pitch-calculator/" },
+    { label: "Calculadora Telhado Duas Águas", href: "/calculators/roofing/gable-roof-calculator/" },
+  ],
+  installationTips: [
+    "Fixe a viga dormente aos montantes da parede existente com parafusos passantes de 12 mm — nunca fixe apenas no revestimento.",
+    "Instale rufo em Z ou rufo escalonado acima da viga dormente para evitar infiltração na parede.",
+    "Use uma linha de referência da viga dormente ao frechal para verificar a inclinação uniforme antes de cortar.",
+    "Incline o telhado para longe da edificação existente para direcionar o escoamento de água ao lado baixo.",
+    "Para percursos acima de 3,5 metros, considere uma viga intermediária de apoio para reduzir a seção dos caibros.",
+  ],
+  commonMistakes: [
+    "Fixar a viga dormente ao revestimento em vez da estrutura — deve ser aparafusada aos montantes ou à viga perimetral.",
+    "Esquecer o rufo acima da viga dormente — esta é a causa mais comum de infiltração em ampliações de meia-água.",
+    "Inclinar o telhado em direção à edificação existente em vez de afastá-lo — a água deve drenar para o lado externo (baixo).",
+    "Usar inclinação muito baixa para o tipo de telha escolhido — telhas cerâmicas necessitam no mínimo 30% conforme norma.",
+  ],
+  faqs: [
+    { question: "O que é um telhado meia-água?", answer: "Um telhado meia-água é um telhado de inclinação única que tipicamente se apoia em uma parede de edificação existente. Uma extremidade é mais alta (fixada à parede via viga dormente) e a outra é mais baixa (apoiada por pilares e viga). É o tipo mais simples e econômico, comumente usado para ampliações, varandas, garagens e galpões." },
+    { question: "Qual a inclinação mínima para um telhado meia-água?", answer: "Conforme normas ABNT: 1% para manta impermeabilizante (TPO, EPDM), 3% a 5% para telha metálica com vedação, e 30% para telha cerâmica ou de concreto padrão. Para a maioria das estruturas de meia-água, 15% a 20% proporciona bom equilíbrio entre escoamento e pé-direito." },
+    { question: "Como calcular a área de um telhado meia-água?", answer: "Multiplique o comprimento do telhado (ao longo da parede) pelo percurso (profundidade a partir da parede), depois multiplique pelo fator de inclinação. Para uma meia-água de 6x3,6 m com inclinação 20% (4/12), o fator é 1,054, e a área é 6 x 3,6 x 1,054 = 22,8 m²." },
+    { question: "Qual a altura de elevação de um telhado meia-água?", answer: "A elevação é o percurso multiplicado pela razão de inclinação. Para um percurso de 3,6 m com inclinação 20% (4/12): 3,6 x (4/12) = 1,2 m de elevação. O lado alto do telhado ficará 1,2 m acima do lado baixo." },
+    { question: "Posso encostar uma meia-água em qualquer parede?", answer: "Pode fixar em qualquer parede estrutural que suporte as cargas da viga dormente. A parede deve ter montantes acessíveis. Paredes de alvenaria requerem chumbadores de expansão. Sempre verifique se a parede existente suporta a carga adicional do telhado, especialmente para acúmulo de chuva intensa." },
+    { question: "Quanto custa um telhado meia-água?", answer: "Uma meia-água básica de 3,6x6 m custa R$ 3.000 a R$ 8.000 em madeira estrutural (caibros, viga dormente, viga, pilares), R$ 1.500 a R$ 3.500 em materiais de cobertura (forro, manta, telhas) e R$ 5.000 a R$ 12.000 em mão de obra profissional. Custo total instalado tipicamente R$ 9.000 a R$ 23.000." },
+  ],
+};
+
+// ─── BALUSTER SPACING (ESPAÇAMENTO DE BALAÚSTRES) ────────────────────────────
+
+export const balusterSpacingCalculatorPTBR: CalculatorSEOContent = {
+  disclaimer: "Os cálculos são baseados na ABNT NBR 14718 que limita aberturas a máximo 11 cm. Verifique os requisitos locais com sua prefeitura, pois jurisdições podem ter códigos mais restritivos.",
+  howToUse: [
+    "Meça o comprimento total do guarda-corpo em centímetros de pilar a pilar.",
+    "Insira a largura do balaústre (3,8 cm para balaústres quadrados padrão, 2 cm para redondos).",
+    "Insira a largura do pilar (8,9 cm para pilares padrão 9x9 cm).",
+    "Insira o número de pilares e clique em Calcular para obter a quantidade exata de balaústres e o espaçamento uniforme.",
+  ],
+  materialInfo:
+    "Os balaústres (também chamados de fusos ou barras verticais) são os elementos verticais de preenchimento de um sistema de guarda-corpo que previnem quedas e atendem às normas de construção. A ABNT NBR 14718 exige que uma esfera de 11 cm não possa passar por nenhuma abertura no guarda-corpo — isto inclui entre balaústres, entre balaústres e pilares, e entre o travessão inferior e a superfície do piso.\n\nBalaústres quadrados padrão têm 3,8 cm de largura (equivalente a 4x4 cm nominal), e balaústres redondos são tipicamente de 2 cm de diâmetro. Com balaústres quadrados de 3,8 cm e vão máximo de 11 cm, são necessários aproximadamente 7 balaústres por metro linear de guarda-corpo.\n\nMateriais comuns incluem aço carbono pintado (R$ 15–40 cada), alumínio (R$ 25–60 cada), aço inoxidável (R$ 50–120 cada) e madeira de lei (R$ 30–80 cada). Para um guarda-corpo típico de 10 metros lineares, serão necessários entre 65 e 85 balaústres dependendo da largura e espaçamento.",
+  nextSteps: [
+    { label: "Calculadora de Guarda-corpo de Deck", href: "/calculators/outdoor/deck-railing-calculator/" },
+    { label: "Calculadora de Escadas", href: "/calculators/stairs/stair-calculator/" },
+    { label: "Calculadora de Tábuas de Deck", href: "/calculators/outdoor/deck-board-calculator/" },
+  ],
+  installationTips: [
+    "Corte um bloco espaçador na largura calculada e use entre cada balaústre para espaçamento perfeitamente uniforme.",
+    "Pré-fure parafusos em balaústres de madeira para evitar rachaduras — especialmente madeiras de lei e seções pequenas.",
+    "Instale o travessão inferior primeiro, posicione todos os balaústres com o espaçador, depois fixe o travessão superior.",
+    "Use adesivo para exteriores além de parafusos para durabilidade a longo prazo em guarda-corpos expostos ao tempo.",
+  ],
+  commonMistakes: [
+    "Espaçar balaústres muito afastados — o teste da esfera de 11 cm aplica-se a toda abertura, não apenas ao vão médio.",
+    "Esquecer de subtrair as larguras dos pilares do comprimento total ao calcular o espaço disponível.",
+    "Não pré-furar balaústres de madeira — seções pequenas racham facilmente quando parafusadas nas extremidades.",
+    "Ignorar o vão entre a superfície do piso e o travessão inferior — a regra de 11 cm também se aplica aqui.",
+  ],
+  faqs: [
+    { question: "Qual o vão máximo entre balaústres?", answer: "A ABNT NBR 14718 exige que uma esfera de 11 cm não possa passar por nenhuma abertura no guarda-corpo. Com balaústres quadrados padrão de 3,8 cm, o vão entre balaústres adjacentes deve ser inferior a 11 cm." },
+    { question: "Quantos balaústres preciso por metro?", answer: "Com balaústres quadrados padrão de 3,8 cm e o vão máximo de 11 cm exigido por norma, são necessários aproximadamente 7 balaústres por metro linear de guarda-corpo." },
+    { question: "Posso usar guarda-corpo horizontal em vez de vertical?", answer: "Alguns códigos permitem barras horizontais, mas a regra da esfera de 11 cm continua valendo. Muitas jurisdições proíbem designs horizontais porque crianças podem escalá-los. Consulte seu código local." },
+    { question: "Qual deve ser a altura do guarda-corpo?", answer: "A ABNT NBR 14718 exige altura mínima de 110 cm para guarda-corpos residenciais medidos da superfície do piso ao topo do corrimão." },
+    { question: "Qual o melhor material para balaústres externos?", answer: "Alumínio e aço inoxidável oferecem a melhor durabilidade com baixa manutenção. Aço carbono galvanizado é econômico mas requer pintura periódica. Madeira de lei como ipê é naturalmente resistente mas custa mais." },
+    { question: "Preciso de alvará para instalar um guarda-corpo?", answer: "Sim, na maioria dos municípios a instalação de guarda-corpo requer aprovação da prefeitura. Fiscais verificam altura, espaçamento, fixação e integridade estrutural conforme ABNT NBR 14718." },
+  ],
+};
+
+// ─── SOFFIT (FORRO DO BEIRAL) ─────────────────────────────────────────────────
+
+export const soffitCalculatorPTBR: CalculatorSEOContent = {
+  disclaimer: "Esta estimativa assume painéis padrão de 30 cm de largura. Larguras e coberturas reais variam por fabricante. Adicione 10% de desperdício para cortes e encaixes.",
+  howToUse: [
+    "Meça o perímetro total da sua casa em metros.",
+    "Meça a largura do forro do beiral (distância da parede até a tabeira) em centímetros.",
+    "Insira o comprimento do painel (tipicamente 3,60 m para painéis padrão).",
+    "Clique em Calcular para obter quantidade de painéis, comprimento de perfil J e quantidade de faixas de ventilação.",
+  ],
+  materialInfo:
+    "O forro do beiral (sofito) é o material que cobre a parte inferior do beiral do telhado, preenchendo o vão entre a parede externa e a tabeira. Suas funções principais são proteger as pontas dos caibros contra intempéries, pragas e umidade, além de proporcionar ventilação do sótão quando painéis ventilados são usados.\n\nPainéis de forro vêm em três estilos de ventilação: sólido (sem ventilação), ventilação central (faixa perfurada no centro) e totalmente ventilado (perfurado em toda a superfície). Um forro ventilado combinado com ventilação na cumeeira cria fluxo de ar contínuo pelo sótão.\n\nMateriais comuns incluem PVC (R$ 25–50/m² instalado), alumínio (R$ 40–80/m²), fibrocimento Eternit (R$ 50–100/m²) e madeira (R$ 60–130/m²). PVC é o mais popular para uso residencial no Brasil por seu baixo custo e manutenção zero. Dimensões padrão dos painéis são 30 cm de largura por 3,60 m de comprimento.\n\nO perfil J (canaleta) é instalado nas bordas do forro (lado da parede e lado da tabeira) para receber e fixar as bordas dos painéis.",
+  nextSteps: [
+    { label: "Calculadora de Revestimento Vinílico", href: "/calculators/exterior-shell/vinyl-siding-calculator/" },
+    { label: "Calculadora de Pingadeira", href: "/calculators/roofing/drip-edge-calculator/" },
+    { label: "Calculadora de Revestimento Cimentício", href: "/calculators/exterior-shell/hardie-siding-calculator/" },
+  ],
+  installationTips: [
+    "Instale o perfil J ao longo da parede primeiro, mantendo-o nivelado e reto — qualquer desvio aparecerá nos painéis acabados.",
+    "Deixe 6 mm de folga de dilatação em cada extremidade do painel para evitar empenamento em dias quentes.",
+    "Alterne entre painéis ventilados e sólidos se precisar de ventilação parcial em vez de total.",
+    "Corte os painéis com serra circular de dentes finos (invertida para PVC) ou tesoura de aviação para bordas limpas.",
+  ],
+  commonMistakes: [
+    "Não deixar folga de dilatação — painéis de PVC empenam e deformam quando instalados muito justos.",
+    "Instalar apenas painéis sólidos quando ventilação do sótão é necessária — use pelo menos um terço de painéis ventilados.",
+    "Não nivelar o perfil J — qualquer ondulação será visível no forro acabado.",
+    "Esquecer arremates onde o forro termina nos oitões ou transições de varanda.",
+  ],
+  faqs: [
+    { question: "O que é forro do beiral e por que preciso?", answer: "O forro do beiral (sofito) é o painel que cobre a parte inferior do beiral do telhado. Protege as pontas dos caibros contra intempéries e pragas, proporciona ventilação do sótão quando ventilado e dá um acabamento ao beiral." },
+    { question: "Preciso de forro ventilado?", answer: "Sim, se seu sótão tem ventilação na cumeeira ou nos oitões. O forro ventilado permite entrada de ar pelos beirais e saída pela cumeeira, criando fluxo contínuo que previne umidade, mofo e calor excessivo. Use pelo menos um terço de painéis ventilados." },
+    { question: "Quanto custa o forro do beiral?", answer: "Forro de PVC custa R$ 25–50/m² instalado. Para uma casa típica com 48 m de perímetro e beirais de 45 cm (21,6 m² de área de forro), os materiais custam R$ 540–1.080 e a instalação profissional adiciona R$ 600–1.200." },
+    { question: "Posso instalar forro novo sobre o existente?", answer: "Sim, se o forro existente estiver em boas condições e firmemente fixado. Instale novos perfis J sobre a superfície antiga. Se o forro antigo estiver danificado, apodrecido ou cedido, remova-o completamente primeiro." },
+    { question: "Qual largura de painel de forro preciso?", answer: "A largura do painel depende do seu beiral. Painéis padrão de 30 cm funcionam para beirais de até 30 cm. Para beirais mais largos (45–60 cm), use duas fileiras de painéis ou painéis mais largos disponíveis em alguns fabricantes." },
+    { question: "Quanto perfil J preciso?", answer: "Você precisa de perfil J nos dois lados do forro (lado da parede e lado da tabeira), então multiplique o perímetro da casa por 2. Para 48 m de perímetro, são necessários 96 metros lineares de perfil J." },
+  ],
+};
+
+// ─── BOARD AND BATTEN (TÁBUA E MATA-JUNTA) ──────────────────────────────────
+
+export const boardAndBattenCalculatorPTBR: CalculatorSEOContent = {
+  disclaimer: "Esta estimativa assume instalação vertical padrão com tábuas encostadas e mata-juntas cobrindo as emendas. Adicione 10% de desperdício para cortes em torno de portas e janelas.",
+  howToUse: [
+    "Calcule a área total da parede em m² (perímetro x altura, menos portas e janelas).",
+    "Insira a largura da tábua (comum: 15, 20, 25 ou 30 cm).",
+    "Insira a largura da mata-junta (comum: 4 a 8 cm).",
+    "Insira a altura da parede em metros e clique em Calcular.",
+  ],
+  materialInfo:
+    "O revestimento tábua e mata-junta é um padrão clássico de revestimento vertical com tábuas largas instaladas na vertical e ripas estreitas (mata-juntas) cobrindo as emendas entre elas. Esse design permite a movimentação natural da madeira — as tábuas podem expandir e contrair com a umidade sem abrir frestas visíveis.\n\nHistoricamente o revestimento mais comum em construções rurais e casas coloniais no Brasil, o tábua e mata-junta voltou com força nas arquiteturas de estilo fazenda moderna e contemporâneo. Está disponível em madeira natural (cedro, pinus, ipê), madeira engenheirada, fibrocimento (Eternit, Brasilit) e PVC.\n\nLarguras de tábua variam de 15 a 30 cm, com 20–25 cm sendo as mais populares para uso residencial. Mata-juntas são tipicamente de 4 a 8 cm. A instalação requer barreira impermeável (manta asfáltica ou Tyvek) atrás do revestimento. Tábuas são pregadas com um único prego no centro para permitir dilatação lateral. Mata-juntas são pregadas através da sobreposição das tábuas. O custo varia por material: pinus tratado R$ 15–30/m linear, cedro R$ 40–80, fibrocimento R$ 25–50.",
+  nextSteps: [
+    { label: "Calculadora de Revestimento Vinílico", href: "/calculators/exterior-shell/vinyl-siding-calculator/" },
+    { label: "Calculadora de Revestimento Cimentício", href: "/calculators/exterior-shell/hardie-siding-calculator/" },
+    { label: "Calculadora de Manta Impermeável", href: "/calculators/exterior-shell/housewrap-calculator/" },
+  ],
+  installationTips: [
+    "Instale barreira impermeável (Tyvek ou equivalente) sobre o fechamento estrutural antes de qualquer revestimento.",
+    "Pregue cada tábua com um único prego no centro — isso permite expansão e contração sem rachadura.",
+    "Mata-juntas devem ser pregadas através da sobreposição das tábuas, fixando no fechamento ou montantes atrás.",
+    "Deixe 3 mm de vão entre a base das tábuas e arremates horizontais para drenagem.",
+    "Aplique selador em todas as extremidades cortadas e superfícies traseiras antes da instalação para evitar absorção de umidade.",
+  ],
+  commonMistakes: [
+    "Pregar tábuas em ambas as bordas — isso restringe a dilatação natural e causa rachaduras e empenamento.",
+    "Omitir a barreira impermeável — essencial para evitar danos por água à estrutura da parede.",
+    "Usar mata-juntas muito estreitas para cobrir adequadamente as juntas — mínimo de 4 cm recomendado.",
+    "Não selar extremidades cortadas — a grã da madeira absorve umidade rapidamente, causando apodrecimento prematuro.",
+  ],
+  faqs: [
+    { question: "O que é revestimento tábua e mata-junta?", answer: "Tábua e mata-junta é um estilo de revestimento vertical com tábuas largas instaladas na vertical e ripas estreitas (mata-juntas) cobrindo as juntas entre elas. Permite a movimentação da madeira mantendo uma fachada estanque." },
+    { question: "Que materiais funcionam para tábua e mata-junta?", answer: "Materiais comuns incluem cedro (mais tradicional), pinus tratado (opção econômica), fibrocimento Eternit (durável, baixa manutenção), PVC e madeiras de lei como ipê. Cada um tem diferentes perfis de custo, durabilidade e manutenção." },
+    { question: "Quanto custa tábua e mata-junta?", answer: "O custo dos materiais varia de R$ 15–30/m linear para pinus, R$ 40–80 para cedro e R$ 25–50 para fibrocimento. Instalação profissional adiciona R$ 50–120/m². Para uma fachada residencial típica de 45 m², espere R$ 8.000–25.000 total entre materiais e mão de obra." },
+    { question: "Tábua e mata-junta pode ser horizontal?", answer: "Tradicionalmente é vertical, mas instalação horizontal é possível. Porém, mata-juntas horizontais podem reter água contra as tábuas, exigindo detalhamento mais cuidadoso para drenagem. A instalação vertical é recomendada para melhor escoamento." },
+    { question: "Preciso de manta impermeável atrás de tábua e mata-junta?", answer: "Sim, sempre. Uma barreira impermeável (Tyvek, manta asfáltica) atrás do revestimento é essencial. As juntas de tábua e mata-junta não são à prova d'água — as mata-juntas desviam a maioria da água mas parte pode passar. A manta é a verdadeira barreira." },
+    { question: "Qual a largura ideal para tábuas e mata-juntas?", answer: "Tábuas de 20–25 cm com mata-juntas de 5 cm são a escolha residencial mais popular. Tábuas mais largas (30 cm) criam um visual mais rústico; tábuas mais estreitas (15 cm) com mata-juntas finas ficam mais refinadas e modernas." },
+  ],
+};
+
+// ─── RAKE WALL (PAREDE INCLINADA / OITÃO) ───────────────────────────────────
+
+export const rakeWallCalculatorPTBR: CalculatorSEOContent = {
+  disclaimer: "As alturas dos montantes da parede inclinada são cálculos teóricos. Sempre meça e corte cada montante individualmente no local. A frechal superior requer corte angulado para acompanhar a inclinação do telhado. Adicione 10% de desperdício para cortes.",
+  howToUse: [
+    "Meça o comprimento total da parede em metros ao longo da frechal inferior.",
+    "Insira a altura do lado mais baixo em metros.",
+    "Insira a altura do lado mais alto em metros.",
+    "Defina o espaçamento dos montantes (40 ou 60 cm entre eixos) e clique em Calcular.",
+  ],
+  materialInfo:
+    "Uma parede inclinada (também chamada de parede de oitão ou parede com topo inclinado) é uma parede onde a frechal superior acompanha a inclinação do telhado em vez de correr nivelada. Isso cria uma seção de parede triangular ou trapezoidal onde cada montante tem uma altura diferente, aumentando progressivamente do lado baixo ao alto.\n\nParedes inclinadas são encontradas nos oitões de telhados, sob telhados de uma água, em sótãos e sempre que uma parede encontra um forro inclinado. São estruturadas com a mesma madeira das paredes padrão — tipicamente montantes de 10x5 ou 15x5 cm a 40 ou 60 cm entre eixos conforme ABNT NBR 7190.\n\nA diferença principal é que a frechal superior deve ser cortada em ângulo (chanfro) correspondente à inclinação do telhado, e cada montante deve ser medido e cortado individualmente. Para uma parede inclinada de 6 m indo de 2,4 a 4,2 m, são necessários cerca de 16 montantes a 40 cm, com alturas variando de aproximadamente 231 a 415 cm. O custo de material é similar à estrutura padrão mas com maior desperdício pelos cortes individuais.",
+  nextSteps: [
+    { label: "Calculadora de Montantes", href: "/calculators/wall-framing/stud-calculator/" },
+    { label: "Calculadora Telhado Duas Águas", href: "/calculators/roofing/gable-roof-calculator/" },
+    { label: "Calculadora de Fechamento Externo", href: "/calculators/wall-framing/exterior-sheathing-calculator/" },
+  ],
+  installationTips: [
+    "Marque e corte um gabarito no ângulo da inclinação para o corte superior de cada montante.",
+    "Meça cada montante individualmente no local — cálculos teóricos podem ter pequenas variações.",
+    "Instale a frechal inferior nivelada primeiro, depois posicione a frechal superior inclinada.",
+    "Para montantes abaixo de 60 cm, use blocos horizontais entre eles para superfície de fixação do fechamento.",
+    "Use nível a laser para verificar o alinhamento da frechal superior ao longo de toda a parede.",
+  ],
+  commonMistakes: [
+    "Cortar todos os montantes no mesmo comprimento — cada montante em uma parede inclinada tem altura diferente.",
+    "Esquecer o corte angulado na frechal superior — ela deve acompanhar a inclinação do telhado.",
+    "Não medir individualmente no local — variações de piso e estrutura afetam cada altura.",
+    "Omitir blocos horizontais para montantes curtos — o fechamento precisa de superfície de fixação.",
+  ],
+  faqs: [
+    { question: "O que é uma parede inclinada?", answer: "Uma parede inclinada (ou parede de oitão) é uma parede onde a frechal superior acompanha a inclinação do telhado. Cada montante tem uma altura diferente, criando uma seção triangular ou trapezoidal. São encontradas nos oitões e sob telhados de uma água." },
+    { question: "Como calculo as alturas dos montantes?", answer: "A diferença de altura entre os extremos é dividida pelo número de espaçamentos. Para uma parede de 6 m de 2,4 a 4,2 m com espaçamento de 40 cm: 15 espaçamentos, diferença de 1,8 m, incremento de 12 cm por montante. O primeiro mede 2,4 m, o segundo 2,52 m, e assim por diante." },
+    { question: "Que tipo de madeira uso para parede inclinada?", answer: "Use a mesma madeira das paredes padrão — montantes de 10x5 ou 15x5 cm conforme ABNT NBR 7190. A seção depende da altura da parede e cargas. A frequência superior requer a mesma seção dos montantes." },
+    { question: "Como faço o corte angulado na frechal superior?", answer: "Calcule o ângulo da inclinação (arcotangente da diferença de altura dividida pelo comprimento). Marque com esquadro e corte com serra circular ajustada ao ângulo. Use nível a laser para verificar o alinhamento." },
+    { question: "Preciso de contraventamento em paredes inclinadas?", answer: "Sim. Aplique as mesmas regras de contraventamento de paredes convencionais. Adicione blocos horizontais entre montantes curtos para fixação do fechamento e da placa de gesso." },
+  ],
+};
+
+// ─── DECK BOARD SPACING (ESPAÇAMENTO DE TÁBUAS DE DECK) ──────────────────────
+
+export const deckBoardSpacingCalculatorPTBR: CalculatorSEOContent = {
+  disclaimer: "O espaçamento recomendado varia conforme o material e a umidade relativa do ar local. Madeira natural requer mais espaçamento que materiais compostos. Consulte o fabricante para recomendações específicas.",
+  howToUse: [
+    "Insira a largura da tábua de deck em centímetros.",
+    "Insira o comprimento total do deck em metros.",
+    "Selecione o tipo de material (madeira natural ou composto/WPC).",
+    "Clique em Calcular para obter o espaçamento recomendado e o número de tábuas.",
+  ],
+  materialInfo:
+    "O espaçamento entre tábuas de deck é essencial para drenagem, ventilação, dilatação e a longevidade da estrutura. O espaçamento padrão para madeira natural é de 5–8 mm entre tábuas, permitindo que a madeira expanda com a umidade sem empenar ou levantar. Para materiais compostos (WPC), o espaçamento é tipicamente de 5–6 mm, conforme recomendação do fabricante.\n\nNo Brasil, as madeiras mais usadas para deck são ipê, cumaru, garapa e pinus tratado em autoclave. Madeiras de lei tropicais têm menor coeficiente de dilatação que pinus, podendo usar espaçamento menor (5 mm vs 8 mm). Decks compostos WPC (como os das marcas Moso, Novoboard e Tramontina) têm coeficiente de dilatação térmica que deve ser considerado, especialmente em regiões quentes.\n\nO espaçamento insuficiente causa empenamento, retenção de água e apodrecimento acelerado. Espaçamento excessivo permite que detritos se acumulem e pode ser desconfortável para pés descalços e saltos finos. Use espaçadores de plástico ou pregos como guia durante a instalação para manter uniformidade. Para decks em áreas externas expostas, considere espaçamento maior (8 mm) para compensar chuvas intensas comuns no clima tropical brasileiro.",
+  nextSteps: [
+    { label: "Calculadora de Tábuas de Deck", href: "/calculators/outdoor/deck-board-calculator/" },
+    { label: "Calculadora de Sapatas de Deck", href: "/calculators/outdoor/deck-footing-calculator/" },
+    { label: "Calculadora de Guarda-corpo", href: "/calculators/outdoor/deck-railing-calculator/" },
+  ],
+  installationTips: [
+    "Use espaçadores de plástico de espessura uniforme entre cada tábua para manter o vão constante.",
+    "Para madeira natural, instale com o lado da casca voltado para cima para minimizar empenamento.",
+    "Deixe 10–15 mm de vão entre as extremidades das tábuas e qualquer estrutura fixa para dilatação longitudinal.",
+    "Pré-fure as extremidades de tábuas de madeira de lei para evitar rachaduras ao parafusar.",
+    "Verifique o teor de umidade da madeira antes da instalação — instale quando estiver entre 12% e 18%.",
+  ],
+  commonMistakes: [
+    "Instalar tábuas sem espaçamento — a madeira expandirá com a umidade e empenará ou levantará.",
+    "Usar espaçamento irregular — resulta em aparência desigual e problemas de drenagem.",
+    "Não considerar a dilatação térmica de materiais compostos — WPC dilata significativamente com o calor.",
+    "Esquecer o vão nas extremidades — tábuas que encostam em paredes ou bordas fixas empenarão ao dilatar.",
+  ],
+  faqs: [
+    { question: "Qual o espaçamento ideal entre tábuas de deck?", answer: "Para madeira natural: 5–8 mm. Para materiais compostos/WPC: 5–6 mm conforme fabricante. Em climas tropicais úmidos como no Brasil, prefira 8 mm para madeira natural para compensar a alta umidade relativa." },
+    { question: "Posso instalar tábuas de deck sem espaçamento?", answer: "Não. Tábuas sem espaçamento irão empenar, levantar e apodrecer prematuramente. O espaçamento é essencial para drenagem de água, ventilação da estrutura inferior e dilatação da madeira." },
+    { question: "Como mantenho o espaçamento uniforme?", answer: "Use espaçadores de plástico reutilizáveis (R$ 15–30 o pacote) ou pregos como guia provisória. Não confie em medição visual — pequenas variações acumulam e ficam visíveis no deck acabado." },
+    { question: "O espaçamento muda conforme o material?", answer: "Sim. Madeiras de lei tropicais (ipê, cumaru) podem usar 5 mm por terem menor dilatação. Pinus tratado precisa de 8 mm. WPC segue a recomendação do fabricante, tipicamente 5–6 mm entre tábuas e 3–5 mm nas extremidades." },
+    { question: "E o espaçamento nas extremidades das tábuas?", answer: "Deixe 10–15 mm de vão entre as extremidades das tábuas e qualquer superfície fixa (paredes, pilares). Isso permite dilatação longitudinal sem empenamento. Para tábuas emendadas topo a topo, deixe 3–5 mm de vão." },
+  ],
+};
+
 // ─── REGISTRY MAP ─────────────────────────────────────────────────────────────
 
 export const registryPTBR: Record<string, Record<string, CalculatorSEOContent>> = {
@@ -2477,6 +2920,8 @@ export const registryPTBR: Record<string, Record<string, CalculatorSEOContent>> 
     "mortar-mix-calculator": mortarMixCalculator,
     "block-fill-calculator": blockFillCalculator,
     "retaining-wall-calculator": retainingWallCalculator,
+    "rebar-calculator": rebarCalculator,
+    "rebar-spacing-calculator": rebarSpacingCalculator,
   },
   "floor-framing": {
     "rim-joist-calculator": rimJoistCalculator,
@@ -2491,6 +2936,7 @@ export const registryPTBR: Record<string, Record<string, CalculatorSEOContent>> 
     "top-plate-calculator": topPlateCalculator,
     "header-calculator": headerCalculator,
     "exterior-sheathing-calculator": exteriorSheathingCalculator,
+    "rake-wall-calculator": rakeWallCalculatorPTBR,
   },
   roofing: {
     "truss-calculator": trussCalculator,
@@ -2503,12 +2949,18 @@ export const registryPTBR: Record<string, Record<string, CalculatorSEOContent>> 
     "roof-pitch-calculator": roofPitchCalculator,
     "roof-area-calculator": roofAreaCalculator,
     "roof-slope-calculator": roofSlopeCalculator,
+    "hip-roof-calculator": hipRoofCalculatorPTBR,
+    "gambrel-roof-calculator": gambrelRoofCalculatorPTBR,
+    "gable-roof-calculator": gableRoofCalculatorPTBR,
+    "lean-to-roof-calculator": leanToRoofCalculatorPTBR,
   },
   "exterior-shell": {
     "housewrap-calculator": housewrapCalculator,
     "vinyl-siding-calculator": vinylSidingCalculator,
     "hardie-siding-calculator": hardieSidingCalculator,
     "window-flashing-calculator": windowFlashingCalculator,
+    "soffit-calculator": soffitCalculatorPTBR,
+    "board-and-batten-calculator": boardAndBattenCalculatorPTBR,
   },
   "insulation-drywall": {
     "cavity-insulation-calculator": cavityInsulationCalculator,
@@ -2537,6 +2989,7 @@ export const registryPTBR: Record<string, Record<string, CalculatorSEOContent>> 
     "deck-stair-calculator": deckStairCalculatorPTBR,
     "post-hole-calculator": postHoleCalculatorPTBR,
     "pond-calculator": pondCalculator,
+    "deck-board-spacing-calculator": deckBoardSpacingCalculatorPTBR,
   },
   stairs: {
     "stair-calculator": stairCalculatorPTBR,
@@ -2544,5 +2997,6 @@ export const registryPTBR: Record<string, Record<string, CalculatorSEOContent>> 
     "rise-over-run-calculator": riseOverRunCalcPTBR,
     "spiral-staircase-calculator": spiralStaircaseCalcPTBR,
     "stair-landing-calculator": stairLandingCalcPTBR,
+    "baluster-spacing-calculator": balusterSpacingCalculatorPTBR,
   },
 };

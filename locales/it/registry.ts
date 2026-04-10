@@ -2338,6 +2338,448 @@ const stairLandingCalcIT: CalculatorSEOContent = {
   ],
 };
 
+// ─── ARMATURA ───────────────────────────────────────────────────────────────
+
+export const rebarCalculator: CalculatorSEOContent = {
+  disclaimer: "Questa stima presuppone una griglia piatta a strato singolo. I requisiti effettivi di armatura dipendono dalle specifiche ingegneristiche, dalle condizioni del terreno e dalla normativa locale. Consulta sempre un ingegnere strutturista per applicazioni portanti e sismiche.",
+  howToUse: [
+    "Inserisci la lunghezza e la larghezza della platea in metri.",
+    "Imposta l'interasse desiderato — 15 cm è comune per platee residenziali.",
+    "Seleziona il diametro: Ø 8 per carichi leggeri, Ø 10 per residenziale standard, Ø 12 per strutturale.",
+    "Clicca su Calcola per numero barre, metri lineari e peso totale.",
+  ],
+  materialInfo:
+    "L'armatura in acciaio (ferro per cemento armato, tondino) è costituita da barre d'acciaio ad aderenza migliorata annegate nel calcestruzzo per conferire resistenza a trazione che il calcestruzzo da solo non può offrire. Il calcestruzzo resiste bene a compressione ma è debole a trazione — l'armatura fa da ponte alle fessure e mantiene la platea integra sotto carico. I diametri più comuni per l'edilizia residenziale e commerciale leggera in Italia sono: Ø 6 (0,222 kg/m), Ø 8 (0,395 kg/m), Ø 10 (0,617 kg/m) e Ø 12 (0,888 kg/m). Le barre standard vengono fornite in lunghezze di 6 m e 12 m. Quando la dimensione della platea supera la lunghezza della barra, sono necessarie giunzioni con sovrapposizione di almeno 40 diametri — ovvero 48 cm per Ø 12. L'acciaio B450C (tensione di snervamento 450 MPa) è lo standard secondo le NTC 2018 e l'Eurocodice 2 per l'edilizia residenziale in Italia. È disponibile in acciaio nero (senza rivestimento), zincato e inossidabile (AISI 316) per ambienti corrosivi. L'interasse tipico è 15 cm in entrambe le direzioni per platee residenziali di 12 cm, 20 cm per terrazze leggere e 10 cm per platee di garage o strutturali. L'armatura deve essere sollevata dal magrone con distanziatori (treccioline, cavallucci) per posizionarsi nel terzo inferiore dello spessore della platea — posare le barre a terra non fornisce alcun beneficio strutturale. Il prezzo attuale è di circa 1,00–1,80 €/m per Ø 10, ovvero 6–11 € per barra da 6 m.",
+  nextSteps: [
+    { label: "Calcolatore Interasse Armatura", href: "/calculators/foundation/rebar-spacing-calculator/" },
+    { label: "Calcolatore Platea", href: "/calculators/foundation/concrete-slab-calculator/" },
+    { label: "Calcolatore Plinti", href: "/calculators/foundation/concrete-footing-calculator/" },
+  ],
+  installationTips: [
+    "Posiziona l'armatura su distanziatori (cavallucci o rialzi in plastica) nel terzo inferiore della platea — mai posare le barre direttamente a terra.",
+    "Sovrapponi le giunzioni di almeno 40 diametri (48 cm per Ø 12) e lega ogni incrocio con filo di ferro ricotto.",
+    "Lega ogni incrocio con filo di ferro ricotto Ø 1,4 mm usando pinza legatura o rebar tier.",
+    "Mantieni un copriferro minimo di 3,5 cm (ambiente interno) a 5 cm (contatto terreno) secondo NTC 2018.",
+    "Taglia le barre con cesoia per ferro o smerigliatrice con disco da taglio — mai usare la fiamma ossiacetilenica.",
+    "Piega le barre a freddo con piegatrice manuale o idraulica — il riscaldamento indebolisce l'acciaio.",
+  ],
+  commonMistakes: [
+    "Posare l'armatura a terra invece di sollevarla con distanziatori — senza il posizionamento corretto l'armatura non ha valore strutturale.",
+    "Sovrapposizione insufficiente — giunzioni inferiori a 40 diametri si separano sotto carico.",
+    "Usare il diametro sbagliato — Ø 6 è troppo leggero per platee di garage; usare almeno Ø 8–10.",
+    "Non legare gli incroci — le barre non fissate si spostano durante il getto.",
+    "Dimenticare il fattore di sfrido — ordinare 10–15% in più per tagli, piegature e sovrapposizioni.",
+  ],
+  faqs: [
+    { question: "Quanta armatura serve per una platea di 6×6 m?", answer: "Una platea di 6×6 m con Ø 10 a 15 cm di interasse richiede 41 barre in ogni direzione — 82 barre totali, circa 44 barre da 6 m. Il totale è di circa 252 metri lineari per un peso di circa 156 kg. Aggiungi 10% di sfrido." },
+    { question: "Quale diametro per una platea di 12 cm?", answer: "Ø 10 (B450C) è la scelta standard per platee residenziali di 12 cm (garage, interrato, patio coperto). Per terrazze leggere, Ø 8 può bastare. Per platee strutturali, passa a Ø 12 o consulta un ingegnere strutturista." },
+    { question: "Quale interasse usare per l'armatura?", answer: "L'interasse più comune è 15 cm in entrambe le direzioni per platee di 12 cm. Terrazze leggere: 20 cm. Garage e platee strutturali: 10 cm. L'ingegnere strutturista o le NTC possono specificare interassi diversi." },
+    { question: "Quanto costa l'armatura?", answer: "Ø 10 costa circa 1,00–1,80 €/m, ovvero 6–11 € per barra da 6 m. Una platea 6×6 m richiede ~44 barre, per un costo materiale di 264–484 €. L'inox costa 3–4 volte tanto. Distanziatori: 0,20–0,60 € l'uno." },
+    { question: "Armatura in barre o rete elettrosaldata?", answer: "Le barre B450C offrono un migliore controllo della fessurazione e sono obbligatorie per garage, interrati e platee strutturali. La rete elettrosaldata è accettabile per platee leggere sotto 12 cm. La rete è più difficile da mantenere sollevata sui distanziatori durante il getto." },
+    { question: "Come calcolo il peso dell'armatura?", answer: "Moltiplica i metri lineari per il peso al metro: Ø 6 = 0,222 kg/m, Ø 8 = 0,395 kg/m, Ø 10 = 0,617 kg/m, Ø 12 = 0,888 kg/m. Esempio: 252 m di Ø 10 = 252 × 0,617 = 156 kg." },
+  ],
+};
+
+export const rebarSpacingCalculator: CalculatorSEOContent = {
+  disclaimer: "Le raccomandazioni sull'interasse sono linee guida generali per uso residenziale e commerciale leggero. L'interasse effettivo deve essere determinato da un ingegnere strutturista in base ai carichi, alle condizioni del terreno e alla normativa locale.",
+  howToUse: [
+    "Inserisci la lunghezza e la larghezza della platea in metri.",
+    "Seleziona il diametro — Ø 10 è standard per la maggior parte del lavoro residenziale.",
+    "Scegli il tipo di carico per ottenere l'interasse consigliato.",
+    "Clicca su Calcola per interasse ottimale, numero barre e quantità distanziatori.",
+  ],
+  materialInfo:
+    "L'interasse dell'armatura determina la distanza tra le barre d'acciaio in una platea di calcestruzzo, influenzando direttamente la portata e la resistenza alla fessurazione. Un interasse corretto assicura che le forze di trazione siano distribuite uniformemente nella sezione di calcestruzzo. Per platee residenziali (terrazze, solai a terra, marciapiedi), un interasse di 20 cm con Ø 10 è comune. Garage e rampe d'accesso usano 15 cm per sopportare i carichi veicolari. Platee strutturali per basamenti macchinari, pavimentazioni industriali o solai richiederanno 10 cm o meno, secondo il progetto dell'ingegnere strutturista. I distanziatori (cavallucci, treccioline) sono essenziali per mantenere l'armatura alla giusta altezza all'interno della platea. La regola standard è un distanziatore ogni 0,4 m² di superficie. I distanziatori sono disponibili in diversi tipi: individuali per barre singole, continui per lunghi tratti e a traliccio per reti. Si usano distanziatori con puntale in plastica quando l'armatura è vicina alla superficie per evitare macchie di ruggine. Il copriferro — la distanza dall'armatura alla superficie di calcestruzzo più vicina — deve essere di almeno 3,5 cm per platee interne e 5 cm per platee a contatto con il terreno secondo NTC 2018 ed Eurocodice 2. Un copriferro insufficiente porta a corrosione e distacco entro 5–10 anni. Per platee oltre 6 m in qualsiasi direzione, le barre devono essere sovrapposte con una lunghezza minima di 40 diametri. Le sovrapposizioni devono essere sfalsate in modo che non più del 50% delle barre siano sovrapposte nella stessa sezione. Il costo di installazione dell'armatura (manodopera e materiali) è di 12–25 €/m² per una griglia standard di 15 cm, inclusi distanziatori e filo di legatura.",
+  nextSteps: [
+    { label: "Calcolatore Armatura", href: "/calculators/foundation/rebar-calculator/" },
+    { label: "Calcolatore Platea", href: "/calculators/foundation/concrete-slab-calculator/" },
+    { label: "Calcolatore Calcestruzzo", href: "/calculators/foundation/concrete-calculator/" },
+  ],
+  installationTips: [
+    "Traccia le linee di interasse sulle casseforme con gessetto prima di posare l'armatura.",
+    "Posiziona i distanziatori ogni 1,2 m in entrambe le direzioni prima di posare le barre.",
+    "Posa prima le barre nella direzione lunga, poi le trasversali sopra — lega ogni incrocio.",
+    "Mantieni 3,5–5 cm di copriferro dall'armatura a qualsiasi bordo o fondo della platea.",
+    "Per platee con giunti di contrazione, fai passare l'armatura in continuo — non tagliare le barre ai giunti.",
+    "Percorri la griglia finita prima del getto per verificare che nessuna barra si sia staccata dai distanziatori.",
+  ],
+  commonMistakes: [
+    "Interasse troppo largo per il tipo di carico — 20 cm è eccessivo per garage e rampe.",
+    "Distanziatori troppo distanti — l'armatura non supportata si adagia sulla ghiaia perdendo valore strutturale.",
+    "Tagliare l'armatura ai giunti di contrazione — i giunti devono fessurarsi; l'armatura deve passare in continuo.",
+    "Non sfalsare le sovrapposizioni — tutte le sovrapposizioni nello stesso punto creano un piano debole.",
+    "Ignorare i requisiti di copriferro — meno di 3,5 cm di copriferro porta a corrosione prematura e distacco.",
+  ],
+  faqs: [
+    { question: "Qual è l'interasse standard dell'armatura per una platea?", answer: "L'interasse più comune è 15 cm in entrambe le direzioni per platee residenziali di 12 cm. Terrazze leggere: 20 cm. Garage: 15 cm. Platee strutturali: 10 cm o secondo progetto." },
+    { question: "Quanti distanziatori servono?", answer: "Prevedi 1 distanziatore ogni 0,4 m². Una platea di 6×6 m (36 m²) necessita di ~90 distanziatori. Per armature pesanti (Ø 12+), usa distanziatori adeguati al peso. Max 1,2 m di distanza." },
+    { question: "Cosa succede se l'interasse è troppo largo?", answer: "La platea svilupperà fessure più larghe sotto carico perché le forze di trazione non sono adeguatamente distribuite. Ciò riduce la portata e permette l'infiltrazione d'acqua." },
+    { question: "Rete elettrosaldata o barre d'armatura?", answer: "La rete elettrosaldata è accettabile per platee leggere sotto 12 cm. Le barre B450C offrono un migliore controllo della fessurazione e sono obbligatorie per garage, interrati e platee strutturali." },
+    { question: "Come influisce il tipo di carico sull'interasse?", answer: "Carichi maggiori richiedono interassi minori. Platee residenziali (pedonale): 20 cm. Garage (veicoli): 15 cm. Strutturale (macchinari, industriale): 10 cm o meno." },
+    { question: "Qual è il copriferro minimo per l'armatura?", answer: "Secondo NTC 2018 ed Eurocodice 2: 35 mm per platee interne (XC1), 40 mm per platee su terreno (XC2), 45–50 mm per ambienti aggressivi (XC3/XC4, XD). Un copriferro insufficiente causa corrosione e distacco entro 5–10 anni." },
+  ],
+};
+
+// ─── TETTO A PADIGLIONE ─────────────────────────────────────────────────────
+
+export const hipRoofCalculatorIT: CalculatorSEOContent = {
+  disclaimer: "La geometria del tetto a padiglione è approssimativa. I travetti di displuvio variano in lunghezza — tagliare ciascuno su misura. Aggiungere 10–15% di sfrido per il legname.",
+  howToUse: [
+    "Misurare la lunghezza e la larghezza totale dell'edificio in metri.",
+    "Inserire la pendenza del tetto (rapporto altezza/base).",
+    "Selezionare l'interasse dei travetti (40 cm è lo standard).",
+    "Cliccare Calcola per ottenere numero travetti, lunghezza displuvi, superficie e colmo.",
+  ],
+  materialInfo:
+    "Il tetto a padiglione (o tetto a quattro falde) ha quattro falde inclinate — due trapezoidali e due triangolari — che convergono su un colmo centrale più corto della lunghezza dell'edificio. Poiché tutti i muri sono protetti dalla gronda, i tetti a padiglione offrono resistenza superiore al vento (possono sopportare venti di 180+ km/h meglio dei tetti a capanna) e sono preferiti nelle zone costiere e ad alta esposizione eolica. La struttura richiede quattro travetti di displuvio che corrono diagonalmente da ogni angolo al colmo, travetti comuni centrati su ogni estremità triangolare e numerosi travetti di falda (jack rafter) progressivamente più corti. Il travetto di displuvio è tipicamente di una sezione maggiore rispetto ai travetti comuni (es.: 8x20 cm per il displuvio con 8x16 cm per i comuni) perché carica su entrambi i lati. Secondo le NTC 2018 e l'Eurocodice 5, tutte le connessioni devono essere verificate per le azioni di progetto. La lunghezza del colmo è pari alla lunghezza dell'edificio meno la larghezza. Per un tetto a padiglione di 9x12 m con pendenza 35%, i materiali strutturali costano tra 5.000 e 12.000 EUR, con manodopera professionale aggiuntiva di 8.000–16.000 EUR.",
+  nextSteps: [
+    { label: "Calcolatore Tavolato Tetto", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Calcolatore Tegole", href: "/calculators/roofing/shingle-calculator/" },
+    { label: "Calcolatore Pendenza Tetto", href: "/calculators/roofing/roof-pitch-calculator/" },
+    { label: "Calcolatore Tetto a Capanna", href: "/calculators/roofing/gable-roof-calculator/" },
+  ],
+  installationTips: [
+    "Usare travetti di displuvio di una sezione maggiore rispetto ai comuni per sopportare il doppio carico.",
+    "Utilizzare squadra da carpentiere o calcolatrice edile per gli angoli composti dei travetti di falda.",
+    "Installare prima i travetti di displuvio, poi riempire con i travetti di falda dal più lungo al più corto.",
+    "Smusare la parte superiore dei displuvi (ribassamento del displuvio) affinché il tavolato si appoggi piano sulla linea di displuvio.",
+    "Puntellare temporaneamente i displuvi fino alla posa del tavolato — possono torcersi sotto il proprio peso.",
+  ],
+  commonMistakes: [
+    "Usare la stessa sezione per displuvi e comuni — i displuvi portano il doppio del carico e servono una sezione maggiore.",
+    "Non considerare il ribassamento del displuvio — il tavolato non si appoggerà piano e creerà una gobba.",
+    "Dimenticare che i travetti di falda richiedono tagli ad angolo composto, non semplici tagli a piombo.",
+    "Sottostimare i materiali — i tetti a padiglione usano 10–15% più legname e tavolato di un tetto a capanna equivalente.",
+  ],
+  faqs: [
+    { question: "Cos'è un tetto a padiglione?", answer: "Un tetto a padiglione ha quattro falde inclinate che scendono verso i muri. I due lati più lunghi sono trapezi e i due più corti sono triangoli. Tutti convergono su un colmo più corto della lunghezza dell'edificio. Sono più resistenti al vento dei tetti a capanna." },
+    { question: "Come si calcola la superficie di un tetto a padiglione?", answer: "Misurare la pianta dell'edificio (lunghezza x larghezza) e moltiplicare per il fattore di pendenza. Per pendenza 35% (circa 6/12) il fattore è 1,118. Un edificio di 9x12 m con pendenza 35% ha circa 9 x 12 x 1,118 = 120,7 m² di superficie." },
+    { question: "Quanti travetti di displuvio ha un tetto a padiglione?", answer: "Un tetto a padiglione standard ha esattamente 4 travetti di displuvio — uno da ogni angolo dell'edificio diagonalmente fino all'estremità del colmo." },
+    { question: "Tetto a padiglione vs capanna — quale è meglio?", answer: "Il padiglione è più resistente al vento, protegge tutti i muri e si autocontrolla strutturalmente. Il tetto a capanna è più semplice, economico e offre più spazio nel sottotetto. Nelle zone costiere e ventose si preferisce il padiglione." },
+    { question: "Quanto è lungo un travetto di displuvio?", answer: "Il travetto di displuvio corre diagonalmente dall'angolo al colmo. La sua proiezione orizzontale è la corsa del travetto comune per radice di 2 (circa 1,414). Per un edificio largo 9 m con pendenza 35%, la corsa comune è 4,5 m, quella del displuvio è 6,36 m." },
+    { question: "Qual è la lunghezza del colmo in un tetto a padiglione?", answer: "La lunghezza del colmo è pari alla lunghezza dell'edificio meno la larghezza. Per un edificio di 12x9 m, il colmo misura 12 - 9 = 3 m. Se l'edificio è quadrato, non c'è colmo — i quattro displuvi convergono in un punto formando un tetto a piramide." },
+  ],
+};
+
+// ─── TETTO A MANSARDA ───────────────────────────────────────────────────────
+
+export const gambrelRoofCalculatorIT: CalculatorSEOContent = {
+  disclaimer: "Le proporzioni del tetto a mansarda usano una ripartizione standard 67/33 inferiore/superiore. Le proporzioni reali possono variare in base al progetto. Consultare un ingegnere strutturista per i piani definitivi.",
+  howToUse: [
+    "Inserire la lunghezza e la larghezza dell'edificio in metri.",
+    "Inserire la pendenza inferiore (ripida) — tipicamente 18/12 a 24/12 per le pareti stile fienile.",
+    "Inserire la pendenza superiore (dolce) — tipicamente 4/12 a 8/12 per la copertura.",
+    "Selezionare l'interasse dei travetti e cliccare Calcola.",
+  ],
+  materialInfo:
+    "Il tetto a mansarda — comunemente detto tetto a fienile — presenta due pendenze distinte per ciascun lato: una sezione inferiore ripida (tipicamente 60–70 gradi) e una sezione superiore più dolce (tipicamente 20–30 gradi). Questo design a doppia pendenza massimizza lo spazio utile al piano superiore, essendo la scelta classica per fienili, edifici agricoli e case in stile coloniale olandese. La pendenza inferiore ripida funziona quasi come una parete, fornendo altezza piena nel sottotetto. Strutturalmente, la transizione tra le due pendenze (la rottura di mansarda) richiede un arcarecci orizzontale che funge da mensola per i travetti superiori e trasferisce i carichi a quelli inferiori. I travetti inferiori sono tipicamente 8x20 o 8x24 cm, quelli superiori possono essere 8x16 o 8x20 cm. Secondo NTC 2018, tutte le connessioni devono essere verificate. Il design a mansarda usa 20–30% meno materiale rispetto all'aggiunta di un secondo piano completo con tetto a capanna convenzionale. I costi materiali per una struttura a mansarda di 9x12 m variano da 6.000 a 14.000 EUR per il legname. Uno svantaggio è la resistenza al vento — la pendenza inferiore ripida cattura il vento.",
+  nextSteps: [
+    { label: "Calcolatore Tavolato Tetto", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Calcolatore Travetti", href: "/calculators/roofing/rafter-calculator/" },
+    { label: "Calcolatore Tegole", href: "/calculators/roofing/shingle-calculator/" },
+    { label: "Calcolatore Tetto a Capanna", href: "/calculators/roofing/gable-roof-calculator/" },
+  ],
+  installationTips: [
+    "Costruire le capriate a mansarda su superficie piana (dima) per garantire uniformità in tutte le capriate.",
+    "L'arcarecci alla rottura di mansarda è strutturale — usare una trave adeguata o legname doppio.",
+    "Installare saette alla transizione inferiore-superiore per maggiore rigidezza.",
+    "Rivestire attraverso la rottura con attenzione — il cambio d'angolo richiede tagli precisi.",
+    "Usare tiranti o travetti di solaio nella sezione superiore per evitare la spinta laterale.",
+  ],
+  commonMistakes: [
+    "Sottodimensionare l'arcarecci alla transizione — porta carichi strutturali significativi.",
+    "Non controventare la transizione inferiore-superiore — il punto di rottura è la parte più debole della mansarda.",
+    "Usare la stessa pendenza in entrambe le sezioni — l'inferiore deve essere significativamente più ripida.",
+    "Ignorare l'esposizione al vento — i tetti a mansarda hanno scarse prestazioni nelle zone ventose.",
+  ],
+  faqs: [
+    { question: "Cos'è un tetto a mansarda?", answer: "Un tetto a mansarda ha due pendenze diverse per ciascun lato — una inferiore ripida (60–70 gradi) e una superiore dolce (20–30 gradi). Questo design di fienile massimizza lo spazio interno utile al piano superiore." },
+    { question: "Quali pendenze si usano in un tetto a mansarda?", answer: "La sezione inferiore usa tipicamente 18/12 a 24/12 (56–63 gradi), quella superiore 4/12 a 8/12 (18–33 gradi). Una combinazione comune è 20/12 inferiore e 6/12 superiore." },
+    { question: "Quanto spazio extra offre un tetto a mansarda?", answer: "Un tetto a mansarda offre circa il 70–80% della superficie di un secondo piano completo, rispetto al 40–50% per un sottotetto di tetto a capanna." },
+    { question: "I tetti a mansarda sono resistenti?", answer: "Sono resistenti se ben progettati e controventati secondo NTC 2018, ma sono più vulnerabili al vento dei tetti a padiglione o capanna per via della pendenza inferiore ripida." },
+    { question: "Differenza tra mansarda e tetto alla francese?", answer: "La mansarda ha due pendenze su due lati con timpani. Il tetto alla francese (mansard) ha due pendenze su tutti e quattro i lati, come un ibrido tra padiglione e mansarda." },
+    { question: "Quanto costa costruire un tetto a mansarda?", answer: "Un tetto a mansarda costa il 15–25% in più rispetto a un tetto a capanna semplice. Per un edificio di 9x12 m, prevedere 8.000–18.000 EUR in legname e ferramenta, più 10.000–25.000 EUR di manodopera." },
+  ],
+};
+
+// ─── TETTO A CAPANNA ────────────────────────────────────────────────────────
+
+export const gableRoofCalculatorIT: CalculatorSEOContent = {
+  disclaimer: "Aggiungere 10–15% di sfrido per tagli e sporti. Le lunghezze dei travetti non includono lo sporto — aggiungere 30–60 cm per travetto per la gronda.",
+  howToUse: [
+    "Inserire la lunghezza (lungo il colmo) e la larghezza (lato timpano) dell'edificio in metri.",
+    "Inserire la pendenza del tetto (rapporto altezza/base).",
+    "Selezionare l'interasse dei travetti (40 cm è lo standard residenziale).",
+    "Cliccare Calcola per numero travetti, superficie, lunghezza colmo e area timpano.",
+  ],
+  materialInfo:
+    "Il tetto a capanna è il tipo di copertura residenziale più comune in Italia, con due falde inclinate che si incontrano in un colmo centrale lungo tutta la lunghezza dell'edificio. Le sezioni murarie triangolari a ogni estremità — i timpani — danno il nome a questo stile. Sono popolari per la semplicità di progettazione, l'economia di materiali e l'eccellente drenaggio dell'acqua piovana. Le pendenze residenziali standard variano dal 25% al 45%, con il 35% più comune. I travetti corrono dalla catena al colmo, con intaglio a bocca di lupo sulla catena e taglio a piombo al colmo. Sezioni comuni secondo NTC 2018 ed Eurocodice 5 sono 8x14 (fino a 3,5 m di luce), 8x18 (fino a 4,5 m) e 8x22 (fino a 5,5 m) a interasse di 40 cm. L'area dei timpani deve essere inclusa nella stima del rivestimento. Per un tetto a capanna di 9x12 m con pendenza 35%, il legname strutturale costa tipicamente 4.000–9.000 EUR, con manodopera aggiuntiva di 6.000–13.000 EUR.",
+  nextSteps: [
+    { label: "Calcolatore Colmo", href: "/calculators/roofing/ridge-board-calculator/" },
+    { label: "Calcolatore Tavolato Tetto", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Calcolatore Tegole", href: "/calculators/roofing/shingle-calculator/" },
+    { label: "Calcolatore Tetto a Padiglione", href: "/calculators/roofing/hip-roof-calculator/" },
+  ],
+  installationTips: [
+    "Tagliare prima un travetto campione e verificare l'incastro prima di tagliare l'intero set.",
+    "Usare squadra rapida per segnare i tagli a bocca di lupo e a piombo in modo uniforme.",
+    "Installare il colmo su supporti temporanei prima di posizionare i travetti.",
+    "Lavorare da entrambe le estremità verso il centro posizionando coppie opposte di travetti.",
+    "Installare tiranti nel terzo superiore dei travetti per prevenire l'allargamento delle pareti.",
+  ],
+  commonMistakes: [
+    "Dimenticare di aggiungere la lunghezza dello sporto alla misura del travetto — aggiungere 30–60 cm oltre il muro.",
+    "Non includere tavolato e rivestimento del timpano nella stima dei materiali.",
+    "Usare la larghezza dell'edificio come corsa del travetto — la corsa è metà larghezza per ogni lato.",
+    "Omettere tiranti o travetti di solaio — senza di essi i travetti spingeranno i muri verso l'esterno nel tempo.",
+  ],
+  faqs: [
+    { question: "Cos'è un tetto a capanna?", answer: "Un tetto a capanna è la classica forma triangolare a due falde inclinate che si incontrano in un colmo centrale. Le sezioni murarie triangolari verticali alle estremità sono i timpani. È il tipo più comune in Italia per semplicità, basso costo e drenaggio efficace." },
+    { question: "Come si calcola la superficie di un tetto a capanna?", answer: "Moltiplicare metà larghezza edificio (corsa travetto) per il fattore di pendenza, poi per la lunghezza per una falda. Raddoppiare per entrambi i lati. Per 9x12 m con pendenza 35% (6/12): corsa = 4,5 m, fattore = 1,118, una falda = 4,5 x 1,118 x 12 = 60,4 m², totale = 120,8 m²." },
+    { question: "Qual è l'area del timpano e perché è importante?", answer: "Il timpano è la sezione triangolare di muro tra le due falde a ogni estremità. La sua area va inclusa per rivestimento, chiusura e ventilazione. Per un edificio largo 9 m con pendenza 35%, ogni timpano è 9 x 2,25 / 2 = 10,1 m²." },
+    { question: "Quale pendenza è migliore per un tetto a capanna?", answer: "Una pendenza del 35% (6/12) è la più popolare per residenziale, con buon equilibrio tra estetica, efficienza materiali e praticabilità. Le tegole marsigliesi richiedono almeno il 30%." },
+    { question: "Quanti travetti servono per un tetto a capanna?", answer: "Dividere la lunghezza dell'edificio per l'interasse (in metri), aggiungere uno, poi moltiplicare per due per entrambi i lati. Per un edificio di 12 m con interasse 40 cm: (12 / 0,40) + 1 = 31 per lato, 62 totali. Aggiungere 10% per sfrido." },
+    { question: "Tetto a capanna vs padiglione — quale costa meno?", answer: "I tetti a capanna costano il 15–25% in meno perché usano meno legname, hanno tagli più semplici e sono più veloci da montare. Tuttavia sono meno resistenti al vento ed espongono i timpani alle intemperie." },
+  ],
+};
+
+// ─── TETTO A FALDA UNICA ────────────────────────────────────────────────────
+
+export const leanToRoofCalculatorIT: CalculatorSEOContent = {
+  disclaimer: "Le misure della falda unica assumono un tetto a pendenza singola senza compluvi o displuvi. Aggiungere 10–15% di sfrido per i materiali. La lunghezza del travetto non include lo sporto.",
+  howToUse: [
+    "Inserire la lunghezza del tetto (lungo il muro portante) in metri.",
+    "Inserire la corsa del tetto (profondità dal muro) in metri.",
+    "Inserire la pendenza (rapporto altezza/base).",
+    "Selezionare l'interasse dei travetti e cliccare Calcola per numero, lunghezza, superficie e altezza.",
+  ],
+  materialInfo:
+    "Il tetto a falda unica (detto anche shed, mono-falda o skillion) è la forma di copertura più semplice — un unico piano inclinato che si appoggia a una struttura esistente o copre tra muri di altezze diverse. È la scelta standard per ampliamenti, portici coperti, tettoie auto, depositi e pensiline. Il lato alto è tipicamente fissato al muro esistente tramite una trave dormiente imbullonata ai montanti, mentre il lato basso poggia su una trave sostenuta da pilastri. Avendo una sola pendenza, la falda unica è la più economica da strutturare — richiede circa metà dei travetti di un tetto a capanna e non ha colmo, displuvi o tagli composti. Pendenze tipiche variano dal 10% al 30%, con 15%–20% le più comuni. Secondo le NTC 2018 e la norma UNI 11018, la pendenza minima dipende dal materiale: 1% per membrane impermeabilizzanti, 5% per lamiera metallica con sigillatura e 30% per tegole tradizionali. Una falda unica di 3,6x6 m costa 2.500–6.000 EUR in legname strutturale e 1.000–2.500 EUR in materiali di copertura, con manodopera aggiuntiva di 4.000–9.000 EUR.",
+  nextSteps: [
+    { label: "Calcolatore Travetti", href: "/calculators/roofing/rafter-calculator/" },
+    { label: "Calcolatore Tavolato Tetto", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Calcolatore Pendenza Tetto", href: "/calculators/roofing/roof-pitch-calculator/" },
+    { label: "Calcolatore Tetto a Capanna", href: "/calculators/roofing/gable-roof-calculator/" },
+  ],
+  installationTips: [
+    "Fissare la trave dormiente ai montanti del muro esistente con bulloni passanti da 12 mm — mai fissare al solo rivestimento.",
+    "Installare scossalina a Z o scossalina a gradini sopra la trave dormiente per prevenire infiltrazioni.",
+    "Usare un filo di riferimento dalla trave dormiente alla catena per verificare la pendenza uniforme prima del taglio.",
+    "Inclinare il tetto lontano dall'edificio esistente per dirigere il deflusso verso il lato basso.",
+    "Per corse superiori a 3,5 m, considerare una trave intermedia per ridurre la sezione dei travetti.",
+  ],
+  commonMistakes: [
+    "Fissare la trave dormiente al rivestimento anziché alla struttura — deve essere imbullonata ai montanti o alla trave perimetrale.",
+    "Dimenticare la scossalina sopra la trave dormiente — è la causa più comune di infiltrazioni nelle pensiline.",
+    "Inclinare il tetto verso l'edificio esistente anziché lontano — l'acqua deve defluire verso il lato esterno.",
+    "Usare pendenza troppo bassa per il materiale di copertura — le tegole tradizionali richiedono almeno il 30%.",
+  ],
+  faqs: [
+    { question: "Cos'è un tetto a falda unica?", answer: "Un tetto a falda unica è un tetto a pendenza singola che tipicamente si appoggia a un muro di edificio esistente. Un'estremità è più alta (fissata al muro tramite trave dormiente) e l'altra più bassa (sostenuta da pilastri e trave). È il tipo più semplice ed economico." },
+    { question: "Qual è la pendenza minima per un tetto a falda unica?", answer: "Secondo le norme NTC: 1% per membrane impermeabilizzanti (TPO, EPDM), 3%–5% per lamiera metallica con sigillatura, e 30% per tegole tradizionali in laterizio. Per la maggior parte delle pensiline, 15%–20% offre un buon equilibrio." },
+    { question: "Come si calcola la superficie di un tetto a falda unica?", answer: "Moltiplicare la lunghezza del tetto per la corsa, poi per il fattore di pendenza. Per una falda unica di 6x3,6 m con pendenza 20% (4/12), il fattore è 1,054, la superficie è 6 x 3,6 x 1,054 = 22,8 m²." },
+    { question: "Quanto sale un tetto a falda unica?", answer: "L'altezza è la corsa per il rapporto di pendenza. Per una corsa di 3,6 m con pendenza 20% (4/12): 3,6 x (4/12) = 1,2 m di innalzamento." },
+    { question: "Posso fissare una falda unica a qualsiasi muro?", answer: "Si può fissare a qualsiasi muro strutturale che sopporti i carichi. Il muro deve avere montanti accessibili. Muri in muratura richiedono tasselli chimici o bulloni passanti. Verificare sempre la capacità portante del muro esistente." },
+    { question: "Quanto costa un tetto a falda unica?", answer: "Una falda unica di 3,6x6 m costa 2.500–6.000 EUR in legname, 1.000–2.500 EUR in materiali di copertura e 4.000–9.000 EUR di manodopera. Costo totale installato tipicamente 7.000–17.000 EUR." },
+  ],
+};
+
+// ─── SPAZIATURA COLONNINE ───────────────────────────────────────────────────
+
+export const balusterSpacingCalculatorIT: CalculatorSEOContent = {
+  disclaimer: "I calcoli si basano sulle NTC 2018 e sulla norma UNI 10809 che limitano le aperture a un massimo di 10 cm. Verificare i requisiti locali con il proprio Comune.",
+  howToUse: [
+    "Misurare la lunghezza totale della ringhiera in centimetri da montante a montante.",
+    "Inserire la larghezza della colonnina (3,8 cm per colonnine quadrate standard).",
+    "Inserire la larghezza del montante (8,9 cm per montanti standard 9x9 cm).",
+    "Inserire il numero di montanti e cliccare Calcola per il numero esatto di colonnine e la spaziatura uniforme.",
+  ],
+  materialInfo:
+    "Le colonnine (dette anche balaustri o pilastrini) sono gli elementi verticali di riempimento di un sistema di ringhiera che prevengono le cadute e rispettano le norme edilizie. Le NTC 2018 e la UNI 10809 richiedono che una sfera di 10 cm non possa passare attraverso nessuna apertura della ringhiera — tra colonnine, tra colonnine e montanti, e tra il corrente inferiore e la superficie del pavimento.\n\nColonnine quadrate standard hanno lato di 3,8 cm, quelle tonde hanno diametro tipico di 2 cm. Con colonnine di 3,8 cm e apertura massima di 10 cm, servono circa 7 colonnine per metro lineare.\n\nMateriali comuni includono acciaio verniciato (15–40 EUR ciascuna), alluminio (20–50 EUR), acciaio inox (40–100 EUR) e legno massello (25–70 EUR). Per una ringhiera tipica di 10 m lineari servono 65–85 colonnine. La spaziatura uniforme migliora l'estetica e la conformità — usare un distanziatore per mantenere distanze costanti durante l'installazione.",
+  nextSteps: [
+    { label: "Calcolatore Ringhiera Terrazza", href: "/calculators/outdoor/deck-railing-calculator/" },
+    { label: "Calcolatore Scale", href: "/calculators/stairs/stair-calculator/" },
+    { label: "Calcolatore Tavole Terrazza", href: "/calculators/outdoor/deck-board-calculator/" },
+  ],
+  installationTips: [
+    "Tagliare un blocco distanziatore della larghezza calcolata e usarlo tra ogni colonnina per spaziatura perfettamente uniforme.",
+    "Preforare i fori per le viti nelle colonnine in legno per evitare fessurazioni.",
+    "Installare prima il corrente inferiore, posizionare tutte le colonnine con il distanziatore, poi fissare il corrente superiore.",
+    "Usare adesivo per esterni oltre alle viti per durabilità a lungo termine nelle ringhiere esposte.",
+  ],
+  commonMistakes: [
+    "Spaziare le colonnine troppo distanti — il test della sfera da 10 cm si applica a ogni apertura.",
+    "Dimenticare di sottrarre le larghezze dei montanti dalla lunghezza totale nel calcolo dello spazio disponibile.",
+    "Non preforare le colonnine in legno — sezioni piccole si fessurano facilmente quando avvitate alle estremità.",
+    "Ignorare il divario tra pavimento e corrente inferiore — la regola dei 10 cm si applica anche qui.",
+  ],
+  faqs: [
+    { question: "Qual è la distanza massima tra colonnine?", answer: "Le NTC 2018 richiedono che una sfera di 10 cm non possa passare attraverso nessuna apertura. Con colonnine quadrate standard di 3,8 cm, il gap massimo è inferiore a 10 cm." },
+    { question: "Quante colonnine servono per metro?", answer: "Con colonnine quadrate di 3,8 cm e gap massimo di 10 cm, servono circa 7 colonnine per metro lineare di ringhiera." },
+    { question: "Si possono usare correnti orizzontali?", answer: "Alcune normative lo permettono, ma la regola della sfera da 10 cm resta valida. Molti regolamenti vietano i design orizzontali perché i bambini possono arrampicarsi. Verificare il regolamento comunale." },
+    { question: "Quale deve essere l'altezza della ringhiera?", answer: "Le NTC 2018 richiedono altezza minima di 100 cm per ringhiere residenziali e 110 cm per edifici pubblici o con dislivello superiore a 6 m." },
+    { question: "Qual è il materiale migliore per colonnine esterne?", answer: "Alluminio e acciaio inox offrono la migliore durabilità con minima manutenzione. L'acciaio zincato è economico ma richiede verniciatura periodica. Il legno massello di castagno o rovere è naturalmente resistente." },
+    { question: "Serve un permesso per installare una ringhiera?", answer: "Sì, nella maggior parte dei Comuni l'installazione di ringhiere su terrazze richiede una CILA o SCIA. I tecnici verificano altezza, spaziatura, fissaggio e integrità strutturale." },
+  ],
+};
+
+// ─── SOTTOTETTO (SOFFIT) ─────────────────────────────────────────────────────
+
+export const soffitCalculatorIT: CalculatorSEOContent = {
+  disclaimer: "Questa stima assume pannelli standard da 30 cm di larghezza. Larghezze e coperture reali variano per produttore. Aggiungere 10% di sfrido per tagli e adattamenti.",
+  howToUse: [
+    "Misurare il perimetro totale della casa in metri.",
+    "Misurare la larghezza del sottotetto (distanza dal muro alla tavola di bordo) in centimetri.",
+    "Inserire la lunghezza del pannello (tipicamente 3,60 m per pannelli standard).",
+    "Cliccare Calcola per ottenere numero pannelli, lunghezza profilo J e quantità strisce di ventilazione.",
+  ],
+  materialInfo:
+    "Il sottotetto (o soffitta della gronda) è il materiale che riveste la parte inferiore dello sporto del tetto, colmando il vuoto tra il muro esterno e la tavola di bordo (fascia). Le sue funzioni principali sono proteggere le code dei travetti da intemperie, insetti e umidità, oltre a fornire ventilazione del sottotetto quando si usano pannelli forati.\n\nI pannelli sottotetto sono disponibili in tre stili: pieni (senza ventilazione), ventilati al centro (striscia forata centrale) e totalmente ventilati. Un sottotetto ventilato combinato con ventilazione al colmo crea un flusso d'aria continuo.\n\nMateriali comuni: PVC (20–40 EUR/m² installato), alluminio (35–70 EUR/m²), fibrocemento (40–80 EUR/m²) e legno (50–110 EUR/m²). Il PVC è il più popolare per uso residenziale in Italia. Dimensioni standard: 30 cm di larghezza per 3,60 m di lunghezza.\n\nIl profilo J (canalina) si installa su entrambi i bordi del sottotetto (lato muro e lato fascia) per accogliere e fissare i bordi dei pannelli.",
+  nextSteps: [
+    { label: "Calcolatore Rivestimento Vinilico", href: "/calculators/exterior-shell/vinyl-siding-calculator/" },
+    { label: "Calcolatore Gocciolatoio", href: "/calculators/roofing/drip-edge-calculator/" },
+    { label: "Calcolatore Rivestimento Fibrocemento", href: "/calculators/exterior-shell/hardie-siding-calculator/" },
+  ],
+  installationTips: [
+    "Installare il profilo J lungo il muro per primo, mantenendolo livellato e dritto — ogni deviazione si vedrà nei pannelli finiti.",
+    "Lasciare 6 mm di gioco di dilatazione a ogni estremità del pannello per evitare imbarcamento con il caldo.",
+    "Alternare pannelli ventilati e pieni se serve ventilazione parziale anziché totale.",
+    "Tagliare i pannelli con sega circolare a denti fini (invertita per PVC) o cesoie da lamiera per bordi puliti.",
+  ],
+  commonMistakes: [
+    "Non lasciare gioco di dilatazione — i pannelli PVC si imbarcano e deformano se installati troppo stretti.",
+    "Installare solo pannelli pieni quando serve ventilazione del sottotetto — usare almeno un terzo di pannelli ventilati.",
+    "Non livellare il profilo J — ogni ondulazione sarà visibile nel sottotetto finito.",
+    "Dimenticare i terminali dove il sottotetto finisce ai timpani o alle transizioni del portico.",
+  ],
+  faqs: [
+    { question: "Cos'è il sottotetto e perché serve?", answer: "Il sottotetto è il pannello che riveste la parte inferiore dello sporto del tetto. Protegge le code dei travetti da intemperie e insetti, fornisce ventilazione quando forato e dà un aspetto finito alla gronda." },
+    { question: "Servono pannelli ventilati?", answer: "Sì, se il sottotetto ha ventilazione al colmo. I pannelli ventilati permettono l'ingresso d'aria dalla gronda e l'uscita dal colmo, creando un flusso continuo che previene umidità e calore eccessivo. Usare almeno un terzo di pannelli ventilati." },
+    { question: "Quanto costa il sottotetto?", answer: "Il sottotetto in PVC costa 20–40 EUR/m² installato. Per una casa tipica con 48 m di perimetro e sporti di 45 cm (21,6 m²), i materiali costano 430–860 EUR e l'installazione professionale aggiunge 500–1.000 EUR." },
+    { question: "Posso installare il sottotetto nuovo sopra l'esistente?", answer: "Sì, se quello esistente è in buone condizioni e ben fissato. Installare nuovi profili J sopra la vecchia superficie. Se il vecchio è danneggiato, marcio o cedevole, rimuoverlo completamente." },
+    { question: "Quale larghezza di pannello serve?", answer: "La larghezza dipende dallo sporto. Pannelli standard da 30 cm vanno per sporti fino a 30 cm. Per sporti più ampi (45–60 cm), usare due file o pannelli più larghi." },
+    { question: "Quanto profilo J serve?", answer: "Il profilo J serve su entrambi i lati (muro e fascia), quindi moltiplicare il perimetro per 2. Per 48 m di perimetro servono 96 m lineari di profilo J." },
+  ],
+};
+
+// ─── DOGHE E COPRIGIUNTO ─────────────────────────────────────────────────────
+
+export const boardAndBattenCalculatorIT: CalculatorSEOContent = {
+  disclaimer: "Questa stima assume installazione verticale standard con doghe accostate e listelli coprigiunto sulle giunzioni. Aggiungere 10% di sfrido per tagli attorno a porte e finestre.",
+  howToUse: [
+    "Calcolare la superficie totale della parete in m² (perimetro x altezza, meno porte e finestre).",
+    "Inserire la larghezza della doga (comune: 15, 20, 25 o 30 cm).",
+    "Inserire la larghezza del coprigiunto (comune: 4–8 cm).",
+    "Inserire l'altezza della parete in metri e cliccare Calcola.",
+  ],
+  materialInfo:
+    "Il rivestimento a doghe e coprigiunto è un classico pattern verticale con doghe larghe installate in verticale e listelli stretti (coprigiunto) che coprono le giunzioni tra esse. Questo design permette il movimento naturale del legno — le doghe possono espandersi e contrarsi con l'umidità senza aprire fessure visibili.\n\nStoricamente il rivestimento più comune in cascine e case rurali italiane, le doghe e coprigiunto sono tornate in voga nell'architettura contemporanea e nello stile rustico moderno. Sono disponibili in legno naturale (larice, castagno, abete), legno ingegnerizzato, fibrocemento e PVC.\n\nLarghezze delle doghe variano da 15 a 30 cm, con 20–25 cm le più popolari. Coprigiunti sono tipicamente di 4–8 cm. L'installazione richiede una barriera impermeabile (guaina o telo traspirante) dietro il rivestimento. Costo per materiale: abete trattato 12–25 EUR/m lineare, larice 30–60 EUR, fibrocemento 20–45 EUR.",
+  nextSteps: [
+    { label: "Calcolatore Rivestimento Vinilico", href: "/calculators/exterior-shell/vinyl-siding-calculator/" },
+    { label: "Calcolatore Rivestimento Fibrocemento", href: "/calculators/exterior-shell/hardie-siding-calculator/" },
+    { label: "Calcolatore Telo Traspirante", href: "/calculators/exterior-shell/housewrap-calculator/" },
+  ],
+  installationTips: [
+    "Installare una barriera traspirante (Tyvek o equivalente) sul tavolato strutturale prima di qualsiasi rivestimento.",
+    "Fissare ogni doga con un solo chiodo al centro — questo permette dilatazione e contrazione senza fessurazioni.",
+    "I coprigiunti vanno fissati attraverso la sovrapposizione delle doghe, ancorandosi al tavolato o ai montanti.",
+    "Lasciare 3 mm di gioco tra la base delle doghe e le modanature orizzontali per il drenaggio.",
+    "Applicare impregnante su tutte le estremità tagliate e superfici posteriori prima dell'installazione.",
+  ],
+  commonMistakes: [
+    "Fissare le doghe su entrambi i bordi — questo limita la dilatazione naturale e causa fessurazioni.",
+    "Omettere la barriera traspirante — essenziale per prevenire danni da acqua alla struttura.",
+    "Usare coprigiunti troppo stretti — minimo 4 cm raccomandato per coprire adeguatamente le giunzioni.",
+    "Non sigillare le estremità tagliate — la venatura di testa assorbe umidità rapidamente causando marciume.",
+  ],
+  faqs: [
+    { question: "Cos'è il rivestimento a doghe e coprigiunto?", answer: "È uno stile di rivestimento verticale con doghe larghe in verticale e listelli stretti (coprigiunti) che coprono le giunzioni. Permette il movimento del legno mantenendo una facciata a tenuta." },
+    { question: "Quali materiali funzionano?", answer: "Larice (più tradizionale), abete trattato (economico), fibrocemento (durevole, bassa manutenzione), PVC e legni nobili come castagno. Ciascuno ha diversi profili di costo e manutenzione." },
+    { question: "Quanto costa?", answer: "Materiali: 12–25 EUR/m lineare per abete, 30–60 EUR per larice, 20–45 EUR per fibrocemento. Installazione professionale 40–100 EUR/m². Per una facciata di 45 m², prevedere 6.000–20.000 EUR totali." },
+    { question: "Si può installare in orizzontale?", answer: "Tradizionalmente è verticale, ma l'installazione orizzontale è possibile. Tuttavia i coprigiunti orizzontali possono trattenere l'acqua contro le doghe. L'installazione verticale è raccomandata per il miglior drenaggio." },
+    { question: "Serve la barriera traspirante?", answer: "Sì, sempre. Una barriera traspirante dietro il rivestimento è essenziale. Le giunzioni non sono a tenuta stagna — i coprigiunti deviano la maggior parte dell'acqua ma parte può infiltrarsi." },
+    { question: "Larghezze ideali?", answer: "Doghe di 20–25 cm con coprigiunti di 5 cm sono la scelta residenziale più popolare. Doghe più larghe (30 cm) per un aspetto più rustico; più strette (15 cm) per un look più raffinato e moderno." },
+  ],
+};
+
+// ─── PARETE INCLINATA ───────────────────────────────────────────────────────
+
+export const rakeWallCalculatorIT: CalculatorSEOContent = {
+  disclaimer: "Le altezze dei montanti della parete inclinata sono calcoli teorici. Misurare e tagliare sempre ogni montante singolarmente in cantiere. La traversa superiore richiede un taglio angolato per seguire la pendenza del tetto. Aggiungere 10% di sfrido.",
+  howToUse: [
+    "Misurare la lunghezza totale della parete in metri lungo la traversa inferiore.",
+    "Inserire l'altezza del lato basso in metri.",
+    "Inserire l'altezza del lato alto in metri.",
+    "Impostare l'interasse (40 o 60 cm) e cliccare Calcola.",
+  ],
+  materialInfo:
+    "Una parete inclinata (detta anche parete timpano o parete con sommità inclinata) è una parete dove la traversa superiore segue la pendenza del tetto anziché correre in piano. Questo crea una sezione muraria triangolare o trapezoidale dove ogni montante ha un'altezza diversa, crescente progressivamente dal lato basso al lato alto.\n\nSi trovano nei timpani dei tetti, sotto tetti a falda unica, nei sottotetti e ovunque una parete incontri un controsoffitto inclinato. Sono strutturate con lo stesso legname delle pareti standard — tipicamente montanti 8x8 o 8x12 cm a interasse di 40 o 60 cm secondo NTC 2018.\n\nLa differenza principale è che la traversa superiore deve essere tagliata in sbieco (angolo) corrispondente alla pendenza del tetto, e ogni montante deve essere misurato e tagliato individualmente. Per una parete inclinata di 6 m da 2,4 a 4,2 m, servono circa 16 montanti a 40 cm, con altezze da circa 231 a 415 cm.",
+  nextSteps: [
+    { label: "Calcolatore Montanti", href: "/calculators/wall-framing/stud-calculator/" },
+    { label: "Calcolatore Tetto a Capanna", href: "/calculators/roofing/gable-roof-calculator/" },
+    { label: "Calcolatore Tavolato Esterno", href: "/calculators/wall-framing/exterior-sheathing-calculator/" },
+  ],
+  installationTips: [
+    "Tracciare e tagliare una dima all'angolo della pendenza per il taglio superiore di ogni montante.",
+    "Misurare ogni montante singolarmente in cantiere — i calcoli teorici possono avere piccole variazioni.",
+    "Installare la traversa inferiore livellata per prima, poi posizionare la traversa superiore inclinata.",
+    "Per montanti sotto 60 cm, usare blocchi orizzontali tra di essi per superficie di fissaggio del rivestimento.",
+    "Usare livella laser per verificare l'allineamento della traversa superiore lungo tutta la parete.",
+  ],
+  commonMistakes: [
+    "Tagliare tutti i montanti alla stessa lunghezza — ogni montante ha altezza diversa.",
+    "Dimenticare il taglio angolato sulla traversa superiore — deve seguire la pendenza del tetto.",
+    "Non misurare singolarmente in cantiere — variazioni di pavimento e struttura influenzano ogni altezza.",
+    "Omettere blocchi orizzontali per montanti corti — il rivestimento necessita di superficie di fissaggio.",
+  ],
+  faqs: [
+    { question: "Cos'è una parete inclinata?", answer: "Una parete inclinata (o parete timpano) è una parete dove la traversa superiore segue la pendenza del tetto. Ogni montante ha altezza diversa, creando una sezione triangolare o trapezoidale." },
+    { question: "Come si calcolano le altezze dei montanti?", answer: "La differenza di altezza tra gli estremi si divide per il numero di interassi. Per una parete di 6 m da 2,4 a 4,2 m con interasse 40 cm: 15 interassi, differenza 1,8 m, incremento di 12 cm per montante." },
+    { question: "Che tipo di legname usare?", answer: "Lo stesso delle pareti standard — montanti 8x8 o 8x12 cm secondo NTC 2018. La sezione dipende dall'altezza della parete e dai carichi." },
+    { question: "Come si taglia la traversa superiore?", answer: "Calcolare l'angolo della pendenza (arcotangente della differenza di altezza divisa per la lunghezza). Segnare con squadra e tagliare con sega circolare regolata all'angolo." },
+    { question: "Serve controventatura?", answer: "Sì. Applicare le stesse regole delle pareti convenzionali. Aggiungere blocchi orizzontali tra montanti corti per il fissaggio del rivestimento e del cartongesso." },
+  ],
+};
+
+// ─── SPAZIATURA TAVOLE TERRAZZA ──────────────────────────────────────────────
+
+export const deckBoardSpacingCalculatorIT: CalculatorSEOContent = {
+  disclaimer: "La spaziatura raccomandata varia per materiale e umidità locale. Il legno naturale richiede più spazio dei materiali compositi. Consultare il produttore per raccomandazioni specifiche.",
+  howToUse: [
+    "Inserire la larghezza della tavola in centimetri.",
+    "Inserire la lunghezza totale della terrazza in metri.",
+    "Selezionare il tipo di materiale (legno naturale o composito/WPC).",
+    "Cliccare Calcola per la spaziatura raccomandata e il numero di tavole.",
+  ],
+  materialInfo:
+    "La spaziatura tra le tavole della terrazza è essenziale per drenaggio, ventilazione, dilatazione e longevità della struttura. La spaziatura standard per legno naturale è 5–8 mm, per compositi WPC è 5–6 mm secondo le indicazioni del produttore.\n\nIn Italia le essenze più usate per terrazze sono larice, castagno, rovere, pino trattato e teak. I legni duri hanno minor coefficiente di dilatazione rispetto alle conifere, potendo usare spaziature minori (5 mm vs 8 mm). Le tavole composite WPC hanno coefficiente di dilatazione termica da considerare, specialmente nel Sud Italia.\n\nSpaziatura insufficiente causa imbarcamento, ristagno d'acqua e marciume accelerato. Spaziatura eccessiva permette accumulo di detriti e può essere scomoda per piedi nudi. Usare distanziatori in plastica durante l'installazione per mantenere uniformità.",
+  nextSteps: [
+    { label: "Calcolatore Tavole Terrazza", href: "/calculators/outdoor/deck-board-calculator/" },
+    { label: "Calcolatore Plinti Terrazza", href: "/calculators/outdoor/deck-footing-calculator/" },
+    { label: "Calcolatore Ringhiera", href: "/calculators/outdoor/deck-railing-calculator/" },
+  ],
+  installationTips: [
+    "Usare distanziatori in plastica di spessore uniforme tra ogni tavola per mantenere il gap costante.",
+    "Per legno naturale, installare con il lato corteccia verso l'alto per minimizzare l'imbarcamento.",
+    "Lasciare 10–15 mm tra le estremità delle tavole e qualsiasi struttura fissa per dilatazione longitudinale.",
+    "Preforare le estremità delle tavole in legno duro per evitare fessurazioni all'avvitamento.",
+    "Verificare il tenore di umidità del legno prima dell'installazione — installare tra 12% e 18%.",
+  ],
+  commonMistakes: [
+    "Installare tavole senza spaziatura — il legno si dilaterà con l'umidità causando imbarcamento.",
+    "Usare spaziatura irregolare — risultato antiestetico e problemi di drenaggio.",
+    "Non considerare la dilatazione termica dei compositi — il WPC si dilata significativamente con il calore.",
+    "Dimenticare il gap alle estremità — tavole a contatto con muri o bordi fissi si imbarcheranno dilatandosi.",
+  ],
+  faqs: [
+    { question: "Qual è la spaziatura ideale tra tavole?", answer: "Per legno naturale: 5–8 mm. Per compositi WPC: 5–6 mm secondo il produttore. Nel Sud Italia con alte temperature, preferire 6–8 mm per compensare la dilatazione termica." },
+    { question: "Si possono installare tavole senza spaziatura?", answer: "No. Tavole senza spaziatura si imbarcheranno e marciranno prematuramente. La spaziatura è essenziale per drenaggio, ventilazione della sottostruttura e dilatazione." },
+    { question: "Come mantenere la spaziatura uniforme?", answer: "Usare distanziatori in plastica riutilizzabili (10–25 EUR il pacchetto) o chiodi come guida provvisoria. Non affidarsi alla misurazione visiva." },
+    { question: "La spaziatura cambia per materiale?", answer: "Sì. Legni duri (castagno, rovere) possono usare 5 mm. Conifere trattate necessitano 8 mm. WPC segue le indicazioni del produttore, tipicamente 5–6 mm." },
+    { question: "E la spaziatura alle estremità?", answer: "Lasciare 10–15 mm tra le estremità e superfici fisse. Per tavole giuntate testa a testa, lasciare 3–5 mm." },
+  ],
+};
+
 // ─── MAPPA REGISTRO ─────────────────────────────────────────────────────────
 
 export const registryIT: Record<string, Record<string, CalculatorSEOContent>> = {
@@ -2355,6 +2797,8 @@ export const registryIT: Record<string, Record<string, CalculatorSEOContent>> = 
     "block-fill-calculator": blockFillCalculator,
     "mortar-mix-calculator": mortarMixCalculator,
     "retaining-wall-calculator": retainingWallCalculator,
+    "rebar-calculator": rebarCalculator,
+    "rebar-spacing-calculator": rebarSpacingCalculator,
   },
   "floor-framing": {
     "rim-joist-calculator": rimJoistCalculator,
@@ -2369,6 +2813,7 @@ export const registryIT: Record<string, Record<string, CalculatorSEOContent>> = 
     "top-plate-calculator": topPlateCalculator,
     "header-calculator": headerCalculator,
     "exterior-sheathing-calculator": exteriorSheathingCalculator,
+    "rake-wall-calculator": rakeWallCalculatorIT,
   },
   roofing: {
     "truss-calculator": trussCalculator,
@@ -2381,12 +2826,18 @@ export const registryIT: Record<string, Record<string, CalculatorSEOContent>> = 
     "roof-pitch-calculator": roofPitchCalculator,
     "roof-area-calculator": roofAreaCalculator,
     "roof-slope-calculator": roofSlopeCalculator,
+    "hip-roof-calculator": hipRoofCalculatorIT,
+    "gambrel-roof-calculator": gambrelRoofCalculatorIT,
+    "gable-roof-calculator": gableRoofCalculatorIT,
+    "lean-to-roof-calculator": leanToRoofCalculatorIT,
   },
   "exterior-shell": {
     "housewrap-calculator": housewrapCalculator,
     "vinyl-siding-calculator": vinylSidingCalculator,
     "hardie-siding-calculator": hardieSidingCalculator,
     "window-flashing-calculator": windowFlashingCalculator,
+    "soffit-calculator": soffitCalculatorIT,
+    "board-and-batten-calculator": boardAndBattenCalculatorIT,
   },
   "insulation-drywall": {
     "cavity-insulation-calculator": cavityInsulationCalculator,
@@ -2415,6 +2866,7 @@ export const registryIT: Record<string, Record<string, CalculatorSEOContent>> = 
     "deck-stair-calculator": deckStairCalculator,
     "post-hole-calculator": postHoleCalculator,
     "pond-calculator": pondCalculator,
+    "deck-board-spacing-calculator": deckBoardSpacingCalculatorIT,
   },
   stairs: {
     "stair-calculator": stairCalculatorIT,
@@ -2422,5 +2874,6 @@ export const registryIT: Record<string, Record<string, CalculatorSEOContent>> = 
     "rise-over-run-calculator": riseOverRunCalcIT,
     "spiral-staircase-calculator": spiralStaircaseCalcIT,
     "stair-landing-calculator": stairLandingCalcIT,
+    "baluster-spacing-calculator": balusterSpacingCalculatorIT,
   },
 };

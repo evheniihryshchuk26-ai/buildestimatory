@@ -83,6 +83,24 @@ const guides: GuidesTranslations = {
           "How to build stairs — complete guide covering stair anatomy, NBC building code (9.8.2), rise & run calculations, stair types (straight, L-shaped, U-shaped, spiral), materials, and costs.",
         href: "/guides/stair-building-guide",
       },
+      {
+        title: "Floor Joist Span Table: NBC & CSA O86 Reference",
+        description:
+          "Floor joist span tables for 2x6, 2x8, 2x10, 2x12 at 12\", 16\", 24\" OC. Covers SPF, Douglas Fir, and Hem-Fir with NBC and CSA O86 code references for Canadian residential construction.",
+        href: "/guides/joist-span-table",
+      },
+      {
+        title: "Rafter Span Table: Complete Canadian Roof Framing Reference",
+        description:
+          "Rafter span tables by size, spacing, pitch, and snow load. Covers common Canadian lumber sizes with NBC Part 4 and CSA O86 references for residential roof framing.",
+        href: "/guides/rafter-span-table",
+      },
+      {
+        title: "Ceiling Joist Span Table: NBC Building Code Reference",
+        description:
+          "Ceiling joist span tables by size, spacing, and load type. Covers uninhabited attic, limited storage, and habitable attic spans per NBC and CSA O86.",
+        href: "/guides/ceiling-joist-span-table",
+      },
     ],
   },
 
@@ -1822,6 +1840,492 @@ const guides: GuidesTranslations = {
       { question: "Cheapest way?", answer: "Straight treated SPF. 2\u00d712 stringers (CAD $25\u201355 each, 3 needed), treads ($6\u201312 each). 14 steps: CAD $400\u2013$900." },
       { question: "Do I need a permit?", answer: "Yes for permanent stairs in most municipalities. Permit cost: CAD $100\u2013$500. Small exterior steps (1\u20132) may be exempt." },
       { question: "How to use the calculator?", answer: "Enter total rise and desired run. Calculator gives steps, rise, total run, and stringer length \u2014 verified against NBC." },
+    ],
+  },
+
+  joistSpanTable: {
+    title: "Floor Joist Span Table: NBC & CSA O86 Reference",
+    metaDescription:
+      "Floor joist span tables for 2x6, 2x8, 2x10, 2x12 at 12\", 16\", 24\" OC spacing. Covers SPF, Douglas Fir, Hem-Fir with NBC and CSA O86 code references for Canadian residential construction.",
+    heroTitle: "Floor Joist Span Table",
+    heroSubtitle: "NBC & CSA O86 Reference",
+    heroDescription:
+      "Comprehensive floor joist span tables for Canadian residential construction. Find maximum allowable spans for every common lumber size, spacing, wood species, and grade per the National Building Code of Canada.",
+
+    quickAnswerHeading: "Quick Answer",
+    quickAnswerText:
+      "A 2x10 SPF #2 floor joist at 16\" OC (400 mm) can span up to 14'-7\" (4.44 m) for a 1.9 kPa (40 psf) live load / 0.5 kPa dead load. A 2x12 of the same species and grade at 16\" OC spans up to 17'-9\" (5.41 m). Always verify spans against NBC span tables and your local building department, as provinces may amend NBC tables.",
+
+    understandingHeading: "Understanding Floor Joist Spans",
+    understandingText1:
+      "A floor joist span is the horizontal distance a joist can safely bridge between supports without excessive deflection or structural failure. The NBC (National Building Code of Canada) publishes span tables in Part 9 that specify maximum spans based on lumber size, species, grade, spacing, and the design loads the floor must carry. CSA O86 (Engineering Design in Wood) provides the underlying engineering framework.",
+    understandingText2:
+      "Floor joist spans are calculated for two load conditions: live load (people, furniture, moving weight — typically 1.9 kPa / 40 psf for habitable rooms) and dead load (the weight of the structure itself — typically 0.5 kPa / 10 psf for standard framing with drywall ceiling below). The combined total load determines the required joist size and spacing.",
+    understandingText3:
+      "Deflection limits also control span lengths. The NBC requires floor joists to limit deflection to L/360 for live load and L/240 for total load, where L is the span length. This means a 4.5 m span can deflect no more than 12.5 mm under live load. Stiffer floors feel more solid underfoot and prevent cracking in tile or drywall ceilings below.",
+
+    spanTablesHeading: "Floor Joist Span Tables by Species",
+    spanTablesIntro:
+      "The following span tables are based on NBC Part 9 for floors with a 1.9 kPa (40 psf) live load and 0.5 kPa (10 psf) dead load. Spans are listed as maximum clear span. Always use the species and grade stamped on your lumber.",
+    spanTablesColSize: "Joist Size",
+    spanTablesCol12: "12\" OC (300 mm)",
+    spanTablesCol16: "16\" OC (400 mm)",
+    spanTablesCol24: "24\" OC (600 mm)",
+    spanTablesBySpecies: [
+      {
+        species: "Spruce-Pine-Fir (SPF)",
+        grade: "#2 Grade \u2014 the standard Canadian framing lumber",
+        rows: [
+          { size: "2x6", oc12: "10'-9\" (3.28 m)", oc16: "9'-9\" (2.97 m)", oc24: "8'-1\" (2.46 m)" },
+          { size: "2x8", oc12: "14'-2\" (4.32 m)", oc16: "12'-10\" (3.91 m)", oc24: "10'-7\" (3.23 m)" },
+          { size: "2x10", oc12: "18'-0\" (5.49 m)", oc16: "14'-7\" (4.44 m)", oc24: "11'-11\" (3.63 m)" },
+          { size: "2x12", oc12: "21'-11\" (6.68 m)", oc16: "17'-9\" (5.41 m)", oc24: "14'-6\" (4.42 m)" },
+        ],
+      },
+      {
+        species: "Douglas Fir-Larch",
+        grade: "#2 Grade \u2014 common in British Columbia",
+        rows: [
+          { size: "2x6", oc12: "11'-4\" (3.45 m)", oc16: "10'-4\" (3.15 m)", oc24: "8'-6\" (2.59 m)" },
+          { size: "2x8", oc12: "14'-11\" (4.55 m)", oc16: "13'-7\" (4.14 m)", oc24: "11'-2\" (3.40 m)" },
+          { size: "2x10", oc12: "19'-1\" (5.82 m)", oc16: "15'-5\" (4.70 m)", oc24: "12'-8\" (3.86 m)" },
+          { size: "2x12", oc12: "23'-3\" (7.09 m)", oc16: "18'-10\" (5.74 m)", oc24: "15'-5\" (4.70 m)" },
+        ],
+      },
+      {
+        species: "Hem-Fir",
+        grade: "#2 Grade \u2014 common in BC and the Pacific Northwest",
+        rows: [
+          { size: "2x6", oc12: "10'-6\" (3.20 m)", oc16: "9'-6\" (2.90 m)", oc24: "7'-10\" (2.39 m)" },
+          { size: "2x8", oc12: "13'-10\" (4.22 m)", oc16: "12'-7\" (3.84 m)", oc24: "10'-4\" (3.15 m)" },
+          { size: "2x10", oc12: "17'-8\" (5.38 m)", oc16: "14'-3\" (4.34 m)", oc24: "11'-8\" (3.56 m)" },
+          { size: "2x12", oc12: "21'-6\" (6.55 m)", oc16: "17'-5\" (5.31 m)", oc24: "14'-3\" (4.34 m)" },
+        ],
+      },
+    ],
+
+    loadRequirementsHeading: "Floor Load Requirements (NBC)",
+    loadRequirementsIntro:
+      "The NBC specifies minimum design loads for residential floors. These loads determine which span table to use and directly affect maximum joist spans.",
+    loadRequirementsItems: [
+      "Habitable rooms (living rooms, bedrooms, kitchens): 1.9 kPa (40 psf) live load + 0.5 kPa (10 psf) dead load = 2.4 kPa total",
+      "Sleeping rooms only: 1.4 kPa (30 psf) live load + 0.5 kPa dead load = 1.9 kPa total (allows longer spans)",
+      "Decks and exterior balconies: 1.9 kPa live load + 0.5 kPa dead load, plus any snow load where applicable",
+      "Garages: 2.4 kPa (50 psf) live load for passenger vehicles",
+      "Dead load includes joist self-weight, subfloor, finish flooring, and any ceiling below. If using heavy finishes like tile on cement board, increase dead load to 0.75\u20131.0 kPa",
+      "Concentrated loads: the NBC also requires floors to support a 1.3 kN concentrated load on any 750 mm square area",
+    ],
+    loadRequirementsSummary:
+      "For most Canadian residential floors, use the 1.9 kPa / 0.5 kPa span table. When in doubt, design for the higher load \u2014 the cost difference is minimal.",
+
+    factorsHeading: "Factors That Affect Joist Span",
+    factorsIntro:
+      "Beyond the basic span table values, several real-world factors can increase or decrease your required joist size.",
+    factorsItems: [
+      "Wood species and grade: Higher grades (Select Structural, #1) allow longer spans than #2. SPF is the standard Canadian framing lumber; Douglas Fir-Larch (common in BC) is stronger.",
+      "Joist spacing: 12\" OC allows the longest spans, 16\" OC (400 mm) is the standard for most residential construction, and 24\" OC (600 mm) is the most economical but limits span length.",
+      "Bearing length: Joists must bear at least 38 mm (1.5\") on wood or metal and 89 mm (3.5\") on masonry or concrete.",
+      "Notching and boring: The NBC limits notches to the outer third of the span and no deeper than 1/3 the joist depth. Holes must be at least 50 mm from edges.",
+      "Heavy finishes: Tile, stone, or thick hardwood adds significant dead load. When dead load exceeds 0.5 kPa, use adjusted span tables or consult an engineer.",
+      "Cantilevered joists: Cantilevers are limited to 1/4 the backspan.",
+    ],
+    factorsSummary:
+      "Always use the actual species and grade stamped on your lumber. When multiple factors overlap, consider upsizing joists by one dimension for extra safety margin and a stiffer floor.",
+
+    codeReferencesHeading: "NBC & CSA Code References for Floor Joists",
+    codeReferencesIntro:
+      "The following NBC and CSA sections govern floor joist design in Canadian residential construction. Provincial codes may amend these requirements.",
+    codeReferencesItems: [
+      "NBC Part 9 \u2014 Floor joist span tables: Maximum spans for various species, grades, sizes, spacings, and load conditions",
+      "CSA O86 \u2014 Engineering Design in Wood: The engineering standard underlying the span tables, used for non-standard conditions",
+      "NBC 9.23.4 \u2014 Floor framing: Requirements for bearing, lateral restraint, bridging, and connections",
+      "NBC 9.23.4.6 \u2014 Notching and boring: Limits on holes and notches to prevent structural weakening",
+      "NBC 9.23.15 \u2014 Subfloor requirements: Minimum subfloor thickness based on joist spacing",
+      "CSA S406 \u2014 Construction of preserved wood foundations: Additional requirements for floor framing over preserved wood foundations",
+    ],
+    codeReferencesSummary:
+      "The 2020 NBC is the current national model code. Provincial adoption varies \u2014 Ontario uses OBC, BC uses BCBC, Alberta uses ABC. Always verify which edition your local building department enforces.",
+
+    calculatorCtaHeading: "Calculate Your Floor Framing Materials",
+    calculatorCtaText:
+      "Once you know your joist size and spacing, use our calculators to figure out exactly how many joists, hangers, and fasteners you need.",
+    calculatorLinks: [
+      {
+        label: "Floor Joist Calculator",
+        href: "/calculators/floor-framing/floor-joist-calculator",
+        description: "Calculate the number of joists, rim boards, and blocking needed for your floor frame.",
+      },
+      {
+        label: "Subfloor Calculator",
+        href: "/calculators/floor-framing/subfloor-calculator",
+        description: "Estimate plywood or OSB sheets and fasteners for your subfloor.",
+      },
+      {
+        label: "Joist Hanger Calculator",
+        href: "/calculators/floor-framing/joist-hanger-calculator",
+        description: "Calculate joist hangers and structural screws for each connection.",
+      },
+    ],
+    faqHeading: "Frequently Asked Questions",
+    faqs: [
+      {
+        question: "How far can a 2x10 floor joist span in Canada?",
+        answer:
+          "A 2x10 SPF #2 floor joist at 16\" OC can span up to 14'-7\" (4.44 m) for a 1.9 kPa live load. Douglas Fir-Larch #2 at 16\" OC spans up to 15'-5\" (4.70 m). Always check the NBC span table for your specific lumber species and grade.",
+      },
+      {
+        question: "How far can a 2x12 floor joist span?",
+        answer:
+          "A 2x12 SPF #2 at 16\" OC can span up to 17'-9\" (5.41 m). Douglas Fir-Larch #2 at 16\" OC spans up to 18'-10\" (5.74 m). For the longest spans, use Select Structural grade.",
+      },
+      {
+        question: "Can I use 2x6 floor joists?",
+        answer:
+          "Yes, but 2x6 floor joists are limited to short spans: about 9'-9\" (2.97 m) at 16\" OC for SPF #2. They are suitable for small rooms, closets, and bump-outs, but not for typical room-sized spans.",
+      },
+      {
+        question: "What is the difference between live load and dead load?",
+        answer:
+          "Live load is the weight of people, furniture, and movable objects (typically 1.9 kPa / 40 psf for residential). Dead load is the permanent weight of the structure itself (typically 0.5 kPa / 10 psf). Together they determine the total design load.",
+      },
+      {
+        question: "Should I use 16\" or 24\" on-centre spacing?",
+        answer:
+          "16\" OC (400 mm) is standard for most Canadian residential floor framing. 24\" OC (600 mm) uses fewer joists but requires thicker subfloor and limits maximum spans. Use 16\" OC for main living areas.",
+      },
+      {
+        question: "Do I need blocking between floor joists?",
+        answer:
+          "The NBC requires blocking or bridging for joists deeper than 2x12 at intervals not exceeding 2.4 m (8 ft). For 2x10 and smaller, blocking is not required but is recommended at mid-span for long runs to reduce bounce.",
+      },
+    ],
+  },
+
+  rafterSpanTable: {
+    title: "Rafter Span Table: Complete Canadian Roof Framing Reference",
+    metaDescription:
+      "Rafter span tables for 2x4, 2x6, 2x8, 2x10, 2x12 at 12\", 16\", 24\" OC. Covers snow loads, roof pitch factors, and NBC Part 4 code references for Canadian residential roof framing.",
+    heroTitle: "Rafter Span Table",
+    heroSubtitle: "Complete Canadian Roof Framing Reference",
+    heroDescription:
+      "Comprehensive rafter span tables for Canadian residential roof framing. Find maximum allowable spans for every common rafter size, spacing, wood species, and snow load condition per the National Building Code of Canada.",
+
+    quickAnswerHeading: "Quick Answer",
+    quickAnswerText:
+      "A 2x8 SPF #2 rafter at 16\" OC can span up to approximately 14'-3\" (4.34 m) for a 1.0 kPa (20 psf) live load (light snow). For a 1.5 kPa (30 psf) ground snow load, the span drops to about 12'-10\" (3.91 m). A 2x6 rafter at 16\" OC spans up to 11'-9\" (3.58 m) under light loads.",
+
+    understandingHeading: "Understanding Rafter Spans",
+    understandingText1:
+      "A rafter span is the horizontal projection distance a rafter can cover between its bearing point at the wall top plate and the ridge board or ridge beam. Rafter spans are measured as the horizontal run, not along the slope. The actual rafter length is longer than the span because it follows the roof pitch.",
+    understandingText2:
+      "Rafter design in Canada considers two primary loads: the dead load (roofing material, sheathing, insulation \u2014 typically 0.5 to 0.75 kPa depending on covering) and the live load, which includes snow load and the minimum 1.0 kPa construction/maintenance load. Snow load is the dominant design factor in most of Canada.",
+    understandingText3:
+      "The NBC provides span tables for different load conditions. Snow load varies dramatically across Canada \u2014 from 1.0 kPa in southern coastal BC to over 6.0 kPa in mountain communities. The ground snow load (Ss) for your location is listed in NBC Appendix C, Table C-2. The roof snow load is calculated using shape, exposure, and thermal factors per NBC Part 4.",
+
+    spanTablesHeading: "Rafter Span Tables by Species (1.0 kPa Live Load, 0.5 kPa Dead Load)",
+    spanTablesIntro:
+      "The following tables are based on NBC Part 9 for rafters with a 1.0 kPa (20 psf) live load and 0.5 kPa dead load. Spans are the maximum horizontal projection. For higher snow loads, see the reduction factors below.",
+    spanTablesColSize: "Rafter Size",
+    spanTablesCol12: "12\" OC (300 mm)",
+    spanTablesCol16: "16\" OC (400 mm)",
+    spanTablesCol24: "24\" OC (600 mm)",
+    spanTablesBySpecies: [
+      {
+        species: "Spruce-Pine-Fir (SPF)",
+        grade: "#2 Grade \u2014 standard Canadian framing lumber",
+        rows: [
+          { size: "2x4", oc12: "9'-0\" (2.74 m)", oc16: "7'-10\" (2.39 m)", oc24: "6'-5\" (1.96 m)" },
+          { size: "2x6", oc12: "14'-2\" (4.32 m)", oc16: "11'-9\" (3.58 m)", oc24: "9'-8\" (2.95 m)" },
+          { size: "2x8", oc12: "18'-8\" (5.69 m)", oc16: "14'-3\" (4.34 m)", oc24: "11'-8\" (3.56 m)" },
+          { size: "2x10", oc12: "20'-2\" (6.15 m)", oc16: "17'-3\" (5.26 m)", oc24: "14'-1\" (4.29 m)" },
+          { size: "2x12", oc12: "23'-3\" (7.09 m)", oc16: "20'-0\" (6.10 m)", oc24: "16'-4\" (4.98 m)" },
+        ],
+      },
+      {
+        species: "Douglas Fir-Larch",
+        grade: "#2 Grade \u2014 common in British Columbia",
+        rows: [
+          { size: "2x4", oc12: "9'-6\" (2.90 m)", oc16: "8'-3\" (2.51 m)", oc24: "6'-9\" (2.06 m)" },
+          { size: "2x6", oc12: "14'-11\" (4.55 m)", oc16: "12'-10\" (3.91 m)", oc24: "10'-7\" (3.23 m)" },
+          { size: "2x8", oc12: "19'-8\" (5.99 m)", oc16: "15'-0\" (4.57 m)", oc24: "12'-4\" (3.76 m)" },
+          { size: "2x10", oc12: "21'-3\" (6.48 m)", oc16: "18'-2\" (5.54 m)", oc24: "14'-11\" (4.55 m)" },
+          { size: "2x12", oc12: "24'-6\" (7.47 m)", oc16: "21'-1\" (6.43 m)", oc24: "17'-3\" (5.26 m)" },
+        ],
+      },
+      {
+        species: "Hem-Fir",
+        grade: "#2 Grade \u2014 common in BC and Pacific Northwest",
+        rows: [
+          { size: "2x4", oc12: "8'-9\" (2.67 m)", oc16: "7'-7\" (2.31 m)", oc24: "6'-3\" (1.91 m)" },
+          { size: "2x6", oc12: "13'-9\" (4.19 m)", oc16: "11'-10\" (3.61 m)", oc24: "9'-9\" (2.97 m)" },
+          { size: "2x8", oc12: "18'-2\" (5.54 m)", oc16: "13'-10\" (4.22 m)", oc24: "11'-4\" (3.45 m)" },
+          { size: "2x10", oc12: "19'-8\" (5.99 m)", oc16: "16'-10\" (5.13 m)", oc24: "13'-9\" (4.19 m)" },
+          { size: "2x12", oc12: "22'-8\" (6.91 m)", oc16: "19'-6\" (5.94 m)", oc24: "15'-11\" (4.85 m)" },
+        ],
+      },
+    ],
+
+    snowLoadHeading: "Snow Load Impact on Rafter Spans in Canada",
+    snowLoadIntro:
+      "Snow load is the dominant design factor for Canadian roofs. The ground snow load (Ss) varies dramatically across the country and directly reduces allowable rafter spans.",
+    snowLoadItems: [
+      "Light snow (Ss = 1.0 kPa / 20 psf): Coastal southern BC (Victoria, Vancouver lowlands) \u2014 standard span tables apply",
+      "Moderate snow (Ss = 1.5\u20132.0 kPa / 30\u201340 psf): Southern Ontario, southern Quebec, Prairies lowlands \u2014 span reductions of 10\u201315%",
+      "Heavy snow (Ss = 2.5\u20134.0 kPa / 50\u201380 psf): Northern Ontario, northern Quebec, BC interior, mountain communities \u2014 span reductions of 15\u201325%",
+      "Extreme snow (Ss = 4.0\u20136.0+ kPa / 80\u2013125+ psf): Revelstoke, Whistler, high-altitude communities \u2014 span reductions of 25\u201340% or engineered solutions required",
+      "Altitude correction: higher elevations receive more snow. Check NBC Appendix C, Table C-2 for the specific Ss value for your municipality.",
+      "Roof slope reduces snow: pitches above 6:12 (26.6\u00b0) shed snow more effectively. NBC provides shape coefficients reducing the roof snow load for steep pitches. However, sliding snow creates concentrated loads at lower roofs and valleys.",
+    ],
+    snowLoadSummary:
+      "Always design rafters for the ground snow load specified by your municipality. Undersizing rafters for snow load is one of the most common and dangerous framing errors in Canada.",
+
+    pitchFactorsHeading: "How Roof Pitch Affects Rafter Sizing",
+    pitchFactorsIntro:
+      "Roof pitch affects rafter design in multiple ways: actual rafter length, load distribution, snow shedding, and the need for collar ties or ridge beams.",
+    pitchFactorsItems: [
+      "Low pitch (2:12 to 4:12): Rafters carry load almost like a floor joist. High horizontal thrust at the wall plate requires adequate ceiling joists or collar ties. Limited choice of roofing \u2014 mainly membrane or metal.",
+      "Medium pitch (5:12 to 8:12): Most Canadian residential roofs fall in this range. Good for asphalt shingles, metal, and some tiles. Ceiling joists or collar ties still required unless a structural ridge beam is used.",
+      "Steep pitch (9:12 to 12:12): Excellent snow shedding \u2014 important in heavy snow regions. Actual rafter is much longer than the horizontal span, increasing material cost. Wind uplift becomes a concern.",
+      "Pitch multipliers for rafter length: 4:12 = 1.054, 6:12 = 1.118, 8:12 = 1.202, 10:12 = 1.302, 12:12 = 1.414.",
+      "Structural ridge beam: eliminates the need for ceiling joists. Required for cathedral ceiling (open rafter) designs. Must be engineered per CSA O86 for the specific loads.",
+      "Collar ties vs rafter ties: Collar ties in the upper third prevent ridge separation. Rafter ties (ceiling joists) at the plate level resist outward thrust. Most conventional roofs need rafter ties; collar ties alone are not a substitute.",
+    ],
+    pitchFactorsSummary:
+      "For most Canadian residential roofs (4:12 to 8:12 pitch), NBC span tables can be used directly. For cathedral ceilings, a structural ridge beam designed per CSA O86 is required.",
+
+    codeReferencesHeading: "NBC & CSA Code References for Rafters",
+    codeReferencesIntro:
+      "The following NBC and CSA sections govern rafter design in Canadian residential construction.",
+    codeReferencesItems: [
+      "NBC Part 9 \u2014 Rafter span tables: Maximum spans for various species, grades, sizes, spacings, and load conditions including snow load",
+      "NBC Part 4 \u2014 Structural design: Loads, load combinations, and structural requirements for non-Part 9 buildings",
+      "NBC Appendix C, Table C-2 \u2014 Climatic design data: Ground snow loads (Ss) for every Canadian municipality",
+      "CSA O86 \u2014 Engineering Design in Wood: Engineering calculations for rafters, trusses, and ridge beams beyond span table limits",
+      "NBC 9.23.4 \u2014 Roof framing: Requirements for ridge boards, collar ties, rafter ties, and connections",
+      "NBC 9.26.2 \u2014 Roof sheathing: Minimum sheathing thickness based on rafter spacing",
+    ],
+    codeReferencesSummary:
+      "NBC Part 9 span tables are the practical reference for most residential work. For engineered trusses, long spans, or unusual geometries, CSA O86 calculations by a professional engineer are required.",
+
+    calculatorCtaHeading: "Calculate Your Roof Framing Materials",
+    calculatorCtaText:
+      "Once you know your rafter size and spacing, use our calculators to determine how many rafters, how much sheathing, and what fasteners you need.",
+    calculatorLinks: [
+      {
+        label: "Roof Rafter Calculator",
+        href: "/calculators/roofing/rafter-calculator",
+        description: "Calculate the number of rafters, ridge board length, and collar ties needed.",
+      },
+      {
+        label: "Roof Sheathing Calculator",
+        href: "/calculators/roofing/roof-sheathing-calculator",
+        description: "Estimate plywood or OSB sheets for your roof deck.",
+      },
+      {
+        label: "Roofing Shingles Calculator",
+        href: "/calculators/roofing/shingle-calculator",
+        description: "Calculate bundles of shingles and roofing nails needed.",
+      },
+    ],
+    faqHeading: "Frequently Asked Questions",
+    faqs: [
+      {
+        question: "How far can a 2x6 rafter span in Canada?",
+        answer:
+          "A 2x6 SPF #2 rafter at 16\" OC can span up to 11'-9\" (3.58 m) horizontally with a 1.0 kPa live load. For a 1.5 kPa snow load, the span drops to about 10'-6\" (3.20 m). Douglas Fir-Larch #2 at 16\" OC spans up to 12'-10\" (3.91 m) under light loads.",
+      },
+      {
+        question: "How far can a 2x4 rafter span?",
+        answer:
+          "A 2x4 rafter has very limited span: 7'-10\" (2.39 m) at 16\" OC for SPF #2. They are suitable only for small structures like sheds, covered porches under 8 feet wide, and lightweight patio covers.",
+      },
+      {
+        question: "Do I need a ridge beam or a ridge board?",
+        answer:
+          "A ridge board is sufficient when ceiling joists or rafter ties resist the outward thrust. A structural ridge beam (typically LVL or glulam) is required for cathedral ceilings without ceiling joists. Ridge beams must be engineered per CSA O86.",
+      },
+      {
+        question: "How does snow load affect rafter spans in Canada?",
+        answer:
+          "Snow load significantly reduces rafter spans. A 2x8 SPF #2 at 16\" OC spans 14'-3\" with light snow but only about 10'-6\" in extreme snow zones (Ss = 4.0 kPa). Always design for the ground snow load specified for your municipality in NBC Appendix C.",
+      },
+      {
+        question: "Can I use purlins to extend rafter spans?",
+        answer:
+          "Yes. Purlins supported by struts to a bearing wall below can support rafters at mid-span, effectively halving the span. The NBC allows purlin-and-strut systems. The purlin must be at least 2x4, and the strut must bear on an interior load-bearing wall.",
+      },
+      {
+        question: "What is the minimum rafter size for a house in Canada?",
+        answer:
+          "The minimum is typically 2x6 for rooms up to about 12 feet wide. In heavy snow regions, even small buildings may require 2x8 or larger. The required size depends on span, spacing, species, and the specific snow load for your location.",
+      },
+    ],
+  },
+
+  ceilingJoistSpanTable: {
+    title: "Ceiling Joist Span Table: NBC Building Code Reference",
+    metaDescription:
+      "Ceiling joist span tables for 2x4, 2x6, 2x8, 2x10 at 12\", 16\", 24\" OC. Covers uninhabited attic, limited storage, and habitable attic spans per NBC and CSA O86.",
+    heroTitle: "Ceiling Joist Span Table",
+    heroSubtitle: "NBC Building Code Reference",
+    heroDescription:
+      "Comprehensive ceiling joist span tables for Canadian residential construction. Find maximum spans for every common size, spacing, and load condition \u2014 from drywall-only ceilings to habitable attic floors.",
+
+    quickAnswerHeading: "Quick Answer",
+    quickAnswerText:
+      "A 2x6 SPF #2 ceiling joist at 16\" OC (400 mm) can span up to 16'-3\" (4.95 m) for a drywall-only ceiling (no attic live load). If the attic is used for limited storage (1.0 kPa / 20 psf), the span drops to about 11'-9\" (3.58 m). For a habitable attic (1.4 kPa / 30 psf), use 2x8 or larger joists.",
+
+    understandingHeading: "Understanding Ceiling Joist Spans",
+    understandingText1:
+      "Ceiling joists serve a dual purpose in conventional roof framing: they support the ceiling finish below (typically drywall) and they act as rafter ties to resist the outward horizontal thrust of opposing rafters. The span depends primarily on whether the attic space above will be used for storage or habitation.",
+    understandingText2:
+      "The NBC categorizes ceiling joist loads into three conditions: uninhabited attics without storage (dead load only \u2014 just drywall weight, approximately 0.5 kPa), uninhabited attics with limited storage (0.5 kPa dead + 1.0 kPa / 20 psf live load), and habitable attics (0.5 kPa dead + 1.4 kPa / 30 psf live load).",
+    understandingText3:
+      "When ceiling joists also serve as rafter ties, they must be connected to the rafter feet with adequate nailing to resist the horizontal thrust. The NBC requires ceiling joists to be located in the lower third of the rafter span. If joists are raised above the plate line (as in a cathedral ceiling with collar ties), the lateral forces increase significantly.",
+
+    spanTablesHeading: "Ceiling Joist Span Tables by Species",
+    spanTablesIntro:
+      "The following tables are based on NBC Part 9 for ceiling joists with 0.5 kPa dead load. Two load conditions are shown: drywall only (no attic live load) and limited storage (1.0 kPa live load).",
+    spanTablesColSize: "Joist Size",
+    spanTablesCol12: "12\" OC (300 mm)",
+    spanTablesCol16: "16\" OC (400 mm)",
+    spanTablesCol24: "24\" OC (600 mm)",
+    spanTablesBySpecies: [
+      {
+        species: "SPF \u2014 Drywall Only (No Attic Storage)",
+        grade: "#2 Grade \u2014 0.5 kPa dead load, no live load",
+        rows: [
+          { size: "2x4", oc12: "12'-5\" (3.78 m)", oc16: "11'-3\" (3.43 m)", oc24: "9'-10\" (3.00 m)" },
+          { size: "2x6", oc12: "19'-6\" (5.94 m)", oc16: "16'-3\" (4.95 m)", oc24: "12'-8\" (3.86 m)" },
+          { size: "2x8", oc12: "23'-8\" (7.21 m)", oc16: "20'-5\" (6.22 m)", oc24: "16'-7\" (5.05 m)" },
+          { size: "2x10", oc12: "24'-8\" (7.52 m)", oc16: "22'-9\" (6.93 m)", oc24: "19'-8\" (5.99 m)" },
+        ],
+      },
+      {
+        species: "SPF \u2014 Limited Attic Storage (1.0 kPa / 20 psf Live Load)",
+        grade: "#2 Grade \u2014 0.5 kPa dead + 1.0 kPa live load",
+        rows: [
+          { size: "2x4", oc12: "8'-8\" (2.64 m)", oc16: "7'-6\" (2.29 m)", oc24: "6'-2\" (1.88 m)" },
+          { size: "2x6", oc12: "13'-8\" (4.17 m)", oc16: "11'-9\" (3.58 m)", oc24: "9'-8\" (2.95 m)" },
+          { size: "2x8", oc12: "18'-0\" (5.49 m)", oc16: "15'-6\" (4.72 m)", oc24: "12'-8\" (3.86 m)" },
+          { size: "2x10", oc12: "23'-0\" (7.01 m)", oc16: "19'-9\" (6.02 m)", oc24: "16'-2\" (4.93 m)" },
+        ],
+      },
+      {
+        species: "Douglas Fir-Larch \u2014 Drywall Only (No Attic Storage)",
+        grade: "#2 Grade \u2014 0.5 kPa dead load, no live load",
+        rows: [
+          { size: "2x4", oc12: "13'-1\" (3.99 m)", oc16: "11'-11\" (3.63 m)", oc24: "10'-5\" (3.18 m)" },
+          { size: "2x6", oc12: "20'-7\" (6.27 m)", oc16: "17'-2\" (5.23 m)", oc24: "13'-4\" (4.06 m)" },
+          { size: "2x8", oc12: "25'-0\" (7.62 m)", oc16: "21'-7\" (6.58 m)", oc24: "17'-6\" (5.33 m)" },
+          { size: "2x10", oc12: "26'-0\" (7.92 m)", oc16: "24'-0\" (7.31 m)", oc24: "20'-9\" (6.32 m)" },
+        ],
+      },
+      {
+        species: "Douglas Fir-Larch \u2014 Limited Attic Storage (1.0 kPa / 20 psf Live Load)",
+        grade: "#2 Grade \u2014 0.5 kPa dead + 1.0 kPa live load",
+        rows: [
+          { size: "2x4", oc12: "9'-2\" (2.79 m)", oc16: "8'-0\" (2.44 m)", oc24: "6'-6\" (1.98 m)" },
+          { size: "2x6", oc12: "14'-5\" (4.39 m)", oc16: "12'-5\" (3.78 m)", oc24: "10'-2\" (3.10 m)" },
+          { size: "2x8", oc12: "19'-0\" (5.79 m)", oc16: "16'-4\" (4.98 m)", oc24: "13'-5\" (4.09 m)" },
+          { size: "2x10", oc12: "24'-3\" (7.39 m)", oc16: "20'-11\" (6.38 m)", oc24: "17'-1\" (5.21 m)" },
+        ],
+      },
+    ],
+
+    loadTypesHeading: "Ceiling Joist Load Types Explained",
+    loadTypesIntro:
+      "The NBC defines three categories of attic loads, each requiring different joist sizing. Choosing the correct load category is critical for selecting the right span table.",
+    loadTypesItems: [
+      "Uninhabited attic without storage (0.5 kPa dead load only): No flooring, no access hatch large enough for storage. Ceiling joists carry only the drywall below and insulation above, allowing the longest spans.",
+      "Uninhabited attic with limited storage (1.0 kPa / 20 psf live load): The attic has a scuttle hole or pull-down stairs and may be used for light storage. This is the most commonly used span table.",
+      "Habitable attic (1.4 kPa / 30 psf live load): The attic has sufficient headroom (7 feet minimum over 50% of the area) and may be finished as living space. Use floor joist span tables if the space will serve as a bedroom or living room (1.9 kPa / 40 psf).",
+      "If you plan to convert an attic to living space in future, size ceiling joists for the habitable load from the start. Reinforcing later is expensive and disruptive.",
+      "HVAC equipment in the attic (common in Canadian homes) adds concentrated dead load. Provide dedicated platform framing for the equipment.",
+    ],
+    loadTypesSummary:
+      "When in doubt, design for the limited storage load (1.0 kPa). It costs only slightly more in lumber but gives you future flexibility for attic storage access.",
+
+    factorsHeading: "Factors Affecting Ceiling Joist Spans",
+    factorsIntro:
+      "Several factors beyond basic load and species affect how far your ceiling joists can span.",
+    factorsItems: [
+      "Rafter tie function: When ceiling joists serve as rafter ties, they experience tension forces in addition to bending. Adequate nailing to the rafter feet is critical.",
+      "Ceiling finish weight: Standard 1/2\" drywall weighs about 2 psf. 5/8\" fire-rated drywall adds 0.5 psf. In older Canadian homes, plaster ceilings can weigh 5\u201310 psf.",
+      "Insulation weight: R-60 blown-in insulation (common in Canadian energy codes) can add 1\u20133 psf to the dead load. This is within the 0.5 kPa dead load assumption.",
+      "Spacing and drywall: 24\" OC spacing requires 5/8\" drywall to prevent sagging. 16\" OC allows 1/2\" drywall.",
+      "Joists perpendicular to rafters: If ceiling joists run perpendicular to rafters, separate rafter ties or a structural ridge beam are needed.",
+      "Lateral bracing: Ceiling joists should be braced with blocking or continuous lateral bracing at mid-span to prevent rolling.",
+    ],
+    factorsSummary:
+      "Ceiling joists are often overlooked because they are hidden above the ceiling. But they serve critical structural roles as rafter ties and must be properly sized and connected.",
+
+    codeReferencesHeading: "NBC & CSA Code References for Ceiling Joists",
+    codeReferencesIntro:
+      "The following NBC and CSA sections apply to ceiling joist design in Canadian residential construction.",
+    codeReferencesItems: [
+      "NBC Part 9 \u2014 Ceiling joist span tables: Maximum spans based on species, grade, size, spacing, and load condition",
+      "NBC 9.23.4 \u2014 Ceiling joist and rafter connections: Requirements for nailing ceiling joists to rafters when they act as rafter ties",
+      "NBC 9.23.4 \u2014 Ceiling joists lapped: When joists are lapped over a bearing wall, they must be nailed together and to the top plate",
+      "NBC 9.23.4 \u2014 Collar ties: Required in the upper third of the rafter span. Not a substitute for rafter ties at the plate level.",
+      "CSA O86 \u2014 Engineering Design in Wood: Engineering calculations for non-standard conditions",
+      "NBC 9.23.15 \u2014 Ceiling finish: Maximum framing spacing for drywall application \u2014 1/2\" for 16\" OC, 5/8\" for 24\" OC",
+    ],
+    codeReferencesSummary:
+      "Ceiling joist design intersects with rafter design, drywall requirements, and attic ventilation. Always consider these sections together when planning your roof and ceiling framing.",
+
+    calculatorCtaHeading: "Calculate Your Ceiling Framing Materials",
+    calculatorCtaText:
+      "Use our calculators to determine how many ceiling joists, how much drywall, and what fasteners you need for your project.",
+    calculatorLinks: [
+      {
+        label: "Floor Joist Calculator",
+        href: "/calculators/floor-framing/floor-joist-calculator",
+        description: "Also works for ceiling joists \u2014 calculate quantity, spacing, and blocking.",
+      },
+      {
+        label: "Drywall Calculator",
+        href: "/calculators/insulation-drywall/drywall-calculator",
+        description: "Estimate drywall sheets, joint compound, and screws for your ceiling.",
+      },
+      {
+        label: "Insulation Calculator",
+        href: "/calculators/insulation-drywall/insulation-calculator",
+        description: "Calculate batts or blown-in insulation for your attic above the ceiling joists.",
+      },
+    ],
+    faqHeading: "Frequently Asked Questions",
+    faqs: [
+      {
+        question: "How far can a 2x6 ceiling joist span?",
+        answer:
+          "A 2x6 SPF #2 ceiling joist at 16\" OC can span up to 16'-3\" (4.95 m) for a drywall-only ceiling. For limited attic storage (1.0 kPa), the span drops to 11'-9\" (3.58 m). Always check the specific span table for your species and load.",
+      },
+      {
+        question: "Can I use 2x4 ceiling joists?",
+        answer:
+          "Yes, 2x4 ceiling joists can span up to 11'-3\" (3.43 m) at 16\" OC for drywall-only ceilings (SPF #2). For attics with storage, the span drops to about 7'-6\" (2.29 m). Suitable for small rooms, hallways, and closets.",
+      },
+      {
+        question: "Do ceiling joists need to run the same direction as rafters?",
+        answer:
+          "When ceiling joists serve as rafter ties, they must run parallel to the rafters so they can be nailed directly to the rafter feet. If perpendicular, you need separate rafter ties or a structural ridge beam.",
+      },
+      {
+        question: "What is the difference between a ceiling joist and a floor joist?",
+        answer:
+          "Same type of member, different design loads. Ceiling joists carry the ceiling finish and possibly light storage (0.5\u20131.5 kPa total), while floor joists carry people and furniture (1.9\u20132.4 kPa total). Ceiling joists can span significantly longer for the same size.",
+      },
+      {
+        question: "Can I walk on ceiling joists?",
+        answer:
+          "You can walk carefully on joists sized for attic storage (1.0 kPa). Joists sized for drywall only should not be used for walking or storage \u2014 they may crack the drywall below. Always step on the joists, never between them.",
+      },
+      {
+        question: "How do I reinforce existing ceiling joists for attic storage?",
+        answer:
+          "The most common method is sistering \u2014 bolting a new joist alongside each existing joist with 3/8\" carriage bolts every 16\" or 16d nails every 12\". The sister joist must bear on the same supports. Consult an engineer for specific requirements.",
+      },
     ],
   },
 };

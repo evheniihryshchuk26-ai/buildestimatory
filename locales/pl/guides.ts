@@ -83,6 +83,24 @@ const guides: GuidesTranslations = {
           "Jak budować schody — kompletny przewodnik: anatomia schodów, normy PN-EN, obliczenia wysokości i głębokości, typy (proste, L, U, kręcone), materiały i koszty.",
         href: "/guides/stair-building-guide",
       },
+      {
+        title: "Tabela Rozpiętości Belek Stropowych: Kompletne Odniesienie PN-EN",
+        description:
+          "Tabele rozpiętości belek stropowych 8x16, 8x20, 8x24 cm przy 40 i 60 cm. Świerk, modrzew, dąb z odniesieniami PN-EN 1995 (Eurokod 5).",
+        href: "/guides/joist-span-table",
+      },
+      {
+        title: "Tabela Rozpiętości Krokwi: Kompletne Odniesienie",
+        description:
+          "Tabele rozpiętości krokwi wg przekroju, rozstawu, kąta i obciążenia śniegiem. Wszystkie gatunki z normami PN-EN 1995.",
+        href: "/guides/rafter-span-table",
+      },
+      {
+        title: "Tabela Rozpiętości Belek Sufitowych: Przewodnik Referencyjny",
+        description:
+          "Tabele rozpiętości belek sufitowych wg przekroju, rozstawu i typu obciążenia. Sufit lekki, strych magazynowy i mieszkalny z normami PN-EN.",
+        href: "/guides/ceiling-joist-span-table",
+      },
     ],
   },
 
@@ -1818,6 +1836,512 @@ const guides: GuidesTranslations = {
       { question: "Najtaniej?", answer: "Proste z sosny impregnowanej. Pod\u0142u\u017cnice 50\u00d7300 (60\u2013150 z\u0142/szt.), stopnice (20\u201350 z\u0142/szt.). 14 stopni: 800\u20132.500 z\u0142." },
       { question: "Potrzebne pozwolenie?", answer: "Tak dla sta\u0142ych schod\u00f3w. Zg\u0142oszenie lub pozwolenie na budow\u0119. Koszt 200\u20131.000 z\u0142." },
       { question: "Jak u\u017cy\u0107 kalkulatora?", answer: "Wpisz wysoko\u015b\u0107 i g\u0142\u0119boko\u015b\u0107. Kalkulator podaje stopnie, wysoko\u015b\u0107, bieg i pod\u0142u\u017cnic\u0119 zgodnie z normami." },
+    ],
+  },
+
+  joistSpanTable: {
+    title: "Tabela Rozpiętości Belek Stropowych: Kompletne Odniesienie PN-EN",
+    metaDescription:
+      "Tabele rozpiętości belek stropowych 8×16 do 8×24 cm przy 40 i 60 cm rozstawie. Świerk, modrzew, dąb klasy C16/C24 z odniesieniami PN-EN 1995 (Eurokod 5) i wymaganiami obciążeniowymi.",
+    heroTitle: "Tabela Rozpiętości Belek Stropowych",
+    heroSubtitle: "Kompletne Odniesienie PN-EN / Eurokod 5",
+    heroDescription:
+      "Kompleksowe tabele rozpiętości belek stropowych dla budownictwa mieszkaniowego. Znajdź maksymalne dopuszczalne rozpiętości dla wszystkich typowych przekrojów, rozstawów i klas wytrzymałości drewna wg PN-EN 1995-1-1 (Eurokod 5).",
+
+    quickAnswerHeading: "Szybka odpowiedź",
+    quickAnswerText:
+      "Belka stropowa 8×20 cm ze świerku C24 przy rozstawie 60 cm może bezpodporowo przebiegać do ok. 4,20 m (obciążenie użytkowe 1,5 kN/m², stałe 0,5 kN/m²). Belka 8×24 cm tej samej klasy przy 60 cm osiąga ok. 5,00 m. Zawsze weryfikuj rozpiętości z projektem konstrukcyjnym, ponieważ warunki lokalne mogą wymagać innych wartości.",
+
+    understandingHeading: "Zrozumienie rozpiętości belek stropowych",
+    understandingText1:
+      "Rozpiętość belki stropowej to odległość w świetle między dwoma podporami, którą belka może bezpodporowo pokonać bez nadmiernego ugięcia lub zniszczenia. Norma PN-EN 1995-1-1 (Eurokod 5) określa podstawy obliczeń maksymalnych rozpiętości na podstawie przekroju, gatunku drewna, klasy wytrzymałości, rozstawu i obciążeń obliczeniowych.",
+    understandingText2:
+      "Belki stropowe oblicza się dla dwóch stanów obciążenia: obciążenie użytkowe (osoby, meble, obciążenia ruchome — typowo 1,5 kN/m² dla pomieszczeń mieszkalnych i 0,75 kN/m² dla poddaszy nieużytkowych wg PN-EN 1991-1-1) oraz obciążenie stałe (ciężar własny konstrukcji — typowo 0,5 kN/m² dla standardowej konstrukcji drewnianej z deskowanym sufitem i płytą g-k). Łączne obciążenie określa wymagany przekrój i rozstaw.",
+    understandingText3:
+      "Graniczne ugięcia również kontrolują rozpiętości. Eurokod ogranicza ugięcie do L/300 od obciążenia użytkowego i L/200 od obciążenia całkowitego, gdzie L to rozpiętość. Strop o rozpiętości 4,50 m może więc ugiąć się maksymalnie o 15 mm pod obciążeniem użytkowym. Sztywniejsze stropy lepiej się eksploatują i zapobiegają pękaniu płytek czy sufitów pod spodem.",
+
+    spanTablesHeading: "Tabele rozpiętości belek stropowych wg gatunku drewna",
+    spanTablesIntro:
+      "Poniższe tabele rozpiętości opierają się na PN-EN 1995-1-1 dla belek stropowych z obciążeniem użytkowym 1,5 kN/m² i stałym 0,5 kN/m². Rozpiętości podano jako maksymalne rozpiętości w świetle w metrach. Stosuj zawsze klasę wytrzymałości widniejącą na twoim drewnie.",
+    spanTablesColSize: "Przekrój",
+    spanTablesCol12: "30 cm",
+    spanTablesCol16: "40 cm",
+    spanTablesCol24: "60 cm",
+    spanTablesBySpecies: [
+      {
+        species: "Świerk/Jodła KVH C24",
+        grade: "Klasa wytrzymałości C24 — fm,k = 24 N/mm², E₀,mean = 11 000 N/mm²",
+        rows: [
+          { size: "6×12", oc12: "3,20 m", oc16: "2,90 m", oc24: "2,50 m" },
+          { size: "6×16", oc12: "4,20 m", oc16: "3,80 m", oc24: "3,30 m" },
+          { size: "8×20", oc12: "5,30 m", oc16: "4,80 m", oc24: "4,20 m" },
+          { size: "8×24", oc12: "6,30 m", oc16: "5,70 m", oc24: "5,00 m" },
+        ],
+      },
+      {
+        species: "Świerk/Jodła BSH GL24h",
+        grade: "Drewno klejone warstwowo GL24h — fm,g,k = 24 N/mm², E₀,g,mean = 11 500 N/mm²",
+        rows: [
+          { size: "6×12", oc12: "3,40 m", oc16: "3,10 m", oc24: "2,70 m" },
+          { size: "6×16", oc12: "4,50 m", oc16: "4,10 m", oc24: "3,50 m" },
+          { size: "8×20", oc12: "5,60 m", oc16: "5,10 m", oc24: "4,40 m" },
+          { size: "8×24", oc12: "6,70 m", oc16: "6,10 m", oc24: "5,30 m" },
+        ],
+      },
+      {
+        species: "Modrzew KVH C24",
+        grade: "Klasa wytrzymałości C24 — fm,k = 24 N/mm², E₀,mean = 11 000 N/mm²",
+        rows: [
+          { size: "6×12", oc12: "3,20 m", oc16: "2,90 m", oc24: "2,50 m" },
+          { size: "6×16", oc12: "4,20 m", oc16: "3,80 m", oc24: "3,30 m" },
+          { size: "8×20", oc12: "5,30 m", oc16: "4,80 m", oc24: "4,20 m" },
+          { size: "8×24", oc12: "6,30 m", oc16: "5,70 m", oc24: "5,00 m" },
+        ],
+      },
+      {
+        species: "Świerk/Jodła KVH C16",
+        grade: "Klasa wytrzymałości C16 — fm,k = 16 N/mm², E₀,mean = 8 000 N/mm²",
+        rows: [
+          { size: "6×12", oc12: "2,70 m", oc16: "2,40 m", oc24: "2,10 m" },
+          { size: "6×16", oc12: "3,50 m", oc16: "3,20 m", oc24: "2,70 m" },
+          { size: "8×20", oc12: "4,40 m", oc16: "4,00 m", oc24: "3,50 m" },
+          { size: "8×24", oc12: "5,30 m", oc16: "4,80 m", oc24: "4,20 m" },
+        ],
+      },
+    ],
+
+    loadRequirementsHeading: "Wymagania obciążeniowe dla stropów (Eurokod)",
+    loadRequirementsIntro:
+      "Eurokod i norma PN-EN 1991-1-1 określają minimalne obciążenia obliczeniowe dla stropów budynków mieszkalnych. Te obciążenia determinują wymagany przekrój belki i rozstaw.",
+    loadRequirementsItems: [
+      "Pomieszczenia mieszkalne (salon, sypialnia, kuchnia): 1,5 kN/m² obciążenie użytkowe + 0,5 kN/m² obciążenie stałe = 2,0 kN/m² łącznie wg kategorii A, PN-EN 1991-1-1",
+      "Poddasza nieużytkowe bez magazynowania: 0,75 kN/m² obciążenie użytkowe + 0,3 kN/m² obciążenie stałe — tylko dla stropów bez funkcji składowania",
+      "Poddasza z lekkim magazynowaniem: 1,0 kN/m² obciążenie użytkowe + 0,5 kN/m² obciążenie stałe",
+      "Poddasza użytkowe do adaptacji: 1,5 kN/m² obciążenie użytkowe jak dla pomieszczeń mieszkalnych — przy planowanej adaptacji wymiaruj od razu na pełne obciążenie",
+      "Obciążenie stałe obejmuje ciężar własny belki, deskowania/OSB, warstw podłogowych i ewentualnej okładziny sufitu. Przy ciężkim podłożu (płytki na wylewce) zwiększ obciążenie stałe do 1,0–1,5 kN/m²",
+      "Obciążenia skupione: Eurokod wymaga dodatkowo siły skupionej 2,0 kN na powierzchni 50×50 mm, co jest typowo spełnione przy zachowaniu granic ugięcia",
+    ],
+    loadRequirementsSummary:
+      "Dla większości stropów mieszkalnych stosuj tabelę 1,5/0,5 kN/m². W razie wątpliwości wymiaruj na wyższe obciążenie — różnica kosztów jest minimalna.",
+
+    factorsHeading: "Czynniki wpływające na rozpiętość belki stropowej",
+    factorsIntro:
+      "Poza wartościami z tabel, kilka czynników praktycznych może zwiększyć lub zmniejszyć wymagany przekrój belki.",
+    factorsItems: [
+      "Gatunek drewna i klasa wytrzymałości: Wyższe klasy (C24, GL28) pozwalają na dłuższe rozpiętości niż C16 czy C18. Klasa określa wytrzymałość na zginanie (fm,k) i moduł sprężystości (E).",
+      "Rozstaw: 30 cm pozwala na najdłuższe rozpiętości, 40 cm to najpowszechniejszy rozstaw w polskim budownictwie drewnianym, 60 cm jest ekonomiczny, ale ogranicza rozpiętość i wymaga grubszego poszycia.",
+      "Długość oparcia: Belki muszą opierać się na min. 40 mm na drewnie lub stali i 80 mm na murze (PN-EN 1995-1-1). Niewystarczające oparcie zmniejsza nośność.",
+      "Karby i otwory: Wycięcia i otwory w belkach zmniejszają przekrój czynny. Karby dopuszczalne tylko w zewnętrznej 1/3 rozpiętości i max. 1/4 wysokości belki.",
+      "Belki ciągłe vs jednoprzęsłowe: Belki przechodzące nad podporą pośrednią (belki ciągłe) mogą mieć nieco większą rozpiętość niż jednoprzęsłowe. Wartości tabelowe dotyczą belek jednoprzęsłowych.",
+      "Ciężkie podłogi: Płytki ceramiczne, kamień lub wylewka znacząco zwiększają obciążenie stałe. Przy obciążeniu stałym powyżej 0,5 kN/m² użyj odpowiednio skorygowanej tabeli lub skonsultuj się z konstruktorem.",
+    ],
+    factorsSummary:
+      "Zawsze stosuj rzeczywistą klasę wytrzymałości twojego drewna. Gdy nakładają się niekorzystne czynniki (ciężki podkład + duży rozstaw + duża rozpiętość), rozważ zwiększenie przekroju o jeden rozmiar dla zapasu i sztywniejszego stropu.",
+
+    codeReferencesHeading: "Odniesienia normowe dla belek stropowych",
+    codeReferencesIntro:
+      "Poniższe normy regulują wymiarowanie belek stropowych w budownictwie drewnianym w Polsce.",
+    codeReferencesItems: [
+      "PN-EN 1995-1-1 (Eurokod 5) — Projektowanie konstrukcji drewnianych: rozpiętości, graniczne ugięcia (L/300 użytkowe, L/200 całkowite), wyboczenie, metody weryfikacji",
+      "PN-EN 1991-1-1 (Eurokod 1) — Oddziaływania: obciążenia użytkowe budynków mieszkalnych (kategoria A: 1,5 kN/m²), obciążenia stałe, współczynniki częściowe",
+      "PN-EN 338 — Klasy wytrzymałości: klasyfikacja drewna konstrukcyjnego (C16, C24 itd.) z przypisanymi właściwościami mechanicznymi",
+      "PN-EN 14080 — Drewno klejone warstwowo: klasy wytrzymałości BSH (GL24h, GL28h itd.)",
+      "PN-B-03150 — Konstrukcje drewniane: wymagania uzupełniające do Eurokodów, obowiązujące w Polsce",
+      "Warunki Techniczne (Dz.U.) — mogą stawiać dodatkowe wymagania dotyczące stropów drewnianych",
+    ],
+    codeReferencesSummary:
+      "Wymiarowanie belek stropowych odbywa się wg Eurokodu 5 (PN-EN 1995-1-1). Dla standardowych stropów mieszkaniowych można korzystać z gotowych tabel; przy konstrukcjach niestandardowych wymagane jest obliczenie statyczne przez projektanta.",
+
+    calculatorCtaHeading: "Oblicz materiały na strop",
+    calculatorCtaText:
+      "Znając przekrój i rozstaw belek, użyj naszych kalkulatorów, aby dokładnie obliczyć liczbę belek, łączników i elementów złącznych.",
+    calculatorLinks: [
+      {
+        label: "Kalkulator belek stropowych",
+        href: "/calculators/floor-framing/floor-joist-calculator",
+        description: "Oblicz liczbę belek, desek czołowych i stężeń do stropu.",
+      },
+      {
+        label: "Kalkulator płyt podłogowych",
+        href: "/calculators/floor-framing/subfloor-calculator",
+        description: "Oszacuj liczbę płyt sklejkowych lub OSB na poszycie stropu.",
+      },
+      {
+        label: "Kalkulator wieszaków belkowych",
+        href: "/calculators/floor-framing/joist-hanger-calculator",
+        description: "Oblicz wieszaki belkowe i wkręty konstrukcyjne do każdego połączenia.",
+      },
+    ],
+    faqHeading: "Często zadawane pytania",
+    faqs: [
+      {
+        question: "Jaką rozpiętość ma belka stropowa 8×20 cm?",
+        answer:
+          "Belka stropowa 8×20 cm KVH ze świerku C24 przy rozstawie 40 cm może bezpodporowo przebiegać do ok. 4,80 m (1,5 kN/m² obciążenie użytkowe). Przy rozstawie 60 cm rozpiętość spada do ok. 4,20 m. Przy 30 cm wzrasta do ok. 5,30 m. Zawsze weryfikuj obliczenia statyczne dla swojej konkretnej sytuacji.",
+      },
+      {
+        question: "Czy przekrój 6×12 cm wystarczy jako belka stropowa?",
+        answer:
+          "6×12 cm nadaje się tylko do krótkich rozpiętości: ok. 2,50–2,90 m przy rozstawie 40–60 cm. To wystarczy na małe pomieszczenia, korytarze i spiżarnie, ale nie na typowe pomieszczenia mieszkalne. Większość stropów wymaga co najmniej 8×20 cm.",
+      },
+      {
+        question: "Jaka jest różnica między obciążeniem użytkowym a stałym?",
+        answer:
+          "Obciążenie użytkowe to ciężar osób, mebli i przedmiotów ruchomych na stropie (1,5 kN/m² dla pomieszczeń mieszkalnych). Obciążenie stałe to ciężar samej konstrukcji — belki, poszycie, warstwy podłogowe i okładzina sufitu (typowo 0,5 kN/m²). Razem tworzą obciążenie całkowite do wymiarowania.",
+      },
+      {
+        question: "Stosować rozstaw 40 cm czy 60 cm?",
+        answer:
+          "40 cm to standard dla większości stropów mieszkalnych i jest wymagany dla płyt OSB o grubości 18 mm. Rozstaw 60 cm oszczędza ok. 33% drewna, ale wymaga grubszego poszycia (22 mm OSB), ogranicza rozpiętość i może dawać nieco bardziej sprężysty strop. Stosuj 40 cm w głównych pomieszczeniach mieszkalnych.",
+      },
+      {
+        question: "Czy potrzebuję stężeń między belkami stropowymi?",
+        answer:
+          "Eurokod wymaga stężeń lub wiatrownic przy wysokości belki ponad 200 mm w odstępach max. 2,50 m. Dla belek 6×16 cm i mniejszych stężenia nie są wymagane normowo, ale są zalecane w celu redukcji drgań i skrzypienia podłogi.",
+      },
+      {
+        question: "Ile kosztuje drewno na strop?",
+        answer:
+          "Drewno KVH C24 (świerk) kosztuje ok. 1 200–1 800 PLN/m³. Na strop o wymiarach 5×10 m z belkami 8×20 cm co 40 cm potrzeba ok. 1,2 m³ drewna — ok. 1 500–2 200 PLN. BSH GL24h jest droższe: 2 500–4 000 PLN/m³. Ceny w składach budowlanych, Leroy Merlin, Castorama.",
+      },
+    ],
+  },
+
+  rafterSpanTable: {
+    title: "Tabela Rozpiętości Krokwi: Kompletne Odniesienie",
+    metaDescription:
+      "Tabele rozpiętości krokwi 6×12 do 8×24 cm przy 60, 80 i 100 cm rozstawie. Ze strefami śniegowymi, wpływem kąta dachu i odniesieniami PN-EN 1995 (Eurokod 5).",
+    heroTitle: "Tabela Rozpiętości Krokwi",
+    heroSubtitle: "Kompletne Odniesienie Konstrukcji Dachowej",
+    heroDescription:
+      "Kompleksowe tabele rozpiętości krokwi dla budownictwa mieszkaniowego. Znajdź maksymalne dopuszczalne rozpiętości dla wszystkich typowych przekrojów, rozstawów i stref obciążenia śniegiem wg PN-EN 1995-1-1 (Eurokod 5).",
+
+    quickAnswerHeading: "Szybka odpowiedź",
+    quickAnswerText:
+      "Krokiew KVH 8×16 cm ze świerku C24 przy rozstawie 80 cm może w II strefie śniegowej (0,90 kN/m²) osiągnąć rozpiętość do ok. 3,40 m (rzut poziomy). Krokiew 8×20 cm tej samej klasy przy 80 cm osiąga ok. 4,80 m. Zawsze weryfikuj rozpiętość pod kątem lokalnej strefy śniegowej i kąta nachylenia dachu.",
+
+    understandingHeading: "Zrozumienie rozpiętości krokwi",
+    understandingText1:
+      "Rozpiętość krokwi to odległość w rzucie poziomym od oparcia na murłacie (okapie) do kalenicy. W odróżnieniu od belek stropowych, rozpiętość krokwi mierzy się jako rzut poziomy, nie wzdłuż nachylenia. Rzeczywista długość krokwi jest większa od rozpiętości, ponieważ biegnie wzdłuż spadku dachu.",
+    understandingText2:
+      "Wymiarowanie krokwi uwzględnia dwa główne obciążenia: stałe (pokrycie dachowe, łaty, deskowanie, izolacja — typowo 0,5–1,0 kN/m²) i zmienne, obejmujące obciążenie śniegiem i wiatrem. Obciążenie śniegiem oblicza się wg PN-EN 1991-1-3 na podstawie strefy śniegowej (I–V dla Polski), wysokości nad poziomem morza i kąta nachylenia dachu.",
+    understandingText3:
+      "Polska dzieli się na 5 stref śniegowych: I (0,70 kN/m²), II (0,90 kN/m²), III (1,20 kN/m²), IV (1,60 kN/m²), V (2,00 kN/m²). Obciążenie śniegiem na dachu oblicza się z wzoru s = μ × Ce × Ct × sk, gdzie μ to współczynnik kształtu zależny od kąta dachu. Strome dachy (> 30°) zmniejszają obciążenie śniegiem dzięki współczynnikowi μ₁ — przy 45° wynosi on już tylko 0,67, a przy 60° przyjmuje się μ₁ = 0.",
+
+    spanTablesHeading: "Tabele rozpiętości krokwi (II strefa śniegowa, 0,90 kN/m²)",
+    spanTablesIntro:
+      "Poniższe tabele dotyczą krokwi w II strefie śniegowej (sk = 0,90 kN/m², h ≤ 300 m n.p.m.) z obciążeniem stałym 0,75 kN/m² i nachyleniem 30°. Rozpiętości podano jako maksymalny rzut poziomy w metrach.",
+    spanTablesColSize: "Przekrój",
+    spanTablesCol12: "60 cm",
+    spanTablesCol16: "80 cm",
+    spanTablesCol24: "100 cm",
+    spanTablesBySpecies: [
+      {
+        species: "Świerk/Jodła KVH C24",
+        grade: "Klasa wytrzymałości C24 — fm,k = 24 N/mm², E₀,mean = 11 000 N/mm²",
+        rows: [
+          { size: "6×12", oc12: "3,00 m", oc16: "2,60 m", oc24: "2,30 m" },
+          { size: "6×16", oc12: "3,90 m", oc16: "3,40 m", oc24: "3,00 m" },
+          { size: "8×18", oc12: "4,70 m", oc16: "4,10 m", oc24: "3,60 m" },
+          { size: "8×20", oc12: "5,50 m", oc16: "4,80 m", oc24: "4,20 m" },
+          { size: "8×24", oc12: "6,50 m", oc16: "5,70 m", oc24: "5,00 m" },
+        ],
+      },
+      {
+        species: "Świerk/Jodła BSH GL24h",
+        grade: "Drewno klejone warstwowo GL24h — fm,g,k = 24 N/mm², E₀,g,mean = 11 500 N/mm²",
+        rows: [
+          { size: "6×12", oc12: "3,20 m", oc16: "2,80 m", oc24: "2,50 m" },
+          { size: "6×16", oc12: "4,20 m", oc16: "3,60 m", oc24: "3,20 m" },
+          { size: "8×18", oc12: "5,00 m", oc16: "4,40 m", oc24: "3,90 m" },
+          { size: "8×20", oc12: "5,80 m", oc16: "5,10 m", oc24: "4,50 m" },
+          { size: "8×24", oc12: "6,90 m", oc16: "6,00 m", oc24: "5,30 m" },
+        ],
+      },
+      {
+        species: "Świerk/Jodła KVH C16",
+        grade: "Klasa wytrzymałości C16 — fm,k = 16 N/mm², E₀,mean = 8 000 N/mm²",
+        rows: [
+          { size: "6×12", oc12: "2,50 m", oc16: "2,20 m", oc24: "1,90 m" },
+          { size: "6×16", oc12: "3,30 m", oc16: "2,90 m", oc24: "2,50 m" },
+          { size: "8×18", oc12: "4,00 m", oc16: "3,40 m", oc24: "3,00 m" },
+          { size: "8×20", oc12: "4,60 m", oc16: "4,00 m", oc24: "3,50 m" },
+          { size: "8×24", oc12: "5,50 m", oc16: "4,80 m", oc24: "4,20 m" },
+        ],
+      },
+      {
+        species: "Modrzew KVH C24",
+        grade: "Klasa wytrzymałości C24 — fm,k = 24 N/mm², E₀,mean = 11 000 N/mm²",
+        rows: [
+          { size: "6×12", oc12: "3,00 m", oc16: "2,60 m", oc24: "2,30 m" },
+          { size: "6×16", oc12: "3,90 m", oc16: "3,40 m", oc24: "3,00 m" },
+          { size: "8×18", oc12: "4,70 m", oc16: "4,10 m", oc24: "3,60 m" },
+          { size: "8×20", oc12: "5,50 m", oc16: "4,80 m", oc24: "4,20 m" },
+          { size: "8×24", oc12: "6,50 m", oc16: "5,70 m", oc24: "5,00 m" },
+        ],
+      },
+    ],
+
+    snowLoadHeading: "Wpływ obciążenia śniegiem na rozpiętość krokwi",
+    snowLoadIntro:
+      "Obciążenie śniegiem znacząco zmniejsza dopuszczalną rozpiętość krokwi. Polska jest podzielona na 5 stref śniegowych; obciążenie rośnie również z wysokością nad poziomem morza. Poniżej wpływ na typową krokiew 8×20 cm Świerk C24 przy 80 cm rozstawie.",
+    snowLoadItems: [
+      "I strefa śniegowa (sk = 0,70 kN/m²): 8×20 cm osiąga do ok. 5,20 m — pas nadmorski, niziny zachodnie",
+      "II strefa śniegowa (sk = 0,90 kN/m²): 8×20 cm osiąga do ok. 4,80 m — większość Polski centralnej i północnej",
+      "III strefa śniegowa (sk = 1,20 kN/m²): 8×20 cm spada do ok. 4,30 m — Sudety, przedgórze karpackie, Góry Świętokrzyskie",
+      "IV strefa śniegowa (sk = 1,60 kN/m²): 8×20 cm spada do ok. 3,80 m — Beskidy, Bieszczady, wyższe partie Sudetów",
+      "V strefa śniegowa (sk = 2,00 kN/m²): 8×20 cm spada do ok. 3,40 m — Tatry, Karkonosze powyżej 600 m n.p.m.",
+      "Ustal swoją strefę śniegową wg mapy z Załącznika Krajowego do PN-EN 1991-1-3. Charakterystyczne obciążenie śniegiem rośnie z wysokością n.p.m. wg wzoru podanego w normie.",
+    ],
+    snowLoadSummary:
+      "Zawsze wymiaruj krokwie na strefę śniegową właściwą dla twojej lokalizacji. Niedowymiarowanie krokwi pod kątem obciążenia śniegiem to jeden z najczęstszych i najgroźniejszych błędów konstrukcyjnych w budownictwie dachowym.",
+
+    pitchFactorsHeading: "Wpływ kąta nachylenia dachu na wymiarowanie krokwi",
+    pitchFactorsIntro:
+      "Kąt nachylenia dachu wpływa na wymiarowanie krokwi w kilku aspektach: rzeczywista długość krokwi, rozkład obciążeń, redukcja obciążenia śniegiem i konieczność stosowania jętek lub płatwi.",
+    pitchFactorsItems: [
+      "Małe nachylenie (10°–20°): Krokwie przenoszą obciążenie prawie jak belki stropowe. Siła rozporu poziomego na okapie jest duża i wymaga ściągów (jętek lub belek stropowych). Wartości tabelowe stosuje się bezpośrednio.",
+      "Średnie nachylenie (25°–35°): Składowa obciążenia prostopadła do krokwi maleje. Jętki lub ściągi są nadal wymagane, chyba że stosuje się płatew kalenicową (dach płatwiowy).",
+      "Duże nachylenie (40°–55°): Obciążenie śniegiem na dachu zmniejsza się znacząco (współczynnik μ₁). Krokiew jest jednak znacznie dłuższa od rzutu poziomego, co zwiększa zużycie materiału. Obciążenia wiatrowe stają się bardziej istotne.",
+      "Wartości tabelowe podają rzut poziomy, nie długość krokwi. Dla rzeczywistej długości krokwi pomnóż rozpiętość przez współczynnik nachylenia: 20° = 1,064, 30° = 1,155, 40° = 1,305, 45° = 1,414.",
+      "Dach płatwiowy vs krokwiowy: W dachu płatwiowym płatwie kalenicowa i pośrednia podpierają krokwie. W dachu krokwiowym krokwie pracują samodzielnie, usztywnione jętkami. Dachy płatwiowe pozwalają na większe szerokości budynków.",
+      "Jętki vs ściągi: Jętki w górnej 1/3 zapobiegają rozsuwaniu się kalenicy. Ściągi (belki stropowe) na poziomie murłaty przejmują rozpór poziomy. W dachu krokwiowym ściągi są obowiązkowe; jętki samodzielnie nie wystarczą.",
+    ],
+    pitchFactorsSummary:
+      "Dla większości dachów mieszkalnych (25°–35° nachylenia) wartości tabelowe można stosować bezpośrednio. Przy adaptacji poddasza bez jętek wymagana jest płatew kalenicowa (dach płatwiowy) i obliczenia statyczne.",
+
+    codeReferencesHeading: "Odniesienia normowe dla krokwi",
+    codeReferencesIntro:
+      "Poniższe normy regulują wymiarowanie krokwi w budownictwie drewnianym w Polsce.",
+    codeReferencesItems: [
+      "PN-EN 1995-1-1 (Eurokod 5) — Projektowanie konstrukcji drewnianych: rozpiętości, graniczne ugięcia (L/200 użytkowe, L/150 całkowite dla dachów), wyboczenie",
+      "PN-EN 1991-1-3 (Eurokod 1) — Obciążenie śniegiem: strefy śniegowe I–V, współczynniki kształtu μ₁ wg kąta dachu, wzory wysokościowe",
+      "PN-EN 1991-1-4 (Eurokod 1) — Obciążenie wiatrem: strefy wiatrowe, współczynniki ciśnienia dla połaci, ssanie na okapie i szczycie",
+      "PN-EN 338 — Klasy wytrzymałości drewna konstrukcyjnego (C16, C24) z właściwościami mechanicznymi",
+      "PN-EN 14080 — Klasy wytrzymałości drewna klejonego (GL24h, GL28h)",
+      "PN-B-03150 — Konstrukcje drewniane: wymagania uzupełniające do Eurokodów",
+    ],
+    codeReferencesSummary:
+      "Wymiarowanie krokwi odbywa się wg Eurokodu 5 z uwzględnieniem obciążenia śniegiem (Eurokod 1-3) i wiatrem (Eurokod 1-4). Dla standardowych dachów krokwiowych z jętkami można korzystać z wartości tabelowych; dachy płatwiowe i niestandardowe wymagają obliczenia statycznego.",
+
+    calculatorCtaHeading: "Oblicz materiały na konstrukcję dachową",
+    calculatorCtaText:
+      "Znając przekrój i rozstaw krokwi, użyj naszych kalkulatorów, aby dokładnie obliczyć liczbę krokwi i ilość materiałów.",
+    calculatorLinks: [
+      {
+        label: "Kalkulator krokwi",
+        href: "/calculators/roofing/rafter-calculator",
+        description: "Oblicz liczbę krokwi, długość płatwi kalenicowej i jętki.",
+      },
+      {
+        label: "Kalkulator poszycia dachowego",
+        href: "/calculators/roofing/roof-sheathing-calculator",
+        description: "Oszacuj liczbę płyt OSB lub sklejki na poszycie dachu.",
+      },
+      {
+        label: "Kalkulator spadku dachu",
+        href: "/calculators/roofing/roof-pitch-calculator",
+        description: "Oblicz kąt nachylenia, współczynnik nachylenia i długość krokwi.",
+      },
+    ],
+    faqHeading: "Często zadawane pytania",
+    faqs: [
+      {
+        question: "Jaką rozpiętość osiąga krokiew 8×16 cm?",
+        answer:
+          "Krokiew 8×16 cm ze świerku C24 przy 80 cm rozstawie w II strefie śniegowej osiąga do ok. 3,40 m (rzut poziomy). Przy 60 cm rozstawie rozpiętość rośnie do ok. 3,90 m. Dla większych rozpiętości sięgnij po 8×20 cm lub 8×24 cm.",
+      },
+      {
+        question: "Czy 6×12 cm wystarczy jako krokiew?",
+        answer:
+          "6×12 cm nadaje się tylko do bardzo krótkich rozpiętości: ok. 2,30–2,60 m przy rozstawie 80–100 cm. To wystarczy na małe dobudówki, wiaty i zadaszenia, ale nie na typowe dachy budynków mieszkalnych. Większość dachów wymaga co najmniej 8×18 cm.",
+      },
+      {
+        question: "Potrzebuję płatwi kalenicowej czy wystarczy deska kalenicowa?",
+        answer:
+          "Deska kalenicowa (kalenica zaciskowa) wystarczy w klasycznym dachu krokwiowym, gdy jętki lub ściągi przejmują rozpór. Płatew kalenicowa (nośna belka z BSH lub stali) jest wymagana w dachu płatwiowym i obowiązkowa przy adaptacji poddasza bez jętek, ponieważ przejmuje pełne obciążenie pionowe od krokwi.",
+      },
+      {
+        question: "Jak obciążenie śniegiem wpływa na rozpiętość krokwi?",
+        answer:
+          "Obciążenie śniegiem znacząco zmniejsza dopuszczalną rozpiętość. Krokiew 8×20 cm C24 przy 80 cm w I strefie osiąga ok. 5,20 m, w II strefie ok. 4,80 m, a w IV strefie ok. 3,80 m — spadek ponad 25%. Zawsze wymiaruj na strefę śniegową właściwą dla twojej lokalizacji.",
+      },
+      {
+        question: "Czy płatwie mogą wydłużyć rozpiętość krokwi?",
+        answer:
+          "Tak, płatwie pośrednie (poziome belki prostopadłe do krokwi) podpierają krokwie w połowie przęsła i połowią efektywną rozpiętość. Płatwie muszą być oparte na słupkach lub ścianie nośnej wewnątrz. To ekonomiczny sposób na zmniejszenie przekroju krokwi.",
+      },
+      {
+        question: "Ile kosztuje drewno na więźbę dachową?",
+        answer:
+          "Drewno KVH C24 kosztuje ok. 1 200–1 800 PLN/m³. Na dach o wymiarach 10×8 m z krokwiami 8×20 cm co 80 cm potrzeba ok. 1,5 m³ drewna na same krokwie — ok. 1 800–2 700 PLN. BSH jest droższe: 2 500–4 000 PLN/m³. Ceny w składach drewna, Leroy Merlin, Castorama.",
+      },
+    ],
+  },
+
+  ceilingJoistSpanTable: {
+    title: "Tabela Rozpiętości Belek Sufitowych: Przewodnik Referencyjny",
+    metaDescription:
+      "Tabele rozpiętości belek sufitowych 6×10 do 8×20 cm przy 40 i 60 cm rozstawie. Sufit lekki, strych magazynowy i mieszkalny z odniesieniami PN-EN 1995 (Eurokod 5).",
+    heroTitle: "Tabela Rozpiętości Belek Sufitowych",
+    heroSubtitle: "Kompletne Odniesienie PN-EN / Eurokod 5",
+    heroDescription:
+      "Kompleksowe tabele rozpiętości belek sufitowych (jętek) dla budownictwa mieszkaniowego. Znajdź maksymalne rozpiętości dla wszystkich typowych przekrojów i przypadków obciążenia — od czystej okładziny sufitu po adaptację poddasza.",
+
+    quickAnswerHeading: "Szybka odpowiedź",
+    quickAnswerText:
+      "Jętka 6×16 cm ze świerku C24 przy rozstawie 60 cm może bezpodporowo przebiegać do ok. 4,80 m, gdy nosi tylko okładzinę sufitu gipsowo-kartonową (obciążenie stałe 0,3 kN/m², brak obciążenia użytkowego). Przy użytkowaniu strychu jako magazynu (0,75 kN/m²) rozpiętość spada do ok. 3,50 m. Do adaptacji poddasza na cele mieszkalne (1,5 kN/m²) stosuj co najmniej 8×20 cm.",
+
+    understandingHeading: "Zrozumienie rozpiętości belek sufitowych",
+    understandingText1:
+      "Belki sufitowe (jętki) w klasycznym dachu krokwiowym pełnią podwójną funkcję: noszą okładzinę sufitu (typowo płytę g-k) i działają jako ściąg przejmujący rozpór poziomy od przeciwległych krokwi. Rozpiętość jętki zależy przede wszystkim od tego, czy przestrzeń nad nią będzie wykorzystywana jako magazyn lub pomieszczenie mieszkalne.",
+    understandingText2:
+      "Norma PN-EN 1991-1-1 rozróżnia trzy kategorie obciążenia jętek: poddasza nieużytkowe bez magazynowania (tylko obciążenie stałe 0,3 kN/m² — ciężar płyty g-k), poddasza nieużytkowe z lekkim magazynowaniem (0,75 kN/m² obciążenie użytkowe) oraz poddasza użytkowe/pomieszczenia mieszkalne (1,5 kN/m²). Każda kategoria ma własne tabele rozpiętości.",
+    understandingText3:
+      "Gdy jętki pełnią równocześnie funkcję ściągów w dachu krokwiowym, oprócz zginania przenoszą siły rozciągające. Połączenie z krokwią musi być wymiarowane na rozpór poziomy. Eurokod wymaga, aby jętki (ściągi) były umieszczone w dolnej 1/3 rozpiętości krokwi. Wyżej osadzone jętki (podmurawka / ścianka kolankowa) znacząco zwiększają siły rozciągające.",
+
+    spanTablesHeading: "Tabele rozpiętości jętek wg przypadku obciążenia",
+    spanTablesIntro:
+      "Poniższe tabele opierają się na PN-EN 1995-1-1 dla jętek z obciążeniem stałym 0,3 kN/m². Trzy przypadki obciążenia: czysta okładzina sufitu (brak obciążenia użytkowego), lekki magazyn (0,75 kN/m²) i adaptacja poddasza (1,5 kN/m²). Rozpiętości dla przypadku: okładzina sufitu / lekki magazyn.",
+    spanTablesColSize: "Przekrój",
+    spanTablesCol12: "40 cm",
+    spanTablesCol16: "60 cm",
+    spanTablesCol24: "80 cm",
+    spanTablesBySpecies: [
+      {
+        species: "Świerk C24 — tylko okładzina sufitu (brak obciążenia użytkowego)",
+        grade: "Klasa C24 — 0,3 kN/m² obciążenie stałe, brak obciążenia użytkowego",
+        rows: [
+          { size: "6×10", oc12: "3,80 m", oc16: "3,30 m", oc24: "2,90 m" },
+          { size: "6×12", oc12: "4,60 m", oc16: "4,00 m", oc24: "3,50 m" },
+          { size: "6×16", oc12: "5,60 m", oc16: "4,80 m", oc24: "4,20 m" },
+          { size: "8×20", oc12: "7,00 m", oc16: "6,10 m", oc24: "5,30 m" },
+        ],
+      },
+      {
+        species: "Świerk C24 — lekki magazyn (0,75 kN/m² obciążenie użytkowe)",
+        grade: "Klasa C24 — 0,3 kN/m² obciążenie stałe + 0,75 kN/m² obciążenie użytkowe",
+        rows: [
+          { size: "6×10", oc12: "2,70 m", oc16: "2,40 m", oc24: "2,10 m" },
+          { size: "6×12", oc12: "3,30 m", oc16: "2,90 m", oc24: "2,50 m" },
+          { size: "6×16", oc12: "4,10 m", oc16: "3,50 m", oc24: "3,10 m" },
+          { size: "8×20", oc12: "5,10 m", oc16: "4,50 m", oc24: "3,90 m" },
+        ],
+      },
+      {
+        species: "Świerk BSH GL24h — tylko okładzina sufitu (brak obciążenia użytkowego)",
+        grade: "Drewno klejone GL24h — 0,3 kN/m² obciążenie stałe, brak obciążenia użytkowego",
+        rows: [
+          { size: "6×10", oc12: "4,10 m", oc16: "3,50 m", oc24: "3,10 m" },
+          { size: "6×12", oc12: "4,90 m", oc16: "4,30 m", oc24: "3,70 m" },
+          { size: "6×16", oc12: "6,00 m", oc16: "5,20 m", oc24: "4,50 m" },
+          { size: "8×20", oc12: "7,50 m", oc16: "6,50 m", oc24: "5,70 m" },
+        ],
+      },
+      {
+        species: "Świerk C16 — lekki magazyn (0,75 kN/m² obciążenie użytkowe)",
+        grade: "Klasa C16 — 0,3 kN/m² obciążenie stałe + 0,75 kN/m² obciążenie użytkowe",
+        rows: [
+          { size: "6×10", oc12: "2,30 m", oc16: "2,00 m", oc24: "1,70 m" },
+          { size: "6×12", oc12: "2,80 m", oc16: "2,40 m", oc24: "2,10 m" },
+          { size: "6×16", oc12: "3,40 m", oc16: "3,00 m", oc24: "2,60 m" },
+          { size: "8×20", oc12: "4,30 m", oc16: "3,80 m", oc24: "3,30 m" },
+        ],
+      },
+    ],
+
+    loadTypesHeading: "Przypadki obciążenia jętek",
+    loadTypesIntro:
+      "Norma PN-EN 1991-1-1 definiuje trzy kategorie obciążeń użytkowych poddaszy. Prawidłowe przypisanie kategorii jest kluczowe dla wyboru właściwej tabeli rozpiętości.",
+    loadTypesItems: [
+      "Poddasze nieużytkowe bez magazynowania (tylko 0,3 kN/m² obciążenie stałe): Dotyczy poddaszy bez dostępu (brak klapy, brak schodów strychowych), wchodzonych tylko okazjonalnie w celach konserwacyjnych. Jętki noszą wyłącznie okładzinę sufitową i pozwalają na najdłuższe rozpiętości.",
+      "Poddasze nieużytkowe z lekkim magazynowaniem (0,75 kN/m² obciążenie użytkowe): Dotyczy poddaszy z klapą lub schodami strychowymi, wykorzystywanych do lekkiego składowania (ozdoby świąteczne, walizki). To najczęstszy przypadek obciążeniowy w dachach krokwiowych.",
+      "Poddasze użytkowe / pomieszczenie mieszkalne (1,5 kN/m² obciążenie użytkowe): Dotyczy poddaszy o wystarczającej wysokości (min. 2,20 m na 50% powierzchni), adaptowanych na cele mieszkalne. Stosuj wtedy tabele rozpiętości belek stropowych (kategoria A).",
+      "Jeśli planujesz adaptację poddasza w przyszłości, wymiaruj jętki od razu na 1,5 kN/m². Wzmacnianie istniejących jętek jest trudne i kosztowne.",
+      "Urządzenia techniczne na poddaszu (pompa ciepła, rekuperator) generują obciążenia skupione. Ciężkie urządzenia stawiaj na oddzielnych ramach nośnych lub wzmocnionych odcinkach belek.",
+    ],
+    loadTypesSummary:
+      "W razie wątpliwości wymiaruj na lekki magazyn (0,75 kN/m²). Dopłata w porównaniu z czystą okładziną jest niewielka, ale zyskujesz elastyczność dla przyszłego wykorzystania strychu.",
+
+    factorsHeading: "Czynniki wpływające na rozpiętość jętek",
+    factorsIntro:
+      "Poza obciążeniem i gatunkiem drewna, na wymiarowanie jętek wpływają dodatkowe czynniki.",
+    factorsItems: [
+      "Funkcja ściągu: Gdy jętki pełnią funkcję ściągów w dachu krokwiowym, oprócz zginania przenoszą siły rozciągające. Połączenie jętka-krokiew musi być wymiarowane na rozpór. Rozpiętość nie jest bezpośrednio zmniejszana, ale węzły wymagają odpowiednich łączników (śruby, wieszaki).",
+      "Ciężar okładziny sufitu: Standardowa płyta g-k 12,5 mm waży ok. 0,11 kN/m². Przy 2×12,5 mm (ochrona ppoż.) podwaja się na 0,22 kN/m². Sufity drewniane i tynkowane mogą ważyć 0,3–0,5 kN/m² i mogą wymagać większych przekrojów.",
+      "Izolacja: Izolacja wdmuchiwana (celuloza, wełna mineralna) na jętkach może ważyć 0,05–0,15 kN/m². Przy bardzo grubych warstwach (> 40 cm) sprawdź, czy założone obciążenie stałe jest aktualne.",
+      "Rozstaw i poszycie: Rozstaw 60 cm wymaga płyt g-k 15 mm (lub specjalnych sufitowych 12,5 mm). Rozstaw 40 cm dopuszcza standardowe 12,5 mm. Przy 80 cm zaleca się 18 mm g-k lub ruszt krzyżowy.",
+      "Ścianka kolankowa (nadmurawka): W dachach ze ścianką kolankową jętki są powyżej murłaty. Siły rozciągające rosną znacząco i wymagają obliczenia statycznego węzłów.",
+    ],
+    factorsSummary:
+      "Jętki często są niedoceniane, bo ukryte nad sufitem. Ale pełnią krytyczne funkcje jako ściąg w dachu krokwiowym i muszą być prawidłowo wymiarowane i połączone.",
+
+    codeReferencesHeading: "Odniesienia normowe dla jętek",
+    codeReferencesIntro:
+      "Poniższe normy regulują wymiarowanie jętek w budownictwie drewnianym w Polsce.",
+    codeReferencesItems: [
+      "PN-EN 1995-1-1 (Eurokod 5) — Projektowanie konstrukcji drewnianych: rozpiętości, graniczne ugięcia, weryfikacja na rozciąganie i zginanie",
+      "PN-EN 1991-1-1 (Eurokod 1) — Oddziaływania: kategorie obciążeń użytkowych poddaszy (0,75 kN/m² magazyn, 1,5 kN/m² pomieszczenie mieszkalne)",
+      "PN-EN 1991-1-1/NA — Załącznik Krajowy: wymiarowanie połączeń jętek jako ściągów — min. 3 śruby M12 lub równoważne wieszaki na każdy węzeł",
+      "PN-EN 13501 / PN-B-02851 — Ochrona ppoż.: wymagania odporności ogniowej stropów (EI 30, EI 60) i grubość okładziny g-k",
+      "PN-EN 338 — Klasy wytrzymałości drewna konstrukcyjnego (C16, C24)",
+      "PN-B-03150 — Konstrukcje drewniane: wymagania uzupełniające do Eurokodów",
+    ],
+    codeReferencesSummary:
+      "Wymiarowanie jętek dotyczy Eurokodu 5 (konstrukcja), Eurokodu 1 (obciążenia), ochrony ppoż. (PN-EN 13501) i ewentualnie akustyki (PN-B-02151). Rozpatruj wszystkie normy łącznie przy projektowaniu.",
+
+    calculatorCtaHeading: "Oblicz materiały na strop poddasza",
+    calculatorCtaText:
+      "Użyj naszych kalkulatorów, aby dokładnie obliczyć liczbę jętek, płyt g-k i elementów złącznych.",
+    calculatorLinks: [
+      {
+        label: "Kalkulator belek stropowych",
+        href: "/calculators/floor-framing/floor-joist-calculator",
+        description: "Nadaje się też do jętek — oblicz liczbę, rozstaw i stężenia.",
+      },
+      {
+        label: "Kalkulator płyt g-k",
+        href: "/calculators/insulation-drywall/drywall-calculator",
+        description: "Oszacuj liczbę płyt gipsowo-kartonowych, masy szpachlowej i wkrętów.",
+      },
+      {
+        label: "Kalkulator izolacji",
+        href: "/calculators/insulation-drywall/cavity-insulation-calculator",
+        description: "Oblicz izolację w matach lub wdmuchiwaną na poddasze ponad jętkami.",
+      },
+    ],
+    faqHeading: "Często zadawane pytania",
+    faqs: [
+      {
+        question: "Jaką rozpiętość osiąga jętka 6×16 cm?",
+        answer:
+          "Jętka 6×16 cm ze świerku C24 przy rozstawie 60 cm osiąga do ok. 4,80 m przy czystej okładzinie sufitu. Przy lekkim magazynowaniu (0,75 kN/m²) rozpiętość spada do ok. 3,50 m. Przy adaptacji poddasza (1,5 kN/m²) wystarcza na ok. 2,80 m — wtedy stosuj co najmniej 8×20 cm.",
+      },
+      {
+        question: "Czy 6×10 cm wystarczy jako jętka?",
+        answer:
+          "6×10 cm osiąga do ok. 3,30 m przy czystej okładzinie i 60 cm rozstawie. Przy magazynowaniu spada do ok. 2,40 m. Nadaje się na małe pomieszczenia, korytarze i wąskie strefy poddasza, nie na typowe rozpiętości ponad 4 m.",
+      },
+      {
+        question: "Czy jętki muszą biec w kierunku krokwi?",
+        answer:
+          "Jeśli jętki pełnią funkcję ściągów (standardowy przypadek w dachu krokwiowym), muszą biec równolegle do krokwi i być bezpośrednio połączone ze stopą krokwi. Gdy biegną prostopadle, potrzebne są oddzielne ściągi lub nośna płatew kalenicowa (dach płatwiowy).",
+      },
+      {
+        question: "Jaka jest różnica między jętką a belką stropową?",
+        answer:
+          "Konstrukcyjnie to ten sam typ elementu (poziomy element zginany). Różnica polega na obciążeniu: jętki noszą tylko okładzinę sufitu i ewentualnie lekkie obciążenia magazynowe (0,3–0,75 kN/m²), belki stropowe noszą pełne obciążenia mieszkalne (1,5 kN/m²). Dlatego jętki mogą przy tym samym przekroju osiągać znacznie większe rozpiętości.",
+      },
+      {
+        question: "Czy mogę chodzić po poddaszu na jętkach?",
+        answer:
+          "Tylko jeśli jętki są wymiarowane na magazynowanie (0,75 kN/m²) lub adaptację (1,5 kN/m²). Jętki wymiarowane tylko na okładzinę sufitu mogą się nadmiernie uginać i uszkodzić sufit g-k pod spodem. Zawsze stąpaj po belkach, nigdy między nimi po płytach g-k.",
+      },
+      {
+        question: "Jak wzmocnić istniejące jętki pod adaptację poddasza?",
+        answer:
+          "Najczęstszą metodą jest podwajanie: nowa belka tego samego lub większego przekroju przykręcona śrubami lub wkrętami do istniejącej. Klej konstrukcyjny + śruby M12 co 40 cm lub wkręty pełnogwintowe 8×200 co 30 cm naprzemiennie. Nowa belka musi opierać się na tych samych podporach. Alternatywnie — dodanie podciągu i słupów skracających rozpiętość. Skonsultuj się z konstruktorem.",
+      },
     ],
   },
 };

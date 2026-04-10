@@ -757,6 +757,133 @@ export interface StairBuildingGuideTranslations {
   faqs: GuideFaq[];
 }
 
+export interface SpanTableRow {
+  size: string;
+  oc12: string;
+  oc16: string;
+  oc24: string;
+}
+
+export interface SpanTableBySpecies {
+  species: string;
+  grade: string;
+  rows: SpanTableRow[];
+}
+
+export interface JoistSpanTableTranslations {
+  title: string;
+  metaDescription: string;
+  heroTitle: string;
+  heroSubtitle: string;
+  heroDescription: string;
+  quickAnswerHeading: string;
+  quickAnswerText: string;
+  understandingHeading: string;
+  understandingText1: string;
+  understandingText2: string;
+  understandingText3: string;
+  spanTablesHeading: string;
+  spanTablesIntro: string;
+  spanTablesColSize: string;
+  spanTablesCol12: string;
+  spanTablesCol16: string;
+  spanTablesCol24: string;
+  spanTablesBySpecies: SpanTableBySpecies[];
+  loadRequirementsHeading: string;
+  loadRequirementsIntro: string;
+  loadRequirementsItems: string[];
+  loadRequirementsSummary: string;
+  factorsHeading: string;
+  factorsIntro: string;
+  factorsItems: string[];
+  factorsSummary: string;
+  codeReferencesHeading: string;
+  codeReferencesIntro: string;
+  codeReferencesItems: string[];
+  codeReferencesSummary: string;
+  calculatorCtaHeading: string;
+  calculatorCtaText: string;
+  calculatorLinks: { label: string; href: string; description: string }[];
+  faqHeading: string;
+  faqs: GuideFaq[];
+}
+
+export interface RafterSpanTableTranslations {
+  title: string;
+  metaDescription: string;
+  heroTitle: string;
+  heroSubtitle: string;
+  heroDescription: string;
+  quickAnswerHeading: string;
+  quickAnswerText: string;
+  understandingHeading: string;
+  understandingText1: string;
+  understandingText2: string;
+  understandingText3: string;
+  spanTablesHeading: string;
+  spanTablesIntro: string;
+  spanTablesColSize: string;
+  spanTablesCol12: string;
+  spanTablesCol16: string;
+  spanTablesCol24: string;
+  spanTablesBySpecies: SpanTableBySpecies[];
+  snowLoadHeading: string;
+  snowLoadIntro: string;
+  snowLoadItems: string[];
+  snowLoadSummary: string;
+  pitchFactorsHeading: string;
+  pitchFactorsIntro: string;
+  pitchFactorsItems: string[];
+  pitchFactorsSummary: string;
+  codeReferencesHeading: string;
+  codeReferencesIntro: string;
+  codeReferencesItems: string[];
+  codeReferencesSummary: string;
+  calculatorCtaHeading: string;
+  calculatorCtaText: string;
+  calculatorLinks: { label: string; href: string; description: string }[];
+  faqHeading: string;
+  faqs: GuideFaq[];
+}
+
+export interface CeilingJoistSpanTableTranslations {
+  title: string;
+  metaDescription: string;
+  heroTitle: string;
+  heroSubtitle: string;
+  heroDescription: string;
+  quickAnswerHeading: string;
+  quickAnswerText: string;
+  understandingHeading: string;
+  understandingText1: string;
+  understandingText2: string;
+  understandingText3: string;
+  spanTablesHeading: string;
+  spanTablesIntro: string;
+  spanTablesColSize: string;
+  spanTablesCol12: string;
+  spanTablesCol16: string;
+  spanTablesCol24: string;
+  spanTablesBySpecies: SpanTableBySpecies[];
+  loadTypesHeading: string;
+  loadTypesIntro: string;
+  loadTypesItems: string[];
+  loadTypesSummary: string;
+  factorsHeading: string;
+  factorsIntro: string;
+  factorsItems: string[];
+  factorsSummary: string;
+  codeReferencesHeading: string;
+  codeReferencesIntro: string;
+  codeReferencesItems: string[];
+  codeReferencesSummary: string;
+  calculatorCtaHeading: string;
+  calculatorCtaText: string;
+  calculatorLinks: { label: string; href: string; description: string }[];
+  faqHeading: string;
+  faqs: GuideFaq[];
+}
+
 export interface GuidesTranslations {
   index: GuidesIndexTranslations;
   spacingGuide: SpacingGuideTranslations;
@@ -772,6 +899,9 @@ export interface GuidesTranslations {
   flooringCost: FlooringCostGuideTranslations;
   fenceCost: FenceCostGuideTranslations;
   stairBuildingGuide?: StairBuildingGuideTranslations;
+  joistSpanTable?: JoistSpanTableTranslations;
+  rafterSpanTable?: RafterSpanTableTranslations;
+  ceilingJoistSpanTable?: CeilingJoistSpanTableTranslations;
   breadcrumbGuides: string;
 }
 

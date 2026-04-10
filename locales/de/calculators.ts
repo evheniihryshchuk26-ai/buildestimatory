@@ -111,6 +111,22 @@ export const categories: CategoryMeta[] = [
         category: "Fundament",
         categorySlug: "foundation",
       },
+      {
+        slug: "rebar-calculator",
+        title: "Kostenloser Bewehrungsrechner — Stäbe, Meter & Gewicht (2026)",
+        description:
+          "Wie viel Bewehrungsstahl brauche ich? Kostenloser Rechner für Platten, Fundamente & Wände — Stabanzahl, Laufmeter und Gewicht in kg.",
+        category: "Fundament",
+        categorySlug: "foundation",
+      },
+      {
+        slug: "rebar-spacing-calculator",
+        title: "Bewehrungsabstand-Rechner — Verlegung & Stababstand (2026)",
+        description:
+          "Bewehrungsabstand-Rechner — kostenloses Tool für optimale Verteilung nach Belastungsart. Stabanzahl, Laufmeter und Abstandhalter sofort.",
+        category: "Fundament",
+        categorySlug: "foundation",
+      },
     ],
   },
   {
@@ -137,6 +153,7 @@ export const categories: CategoryMeta[] = [
       { slug: "top-plate-calculator", title: "Kostenloser Rähm-Rechner — Stück & Versatz (2026)", description: "Wie viel Holz für das doppelte Rähm? Kostenloser Rechner für KVH 6×12 und 6×16 Wände — exakte Stückzahl mit Überlappungsversatz.", category: "Wandkonstruktion", categorySlug: "wall-framing" },
       { slug: "header-calculator", title: "Kostenloser Sturzbalken-Rechner — Maß & Stück (2026)", description: "Sturzbalken-Rechner: Welche Sturzgröße für meine Öffnung? Kostenloses Tool für Tür- und Fensterspannweiten — deckt verschiedene Sturzabmessungen ab.", category: "Wandkonstruktion", categorySlug: "wall-framing" },
       { slug: "exterior-sheathing-calculator", title: "Kostenloser Wandbeplankung-Rechner — Platten & m² (2026)", description: "Wie viele Platten für Außenwandbeplankung? Kostenloser Rechner für OSB- und Sperrholzplatten — inklusive Verschnittfaktor.", category: "Wandkonstruktion", categorySlug: "wall-framing" },
+      { slug: "rake-wall-calculator", title: "Kostenloser Drempelwand-Rechner — Ständer & Schnitte (2026)", description: "Kostenloser Drempelwand-Rechner — Ständeranzahl, Einzelhöhen und Schnittwinkel für Wände entlang der Dachneigung.", category: "Wandkonstruktion", categorySlug: "wall-framing" },
     ],
   },
   {
@@ -155,6 +172,10 @@ export const categories: CategoryMeta[] = [
       { slug: "roof-pitch-calculator", title: "Kostenloser Dachneigung-Rechner — Winkel & Faktor (2026)", description: "Welche Neigung hat mein Dach? Kostenloser Dachneigungsrechner — Höhe und Grundlänge eingeben für sofortigen Winkel, Neigung in % und Flächenmultiplikator.", category: "Dachkonstruktion", categorySlug: "roofing" },
       { slug: "roof-area-calculator", title: "Kostenloser Dachflächen-Rechner — m² & Neigung (2026)", description: "Kostenloser Dachflächen-Rechner — Grundriss in tatsächliche Dachfläche umrechnen. Mit Neigungsmultiplikator und m² sofort berechnen.", category: "Dachkonstruktion", categorySlug: "roofing" },
       { slug: "roof-slope-calculator", title: "Kostenloser Dachgefälle-Rechner — Winkel & Material (2026)", description: "Kostenloser Dachgefälle-Rechner — Höhe und Grundlänge eingeben für Neigungsverhältnis, Winkel und empfohlenes Eindeckungsmaterial.", category: "Dachkonstruktion", categorySlug: "roofing" },
+      { slug: "hip-roof-calculator", title: "Kostenloser Walmdach-Rechner — Sparren, Fläche & Material (2026)", description: "Kostenloser Walmdach-Rechner — Sparrenanzahl, Gratsparrenlänge, Dachfläche und Firstlänge berechnen. Für jede Gebäudegröße.", category: "Dachkonstruktion", categorySlug: "roofing" },
+      { slug: "gambrel-roof-calculator", title: "Kostenloser Mansarddach-Rechner — Sparren & Fläche (2026)", description: "Kostenloser Mansarddach-Rechner (Scheunendach) — obere und untere Sparren, Dachfläche und gewonnene Wandhöhe. Zwei Neigungen eingeben.", category: "Dachkonstruktion", categorySlug: "roofing" },
+      { slug: "gable-roof-calculator", title: "Kostenloser Satteldach-Rechner — Sparren, First & Fläche (2026)", description: "Kostenloser Satteldach-Rechner — Sparrenanzahl, Firstlänge, Dachfläche und Giebelfläche berechnen. Gebäudemaße und Neigung eingeben.", category: "Dachkonstruktion", categorySlug: "roofing" },
+      { slug: "lean-to-roof-calculator", title: "Kostenloser Pultdach-Rechner — Sparren & Fläche (2026)", description: "Kostenloser Pultdach-Rechner — Sparrenanzahl, Sparrenlänge, Dachfläche und Aufbauhöhe. Einzel-Neigungsrechner für Anbauten und Schuppen.", category: "Dachkonstruktion", categorySlug: "roofing" },
     ],
   },
   {
@@ -167,6 +188,8 @@ export const categories: CategoryMeta[] = [
       { slug: "vinyl-siding-calculator", title: "Kostenloser Fassadenverkleidung-Rechner — Paneele & m² (2026)", description: "Kostenloser Fassadenverkleidung-Rechner — Wandfläche eingeben, Paneelanzahl sofort erhalten. Zieht Türen, Fenster ab und addiert 10 % Verschnitt.", category: "Außenhülle", categorySlug: "exterior-shell" },
       { slug: "hardie-siding-calculator", title: "Kostenloser Faserzement-Rechner — Platten & Verschnitt (2026)", description: "Wie viele Faserzementplatten benötige ich? Kostenloser Rechner für Eternit- und Cedral-Fassade — verschiedene Breiten mit Verschnitt.", category: "Außenhülle", categorySlug: "exterior-shell" },
       { slug: "window-flashing-calculator", title: "Kostenloser Fensteranschlussband-Rechner — Meter & Rollen (2026)", description: "Fensteranschlussband-Rechner: Laufmeter für alle Öffnungen schätzen. Kostenloses Tool für 10 cm, 15 cm und 22 cm breites Selbstklebeflashing.", category: "Außenhülle", categorySlug: "exterior-shell" },
+      { slug: "soffit-calculator", title: "Kostenloser Untersichtpaneel-Rechner — Paneele & J-Profil (2026)", description: "Wie viele Untersichtpaneele benötige ich? Kostenloser Rechner nach Umfang und Traufbreite — inklusive J-Profil und Belüftung.", category: "Außenhülle", categorySlug: "exterior-shell" },
+      { slug: "board-and-batten-calculator", title: "Kostenloser Boden-Deckel-Schalung-Rechner — Bretter & Leisten (2026)", description: "Kostenloser Boden-Deckel-Schalung-Rechner — Bretter- und Leistenanzahl nach Wandfläche. Für vertikale Holzfassaden.", category: "Außenhülle", categorySlug: "exterior-shell" },
     ],
   },
   {
@@ -321,6 +344,14 @@ export const categories: CategoryMeta[] = [
         category: "Außenbereich",
         categorySlug: "outdoor",
       },
+      {
+        slug: "deck-board-spacing-calculator",
+        title: "Kostenloser Terrassendielenabstand-Rechner — Gleichmäßige Fuge (2026)",
+        description:
+          "Kostenloser Terrassendielenabstand-Rechner — gleichmäßige Fuge zwischen Dielen für jede Dielenbreite und Terrassenlänge berechnen.",
+        category: "Außenbereich",
+        categorySlug: "outdoor",
+      },
     ],
   },
   {
@@ -378,6 +409,14 @@ export const categories: CategoryMeta[] = [
         title: "Kostenloser Podest-Rechner — Läufe & Maße (2026)",
         description:
           "Kostenloser Treppen-Podest-Rechner — Treppenläufe mit Zwischenpodest aufteilen. Stufen pro Lauf, Podesthöhe & Gesamtlauflänge.",
+        category: "Treppen",
+        categorySlug: "stairs",
+      },
+      {
+        slug: "baluster-spacing-calculator",
+        title: "Kostenloser Sprossen-Abstand-Rechner — Anzahl & Abstand (2026)",
+        description:
+          "Kostenloser Sprossen-Abstand-Rechner — exakte Anzahl und gleichmäßiger Abstand für Treppengeländer und Terrassenbrüstungen. Nach DIN 18065.",
         category: "Treppen",
         categorySlug: "stairs",
       },

@@ -127,6 +127,22 @@ export const categories: CategoryMeta[] = [
         category: "Fondations",
         categorySlug: "foundation",
       },
+      {
+        slug: "rebar-calculator",
+        title: "Calculateur Ferraillage Gratuit — Barres, Mètres & Poids (2026)",
+        description:
+          "Combien de ferraillage faut-il ? Calculateur gratuit pour dalles, semelles & murs — nombre de barres, mètres linéaires et poids en kg.",
+        category: "Fondations",
+        categorySlug: "foundation",
+      },
+      {
+        slug: "rebar-spacing-calculator",
+        title: "Espacement Ferraillage Gratuit — Grille & Quantité (2026)",
+        description:
+          "Calculateur d'espacement du ferraillage — outil gratuit pour disposition optimale selon la charge. Nombre de barres, mètres et cales d'armature.",
+        category: "Fondations",
+        categorySlug: "foundation",
+      },
     ],
   },
   {
@@ -223,6 +239,14 @@ export const categories: CategoryMeta[] = [
         category: "Ossature murale",
         categorySlug: "wall-framing",
       },
+      {
+        slug: "rake-wall-calculator",
+        title: "Mur Rampant Gratuit — Montants & Coupes (2026)",
+        description:
+          "Calculateur de mur rampant gratuit — nombre de montants, hauteurs individuelles et angle de coupe pour murs suivant la pente de toiture.",
+        category: "Ossature murale",
+        categorySlug: "wall-framing",
+      },
     ],
   },
   {
@@ -311,6 +335,38 @@ export const categories: CategoryMeta[] = [
         category: "Couverture",
         categorySlug: "roofing",
       },
+      {
+        slug: "hip-roof-calculator",
+        title: "Toiture en Croupe Gratuit — Chevrons, Surface & Matériaux (2026)",
+        description:
+          "Calculateur de toiture en croupe gratuit — nombre de chevrons, longueur d'arêtier, surface de toit et longueur de faîtage. Pour toute taille de bâtiment.",
+        category: "Couverture",
+        categorySlug: "roofing",
+      },
+      {
+        slug: "gambrel-roof-calculator",
+        title: "Toiture à la Mansart Gratuit — Chevrons & Surface (2026)",
+        description:
+          "Calculateur de toiture à la Mansart gratuit — chevrons brisis et terrassons, surface et hauteur sous comble. Saisissez deux pentes.",
+        category: "Couverture",
+        categorySlug: "roofing",
+      },
+      {
+        slug: "gable-roof-calculator",
+        title: "Toiture à Pignon Gratuit — Chevrons, Faîtage & Surface (2026)",
+        description:
+          "Calculateur de toiture à pignon gratuit — nombre de chevrons, longueur de faîtage, surface de toit et surface de pignon. Dimensions et pente.",
+        category: "Couverture",
+        categorySlug: "roofing",
+      },
+      {
+        slug: "lean-to-roof-calculator",
+        title: "Toiture en Appentis Gratuit — Chevrons & Surface (2026)",
+        description:
+          "Calculateur de toiture en appentis gratuit — nombre de chevrons, longueur, surface et hauteur. Pour extensions, auvents et abris.",
+        category: "Couverture",
+        categorySlug: "roofing",
+      },
     ],
   },
   {
@@ -348,6 +404,22 @@ export const categories: CategoryMeta[] = [
         title: "Bavette de Fenêtre Gratuit — Mètres & Rouleaux (2026)",
         description:
           "Calculateur de bande d'étanchéité : estimez les mètres linéaires de membrane auto-adhésive pour fenêtres. Outil gratuit pour largeurs de 100, 150 et 225 mm.",
+        category: "Enveloppe extérieure",
+        categorySlug: "exterior-shell",
+      },
+      {
+        slug: "soffit-calculator",
+        title: "Calculateur de Sous-Face Gratuit — Panneaux & Profilé J (2026)",
+        description:
+          "Combien de panneaux de sous-face faut-il ? Calculateur gratuit par périmètre et largeur de débord — profilé J et ventilation inclus.",
+        category: "Enveloppe extérieure",
+        categorySlug: "exterior-shell",
+      },
+      {
+        slug: "board-and-batten-calculator",
+        title: "Bardage à Couvre-Joints Gratuit — Planches & Tasseaux (2026)",
+        description:
+          "Calculateur de bardage à couvre-joints gratuit — nombre de planches et tasseaux par surface de mur. Pour bardage vertical extérieur.",
         category: "Enveloppe extérieure",
         categorySlug: "exterior-shell",
       },
@@ -575,6 +647,14 @@ export const categories: CategoryMeta[] = [
         category: "Extérieur",
         categorySlug: "outdoor",
       },
+      {
+        slug: "deck-board-spacing-calculator",
+        title: "Espacement Lames de Terrasse Gratuit — Jeu Uniforme (2026)",
+        description:
+          "Calculateur d'espacement de lames de terrasse gratuit — obtenez un jeu uniforme entre lames pour toute largeur de lame et longueur de terrasse.",
+        category: "Extérieur",
+        categorySlug: "outdoor",
+      },
     ],
   },
   {
@@ -599,6 +679,7 @@ export const categories: CategoryMeta[] = [
       { slug: "stair-stringer-calculator", title: "Calculateur de Limons Gratuit — Longueur & Nombre (2026)", description: "Calculateur de limons d'escalier gratuit — longueur, nombre et disposition pour toute largeur d'escalier. Pour planches 50\u00d7250 et 50\u00d7300 mm.", category: "Escaliers", categorySlug: "stairs" },
       { slug: "rise-over-run-calculator", title: "Calculateur Giron/Hauteur Gratuit — Pente & Angle (2026)", description: "Calculateur giron/hauteur gratuit — rapport, pourcentage, angle et description instantan\u00e9s. Pour escaliers, rampes et toits.", category: "Escaliers", categorySlug: "stairs" },
       { slug: "spiral-staircase-calculator", title: "Escalier Colima\u00e7on Gratuit — Marches & Dimensions (2026)", description: "Calculateur d'escalier en colima\u00e7on gratuit — diam\u00e8tre et hauteur pour nombre de marches, hauteur et rotation. Conforme aux normes.", category: "Escaliers", categorySlug: "stairs" },
+      { slug: "baluster-spacing-calculator", title: "Espacement Balustres Gratuit — Nombre & Entraxe (2026)", description: "Calculateur d'espacement de balustres gratuit — nombre exact et espacement uniforme pour garde-corps d'escaliers et terrasses. Conforme aux normes.", category: "Escaliers", categorySlug: "stairs" },
       { slug: "stair-landing-calculator", title: "Escalier avec Palier Gratuit — Vol\u00e9es & Dimensions (2026)", description: "Calculateur d'escalier avec palier gratuit — divisez les vol\u00e9es avec palier interm\u00e9diaire. Marches par vol\u00e9e, hauteur du palier et longueur totale.", category: "Escaliers", categorySlug: "stairs" },
     ],
   },

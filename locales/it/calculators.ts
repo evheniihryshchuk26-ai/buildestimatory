@@ -111,6 +111,22 @@ export const categories: CategoryMeta[] = [
         category: "Fondazioni",
         categorySlug: "foundation",
       },
+      {
+        slug: "rebar-calculator",
+        title: "Calcolatore Armatura Gratuito — Barre, Metri & Peso (2026)",
+        description:
+          "Quanta armatura serve? Calcolatore gratuito per platee, plinti e muri — numero barre, metri lineari e peso in kg.",
+        category: "Fondazioni",
+        categorySlug: "foundation",
+      },
+      {
+        slug: "rebar-spacing-calculator",
+        title: "Interasse Armatura Gratuito — Disposizione & Quantità (2026)",
+        description:
+          "Calcolatore interasse armatura — strumento gratuito per distribuzione ottimale per tipo di carico. Numero barre, metri e distanziatori.",
+        category: "Fondazioni",
+        categorySlug: "foundation",
+      },
     ],
   },
   {
@@ -137,6 +153,7 @@ export const categories: CategoryMeta[] = [
       { slug: "top-plate-calculator", title: "Corrente Superiore Gratuito — Pezzi & Sfalsamento (2026)", description: "Quanto legname per il doppio corrente superiore? Calcolatore gratuito per pareti con montanti da 4\u00d79 e 6\u00d714 cm — conteggio tavole con sfalsamento giunti incluso.", category: "Struttura Pareti", categorySlug: "wall-framing" },
       { slug: "header-calculator", title: "Calcolatore Architravi Gratuito — Sezione & Pezzi (2026)", description: "Calcolatore architravi: quale sezione per la mia apertura? Strumento gratuito per luci di porte e finestre — copre sezioni da 6\u00d716 a 6\u00d730 cm.", category: "Struttura Pareti", categorySlug: "wall-framing" },
       { slug: "exterior-sheathing-calculator", title: "Rivestimento Esterno Gratuito — Pannelli & m² (2026)", description: "Quanti pannelli di rivestimento per le pareti esterne? Calcolatore gratuito per pannelli OSB e compensato 120\u00d7240 cm — include stime dello sfrido.", category: "Struttura Pareti", categorySlug: "wall-framing" },
+      { slug: "rake-wall-calculator", title: "Parete Inclinata Gratuito — Montanti & Tagli (2026)", description: "Calcolatore parete inclinata gratuito — numero montanti, altezze individuali e angolo di taglio per pareti che seguono la falda del tetto.", category: "Struttura Pareti", categorySlug: "wall-framing" },
     ],
   },
   {
@@ -155,6 +172,10 @@ export const categories: CategoryMeta[] = [
       { slug: "roof-pitch-calculator", title: "Pendenza Tetto Gratuito — Angolo & Fattore (2026)", description: "Qual è la pendenza del tetto? Calcolatore gratuito — inserisca alzata e sviluppo per angolo istantaneo, percentuale e moltiplicatore d\u2019area.", category: "Copertura", categorySlug: "roofing" },
       { slug: "roof-area-calculator", title: "Superficie Tetto Gratuito — m² & Pendenza (2026)", description: "Calcolatore superficie tetto gratuito — converta le dimensioni in pianta nella superficie reale. Moltiplicatore di pendenza e m² totali inclusi.", category: "Copertura", categorySlug: "roofing" },
       { slug: "roof-slope-calculator", title: "Inclinazione Tetto Gratuito — Angolo & Materiale (2026)", description: "Calcolatore inclinazione tetto gratuito — misuri alzata e sviluppo per rapporto di pendenza, angolo e materiale di copertura consigliato.", category: "Copertura", categorySlug: "roofing" },
+      { slug: "hip-roof-calculator", title: "Calcolatore Tetto a Padiglione Gratuito — Travetti & Superficie (2026)", description: "Calcolatore tetto a padiglione gratuito — numero travetti, lunghezza diagonali, superficie e colmo. Per qualsiasi dimensione edificio.", category: "Copertura", categorySlug: "roofing" },
+      { slug: "gambrel-roof-calculator", title: "Calcolatore Tetto a Mansarda Gratuito — Travetti & Superficie (2026)", description: "Calcolatore tetto a mansarda gratuito — travetti superiori e inferiori, superficie e altezza parete guadagnata. Inserisca due pendenze.", category: "Copertura", categorySlug: "roofing" },
+      { slug: "gable-roof-calculator", title: "Calcolatore Tetto a Capanna Gratuito — Travetti & Colmo (2026)", description: "Calcolatore tetto a capanna gratuito — numero travetti, lunghezza colmo, superficie e area timpano. Inserisca dimensioni e pendenza.", category: "Copertura", categorySlug: "roofing" },
+      { slug: "lean-to-roof-calculator", title: "Calcolatore Tetto a Falda Unica Gratuito — Travetti & Area (2026)", description: "Calcolatore tetto a falda unica gratuito — numero travetti, lunghezza, superficie e altezza. Per tettoie, pensiline e ampliamenti.", category: "Copertura", categorySlug: "roofing" },
     ],
   },
   {
@@ -167,6 +188,8 @@ export const categories: CategoryMeta[] = [
       { slug: "vinyl-siding-calculator", title: "Rivestimento PVC Gratuito — Pannelli & m² (2026)", description: "Calcolatore rivestimento PVC gratuito — inserisca i m² di parete per il conteggio esatto pannelli. Detrae porte, finestre e aggiunge 10% di sfrido.", category: "Involucro Esterno", categorySlug: "exterior-shell" },
       { slug: "hardie-siding-calculator", title: "Fibrocemento Gratuito — Doghe & Sfrido (2026)", description: "Quante doghe in fibrocemento servono? Calcolatore gratuito per rivestimenti tipo Eternit Cedral — copre diverse esposizioni con sfrido incluso.", category: "Involucro Esterno", categorySlug: "exterior-shell" },
       { slug: "window-flashing-calculator", title: "Nastro Finestre Gratuito — Metri & Rotoli (2026)", description: "Calcolatore nastro adesivo per finestre: stimi i metri lineari per tutte le aperture. Strumento gratuito per nastri da 10, 15 e 22 cm autoadesivi.", category: "Involucro Esterno", categorySlug: "exterior-shell" },
+      { slug: "soffit-calculator", title: "Calcolatore Sottotetto Gratuito — Pannelli & Profilo J (2026)", description: "Quanti pannelli per il sottotetto servono? Calcolatore gratuito per perimetro e larghezza gronda — include profilo J e ventilazione.", category: "Involucro Esterno", categorySlug: "exterior-shell" },
+      { slug: "board-and-batten-calculator", title: "Doghe e Coprigiunto Gratuito — Doghe & Listelli (2026)", description: "Calcolatore doghe e coprigiunto gratuito — numero doghe e listelli per superficie parete. Per rivestimenti verticali esterni.", category: "Involucro Esterno", categorySlug: "exterior-shell" },
     ],
   },
   {
@@ -321,6 +344,14 @@ export const categories: CategoryMeta[] = [
         category: "Esterni",
         categorySlug: "outdoor",
       },
+      {
+        slug: "deck-board-spacing-calculator",
+        title: "Spaziatura Tavole Terrazza Gratuito — Fuga Uniforme (2026)",
+        description:
+          "Calcolatore spaziatura tavole terrazza gratuito — fuga uniforme tra tavole per qualsiasi larghezza e lunghezza terrazza. Previene deformazioni e ristagni.",
+        category: "Esterni",
+        categorySlug: "outdoor",
+      },
     ],
   },
   {
@@ -346,6 +377,7 @@ export const categories: CategoryMeta[] = [
       { slug: "rise-over-run-calculator", title: "Calcolatore Alzata/Pedata Gratuito — Pendenza & Angolo (2026)", description: "Calcolatore alzata/pedata gratuito — rapporto, percentuale, angolo e descrizione istantanei. Per scale, rampe e tetti.", category: "Scale", categorySlug: "stairs" },
       { slug: "spiral-staircase-calculator", title: "Scala a Chiocciola Gratuito — Gradini & Dimensioni (2026)", description: "Calcolatore scala a chiocciola gratuito — diametro e altezza per numero gradini, alzata e rotazione. Conforme alle norme.", category: "Scale", categorySlug: "stairs" },
       { slug: "stair-landing-calculator", title: "Scala con Pianerottolo Gratuito — Rampe & Dimensioni (2026)", description: "Calcolatore scala con pianerottolo gratuito — dividi rampe con pianerottolo intermedio. Gradini per rampa, altezza pianerottolo e percorso totale.", category: "Scale", categorySlug: "stairs" },
+      { slug: "baluster-spacing-calculator", title: "Spaziatura Colonnine Gratuito — Numero & Distanza (2026)", description: "Calcolatore spaziatura colonnine gratuito — numero esatto e spaziatura uniforme per ringhiere di scale e terrazze. Conforme NTC 2018.", category: "Scale", categorySlug: "stairs" },
     ],
   },
 ];

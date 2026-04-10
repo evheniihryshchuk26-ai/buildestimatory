@@ -149,6 +149,51 @@ export interface StairWithLandingResult {
   totalRunInches: number;
 }
 
+export interface BalusterSpacingResult {
+  balustersPerSection: number;
+  totalBalusters: number;
+  actualSpacing: number;
+  sections: number;
+}
+
+export function calculateBalusterSpacing(
+  railLengthInches: number,
+  balusterWidthInches: number,
+  postWidthInches: number,
+  numberOfPosts: number
+): BalusterSpacingResult {
+  // Max gap between balusters is 4" per IRC R312.1.3
+  const maxGap = 4;
+
+  // Sections = number of spaces between posts (numberOfPosts - 1)
+  const sections = Math.max(numberOfPosts - 1, 1);
+
+  // Available space per section (subtract post widths from total rail length)
+  const totalPostWidth = numberOfPosts * postWidthInches;
+  const usableLength = railLengthInches - totalPostWidth;
+  const sectionLength = usableLength / sections;
+
+  // Each baluster takes up balusterWidth + gap, gap ≤ 4"
+  // Number of balusters per section: ceil(sectionLength / (balusterWidth + maxGap))
+  // Then recalculate actual gap to distribute evenly
+  const balustersPerSection = Math.ceil(sectionLength / (balusterWidthInches + maxGap));
+  const totalBalusters = balustersPerSection * sections;
+
+  // Actual spacing (gap) between balusters
+  // balusters fill: balustersPerSection * balusterWidth
+  // remaining space is divided into (balustersPerSection + 1) gaps (gaps at both ends against posts)
+  const remainingSpace = sectionLength - balustersPerSection * balusterWidthInches;
+  const gaps = balustersPerSection + 1;
+  const actualSpacing = remainingSpace / gaps;
+
+  return {
+    balustersPerSection,
+    totalBalusters,
+    actualSpacing: Math.round(actualSpacing * 100) / 100,
+    sections,
+  };
+}
+
 export function calculateStairWithLanding(
   totalRiseInches: number,
   landingDepthInches: number,

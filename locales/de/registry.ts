@@ -1069,6 +1069,171 @@ export const roofSlopeCalculator: CalculatorSEOContent = {
 };
 
 
+// ─── HIP ROOF (WALMDACH) ─────────────────────────────────────────────────────
+
+export const hipRoofCalculatorDE: CalculatorSEOContent = {
+  disclaimer: "Die Walmdach-Geometrie ist eine Näherung. Gratsparren-Längen variieren — jeden einzeln anpassen. 10–15 % Verschnitt für Holz einplanen.",
+  howToUse: [
+    "Messen Sie die Gebäudelänge und -breite in Metern.",
+    "Geben Sie die Dachneigung ein (Anstieg pro 12 Einheiten Lauf).",
+    "Wählen Sie den Sparrenabstand (40 cm Achsabstand ist Standard).",
+    "Klicken Sie auf Berechnen für Sparrenanzahl, Gratsparrenlänge, Dachfläche und Firstlänge.",
+  ],
+  materialInfo:
+    "Das Walmdach hat vier geneigte Dachflächen — zwei trapezförmige Längsseiten und zwei dreieckige Giebelseiten — die an einem verkürzten First zusammenlaufen. Durch den umlaufenden Dachüberstand bietet das Walmdach hervorragenden Windschutz und hält Windgeschwindigkeiten von über 180 km/h besser stand als Satteldächer. In Norddeutschland und anderen windexponierten Regionen wird das Walmdach daher bevorzugt. Die Konstruktion erfordert vier Gratsparren, die diagonal von jeder Gebäudeecke zum Firstende laufen, Hauptsparren auf jeder dreieckigen Seite und zahlreiche Schifter (verkürzte Sparren), die parallel zu den Hauptsparren verlaufen, aber zur Gratachse hin kürzer werden. Der Gratsparren ist typischerweise eine Querschnittsgröße stärker als die Hauptsparren (z. B. 8×20 cm Grat bei 6×18 cm Sparren), da er Lasten von beiden Seiten aufnimmt. Die Firstlänge eines Walmdachs entspricht der Gebäudelänge minus der Gebäudebreite. Für ein typisches Walmdach von 9×12 m bei 30° Neigung liegen die Materialkosten für das Konstruktionsholz (KVH S10/C24) bei 3.000 bis 7.000 EUR, die professionelle Zimmermannsarbeit bei 5.000 bis 10.000 EUR. In Deutschland ist Fichte/Kiefer KVH der Standard, und die Bemessung erfolgt nach DIN 1052 bzw. Eurocode 5.",
+  nextSteps: [
+    { label: "Dachschalung-Rechner", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Dachschindel-Rechner", href: "/calculators/roofing/shingle-calculator/" },
+    { label: "Dachneigung-Rechner", href: "/calculators/roofing/roof-pitch-calculator/" },
+    { label: "Satteldach-Rechner", href: "/calculators/roofing/gable-roof-calculator/" },
+  ],
+  installationTips: [
+    "Gratsparren aus Holz verwenden, das eine Querschnittsgröße tiefer als Hauptsparren ist, um ausreichende Tragfähigkeit zu gewährleisten.",
+    "Schifterschnitte mit Zimmermannswinkel oder Abbundanlage berechnen — Gratsparren erfordern doppelte Gehrungsschnitte.",
+    "Gratsparren zuerst einbauen, dann Schifter vom längsten zum kürzesten auffüllen.",
+    "Die Oberkante des Gratsparrens abfasen (Gratabsenkung), damit die Schalung bündig aufliegt.",
+    "Gratsparren temporär aussteifen, bis die Schalung verlegt ist — sie können sich unter Eigengewicht verdrehen.",
+  ],
+  commonMistakes: [
+    "Gleichen Querschnitt für Gratsparren und Hauptsparren verwenden — Gratsparren tragen die doppelte Last und müssen eine Größe stärker sein.",
+    "Gratabsenkung oder Fase nicht berücksichtigen — die Schalung liegt nicht plan auf und erzeugt einen Höcker am Grat.",
+    "Vergessen, dass Schifter doppelte Gehrungsschnitte erfordern, keine einfachen Lotschnitte.",
+    "Material unterschätzen — Walmdächer verbrauchen 10–15 % mehr Holz und Schalung als ein vergleichbares Satteldach.",
+  ],
+  faqs: [
+    { question: "Was ist ein Walmdach?", answer: "Ein Walmdach hat vier geneigte Dachflächen, die alle nach unten zu den Wänden geneigt sind. Die zwei längeren Seiten sind Trapeze und die zwei kürzeren Seiten sind Dreiecke. Alle vier Flächen treffen an einem First, der kürzer als die volle Gebäudelänge ist. Walmdächer sind windbeständiger als Satteldächer und bieten Traufschutz an allen vier Wänden." },
+    { question: "Wie berechne ich die Walmdachfläche?", answer: "Messen Sie die Gebäudegrundfläche (Länge × Breite) und multiplizieren Sie mit dem Neigungsfaktor. Bei 30° Neigung (ca. 7:12) beträgt der Faktor 1,155. Ein 9×12 m Gebäude hat ca. 9 × 12 × 1,155 = 124,7 m² Dachfläche." },
+    { question: "Wie viele Gratsparren hat ein Walmdach?", answer: "Ein Standard-Walmdach hat genau 4 Gratsparren — einer läuft von jeder Gebäudeecke diagonal zum Firstende. Jeder Gratsparren ist länger als die Hauptsparren, da er im Grundriss unter 45° verläuft." },
+    { question: "Walmdach oder Satteldach — was ist besser?", answer: "Walmdächer sind windbeständiger, schützen alle vier Wände und sind konstruktiv selbstaussteifend. Satteldächer sind einfacher zu bauen, günstiger und bieten mehr Dachraum. In windexponierten Regionen werden Walmdächer bevorzugt, bei moderatem Klima ist das Satteldach wirtschaftlicher." },
+    { question: "Wie lang ist ein Gratsparren?", answer: "Ein Gratsparren verläuft diagonal von der Gebäudeecke zum First. Sein horizontaler Lauf ist der Hauptsparren-Lauf mal Wurzel aus 2 (ca. 1,414). Für ein 9 m breites Gebäude mit 30° Neigung: Hauptsparren-Lauf = 4,5 m, Grat-Lauf = 4,5 × 1,414 = 6,36 m, Gratsparrenlänge ca. 6,8 m." },
+    { question: "Wie lang ist der First beim Walmdach?", answer: "Die Firstlänge bei einem Standard-Walmdach entspricht der Gebäudelänge minus der Gebäudebreite. Bei einem 12×9 m Gebäude: 12 − 9 = 3 m. Bei einem quadratischen Gebäude gibt es keinen First — die vier Gratsparren treffen sich in einem Punkt (Zeltdach)." },
+  ],
+};
+
+// ─── GAMBREL ROOF (MANSARDDACH) ─────────────────────────────────────────────
+
+export const gambrelRoofCalculatorDE: CalculatorSEOContent = {
+  disclaimer: "Mansarddach-Proportionen basieren auf einer Standard-67/33-Aufteilung. Tatsächliche Proportionen können abweichen. Statiknachweis durch Ingenieur erforderlich.",
+  howToUse: [
+    "Geben Sie die Gebäudelänge und -breite in Metern ein.",
+    "Geben Sie die untere (steile) Neigung ein — typisch 18:12 bis 24:12 für den Kniestock.",
+    "Geben Sie die obere (flache) Neigung ein — typisch 4:12 bis 8:12 für die Dachkappe.",
+    "Wählen Sie den Sparrenabstand und klicken Sie auf Berechnen.",
+  ],
+  materialInfo:
+    "Das Mansarddach — oft als Scheunendach oder Gambrel-Dach bezeichnet — weist auf jeder Seite zwei unterschiedliche Neigungen auf: einen steilen unteren Abschnitt (typisch 60–70°) und einen flacheren oberen Abschnitt (typisch 20–30°). Dieses Doppelneigungsdesign maximiert den nutzbaren Raum im Dachgeschoss und ist die klassische Wahl für Scheunen, landwirtschaftliche Gebäude und Kolonialhäuser. Der steile Unterbau funktioniert fast wie eine Wand und bietet Stehhöhe im Dachgeschoss, während der flache Oberbau das konventionelle Dach bildet. Konstruktiv erfordert der Übergang zwischen den beiden Neigungen (Mansardknick) eine horizontale Pfette als Strukturauflager, die die oberen Sparren abstützt und Lasten auf die unteren Sparren überträgt. Die unteren Sparren sind typischerweise KVH 6×20 oder 6×24 cm, die oberen 6×16 oder 6×20 cm. Alternativ können Mansardbinder als vorgefertigte Einheit bestellt werden. Das Mansarddach benötigt 20–30 % weniger Material als ein vollständiges zweites Geschoss mit konventionellem Satteldach. Materialkosten für ein 9×12 m Mansarddach: 5.000 bis 10.000 EUR für KVH. Eine Schwäche ist die Windanfälligkeit — der steile Unterbau fängt Wind, daher sind Mansarddächer nicht für windexponierte Standorte empfohlen.",
+  nextSteps: [
+    { label: "Dachschalung-Rechner", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Sparren-Rechner", href: "/calculators/roofing/rafter-calculator/" },
+    { label: "Dachschindel-Rechner", href: "/calculators/roofing/shingle-calculator/" },
+    { label: "Satteldach-Rechner", href: "/calculators/roofing/gable-roof-calculator/" },
+  ],
+  installationTips: [
+    "Mansardbinder auf ebener Fläche (Schablone) fertigen, um Konsistenz über alle Binder sicherzustellen.",
+    "Die Pfette am Mansardknick ist tragend — verwenden Sie einen ausreichend dimensionierten Balken oder Doppel-KVH.",
+    "Kniestockstreben am Übergang untere/obere Neigung für zusätzliche Steifigkeit einbauen.",
+    "Die Schalung über den Mansardknick sorgfältig verlegen — der Winkelwechsel erfordert präzise Schnitte.",
+    "Kehlbalken oder Deckenbalken im oberen Abschnitt verwenden, um Horizontalschub zu verhindern.",
+  ],
+  commonMistakes: [
+    "Pfette am Neigungswechsel zu schwach dimensionieren — sie trägt erhebliche Strukturlasten.",
+    "Übergang untere/obere Neigung nicht aussteifen — der Knickpunkt ist die schwächste Stelle des Mansarddachs.",
+    "Gleiche Neigung für beide Abschnitte verwenden — der untere muss deutlich steiler sein, um nutzbaren Raum zu gewinnen.",
+    "Windexposition ignorieren — Mansarddächer sind bei Starkwind durch den steilen Unterbau anfällig.",
+  ],
+  faqs: [
+    { question: "Was ist ein Mansarddach?", answer: "Ein Mansarddach hat auf jeder Seite zwei unterschiedliche Neigungen — eine steile untere (60 bis 70 Grad) und eine flache obere (20 bis 30 Grad). Dieses Scheunendach-Design maximiert den nutzbaren Innenraum im Dachgeschoss." },
+    { question: "Welche Neigungen werden bei einem Mansarddach verwendet?", answer: "Der untere (steile) Abschnitt verwendet typisch 18:12 bis 24:12 (56 bis 63 Grad), der obere (flache) 4:12 bis 8:12 (18 bis 33 Grad). Eine häufige Kombination ist 20:12 unten und 6:12 oben." },
+    { question: "Wie viel zusätzlichen Raum bietet ein Mansarddach?", answer: "Ein Mansarddach bietet ca. 70 bis 80 Prozent der Fläche eines vollständigen zweiten Geschosses, verglichen mit 40 bis 50 Prozent bei einem Satteldach-Spitzboden. Für ein 9 m breites Gebäude ergibt das ca. 55 bis 65 m² pro 9 m Gebäudelänge." },
+    { question: "Sind Mansarddächer tragfähig?", answer: "Mansarddächer sind bei korrekter Bemessung und Aussteifung tragfähig, aber windanfälliger als Walm- oder Satteldächer. Der steile Unterbau wirkt wie ein Segel. In Sturmgebieten nicht empfohlen. Bei Schnee kann sich am Neigungswechsel Schnee ansammeln." },
+    { question: "Was ist der Unterschied zwischen Mansard- und Mansarddach?", answer: "Im Deutschen werden die Begriffe oft synonym verwendet. International hat ein Gambrel-Dach zwei Neigungen auf zwei Seiten mit Giebelwänden, während ein Mansard-Dach (französisch) zwei Neigungen auf allen vier Seiten aufweist — wie ein Walm-Mansard-Hybrid." },
+    { question: "Was kostet ein Mansarddach?", answer: "Ein Mansarddach kostet 15 bis 25 Prozent mehr als ein einfaches Satteldach gleicher Grundfläche. Für ein 9×12 m Gebäude: 6.000 bis 12.000 EUR für KVH und Verbindungsmittel, plus 8.000 bis 18.000 EUR für Zimmererarbeit. Dennoch deutlich günstiger als ein vollständiges zweites Geschoss." },
+  ],
+};
+
+// ─── GABLE ROOF (SATTELDACH) ────────────────────────────────────────────────
+
+export const gableRoofCalculatorDE: CalculatorSEOContent = {
+  disclaimer: "10–15 % Verschnitt für Schnitte und Überstände einplanen. Sparrenlängen enthalten keinen Überstand — 30–60 cm pro Sparren für Traufe hinzufügen.",
+  howToUse: [
+    "Geben Sie die Gebäudelänge (entlang des Firsts) und -breite (quer zum Giebel) in Metern ein.",
+    "Geben Sie die Dachneigung ein (Anstieg pro 12 Einheiten Lauf).",
+    "Wählen Sie den Sparrenabstand (40 cm Achsabstand ist Wohnbaustandard).",
+    "Klicken Sie auf Berechnen für Sparrenanzahl, Dachfläche, Firstlänge und Giebelfläche.",
+  ],
+  materialInfo:
+    "Das Satteldach ist der häufigste Dachtyp in Mitteleuropa — zwei geneigte Dachflächen treffen an einem zentralen First, der über die gesamte Gebäudelänge verläuft. Die dreieckigen Wandabschnitte an jedem Ende — die Giebel — geben diesem Dachtyp seinen Namen. Satteldächer sind beliebt, weil sie einfach zu planen, unkompliziert zu bauen, materialsparend und hervorragend bei Regen- und Schneeableitung sind. Die beiden gegenüberliegenden Neigungen erzeugen in Kombination mit Trauf- und Firstentlüftung eine natürliche Belüftung, die den Dachraum trocken und temperiert hält. Standard-Dachneigungen im Wohnbau reichen von 25° bis 45°, wobei 35° bis 40° in Deutschland am häufigsten sind. Sparren laufen von der Fußpfette (Wandpfette) zum Firstbrett oder Firstbalken, mit einem Kervenaufschnitt an der Pfette und einem Lotschnitt am First. Gängige Sparrenquerschnitte sind KVH 6×14 cm (bis 3 m Lauf), 6×18 cm (bis 4 m), 6×20 cm (bis 5 m) und 6×24 cm (bis 6 m) bei 60 cm Achsabstand in Fichte/Kiefer S10/C24. Die Giebelwände müssen beplankt und verkleidet werden, was zusätzliches Material erfordert. Für ein 9×12 m Satteldach bei 35° Neigung liegen die Holzkosten bei 2.500 bis 5.500 EUR, mit Zimmererarbeit von 4.000 bis 8.000 EUR.",
+  nextSteps: [
+    { label: "Firstbrett-Rechner", href: "/calculators/roofing/ridge-board-calculator/" },
+    { label: "Dachschalung-Rechner", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Dachschindel-Rechner", href: "/calculators/roofing/shingle-calculator/" },
+    { label: "Walmdach-Rechner", href: "/calculators/roofing/hip-roof-calculator/" },
+  ],
+  installationTips: [
+    "Erst einen Mustersparren schneiden und probehalber einpassen, bevor der gesamte Satz geschnitten wird.",
+    "Zimmermannswinkel verwenden, um gleichmäßige Kerven- und Lotschnitte anzureißen.",
+    "Firstbrett auf provisorischen Stützen montieren, bevor die Sparren gesetzt werden.",
+    "Von beiden Seiten zur Mitte hin arbeiten, wenn gegenüberliegende Sparrenpaare gesetzt werden.",
+    "Kehlbalken im oberen Drittel der Sparren einbauen, um Wandspreizung zu verhindern.",
+  ],
+  commonMistakes: [
+    "Überhangslänge bei der Sparrenmessung vergessen — 30 bis 60 cm pro Sparren über die Wand hinaus hinzufügen.",
+    "Giebelbeplankung und -verkleidung nicht in die Materialschätzung einbeziehen.",
+    "Die Gebäudebreite als Sparrenlauf verwenden — der Lauf ist die halbe Breite für jede Seite.",
+    "Kehlbalken oder Deckenbalken weglassen — ohne sie drücken die Sparren die Wände mit der Zeit nach außen.",
+  ],
+  faqs: [
+    { question: "Was ist ein Satteldach?", answer: "Ein Satteldach ist die klassische zweiteilige Dachform, bei der zwei geneigte Flächen an einem zentralen First zusammentreffen. Die vertikalen dreieckigen Wandabschnitte an jedem Ende heißen Giebel. Es ist der häufigste Dachtyp in Deutschland wegen seiner Einfachheit, geringen Kosten und guten Wasserableitung." },
+    { question: "Wie berechne ich die Satteldachfläche?", answer: "Multiplizieren Sie die halbe Gebäudebreite (Sparrenlauf) mit dem Neigungsfaktor, dann mit der Gebäudelänge für eine Seite. Verdoppeln für beide Seiten. Für 9×12 m bei 35° Neigung: Lauf = 4,5 m, Faktor = 1,221, eine Seite = 4,5 × 1,221 × 12 = 65,9 m², gesamt = 131,9 m²." },
+    { question: "Was ist die Giebelfläche und warum ist sie wichtig?", answer: "Der Giebel ist die dreieckige Wandfläche zwischen den zwei Dachneigungen an jedem Gebäudeende. Seine Fläche beträgt halbe Gebäudebreite mal Dachhöhe. Diese Fläche muss beplankt und verkleidet werden. Für ein 9 m breites Gebäude bei 35° ergibt sich pro Giebel ca. 9 × 3,15 / 2 = 14,2 m²." },
+    { question: "Welche Neigung ist für ein Satteldach optimal?", answer: "In Deutschland sind 35° bis 45° die häufigsten Neigungen. 35° bietet ein gutes Gleichgewicht aus Optik, Materialeffizienz und Begehbarkeit. Flachere Neigungen (25°–30°) eignen sich für moderne Architektur, steilere (45°+) ermöglichen bessere Dachgeschossnutzung." },
+    { question: "Wie viele Sparren brauche ich für ein Satteldach?", answer: "Teilen Sie die Gebäudelänge durch den Sparrenabstand (in Metern), addieren Sie eins, dann verdoppeln Sie für beide Seiten. Für 12 m bei 60 cm Abstand: (12 / 0,6) + 1 = 21 pro Seite, 42 gesamt. Plus 10 % Verschnitt = 46 Sparren bestellen." },
+    { question: "Satteldach vs. Walmdach — was kostet weniger?", answer: "Satteldächer kosten 15 bis 25 Prozent weniger als Walmdächer, weil sie weniger Holz verbrauchen, einfachere Schnitte haben und schneller gebaut werden. Ein Satteldach hat keine Gratsparren oder Schifter, und der First verläuft über die gesamte Gebäudelänge. Allerdings sind Satteldächer weniger windbeständig." },
+  ],
+};
+
+// ─── LEAN-TO ROOF (PULTDACH) ────────────────────────────────────────────────
+
+export const leanToRoofCalculatorDE: CalculatorSEOContent = {
+  disclaimer: "Pultdach-Maße setzen eine einfache Neigung ohne Kehlen oder Grate voraus. 10–15 % Verschnitt einplanen. Sparrenlänge enthält keinen Überstand.",
+  howToUse: [
+    "Geben Sie die Dachlänge (Maß entlang der Tragwand) ein.",
+    "Geben Sie den Dachlauf (Tiefe von der Wand aus) ein.",
+    "Geben Sie die Neigung ein (Anstieg pro 12 Einheiten horizontaler Lauf).",
+    "Wählen Sie den Sparrenabstand und klicken Sie auf Berechnen für Sparrenanzahl, Länge, Fläche und Aufbauhöhe.",
+  ],
+  materialInfo:
+    "Das Pultdach (auch Schleppdach, Anbaudach oder Monopitch-Dach) ist die einfachste Dachform — eine einzige geneigte Fläche, die an einer bestehenden Struktur angelehnt ist oder zwischen Wänden unterschiedlicher Höhe spannt. Pultdächer sind die Standardwahl für Anbauten, überdachte Terrassen, Carports, Holzschuppen und Brennholzlager. Die hohe Seite wird typischerweise über einen Auflagebohle an der bestehenden Gebäudewand befestigt, die niedrige Seite ruht auf einem Balken auf Pfosten. Da es nur eine Neigung gibt, ist das Pultdach am wirtschaftlichsten zu bauen — es benötigt ca. die Hälfte der Sparren eines Satteldachs gleicher Grundfläche und hat kein Firstbrett, keine Grat- oder Kehlsparren und keine doppelten Gehrungsschnitte. Typische Pultdachneigungen reichen von 5° bis 30°, wobei 15° bis 20° für angebaute Strukturen am häufigsten sind. Die Mindestneigung hängt vom Eindeckungsmaterial ab: 2° für EPDM/Bitumenbahnen, 5° für Stehfalzblech, 22° für Tonziegel. Sparrenquerschnitte folgen den gleichen Spannweitentabellen wie Satteldächer — KVH 6×14 cm für Spannweiten bis 3 m, 6×18 cm bis 4 m und 6×20 cm bis 5 m bei 60 cm Achsabstand. Gängige Materialien für den Wandanschluss umfassen eine Auflagebohle 6×18 oder 6×20 cm, mit Schraubbolzen M12 alle 40 cm befestigt, und Anschlussblech darüber zur Wasserableitung. Ein Pultdach 3,6×6 m kostet 800 bis 2.000 EUR für Konstruktionsholz und 300 bis 800 EUR für Eindeckung, mit Zimmererarbeit von 1.500 bis 3.500 EUR.",
+  nextSteps: [
+    { label: "Sparren-Rechner", href: "/calculators/roofing/rafter-calculator/" },
+    { label: "Dachschalung-Rechner", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Dachneigung-Rechner", href: "/calculators/roofing/roof-pitch-calculator/" },
+    { label: "Satteldach-Rechner", href: "/calculators/roofing/gable-roof-calculator/" },
+  ],
+  installationTips: [
+    "Auflagebohle mit M12-Schraubbolzen an Wandständer oder Ringanker befestigen — niemals nur an der Fassadenverkleidung verankern.",
+    "Anschlussblech oder Winkelblech über der Auflagebohle montieren, um Wassereintritt in die Wand zu verhindern.",
+    "Richtschnur von der Auflagebohle zum Auflagerbalken spannen, um gleichmäßige Sparrenneigung vor dem Schneiden zu prüfen.",
+    "Dach vom bestehenden Gebäude weg neigen, um Regenwasser zur Niedrigseite abzuleiten.",
+    "Bei Spannweiten über 4 Meter einen Zwischenauflager-Balken einplanen, um den Sparrenquerschnitt zu reduzieren.",
+  ],
+  commonMistakes: [
+    "Auflagebohle an der Verkleidung statt am Tragwerk befestigen — die Bohle muss in Ständer oder Ringanker verankert sein.",
+    "Anschlussblech über der Auflagebohle vergessen — die häufigste Ursache für Wasserschäden bei Pultdach-Anbauten.",
+    "Dach zum bestehenden Gebäude hin statt davon weg neigen — Wasser muss zur äußeren (niedrigen) Seite ablaufen.",
+    "Zu geringe Neigung für das gewählte Eindeckungsmaterial — Tonziegel brauchen mindestens 22° nach ZVDH-Fachregeln.",
+  ],
+  faqs: [
+    { question: "Was ist ein Pultdach?", answer: "Ein Pultdach ist ein Dach mit nur einer Neigung, das typischerweise an einer bestehenden Gebäudewand angelehnt ist. Ein Ende ist höher (über eine Auflagebohle an der Wand befestigt), das andere niedriger (auf Pfosten und Balken gestützt). Es ist der einfachste und wirtschaftlichste Dachtyp, häufig für Anbauten, Terrassen, Carports und Schuppen verwendet." },
+    { question: "Welche Mindestneigung hat ein Pultdach?", answer: "Die Mindestneigung hängt vom Eindeckungsmaterial ab: 2° für EPDM/Bitumenbahnen, 3° für Stehfalzblech, 10° für Betondachsteine mit Sondermaßnahmen und 22° für Standard-Tonziegel nach ZVDH. Für die meisten Pultdach-Anbauten bieten 15° bis 20° ein gutes Gleichgewicht aus Wasserablauf und Kopfhöhe." },
+    { question: "Wie berechne ich die Pultdachfläche?", answer: "Multiplizieren Sie die Dachlänge (entlang der Wand) mit dem Dachlauf (Tiefe ab Wand), dann mit dem Neigungsfaktor. Für ein 6×3,6 m Pultdach bei ca. 18°: Faktor = 1,054, Fläche = 6 × 3,6 × 1,054 = 22,8 m². Das ist die tatsächliche Dachfläche, etwas mehr als die Grundfläche." },
+    { question: "Wie hoch baut ein Pultdach auf?", answer: "Die Aufbauhöhe ergibt sich aus Lauf mal Neigungsverhältnis. Bei 3,6 m Lauf und ca. 18° Neigung (4:12): 3,6 × (4/12) = 1,2 m Höhenunterschied. Die Hochseite ist 1,2 m höher als die Niedrigseite." },
+    { question: "Kann ich ein Pultdach an jeder Wand befestigen?", answer: "Sie können es an jeder tragenden Wand befestigen, die die Auflagelast aufnehmen kann. Die Wand muss zugängliche Ständer oder einen Ringanker haben. Bei Mauerwerk sind Schwerlastdübel oder Durchsteckbolzen erforderlich. Immer prüfen, ob die bestehende Wand die zusätzliche Dachlast tragen kann." },
+    { question: "Was kostet ein Pultdach?", answer: "Ein einfaches 3,6×6 m Pultdach kostet 800 bis 2.000 EUR für Konstruktionsholz, 300 bis 800 EUR für Eindeckung und Unterspannbahn, und 1.500 bis 3.500 EUR für Zimmererarbeit. Gesamtkosten eingebaut typischerweise 2.500 bis 6.500 EUR je nach Material und Aufwand." },
+  ],
+};
+
+
 // ─── EXTERIOR SHELL ─────────────────────────────────────────────────────────
 
 export const housewrapCalculator: CalculatorSEOContent = {
@@ -1880,6 +2045,290 @@ const stairLandingCalculatorDE: CalculatorSEOContent = {
   ],
 };
 
+// ─── BEWEHRUNG ──────────────────────────────────────────────────────────────
+
+export const rebarCalculator: CalculatorSEOContent = {
+  disclaimer: "Diese Schätzung geht von einer einlagigen Flachmatte aus. Die tatsächlichen Bewehrungsanforderungen hängen von den Ingenieursspezifikationen, Bodenverhältnissen und der lokalen Bauordnung ab. Konsultieren Sie immer einen Statiker für tragende und seismische Anwendungen.",
+  howToUse: [
+    "Geben Sie Länge und Breite der Platte in Metern ein.",
+    "Stellen Sie den gewünschten Stababstand ein — 15 cm ist üblich für Wohnbauplatten.",
+    "Wählen Sie den Stabdurchmesser: 10 mm für leichte Belastung, 12 mm für Standard-Wohnbau, 16 mm für statische Anwendungen.",
+    "Klicken Sie auf Berechnen für Stabanzahl, Laufmeter und Gesamtgewicht.",
+  ],
+  materialInfo:
+    "Bewehrungsstahl (Betonstahl, Armierungseisen) ist gerippter Stabstahl, der in Beton eingebettet wird, um Zugfestigkeit zu bieten, die der Beton allein nicht aufnehmen kann. Beton ist druckfest, aber zugempfindlich — die Bewehrung überbrückt Risse und hält die Platte unter Last zusammen. Die gebräuchlichsten Durchmesser für den Wohn- und leichten Gewerbebau in Deutschland und Österreich sind: Ø 8 mm (0,395 kg/m), Ø 10 mm (0,617 kg/m), Ø 12 mm (0,888 kg/m) und Ø 16 mm (1,578 kg/m). Standard-Bewehrungsstahl wird in Stablängen von 6 m und 12 m geliefert. Wenn die Plattenabmessung die Stablänge überschreitet, müssen Stöße mit einer Übergreifungslänge von mindestens 40 Stabdurchmessern ausgeführt werden — also 48 cm für Ø 12 mm. BSt 500 S (Streckgrenze 500 N/mm²) ist der Standard nach DIN 488 bzw. Eurocode 2 für Wohnbau in der DACH-Region. Erhältlich in Schwarzstahl, feuerverzinkt und Edelstahl (1.4571) für korrosive Umgebungen. Der typische Stababstand beträgt 15 cm für Wohnbauplatten ab 12 cm Dicke, 20 cm für leicht belastete Terrassen und 10 cm für Garagenplatten oder statisch beanspruchte Platten. Die Bewehrung muss mit Abstandhaltern (Betonreitern) auf die richtige Höhe gebracht werden — im unteren Drittel der Plattendicke. Der aktuelle Preis liegt bei ca. 1,20–2,00 €/m für Ø 12 mm, bzw. 7–12 € pro 6-m-Stab.",
+  nextSteps: [
+    { label: "Bewehrungsabstand-Rechner", href: "/calculators/foundation/rebar-spacing-calculator/" },
+    { label: "Betonplatten-Rechner", href: "/calculators/foundation/concrete-slab-calculator/" },
+    { label: "Streifenfundament-Rechner", href: "/calculators/foundation/concrete-footing-calculator/" },
+  ],
+  installationTips: [
+    "Bewehrung auf Abstandhalter (Betonreiter) legen, damit sie im unteren Drittel der Platte liegt — niemals direkt auf den Untergrund.",
+    "Stöße mit mindestens 40 Stabdurchmessern Übergreifung ausführen und jede Kreuzung mit Rödeldraht sichern.",
+    "Jede Kreuzung mit 1,4-mm-Rödeldraht binden — Rödelhaken oder Drillapparat verwenden.",
+    "Mindestbetondeckung von 3,5 cm (Expositionsklasse XC1) bis 5,0 cm (XC3/XC4) einhalten.",
+    "Bewehrungsstahl mit Stabschneider oder Winkelschleifer schneiden — niemals Brennschneiden, da dies den Stahl schwächt.",
+    "Bewehrung kalt biegen mit manuellem oder hydraulischem Biegeapparat — Warmbiegen schwächt den Stab.",
+  ],
+  commonMistakes: [
+    "Bewehrung auf den Boden legen statt auf Abstandhalter — ohne korrekte Lage hat die Bewehrung keinen statischen Nutzen.",
+    "Zu kurze Übergreifung — Stöße unter 40 Stabdurchmessern ziehen sich unter Last auseinander.",
+    "Falschen Stabdurchmesser verwenden — Ø 8 mm ist zu leicht für Garagenplatten; mindestens Ø 10–12 mm verwenden.",
+    "Kreuzungen nicht binden — ungesicherte Stäbe verschieben sich beim Betonieren.",
+    "Verschnitt nicht einkalkulieren — 10–15% Zuschlag für Schnitte, Biegungen und Übergreifungen bestellen.",
+  ],
+  faqs: [
+    { question: "Wie viel Bewehrung brauche ich für eine 6×6 m Platte?", answer: "Eine 6×6-m-Platte mit Ø 12 mm im 15-cm-Raster benötigt 41 Stäbe in jeder Richtung — 82 Stäbe insgesamt, ca. 44 Stück 6-m-Stäbe. Der Gesamtbedarf liegt bei etwa 252 Laufmetern mit einem Gewicht von ca. 224 kg. Bestellen Sie 10% Zuschlag." },
+    { question: "Welcher Stabdurchmesser für eine 12-cm-Platte?", answer: "Ø 12 mm BSt 500 S ist Standard für 12-cm-Wohnbauplatten (Garagenboden, Kellerplatte). Für leicht belastete Terrassen genügt Ø 10 mm. Für statisch höher beanspruchte Platten Ø 16 mm oder nach statischer Berechnung." },
+    { question: "Welchen Stababstand soll ich wählen?", answer: "Standard ist 15 cm im Quadratraster für 12-cm-Wohnbauplatten. Leicht belastete Terrassen: 20 cm. Garagen und statische Platten: 10–12 cm. Der Statiker oder die Bauordnung können andere Abstände vorschreiben." },
+    { question: "Was kostet Bewehrungsstahl?", answer: "Ø 12 mm BSt 500 S kostet ca. 1,20–2,00 €/m bzw. 7–12 € pro 6-m-Stab. Eine 6×6-m-Platte benötigt ca. 44 Stäbe, also 308–528 € Material. Edelstahl kostet das 3–4-fache. Abstandhalter: 0,30–0,80 € pro Stück." },
+    { question: "Bewehrung oder Baustahlmatte?", answer: "Betonstabstahl bietet überlegene Risssicherung und ist Pflicht für Garagenplatten, Kellerplatten und statische Bauteile. Baustahlmatten (Q188, Q257) eignen sich für leicht belastete Platten unter 12 cm Dicke. Matten sind beim Verlegen schwieriger hochzuhalten, weshalb sie oft auf dem Boden landen — dort bringen sie keinen statischen Nutzen." },
+    { question: "Wie berechne ich das Bewehrungsgewicht?", answer: "Laufmeter × Metergewicht: Ø 8 = 0,395 kg/m, Ø 10 = 0,617 kg/m, Ø 12 = 0,888 kg/m, Ø 16 = 1,578 kg/m. Beispiel: 252 m Ø 12 = 252 × 0,888 = 224 kg. Das Gewicht hilft bei der Transportplanung und Kranbestellung." },
+  ],
+};
+
+export const rebarSpacingCalculator: CalculatorSEOContent = {
+  disclaimer: "Die Abstandsempfehlungen sind allgemeine Richtwerte für typischen Wohn- und leichten Gewerbebau. Der tatsächliche Abstand muss von einem Statiker auf Basis der Lasten, Bodenverhältnisse und lokalen Bauordnung festgelegt werden.",
+  howToUse: [
+    "Geben Sie Länge und Breite der Platte in Metern ein.",
+    "Wählen Sie den Stabdurchmesser — Ø 12 mm ist Standard für Wohnbau.",
+    "Wählen Sie den Belastungstyp für den empfohlenen Abstand.",
+    "Klicken Sie auf Berechnen für optimalen Abstand, Stabanzahl und Abstandhalter.",
+  ],
+  materialInfo:
+    "Der Bewehrungsabstand bestimmt, wie eng die Bewehrungsstäbe in einer Betonplatte verlegt werden, und beeinflusst direkt die Tragfähigkeit und Rissbeständigkeit. Ein korrekter Abstand gewährleistet, dass die Zugkräfte gleichmäßig über den Betonquerschnitt verteilt werden. Für Wohnbauplatten (Terrassen, Kellerböden, Gehwege) ist ein Abstand von 20 cm mit Ø 10–12 mm üblich. Garagen und Einfahrten verwenden typisch 15 cm, um Fahrzeuglasten rissfrei zu tragen. Statisch beanspruchte Platten für Maschinenaufstellung, Gewerbeflächen oder Geschossdecken erfordern 10 cm oder enger nach Statikerberechnung. Abstandhalter (Betonreiter) sind unerlässlich, um die Bewehrung auf der richtigen Höhe innerhalb der Platte zu halten. Die Standardregel ist ein Abstandhalter pro 0,4 m² Plattenfläche. Betonreiter gibt es als Einzelstützen, Leistenstützen für lange Läufe und Gitterträger für Mattenbewehrung. Bei oberflächennaher Bewehrung werden Kunststoff-Abstandhalter verwendet, um Rostflecken zu vermeiden. Die Betondeckung — der Abstand von der Bewehrung zur nächsten Betonoberfläche — muss nach Eurocode 2 mindestens 20–50 mm betragen, je nach Expositionsklasse. Unzureichende Deckung führt zu Korrosion und Abplatzungen innerhalb von 5–10 Jahren. Bei Platten über 6 m in einer Richtung müssen Stäbe gestoßen werden mit einer Mindest-Übergreifungslänge von 40 Stabdurchmessern. Stöße sollten versetzt werden, sodass nicht mehr als 50% der Stäbe an derselben Stelle gestoßen werden. Die Kosten für die Bewehrungsverlegung (Arbeit und Material) liegen bei 15–30 €/m² für ein Standard-15-cm-Raster inkl. Abstandhalter und Rödeldraht.",
+  nextSteps: [
+    { label: "Bewehrungsrechner", href: "/calculators/foundation/rebar-calculator/" },
+    { label: "Betonplatten-Rechner", href: "/calculators/foundation/concrete-slab-calculator/" },
+    { label: "Betonrechner", href: "/calculators/foundation/concrete-calculator/" },
+  ],
+  installationTips: [
+    "Abstandslinien vor dem Verlegen mit Kreide auf der Schalung markieren — das gewährleistet ein gleichmäßiges Raster.",
+    "Abstandhalter alle 1,2 m in beiden Richtungen setzen, bevor Stäbe verlegt werden.",
+    "Längsstäbe zuerst verlegen, dann Querstäbe darauf — jede Kreuzung binden.",
+    "Mindestens 3,5–5,0 cm Betondeckung von der Bewehrung bis zu Kante oder Unterseite einhalten.",
+    "Bei Platten mit Scheinfugen die Bewehrung durchlaufend über die Fuge führen — nicht an der Fuge trennen.",
+    "Vor dem Betonieren das fertige Raster abgehen und prüfen, ob Stäbe von den Abstandhaltern abgerutscht sind.",
+  ],
+  commonMistakes: [
+    "Zu großen Abstand für die Belastung wählen — 20 cm ist zu weit für Garagen und Einfahrten.",
+    "Abstandhalter zu weit auseinander — durchhängende Bewehrung sinkt in die Kiesschüttung.",
+    "Bewehrung an Scheinfugen trennen — die Fugen sollen reißen; die Bewehrung muss durchlaufen.",
+    "Stöße nicht versetzen — alle Stöße an einer Stelle erzeugen eine Schwachstelle in der Platte.",
+    "Betondeckung ignorieren — weniger als 3,5 cm Deckung führt zu vorzeitiger Korrosion und Abplatzungen.",
+  ],
+  faqs: [
+    { question: "Was ist der Standard-Bewehrungsabstand für Betonplatten?", answer: "Standard ist 15 cm im Quadratraster für 12-cm-Wohnbauplatten. Leicht belastete Terrassen: 20 cm. Garagen und Einfahrten: 15 cm. Statische Platten und Maschinenaufstellflächen: 10 cm oder nach Statikerberechnung." },
+    { question: "Wie viele Abstandhalter brauche ich?", answer: "Planen Sie 1 Abstandhalter pro 0,4 m² Plattenfläche. Eine 6×6-m-Platte (36 m²) benötigt ca. 90 Stück. Für schwere Bewehrung (Ø 16+) tragfähigere Modelle verwenden. Raster von max. 1,2 m in jeder Richtung." },
+    { question: "Was passiert bei zu großem Bewehrungsabstand?", answer: "Die Platte bekommt breitere Risse unter Last, da die Zugkräfte nicht ausreichend verteilt werden. Das verringert die Tragfähigkeit und ermöglicht Wassereintritt, was in frostgefährdeten Regionen zu Frostschäden führt." },
+    { question: "Bewehrungsstäbe oder Baustahlmatte?", answer: "Baustahlmatten (Q188, Q257) eignen sich für leicht belastete Platten unter 12 cm. Stabstahl BSt 500 S bietet überlegene Risssicherung und ist Pflicht für Garagen, Keller und statische Bauteile. Matten sind schwieriger auf Abstandhaltern zu halten — sie landen oft auf dem Boden." },
+    { question: "Wie beeinflusst der Belastungstyp den Bewehrungsabstand?", answer: "Höhere Lasten erfordern engere Abstände. Wohnbauplatten (Fußgänger): 20 cm. Garagen (Fahrzeuge bis 3,5 t): 15 cm. Statische Anwendungen (Industrieböden, Geschossdecken): 10 cm. Der Abstand bestimmt, wie viel Zugkraft jeder Stab aufnehmen muss." },
+    { question: "Was ist die Mindest-Betondeckung für Bewehrung?", answer: "Nach Eurocode 2 / DIN EN 1992 beträgt die Mindestdeckung 20 mm (XC1, trocken) bis 50 mm (XC4, wechselnd nass/trocken). Für Platten auf Erdreich (XC2) gelten mindestens 35 mm. Unzureichende Deckung führt innerhalb von 5–10 Jahren zu Korrosion und Betonabplatzungen." },
+  ],
+};
+
+// ─── BALUSTER SPACING ────────────────────────────────────────────────────────
+
+export const balusterSpacingCalculatorDE: CalculatorSEOContent = {
+  disclaimer:
+    "Berechnungen basieren auf der DIN 18065 und den Landesbauordnungen, die einen maximalen lichten Abstand von 12 cm zwischen Geländerstäben fordern (Schutz vor Hindurchklettern und -fallen von Kleinkindern). Prüfen Sie die geltenden Vorschriften Ihres Bundeslandes, da abweichende Regelungen möglich sind.",
+  howToUse: [
+    "Messen Sie die Gesamtlänge des Geländerabschnitts in Zentimetern von Pfosten zu Pfosten.",
+    "Geben Sie die Breite eines einzelnen Geländerstabs ein (Standard-Vierkantstäbe: 4 cm, Rundstäbe: 2 cm).",
+    "Geben Sie die Pfostenbreite ein (9 cm für Standard-Geländerpfosten 9×9 cm).",
+    "Geben Sie die Anzahl der Pfosten ein und klicken Sie auf Berechnen für genaue Stabanzahl und gleichmäßigen Abstand.",
+  ],
+  materialInfo:
+    "Geländerstäbe (auch Sprossen oder Füllstäbe genannt) sind die vertikalen Elemente in einem Geländer, die den Durchstieg von Personen — insbesondere Kleinkindern — verhindern. Die DIN 18065 und die Landesbauordnungen schreiben vor, dass eine Kugel mit 12 cm Durchmesser nirgendwo durch das Geländer hindurchpassen darf. Dies gilt zwischen den Stäben, zwischen Stab und Pfosten sowie zwischen Untergurt und Treppenstufe bzw. Bodenbelag.\n\nStandard-Vierkantstäbe aus Edelstahl oder Aluminium haben typischerweise 4 cm Breite; Rundstäbe (häufig Edelstahl V2A) sind 1,2 bis 2 cm im Durchmesser. Bei 4-cm-Vierkantstäben und dem maximal zulässigen lichten Abstand von 12 cm benötigen Sie ca. 6 Stäbe pro Laufmeter Geländer. Ein typischer 1,00-m-Geländerabschnitt verwendet 5 bis 7 Stäbe je nach Pfostenbreite.\n\nGängige Materialien sind Edelstahl V2A (8–15 EUR/Stück), pulverbeschichteter Stahl (5–12 EUR/Stück), Aluminium (6–10 EUR/Stück) und Holz (3–8 EUR/Stück). Edelstahl-Seilsysteme mit 4-mm-Seilen in 10-cm-Abstand sind eine moderne Alternative. Dieser Rechner verteilt die Stäbe gleichmäßig innerhalb jedes Abschnitts, sodass jeder Zwischenraum identisch ist — das ergibt ein professionelles Erscheinungsbild und erfüllt automatisch die 12-cm-Anforderung.",
+  nextSteps: [
+    { label: "Geländer-Rechner", href: "/calculators/outdoor/deck-railing-calculator/" },
+    { label: "Treppen-Rechner", href: "/calculators/stairs/stair-calculator/" },
+    { label: "Terrassendielen-Rechner", href: "/calculators/outdoor/deck-board-calculator/" },
+  ],
+  installationTips: [
+    "Schneiden Sie einen Abstandshalter auf die berechnete Lückenbreite und verwenden Sie ihn zwischen jedem Stab für gleichmäßigen Abstand.",
+    "Bohren Sie Befestigungslöcher in Holzstäben vor, um Rissbildung zu vermeiden — besonders bei Hartholz und kleinen Querschnitten.",
+    "Montieren Sie zuerst den Untergurt, setzen Sie alle Stäbe mit dem Abstandshalter ein, dann befestigen Sie den Obergurt.",
+    "Verwenden Sie bei Außengeländern Edelstahl-Befestigungsmittel (A2 oder A4) für dauerhafte Korrosionsbeständigkeit.",
+  ],
+  commonMistakes: [
+    "Stäbe zu weit auseinander setzen — die 12-cm-Kugel-Prüfung nach DIN gilt für jede einzelne Öffnung, nicht nur den Durchschnitt.",
+    "Pfostenbreiten nicht von der Gesamtlänge abziehen — der verfügbare Platz für Stäbe ist kürzer als die Gesamtgeländerlänge.",
+    "Holzstäbe nicht vorbohren — kleine Querschnitte reißen leicht beim Verschrauben an den Enden.",
+    "Den Abstand zwischen Bodenbelag und Untergurt vergessen — auch hier gilt die 12-cm-Regel.",
+  ],
+  faqs: [
+    { question: "Wie groß darf der lichte Abstand zwischen Geländerstäben sein?", answer: "Die DIN 18065 und die Landesbauordnungen fordern, dass eine Kugel mit 12 cm Durchmesser nirgendwo durch das Geländer hindurchpassen darf. Bei 4-cm-Vierkantstäben beträgt der maximale lichte Abstand also 12 cm." },
+    { question: "Wie viele Geländerstäbe brauche ich pro Meter?", answer: "Bei 4-cm-Vierkantstäben und dem maximalen lichten Abstand von 12 cm benötigen Sie ca. 6 Stäbe pro Laufmeter Geländer. Ein 1-m-Abschnitt zwischen zwei Pfosten verwendet 5 bis 7 Stäbe je nach Pfostenbreite." },
+    { question: "Darf ich horizontale Geländerfüllungen verwenden?", answer: "Einige Landesbauordnungen erlauben horizontale Stäbe, aber die 12-cm-Kugel-Regel gilt weiterhin zwischen den horizontalen Elementen. Horizontale Füllungen sind bei Kindern klettergefährdend und werden daher in vielen Vorschriften eingeschränkt. Prüfen Sie Ihre Landesbauordnung." },
+    { question: "Wie hoch muss ein Geländer sein?", answer: "Die DIN 18065 fordert bei Treppen mindestens 90 cm Geländerhöhe (gemessen von der Stufenvorderkante). Bei Absturzhöhen über 12 m werden 110 cm gefordert. Brüstungen an Balkonen: 90–110 cm je nach Absturzhöhe und Landesbauordnung." },
+    { question: "Welches Material ist für Außengeländer am besten?", answer: "Edelstahl V2A oder V4A und pulverbeschichtetes Aluminium bieten die beste Witterungsbeständigkeit bei null Wartung. Druckimprägniertes Holz ist die günstigste Variante, muss aber regelmäßig geölt oder lasiert werden." },
+    { question: "Brauche ich eine Baugenehmigung für ein Geländer?", answer: "Geländer und Brüstungen an Treppen, Balkonen und Terrassen mit Absturzhöhe über 1 m sind baurechtlich vorgeschrieben. Eine separate Genehmigung ist meist nicht nötig, aber das Geländer muss bei der Bauabnahme den Anforderungen der Landesbauordnung und DIN 18065 entsprechen." },
+  ],
+};
+
+// ─── SOFFIT (UNTERSICHTVERKLEIDUNG) ──────────────────────────────────────────
+
+export const soffitCalculatorDE: CalculatorSEOContent = {
+  disclaimer:
+    "Diese Schätzung basiert auf Standard-Untersichtpaneelen mit 30 cm Breite. Tatsächliche Paneelbreiten und Deckungsmaße variieren je nach Hersteller. Planen Sie 10 % Verschnitt für Zuschnitte und Anpassungen ein.",
+  howToUse: [
+    "Messen Sie den Gesamtumfang Ihres Hauses in Metern.",
+    "Messen Sie die Breite der Untersicht (Abstand von der Hauswand bis zur Stirnbrettkante) in Zentimetern.",
+    "Geben Sie die Paneellänge ein (3,00 m oder 4,00 m je nach Hersteller).",
+    "Klicken Sie auf Berechnen für Paneelanzahl, Profilleistenlänge und Lüftungsstreifenmenge.",
+  ],
+  materialInfo:
+    "Die Untersichtverkleidung (Soffit) ist das Material, das die Unterseite des Dachüberstands (Traufe) verkleidet und den Raum zwischen Außenwand und Stirnbrett abschließt. Ihre Hauptaufgaben sind der Schutz der Sparrenköpfe und der Dachkonstruktion vor Witterung, Schädlingen und Feuchtigkeit sowie die kontrollierte Hinterlüftung des Dachraums.\n\nUntersichtpaneele gibt es in drei Belüftungsvarianten: geschlossen (keine Lüftung), teilperforiert (Lüftungsstreifen in der Mitte) und vollperforiert (über die gesamte Paneelfläche gelocht). Eine ordnungsgemäß belüftete Untersicht in Kombination mit Firstentlüftung erzeugt eine kontinuierliche Hinterlüftung, die Feuchtigkeitsstau, Eisdämme und übermäßige Hitze im Dachraum verhindert — nach DIN 4108-3 und den Fachregeln des ZVDH.\n\nGängige Materialien sind Kunststoff/PVC (15–30 EUR/m²), Aluminium (25–50 EUR/m²), Faserzement (30–60 EUR/m²) und Holz (40–80 EUR/m²). Kunststoff ist im Wohnungsbau wegen niedriger Kosten und Wartungsfreiheit am beliebtesten. Standardpaneele sind 30 cm breit und 3,00 oder 4,00 m lang.\n\nJ-Profil-Leisten verlaufen an beiden Kanten der Untersicht (Wandseite und Stirnbrettseite) und nehmen die Paneelkanten auf. Für ein Haus mit 50 m Umfang und 45 cm Dachüberstand rechnen Sie mit ca. 40 Paneelen, 100 m Profilleiste und 12 Lüftungsstreifen.",
+  nextSteps: [
+    { label: "Fassadenverkleidung-Rechner", href: "/calculators/exterior-shell/vinyl-siding-calculator/" },
+    { label: "Tropfkanten-Rechner", href: "/calculators/roofing/drip-edge-calculator/" },
+    { label: "Stirnbrett-Rechner", href: "/calculators/exterior-shell/hardie-siding-calculator/" },
+  ],
+  installationTips: [
+    "Montieren Sie zuerst die J-Profil-Leiste an der Hauswand — waagerecht und gerade, da jede Abweichung in den fertigen Paneelen sichtbar wird.",
+    "Lassen Sie 6 mm Dehnungsfuge an jedem Paneelende, um Verformungen bei Hitze zu vermeiden.",
+    "Wechseln Sie zwischen belüfteten und geschlossenen Paneelen ab, wenn Sie nur partielle Belüftung benötigen.",
+    "Schneiden Sie Kunststoffpaneele mit einer Feinzahnsäge oder Blechschere für saubere Schnittkanten.",
+  ],
+  commonMistakes: [
+    "Keine Dehnungsfugen lassen — Kunststoff-Untersichtpaneele wölben und verbiegen sich bei zu enger Montage.",
+    "Nur geschlossene Paneele verwenden, obwohl Dachraumbelüftung erforderlich ist — mindestens ein Drittel der Fläche muss belüftet sein.",
+    "J-Profil nicht waagerecht ausrichten — jede Durchbiegung oder Senke wird in der fertigen Untersicht sichtbar.",
+    "Abschlussprofile an Giebelenden oder Dachübergangsstellen vergessen.",
+  ],
+  faqs: [
+    { question: "Was ist eine Untersichtverkleidung und wozu brauche ich sie?", answer: "Die Untersichtverkleidung (Soffit) ist das Paneel an der Unterseite des Dachüberstands. Sie schützt Sparrenköpfe vor Witterung und Schädlingen, ermöglicht Dachraumbelüftung durch perforierte Paneele und verleiht der Traufe ein fertiges Erscheinungsbild." },
+    { question: "Brauche ich belüftete Untersichtpaneele?", answer: "Ja, wenn Ihr Dachraum eine Firstentlüftung oder Giebellüfter hat. Belüftete Paneele lassen Luft an der Traufe einströmen und am First austreten, was eine kontinuierliche Hinterlüftung erzeugt. Mindestens ein Drittel der Paneele sollten perforiert sein (DIN 4108-3)." },
+    { question: "Was kostet eine Untersichtverkleidung?", answer: "Kunststoff-Untersicht kostet 15–30 EUR/m² eingebaut. Für ein typisches Haus mit 50 m Umfang und 45 cm Dachüberstand (22,5 m² Untersichtfläche) liegen die Materialkosten bei 340–675 EUR und die Montage bei 400–800 EUR." },
+    { question: "Kann ich neue Untersicht über bestehende montieren?", answer: "Ja, wenn die vorhandene Untersicht in gutem Zustand und fest befestigt ist. Montieren Sie die neuen J-Profile über der alten Oberfläche. Bei beschädigter, fauler oder durchhängender Untersicht muss die alte Verkleidung vollständig entfernt werden." },
+    { question: "Welche Paneelbreite brauche ich?", answer: "Die Paneelbreite richtet sich nach Ihrem Dachüberstand. Standard-30-cm-Paneele decken Überstände bis 30 cm ab. Bei breiteren Überständen (45–60 cm) verwenden Sie zwei Reihen oder breitere Sonderpaneele." },
+    { question: "Wie viel Profilleiste brauche ich?", answer: "Sie benötigen Profilleisten auf beiden Seiten der Untersicht (Wandseite und Stirnbrettseite), also multiplizieren Sie den Hausumfang mit 2. Bei 50 m Umfang benötigen Sie 100 Laufmeter Profilleiste." },
+  ],
+};
+
+// ─── BODEN-LEISTEN-VERKLEIDUNG (BOARD AND BATTEN) ───────────────────────────
+
+export const boardAndBattenCalculatorDE: CalculatorSEOContent = {
+  disclaimer:
+    "Diese Schätzung basiert auf Standard-Vertikalmontage mit Brettern Stoß an Stoß und Deckleisten über den Fugen. Planen Sie 10 % Verschnitt für Zuschnitte um Fenster und Türen ein.",
+  howToUse: [
+    "Berechnen Sie die Gesamtwandfläche in Quadratmetern (Umfang × Höhe, minus Fenster und Türen).",
+    "Geben Sie die Brettbreite ein (üblich: 15, 20, 25 oder 30 cm).",
+    "Geben Sie die Leistenbreite ein (üblich: 4 bis 8 cm).",
+    "Geben Sie die Wandhöhe in Metern ein und klicken Sie auf Berechnen.",
+  ],
+  materialInfo:
+    "Boden-Leisten-Verkleidung (Board and Batten) ist eine klassische vertikale Fassadenverkleidung, bei der breite Bretter senkrecht montiert werden und schmale Deckleisten (Battens) die Fugen zwischen den Brettern abdecken. Dieses System ermöglicht das natürliche Quellen und Schwinden des Holzes — die Bretter können sich mit der Luftfeuchtigkeit bewegen, ohne sichtbare Spalten zu öffnen, da die Leisten die Fugen überbrücken.\n\nHistorisch die verbreitetste Fassade an Scheunen und ländlichen Gebäuden in Mitteleuropa, erlebt die Boden-Leisten-Verkleidung in der modernen Architektur eine Renaissance. Verfügbare Materialien umfassen Naturholz (Lärche, Douglasie, Zeder), Faserzement (Cedral, Eternit), Holzwerkstoff (Fundermax) und WPC.\n\nBrettbreiten liegen typisch bei 15 bis 30 cm, wobei 20–25 cm im Wohnungsbau am beliebtesten sind. Deckleisten sind 4 bis 8 cm breit. Je breiter das Brett, desto rustikaler die Optik; schmalere Bretter mit schmalen Leisten wirken moderner und feiner.\n\nKosten variieren stark nach Material: Fichtenbretter 3–8 EUR/lfm, Lärche 6–15 EUR/lfm, Faserzement 8–16 EUR/lfm. Für eine typische 45-m²-Wandfläche (3,00 m hoch × 15 m Umfang minus Öffnungen) rechnen Sie mit 60–80 Brettern und 65–85 Deckleisten je nach Breitenauswahl.\n\nDie Montage erfordert eine diffusionsoffene Unterspannbahn (z. B. Siga Majvest oder pro clima SOLITEX) hinter der Verkleidung. Bretter werden mit einer einzelnen Befestigung in der Mitte genagelt, um seitliches Quellen zu erlauben. Deckleisten werden durch die Brettüberlappung in die Konterlattung oder Unterkonstruktion geschraubt.",
+  nextSteps: [
+    { label: "Fassadenverkleidung-Rechner", href: "/calculators/exterior-shell/vinyl-siding-calculator/" },
+    { label: "Faserzement-Rechner", href: "/calculators/exterior-shell/hardie-siding-calculator/" },
+    { label: "Fassadenbahn-Rechner", href: "/calculators/exterior-shell/housewrap-calculator/" },
+  ],
+  installationTips: [
+    "Montieren Sie eine diffusionsoffene Unterspannbahn (Siga, pro clima oder vergleichbar) über der Beplankung, bevor die Verkleidung angebracht wird.",
+    "Befestigen Sie jedes Brett mit einer einzelnen Schraube in der Mitte — so kann das Holz quellen und schwinden, ohne zu reißen.",
+    "Deckleisten durch die Brettüberlappung in die Unterkonstruktion schrauben.",
+    "Lassen Sie 3 mm Abstand zwischen der Unterkante der Bretter und dem horizontalen Abschluss für die Entwässerung.",
+    "Grundieren oder lasieren Sie alle Schnittkanten und Rückseiten vor der Montage, um Feuchteaufnahme zu verhindern.",
+  ],
+  commonMistakes: [
+    "Bretter an beiden Kanten nageln — dies schränkt die natürliche Bewegung ein und verursacht Risse und Schüsselung.",
+    "Unterspannbahn weglassen — unverzichtbar, um Feuchteschäden an der Wandkonstruktion zu verhindern.",
+    "Zu schmale Deckleisten verwenden — mindestens 4 cm sind empfehlenswert, um die Brettfugen sicher abzudecken.",
+    "Schnittkanten nicht versiegeln — unbehandeltes Hirnholz nimmt Feuchtigkeit schnell auf und führt zu vorzeitiger Fäulnis.",
+  ],
+  faqs: [
+    { question: "Was ist eine Boden-Leisten-Verkleidung?", answer: "Board and Batten ist eine vertikale Fassadenverkleidung mit breiten Brettern und schmalen Deckleisten über den Fugen. Das System ermöglicht die natürliche Holzbewegung und bietet gleichzeitig eine wetterdichte Außenfläche." },
+    { question: "Welche Materialien eignen sich?", answer: "Lärche und Douglasie (traditionell, hohe Dauerhaftigkeit), Fichte (günstiger, braucht Holzschutz), Faserzement (Cedral, Eternit — langlebig, wartungsarm), Holzwerkstoff und WPC. Jedes Material hat ein eigenes Kosten-/Haltbarkeitsprofil." },
+    { question: "Was kostet eine Boden-Leisten-Fassade?", answer: "Materialkosten liegen bei 3–8 EUR/lfm für Fichte, 6–15 EUR/lfm für Lärche, 8–16 EUR/lfm für Faserzement. Professionelle Montage kostet 30–80 EUR/m². Eine typische Hausfassade (80–120 m²) kostet 5.000–15.000 EUR für Material und Arbeit." },
+    { question: "Kann die Verkleidung auch horizontal montiert werden?", answer: "Traditionell ist sie vertikal, aber horizontale Montage ist möglich. Horizontale Leisten können jedoch Wasser an den Brettern stauen, was eine sorgfältigere Entwässerungsdetaillierung erfordert. Vertikale Montage wird für optimale Wasserabführung empfohlen." },
+    { question: "Wie breit sollten Bretter und Leisten sein?", answer: "Bretter mit 20–25 cm und Leisten mit 5 cm sind die beliebteste Kombination für Wohngebäude. Breitere Bretter (30 cm) wirken rustikaler; schmalere Bretter (15 cm) mit schmalen Leisten (4 cm) wirken moderner." },
+    { question: "Brauche ich eine Unterspannbahn hinter der Verkleidung?", answer: "Ja, immer. Eine diffusionsoffene Fassadenbahn (z. B. Siga Majvest, pro clima SOLITEX oder Tyvek) hinter der Verkleidung ist unverzichtbar. Die Fugen zwischen Brettern und Deckleisten sind nicht wasserdicht — die Bahn ist die eigentliche Wetterschutzschicht." },
+  ],
+};
+
+// ─── GIEBEL-/SCHRÄGWAND (RAKE WALL) ─────────────────────────────────────────
+
+export const rakeWallCalculatorDE: CalculatorSEOContent = {
+  disclaimer:
+    "Die berechneten Ständerhöhen sind theoretische Werte. Messen und schneiden Sie jeden Ständer einzeln auf der Baustelle. Die Schrägpfette erfordert einen Gehrungsschnitt passend zur Dachneigung. Planen Sie 10 % Verschnitt ein.",
+  howToUse: [
+    "Messen Sie die Gesamtwandlänge in Metern entlang der Schwelle.",
+    "Geben Sie die Höhe der kurzen Seite (Traufseite) in Metern ein.",
+    "Geben Sie die Höhe der hohen Seite (Firstseite) in Metern ein.",
+    "Wählen Sie den Ständerabstand (40 cm oder 60 cm Achsmaß) und klicken Sie auf Berechnen.",
+  ],
+  materialInfo:
+    "Eine Giebelwand (auch Schrägwand oder Ortgangwand, engl. Rake Wall) ist eine Wand, bei der die obere Pfette der Dachneigung folgt, anstatt waagerecht zu verlaufen. Dadurch entsteht eine dreieckige oder trapezförmige Wandfläche, bei der jeder Ständer eine andere Höhe hat und vom niedrigen zum hohen Ende progressiv zunimmt.\n\nGiebelwände finden sich an den Giebelseiten von Satteldächern, unter Pultdächern, in Dachgeschossausbauten und überall, wo eine Wand auf eine geneigte Decke oder Dachfläche trifft. Sie werden mit dem gleichen Bauholz wie Standardwände gerahmt — typischerweise KVH-Ständer 60×120 mm oder 60×160 mm bei 40 cm oder 60 cm Achsabstand nach DIN 1052 bzw. Eurocode 5.\n\nDer Hauptunterschied zu Standardwänden: Die obere Pfette muss im Winkel der Dachneigung abgeschrägt werden, und jeder Ständer muss einzeln gemessen und zugeschnitten werden. Die untere Schwelle verläuft waagerecht am Boden. Bei Ständern kürzer als ca. 60 cm sorgen horizontale Riegelbretter zwischen den Ständern für ausreichende Befestigungsfläche für Beplankung und Innenausbau.\n\nFür eine 6-m-Giebelwand von 2,40 m bis 4,20 m Höhe benötigen Sie bei 40-cm-Abstand ca. 16 Ständer mit Höhen zwischen 2.340 mm und 4.140 mm. Die Schrägpfettenlänge (Hypotenuse) beträgt ca. 6,3 m.\n\nMaterialkosten entsprechen dem Standard-Wandrahmen, allerdings mit höherem Verschnitt durch die Einzelzuschnitte. Kalkulieren Sie 10–15 % Mehrmaterial. Eine 6-m-Giebelwand kostet ca. 150–350 EUR an KVH-Holz.",
+  nextSteps: [
+    { label: "Ständer-Rechner", href: "/calculators/wall-framing/stud-calculator/" },
+    { label: "Satteldach-Rechner", href: "/calculators/roofing/gable-roof-calculator/" },
+    { label: "Wandbeplankung-Rechner", href: "/calculators/wall-framing/exterior-sheathing-calculator/" },
+  ],
+  installationTips: [
+    "Markieren Sie alle Ständerpositionen auf der Schwelle, bevor Sie Ständer zuschneiden.",
+    "Spannen Sie eine Schlagschnur zwischen den niedrigen und hohen Endpunkten, um den Winkel der Schrägpfette festzulegen.",
+    "Schneiden Sie die Schrägpfette mit einer Gehrung passend zur Dachneigung für korrekte Auflage der Sparren oder Beplankung.",
+    "Messen und schneiden Sie jeden Ständer einzeln — theoretische Höhen können durch Holzunregelmäßigkeiten abweichen.",
+    "Bei sehr kurzen Ständern (unter 60 cm) fügen Sie horizontale Riegel zwischen benachbarten Ständern ein, um Befestigungsfläche für Beplankung zu schaffen.",
+  ],
+  commonMistakes: [
+    "Alle Ständer auf die gleiche Höhe schneiden — jeder Ständer in einer Giebelwand hat eine andere Länge.",
+    "Die Schrägpfette nicht abschrägen — ohne korrekten Winkel sitzen Dachschalung oder Sparren nicht plan auf.",
+    "Riegel für kurze Ständer vergessen — Beplankung und Gipskarton brauchen durchgehende Befestigungsfläche über die gesamte Wand.",
+    "Den Winkel der Giebelwand nicht mit der tatsächlichen Dachneigung abgleichen — Abweichungen verursachen Passungsprobleme am Dach-Wand-Anschluss.",
+  ],
+  faqs: [
+    { question: "Was ist eine Giebelwand (Rake Wall)?", answer: "Eine Giebelwand ist eine Wand, bei der die obere Pfette der Dachneigung folgt statt waagerecht zu verlaufen. Jeder Ständer hat eine progressiv andere Höhe. Sie findet sich an Giebelseiten, unter Pultdächern und bei Dachgeschossausbauten." },
+    { question: "Wie berechne ich die einzelnen Ständerhöhen?", answer: "Teilen Sie den Höhenunterschied (hoch minus niedrig) durch die Anzahl der Ständerabschnitte. Jeder nächste Ständer wächst um diesen Betrag. Beispiel: Von 2,40 m auf 4,20 m über 15 Felder = 12 cm Zuwachs pro Ständer." },
+    { question: "Muss die obere Pfette abgeschrägt werden?", answer: "Ja. Die Schrägpfette (obere Pfette) muss im Winkel der Dachneigung geschnitten werden, damit Sparren und Dachschalung korrekt aufliegen. Verwenden Sie eine Schmiege oder einen Winkelmesser." },
+    { question: "Was ist mit sehr kurzen Ständern?", answer: "Ständer kürzer als 60 cm bieten zu wenig Befestigungsfläche für Beplankung. Montieren Sie horizontale Riegelhölzer zwischen benachbarten Ständern, um eine durchgehende Nagelfläche zu schaffen." },
+    { question: "Ändert sich der Achsabstand bei Giebelwänden?", answer: "Nein. Der horizontale Ständerabstand bleibt gleich wie im Rest des Gebäudes (40 cm oder 60 cm Achsmaß). Nur die Höhe jedes einzelnen Ständers ändert sich." },
+    { question: "Wie viel Mehrmaterial sollte ich bestellen?", answer: "Planen Sie 10–15 % Verschnitt ein, da jeder Ständer ein Einzelzuschnitt ist und Reststücke selten für einen anderen Ständer passen. Die Einzelschnitte erhöhen auch die Arbeitszeit im Vergleich zu Standardwänden." },
+  ],
+};
+
+// ─── TERRASSENDIELEN-ABSTAND (DECK BOARD SPACING) ───────────────────────────
+
+export const deckBoardSpacingCalculatorDE: CalculatorSEOContent = {
+  disclaimer:
+    "Der empfohlene Fugenabstand variiert je nach Material: 5–6 mm für trockenes KDI-Holz, 3–5 mm für WPC (Herstellerangaben beachten), kein Abstand bei nassem KDI-Holz (trocknet und schwindet nach). Befolgen Sie die Verlegehinweise des Herstellers.",
+  howToUse: [
+    "Geben Sie die Terrassenbreite in Metern ein (die Richtung quer zu den Dielen).",
+    "Geben Sie die Dielenbreite in Millimetern ein (145 mm ist Standard für WPC und Holz).",
+    "Geben Sie den gewünschten Fugenabstand in Millimetern ein (6 mm ist typisch für trockenes Holz).",
+    "Klicken Sie auf Berechnen für gleichmäßige Dielenanzahl und tatsächlichen einheitlichen Fugenabstand.",
+  ],
+  materialInfo:
+    "Der korrekte Fugenabstand zwischen Terrassendielen ist entscheidend für Entwässerung, Holzbewegung und Langlebigkeit der Terrasse. Die Fugen ermöglichen das Ablaufen von Regenwasser, die Luftzirkulation unter der Terrasse und die temperatur- und feuchtebedingte Ausdehnung und Kontraktion der Dielen.\n\nFür druckimprägniertes Holz (KDI) im trockenen Zustand verwenden Sie 5–6 mm Fugenabstand. Wenn das Holz frisch imprägniert und noch nass ist (direkt nach Lieferung üblich), verlegen Sie die Dielen ohne Fuge — das Holz schwindet beim Trocknen und erzeugt natürliche Fugen von ca. 3–5 mm. Lärche, Douglasie und Bangkirai: 3–5 mm Fugenabstand.\n\nWPC-Terrassendielen (z. B. Trex, Naturinform, megawood) dehnen sich bei Wärme aus und ziehen sich bei Kälte zusammen. Die meisten Hersteller schreiben 3–5 mm seitliche Fuge und 5–8 mm Kopffuge (Stirnseite) vor. Beachten Sie immer die herstellerspezifische Verlegetabelle, die je nach Verlegetemperatur variiert.\n\nStandard-Terrassendielen sind 145 mm breit und 21–28 mm stark in KDI, Lärche oder WPC (Preis: 4–12 EUR/lfm für Holz, 8–25 EUR/lfm für WPC). Für eine 3,60-m-Terrassenbreite mit 145-mm-Dielen und 6-mm-Fuge benötigen Sie ca. 24 Dielen.\n\nDieser Rechner verteilt die Dielen gleichmäßig, sodass jede Fuge identisch ist — damit wird das häufige Problem vermieden, dass die letzte Diele eine andere Fuge hat als die übrigen.",
+  nextSteps: [
+    { label: "Terrassendielen-Rechner", href: "/calculators/outdoor/deck-board-calculator/" },
+    { label: "Terrassenfundament-Rechner", href: "/calculators/outdoor/deck-footing-calculator/" },
+    { label: "Geländer-Rechner", href: "/calculators/outdoor/deck-railing-calculator/" },
+  ],
+  installationTips: [
+    "Verwenden Sie einen einheitlichen Abstandshalter (Fugenkreuz, Schrauben oder Hersteller-Clips) zwischen jeder Diele.",
+    "Verlegen Sie die erste Diele exakt parallel zur Hauswand — alle weiteren Dielen folgen dieser Referenzlinie.",
+    "Bei nassem KDI-Holz die Dielen ohne Fuge Stoß an Stoß verlegen — sie schwinden beim Trocknen und erzeugen natürliche Fugen.",
+    "Bei WPC die Verlegetabelle des Herstellers beachten, die den Fugenabstand je nach Verlegetemperatur vorgibt.",
+  ],
+  commonMistakes: [
+    "Nasses KDI-Holz mit Fugenabstand verlegen — beim Trocknen werden die Fugen zu groß und fangen Absätze ein.",
+    "Temperaturausdehnung von WPC nicht beachten — im Winter eng verlegte Terrassen können sich im Sommer aufwölben.",
+    "Ungleichmäßige Fugen — unterschiedliche Abstände sind stark sichtbar und wirken unprofessionell. Immer Abstandshalter verwenden.",
+    "Fugen zu breit (über 8 mm) — fangen Absätze ein, sammeln Schmutz und lassen kleine Gegenstände durchfallen.",
+  ],
+  faqs: [
+    { question: "Wie groß sollte die Fuge zwischen Terrassendielen sein?", answer: "Für trockenes KDI-Holz: 5–6 mm. Für Lärche und Douglasie: 3–5 mm. Für WPC: 3–5 mm seitlich, 5–8 mm an Stirnseiten (Herstellerangaben beachten). Für nasses KDI-Holz: Stoß an Stoß ohne Fuge verlegen." },
+    { question: "Warum ist der Fugenabstand wichtig?", answer: "Korrekte Fugen ermöglichen die Entwässerung, Luftzirkulation unter der Terrasse und Platz für die temperatur- und feuchtebedingte Ausdehnung der Dielen. Ohne Fugen staut sich Wasser zwischen den Dielen und verursacht Fäulnis, und quellende Dielen können sich aufwölben." },
+    { question: "Soll ich nasses KDI-Holz mit Fuge verlegen?", answer: "Nein. Frisch imprägniertes Holz hat einen hohen Feuchtegehalt und schwindet beim Trocknen über 2–4 Wochen. Verlegen Sie die Dielen Stoß an Stoß, und das natürliche Schwinden erzeugt Fugen von ca. 3–5 mm." },
+    { question: "Welchen Abstandshalter soll ich verwenden?", answer: "Fugenkreuze oder Edelstahlschrauben (5–6 mm Durchmesser) eignen sich für Holzfugen. Herstellerspezifische Clips (z. B. megawood, Naturinform) bieten konsistenten Abstand und unsichtbare Befestigung bei WPC-Dielen." },
+    { question: "Wie verändert sich die Fuge mit der Temperatur?", answer: "WPC-Dielen dehnen sich bei Hitze aus und ziehen sich bei Kälte zusammen. Eine bei 10 °C verlegte Diele wird bei 40 °C merklich länger. Die meisten Hersteller liefern eine Verlegetabelle, die den Fugenabstand bei kühler Verlegung erhöht, um die Sommerausdehnung aufzufangen." },
+    { question: "Wie viele Terrassendielen brauche ich?", answer: "Teilen Sie die Terrassenbreite in mm durch (Dielenbreite + Fuge). Für eine 3,60-m-Terrasse (3.600 mm) mit 145-mm-Dielen und 6-mm-Fuge: 3.600 / 151 = 24 Dielen. Dieser Rechner passt die Fuge leicht an, um perfekt gleichmäßige Abstände zu gewährleisten." },
+  ],
+};
+
 // ─── REGISTRY MAP ─────────────────────────────────────────────────────────────
 
 export const registryDE: Record<string, Record<string, CalculatorSEOContent>> = {
@@ -1897,6 +2346,8 @@ export const registryDE: Record<string, Record<string, CalculatorSEOContent>> = 
     "block-fill-calculator": blockFillCalculator,
     "mortar-mix-calculator": mortarMixCalculator,
     "retaining-wall-calculator": retainingWallCalculator,
+    "rebar-calculator": rebarCalculator,
+    "rebar-spacing-calculator": rebarSpacingCalculator,
   },
   "floor-framing": {
     "rim-joist-calculator": rimJoistCalculator,
@@ -1911,6 +2362,7 @@ export const registryDE: Record<string, Record<string, CalculatorSEOContent>> = 
     "top-plate-calculator": topPlateCalculator,
     "header-calculator": headerCalculator,
     "exterior-sheathing-calculator": exteriorSheathingCalculator,
+    "rake-wall-calculator": rakeWallCalculatorDE,
   },
   roofing: {
     "truss-calculator": trussCalculator,
@@ -1923,12 +2375,18 @@ export const registryDE: Record<string, Record<string, CalculatorSEOContent>> = 
     "roof-pitch-calculator": roofPitchCalculator,
     "roof-area-calculator": roofAreaCalculator,
     "roof-slope-calculator": roofSlopeCalculator,
+    "hip-roof-calculator": hipRoofCalculatorDE,
+    "gambrel-roof-calculator": gambrelRoofCalculatorDE,
+    "gable-roof-calculator": gableRoofCalculatorDE,
+    "lean-to-roof-calculator": leanToRoofCalculatorDE,
   },
   "exterior-shell": {
     "housewrap-calculator": housewrapCalculator,
     "vinyl-siding-calculator": vinylSidingCalculator,
     "hardie-siding-calculator": hardieSidingCalculator,
     "window-flashing-calculator": windowFlashingCalculator,
+    "soffit-calculator": soffitCalculatorDE,
+    "board-and-batten-calculator": boardAndBattenCalculatorDE,
   },
   "insulation-drywall": {
     "cavity-insulation-calculator": cavityInsulationCalculator,
@@ -1957,6 +2415,7 @@ export const registryDE: Record<string, Record<string, CalculatorSEOContent>> = 
     "deck-stair-calculator": deckStairCalculatorDE,
     "post-hole-calculator": postHoleCalculatorDE,
     "pond-calculator": pondCalculator,
+    "deck-board-spacing-calculator": deckBoardSpacingCalculatorDE,
   },
   stairs: {
     "stair-calculator": stairCalculatorDE,
@@ -1964,5 +2423,6 @@ export const registryDE: Record<string, Record<string, CalculatorSEOContent>> = 
     "rise-over-run-calculator": riseOverRunCalculatorDE,
     "spiral-staircase-calculator": spiralStaircaseCalculatorDE,
     "stair-landing-calculator": stairLandingCalculatorDE,
+    "baluster-spacing-calculator": balusterSpacingCalculatorDE,
   },
 };

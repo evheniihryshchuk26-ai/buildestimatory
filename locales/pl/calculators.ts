@@ -115,6 +115,22 @@ export const categories: CategoryMeta[] = [
         category: "Fundamenty",
         categorySlug: "foundation",
       },
+      {
+        slug: "rebar-calculator",
+        title: "Darmowy Kalkulator Zbrojenia — Pręty, Metry & Waga (2026)",
+        description:
+          "Ile zbrojenia potrzebuję? Darmowy kalkulator na płyty, ławy i ściany — ilość prętów, metry bieżące i waga w kg.",
+        category: "Fundamenty",
+        categorySlug: "foundation",
+      },
+      {
+        slug: "rebar-spacing-calculator",
+        title: "Rozstaw Zbrojenia — Rozkład Siatki & Ilość (2026)",
+        description:
+          "Kalkulator rozstawu zbrojenia — darmowe narzędzie do optymalnego rozkładu prętów wg typu obciążenia. Ilość prętów, metry i podkładki dystansowe.",
+        category: "Fundamenty",
+        categorySlug: "foundation",
+      },
     ],
   },
   {
@@ -211,6 +227,14 @@ export const categories: CategoryMeta[] = [
         category: "Konstrukcja Ścian",
         categorySlug: "wall-framing",
       },
+      {
+        slug: "rake-wall-calculator",
+        title: "Darmowy Kalkulator Ściany Skośnej — Słupki & Cięcia (2026)",
+        description:
+          "Darmowy kalkulator ściany skośnej — ilość słupków, wysokości indywidualne i kąt cięcia dla ścian podążających za spadkiem dachu.",
+        category: "Konstrukcja Ścian",
+        categorySlug: "wall-framing",
+      },
     ],
   },
   {
@@ -299,6 +323,38 @@ export const categories: CategoryMeta[] = [
         category: "Pokrycie Dachu",
         categorySlug: "roofing",
       },
+      {
+        slug: "hip-roof-calculator",
+        title: "Darmowy Kalkulator Dachu Kopertowego — Krokwie & Powierzchnia (2026)",
+        description:
+          "Darmowy kalkulator dachu kopertowego — ilość krokwi, długość krokwi narożnych, powierzchnia dachu i kalenica. Na dowolny budynek.",
+        category: "Pokrycie Dachu",
+        categorySlug: "roofing",
+      },
+      {
+        slug: "gambrel-roof-calculator",
+        title: "Darmowy Kalkulator Dachu Mansardowego — Krokwie & Powierzchnia (2026)",
+        description:
+          "Darmowy kalkulator dachu mansardowego — krokwie górne i dolne, powierzchnia dachu i zyskana wysokość ściany. Podaj dwa kąty nachylenia.",
+        category: "Pokrycie Dachu",
+        categorySlug: "roofing",
+      },
+      {
+        slug: "gable-roof-calculator",
+        title: "Darmowy Kalkulator Dachu Dwuspadowego — Krokwie & Kalenica (2026)",
+        description:
+          "Darmowy kalkulator dachu dwuspadowego — ilość krokwi, długość kalenicy, powierzchnia dachu i powierzchnia szczytu. Podaj wymiary i nachylenie.",
+        category: "Pokrycie Dachu",
+        categorySlug: "roofing",
+      },
+      {
+        slug: "lean-to-roof-calculator",
+        title: "Darmowy Kalkulator Dachu Jednospadowego — Krokwie & Powierzchnia (2026)",
+        description:
+          "Darmowy kalkulator dachu jednospadowego — ilość krokwi, długość, powierzchnia i wysokość. Na dobudówki, wiaty i szopy.",
+        category: "Pokrycie Dachu",
+        categorySlug: "roofing",
+      },
     ],
   },
   {
@@ -336,6 +392,22 @@ export const categories: CategoryMeta[] = [
         title: "Darmowy Kalkulator Obróbek Okien — Metry & Rolki (2026)",
         description:
           "Kalkulator taśmy uszczelniającej okna: oblicz metry bieżące na wszystkie otwory. Darmowe narzędzie na taśmy 100, 150 i 225 mm.",
+        category: "Powłoka Zewnętrzna",
+        categorySlug: "exterior-shell",
+      },
+      {
+        slug: "soffit-calculator",
+        title: "Darmowy Kalkulator Podbitki — Panele & Profil J (2026)",
+        description:
+          "Ile paneli podbitki dachowej potrzebuję? Darmowy kalkulator wg obwodu i szerokości okapu — profil J i wentylacja w cenie.",
+        category: "Powłoka Zewnętrzna",
+        categorySlug: "exterior-shell",
+      },
+      {
+        slug: "board-and-batten-calculator",
+        title: "Darmowy Kalkulator Deski z Listwą — Deski & Listwy (2026)",
+        description:
+          "Darmowy kalkulator okładziny deska-listwa — ilość desek i listew maskujących na powierzchnię ściany. Na elewacje pionowe.",
         category: "Powłoka Zewnętrzna",
         categorySlug: "exterior-shell",
       },
@@ -563,6 +635,14 @@ export const categories: CategoryMeta[] = [
         category: "Zewnętrzne",
         categorySlug: "outdoor",
       },
+      {
+        slug: "deck-board-spacing-calculator",
+        title: "Darmowy Kalkulator Rozstawu Desek Tarasu — Równomierna Szczelina (2026)",
+        description:
+          "Darmowy kalkulator rozstawu desek tarasu — oblicz równomierną szczelinę między deskami na dowolną szerokość deski i długość tarasu.",
+        category: "Zewnętrzne",
+        categorySlug: "outdoor",
+      },
     ],
   },
   {
@@ -588,6 +668,7 @@ export const categories: CategoryMeta[] = [
       { slug: "rise-over-run-calculator", title: "Darmowy Kalkulator Wysokość/Głębokość — Nachylenie & Kąt (2026)", description: "Kalkulator wysokość/głębokość — stosunek, procent, kąt i opis natychmiast. Dla schodów, ramp i dachów.", category: "Schody", categorySlug: "stairs" },
       { slug: "spiral-staircase-calculator", title: "Darmowy Schody Kręcone — Stopnie & Wymiary (2026)", description: "Kalkulator schodów kręconych — średnica i wysokość kondygnacji dla liczby stopni, wysokości i obrotu. Zgodny z normami.", category: "Schody", categorySlug: "stairs" },
       { slug: "stair-landing-calculator", title: "Darmowy Schody ze Spocznikiem — Biegi & Wymiary (2026)", description: "Kalkulator schodów ze spocznikiem — podziel biegi ze spocznikiem pośrednim. Stopnie na bieg, wysokość spocznika i całkowity bieg.", category: "Schody", categorySlug: "stairs" },
+      { slug: "baluster-spacing-calculator", title: "Darmowy Kalkulator Rozstawu Tralek — Ilość & Odstęp (2026)", description: "Darmowy kalkulator rozstawu tralek — dokładna ilość i równomierny odstęp dla balustrad schodów i tarasów. Wg norm budowlanych.", category: "Schody", categorySlug: "stairs" },
     ],
   },
 ];

@@ -127,6 +127,22 @@ export const categories: CategoryMeta[] = [
         category: "Fundação",
         categorySlug: "foundation",
       },
+      {
+        slug: "rebar-calculator",
+        title: "Calculadora de Vergalhão Grátis — Barras, Metros & Peso (2026)",
+        description:
+          "Quanto vergalhão eu preciso? Calculadora grátis para lajes, sapatas & muros — quantidade de barras, metros lineares e peso em kg.",
+        category: "Fundação",
+        categorySlug: "foundation",
+      },
+      {
+        slug: "rebar-spacing-calculator",
+        title: "Espaçamento de Vergalhão Grátis — Distribuição & Quantidade (2026)",
+        description:
+          "Calculadora de espaçamento de vergalhão — ferramenta grátis para distribuição ideal por tipo de carga. Quantidade de barras, metros e espaçadores.",
+        category: "Fundação",
+        categorySlug: "foundation",
+      },
     ],
   },
   {
@@ -223,6 +239,14 @@ export const categories: CategoryMeta[] = [
         category: "Estrutura de Paredes",
         categorySlug: "wall-framing",
       },
+      {
+        slug: "rake-wall-calculator",
+        title: "Parede Inclinada Grátis — Montantes & Cortes (2026)",
+        description:
+          "Calculadora de parede inclinada grátis — quantidade de montantes, alturas individuais e ângulo de corte para paredes que acompanham a inclinação do telhado.",
+        category: "Estrutura de Paredes",
+        categorySlug: "wall-framing",
+      },
     ],
   },
   {
@@ -311,6 +335,38 @@ export const categories: CategoryMeta[] = [
         category: "Telhado",
         categorySlug: "roofing",
       },
+      {
+        slug: "hip-roof-calculator",
+        title: "Telhado Quatro Águas Grátis — Caibros, Área & Materiais (2026)",
+        description:
+          "Calculadora de telhado quatro águas grátis — quantidade de caibros, comprimento do espigão, área de telhado e cumeeira. Para qualquer tamanho de edificação.",
+        category: "Telhado",
+        categorySlug: "roofing",
+      },
+      {
+        slug: "gambrel-roof-calculator",
+        title: "Telhado Mansarda Grátis — Caibros & Área (2026)",
+        description:
+          "Calculadora de telhado mansarda grátis — caibros superiores e inferiores, área de telhado e altura de parede ganha. Insira duas inclinações.",
+        category: "Telhado",
+        categorySlug: "roofing",
+      },
+      {
+        slug: "gable-roof-calculator",
+        title: "Telhado Duas Águas Grátis — Caibros, Cumeeira & Área (2026)",
+        description:
+          "Calculadora de telhado duas águas grátis — quantidade de caibros, comprimento da cumeeira, área de telhado e área do oitão. Insira dimensões e inclinação.",
+        category: "Telhado",
+        categorySlug: "roofing",
+      },
+      {
+        slug: "lean-to-roof-calculator",
+        title: "Telhado Meia-Água Grátis — Caibros & Área (2026)",
+        description:
+          "Calculadora de telhado meia-água grátis — quantidade de caibros, comprimento, área de telhado e altura. Para ampliações e galpões.",
+        category: "Telhado",
+        categorySlug: "roofing",
+      },
     ],
   },
   {
@@ -348,6 +404,22 @@ export const categories: CategoryMeta[] = [
         title: "Rufo de Janela Grátis — Metros & Rolos (2026)",
         description:
           "Calculadora de rufos: Estime metros lineares de fita autoadesiva para janelas. Ferramenta grátis para larguras de 10 cm, 15 cm e 23 cm.",
+        category: "Envoltória Exterior",
+        categorySlug: "exterior-shell",
+      },
+      {
+        slug: "soffit-calculator",
+        title: "Calculadora de Forro de Beiral Grátis — Painéis & Perfil J (2026)",
+        description:
+          "Quantos painéis de forro de beiral eu preciso? Calculadora grátis por perímetro e largura do beiral — inclui perfil J e ventilação.",
+        category: "Envoltória Exterior",
+        categorySlug: "exterior-shell",
+      },
+      {
+        slug: "board-and-batten-calculator",
+        title: "Tábua e Mata-Junta Grátis — Tábuas & Sarrafos (2026)",
+        description:
+          "Calculadora de tábua e mata-junta grátis — quantidade de tábuas e sarrafos por área de parede. Para revestimento vertical exterior.",
         category: "Envoltória Exterior",
         categorySlug: "exterior-shell",
       },
@@ -575,6 +647,14 @@ export const categories: CategoryMeta[] = [
         category: "Áreas Externas",
         categorySlug: "outdoor",
       },
+      {
+        slug: "deck-board-spacing-calculator",
+        title: "Espaçamento de Tábuas de Deck Grátis — Junta Uniforme (2026)",
+        description:
+          "Calculadora de espaçamento de tábuas de deck grátis — obtenha junta uniforme entre tábuas para qualquer largura de tábua e comprimento de deck.",
+        category: "Áreas Externas",
+        categorySlug: "outdoor",
+      },
     ],
   },
   {
@@ -600,6 +680,7 @@ export const categories: CategoryMeta[] = [
       { slug: "rise-over-run-calculator", title: "Calculadora Espelho/Piso Grátis — Inclinação & Ângulo (2026)", description: "Calculadora de espelho e piso grátis — razão, porcentagem, ângulo e descrição instantâneos. Para escadas, rampas e telhados.", category: "Escadas", categorySlug: "stairs" },
       { slug: "spiral-staircase-calculator", title: "Escada Caracol Grátis — Degraus & Dimensões (2026)", description: "Calculadora de escada caracol grátis — diâmetro e pé-direito para quantidade de degraus, espelho e rotação. Conforme normas.", category: "Escadas", categorySlug: "stairs" },
       { slug: "stair-landing-calculator", title: "Escada com Patamar Grátis — Lances & Dimensões (2026)", description: "Calculadora de escada com patamar grátis — divida lances com patamar intermediário. Degraus por lance, altura do patamar e percurso total.", category: "Escadas", categorySlug: "stairs" },
+      { slug: "baluster-spacing-calculator", title: "Espaçamento de Balaústres Grátis — Quantidade & Vão (2026)", description: "Calculadora de espaçamento de balaústres grátis — quantidade exata e espaçamento uniforme para guarda-corpos de escadas e decks. Conforme ABNT.", category: "Escadas", categorySlug: "stairs" },
     ],
   },
 ];

@@ -15,6 +15,8 @@ import {
   calculateGravel,
   calculateDrivewayGravel,
   calculateRetainingWall,
+  calculateRebar,
+  calculateRebarSpacing,
 } from "./calculations/foundationCalculations";
 import {
   calculateRimJoists,
@@ -31,6 +33,7 @@ import {
   calculateKingStuds,
   calculateJackStuds,
   calculateExteriorSheathing,
+  calculateRakeWall,
 } from "./calculations/wallFramingCalculations";
 import {
   calculateTrusses,
@@ -44,6 +47,10 @@ import {
   calculateRoofPitch,
   calculateRoofArea,
   calculateRoofSlope,
+  calculateHipRoof,
+  calculateGambrelRoof,
+  calculateGableRoof,
+  calculateLeanToRoof,
 } from "./calculations/roofingCalculations";
 import {
   calculateHousewrap,
@@ -52,6 +59,8 @@ import {
   calculateDoorFlashing,
   calculateVinylSiding,
   calculateHardieSiding,
+  calculateSoffit,
+  calculateBoardAndBatten,
 } from "./calculations/exteriorShellCalculations";
 import {
   calculateCavityInsulation,
@@ -84,6 +93,7 @@ import {
   calculateFencePost,
   calculateFencePanel,
   calculatePicketFence,
+  calculateDeckBoardSpacing,
 } from "./calculations/outdoorCalculations";
 import {
   calculatePaintCoverage,
@@ -103,6 +113,7 @@ import {
   calculateRiseOverRun,
   calculateSpiralStaircase,
   calculateStairWithLanding,
+  calculateBalusterSpacing,
 } from "./calculations/stairCalculations";
 
 export interface NextStep {
@@ -2010,6 +2021,277 @@ const roofSlopeCalculator: CalculatorConfig = {
   ],
 };
 
+// ─── HIP ROOF ───────────────────────────────────────────────────────────────
+
+const hipRoofCalculator: CalculatorConfig = {
+  fields: [
+    { id: "buildingLength", label: "Building Length", unit: "ft", placeholder: "40" },
+    { id: "buildingWidth", label: "Building Width", unit: "ft", placeholder: "30" },
+    { id: "pitch", label: "Roof Pitch", unit: "/12", placeholder: "6", defaultValue: 6 },
+    {
+      id: "spacing",
+      label: "Rafter Spacing",
+      type: "select",
+      options: [
+        { label: "16\" on center", value: "16" },
+        { label: "24\" on center", value: "24" },
+      ],
+      defaultValue: "16",
+    },
+  ],
+  calculate: (v) => {
+    const spacing = parseInt(v.spacing as string) as 16 | 24;
+    const r = calculateHipRoof(v.buildingLength as number, v.buildingWidth as number, v.pitch as number, spacing);
+    return [
+      { label: `Roof area: ${r.roofArea} sq ft (${r.squares} squares)` },
+      { label: `${r.commonRafters} common rafters (${r.commonRafterLength} ft each)` },
+      { label: `${r.hipRafters} hip rafters (${r.hipRafterLength} ft each)` },
+      { label: `${r.jackRafters} jack rafters` },
+      { label: `Ridge length: ${r.ridgeLength} ft` },
+      { label: `Roof rise: ${r.rise} ft — pitch multiplier ${r.multiplier}` },
+    ];
+  },
+  disclaimer: "Hip roof geometry is approximate. Jack rafter lengths vary — cut each to fit. Add 10–15% waste factor for lumber.",
+  howToUse: [
+    "Measure the overall building length and width in feet.",
+    "Enter the roof pitch (rise per 12 inches of run).",
+    "Select your rafter spacing (16\" OC is standard).",
+    "Click Calculate for rafter counts, hip rafter length, roof area, and ridge length.",
+  ],
+  materialInfo:
+    "A hip roof has four sloped sides — two triangular ends and two trapezoidal sides — all meeting at a central ridge that is shorter than the building length. Because every wall is protected by an eave overhang, hip roofs offer superior wind resistance (they can withstand 110+ mph winds better than gables) and are preferred in hurricane-prone regions and areas with high wind exposure. Hip roofs are more complex to frame than gable roofs, requiring four hip rafters that run diagonally from each corner to the ridge, king common rafters centered on each triangular end, and numerous jack rafters that run parallel to the common rafters but are progressively shorter as they approach each hip. The hip rafter is typically one size larger than the common rafters (e.g., 2x10 hip with 2x8 commons) because it carries loads from jack rafters on both sides. Hip rafters require compound angle cuts (a combination of plumb cut and cheek cut) that are more demanding to execute than standard rafter cuts. The ridge board on a hip roof runs only from where the two hip rafters on each end converge, so the ridge length equals the building length minus the building width. Jack rafters are cut with a compound miter at the hip rafter end and a standard bird's mouth at the wall plate. For a typical 30x40 ft hip roof at 6/12 pitch, material costs run $3,000 to $6,000 for framing lumber alone, with professional framing labor adding $4,000 to $8,000.",
+  nextSteps: [
+    { label: "Roof Sheathing Calculator", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Shingle Calculator", href: "/calculators/roofing/shingle-calculator/" },
+    { label: "Roof Pitch Calculator", href: "/calculators/roofing/roof-pitch-calculator/" },
+    { label: "Gable Roof Calculator", href: "/calculators/roofing/gable-roof-calculator/" },
+  ],
+  installationTips: [
+    "Frame hip rafters from 2x stock one size deeper than common rafters for adequate bearing.",
+    "Use a framing square or construction calculator to determine jack rafter compound angles.",
+    "Install hip rafters first, then fill in jack rafters from longest to shortest.",
+    "Bevel the top of hip rafters (drop the hip) so sheathing lies flat across the hip line.",
+    "Brace hip rafters temporarily until sheathing is installed — they can twist under their own weight.",
+  ],
+  commonMistakes: [
+    "Using the same lumber size for hip rafters as common rafters — hips carry double the load and need to be one size deeper.",
+    "Not accounting for the hip rafter drop or bevel — sheathing will not lie flat and creates a hump at the hip.",
+    "Forgetting that jack rafters require compound angle cuts, not simple plumb cuts.",
+    "Underestimating material — hip roofs use 10–15% more lumber and sheathing than an equivalent gable roof.",
+  ],
+  faqs: [
+    { question: "What is a hip roof?", answer: "A hip roof has four sloped sides that all slope downward toward the walls. The two longer sides are trapezoids and the two shorter sides are triangles. All four sides meet at a ridge that runs along the top but is shorter than the full building length. Hip roofs are more wind-resistant than gable roofs and provide eave protection on all four walls." },
+    { question: "How do I calculate hip roof area?", answer: "Measure the building footprint (length x width) and multiply by the pitch multiplier for your roof slope. For a 6/12 pitch, the multiplier is 1.118. A 30x40 ft building with a 6/12 pitch has roughly 30 x 40 x 1.118 = 1,342 sq ft of roof area. This is slightly more than a gable roof because the hip triangles add area compared to flat gable ends." },
+    { question: "How many hip rafters does a hip roof have?", answer: "A standard hip roof has exactly 4 hip rafters — one running from each corner of the building diagonally up to the end of the ridge. Each hip rafter is longer than the common rafters because it runs at a 45-degree angle in plan view. On complex hip roofs with valleys or dormers, additional hip and valley rafters are added." },
+    { question: "Hip roof vs gable roof — which is better?", answer: "Hip roofs are more wind-resistant, provide shade and rain protection on all four walls, and are structurally self-bracing. Gable roofs are simpler to frame, less expensive, provide more attic space, and allow for easy ventilation with gable-end vents. In hurricane zones and high-wind areas, hip roofs are strongly preferred. In moderate climates, gable roofs are more cost-effective." },
+    { question: "How long is a hip rafter?", answer: "A hip rafter runs diagonally from the corner of the building to the ridge. Its horizontal run is the common rafter run times the square root of 2 (about 1.414). For a building 30 ft wide with a 6/12 pitch, the common rafter run is 15 ft, the hip run is 15 x 1.414 = 21.2 ft, and the hip rafter length is the square root of (21.2 squared + 7.5 squared) = about 22.5 ft." },
+    { question: "What is the ridge length on a hip roof?", answer: "The ridge length on a standard hip roof equals the building length minus the building width. For a 40x30 ft building, the ridge is 40 - 30 = 10 ft. If the building is square, there is no ridge — the four hip rafters meet at a single peak point, creating a pyramid roof." },
+  ],
+};
+
+// ─── GAMBREL ROOF ───────────────────────────────────────────────────────────
+
+const gambrelRoofCalculator: CalculatorConfig = {
+  fields: [
+    { id: "buildingLength", label: "Building Length", unit: "ft", placeholder: "40" },
+    { id: "buildingWidth", label: "Building Width", unit: "ft", placeholder: "30" },
+    { id: "lowerPitch", label: "Lower Pitch (steep)", unit: "/12", placeholder: "18", defaultValue: 18 },
+    { id: "upperPitch", label: "Upper Pitch (shallow)", unit: "/12", placeholder: "6", defaultValue: 6 },
+    {
+      id: "spacing",
+      label: "Rafter Spacing",
+      type: "select",
+      options: [
+        { label: "16\" on center", value: "16" },
+        { label: "24\" on center", value: "24" },
+      ],
+      defaultValue: "16",
+    },
+  ],
+  calculate: (v) => {
+    const spacing = parseInt(v.spacing as string) as 16 | 24;
+    const r = calculateGambrelRoof(v.buildingLength as number, v.buildingWidth as number, v.lowerPitch as number, v.upperPitch as number, spacing);
+    return [
+      { label: `Roof area: ${r.roofArea} sq ft (${r.squares} squares)` },
+      { label: `${r.lowerRafters} lower rafters (${r.lowerRafterLength} ft each)` },
+      { label: `${r.upperRafters} upper rafters (${r.upperRafterLength} ft each)` },
+      { label: `Wall height gained: ${r.wallHeightGained} ft` },
+      { label: `Total roof rise: ${r.totalRise} ft` },
+      { label: `Lower rise: ${r.lowerRise} ft — Upper rise: ${r.upperRise} ft` },
+    ];
+  },
+  disclaimer: "Gambrel roof proportions use a standard 67/33 lower/upper split. Actual proportions may vary based on design. Consult a structural engineer for final plans.",
+  howToUse: [
+    "Enter the building length and width in feet.",
+    "Enter the lower (steep) pitch — typically 18/12 to 24/12 for the barn-style walls.",
+    "Enter the upper (shallow) pitch — typically 4/12 to 8/12 for the cap.",
+    "Select rafter spacing and click Calculate.",
+  ],
+  materialInfo:
+    "A gambrel roof — commonly called a barn roof — features two distinct slopes on each side: a steep lower section (typically 60–70 degrees) and a shallower upper section (typically 20–30 degrees). This dual-slope design maximizes usable space inside the upper story, making it the classic choice for barns, agricultural buildings, and Colonial-style houses. The steep lower slope functions almost like a wall, providing full-height usable space in the loft, while the shallow upper slope provides a conventional roof cap. Structurally, the transition between the two slopes (the gambrel break) requires a horizontal purlin plate that acts as a structural ledge to support the upper rafters and transfer loads to the lower rafters. The lower rafters are typically 2x8 or 2x10, while the upper rafters can be 2x6 or 2x8, depending on span. Gambrel trusses can also be factory-built as a single engineered unit. The gambrel design uses about 20–30% less material than adding a full second story with a conventional gable roof, making it economical for maximizing interior volume. Common lower pitches range from 18/12 to 24/12 (56° to 63°), while upper pitches range from 4/12 to 8/12 (18° to 33°). Material costs for a 30x40 ft gambrel frame run $4,000 to $8,000 for lumber. One drawback is wind resistance — the steep lower slope catches wind, so gambrel roofs are not recommended for hurricane zones.",
+  nextSteps: [
+    { label: "Roof Sheathing Calculator", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Rafter Calculator", href: "/calculators/roofing/rafter-calculator/" },
+    { label: "Shingle Calculator", href: "/calculators/roofing/shingle-calculator/" },
+    { label: "Gable Roof Calculator", href: "/calculators/roofing/gable-roof-calculator/" },
+  ],
+  installationTips: [
+    "Build gambrel trusses on a flat surface (jig) to ensure consistency across all trusses.",
+    "The purlin plate at the gambrel break is structural — use an adequate beam or doubled 2x stock.",
+    "Install knee braces at the lower-to-upper transition for added rigidity.",
+    "Sheathe across the gambrel break carefully — the angle change requires precise cuts.",
+    "Use collar ties or ceiling joists in the upper section to prevent outward thrust.",
+  ],
+  commonMistakes: [
+    "Undersizing the purlin plate at the slope transition — this carries significant structural loads.",
+    "Not bracing the lower-to-upper transition — the break point is the weakest part of the gambrel.",
+    "Using the same pitch on both sections — the lower must be significantly steeper than the upper to gain usable space.",
+    "Ignoring wind exposure — gambrel roofs perform poorly in high-wind areas due to the steep lower face.",
+  ],
+  faqs: [
+    { question: "What is a gambrel roof?", answer: "A gambrel roof has two different slopes on each side — a steep lower slope (typically 60 to 70 degrees) and a shallow upper slope (typically 20 to 30 degrees). This barn-style design maximizes the usable interior space in the upper story. The Dutch Colonial house style and traditional American barns are the most recognizable examples of gambrel roofs." },
+    { question: "What pitches are used on a gambrel roof?", answer: "The lower (steep) section typically uses a pitch of 18/12 to 24/12 (56 to 63 degrees), while the upper (shallow) section uses 4/12 to 8/12 (18 to 33 degrees). The steeper the lower slope, the more usable vertical wall space you gain in the upper story. A common combination is 20/12 lower and 6/12 upper." },
+    { question: "How much extra space does a gambrel roof provide?", answer: "A gambrel roof provides approximately 70 to 80 percent of a full second-story floor area, compared to about 40 to 50 percent for a standard gable roof attic. For a 30-foot wide building, a gambrel provides roughly 600 to 720 sq ft of usable upper floor per 30 feet of building length, versus 360 to 450 sq ft under a gable." },
+    { question: "Are gambrel roofs strong?", answer: "Gambrel roofs are strong when properly engineered and braced, but they are more vulnerable to wind uplift than hip or gable roofs due to the steep lower face acting like a sail. They are not recommended for hurricane zones or areas with sustained high winds. In snow regions, gambrel roofs shed snow well on the upper slope but can accumulate snow at the transition point." },
+    { question: "What is the difference between a gambrel and a mansard roof?", answer: "A gambrel roof has two slopes on two sides of the building with gable ends (triangular walls) on the other two sides. A mansard roof has two slopes on all four sides, like a hip-gambrel hybrid. Mansard roofs are common in French-inspired architecture and provide more uniform usable space but are more complex to frame." },
+    { question: "How much does a gambrel roof cost to build?", answer: "A gambrel roof costs 15 to 25 percent more than a simple gable roof of the same footprint because of the additional complexity in framing and the extra material for the two different slopes. For a 30x40 ft building, expect $5,000 to $10,000 for framing lumber and hardware, plus $6,000 to $15,000 for professional labor. However, this is significantly less than adding a full second story with conventional framing." },
+  ],
+};
+
+// ─── GABLE ROOF ─────────────────────────────────────────────────────────────
+
+const gableRoofCalculator: CalculatorConfig = {
+  fields: [
+    { id: "buildingLength", label: "Building Length", unit: "ft", placeholder: "40" },
+    { id: "buildingWidth", label: "Building Width", unit: "ft", placeholder: "30" },
+    { id: "pitch", label: "Roof Pitch", unit: "/12", placeholder: "6", defaultValue: 6 },
+    {
+      id: "spacing",
+      label: "Rafter Spacing",
+      type: "select",
+      options: [
+        { label: "16\" on center", value: "16" },
+        { label: "24\" on center", value: "24" },
+      ],
+      defaultValue: "16",
+    },
+  ],
+  calculate: (v) => {
+    const spacing = parseInt(v.spacing as string) as 16 | 24;
+    const r = calculateGableRoof(v.buildingLength as number, v.buildingWidth as number, v.pitch as number, spacing);
+    return [
+      { label: `Roof area: ${r.roofArea} sq ft (${r.squares} squares)` },
+      { label: `${r.rafters} rafters (${r.rafterLength} ft each)` },
+      { label: `Ridge length: ${r.ridgeLength} ft` },
+      { label: `Gable end area: ${r.gableEndArea} sq ft (both ends)` },
+      { label: `Single gable end: ${r.singleGableArea} sq ft` },
+      { label: `Roof rise: ${r.rise} ft — pitch multiplier ${r.multiplier}` },
+    ];
+  },
+  disclaimer: "Add 10–15% waste factor for cuts and overhangs. Rafter lengths do not include overhang — add 12–24 inches per rafter for eaves.",
+  howToUse: [
+    "Enter the building length (along the ridge) and width (across the gable) in feet.",
+    "Enter the roof pitch (rise per 12 inches of run).",
+    "Select your rafter spacing (16\" OC is standard for most residential).",
+    "Click Calculate for rafter count, roof area, ridge length, and gable end area.",
+  ],
+  materialInfo:
+    "A gable roof is the most common residential roof type in North America, featuring two sloped sides that meet at a central ridge running the full length of the building. The triangular wall sections at each end — the gable ends — give this roof style its name. Gable roofs are popular because they are simple to design, straightforward to frame, economical on materials, and provide excellent rain and snow shedding. The two opposing slopes create natural ventilation when combined with soffit and ridge vents, keeping the attic cool and dry. Standard residential gable roofs use pitches from 4/12 to 8/12, with 6/12 being the most common. Rafters run from the top plate of the wall to the ridge board, with a bird's mouth cut at the wall plate and a plumb cut at the ridge. Common rafter sizes are 2x6 (up to 10 ft run), 2x8 (up to 13 ft), 2x10 (up to 16 ft), and 2x12 (up to 20 ft) at 16-inch on-center spacing, depending on species, grade, and load conditions. The gable end walls must be sheathed and sided, which adds material beyond the roof itself. Gable end areas are often forgotten when estimating siding and sheathing. For a 30x40 ft gable roof at 6/12 pitch, framing lumber typically costs $2,500 to $5,000, with labor adding $3,500 to $7,000 for professional installation.",
+  nextSteps: [
+    { label: "Ridge Board Calculator", href: "/calculators/roofing/ridge-board-calculator/" },
+    { label: "Roof Sheathing Calculator", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Shingle Calculator", href: "/calculators/roofing/shingle-calculator/" },
+    { label: "Hip Roof Calculator", href: "/calculators/roofing/hip-roof-calculator/" },
+  ],
+  installationTips: [
+    "Cut a pattern rafter first and test-fit before cutting the full set.",
+    "Use a speed square to mark consistent bird's mouth and plumb cuts.",
+    "Install the ridge board on temporary supports before setting rafters.",
+    "Work from both ends toward the center when setting opposing rafter pairs.",
+    "Install collar ties in the upper third of the rafters to prevent wall spread.",
+  ],
+  commonMistakes: [
+    "Forgetting to add overhang length to the rafter measurement — add 12 to 24 inches per rafter beyond the wall.",
+    "Not including gable end sheathing and siding in the material estimate.",
+    "Using the building width as the rafter run — the run is half the width for each side.",
+    "Omitting collar ties or ceiling joists — without them the rafters will push the walls outward over time.",
+  ],
+  faqs: [
+    { question: "What is a gable roof?", answer: "A gable roof is the classic two-sided triangular roof shape formed by two sloped planes meeting at a central ridge. The vertical triangular wall sections at each end are called gable ends. It is the most common roof type in North America because of its simplicity, low cost, and effective water drainage." },
+    { question: "How do I calculate gable roof area?", answer: "Multiply half the building width (the rafter run) by the pitch multiplier, then multiply by the building length to get one slope area. Double that for both sides. For a 30x40 ft building at 6/12 pitch: run = 15 ft, multiplier = 1.118, one side = 15 x 1.118 x 40 = 670.8 sq ft, total = 1,341.6 sq ft." },
+    { question: "What is gable end area and why does it matter?", answer: "The gable end is the triangular wall section between the two roof slopes at each end of the building. Its area equals half the building width times the roof rise. This area must be sheathed, sided, and often includes a gable vent. For a 30 ft wide building at 6/12 pitch, each gable end is 30 x 7.5 / 2 = 112.5 sq ft, totaling 225 sq ft for both ends." },
+    { question: "What pitch is best for a gable roof?", answer: "A 6/12 pitch is the most popular for residential gable roofs, offering a good balance of appearance, material efficiency, and walkability. Pitches of 4/12 to 6/12 are easy to walk on and use standard shingles. Pitches of 8/12 to 12/12 create a more dramatic appearance but increase material costs and make working on the roof more difficult." },
+    { question: "How many rafters do I need for a gable roof?", answer: "Divide the building length by the rafter spacing (in feet), add one, then multiply by two for both sides. For a 40-foot building at 16-inch OC: (40 / 1.333) + 1 = 31 per side, 62 total. Add 10% for waste, ordering 68 rafters." },
+    { question: "Gable vs hip roof — which costs less?", answer: "Gable roofs cost 15 to 25 percent less than hip roofs because they use less lumber, have simpler cuts, and are faster to frame. A gable roof has no hip rafters or jack rafters, and the ridge runs the full building length. However, gable roofs are less wind-resistant and expose the gable end walls to weather." },
+  ],
+};
+
+// ─── LEAN-TO / SHED ROOF ───────────────────────────────────────────────────
+
+const leanToRoofCalculator: CalculatorConfig = {
+  fields: [
+    { id: "length", label: "Roof Length (along wall)", unit: "ft", placeholder: "20" },
+    { id: "run", label: "Roof Run (depth from wall)", unit: "ft", placeholder: "12" },
+    { id: "pitch", label: "Roof Pitch", unit: "/12", placeholder: "4", defaultValue: 4 },
+    {
+      id: "spacing",
+      label: "Rafter Spacing",
+      type: "select",
+      options: [
+        { label: "16\" on center", value: "16" },
+        { label: "24\" on center", value: "24" },
+      ],
+      defaultValue: "16",
+    },
+  ],
+  calculate: (v) => {
+    const spacing = parseInt(v.spacing as string) as 16 | 24;
+    const r = calculateLeanToRoof(v.length as number, v.run as number, v.pitch as number, spacing);
+    return [
+      { label: `Roof area: ${r.roofArea} sq ft (${r.squares} squares)` },
+      { label: `${r.rafters} rafters (${r.rafterLength} ft each)` },
+      { label: `Rise height: ${r.riseHeight} ft` },
+      { label: `Pitch multiplier: ${r.multiplier}` },
+    ];
+  },
+  disclaimer: "Lean-to measurements assume a single-slope roof with no valleys or hips. Add 10–15% waste for materials. Rafter length does not include overhang.",
+  howToUse: [
+    "Enter the roof length (the dimension along the supporting wall).",
+    "Enter the roof run (how far the roof extends from the wall).",
+    "Enter the pitch (rise per 12 inches of horizontal run).",
+    "Select rafter spacing and click Calculate for rafter count, length, area, and rise height.",
+  ],
+  materialInfo:
+    "A lean-to roof (also called a shed roof, skillion, or mono-pitch roof) is the simplest roof form — a single sloped plane that leans against an existing structure or spans between walls of different heights. Lean-to roofs are the standard choice for additions, covered porches, carports, storage sheds, and firewood shelters. The high side is typically attached to an existing building wall using a ledger board bolted to the studs, while the low side rests on a beam supported by posts. Because there is only one slope, lean-to roofs are the most economical to frame — they require approximately half the rafters of a gable roof of the same footprint and have no ridge board, no hip or valley rafters, and no compound cuts. Typical lean-to pitches range from 2/12 to 6/12, with 3/12 to 4/12 being the most common for attached structures. The minimum pitch depends on the roofing material: 1/4:12 for membrane (TPO, EPDM), 2/12 for metal panels with sealant tape at laps, and 4/12 for standard asphalt shingles. Rafter sizes follow the same span tables as gable roofs — 2x6 for runs up to 10 ft, 2x8 for up to 13 ft, and 2x10 for up to 16 ft at 16-inch on-center spacing. Common materials for the ledger connection include a 2x8 or 2x10 ledger board fastened with 1/2-inch lag bolts every 16 inches, with Z-flashing above to prevent water infiltration. A 12x20 ft lean-to costs $800 to $2,000 in framing lumber and $300 to $800 for roofing materials, with professional labor adding $1,500 to $3,500.",
+  nextSteps: [
+    { label: "Rafter Calculator", href: "/calculators/roofing/rafter-calculator/" },
+    { label: "Roof Sheathing Calculator", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Roof Pitch Calculator", href: "/calculators/roofing/roof-pitch-calculator/" },
+    { label: "Gable Roof Calculator", href: "/calculators/roofing/gable-roof-calculator/" },
+  ],
+  installationTips: [
+    "Attach the ledger board to the existing wall studs or rim joist with 1/2\" lag bolts — never anchor to siding alone.",
+    "Install Z-flashing or step flashing above the ledger to prevent water from entering the wall.",
+    "Use a string line from the ledger to the beam to verify consistent rafter slope before cutting.",
+    "Slope the roof away from the existing building to direct water runoff to the low side.",
+    "For runs over 12 feet, consider using an intermediate support beam to reduce rafter size requirements.",
+  ],
+  commonMistakes: [
+    "Attaching the ledger to siding instead of framing — the ledger must be lag-bolted to studs or the rim joist.",
+    "Forgetting flashing above the ledger — this is the most common source of water damage in lean-to additions.",
+    "Pitching the roof toward the existing building instead of away — water must drain to the low (outer) side.",
+    "Using too shallow a pitch for the chosen roofing material — asphalt shingles need at least 4/12 for standard installation.",
+  ],
+  faqs: [
+    { question: "What is a lean-to roof?", answer: "A lean-to roof is a single-slope roof that typically leans against an existing building wall. One end is higher (attached to the wall via a ledger board) and the other is lower (supported by posts and a beam). It is the simplest and most economical roof type, commonly used for additions, porches, carports, and sheds." },
+    { question: "What is the minimum pitch for a lean-to roof?", answer: "The minimum pitch depends on the roofing material: 1/4:12 for membrane roofing (TPO, EPDM), 1/2:12 to 1:12 for standing seam metal, 2:12 for exposed-fastener metal panels, and 4:12 for standard asphalt shingles. For most lean-to structures, 3/12 to 4/12 provides a good balance of water shedding and headroom." },
+    { question: "How do I calculate lean-to roof area?", answer: "Multiply the roof length (along the wall) by the roof run (depth from wall), then multiply by the pitch multiplier. For a 20x12 ft lean-to at 4/12 pitch, the multiplier is 1.054, so the area is 20 x 12 x 1.054 = 252.96 sq ft. This is the actual sloped area, which is slightly more than the flat footprint." },
+    { question: "How high does a lean-to roof rise?", answer: "The rise equals the run times the pitch ratio. For a 12-foot run at 4/12 pitch: 12 x (4/12) = 4 feet of rise. The high side of the roof will be 4 feet higher than the low side. Add the wall or post height on the low side to find the total attachment height on the building wall." },
+    { question: "Can I attach a lean-to to any wall?", answer: "You can attach a lean-to to any structural wall that can support the ledger loads. The wall must have accessible studs or a rim joist to receive lag bolts. Brick or masonry walls require expansion anchors or through-bolts with a bearing plate. Always verify the existing wall can handle the additional roof load, especially for snow accumulation." },
+    { question: "How much does a lean-to roof cost?", answer: "A basic 12x20 ft lean-to costs $800 to $2,000 for framing lumber (rafters, ledger, beam, posts), $300 to $800 for roofing materials (sheathing, underlayment, shingles or metal), and $1,500 to $3,500 for professional labor. Total installed cost is typically $2,500 to $6,500 depending on materials and complexity." },
+  ],
+};
+
 // ─── EXTERIOR SHELL ─────────────────────────────────────────────────────────
 
 const housewrapCalculator: CalculatorConfig = {
@@ -3413,6 +3695,196 @@ const retainingWallCalculator: CalculatorConfig = {
   ],
 };
 
+// ─── REBAR ──────────────────────────────────────────────────────────────────
+
+const rebarCalculator: CalculatorConfig = {
+  fields: [
+    { id: "slabLength", label: "Slab Length", unit: "ft", placeholder: "20" },
+    { id: "slabWidth", label: "Slab Width", unit: "ft", placeholder: "20" },
+    { id: "spacing", label: "Bar Spacing", unit: "in", defaultValue: 12, placeholder: "12" },
+    {
+      id: "rebarSize",
+      label: "Rebar Size",
+      type: "select",
+      options: [
+        { label: "#3 (3/8\")", value: "#3" },
+        { label: "#4 (1/2\")", value: "#4" },
+        { label: "#5 (5/8\")", value: "#5" },
+      ],
+    },
+  ],
+  calculate: (v) => {
+    const r = calculateRebar(
+      v.slabLength as number,
+      v.slabWidth as number,
+      v.spacing as number,
+      v.rebarSize as string,
+    );
+    return [
+      { label: `${r.barsLong} bars running lengthwise` },
+      { label: `${r.barsWide} bars running widthwise` },
+      { label: `${r.totalBars} total 20 ft bars (pieces)` },
+      { label: `${r.totalLinearFeet} total linear feet` },
+      { label: `${r.weight} lbs total weight` },
+    ];
+  },
+  disclaimer:
+    "This estimate assumes a single-layer flat grid. Actual rebar requirements depend on engineering specifications, soil conditions, and local building code. Always consult a structural engineer for load-bearing and seismic applications.",
+  howToUse: [
+    "Enter the slab length and width in feet.",
+    "Set the desired bar spacing — 12\" on center is common for residential slabs.",
+    "Select the rebar size: #3 for light-duty, #4 for standard residential, #5 for structural.",
+    "Click Calculate for bar count, linear feet, and total weight.",
+  ],
+  materialInfo:
+    "Rebar (short for reinforcing bar) is deformed steel bar embedded in concrete to provide tensile strength that concrete alone cannot resist. Concrete is strong in compression but weak in tension — rebar bridges cracks and holds the slab together under load.\n\nThe most common sizes for residential and light commercial work are #3 (3/8-inch diameter, 0.376 lbs/ft), #4 (1/2-inch, 0.668 lbs/ft), and #5 (5/8-inch, 1.043 lbs/ft). Standard rebar comes in 20-foot lengths. When a slab dimension exceeds 20 feet, bars must be spliced with an overlap of 40 bar diameters — that is 20 inches for #4 rebar.\n\nGrade 60 rebar (yield strength 60,000 psi) is the industry standard for residential construction throughout North America. It is available in plain (black) steel, epoxy-coated (green) for corrosive environments, and galvanized for marine or de-icing salt exposure. Epoxy-coated rebar costs roughly 30–50% more than plain steel but is required by many codes for garage slabs, driveways, and exterior flatwork exposed to road salt.\n\nTypical spacing is 12 inches on center in both directions for 4-inch residential slabs, 18 inches for lightly loaded patios, and 8 inches for driveways or structural slabs. Rebar must be elevated off the sub-base on wire chairs or plastic rebar supports so it sits in the lower third of the slab thickness — placing rebar on the ground provides zero structural benefit.\n\nCurrent pricing runs $0.50 to $0.90 per linear foot for #4 rebar, or roughly $10 to $18 per 20-foot stick. A typical 20×20-foot slab with #4 at 12-inch centers requires about 82 bars and 820 linear feet of rebar weighing approximately 548 lbs.",
+  nextSteps: [
+    { label: "Rebar Spacing Calculator", href: "/calculators/foundation/rebar-spacing-calculator/" },
+    { label: "Concrete Slab Calculator", href: "/calculators/foundation/concrete-slab-calculator/" },
+    { label: "Concrete Footing Calculator", href: "/calculators/foundation/concrete-footing-calculator/" },
+  ],
+  installationTips: [
+    "Place rebar on wire chairs or plastic supports so it sits in the lower third of the slab — never lay bars directly on the ground.",
+    "Overlap splices by 40 bar diameters (20\" for #4, 25\" for #5) and secure with tie wire at every intersection.",
+    "Tie every rebar intersection with 16-gauge tie wire using a rebar tier or manual twisting tool.",
+    "Keep a minimum 3 inches of concrete cover on all sides to prevent corrosion of the steel.",
+    "Cut rebar with a rebar cutter or reciprocating saw with a metal blade — never use a torch, which weakens the steel.",
+    "Bend rebar cold using a manual or hydraulic rebar bender — heating weakens the bar and voids engineering ratings.",
+  ],
+  commonMistakes: [
+    "Laying rebar on the ground instead of elevating it on chairs — without proper placement the rebar provides no structural value.",
+    "Insufficient splice overlap — splices shorter than 40 bar diameters will pull apart under load.",
+    "Using the wrong rebar size — #3 is too light for driveways and garage slabs; use #4 minimum.",
+    "Skipping tie wire at intersections — unsecured rebar shifts during the pour and ends up misaligned.",
+    "Forgetting to account for waste — order 10–15% extra for cuts, bends, and overlaps.",
+  ],
+  faqs: [
+    {
+      question: "How much rebar do I need for a 20x20 slab?",
+      answer: "A 20×20-foot slab with #4 rebar at 12-inch on-center spacing needs 21 bars running each direction — 42 bars total plus splice pieces, about 82 twenty-foot sticks. Total linear footage is approximately 840 feet, weighing around 561 lbs. Add 10% waste for 92 sticks.",
+    },
+    {
+      question: "What size rebar for a 4-inch slab?",
+      answer: "#4 rebar (1/2-inch diameter) is the standard choice for 4-inch residential concrete slabs including garage floors, basement slabs, and driveways. For lightly loaded patios or walkways, #3 (3/8-inch) may suffice. For structural slabs or heavy equipment pads, step up to #5 (5/8-inch) or consult a structural engineer.",
+    },
+    {
+      question: "What spacing should I use for rebar?",
+      answer: "The most common spacing is 12 inches on center in both directions for standard 4-inch residential slabs. Use 18-inch spacing for lightly loaded patios and 8-inch spacing for driveways, garage floors, or structural applications. Your structural engineer or local code may specify different spacing based on soil conditions and loads.",
+    },
+    {
+      question: "How much does rebar cost?",
+      answer: "#4 rebar costs $0.50 to $0.90 per linear foot, or $10 to $18 per 20-foot stick. A 20×20-foot slab needs roughly 82 sticks, costing $820 to $1,476 for materials. Epoxy-coated rebar runs 30–50% more. Delivery adds $75 to $150 for orders under 1 ton. Rebar chairs cost $0.50 to $1.00 each — budget 1 per 4 square feet.",
+    },
+    {
+      question: "Do I need rebar or wire mesh?",
+      answer: "Rebar is stronger and preferred for driveways, garage floors, structural slabs, and any concrete over 4 inches thick. Welded wire mesh (6×6 W1.4/W1.4) is acceptable for lightly loaded patios, sidewalks, and non-structural slabs under 4 inches. For critical applications, rebar provides far superior crack control and tensile strength.",
+    },
+    {
+      question: "How do I calculate rebar weight?",
+      answer: "Multiply total linear feet by the weight per foot for your bar size: #3 = 0.376 lbs/ft, #4 = 0.668 lbs/ft, #5 = 1.043 lbs/ft. For example, 840 linear feet of #4 rebar weighs 840 × 0.668 = 561 lbs. Knowing the weight helps plan delivery and estimate whether you need a truck or can haul rebar in a trailer.",
+    },
+  ],
+};
+
+// ─── REBAR SPACING ──────────────────────────────────────────────────────────
+
+const rebarSpacingCalculator: CalculatorConfig = {
+  fields: [
+    { id: "slabLength", label: "Slab Length", unit: "ft", placeholder: "20" },
+    { id: "slabWidth", label: "Slab Width", unit: "ft", placeholder: "20" },
+    {
+      id: "rebarSize",
+      label: "Rebar Size",
+      type: "select",
+      options: [
+        { label: "#3 (3/8\")", value: "#3" },
+        { label: "#4 (1/2\")", value: "#4" },
+        { label: "#5 (5/8\")", value: "#5" },
+      ],
+    },
+    {
+      id: "loadType",
+      label: "Load Type",
+      type: "select",
+      options: [
+        { label: "Residential Slab", value: "residential slab" },
+        { label: "Driveway", value: "driveway" },
+        { label: "Structural", value: "structural" },
+      ],
+    },
+  ],
+  calculate: (v) => {
+    const r = calculateRebarSpacing(
+      v.slabLength as number,
+      v.slabWidth as number,
+      v.rebarSize as string,
+      v.loadType as string,
+    );
+    return [
+      { label: `${r.spacing}" on-center spacing (recommended)` },
+      { label: `${r.barsNeeded} bars needed (both directions)` },
+      { label: `${r.linearFeet} total linear feet` },
+      { label: `${r.chairsNeeded} rebar chairs / supports` },
+    ];
+  },
+  disclaimer:
+    "Spacing recommendations are general guidelines for typical residential and light commercial use. Actual spacing must be determined by a licensed structural engineer based on loads, soil conditions, and local building code.",
+  howToUse: [
+    "Enter the slab length and width in feet.",
+    "Select the rebar size — #4 is standard for most residential work.",
+    "Choose the load type to get the recommended spacing.",
+    "Click Calculate for optimal spacing, bar count, and support chair quantity.",
+  ],
+  materialInfo:
+    "Rebar spacing determines how closely reinforcing bars are placed in a concrete slab, directly affecting the slab's load capacity and crack resistance. Proper spacing ensures that tensile forces are distributed evenly across the concrete section.\n\nFor residential slabs (patios, basement floors, walkways), 18-inch on-center spacing with #4 rebar is common. Driveways and garage floors typically use 12-inch spacing to handle vehicle loads without cracking. Structural slabs for equipment pads, commercial floors, or elevated decks require 8-inch spacing or tighter, per the structural engineer's design.\n\nRebar chairs (also called bar supports or bolsters) are essential to keep the rebar at the correct height within the slab. The standard rule is one chair per 4 square feet of slab area. Chairs come in several types: individual high chairs (HC) for single bars, continuous high chairs (CHC) for long runs, and slab bolsters (SB) for mesh or mats. Plastic-tipped chairs are required when the rebar will be near the concrete surface to prevent rust staining.\n\nThe concrete cover — the distance from the rebar to the nearest concrete surface — must be at least 3 inches for slabs on grade and 1.5 inches for formed surfaces per ACI 318. Insufficient cover leads to corrosion and spalling within 5 to 10 years.\n\nFor slabs over 20 feet in either direction, bars must be spliced. The minimum lap splice length for #4 Grade 60 rebar is 20 inches (40 bar diameters). Splices should be staggered so that no more than 50% of the bars are spliced at the same cross-section.\n\nCost for rebar installation (labor and materials) runs $0.75 to $1.50 per square foot of slab area for a standard 12-inch grid, including chairs and tie wire. Tighter 8-inch spacing increases material costs by about 50%.",
+  nextSteps: [
+    { label: "Rebar Calculator", href: "/calculators/foundation/rebar-calculator/" },
+    { label: "Concrete Slab Calculator", href: "/calculators/foundation/concrete-slab-calculator/" },
+    { label: "Concrete Calculator", href: "/calculators/foundation/concrete-calculator/" },
+  ],
+  installationTips: [
+    "Mark spacing lines on the forms with a lumber crayon before placing rebar — this ensures even grid layout.",
+    "Set rebar chairs every 4 feet in both directions before laying any bars.",
+    "Run bars in the long direction first, then cross-bars on top — tie every intersection.",
+    "Keep 3 inches of concrete cover from the rebar to any edge or bottom of slab.",
+    "For slabs with control joints, run rebar continuously through the joint — do not cut rebar at joint locations.",
+    "Walk the finished grid before the pour to check that no bars have been dislodged from the chairs.",
+  ],
+  commonMistakes: [
+    "Using too wide a spacing for the load type — 18-inch spacing is too loose for driveways and garages.",
+    "Placing chairs too far apart — unsupported rebar sags into the gravel base, eliminating its structural value.",
+    "Cutting rebar at control joints — control joints are meant to crack; the rebar must bridge across them.",
+    "Not staggering splices — placing all splices at the same location creates a weak plane in the slab.",
+    "Ignoring concrete cover requirements — less than 3 inches of cover leads to premature corrosion and spalling.",
+  ],
+  faqs: [
+    {
+      question: "What is the standard rebar spacing for a concrete slab?",
+      answer: "The most common spacing is 12 inches on center in both directions for standard 4-inch residential slabs. Patios and walkways can use 18-inch spacing. Driveways and garage floors use 12-inch spacing. Structural slabs and equipment pads typically require 8-inch spacing or as specified by a structural engineer.",
+    },
+    {
+      question: "How many rebar chairs do I need?",
+      answer: "Plan for 1 rebar chair per 4 square feet of slab area. A 20×20-foot slab (400 sq ft) needs about 100 chairs. For heavy rebar (#5 and larger), use chairs rated for the bar weight. Space chairs evenly in a grid pattern no more than 4 feet apart in each direction.",
+    },
+    {
+      question: "What happens if rebar spacing is too wide?",
+      answer: "If spacing exceeds the engineered requirement, the slab will develop wider cracks under load because the tensile forces are not adequately distributed. This reduces load capacity and allows water infiltration, accelerating freeze-thaw damage in cold climates. For driveways, too-wide spacing can lead to mid-panel cracks within the first few years.",
+    },
+    {
+      question: "Can I use wire mesh instead of rebar?",
+      answer: "Welded wire mesh (6×6 W1.4/W1.4) is acceptable for lightly loaded patios, sidewalks, and slabs under 4 inches thick. However, rebar provides superior crack control and is required for driveways, garage floors, and any structural slab. Mesh is also harder to keep elevated on chairs during the pour, so it often ends up on the ground where it provides no benefit.",
+    },
+    {
+      question: "How does load type affect rebar spacing?",
+      answer: "Heavier loads require tighter spacing. Residential slabs (foot traffic) use 18-inch spacing. Driveways (vehicle loads up to 6,000 lbs) use 12-inch spacing. Structural applications (equipment pads, commercial floors, elevated decks) use 8-inch spacing or tighter. The spacing directly controls how much tensile force each bar must carry.",
+    },
+    {
+      question: "What is the minimum concrete cover for rebar?",
+      answer: "ACI 318 requires a minimum of 3 inches of concrete cover for rebar in slabs cast directly against earth (slab on grade). For formed surfaces not exposed to weather, the minimum is 1.5 inches. For slabs exposed to de-icing chemicals or marine environments, the minimum increases to 2 inches with epoxy-coated rebar recommended.",
+    },
+  ],
+};
+
 // ─── EPOXY ──────────────────────────────────────────────────────────────────
 
 const epoxyCalculator: CalculatorConfig = {
@@ -4389,6 +4861,286 @@ const stairLandingCalculator: CalculatorConfig = {
   ],
 };
 
+// ─── BALUSTER SPACING ────────────────────────────────────────────────────────
+
+const balusterSpacingCalculator: CalculatorConfig = {
+  fields: [
+    { id: "railLength", label: "Total Railing Length", unit: "in", placeholder: "120" },
+    { id: "balusterWidth", label: "Baluster Width", unit: "in", defaultValue: 1.5, placeholder: "1.5" },
+    { id: "postWidth", label: "Post Width", unit: "in", defaultValue: 3.5, placeholder: "3.5" },
+    { id: "numberOfPosts", label: "Number of Posts", unit: "", defaultValue: 3, placeholder: "3" },
+  ],
+  calculate: (v) => {
+    const r = calculateBalusterSpacing(v.railLength as number, v.balusterWidth as number, v.postWidth as number, v.numberOfPosts as number);
+    return [
+      { label: `${r.totalBalusters} balusters needed` },
+      { label: `${r.balustersPerSection} balusters per section` },
+      { label: `${Math.round(r.actualSpacing * 100) / 100}" actual gap between balusters` },
+      { label: `${r.sections} railing section${r.sections > 1 ? "s" : ""} between posts` },
+      { label: "Tip: IRC R312.1.3 requires that a 4-inch sphere cannot pass through any opening in the railing." },
+    ];
+  },
+  disclaimer:
+    "Calculations are based on IRC R312.1.3 which limits openings to a maximum of 4 inches. Verify requirements with your local building department as jurisdictions may have stricter codes.",
+  howToUse: [
+    "Measure the total railing length in inches from post to post (or end to end).",
+    "Enter the baluster width (1.5 inches for standard square balusters, 0.75 inches for round).",
+    "Enter the post width (3.5 inches for standard 4x4 posts).",
+    "Enter the number of posts and click Calculate for exact baluster count and even spacing.",
+  ],
+  materialInfo:
+    "Balusters (also called spindles) are the vertical fill members in a railing system that prevent falls and meet building code. The IRC requires that a 4-inch sphere cannot pass through any opening in the railing -- this applies between balusters, between balusters and posts, between the bottom rail and the deck surface, and through any decorative opening.\n\nStandard square balusters are 1.5 inches wide (matching a 2x2 nominal), and round balusters are typically 3/4 inch in diameter. With 1.5-inch square balusters and a 4-inch maximum gap, you need approximately 3 balusters per linear foot of railing. A typical 6-foot railing section uses 17 to 19 balusters.\n\nCommon materials include pressure-treated wood ($1-3 each), cedar ($2-5 each), aluminum ($3-8 each), and composite ($4-10 each). Stainless steel cable systems use 3/16-inch cables at 3-inch spacing as an alternative to vertical balusters.\n\nThis calculator distributes balusters evenly within each section so that every gap is identical -- resulting in a uniform, professional appearance that automatically meets the 4-inch code requirement. Uniform spacing also simplifies installation since you can cut a single spacer block and use it for every baluster.",
+  nextSteps: [
+    { label: "Deck Railing Calculator", href: "/calculators/outdoor/deck-railing-calculator/" },
+    { label: "Stair Calculator", href: "/calculators/stairs/stair-calculator/" },
+    { label: "Deck Board Calculator", href: "/calculators/outdoor/deck-board-calculator/" },
+  ],
+  installationTips: [
+    "Cut a spacer block to the calculated gap width and use it between every baluster for perfectly even spacing.",
+    "Pre-drill screw holes in wood balusters to prevent splitting -- especially hardwoods and small cross-sections.",
+    "Install the bottom rail first, set all balusters with the spacer, then attach the top rail.",
+    "Use exterior-grade adhesive in addition to screws for long-term durability in weather-exposed railings.",
+  ],
+  commonMistakes: [
+    "Spacing balusters too far apart -- the 4-inch sphere test applies to every opening, not just the average gap.",
+    "Forgetting to subtract post widths from the total railing length when calculating available space.",
+    "Not pre-drilling wood balusters -- small cross-sections split easily when screwed near the ends.",
+    "Ignoring the gap between the deck surface and the bottom rail -- the 4-inch rule applies here too.",
+  ],
+  faqs: [
+    { question: "What is the maximum gap between balusters?", answer: "The IRC requires that a 4-inch sphere cannot pass through any opening in the railing. With standard 1.5-inch square balusters, this means the gap between adjacent balusters must be less than 4 inches." },
+    { question: "How many balusters do I need per foot?", answer: "With standard 1.5-inch square balusters and the code-required 4-inch maximum gap, you need approximately 3 balusters per linear foot of railing. A typical 6-foot railing section uses 17 to 19 balusters." },
+    { question: "Can I use horizontal railing instead of vertical balusters?", answer: "Some codes allow horizontal railing, but the 4-inch sphere rule still applies between horizontal members. Many jurisdictions prohibit horizontal designs because children can climb them. Check your local code." },
+    { question: "What height should the railing be?", answer: "The IRC requires a minimum railing height of 36 inches for residential decks and 42 inches for commercial or multi-family structures. Measure from the deck surface to the top of the rail." },
+    { question: "What material is best for exterior balusters?", answer: "Aluminum and composite balusters offer the best durability with no maintenance. Pressure-treated wood is the most affordable but needs periodic sealing. Cedar is a natural rot-resistant option but costs more than treated lumber." },
+    { question: "Do I need a permit to install a railing?", answer: "Yes, in most jurisdictions railing installation on a deck requires a building permit and inspection. Inspectors check height, baluster spacing, post attachment, and structural integrity." },
+  ],
+};
+
+// ─── SOFFIT ──────────────────────────────────────────────────────────────────
+
+const soffitCalculator: CalculatorConfig = {
+  fields: [
+    { id: "perimeter", label: "House Perimeter", unit: "ft", placeholder: "160" },
+    { id: "soffitWidth", label: "Soffit Width (Overhang)", unit: "in", defaultValue: 18, placeholder: "18" },
+    { id: "panelLength", label: "Panel Length", unit: "ft", defaultValue: 12, placeholder: "12" },
+  ],
+  calculate: (v) => {
+    const r = calculateSoffit(v.perimeter as number, v.soffitWidth as number, v.panelLength as number);
+    return [
+      { label: `${r.panels} soffit panels needed` },
+      { label: `${r.jChannelLinearFeet} linear feet of J-channel` },
+      { label: `${r.ventStrips} continuous vent strips (8 ft each)` },
+      { label: "Tip: Use vented panels for at least one-third of the soffit area to ensure proper attic ventilation." },
+    ];
+  },
+  disclaimer:
+    "This estimate assumes standard 12-inch wide soffit panels. Actual panel widths and coverage vary by manufacturer. Add 10% waste for cuts and fitting.",
+  howToUse: [
+    "Measure the total perimeter of your house in feet.",
+    "Measure the soffit width (distance from the wall to the fascia board) in inches.",
+    "Enter the soffit panel length (typically 12 feet for standard panels).",
+    "Click Calculate to get panel count, J-channel length, and vent strip quantity.",
+  ],
+  materialInfo:
+    "Soffit is the material that covers the underside of the roof overhang (eaves), spanning the gap between the exterior wall and the fascia board. Its primary functions are protecting the rafter tails and roof structure from weather, pests, and moisture while providing attic ventilation when vented panels are used.\n\nSoffit panels come in three main ventilation styles: solid (no ventilation), center-vented (perforated strip down the middle), and fully vented (perforated across the entire panel). A properly ventilated soffit combined with ridge venting creates continuous airflow through the attic, preventing moisture buildup, ice dams, and excessive heat.\n\nCommon materials include vinyl ($1.50-3.00 per sq ft installed), aluminum ($2.50-5.00), fiber cement ($3.00-6.00), and wood ($4.00-8.00). Vinyl is the most popular for residential use due to low cost and zero maintenance. Standard panel dimensions are 12 inches wide by 12 feet long, yielding 12 square feet of coverage per panel.\n\nJ-channel trim runs along both edges of the soffit (wall side and fascia side) to receive and hold the panel edges. F-channel can substitute on the fascia side. For a house with 160 feet of perimeter and 18-inch overhangs, expect roughly 40 panels, 320 linear feet of J-channel, and 20 vent strips.",
+  nextSteps: [
+    { label: "Vinyl Siding Calculator", href: "/calculators/exterior-shell/vinyl-siding-calculator/" },
+    { label: "Drip Edge Calculator", href: "/calculators/roofing/drip-edge-calculator/" },
+    { label: "Fascia Calculator", href: "/calculators/exterior-shell/hardie-siding-calculator/" },
+  ],
+  installationTips: [
+    "Install J-channel along the wall first, keeping it level and straight -- any deviation will show in the finished panels.",
+    "Leave 1/4 inch of expansion gap at each end of the panel to prevent buckling in hot weather.",
+    "Alternate between vented and solid panels if you need partial ventilation rather than full venting.",
+    "Cut panels with a fine-tooth circular saw blade (reversed for vinyl) or aviation snips for clean edges.",
+  ],
+  commonMistakes: [
+    "Not leaving expansion gaps -- vinyl soffit panels buckle and warp when installed too tightly.",
+    "Installing all solid panels when attic ventilation is needed -- use at least one-third vented panels.",
+    "Failing to level the J-channel -- any bow or dip will be visible in the finished soffit.",
+    "Forgetting end caps where the soffit terminates at gable ends or porch transitions.",
+  ],
+  faqs: [
+    { question: "What is soffit and why do I need it?", answer: "Soffit is the panel covering the underside of the roof overhang. It protects rafter tails from weather and pests, provides attic ventilation when vented, and gives the eaves a finished appearance." },
+    { question: "Do I need vented soffit?", answer: "Yes, if your attic has ridge venting or gable vents. Vented soffit allows air to enter at the eaves and exit at the ridge, creating continuous airflow that prevents moisture, ice dams, and excessive heat. Use at least one-third vented panels." },
+    { question: "How much does soffit cost?", answer: "Vinyl soffit costs $1.50-3.00 per square foot installed. For a typical home with 160 ft perimeter and 18-inch overhangs (240 sq ft of soffit area), materials run $360-720 and professional installation adds $400-800." },
+    { question: "Can I install soffit over existing soffit?", answer: "Yes, if the existing soffit is in good condition and firmly attached. Install new J-channel over the old surface. If the old soffit is damaged, rotted, or sagging, remove it completely first." },
+    { question: "What width soffit panel do I need?", answer: "Soffit panel width depends on your overhang. Standard 12-inch panels work for overhangs up to 12 inches. For wider overhangs (18-24 inches), use two rows of panels or wider single panels available from some manufacturers." },
+    { question: "How much J-channel do I need?", answer: "You need J-channel on both sides of the soffit (wall side and fascia side), so multiply your house perimeter by 2. For 160 feet of perimeter, you need 320 linear feet of J-channel." },
+  ],
+};
+
+// ─── BOARD AND BATTEN ────────────────────────────────────────────────────────
+
+const boardAndBattenCalculator: CalculatorConfig = {
+  fields: [
+    { id: "wallArea", label: "Wall Area", unit: "sq ft", placeholder: "480" },
+    { id: "boardWidth", label: "Board Width", unit: "in", defaultValue: 8, placeholder: "8" },
+    { id: "battenWidth", label: "Batten Width", unit: "in", defaultValue: 2, placeholder: "2" },
+    { id: "wallHeight", label: "Wall Height", unit: "ft", defaultValue: 9, placeholder: "9" },
+  ],
+  calculate: (v) => {
+    const r = calculateBoardAndBatten(v.wallArea as number, v.boardWidth as number, v.battenWidth as number, v.wallHeight as number);
+    return [
+      { label: `${r.boards} boards needed` },
+      { label: `${r.battens} battens needed` },
+      { label: `${r.totalLinearFeet} total linear feet of material` },
+      { label: `${r.nails} nails needed` },
+      { label: "Tip: Install a weather-resistant barrier (housewrap) behind board and batten siding." },
+    ];
+  },
+  disclaimer:
+    "This estimate assumes standard vertical installation with boards placed edge-to-edge and battens covering the seams. Add 10% waste for cuts around doors and windows.",
+  howToUse: [
+    "Calculate total wall area in square feet (perimeter x height, minus doors and windows).",
+    "Enter board width (common: 6, 8, 10, or 12 inches).",
+    "Enter batten width (common: 1.5 to 3 inches).",
+    "Enter wall height in feet and click Calculate.",
+  ],
+  materialInfo:
+    "Board and batten is a classic vertical siding pattern consisting of wide boards installed upright with narrow strips (battens) covering the seams between them. This design allows natural wood movement -- the boards can expand and contract with humidity changes without opening visible gaps, because the battens bridge the joints.\n\nHistorically the most common siding on American barns and rural houses, board and batten has experienced a major resurgence in modern farmhouse and contemporary architecture. It is available in natural wood (cedar, pine, redwood), engineered wood (LP SmartSide), fiber cement (James Hardie), vinyl, and composite materials.\n\nBoard widths typically range from 6 to 12 inches, with 8-10 inch boards being the most popular for residential use. Battens are typically 1.5 to 3 inches wide. The wider the board, the more rustic the appearance; narrower boards with slim battens create a more refined look.\n\nCost varies widely by material: pine boards run $1-3 per linear foot, cedar $3-6, fiber cement $2-4, and engineered wood $2-5. For a typical 480 sq ft wall (12 ft wide x 40 ft perimeter, minus openings), expect 60-80 boards and 65-85 battens depending on width choices.\n\nInstallation requires a weather-resistant barrier (housewrap) behind the siding. Boards are face-nailed with a single fastener at center to allow lateral expansion. Battens are nailed through the board overlap, not between boards.",
+  nextSteps: [
+    { label: "Vinyl Siding Calculator", href: "/calculators/exterior-shell/vinyl-siding-calculator/" },
+    { label: "Hardie Siding Calculator", href: "/calculators/exterior-shell/hardie-siding-calculator/" },
+    { label: "Housewrap Calculator", href: "/calculators/exterior-shell/housewrap-calculator/" },
+  ],
+  installationTips: [
+    "Install a weather-resistant barrier (Tyvek or equivalent) over the structural sheathing before any siding.",
+    "Nail each board with a single fastener at center -- this allows the board to expand and contract without splitting.",
+    "Battens should be nailed through the board overlap, securing them to the sheathing or studs behind.",
+    "Leave a 1/8-inch gap between the bottom of boards and horizontal trim for drainage.",
+    "Pre-prime or seal all cut ends and back surfaces before installation to prevent moisture absorption.",
+  ],
+  commonMistakes: [
+    "Nailing boards at both edges -- this restricts natural expansion and causes splits and cupping.",
+    "Skipping the weather-resistant barrier -- essential to prevent water damage to the wall structure.",
+    "Using battens too narrow to adequately cover the board joints -- minimum 1.5 inches recommended.",
+    "Not sealing cut ends -- untreated end grain absorbs moisture rapidly, leading to premature rot.",
+  ],
+  faqs: [
+    { question: "What is board and batten siding?", answer: "Board and batten is a vertical siding style with wide boards installed upright and narrow strips (battens) covering the joints between them. It allows wood movement while maintaining a weather-tight exterior." },
+    { question: "What materials work for board and batten?", answer: "Common materials include cedar (most traditional), pine (budget option, needs treatment), fiber cement (James Hardie -- durable, low maintenance), engineered wood (LP SmartSide), vinyl, and composite. Each has different cost, durability, and maintenance profiles." },
+    { question: "How much does board and batten cost?", answer: "Material costs range from $1-3 per linear foot for pine, $3-6 for cedar, $2-4 for fiber cement, and $2-5 for engineered wood. Professional installation adds $3-8 per square foot. A typical home exterior runs $5,000-15,000 total for materials and labor." },
+    { question: "Can board and batten be installed horizontally?", answer: "Traditionally it is vertical, but horizontal installation is possible. However, horizontal battens can trap water against the boards, requiring more careful detailing for drainage. Vertical installation is recommended for best water-shedding performance." },
+    { question: "How wide should boards and battens be?", answer: "Boards of 8-10 inches with 2-inch battens are the most popular residential choice. Wider boards (12 inches) create a more rustic look; narrower boards (6 inches) with slim battens look more refined and modern." },
+    { question: "Do I need housewrap behind board and batten?", answer: "Yes, always. A weather-resistant barrier (housewrap like Tyvek or tar paper) behind the siding is essential. Board and batten joints are not waterproof -- the battens deflect most water but some can get behind them. The housewrap is the true water barrier." },
+  ],
+};
+
+// ─── RAKE WALL ───────────────────────────────────────────────────────────────
+
+const rakeWallCalculator: CalculatorConfig = {
+  fields: [
+    { id: "wallLength", label: "Wall Length", unit: "ft", placeholder: "20" },
+    { id: "shortHeight", label: "Short End Height", unit: "ft", placeholder: "8" },
+    { id: "tallHeight", label: "Tall End Height", unit: "ft", placeholder: "14" },
+    { id: "studSpacing", label: "Stud Spacing", unit: "in", defaultValue: 16, placeholder: "16" },
+  ],
+  calculate: (v) => {
+    const r = calculateRakeWall(v.wallLength as number, v.shortHeight as number, v.tallHeight as number, v.studSpacing as number);
+    const shortestStud = r.studs.length > 0 ? Math.round(r.studs[0].height * 10) / 10 : 0;
+    const tallestStud = r.studs.length > 0 ? Math.round(r.studs[r.studs.length - 1].height * 10) / 10 : 0;
+    return [
+      { label: `${r.studCount} studs needed (each a different height)` },
+      { label: `Shortest stud: ${shortestStud}" — Tallest stud: ${tallestStud}"` },
+      { label: `${r.bottomPlateLengthFt} ft bottom plate` },
+      { label: `${r.slopePlateLengthFt} ft slope (top) plate` },
+      { label: `${r.totalBoardFeet} board feet total lumber` },
+    ];
+  },
+  disclaimer:
+    "Rake wall stud heights are theoretical calculations. Always measure and cut each stud individually on site. The slope plate requires an angled cut to match the roof pitch. Add 10% waste for cuts.",
+  howToUse: [
+    "Measure the total wall length in feet along the bottom plate.",
+    "Enter the height of the short end (low side) in feet.",
+    "Enter the height of the tall end (high side) in feet.",
+    "Set stud spacing (16 or 24 inches on center) and click Calculate.",
+  ],
+  materialInfo:
+    "A rake wall (also called a gable wall or sloped-top wall) is a wall where the top plate follows the roof slope rather than running level. This creates a triangular or trapezoidal wall section where every stud has a different height, increasing progressively from the short end to the tall end.\n\nRake walls are found at gable ends of roofs, under shed-style roofs, in lofts, and wherever a wall meets a sloped ceiling. They are framed with the same lumber as standard walls -- typically 2x4 or 2x6 studs at 16 or 24 inches on center.\n\nThe key difference from standard walls is that the top plate must be cut at an angle (bevel) matching the roof pitch, and every stud must be individually measured and cut. The bottom plate runs level along the floor. For studs less than about 24 inches tall, horizontal blocking between studs provides adequate nailing surface for sheathing and interior finish.\n\nFor a 20-foot rake wall going from 8 to 14 feet, you will need about 16 studs at 16-inch spacing, with heights ranging from roughly 91 inches to 163 inches. The slope plate length (hypotenuse) will be about 21.5 feet.\n\nMaterial costs are similar to standard wall framing but with higher waste due to the individual cuts. Plan for 10-15% extra lumber. A 20-foot rake wall typically costs $150-300 in lumber at current prices.",
+  nextSteps: [
+    { label: "Stud Calculator", href: "/calculators/wall-framing/stud-calculator/" },
+    { label: "Gable Roof Calculator", href: "/calculators/roofing/gable-roof-calculator/" },
+    { label: "Exterior Sheathing Calculator", href: "/calculators/wall-framing/exterior-sheathing-calculator/" },
+  ],
+  installationTips: [
+    "Mark all stud positions on the bottom plate before cutting any studs.",
+    "Snap a chalk line between the short and tall end points to establish the slope plate angle.",
+    "Cut the slope plate with a bevel matching the roof pitch for proper rafter or sheathing bearing.",
+    "Measure and cut each stud individually -- theoretical heights may vary due to lumber irregularities.",
+    "For very short studs (under 24 inches), add horizontal blocking between adjacent studs to provide nailing surface for sheathing.",
+  ],
+  commonMistakes: [
+    "Cutting all studs to the same height -- every stud in a rake wall is a different length.",
+    "Not beveling the top (slope) plate -- the roof sheathing or rafters will not seat properly without the correct angle.",
+    "Forgetting blocking for short studs -- sheathing and drywall need adequate nailing surface across the entire wall.",
+    "Not verifying the rake wall angle matches the actual roof pitch -- discrepancies cause fitting problems at the roof-wall junction.",
+  ],
+  faqs: [
+    { question: "What is a rake wall?", answer: "A rake wall is a wall where the top plate follows the roof slope instead of running level. Each stud has a progressively different height. They are found at gable ends, under shed roofs, and at any wall-to-slope intersection." },
+    { question: "How do I calculate individual stud heights?", answer: "Divide the height difference (tall minus short) by the number of stud spaces. Each successive stud increases by that increment. For a wall going from 8 to 14 feet over 15 spaces, each stud is 4.8 inches taller than the previous one." },
+    { question: "Do I need to bevel the top plate?", answer: "Yes. The top (slope) plate must be cut at the roof pitch angle so rafters and sheathing bear properly. Use a speed square or angle finder to mark the bevel." },
+    { question: "What about very short studs?", answer: "Studs shorter than 24 inches can be difficult to nail and do not provide adequate nailing surface for sheathing. Install horizontal blocking between adjacent studs to provide a continuous nailing surface." },
+    { question: "Does stud spacing change in rake walls?", answer: "No. Horizontal stud spacing remains the same as the rest of the structure (16 or 24 inches on center). Only the height of each individual stud changes." },
+    { question: "How much extra material should I order?", answer: "Plan for 10-15% extra waste because each stud is a custom cut and offcuts rarely match another stud. The individual cuts also increase labor time compared to standard walls." },
+  ],
+};
+
+// ─── DECK BOARD SPACING ──────────────────────────────────────────────────────
+
+const deckBoardSpacingCalculator: CalculatorConfig = {
+  fields: [
+    { id: "deckLength", label: "Deck Width (across boards)", unit: "ft", placeholder: "12" },
+    { id: "boardWidth", label: "Board Width", unit: "in", defaultValue: 5.5, placeholder: "5.5" },
+    { id: "gapSize", label: "Desired Gap Size", unit: "in", defaultValue: 0.25, placeholder: "0.25" },
+  ],
+  calculate: (v) => {
+    const r = calculateDeckBoardSpacing(v.deckLength as number, v.boardWidth as number, v.gapSize as number);
+    return [
+      { label: `${r.boards} deck boards needed` },
+      { label: `${r.actualGap}" actual even gap between boards` },
+      { label: `${r.totalBoardFeet} board feet of decking` },
+      { label: "Tip: Use a spacer (nail or commercial spacer) to maintain consistent gaps during installation." },
+    ];
+  },
+  disclaimer:
+    "Recommended gap size varies by material: 3/16-1/4 inch for dry pressure-treated wood, 1/8-3/16 inch for composites (check manufacturer specs), and no gap for wet pressure-treated wood (it will shrink as it dries). Follow manufacturer spacing guidelines.",
+  howToUse: [
+    "Enter the deck width in feet (the dimension across which boards will be laid).",
+    "Enter the board width in inches (5.5 inches is standard for 5/4x6 decking).",
+    "Enter your desired gap size in inches (1/4 inch is typical for dry wood).",
+    "Click Calculate to get even board count and actual uniform gap.",
+  ],
+  materialInfo:
+    "Proper deck board spacing is critical for drainage, wood movement, and deck longevity. Gaps between boards allow water to drain through, air to circulate underneath, and the boards to expand and contract with temperature and humidity changes.\n\nFor pressure-treated wood installed dry, use 3/16 to 1/4-inch gaps. If the wood is freshly treated and still wet (common right off the delivery truck), install boards tightly with no gap -- the wood will shrink as it dries, creating natural gaps of approximately 1/8 to 3/16 inch. Cedar and redwood should have 1/8 to 3/16-inch gaps.\n\nComposite decking (Trex, TimberTech, Azek) expands and contracts with temperature. Most manufacturers specify 1/8 to 3/16-inch gaps between board ends and 1/16 to 1/8-inch side gaps. Always follow the specific manufacturer's spacing chart, which varies by installation temperature.\n\nThe standard deck board is 5/4x6 (actual 1 inch x 5.5 inches) in either pressure-treated wood ($1.50-3.00 per linear foot) or composite ($3.00-8.00 per linear foot). For a 12-foot deck width with 5.5-inch boards and 1/4-inch gaps, you need approximately 25 boards.\n\nThis calculator distributes boards evenly so every gap is identical -- preventing the common problem of the last board having a different gap than the rest, which looks unprofessional.",
+  nextSteps: [
+    { label: "Deck Board Calculator", href: "/calculators/outdoor/deck-board-calculator/" },
+    { label: "Deck Footing Calculator", href: "/calculators/outdoor/deck-footing-calculator/" },
+    { label: "Deck Railing Calculator", href: "/calculators/outdoor/deck-railing-calculator/" },
+  ],
+  installationTips: [
+    "Use a consistent spacer (16d nail for composites, carpenter's pencil for wider wood gaps) between every board.",
+    "Install the first board perfectly parallel to the house -- every subsequent board follows this reference line.",
+    "For wet pressure-treated lumber, butt boards tightly together -- they will shrink to create natural gaps.",
+    "For composites, follow the manufacturer's spacing chart based on installation temperature -- gaps change with season.",
+  ],
+  commonMistakes: [
+    "Spacing wet pressure-treated boards with gaps -- when the wood dries, gaps become too large and catch shoe heels.",
+    "Not accounting for composite thermal expansion -- decks installed tight in winter may buckle in summer heat.",
+    "Inconsistent gaps -- uneven spacing is highly visible and looks unprofessional. Always use a spacer.",
+    "Gaps too wide (over 3/8 inch) -- can catch heels, allow debris accumulation, and let small objects fall through.",
+  ],
+  faqs: [
+    { question: "What is the correct gap between deck boards?", answer: "For dry pressure-treated wood: 3/16 to 1/4 inch. For cedar or redwood: 1/8 to 3/16 inch. For composite decking: 1/8 to 3/16 inch (check manufacturer specs). For wet pressure-treated wood: install tight with no gap." },
+    { question: "Why is deck board spacing important?", answer: "Proper gaps allow water drainage, air circulation underneath the deck, and room for boards to expand and contract with weather changes. Without gaps, water pools between boards causing rot, and expanding boards can buckle." },
+    { question: "Should I gap wet pressure-treated lumber?", answer: "No. Freshly treated lumber has high moisture content and will shrink as it dries over 2-4 weeks. Install boards tightly together and the natural shrinkage will create appropriate gaps of about 1/8 to 3/16 inch." },
+    { question: "What spacer should I use?", answer: "A 16d nail (approximately 1/8 inch) works well for composite decking. A carpenter's pencil or 1/4-inch plywood strip works for wider wood gaps. Commercial deck spacers like Camo or Kreg provide consistent spacing and hidden fastening." },
+    { question: "How do gaps change with temperature?", answer: "Composite boards expand in heat and contract in cold. A board installed at 50 degrees F will be noticeably longer at 100 degrees F. Most manufacturers provide a spacing chart that increases the gap for cold-weather installation to accommodate summer expansion." },
+    { question: "How many deck boards do I need?", answer: "Divide the deck width in inches by (board width + gap). For a 12-foot (144-inch) deck with 5.5-inch boards and 1/4-inch gaps: 144 / 5.75 = 25 boards. This calculator adjusts the gap slightly to ensure perfectly even spacing." },
+  ],
+};
+
 // ─── REGISTRY MAP ─────────────────────────────────────────────────────────────
 
 export const calculatorRegistry: Record<string, Record<string, CalculatorConfig>> = {
@@ -4406,6 +5158,8 @@ export const calculatorRegistry: Record<string, Record<string, CalculatorConfig>
     "block-fill-calculator": blockFillCalculator,
     "mortar-mix-calculator": mortarMixCalculator,
     "retaining-wall-calculator": retainingWallCalculator,
+    "rebar-calculator": rebarCalculator,
+    "rebar-spacing-calculator": rebarSpacingCalculator,
   },
   "floor-framing": {
     "rim-joist-calculator": rimJoistCalculator,
@@ -4420,6 +5174,7 @@ export const calculatorRegistry: Record<string, Record<string, CalculatorConfig>
     "top-plate-calculator": topPlateCalculator,
     "header-calculator": headerCalculator,
     "exterior-sheathing-calculator": exteriorSheathingCalculator,
+    "rake-wall-calculator": rakeWallCalculator,
   },
   roofing: {
     "truss-calculator": trussCalculator,
@@ -4432,12 +5187,18 @@ export const calculatorRegistry: Record<string, Record<string, CalculatorConfig>
     "roof-pitch-calculator": roofPitchCalculator,
     "roof-area-calculator": roofAreaCalculator,
     "roof-slope-calculator": roofSlopeCalculator,
+    "hip-roof-calculator": hipRoofCalculator,
+    "gambrel-roof-calculator": gambrelRoofCalculator,
+    "gable-roof-calculator": gableRoofCalculator,
+    "lean-to-roof-calculator": leanToRoofCalculator,
   },
   "exterior-shell": {
     "housewrap-calculator": housewrapCalculator,
     "vinyl-siding-calculator": vinylSidingCalculator,
     "hardie-siding-calculator": hardieSidingCalculator,
     "window-flashing-calculator": windowFlashingCalculator,
+    "soffit-calculator": soffitCalculator,
+    "board-and-batten-calculator": boardAndBattenCalculator,
   },
   "insulation-drywall": {
     "cavity-insulation-calculator": cavityInsulationCalculator,
@@ -4470,6 +5231,7 @@ export const calculatorRegistry: Record<string, Record<string, CalculatorConfig>
     "fence-post-calculator": fencePostCalculator,
     "fence-panel-calculator": fencePanelCalculator,
     "picket-fence-calculator": picketFenceCalculator,
+    "deck-board-spacing-calculator": deckBoardSpacingCalculator,
   },
   flooring: {
     "flooring-calculator": flooringCalculator,
@@ -4483,5 +5245,6 @@ export const calculatorRegistry: Record<string, Record<string, CalculatorConfig>
     "rise-over-run-calculator": riseOverRunCalculator,
     "spiral-staircase-calculator": spiralStaircaseCalculator,
     "stair-landing-calculator": stairLandingCalculator,
+    "baluster-spacing-calculator": balusterSpacingCalculator,
   },
 };

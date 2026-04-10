@@ -127,6 +127,22 @@ export const categories: CategoryMeta[] = [
         category: "Cimentación",
         categorySlug: "foundation",
       },
+      {
+        slug: "rebar-calculator",
+        title: "Calculadora de Varilla Gratis — Barras, Metros y Peso (2026)",
+        description:
+          "¿Cuánta varilla corrugada necesito? Calculadora gratis para losas, zapatas y muros — cantidad de barras, metros lineales y peso en kg.",
+        category: "Cimentación",
+        categorySlug: "foundation",
+      },
+      {
+        slug: "rebar-spacing-calculator",
+        title: "Espaciado de Varilla Gratis — Distribución y Cantidad (2026)",
+        description:
+          "Calculadora de espaciado de varilla — herramienta gratis para distribución óptima por tipo de carga. Cantidad de barras, metros y soportes.",
+        category: "Cimentación",
+        categorySlug: "foundation",
+      },
     ],
   },
   {
@@ -223,6 +239,14 @@ export const categories: CategoryMeta[] = [
         category: "Entramado de Muros",
         categorySlug: "wall-framing",
       },
+      {
+        slug: "rake-wall-calculator",
+        title: "Muro Inclinado Gratis — Montantes y Cortes (2026)",
+        description:
+          "Calculadora de muro inclinado gratis — obtén cantidad de montantes, alturas individuales y ángulo de corte para muros que siguen la pendiente del techo.",
+        category: "Entramado de Muros",
+        categorySlug: "wall-framing",
+      },
     ],
   },
   {
@@ -311,6 +335,38 @@ export const categories: CategoryMeta[] = [
         category: "Techado",
         categorySlug: "roofing",
       },
+      {
+        slug: "hip-roof-calculator",
+        title: "Techo a Cuatro Aguas Gratis — Cabios, Área y Materiales (2026)",
+        description:
+          "Calculadora de techo a cuatro aguas gratis — cantidad de cabios, largo de cabio de lima, área de techo y largo del caballete. Para cualquier tamaño de edificio.",
+        category: "Techado",
+        categorySlug: "roofing",
+      },
+      {
+        slug: "gambrel-roof-calculator",
+        title: "Techo Mansarda Gratis — Cabios y Área (2026)",
+        description:
+          "Calculadora de techo mansarda (granero) gratis — cabios superiores e inferiores, área de techo y altura de pared ganada. Ingresa dos pendientes.",
+        category: "Techado",
+        categorySlug: "roofing",
+      },
+      {
+        slug: "gable-roof-calculator",
+        title: "Techo a Dos Aguas Gratis — Cabios, Cumbrera y Área (2026)",
+        description:
+          "Calculadora de techo a dos aguas gratis — cantidad de cabios, largo de cumbrera, área de techo y área del frontón. Ingresa dimensiones y pendiente.",
+        category: "Techado",
+        categorySlug: "roofing",
+      },
+      {
+        slug: "lean-to-roof-calculator",
+        title: "Techo de Cobertizo Gratis — Cabios y Área (2026)",
+        description:
+          "Calculadora de techo de cobertizo (un agua) gratis — cantidad de cabios, largo, área de techo y altura. Para ampliaciones y cobertizos.",
+        category: "Techado",
+        categorySlug: "roofing",
+      },
     ],
   },
   {
@@ -348,6 +404,22 @@ export const categories: CategoryMeta[] = [
         title: "Tapajuntas de Ventana Gratis — Metros y Rollos (2026)",
         description:
           "Calculadora de tapajuntas: Estima metros lineales de cinta autoadhesiva para ventanas. Herramienta gratis para anchos de 10 cm, 15 cm y 23 cm.",
+        category: "Revestimiento Exterior",
+        categorySlug: "exterior-shell",
+      },
+      {
+        slug: "soffit-calculator",
+        title: "Calculadora de Sofito Gratis — Paneles y Canal J (2026)",
+        description:
+          "¿Cuántos paneles de sofito necesito? Calculadora gratis por perímetro y ancho de alero — incluye canal J y ventilación.",
+        category: "Revestimiento Exterior",
+        categorySlug: "exterior-shell",
+      },
+      {
+        slug: "board-and-batten-calculator",
+        title: "Tabla y Listón Gratis — Tablas, Listones y Costo (2026)",
+        description:
+          "Calculadora de tabla y listón gratis — obtén cantidad de tablas y listones por área de muro. Para revestimiento vertical exterior.",
         category: "Revestimiento Exterior",
         categorySlug: "exterior-shell",
       },
@@ -575,6 +647,14 @@ export const categories: CategoryMeta[] = [
         category: "Exteriores",
         categorySlug: "outdoor",
       },
+      {
+        slug: "deck-board-spacing-calculator",
+        title: "Espaciado de Tablas de Deck Gratis — Separación Uniforme (2026)",
+        description:
+          "Calculadora de espaciado de tablas de deck gratis — obtén separación uniforme entre tablas para cualquier ancho de tabla y largo de deck. Evita pandeo y acumulación de agua.",
+        category: "Exteriores",
+        categorySlug: "outdoor",
+      },
     ],
   },
   {
@@ -632,6 +712,14 @@ export const categories: CategoryMeta[] = [
         title: "Escalera con Descanso Gratis — Tramos y Dimensiones (2026)",
         description:
           "Calculadora de escalera con descanso gratis — divide tramos con descanso intermedio. Obtén peldaños por tramo, altura del descanso y recorrido total.",
+        category: "Escaleras",
+        categorySlug: "stairs",
+      },
+      {
+        slug: "baluster-spacing-calculator",
+        title: "Espaciado de Balaustres Gratis — Cantidad y Separación (2026)",
+        description:
+          "Calculadora de espaciado de balaustres gratis — obtén cantidad exacta y separación uniforme para barandales de escaleras y decks. Cumple normas IRC.",
         category: "Escaleras",
         categorySlug: "stairs",
       },

@@ -2256,6 +2256,454 @@ const stairLandingCalcGB: CalculatorSEOContent = {
   ],
 };
 
+// ─── REINFORCEMENT ──────────────────────────────────────────────────────────
+
+export const rebarCalculator: CalculatorSEOContent = {
+  disclaimer: "This estimate assumes a single-layer flat grid. Actual reinforcement requirements depend on structural engineer specifications, ground conditions, and Building Regulations. Always consult a chartered structural engineer for load-bearing and seismic applications.",
+  howToUse: [
+    "Enter the slab length and width in metres.",
+    "Set the desired bar spacing — 150 mm centres is common for residential slabs.",
+    "Select the bar size: T10 for light duty, T12 for standard residential, T16 for structural.",
+    "Click Calculate for bar count, linear metres, and total weight.",
+  ],
+  materialInfo:
+    "Reinforcement bar (rebar) is deformed high-yield steel bar embedded in concrete to provide tensile strength that concrete alone cannot resist. Concrete performs well in compression but is weak in tension — rebar bridges cracks and holds the slab together under load. The most common sizes for residential and light commercial work in the UK are: T8 (0.395 kg/m), T10 (0.617 kg/m), T12 (0.888 kg/m), and T16 (1.578 kg/m). Standard rebar comes in 6-metre and 12-metre lengths from UK stockists. When a slab dimension exceeds the bar length, bars must be lapped with an overlap of at least 40 bar diameters — that is 480 mm for T12. B500B grade steel (yield strength 500 MPa) is the standard per BS 4449 and Eurocode 2 for residential construction in the UK. It is available in plain (black) carbon steel, stainless steel (grade 316 for marine environments), and epoxy-coated for car parks and structures exposed to de-icing salts. Typical spacing is 150 mm centres in both directions for 150 mm residential slabs, 200 mm for lightly loaded patios, and 100 mm for garage slabs or structural applications. Rebar must be elevated from the blinding on spacers (chairs or bar supports) so it sits in the lower third of the slab thickness — placing rebar on the ground provides zero structural benefit. Current pricing runs approximately £0.80–£1.50 per linear metre for T12, or £5–£9 per 6 m length.",
+  nextSteps: [
+    { label: "Reinforcement Spacing Calculator", href: "/calculators/foundation/rebar-spacing-calculator/" },
+    { label: "Concrete Slab Calculator", href: "/calculators/foundation/concrete-slab-calculator/" },
+    { label: "Concrete Footing Calculator", href: "/calculators/foundation/concrete-footing-calculator/" },
+  ],
+  installationTips: [
+    "Place rebar on spacers (concrete chairs or plastic bar supports) so it sits in the lower third of the slab — never lay bars directly on the blinding.",
+    "Lap splices by 40 bar diameters (480 mm for T12) and secure with tie wire at every intersection.",
+    "Tie every intersection with 1.6 mm soft annealed tie wire using a rebar tier or manual hook.",
+    "Maintain minimum concrete cover of 40 mm (ground-bearing slabs) to 50 mm (aggressive environments) per BS 8500.",
+    "Cut rebar with a rebar cropper or angle grinder with metal disc — never use a gas torch, which weakens the steel.",
+    "Bend rebar cold using a manual or hydraulic bar bender — heating weakens the bar and voids the design specification.",
+  ],
+  commonMistakes: [
+    "Laying rebar on the ground instead of elevating it on spacers — without proper placement the rebar provides no structural value.",
+    "Insufficient lap length — laps shorter than 40 bar diameters will pull apart under load.",
+    "Using the wrong bar size — T8 is too light for garage slabs; use T10 minimum.",
+    "Skipping tie wire at intersections — unsecured bars shift during the pour and end up misaligned.",
+    "Forgetting to account for waste — order 10–15% extra for cuts, bends, and laps.",
+  ],
+  faqs: [
+    { question: "How much reinforcement do I need for a 6×6 m slab?", answer: "A 6×6 m slab with T12 at 150 mm centres needs 41 bars running each direction — 82 bars total, approximately 44 six-metre lengths. Total linear metres are roughly 252 m weighing about 224 kg. Add 10% for waste." },
+    { question: "What size rebar for a 150 mm slab?", answer: "T12 (12 mm diameter) is the standard choice for 150 mm residential ground-bearing slabs including garage floors and basement slabs. For lightly loaded patios, T10 may suffice. For structural slabs, step up to T16 or consult a structural engineer." },
+    { question: "What spacing should I use for rebar?", answer: "The most common spacing is 150 mm centres in both directions for 150 mm residential slabs. Use 200 mm for lightly loaded patios and 100 mm for garage floors or structural applications. Your structural engineer or Building Control may specify different spacing." },
+    { question: "How much does rebar cost in the UK?", answer: "T12 rebar costs approximately £0.80–£1.50 per linear metre, or £5–£9 per 6 m length. A 6×6 m slab needs roughly 44 lengths, costing £220–£396 for materials. Stainless steel rebar costs 3–4× more. Spacers cost £0.20–£0.60 each." },
+    { question: "Do I need rebar or mesh reinforcement?", answer: "Rebar is stronger and preferred for garage floors, structural slabs, and any concrete over 150 mm thick. Welded wire mesh (A193 or A252) is acceptable for lightly loaded patios and non-structural slabs under 150 mm. For critical applications, rebar provides far superior crack control." },
+    { question: "How do I calculate reinforcement weight?", answer: "Multiply total linear metres by the weight per metre: T8 = 0.395 kg/m, T10 = 0.617 kg/m, T12 = 0.888 kg/m, T16 = 1.578 kg/m. For example, 252 linear metres of T12 weighs 252 × 0.888 = 224 kg." },
+  ],
+};
+
+export const rebarSpacingCalculator: CalculatorSEOContent = {
+  disclaimer: "Spacing recommendations are general guidelines for typical residential and light commercial use. Actual spacing must be determined by a chartered structural engineer based on loads, ground conditions, and Building Regulations.",
+  howToUse: [
+    "Enter the slab length and width in metres.",
+    "Select the bar size — T12 is standard for most residential work.",
+    "Choose the load type to get the recommended spacing.",
+    "Click Calculate for optimal spacing, bar count, and support chair quantity.",
+  ],
+  materialInfo:
+    "Rebar spacing determines how closely reinforcing bars are placed in a concrete slab, directly affecting the slab's load capacity and crack resistance. Proper spacing ensures that tensile forces are distributed evenly across the concrete section. For residential slabs (patios, basement floors, paths), 200 mm centres with T10–T12 is common. Driveways and garage floors typically use 150 mm spacing to handle vehicle loads without cracking. Structural slabs for plant rooms, commercial floors, or suspended slabs require 100 mm spacing or tighter, per the structural engineer's design. Rebar chairs (also called bar supports or spacers) are essential to keep the rebar at the correct height within the slab. The standard rule is one chair per 0.4 square metres of slab area. Chairs come in several types: individual high chairs for single bars, continuous supports for long runs, and slab bolsters for mesh. Plastic-tipped chairs are required when rebar will be near the concrete surface to prevent rust staining. The concrete cover — the distance from the rebar to the nearest concrete surface — must comply with BS 8500 and Eurocode 2: typically 40 mm for ground-bearing slabs (XC2 exposure) and 25 mm for internal formed surfaces (XC1). Insufficient cover leads to corrosion and spalling within 5 to 10 years. For slabs over 6 metres in either direction, bars must be lapped with a minimum lap length of 40 bar diameters. Laps should be staggered so that no more than 50% of the bars are lapped at the same cross-section. Cost for rebar installation (labour and materials) runs £8–£20 per square metre for a standard 150 mm grid, including chairs and tie wire.",
+  nextSteps: [
+    { label: "Reinforcement Calculator", href: "/calculators/foundation/rebar-calculator/" },
+    { label: "Concrete Slab Calculator", href: "/calculators/foundation/concrete-slab-calculator/" },
+    { label: "Concrete Calculator", href: "/calculators/foundation/concrete-calculator/" },
+  ],
+  installationTips: [
+    "Mark spacing lines on the formwork with a lumber crayon before placing rebar — this ensures an even grid layout.",
+    "Set rebar chairs every 1.2 metres in both directions before laying any bars.",
+    "Run bars in the long direction first, then cross-bars on top — tie every intersection.",
+    "Maintain 40–50 mm concrete cover from the rebar to any edge or soffit.",
+    "For slabs with crack-inducing joints, run rebar continuously through the joint — do not cut rebar at joint locations.",
+    "Walk the finished grid before the pour to check that no bars have been dislodged from the chairs.",
+  ],
+  commonMistakes: [
+    "Using too wide a spacing for the load type — 200 mm spacing is too loose for driveways and garages.",
+    "Placing chairs too far apart — unsupported rebar sags into the sub-base, eliminating its structural value.",
+    "Cutting rebar at construction joints — joints are meant to crack; the rebar must bridge across them.",
+    "Not staggering laps — placing all laps at the same location creates a weak plane in the slab.",
+    "Ignoring concrete cover requirements — less than 40 mm cover leads to premature corrosion and spalling.",
+  ],
+  faqs: [
+    { question: "What is the standard rebar spacing for a concrete slab?", answer: "The most common spacing is 150 mm centres in both directions for 150 mm residential slabs. Patios and paths can use 200 mm. Driveways and garage floors use 150 mm. Structural slabs typically require 100 mm or as specified by a structural engineer." },
+    { question: "How many rebar chairs do I need?", answer: "Plan for 1 chair per 0.4 square metres of slab area. A 6×6 m slab (36 m²) needs about 90 chairs. For heavy rebar (T16+), use chairs rated for the bar weight. Space chairs no more than 1.2 m apart in each direction." },
+    { question: "What happens if rebar spacing is too wide?", answer: "The slab will develop wider cracks under load because tensile forces are not adequately distributed. This reduces load capacity and allows water infiltration, accelerating freeze-thaw damage in UK winters." },
+    { question: "Can I use mesh instead of rebar?", answer: "Welded wire mesh (A193 or A252) is acceptable for lightly loaded patios and slabs under 150 mm thick. However, rebar provides superior crack control and is required for driveways, garage floors, and any structural slab. Mesh is harder to keep elevated on chairs during the pour." },
+    { question: "How does load type affect rebar spacing?", answer: "Heavier loads require tighter spacing. Residential slabs (foot traffic) use 200 mm. Driveways (vehicles up to 3.5 tonnes) use 150 mm. Structural applications (plant rooms, commercial floors) use 100 mm or tighter." },
+    { question: "What is the minimum concrete cover for rebar?", answer: "Per BS 8500 and Eurocode 2: 40 mm for ground-bearing slabs (XC2 exposure class), 25 mm for internal formed surfaces (XC1). For slabs exposed to de-icing salts or marine environments, cover increases to 45–50 mm with additional durability provisions." },
+  ],
+};
+
+// ─── HIP ROOF ───────────────────────────────────────────────────────────────
+
+export const hipRoofCalculator: CalculatorSEOContent = {
+  disclaimer: "Hip roof geometry is approximate. Jack rafter lengths vary — cut each to fit. Add 10–15% waste factor for timber.",
+  howToUse: [
+    "Measure the overall building length and width in metres.",
+    "Enter the roof pitch (rise per 12 units of run, or degrees).",
+    "Select your rafter spacing (400 mm or 600 mm centres).",
+    "Click Calculate for rafter counts, hip rafter length, roof area, and ridge length.",
+  ],
+  materialInfo:
+    "A hip roof has four sloped sides — two triangular ends and two trapezoidal sides — all meeting at a central ridge that is shorter than the building length. Because every wall is protected by an eave overhang, hip roofs offer superior wind resistance and are preferred in exposed coastal and upland locations across the UK. Hip roofs are more complex to frame than gable roofs, requiring four hip rafters that run diagonally from each corner to the ridge, king common rafters centred on each triangular end, and numerous jack rafters that run parallel to the common rafters but are progressively shorter as they approach each hip. The hip rafter is typically one size larger than the common rafters (e.g., 47×250 mm hip with 47×200 mm commons) because it carries loads from jack rafters on both sides. Hip rafters require compound angle cuts (a combination of plumb cut and cheek cut) that are more demanding than standard rafter cuts. The ridge board on a hip roof runs only between where the two hip rafters on each end converge, so the ridge length equals the building length minus the building width. For a typical 9×12 m hip roof at 30°, material costs run £2,500 to £5,000 for framing timber alone, with professional framing labour adding £3,000 to £7,000. All structural timbers must be C16 or C24 graded softwood per BS 5268 / Eurocode 5 and TRADA guidance. Prices from Jewson, Travis Perkins, or local timber merchants.",
+  nextSteps: [
+    { label: "Roof Sheathing Calculator", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Shingle Calculator", href: "/calculators/roofing/shingle-calculator/" },
+    { label: "Roof Pitch Calculator", href: "/calculators/roofing/roof-pitch-calculator/" },
+    { label: "Gable Roof Calculator", href: "/calculators/roofing/gable-roof-calculator/" },
+  ],
+  installationTips: [
+    "Frame hip rafters from timber one size deeper than common rafters for adequate bearing.",
+    "Use a framing square or construction calculator to determine jack rafter compound angles.",
+    "Install hip rafters first, then fill in jack rafters from longest to shortest.",
+    "Bevel the top of hip rafters (drop the hip) so sheathing lies flat across the hip line.",
+    "Brace hip rafters temporarily until sheathing or boarding is installed — they can twist under their own weight.",
+  ],
+  commonMistakes: [
+    "Using the same timber size for hip rafters as common rafters — hips carry double the load and need to be one size deeper.",
+    "Not accounting for the hip rafter drop or bevel — sheathing will not lie flat and creates a hump at the hip.",
+    "Forgetting that jack rafters require compound angle cuts, not simple plumb cuts.",
+    "Underestimating material — hip roofs use 10–15% more timber and sheathing than an equivalent gable roof.",
+  ],
+  faqs: [
+    { question: "What is a hip roof?", answer: "A hip roof has four sloped sides that all slope downward toward the walls. The two longer sides are trapezoids and the two shorter sides are triangles. All four sides meet at a ridge that runs along the top but is shorter than the full building length. Hip roofs are more wind-resistant than gable roofs and provide eave protection on all four walls." },
+    { question: "How do I calculate hip roof area?", answer: "Measure the building footprint (length × width) and multiply by the pitch multiplier for your roof slope. For a 30° pitch, the multiplier is 1.155. A 9×12 m building at 30° gives roughly 9 × 12 × 1.155 = 124.7 m² of roof area. This is slightly more than a gable roof because the hip triangles add area compared to flat gable ends." },
+    { question: "How many hip rafters does a hip roof have?", answer: "A standard hip roof has exactly 4 hip rafters — one running from each corner of the building diagonally up to the end of the ridge. Each hip rafter is longer than the common rafters because it runs at a 45-degree angle in plan view." },
+    { question: "Hip roof vs gable roof — which is better?", answer: "Hip roofs are more wind-resistant, provide shade and rain protection on all four walls, and are structurally self-bracing. Gable roofs are simpler to frame, less expensive, provide more loft space, and allow for easy ventilation with gable-end vents. In exposed and coastal locations, hip roofs are strongly preferred." },
+    { question: "How long is a hip rafter?", answer: "A hip rafter runs diagonally from the corner of the building to the ridge. Its horizontal run is the common rafter run times the square root of 2 (about 1.414). For a building 9 m wide at 30° pitch, the common rafter run is 4.5 m, the hip run is 4.5 × 1.414 = 6.36 m, and the hip rafter length is the hypotenuse of that run and the rise." },
+    { question: "What is the ridge length on a hip roof?", answer: "The ridge length on a standard hip roof equals the building length minus the building width. For a 12×9 m building, the ridge is 12 − 9 = 3 m. If the building is square, there is no ridge — the four hip rafters meet at a single peak point, creating a pyramid roof." },
+  ],
+};
+
+// ─── GAMBREL ROOF ───────────────────────────────────────────────────────────
+
+export const gambrelRoofCalculator: CalculatorSEOContent = {
+  disclaimer: "Gambrel roof proportions use a standard 67/33 lower/upper split. Actual proportions may vary based on design. Consult a chartered structural engineer for final plans.",
+  howToUse: [
+    "Enter the building length and width in metres.",
+    "Enter the lower (steep) pitch — typically 60°–70° for the barn-style walls.",
+    "Enter the upper (shallow) pitch — typically 20°–30° for the cap.",
+    "Select rafter spacing and click Calculate.",
+  ],
+  materialInfo:
+    "A gambrel roof — commonly called a barn roof or mansard-style roof in the UK — features two distinct slopes on each side: a steep lower section (typically 60–70 degrees) and a shallower upper section (typically 20–30 degrees). This dual-slope design maximises usable space inside the upper storey, making it the classic choice for barns, agricultural buildings, and some period properties. The steep lower slope functions almost like a wall, providing full-height usable space in the loft, while the shallow upper slope provides a conventional roof cap. Structurally, the transition between the two slopes (the gambrel break) requires a horizontal purlin plate that acts as a structural ledge to support the upper rafters and transfer loads to the lower rafters. Gambrel trusses can also be factory-built as a single engineered unit by UK truss manufacturers such as MiTek, Pasquill, or Gang-Nail. The gambrel design uses about 20–30% less material than adding a full second storey with a conventional gable roof, making it economical for maximising interior volume. Material costs for a 9×12 m gambrel frame run £3,500 to £7,000 for timber. All structural elements must comply with BS 5268 or Eurocode 5.",
+  nextSteps: [
+    { label: "Roof Sheathing Calculator", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Rafter Calculator", href: "/calculators/roofing/rafter-calculator/" },
+    { label: "Shingle Calculator", href: "/calculators/roofing/shingle-calculator/" },
+    { label: "Gable Roof Calculator", href: "/calculators/roofing/gable-roof-calculator/" },
+  ],
+  installationTips: [
+    "Build gambrel trusses on a flat surface (jig) to ensure consistency across all trusses.",
+    "The purlin plate at the gambrel break is structural — use an adequate beam or doubled timber stock.",
+    "Install knee braces at the lower-to-upper transition for added rigidity.",
+    "Sheathe across the gambrel break carefully — the angle change requires precise cuts.",
+    "Use collar ties or ceiling joists in the upper section to prevent outward thrust.",
+  ],
+  commonMistakes: [
+    "Undersizing the purlin plate at the slope transition — this carries significant structural loads.",
+    "Not bracing the lower-to-upper transition — the break point is the weakest part of the gambrel.",
+    "Using the same pitch on both sections — the lower must be significantly steeper than the upper to gain usable space.",
+    "Ignoring wind exposure — gambrel roofs perform poorly in high-wind areas due to the steep lower face.",
+  ],
+  faqs: [
+    { question: "What is a gambrel roof?", answer: "A gambrel roof has two different slopes on each side — a steep lower slope (typically 60 to 70 degrees) and a shallow upper slope (typically 20 to 30 degrees). This barn-style design maximises the usable interior space in the upper storey. Traditional barns and some Colonial-style buildings are the most recognisable examples of gambrel roofs." },
+    { question: "What pitches are used on a gambrel roof?", answer: "The lower (steep) section typically uses 60 to 70 degrees, while the upper (shallow) section uses 20 to 30 degrees. The steeper the lower slope, the more usable vertical wall space you gain in the upper storey." },
+    { question: "How much extra space does a gambrel roof provide?", answer: "A gambrel roof provides approximately 70 to 80 per cent of a full second-storey floor area, compared to about 40 to 50 per cent for a standard gable roof loft. This makes it economical for maximising interior volume without building full-height walls." },
+    { question: "Are gambrel roofs strong?", answer: "Gambrel roofs are strong when properly engineered and braced, but they are more vulnerable to wind uplift than hip or gable roofs due to the steep lower face acting like a sail. They are not recommended for exposed coastal or upland sites." },
+    { question: "What is the difference between a gambrel and a mansard roof?", answer: "A gambrel roof has two slopes on two sides of the building with gable ends on the other two sides. A mansard roof has two slopes on all four sides, like a hip-gambrel hybrid. Mansard roofs are common in French-inspired architecture and provide more uniform usable space but are more complex to frame." },
+    { question: "How much does a gambrel roof cost to build?", answer: "A gambrel roof costs 15 to 25 per cent more than a simple gable roof of the same footprint because of the additional complexity. For a 9×12 m building, expect £4,000 to £9,000 for framing timber and hardware, plus £5,000 to £12,000 for professional labour." },
+  ],
+};
+
+// ─── GABLE ROOF ─────────────────────────────────────────────────────────────
+
+export const gableRoofCalculator: CalculatorSEOContent = {
+  disclaimer: "Add 10–15% waste factor for cuts and overhangs. Rafter lengths do not include overhang — add 300–600 mm per rafter for eaves.",
+  howToUse: [
+    "Enter the building length (along the ridge) and width (across the gable) in metres.",
+    "Enter the roof pitch in degrees or as rise per 12 units of run.",
+    "Select your rafter spacing (400 mm centres is standard for most residential work).",
+    "Click Calculate for rafter count, roof area, ridge length, and gable end area.",
+  ],
+  materialInfo:
+    "A gable roof is the most common residential roof type in the UK, featuring two sloped sides that meet at a central ridge running the full length of the building. The triangular wall sections at each end — the gable ends — give this roof style its name. Gable roofs are popular because they are simple to design, straightforward to frame, economical on materials, and provide excellent rain and snow shedding. The two opposing slopes create natural ventilation when combined with soffit vents and a ridge vent or tile vents. Standard UK residential gable roofs are pitched between 30° and 45°, with 35° to 40° being most common. Rafters run from the wall plate to the ridge board, with a birdsmouth cut at the wall plate and a plumb cut at the ridge. Common rafter sizes in the UK are 47×100 mm (up to 2.5 m span), 47×150 mm (up to 3.5 m), 47×175 mm (up to 4.0 m), 47×200 mm (up to 4.5 m), and 47×250 mm (up to 5.5 m) at 400 mm centres, depending on timber grade (C16 or C24) and loading conditions per BS 5268 / Eurocode 5 and TRADA span tables. The gable end walls must be sheathed or filled with masonry, which adds material beyond the roof itself. For a 9×12 m gable roof at 35°, framing timber typically costs £2,000 to £4,000, with labour adding £3,000 to £6,000 for professional installation.",
+  nextSteps: [
+    { label: "Ridge Board Calculator", href: "/calculators/roofing/ridge-board-calculator/" },
+    { label: "Roof Sheathing Calculator", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Shingle Calculator", href: "/calculators/roofing/shingle-calculator/" },
+    { label: "Hip Roof Calculator", href: "/calculators/roofing/hip-roof-calculator/" },
+  ],
+  installationTips: [
+    "Cut a pattern rafter first and test-fit before cutting the full set.",
+    "Use a roofing square to mark consistent birdsmouth and plumb cuts.",
+    "Install the ridge board on temporary supports before setting rafters.",
+    "Work from both ends toward the centre when setting opposing rafter pairs.",
+    "Install collar ties in the upper third of the rafters to prevent wall spread.",
+  ],
+  commonMistakes: [
+    "Forgetting to add overhang length to the rafter measurement — add 300 to 600 mm per rafter beyond the wall plate for eaves.",
+    "Not including gable end sheathing or cladding in the material estimate.",
+    "Using the building width as the rafter run — the run is half the width for each side.",
+    "Omitting collar ties or ceiling joists — without them the rafters will push the walls outward over time.",
+  ],
+  faqs: [
+    { question: "What is a gable roof?", answer: "A gable roof is the classic two-sided triangular roof shape formed by two sloped planes meeting at a central ridge. The vertical triangular wall sections at each end are called gable ends. It is the most common roof type in the UK because of its simplicity, low cost, and effective water drainage." },
+    { question: "How do I calculate gable roof area?", answer: "Multiply half the building width (the rafter run) by the pitch multiplier, then multiply by the building length to get one slope area. Double that for both sides. For a 9×12 m building at 35°: run = 4.5 m, multiplier = 1.221, one side = 4.5 × 1.221 × 12 = 65.9 m², total = 131.9 m²." },
+    { question: "What is gable end area and why does it matter?", answer: "The gable end is the triangular wall section between the two roof slopes at each end of the building. Its area equals half the building width times the roof rise. This area must be clad or filled, and is often forgotten when estimating materials." },
+    { question: "What pitch is best for a gable roof in the UK?", answer: "35° to 40° is the most common range for UK residential gable roofs, providing a good balance of appearance, material efficiency, and suitability for tiles and slates. Pitches below 35° limit the choice of roof covering; pitches above 45° increase material costs." },
+    { question: "How many rafters do I need for a gable roof?", answer: "Divide the building length by the rafter spacing (in metres), add one, then multiply by two for both sides. For a 12 m building at 400 mm centres: (12 / 0.4) + 1 = 31 per side, 62 total. Add 10% for waste." },
+    { question: "Gable vs hip roof — which costs less?", answer: "Gable roofs cost 15 to 25 per cent less than hip roofs because they use less timber, have simpler cuts, and are faster to frame. However, gable roofs are less wind-resistant and expose the gable end walls to weather." },
+  ],
+};
+
+// ─── LEAN-TO / SHED ROOF ───────────────────────────────────────────────────
+
+export const leanToRoofCalculator: CalculatorSEOContent = {
+  disclaimer: "Lean-to measurements assume a single-slope roof with no valleys or hips. Add 10–15% waste for materials. Rafter length does not include overhang.",
+  howToUse: [
+    "Enter the roof length (the dimension along the supporting wall) in metres.",
+    "Enter the roof run (how far the roof extends from the wall) in metres.",
+    "Enter the pitch in degrees or as rise per 12 units of run.",
+    "Select rafter spacing and click Calculate for rafter count, length, area, and rise height.",
+  ],
+  materialInfo:
+    "A lean-to roof (also called a mono-pitch, shed, or pent roof) is the simplest roof form — a single sloped plane that leans against an existing structure or spans between walls of different heights. Lean-to roofs are the standard choice for extensions, conservatories, covered porches, carports, and garden sheds across the UK. The high side is typically attached to an existing building wall using a ledger board or bolted timber plate, while the low side rests on a beam supported by posts or a lower wall. Because there is only one slope, lean-to roofs are the most economical to frame — they require approximately half the rafters of a gable roof of the same footprint and have no ridge board, no hip or valley rafters, and no compound cuts. Typical lean-to pitches for extensions are 15° to 30°. The minimum pitch depends on the roofing material: 10° for membrane (EPDM, GRP), 5° for standing seam metal, and 15° for tiles or slates per BS 5534. Rafter sizes follow TRADA span tables — 47×150 mm for runs up to 3.5 m, 47×175 mm for up to 4.0 m, and 47×200 mm for up to 4.5 m at 400 mm centres in C16 or C24 graded softwood. Flashing at the wall junction (lead Code 4 stepped flashing is standard) is critical to prevent water ingress. A 3.6×6 m lean-to costs £700 to £1,800 in framing timber and £300 to £700 for roofing materials, with professional labour adding £1,200 to £3,000. Building Regulations approval is required for lean-to extensions under Approved Document A (structure) and Part L (thermal performance).",
+  nextSteps: [
+    { label: "Rafter Calculator", href: "/calculators/roofing/rafter-calculator/" },
+    { label: "Roof Sheathing Calculator", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Roof Pitch Calculator", href: "/calculators/roofing/roof-pitch-calculator/" },
+    { label: "Gable Roof Calculator", href: "/calculators/roofing/gable-roof-calculator/" },
+  ],
+  installationTips: [
+    "Attach the ledger board to the existing wall structure with M12 coach bolts into masonry or timber — never anchor to cladding alone.",
+    "Install lead Code 4 stepped flashing above the ledger to prevent water from entering the wall.",
+    "Use a string line from the ledger to the beam to verify consistent rafter slope before cutting.",
+    "Slope the roof away from the existing building to direct water runoff to the low side.",
+    "For runs over 4 metres, consider using an intermediate support beam to reduce rafter size requirements.",
+  ],
+  commonMistakes: [
+    "Attaching the ledger to cladding or render instead of structural masonry — the ledger must be bolted into solid wall material.",
+    "Forgetting flashing above the ledger — this is the most common source of water damage in lean-to extensions.",
+    "Pitching the roof toward the existing building instead of away — water must drain to the low (outer) side.",
+    "Using too shallow a pitch for the chosen roof covering — tiles and slates need at least 15° per BS 5534.",
+  ],
+  faqs: [
+    { question: "What is a lean-to roof?", answer: "A lean-to roof is a single-slope roof that typically leans against an existing building wall. One end is higher (attached to the wall via a ledger board) and the other is lower (supported by posts and a beam or a lower wall). It is the simplest and most economical roof type, commonly used for extensions, porches, carports, and sheds." },
+    { question: "What is the minimum pitch for a lean-to roof?", answer: "The minimum pitch depends on the roofing material: 5° for standing seam metal, 10° for membrane roofing (EPDM, GRP), and 15° for tiles or slates per BS 5534. For most lean-to structures, 15° to 25° provides a good balance of water shedding and headroom." },
+    { question: "How do I calculate lean-to roof area?", answer: "Multiply the roof length (along the wall) by the rafter length (run divided by cosine of pitch angle). For a 6×3.6 m lean-to at 20°, the rafter length is 3.6 / cos(20°) = 3.83 m, so the area is 6 × 3.83 = 23 m²." },
+    { question: "How high does a lean-to roof rise?", answer: "The rise equals the run times the tangent of the pitch angle. For a 3.6 m run at 20°: 3.6 × tan(20°) = 1.31 m of rise. The high side of the roof will be 1.31 m higher than the low side." },
+    { question: "Can I attach a lean-to to any wall?", answer: "You can attach a lean-to to any structural wall that can support the ledger loads. Brick, block, and stone walls are suitable with appropriate fixings. Timber-frame walls require bolting into the structural frame. Always verify the existing wall can handle the additional roof load, especially for snow." },
+    { question: "How much does a lean-to roof cost?", answer: "A basic 3.6×6 m lean-to costs £700 to £1,800 for framing timber (rafters, ledger, beam, posts), £300 to £700 for roofing materials (boarding, underlay, tiles or slates), and £1,200 to £3,000 for professional labour. Total installed cost is typically £2,200 to £5,500." },
+  ],
+};
+
+// ─── BALUSTER SPACING ───────────────────────────────────────────────────────
+
+export const balusterSpacingCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "Calculations are based on Building Regulations Approved Document K which limits openings to a maximum of 100 mm. Verify requirements with your local Building Control office as requirements can differ for listed buildings and non-domestic structures.",
+  howToUse: [
+    "Measure the total railing length in millimetres from post to post (or end to end).",
+    "Enter the baluster width (38 mm for standard square balusters, 20 mm for round).",
+    "Enter the post width (90 mm for standard 100×100 mm posts).",
+    "Enter the number of posts and click Calculate for exact baluster count and even spacing.",
+  ],
+  materialInfo:
+    "Balusters (also called spindles) are the vertical fill members in a balustrade system that prevent falls and meet Building Regulations. Approved Document K requires that a 100 mm sphere cannot pass through any opening in a guarding — this applies between balusters, between balusters and posts, between the bottom rail and the floor or deck surface, and through any decorative opening.\n\nStandard square balusters are 41 mm (matching a 41×41 mm PAR spindle), and round balusters are typically 20–25 mm in diameter. With 41 mm square balusters and a 100 mm maximum gap, you need approximately 7 balusters per linear metre of railing. A typical 1.8 m railing section uses 12 to 14 balusters.\n\nCommon materials include treated softwood (£1–£3 each), oak (£4–£8 each), wrought iron or steel (£5–£12 each), and glass panels (£50–£120 per panel). Stainless steel wire systems use 3 mm cables at 50 mm spacing as an alternative to vertical balusters.\n\nThis calculator distributes balusters evenly within each section so that every gap is identical — resulting in a uniform, professional appearance that automatically meets the 100 mm code requirement. Available from Jewson, Travis Perkins, Wickes, or specialist staircase suppliers.",
+  nextSteps: [
+    { label: "Deck Railing Calculator", href: "/calculators/outdoor/deck-railing-calculator/" },
+    { label: "Stair Calculator", href: "/calculators/stairs/stair-calculator/" },
+    { label: "Deck Board Calculator", href: "/calculators/outdoor/deck-board-calculator/" },
+  ],
+  installationTips: [
+    "Cut a spacer block to the calculated gap width and use it between every baluster for perfectly even spacing.",
+    "Pre-drill screw holes in timber balusters to prevent splitting — especially hardwoods and small cross-sections.",
+    "Install the bottom rail first, set all balusters with the spacer, then attach the top rail.",
+    "Use exterior-grade adhesive in addition to screws for long-term durability in weather-exposed balustrades.",
+  ],
+  commonMistakes: [
+    "Spacing balusters too far apart — the 100 mm sphere test applies to every opening, not just the average gap.",
+    "Forgetting to subtract post widths from the total railing length when calculating available space.",
+    "Not pre-drilling timber balusters — small cross-sections split easily when screwed near the ends.",
+    "Ignoring the gap between the deck surface and the bottom rail — the 100 mm rule applies here too.",
+  ],
+  faqs: [
+    { question: "What is the maximum gap between balusters in the UK?", answer: "Building Regulations Approved Document K requires that a 100 mm sphere cannot pass through any opening in a guarding. With standard 41 mm square balusters, this means the gap between adjacent balusters must be less than 100 mm." },
+    { question: "How many balusters do I need per metre?", answer: "With standard 41 mm square balusters and the code-required 100 mm maximum gap, you need approximately 7 balusters per linear metre of railing." },
+    { question: "Can I use horizontal railing instead of vertical balusters?", answer: "Some designs allow horizontal members, but the 100 mm sphere rule still applies between horizontal rails. Many Building Control officers discourage horizontal designs because children can climb them. Check with your local authority." },
+    { question: "What height should the railing be?", answer: "Building Regulations require a minimum guarding height of 900 mm for domestic buildings (landings, balconies, decks) and 1,100 mm for external balconies above 600 mm drop or non-domestic buildings." },
+    { question: "What material is best for exterior balusters?", answer: "Stainless steel and composite balusters offer the best durability with minimal maintenance. Treated softwood is the most affordable but needs periodic treatment. Oak is a natural durable option but costs more." },
+    { question: "Do I need Building Regs approval for a balustrade?", answer: "Yes. Any guarding on a deck, balcony, or staircase is subject to Building Regulations Approved Document K. Building Control will check height, baluster spacing, post fixings, and structural adequacy." },
+  ],
+};
+
+// ─── SOFFIT ──────────────────────────────────────────────────────────────────
+
+export const soffitCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "This estimate assumes standard 300 mm wide soffit panels. Actual panel widths and coverage vary by manufacturer. Add 10% waste for cuts and fitting.",
+  howToUse: [
+    "Measure the total perimeter of your house in metres.",
+    "Measure the soffit width (distance from the wall to the fascia board) in millimetres.",
+    "Enter the soffit panel length (typically 5 m for standard uPVC panels).",
+    "Click Calculate to get panel count, J-channel length, and vent strip quantity.",
+  ],
+  materialInfo:
+    "Soffit is the material that covers the underside of the roof overhang (eaves), spanning the gap between the exterior wall and the fascia board. Its primary functions are protecting the rafter feet and roof structure from weather, pests, and moisture whilst providing loft ventilation when vented panels are used.\n\nSoffit panels come in three main ventilation styles: solid (no ventilation), centre-vented (perforated strip down the middle), and fully vented (perforated across the entire panel). A properly ventilated soffit combined with ridge or tile ventilation creates continuous airflow through the loft, preventing moisture buildup, condensation, and excessive heat — as required by Building Regulations Part F and Part C.\n\nThe most common material in UK residential use is uPVC, available in white, woodgrain, and anthracite grey finishes. Standard panel dimensions are 300 mm wide by 5 m long. Prices range from £4 to £10 per metre run from Wickes, Screwfix, B&Q, or specialist suppliers such as Freefoam and Eurocell. Timber soffit boards (typically 9 mm plywood or tongue-and-groove softwood) are used on period properties.\n\nFor a house with 50 m of perimeter and 450 mm overhangs, expect roughly 34 panels, 100 m of J-channel or F-channel, and ventilation strips as needed.",
+  nextSteps: [
+    { label: "Vinyl Siding Calculator", href: "/calculators/exterior-shell/vinyl-siding-calculator/" },
+    { label: "Drip Edge Calculator", href: "/calculators/roofing/drip-edge-calculator/" },
+    { label: "Hardie Siding Calculator", href: "/calculators/exterior-shell/hardie-siding-calculator/" },
+  ],
+  installationTips: [
+    "Install J-channel along the wall first, keeping it level and straight — any deviation will show in the finished panels.",
+    "Leave 3–5 mm of expansion gap at each end of uPVC panels to prevent buckling in warm weather.",
+    "Alternate between vented and solid panels if you need partial ventilation rather than full venting.",
+    "Cut panels with a fine-tooth circular saw blade (reversed for uPVC) or tin snips for clean edges.",
+  ],
+  commonMistakes: [
+    "Not leaving expansion gaps — uPVC soffit panels buckle and warp when installed too tightly.",
+    "Installing all solid panels when loft ventilation is needed — use at least one-third vented panels per Building Regs Part F.",
+    "Failing to level the J-channel — any bow or dip will be visible in the finished soffit.",
+    "Forgetting end caps where the soffit terminates at gable ends or porch transitions.",
+  ],
+  faqs: [
+    { question: "What is soffit and why do I need it?", answer: "Soffit is the panel covering the underside of the roof overhang. It protects rafter feet from weather and pests, provides loft ventilation when vented, and gives the eaves a finished appearance." },
+    { question: "Do I need vented soffit?", answer: "Yes, if your loft requires ventilation under Building Regulations Part F and Part C. Vented soffit allows air to enter at the eaves and exit at the ridge, creating continuous airflow that prevents condensation and moisture damage." },
+    { question: "How much does soffit cost in the UK?", answer: "uPVC soffit costs £4–£10 per metre run for materials. For a typical house with 50 m perimeter and 450 mm overhangs, materials run £200–£500 and professional installation adds £400–£800." },
+    { question: "Can I install soffit over existing soffit?", answer: "Yes, if the existing soffit is in good condition and firmly attached. Install new J-channel over the old surface. If the old soffit is damaged, rotted, or sagging, remove it completely first." },
+    { question: "What width soffit panel do I need?", answer: "Soffit panel width depends on your overhang. Standard 300 mm panels work for overhangs up to 300 mm. For wider overhangs (450–600 mm), use two rows of panels or wider single panels available from some manufacturers." },
+    { question: "Where can I buy soffit panels in the UK?", answer: "uPVC soffit panels are available from Wickes, B&Q, Screwfix, Toolstation, and specialist suppliers such as Freefoam and Eurocell. Roofline packs (soffit, fascia, and accessories together) often offer better value." },
+  ],
+};
+
+// ─── BOARD AND BATTEN ────────────────────────────────────────────────────────
+
+export const boardAndBattenCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "This estimate assumes standard vertical installation with boards placed edge-to-edge and battens covering the seams. Add 10% waste for cuts around doors and windows.",
+  howToUse: [
+    "Calculate total wall area in square metres (perimeter × height, minus doors and windows).",
+    "Enter board width (common: 150, 200, 250, or 300 mm).",
+    "Enter batten width (common: 38 to 75 mm).",
+    "Enter wall height in metres and click Calculate.",
+  ],
+  materialInfo:
+    "Board and batten is a classic vertical cladding pattern consisting of wide boards installed upright with narrow strips (battens) covering the seams between them. This design allows natural timber movement — the boards can expand and contract with humidity changes without opening visible gaps, because the battens bridge the joints.\n\nHistorically one of the most common cladding methods on agricultural buildings and rural cottages, board and batten has experienced a major resurgence in modern farmhouse and contemporary architecture. In the UK, it is available in natural timber (western red cedar, Siberian larch, treated softwood), engineered timber (Accoya), and fibre cement (Marley Cedral, James Hardie).\n\nBoard widths typically range from 150 to 300 mm, with 200–250 mm boards being the most popular for residential use. Battens are typically 38 to 75 mm wide. The wider the board, the more rustic the appearance; narrower boards with slim battens create a more refined look.\n\nCosts vary by material: treated softwood runs £3–£8 per linear metre, larch £5–£10, cedar £8–£15, and fibre cement £6–£12. For a typical 45 m² wall, expect 50–70 boards and 55–75 battens depending on width choices.\n\nInstallation requires a breather membrane behind the cladding and a ventilated cavity of at least 25 mm per Building Regulations Part C.",
+  nextSteps: [
+    { label: "Vinyl Siding Calculator", href: "/calculators/exterior-shell/vinyl-siding-calculator/" },
+    { label: "Hardie Siding Calculator", href: "/calculators/exterior-shell/hardie-siding-calculator/" },
+    { label: "Housewrap Calculator", href: "/calculators/exterior-shell/housewrap-calculator/" },
+  ],
+  installationTips: [
+    "Install a breather membrane (Tyvek or equivalent) over the structural sheathing before any cladding.",
+    "Fix each board with a single fastener at centre — this allows the board to expand and contract without splitting.",
+    "Battens should be nailed through the board overlap, securing them to the battens or studs behind.",
+    "Leave a 3 mm gap between the bottom of boards and horizontal trim for drainage.",
+    "Pre-treat or seal all cut ends and back surfaces before installation to prevent moisture absorption.",
+  ],
+  commonMistakes: [
+    "Nailing boards at both edges — this restricts natural expansion and causes splits and cupping.",
+    "Skipping the breather membrane — essential to prevent water damage to the wall structure per Building Regs Part C.",
+    "Using battens too narrow to adequately cover the board joints — minimum 38 mm recommended.",
+    "Not sealing cut ends — untreated end grain absorbs moisture rapidly, leading to premature rot.",
+  ],
+  faqs: [
+    { question: "What is board and batten cladding?", answer: "Board and batten is a vertical cladding style with wide boards installed upright and narrow strips (battens) covering the joints between them. It allows timber movement whilst maintaining a weather-tight exterior." },
+    { question: "What materials work for board and batten in the UK?", answer: "Common materials include western red cedar (most traditional), Siberian larch (durable, popular in modern designs), treated softwood (budget option), Accoya (modified timber, 50-year durability), and fibre cement (Marley Cedral, James Hardie — low maintenance)." },
+    { question: "How much does board and batten cladding cost?", answer: "Material costs range from £3–£8 per linear metre for treated softwood, £5–£10 for larch, £8–£15 for cedar, and £6–£12 for fibre cement. Professional installation adds £30–£60 per m². A typical house elevation costs £3,000–£10,000 installed." },
+    { question: "Can board and batten be installed horizontally?", answer: "Traditionally it is vertical, but horizontal installation is possible. However, horizontal battens can trap water against the boards, requiring more careful detailing for drainage. Vertical installation is recommended for best weather performance." },
+    { question: "How wide should boards and battens be?", answer: "Boards of 200–250 mm with 50 mm battens are the most popular residential choice. Wider boards (300 mm) create a more rustic look; narrower boards (150 mm) with slim battens look more refined and modern." },
+    { question: "Do I need a breather membrane behind board and batten?", answer: "Yes, always. A breather membrane (such as Tyvek) behind the cladding is essential per Building Regulations Part C. Board and batten joints are not waterproof — the battens deflect most water but some can penetrate. The membrane is the true water barrier. A ventilated cavity of at least 25 mm is also required." },
+  ],
+};
+
+// ─── RAKE WALL ───────────────────────────────────────────────────────────────
+
+export const rakeWallCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "Rake wall stud heights are theoretical calculations. Always measure and cut each stud individually on site. The slope plate requires an angled cut to match the roof pitch. Add 10% waste for cuts.",
+  howToUse: [
+    "Measure the total wall length in metres along the bottom plate.",
+    "Enter the height of the short end (low side) in metres.",
+    "Enter the height of the tall end (high side) in metres.",
+    "Set stud spacing (400 or 600 mm centres) and click Calculate.",
+  ],
+  materialInfo:
+    "A rake wall (also called a gable wall or sloped-top wall) is a wall where the top plate follows the roof slope rather than running level. This creates a triangular or trapezoidal wall section where every stud has a different height, increasing progressively from the short end to the tall end.\n\nRake walls are found at gable ends of roofs, under mono-pitch roofs, in lofts, and wherever a wall meets a sloped ceiling. They are framed with the same timber as standard walls — typically 38×89 mm (3×2) or 38×140 mm (4×2) studs at 400 or 600 mm centres in C16 or C24 graded softwood.\n\nThe key difference from standard walls is that the top plate must be cut at an angle (bevel) matching the roof pitch, and every stud must be individually measured and cut. The bottom plate runs level along the floor. For studs less than about 600 mm tall, horizontal noggings between studs provide adequate fixing surface for sheathing and plasterboard.\n\nFor a 6 m rake wall going from 2.4 to 4.2 m, you will need about 16 studs at 400 mm spacing, with heights ranging from roughly 2,315 to 4,115 mm. The slope plate length (hypotenuse) will be about 6.26 m.\n\nMaterial costs are similar to standard wall framing but with higher waste due to the individual cuts. Plan for 10–15% extra timber. A 6 m rake wall typically costs £100–£250 in timber at current prices from Jewson or Travis Perkins.",
+  nextSteps: [
+    { label: "Stud Calculator", href: "/calculators/wall-framing/stud-calculator/" },
+    { label: "Gable Roof Calculator", href: "/calculators/roofing/gable-roof-calculator/" },
+    { label: "Exterior Sheathing Calculator", href: "/calculators/wall-framing/exterior-sheathing-calculator/" },
+  ],
+  installationTips: [
+    "Mark all stud positions on the bottom plate before cutting any studs.",
+    "Snap a chalk line between the short and tall end points to establish the slope plate angle.",
+    "Cut the slope plate with a bevel matching the roof pitch for proper rafter or sheathing bearing.",
+    "Measure and cut each stud individually — theoretical heights may vary due to timber irregularities.",
+    "For very short studs (under 600 mm), add horizontal noggings between adjacent studs to provide fixing surface for sheathing.",
+  ],
+  commonMistakes: [
+    "Cutting all studs to the same height — every stud in a rake wall is a different length.",
+    "Not bevelling the top (slope) plate — the roof sheathing or rafters will not seat properly without the correct angle.",
+    "Forgetting noggings for short studs — sheathing and plasterboard need adequate fixing surface across the entire wall.",
+    "Not verifying the rake wall angle matches the actual roof pitch — discrepancies cause fitting problems at the roof-wall junction.",
+  ],
+  faqs: [
+    { question: "What is a rake wall?", answer: "A rake wall is a wall where the top plate follows the roof slope instead of running level. Each stud has a progressively different height. They are found at gable ends, under mono-pitch roofs, and at any wall-to-slope intersection." },
+    { question: "How do I calculate individual stud heights?", answer: "Divide the height difference (tall minus short) by the number of stud spaces. Each successive stud increases by that increment. For a wall going from 2.4 to 4.2 m over 15 spaces, each stud is 120 mm taller than the previous one." },
+    { question: "Do I need to bevel the top plate?", answer: "Yes. The top (slope) plate must be cut at the roof pitch angle so rafters and sheathing bear properly. Use a sliding bevel gauge or digital angle finder to mark the bevel." },
+    { question: "What about very short studs?", answer: "Studs shorter than 600 mm can be difficult to fix and do not provide adequate fixing surface for sheathing. Install horizontal noggings between adjacent studs to provide a continuous fixing surface." },
+    { question: "Does stud spacing change in rake walls?", answer: "No. Horizontal stud spacing remains the same as the rest of the structure (400 or 600 mm centres). Only the height of each individual stud changes." },
+    { question: "How much extra material should I order?", answer: "Plan for 10–15% extra waste because each stud is a custom cut and offcuts rarely match another stud. The individual cuts also increase labour time compared to standard walls." },
+  ],
+};
+
+// ─── DECK BOARD SPACING ──────────────────────────────────────────────────────
+
+export const deckBoardSpacingCalculator: CalculatorSEOContent = {
+  disclaimer:
+    "Recommended gap size varies by material: 5–6 mm for dry pressure-treated timber, 3–5 mm for composites (check manufacturer specs), and no gap for freshly treated wet timber (it will shrink as it dries). Follow manufacturer spacing guidelines.",
+  howToUse: [
+    "Enter the deck width in metres (the dimension across which boards will be laid).",
+    "Enter the board width in millimetres (140 mm is standard for most decking boards).",
+    "Enter your desired gap size in millimetres (5–6 mm is typical for dry timber).",
+    "Click Calculate to get even board count and actual uniform gap.",
+  ],
+  materialInfo:
+    "Proper deck board spacing is critical for drainage, timber movement, and deck longevity. Gaps between boards allow water to drain through, air to circulate underneath, and the boards to expand and contract with temperature and humidity changes.\n\nFor pressure-treated softwood installed dry, use 5 to 6 mm gaps. If the timber is freshly treated and still wet (common straight from the merchant), install boards tightly with no gap — the timber will shrink as it dries, creating natural gaps of approximately 3 to 5 mm. Hardwood decking (such as balau or iroko) should have 5 to 8 mm gaps to allow for the harder material's slower drying.\n\nComposite decking (Trex, Millboard, TimberTech) expands and contracts with temperature. Most manufacturers specify 5 to 6 mm gaps between board ends and 3 to 5 mm side gaps. Always follow the specific manufacturer's spacing chart, which varies by installation temperature.\n\nThe standard deck board in the UK is 32×150 mm or 28×140 mm in pressure-treated softwood (£3–£6 per linear metre) or composite (£15–£40 per linear metre). For a 3.6 m deck width with 140 mm boards and 5 mm gaps, you need approximately 25 boards.\n\nThis calculator distributes boards evenly so every gap is identical — preventing the common problem of the last board having a different gap than the rest.",
+  nextSteps: [
+    { label: "Deck Board Calculator", href: "/calculators/outdoor/deck-board-calculator/" },
+    { label: "Deck Footing Calculator", href: "/calculators/outdoor/deck-footing-calculator/" },
+    { label: "Deck Railing Calculator", href: "/calculators/outdoor/deck-railing-calculator/" },
+  ],
+  installationTips: [
+    "Use a consistent spacer (5 mm plywood offcut or commercial spacer) between every board.",
+    "Install the first board perfectly parallel to the house — every subsequent board follows this reference line.",
+    "For wet pressure-treated timber, butt boards tightly together — they will shrink to create natural gaps.",
+    "For composites, follow the manufacturer's spacing chart based on installation temperature — gaps change with season.",
+  ],
+  commonMistakes: [
+    "Spacing wet pressure-treated boards with gaps — when the timber dries, gaps become too large and catch shoe heels.",
+    "Not accounting for composite thermal expansion — decks installed tight in winter may buckle in summer heat.",
+    "Inconsistent gaps — uneven spacing is highly visible and looks unprofessional. Always use a spacer.",
+    "Gaps too wide (over 8 mm) — can catch heels, allow debris accumulation, and let small objects fall through.",
+  ],
+  faqs: [
+    { question: "What is the correct gap between deck boards?", answer: "For dry pressure-treated softwood: 5 to 6 mm. For hardwood (balau, iroko): 5 to 8 mm. For composite decking: 5 to 6 mm between ends, 3 to 5 mm at sides (check manufacturer specs). For wet pressure-treated timber: install tight with no gap." },
+    { question: "Why is deck board spacing important?", answer: "Proper gaps allow water drainage, air circulation underneath the deck, and room for boards to expand and contract with weather changes. Without gaps, water pools between boards causing rot, and expanding boards can buckle." },
+    { question: "Should I gap wet pressure-treated timber?", answer: "No. Freshly treated timber has high moisture content and will shrink as it dries over 2 to 4 weeks. Install boards tightly together and the natural shrinkage will create appropriate gaps of about 3 to 5 mm." },
+    { question: "What spacer should I use?", answer: "A 5 mm plywood offcut or purpose-made deck spacer works well for timber decking. Commercial spacers like those from Camo or Kreg provide consistent spacing. Some composite manufacturers supply their own spacer clips." },
+    { question: "How do gaps change with temperature?", answer: "Composite boards expand in heat and contract in cold. A board installed at 10°C will be noticeably longer at 35°C. Most manufacturers provide a spacing chart that increases the gap for cold-weather installation to accommodate summer expansion." },
+    { question: "How many deck boards do I need?", answer: "Divide the deck width in millimetres by (board width + gap). For a 3,600 mm (3.6 m) deck with 140 mm boards and 5 mm gaps: 3,600 / 145 = 24.8, so 25 boards. This calculator adjusts the gap slightly to ensure perfectly even spacing." },
+  ],
+};
+
 // ─── REGISTRY MAP ───────────────────────────────────────────────────────────
 
 export const registryGB: Record<string, Record<string, CalculatorSEOContent>> = {
@@ -2273,6 +2721,8 @@ export const registryGB: Record<string, Record<string, CalculatorSEOContent>> = 
     "block-fill-calculator": blockFillCalculator,
     "mortar-mix-calculator": mortarMixCalculator,
     "retaining-wall-calculator": retainingWallCalculator,
+    "rebar-calculator": rebarCalculator,
+    "rebar-spacing-calculator": rebarSpacingCalculator,
   },
   "floor-framing": {
     "rim-joist-calculator": rimJoistCalculator,
@@ -2287,6 +2737,7 @@ export const registryGB: Record<string, Record<string, CalculatorSEOContent>> = 
     "top-plate-calculator": topPlateCalculator,
     "header-calculator": headerCalculator,
     "exterior-sheathing-calculator": exteriorSheathingCalculator,
+    "rake-wall-calculator": rakeWallCalculator,
   },
   roofing: {
     "truss-calculator": trussCalculator,
@@ -2299,12 +2750,18 @@ export const registryGB: Record<string, Record<string, CalculatorSEOContent>> = 
     "roof-pitch-calculator": roofPitchCalculator,
     "roof-area-calculator": roofAreaCalculator,
     "roof-slope-calculator": roofSlopeCalculator,
+    "hip-roof-calculator": hipRoofCalculator,
+    "gambrel-roof-calculator": gambrelRoofCalculator,
+    "gable-roof-calculator": gableRoofCalculator,
+    "lean-to-roof-calculator": leanToRoofCalculator,
   },
   "exterior-shell": {
     "housewrap-calculator": housewrapCalculator,
     "vinyl-siding-calculator": vinylSidingCalculator,
     "hardie-siding-calculator": hardieSidingCalculator,
     "window-flashing-calculator": windowFlashingCalculator,
+    "soffit-calculator": soffitCalculator,
+    "board-and-batten-calculator": boardAndBattenCalculator,
   },
   "insulation-drywall": {
     "cavity-insulation-calculator": cavityInsulationCalculator,
@@ -2333,6 +2790,7 @@ export const registryGB: Record<string, Record<string, CalculatorSEOContent>> = 
     "deck-stair-calculator": deckStairCalculator,
     "post-hole-calculator": postHoleCalculator,
     "pond-calculator": pondCalculator,
+    "deck-board-spacing-calculator": deckBoardSpacingCalculator,
   },
   stairs: {
     "stair-calculator": stairCalculatorGB,
@@ -2340,5 +2798,6 @@ export const registryGB: Record<string, Record<string, CalculatorSEOContent>> = 
     "rise-over-run-calculator": riseOverRunCalcGB,
     "spiral-staircase-calculator": spiralStaircaseCalcGB,
     "stair-landing-calculator": stairLandingCalcGB,
+    "baluster-spacing-calculator": balusterSpacingCalculator,
   },
 };

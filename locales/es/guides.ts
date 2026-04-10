@@ -83,6 +83,24 @@ const guides: GuidesTranslations = {
           "Cómo construir escaleras — guía completa sobre anatomía de escaleras, normas de construcción, cálculos de huella y peralte, tipos de escaleras (rectas, en L, en U, de caracol), materiales y costos.",
         href: "/guides/stair-building-guide",
       },
+      {
+        title: "Tabla de Luces de Viguetas de Piso: Referencia Completa",
+        description:
+          "Tablas de luces para viguetas de piso de 5x15, 5x20, 5x25, 5x30 cm a 30, 40 y 60 cm entre centros. Incluye especies comunes, cargas de diseño y referencias normativas.",
+        href: "/guides/joist-span-table",
+      },
+      {
+        title: "Tabla de Luces de Cabios: Referencia Completa para Techos",
+        description:
+          "Tablas de luces de cabios por tamaño, espaciado, pendiente y carga de nieve. Incluye referencias normativas para todas las especies comunes de madera.",
+        href: "/guides/rafter-span-table",
+      },
+      {
+        title: "Tabla de Luces de Viguetas de Cielo: Guía de Referencia Completa",
+        description:
+          "Tablas de luces de viguetas de cielo por tamaño, espaciado y tipo de carga. Incluye luces para entrepiso sin uso, con almacenamiento limitado y entrepiso habitable.",
+        href: "/guides/ceiling-joist-span-table",
+      },
     ],
   },
 
@@ -1910,6 +1928,516 @@ const guides: GuidesTranslations = {
         question: "\u00bfNecesito permiso para construir escaleras?",
         answer:
           "S\u00ed, la mayor\u00eda de los municipios lo requieren para escaleras permanentes. El permiso cuesta $500\u2013$5,000 MXN. Escaleras temporales y escalones cortos (1\u20132 pelda\u00f1os) t\u00edpicamente no lo requieren.",
+      },
+    ],
+  },
+
+  joistSpanTable: {
+    title: "Tabla de Luces de Viguetas de Piso: Referencia Completa",
+    metaDescription:
+      "Tablas de luces para viguetas de piso de 5x15 a 5x30 cm a 30, 40 y 60 cm entre centros. Incluye Pino, Abeto Douglas, SPF con referencias normativas, requisitos de carga y guía de dimensionamiento.",
+    heroTitle: "Tabla de Luces de Viguetas de Piso",
+    heroSubtitle: "Referencia Completa",
+    heroDescription:
+      "Tablas completas de luces de viguetas para construcción residencial. Encuentra las luces máximas permitidas para cada tamaño, espaciado, especie de madera y grado según normas de construcción.",
+
+    quickAnswerHeading: "Respuesta Rápida",
+    quickAnswerText:
+      "Una vigueta de piso de 5x25 cm en Pino Grado 2 a 40 cm entre centros puede cubrir hasta 4,70 m para una carga viva de 200 kg/m² y carga muerta de 50 kg/m². Una vigueta de 5x30 cm del mismo grado a 40 cm e/c cubre hasta 5,74 m. Siempre verifica las luces con la normativa local de construcción vigente.",
+
+    understandingHeading: "Entendiendo las Luces de Viguetas de Piso",
+    understandingText1:
+      "La luz de una vigueta es la distancia horizontal que puede cubrir entre apoyos sin deflexión excesiva o falla estructural. Las normas de construcción publican tablas que especifican luces máximas según el tamaño de la madera, especie, grado, espaciado y las cargas de diseño que debe soportar el piso.",
+    understandingText2:
+      "Las luces se calculan para dos condiciones de carga: carga viva (personas, muebles, peso en movimiento — típicamente 200 kg/m² para habitaciones y 150 kg/m² para dormitorios) y carga muerta (el peso de la estructura — típicamente 50 kg/m² para entramados estándar con cielo de yeso cartón).",
+    understandingText3:
+      "Los límites de deflexión también controlan las luces. Se requiere que las viguetas limiten la deflexión a L/360 para carga viva y L/240 para carga total, donde L es la luz. Pisos más rígidos se sienten más sólidos y previenen grietas en revestimientos cerámicos o cielos de yeso cartón.",
+
+    spanTablesHeading: "Tablas de Luces por Especie",
+    spanTablesIntro:
+      "Las siguientes tablas son para pisos con carga viva de 200 kg/m² y carga muerta de 50 kg/m². Las luces están en metros. Siempre usa la especie y grado estampados en tu madera.",
+    spanTablesColSize: "Tamaño",
+    spanTablesCol12: "30 cm e/c",
+    spanTablesCol16: "40 cm e/c",
+    spanTablesCol24: "60 cm e/c",
+    spanTablesBySpecies: [
+      {
+        species: "Pino (Douglas Fir-Larch equivalente)",
+        grade: "Grado 2 — Fb = 63 kg/cm², E = 112,000 kg/cm²",
+        rows: [
+          { size: "5x15 cm", oc12: "3,45 m", oc16: "3,15 m", oc24: "2,59 m" },
+          { size: "5x20 cm", oc12: "4,55 m", oc16: "4,14 m", oc24: "3,40 m" },
+          { size: "5x25 cm", oc12: "5,82 m", oc16: "4,70 m", oc24: "3,86 m" },
+          { size: "5x30 cm", oc12: "7,09 m", oc16: "5,74 m", oc24: "4,70 m" },
+        ],
+      },
+      {
+        species: "Pino del Sur (Southern Pine equivalente)",
+        grade: "Grado 2 — Fb = 70 kg/cm², E = 112,000 kg/cm²",
+        rows: [
+          { size: "5x15 cm", oc12: "3,45 m", oc16: "3,15 m", oc24: "2,74 m" },
+          { size: "5x20 cm", oc12: "4,55 m", oc16: "4,14 m", oc24: "3,61 m" },
+          { size: "5x25 cm", oc12: "5,82 m", oc16: "4,90 m", oc24: "3,99 m" },
+          { size: "5x30 cm", oc12: "7,09 m", oc16: "5,94 m", oc24: "4,85 m" },
+        ],
+      },
+      {
+        species: "Abeto-Pino-Abeto (SPF equivalente)",
+        grade: "Grado 2 — Fb = 61 kg/cm², E = 98,000 kg/cm²",
+        rows: [
+          { size: "5x15 cm", oc12: "3,28 m", oc16: "2,97 m", oc24: "2,46 m" },
+          { size: "5x20 cm", oc12: "4,32 m", oc16: "3,91 m", oc24: "3,23 m" },
+          { size: "5x25 cm", oc12: "5,49 m", oc16: "4,45 m", oc24: "3,63 m" },
+          { size: "5x30 cm", oc12: "6,68 m", oc16: "5,41 m", oc24: "4,42 m" },
+        ],
+      },
+      {
+        species: "Abeto-Pino (Hem-Fir equivalente)",
+        grade: "Grado 2 — Fb = 60 kg/cm², E = 91,000 kg/cm²",
+        rows: [
+          { size: "5x15 cm", oc12: "3,20 m", oc16: "2,90 m", oc24: "2,39 m" },
+          { size: "5x20 cm", oc12: "4,22 m", oc16: "3,84 m", oc24: "3,15 m" },
+          { size: "5x25 cm", oc12: "5,38 m", oc16: "4,34 m", oc24: "3,56 m" },
+          { size: "5x30 cm", oc12: "6,55 m", oc16: "5,31 m", oc24: "4,34 m" },
+        ],
+      },
+    ],
+
+    loadRequirementsHeading: "Requisitos de Carga para Pisos",
+    loadRequirementsIntro:
+      "Las normas especifican cargas mínimas de diseño para pisos residenciales. Estas cargas determinan qué tabla de luces usar.",
+    loadRequirementsItems: [
+      "Habitaciones (salas, recámaras, cocinas): 200 kg/m² carga viva + 50 kg/m² carga muerta = 250 kg/m² total",
+      "Dormitorios: 150 kg/m² carga viva + 50 kg/m² carga muerta = 200 kg/m² total (permite luces más largas)",
+      "Terrazas y balcones: 200 kg/m² carga viva + 50 kg/m² carga muerta, más carga de nieve donde aplique",
+      "Garajes: 250 kg/m² carga viva (para vehículos livianos) o según especificaciones del fabricante para cargas mayores",
+      "La carga muerta incluye peso propio de la vigueta, contrapiso, piso terminado y cielo inferior. Si usas acabados pesados como cerámica sobre mortero, incrementa la carga muerta a 75–100 kg/m²",
+      "Cargas concentradas: las normas también requieren que los pisos soporten cargas concentradas de 135 kg en un área de 0.6 m², lo cual típicamente se satisface con los límites de deflexión",
+    ],
+    loadRequirementsSummary:
+      "Para la mayoría de pisos residenciales, usa la tabla de 200/50. Cuando tengas dudas, diseña para la carga mayor — la diferencia en costo es mínima.",
+
+    factorsHeading: "Factores que Afectan la Luz de las Viguetas",
+    factorsIntro:
+      "Más allá de los valores básicos de las tablas, varios factores reales pueden aumentar o disminuir el tamaño requerido de vigueta.",
+    factorsItems: [
+      "Especie y grado de madera: Grados superiores (Estructural Selecta, Grado 1) permiten luces mayores que Grado 2 o 3. La especie determina los valores base de esfuerzo de flexión (Fb) y módulo de elasticidad (E).",
+      "Espaciado: 30 cm e/c permite las luces más largas, 40 cm e/c es el estándar para la mayoría de la construcción residencial, y 60 cm e/c es el más económico pero limita la luz.",
+      "Longitud de apoyo: Las viguetas deben apoyarse al menos 40 mm en madera o metal y 75 mm en mampostería o concreto.",
+      "Cortes y perforaciones: Agujeros y muescas en viguetas reducen su sección efectiva. Las muescas se limitan al tercio exterior de la luz y no más profundas que 1/3 del peralte.",
+      "Luces continuas vs simples: Las viguetas sobre una viga central (continuas sobre tres apoyos) pueden cubrir ligeramente más que luces simples de dos puntos.",
+      "Acabados pesados: Cerámica, piedra o madera gruesa agregan carga muerta significativa.",
+      "Voladizos: Cuando las viguetas se extienden más allá del muro de apoyo, el voladizo se limita a 1/4 de la luz posterior.",
+    ],
+    factorsSummary:
+      "Siempre usa la especie y grado reales estampados en tu madera. Cuando varios factores se combinan (acabados pesados + espaciado amplio + luz larga), considera aumentar las viguetas un tamaño para mayor margen de seguridad.",
+
+    codeReferencesHeading: "Referencias Normativas para Viguetas de Piso",
+    codeReferencesIntro:
+      "Las siguientes normas rigen el diseño de viguetas en construcción residencial. Las jurisdicciones locales pueden modificar estos requisitos.",
+    codeReferencesItems: [
+      "NOM-E/C — Normas de estructuras de madera: Tablas de luces máximas para varias especies, grados, tamaños, espaciados y condiciones de carga",
+      "Reglamento de construcción local — Apoyo: Longitud mínima de apoyo para viguetas en diferentes materiales de soporte",
+      "Requisitos de arriostramiento lateral: Las viguetas de gran peralte requieren bloqueo o puentes a intervalos que no excedan 2,40 m",
+      "Límites de cortes y perforaciones: Restricciones en agujeros y muescas para prevenir debilitamiento estructural",
+      "Programa de clavado: Clavado de vigueta a solera, vigueta a cabezal y vigueta a viga",
+      "Productos de madera ingenierada: Viguetas I, LVL y armaduras deben instalarse según especificaciones del fabricante",
+      "Requisitos de contrapiso: Espesor mínimo de contrapiso según espaciado de viguetas",
+    ],
+    codeReferencesSummary:
+      "Verifica siempre qué norma aplica tu municipio antes de finalizar tu diseño. Las normas locales pueden diferir de las normas nacionales.",
+
+    calculatorCtaHeading: "Calcula los Materiales de tu Entrepiso",
+    calculatorCtaText:
+      "Una vez que conozcas el tamaño y espaciado de tus viguetas, usa nuestras calculadoras para determinar exactamente cuántas viguetas, conectores y sujetadores necesitas.",
+    calculatorLinks: [
+      {
+        label: "Calculadora de Viguetas de Piso",
+        href: "/calculators/floor-framing/floor-joist-calculator",
+        description: "Calcula el número de viguetas, tableros de borde y bloqueo necesarios.",
+      },
+      {
+        label: "Calculadora de Contrapiso",
+        href: "/calculators/floor-framing/subfloor-calculator",
+        description: "Estima las placas de contrachapado u OSB y sujetadores para tu contrapiso.",
+      },
+      {
+        label: "Calculadora de Conectores de Vigueta",
+        href: "/calculators/floor-framing/joist-hanger-calculator",
+        description: "Calcula conectores y tornillos estructurales para cada conexión.",
+      },
+    ],
+    faqHeading: "Preguntas Frecuentes",
+    faqs: [
+      {
+        question: "¿Cuánto puede cubrir una vigueta de 5x25 cm?",
+        answer:
+          "Depende de la especie, grado y espaciado. Para Pino Grado 2 a 40 cm e/c con carga viva de 200 kg/m², la luz máxima es de 4,70 m. A 30 cm e/c aumenta a 5,82 m. Siempre consulta las tablas de tu normativa local.",
+      },
+      {
+        question: "¿Cuánto puede cubrir una vigueta de 5x30 cm?",
+        answer:
+          "Una vigueta de 5x30 cm en Pino Grado 2 a 40 cm e/c puede cubrir hasta 5,74 m para carga viva de 200 kg/m². A 30 cm e/c, la luz aumenta a 7,09 m. Para las luces más largas posibles, usa grado Estructural Selecta.",
+      },
+      {
+        question: "¿Puedo usar viguetas de 5x15 cm?",
+        answer:
+          "Sí, pero las viguetas de 5x15 cm se limitan a luces cortas: alrededor de 2,90–3,15 m a 40 cm e/c dependiendo de la especie. Son adecuadas para cuartos pequeños, closets y plataformas, pero no para luces típicas de habitaciones.",
+      },
+      {
+        question: "¿Cuál es la diferencia entre carga viva y carga muerta?",
+        answer:
+          "La carga viva es el peso de personas, muebles y objetos móviles (típicamente 200 kg/m² para residencial). La carga muerta es el peso permanente de la estructura — viguetas, contrapiso, piso terminado y cielo inferior (típicamente 50 kg/m²). Juntas determinan la carga total de diseño.",
+      },
+      {
+        question: "¿Debo usar 40 cm o 60 cm entre centros?",
+        answer:
+          "40 cm e/c es el estándar para la mayoría de entrepisos residenciales. 60 cm e/c usa menos viguetas (ahorrando ~33% en madera) pero requiere contrapiso más grueso, limita las luces máximas y puede resultar en un piso más flexible. Usa 40 cm e/c para áreas principales.",
+      },
+      {
+        question: "¿Necesito bloqueo entre viguetas?",
+        answer:
+          "Las normas requieren bloqueo para viguetas de gran peralte a intervalos que no excedan 2,40 m. Para viguetas de 5x25 cm y menores, el bloqueo no siempre es requerido pero se recomienda a mitad de luz para reducir rebote y rechinidos.",
+      },
+    ],
+  },
+
+  rafterSpanTable: {
+    title: "Tabla de Luces de Cabios: Referencia Completa para Techos",
+    metaDescription:
+      "Tablas de luces de cabios para 5x10, 5x15, 5x20, 5x25, 5x30 cm a 30, 40 y 60 cm e/c. Incluye cargas de nieve, factores de pendiente y referencias normativas para estructura de techos residenciales.",
+    heroTitle: "Tabla de Luces de Cabios",
+    heroSubtitle: "Referencia Completa para Techos",
+    heroDescription:
+      "Tablas completas de luces de cabios para estructura de techos residenciales. Encuentra las luces máximas permitidas para cada tamaño, espaciado, especie y condición de carga.",
+
+    quickAnswerHeading: "Respuesta Rápida",
+    quickAnswerText:
+      "Un cabio de 5x20 cm en Pino Grado 2 a 40 cm e/c puede cubrir hasta 4,57 m de proyección horizontal para carga viva de 100 kg/m² (sin nieve). Para una carga de nieve de 150 kg/m², la luz se reduce a unos 4,11 m. Un cabio de 5x15 cm a 40 cm e/c cubre hasta 3,91 m bajo cargas ligeras.",
+
+    understandingHeading: "Entendiendo las Luces de Cabios",
+    understandingText1:
+      "La luz de un cabio es la distancia de proyección horizontal que puede cubrir entre su punto de apoyo en la solera superior del muro y la cumbrera. A diferencia de las viguetas de piso, las luces de cabios se miden como la carrera horizontal, no a lo largo de la pendiente.",
+    understandingText2:
+      "El diseño de cabios considera dos cargas principales: la carga muerta (material de cubierta, entablado, aislamiento — típicamente 50–75 kg/m²) y la carga viva, que incluye carga de nieve, presión de viento y la carga mínima de mantenimiento de 100 kg/m².",
+    understandingText3:
+      "Las normas proveen tablas de luces separadas para diferentes condiciones de carga. Los cabios deben satisfacer límites de deflexión de L/180 para carga viva. Pendientes más pronunciadas permiten luces ligeramente más largas porque la componente de carga a lo largo del cabio se reduce.",
+
+    spanTablesHeading: "Tablas de Luces de Cabios por Especie (100 kg/m² Carga Viva, 50 kg/m² Carga Muerta)",
+    spanTablesIntro:
+      "Las siguientes tablas son para cabios con carga viva de 100 kg/m² (sin nieve) y carga muerta de 50 kg/m². Las luces son la proyección horizontal máxima en metros.",
+    spanTablesColSize: "Tamaño",
+    spanTablesCol12: "30 cm e/c",
+    spanTablesCol16: "40 cm e/c",
+    spanTablesCol24: "60 cm e/c",
+    spanTablesBySpecies: [
+      {
+        species: "Pino (Douglas Fir-Larch equivalente)",
+        grade: "Grado 2 — Fb = 63 kg/cm², E = 112,000 kg/cm²",
+        rows: [
+          { size: "5x10 cm", oc12: "2,90 m", oc16: "2,51 m", oc24: "2,06 m" },
+          { size: "5x15 cm", oc12: "4,55 m", oc16: "3,91 m", oc24: "3,23 m" },
+          { size: "5x20 cm", oc12: "5,99 m", oc16: "4,57 m", oc24: "3,76 m" },
+          { size: "5x25 cm", oc12: "6,48 m", oc16: "5,54 m", oc24: "4,55 m" },
+          { size: "5x30 cm", oc12: "7,47 m", oc16: "6,43 m", oc24: "5,26 m" },
+        ],
+      },
+      {
+        species: "Pino del Sur (Southern Pine equivalente)",
+        grade: "Grado 2 — Fb = 70 kg/cm², E = 112,000 kg/cm²",
+        rows: [
+          { size: "5x10 cm", oc12: "3,02 m", oc16: "2,64 m", oc24: "2,16 m" },
+          { size: "5x15 cm", oc12: "4,75 m", oc16: "4,11 m", oc24: "3,40 m" },
+          { size: "5x20 cm", oc12: "6,25 m", oc16: "4,83 m", oc24: "3,96 m" },
+          { size: "5x25 cm", oc12: "6,81 m", oc16: "5,84 m", oc24: "4,75 m" },
+          { size: "5x30 cm", oc12: "7,82 m", oc16: "6,71 m", oc24: "5,49 m" },
+        ],
+      },
+      {
+        species: "Abeto-Pino-Abeto (SPF equivalente)",
+        grade: "Grado 2 — Fb = 61 kg/cm², E = 98,000 kg/cm²",
+        rows: [
+          { size: "5x10 cm", oc12: "2,74 m", oc16: "2,39 m", oc24: "1,96 m" },
+          { size: "5x15 cm", oc12: "4,32 m", oc16: "3,71 m", oc24: "3,05 m" },
+          { size: "5x20 cm", oc12: "5,69 m", oc16: "4,34 m", oc24: "3,56 m" },
+          { size: "5x25 cm", oc12: "6,15 m", oc16: "5,26 m", oc24: "4,29 m" },
+          { size: "5x30 cm", oc12: "7,09 m", oc16: "6,10 m", oc24: "4,98 m" },
+        ],
+      },
+      {
+        species: "Abeto-Pino (Hem-Fir equivalente)",
+        grade: "Grado 2 — Fb = 60 kg/cm², E = 91,000 kg/cm²",
+        rows: [
+          { size: "5x10 cm", oc12: "2,67 m", oc16: "2,31 m", oc24: "1,91 m" },
+          { size: "5x15 cm", oc12: "4,19 m", oc16: "3,61 m", oc24: "2,97 m" },
+          { size: "5x20 cm", oc12: "5,54 m", oc16: "4,22 m", oc24: "3,45 m" },
+          { size: "5x25 cm", oc12: "5,99 m", oc16: "5,13 m", oc24: "4,19 m" },
+          { size: "5x30 cm", oc12: "6,91 m", oc16: "5,94 m", oc24: "4,85 m" },
+        ],
+      },
+    ],
+
+    snowLoadHeading: "Impacto de la Carga de Nieve en las Luces de Cabios",
+    snowLoadIntro:
+      "La carga de nieve reduce significativamente las luces permitidas. Las normas proveen tablas separadas para diferentes condiciones de carga de nieve. Ejemplo con cabio de 5x20 cm Pino Grado 2 a 40 cm e/c:",
+    snowLoadItems: [
+      "100 kg/m² carga viva (sin nieve): 5x20 cm cubre hasta 4,57 m — adecuado para climas cálidos sin nevadas",
+      "150 kg/m² carga de nieve: la luz se reduce a ~4,11 m — típico para regiones con nieve moderada",
+      "250 kg/m² carga de nieve: la luz se reduce a ~3,61 m — requerido en regiones con nieve abundante",
+      "350 kg/m² carga de nieve: la luz se reduce a ~3,20 m — requerido en zonas de montaña con nieve extrema",
+      "Para determinar tu carga de nieve, consulta los mapas de la normativa local o contacta al departamento de construcción de tu municipio.",
+      "La pendiente del techo reduce la acumulación de nieve: pendientes mayores a 6:12 evacuan la nieve más efectivamente.",
+    ],
+    snowLoadSummary:
+      "En zonas con nieve, siempre diseña los cabios para la carga de nieve especificada por tu normativa local. Subdimensionar cabios para carga de nieve es uno de los errores de estructura más comunes y peligrosos.",
+
+    pitchFactorsHeading: "Cómo la Pendiente Afecta el Dimensionamiento de Cabios",
+    pitchFactorsIntro:
+      "La pendiente del techo afecta el diseño de cabios de múltiples maneras: longitud real del cabio, distribución de carga, evacuación de nieve y necesidad de tirantes o vigas de cumbrera.",
+    pitchFactorsItems: [
+      "Pendiente baja (2:12 a 4:12): Los cabios soportan carga casi como una vigueta de piso. El empuje horizontal en el muro es alto, requiriendo viguetas de cielo o tirantes adecuados.",
+      "Pendiente media (5:12 a 8:12): La componente de carga perpendicular al cabio disminuye, potencialmente permitiendo luces ligeramente más largas. Aún se requieren tirantes.",
+      "Pendiente alta (9:12 a 12:12): La carga gravitacional genera menos flexión en el cabio y la nieve se desliza más fácilmente. Sin embargo, el cabio real es mucho más largo que la luz horizontal.",
+      "Las tablas dan luces de proyección horizontal, no longitud de cabio. Para encontrar la longitud real, multiplica la luz horizontal por el factor de pendiente: 4:12 = 1,054, 6:12 = 1,118, 8:12 = 1,202, 10:12 = 1,302, 12:12 = 1,414.",
+      "Viga de cumbrera estructural: elimina la necesidad de viguetas de cielo o tirantes al soportar la cumbrera. Requerida para diseños de cielo catedral.",
+      "Tirantes vs tirantes de cabio: Los tirantes en el tercio superior previenen la separación de la cumbrera. Los tirantes a nivel de solera resisten el empuje hacia afuera.",
+    ],
+    pitchFactorsSummary:
+      "Para la mayoría de techos residenciales (pendiente 4:12 a 8:12), las tablas de luces se pueden usar directamente. Para cielos catedral sin viguetas de cielo, se requiere una viga de cumbrera estructural.",
+
+    codeReferencesHeading: "Referencias Normativas para Cabios",
+    codeReferencesIntro:
+      "Las siguientes normas rigen el diseño de cabios en construcción residencial.",
+    codeReferencesItems: [
+      "Tablas de luces de cabios: Luces máximas para varias especies, grados, tamaños, espaciados y condiciones de carga incluyendo nieve",
+      "Detalles de estructura: Requisitos para tablas de cumbrera, tirantes y sus conexiones",
+      "Correas y puntales: Soporte intermedio para cabios largos para reducir la luz efectiva",
+      "Apoyo: Longitud mínima de apoyo para cabios (40 mm en madera/metal, 75 mm en mampostería)",
+      "Cortes y muescas: Límites en muescas (tercio exterior de la luz, máximo 1/3 del peralte) y perforaciones en cabios",
+      "Armaduras de techo: Las armaduras prefabricadas deben diseñarse por un ingeniero e instalarse según especificaciones del fabricante",
+      "Entablado de techo: Espesor mínimo de entablado según espaciado de cabios",
+    ],
+    codeReferencesSummary:
+      "El diseño de cabios se rige por las normas de estructuras de madera locales. Para techos estándar con viguetas de cielo como tirantes, las tablas proveen dimensionamiento directo. Para cielos catedral o geometrías inusuales, consulta un ingeniero estructural.",
+
+    calculatorCtaHeading: "Calcula los Materiales de tu Estructura de Techo",
+    calculatorCtaText:
+      "Una vez que conozcas el tamaño y espaciado de tus cabios, usa nuestras calculadoras para determinar cuántos cabios, cuánto entablado y qué sujetadores necesitas.",
+    calculatorLinks: [
+      {
+        label: "Calculadora de Cabios",
+        href: "/calculators/roofing/roof-rafter-calculator",
+        description: "Calcula el número de cabios, largo de cumbrera y tirantes necesarios.",
+      },
+      {
+        label: "Calculadora de Entablado de Techo",
+        href: "/calculators/roofing/roof-sheathing-calculator",
+        description: "Estima las placas de contrachapado u OSB para tu cubierta.",
+      },
+      {
+        label: "Calculadora de Tejas",
+        href: "/calculators/roofing/roofing-shingles-calculator",
+        description: "Calcula los paquetes de tejas y clavos necesarios.",
+      },
+    ],
+    faqHeading: "Preguntas Frecuentes",
+    faqs: [
+      {
+        question: "¿Cuánto puede cubrir un cabio de 5x15 cm?",
+        answer:
+          "Un cabio de 5x15 cm en Pino Grado 2 a 40 cm e/c puede cubrir hasta 3,91 m horizontalmente con carga viva de 100 kg/m² (sin nieve). Para carga de nieve de 150 kg/m², la luz baja a unos 3,51 m. Son comunes para techos pequeños, porches y adiciones.",
+      },
+      {
+        question: "¿Cuánto puede cubrir un cabio de 5x10 cm?",
+        answer:
+          "Un cabio de 5x10 cm tiene luz muy limitada: 2,31–2,64 m a 40 cm e/c dependiendo de la especie. Son adecuados solo para estructuras pequeñas como cobertizos, pérgolas y cubiertas livianas de patio.",
+      },
+      {
+        question: "¿Necesito viga de cumbrera o tabla de cumbrera?",
+        answer:
+          "Una tabla de cumbrera es suficiente cuando las viguetas de cielo o tirantes resisten el empuje hacia afuera. Una viga de cumbrera estructural se requiere para cielos catedral o cualquier diseño sin viguetas de cielo.",
+      },
+      {
+        question: "¿Cómo afecta la carga de nieve a las luces de cabios?",
+        answer:
+          "La carga de nieve reduce significativamente las luces. Un cabio de 5x20 cm a 40 cm e/c cubre 4,57 m sin nieve pero solo ~3,20 m con carga de nieve de 350 kg/m² — una reducción del 30%. Siempre diseña para la carga de nieve de tu normativa local.",
+      },
+      {
+        question: "¿Puedo usar correas para extender las luces de cabios?",
+        answer:
+          "Sí, las correas (elementos horizontales perpendiculares a los cabios) soportadas por puntales hacia un muro portante pueden apoyar cabios a mitad de luz, efectivamente reduciendo la luz a la mitad. Es una alternativa económica a aumentar el tamaño de los cabios.",
+      },
+      {
+        question: "¿Cuál es el tamaño mínimo de cabio para una casa?",
+        answer:
+          "El tamaño mínimo típico es 5x15 cm, que proporciona luz adecuada para la mayoría de las habitaciones hasta unos 3,60 m de ancho. Para edificios más anchos, se necesitan cabios de 5x20 cm o 5x25 cm. En zonas con mucha nieve, incluso edificios pequeños pueden requerir 5x20 cm o más.",
+      },
+    ],
+  },
+
+  ceilingJoistSpanTable: {
+    title: "Tabla de Luces de Viguetas de Cielo: Guía de Referencia Completa",
+    metaDescription:
+      "Tablas de luces de viguetas de cielo para 5x10, 5x15, 5x20, 5x25 cm a 30, 40 y 60 cm e/c. Incluye luces para entrepiso sin uso, con almacenamiento limitado y entrepiso habitable con referencias normativas.",
+    heroTitle: "Tabla de Luces de Viguetas de Cielo",
+    heroSubtitle: "Guía de Referencia Completa",
+    heroDescription:
+      "Tablas completas de luces de viguetas de cielo para construcción residencial. Encuentra luces máximas para cada tamaño, espaciado y condición de carga — desde cielos solo con yeso cartón hasta entrepisos habitables.",
+
+    quickAnswerHeading: "Respuesta Rápida",
+    quickAnswerText:
+      "Una vigueta de cielo de 5x15 cm en Pino Grado 2 a 40 cm e/c puede cubrir hasta 5,23 m para un cielo solo con yeso cartón (50 kg/m² carga muerta, sin carga viva). Si el entrepiso se usa para almacenamiento limitado (100 kg/m² carga viva), la luz baja a unos 3,78 m. Para entrepiso habitable (150 kg/m² carga viva), usa viguetas de 5x20 cm o mayores.",
+
+    understandingHeading: "Entendiendo las Luces de Viguetas de Cielo",
+    understandingText1:
+      "Las viguetas de cielo cumplen doble función en la estructura convencional de techo: soportan el cielo raso inferior (típicamente yeso cartón) y actúan como tirantes para resistir el empuje horizontal de cabios opuestos. La luz depende principalmente de si el espacio superior se usará para almacenamiento o habitación.",
+    understandingText2:
+      "Las normas categorizan las cargas de viguetas de cielo en tres condiciones: entrepisos sin uso ni almacenamiento (50 kg/m² carga muerta, sin carga viva — solo peso del yeso cartón), entrepisos con almacenamiento limitado (50 kg/m² muerta + 100 kg/m² viva), y entrepisos habitables (50 kg/m² muerta + 150 kg/m² viva).",
+    understandingText3:
+      "Cuando las viguetas de cielo también sirven como tirantes de cabios, deben conectarse a los pies de los cabios con fijación adecuada para resistir el empuje horizontal. Se requiere que estén ubicadas en el tercio inferior de la luz del cabio.",
+
+    spanTablesHeading: "Tablas de Luces de Viguetas de Cielo por Especie",
+    spanTablesIntro:
+      "Las siguientes tablas son para viguetas de cielo con carga muerta de 50 kg/m². Se muestran las condiciones de solo yeso cartón y almacenamiento limitado. Las luces están en metros.",
+    spanTablesColSize: "Tamaño",
+    spanTablesCol12: "30 cm e/c",
+    spanTablesCol16: "40 cm e/c",
+    spanTablesCol24: "60 cm e/c",
+    spanTablesBySpecies: [
+      {
+        species: "Pino — Solo Yeso Cartón (Sin Almacenamiento)",
+        grade: "Grado 2 — 50 kg/m² carga muerta, sin carga viva",
+        rows: [
+          { size: "5x10 cm", oc12: "3,99 m", oc16: "3,63 m", oc24: "3,17 m" },
+          { size: "5x15 cm", oc12: "6,27 m", oc16: "5,23 m", oc24: "4,06 m" },
+          { size: "5x20 cm", oc12: "7,62 m", oc16: "6,58 m", oc24: "5,33 m" },
+          { size: "5x25 cm", oc12: "7,92 m", oc16: "7,32 m", oc24: "6,32 m" },
+        ],
+      },
+      {
+        species: "Pino — Almacenamiento Limitado (100 kg/m² Carga Viva)",
+        grade: "Grado 2 — 50 kg/m² carga muerta + 100 kg/m² carga viva",
+        rows: [
+          { size: "5x10 cm", oc12: "2,79 m", oc16: "2,44 m", oc24: "1,98 m" },
+          { size: "5x15 cm", oc12: "4,39 m", oc16: "3,78 m", oc24: "3,10 m" },
+          { size: "5x20 cm", oc12: "5,79 m", oc16: "4,98 m", oc24: "4,09 m" },
+          { size: "5x25 cm", oc12: "7,39 m", oc16: "6,37 m", oc24: "5,21 m" },
+        ],
+      },
+      {
+        species: "Pino del Sur — Solo Yeso Cartón (Sin Almacenamiento)",
+        grade: "Grado 2 — 50 kg/m² carga muerta, sin carga viva",
+        rows: [
+          { size: "5x10 cm", oc12: "3,99 m", oc16: "3,63 m", oc24: "3,17 m" },
+          { size: "5x15 cm", oc12: "6,27 m", oc16: "5,51 m", oc24: "4,29 m" },
+          { size: "5x20 cm", oc12: "7,62 m", oc16: "6,91 m", oc24: "5,64 m" },
+          { size: "5x25 cm", oc12: "7,92 m", oc16: "7,70 m", oc24: "6,65 m" },
+        ],
+      },
+      {
+        species: "Abeto-Pino-Abeto — Almacenamiento Limitado (100 kg/m² Carga Viva)",
+        grade: "Grado 2 — 50 kg/m² carga muerta + 100 kg/m² carga viva",
+        rows: [
+          { size: "5x10 cm", oc12: "2,64 m", oc16: "2,29 m", oc24: "1,88 m" },
+          { size: "5x15 cm", oc12: "4,17 m", oc16: "3,58 m", oc24: "2,95 m" },
+          { size: "5x20 cm", oc12: "5,49 m", oc16: "4,72 m", oc24: "3,86 m" },
+          { size: "5x25 cm", oc12: "7,01 m", oc16: "6,02 m", oc24: "4,93 m" },
+        ],
+      },
+    ],
+
+    loadTypesHeading: "Tipos de Carga de Viguetas de Cielo Explicados",
+    loadTypesIntro:
+      "Las normas definen tres categorías de carga de entrepiso. Elegir la categoría correcta es crítico para seleccionar la tabla de luces adecuada.",
+    loadTypesItems: [
+      "Entrepiso sin uso ni almacenamiento (50 kg/m² carga muerta): Aplica cuando el entrepiso no tiene piso, sin escalera de acceso y se accede solo para mantenimiento ocasional. Las viguetas soportan solo el yeso cartón, permitiendo las luces más largas.",
+      "Entrepiso con almacenamiento limitado (100 kg/m² carga viva): Aplica cuando el entrepiso tiene escotilla o escalera retráctil y puede usarse para almacenamiento ligero. Esta es la tabla más comúnmente usada.",
+      "Entrepiso habitable (150 kg/m² carga viva): Aplica cuando el espacio tiene altura suficiente (2,10 m mínimo sobre 50% del área) y puede terminarse como espacio habitable.",
+      "Si planeas convertir el entrepiso en espacio habitable en el futuro, dimensiona las viguetas para carga habitable desde el principio. Reforzar viguetas subdimensionadas después es costoso.",
+      "Equipos HVAC en el entrepiso agregan carga muerta concentrada. Si tu equipo de aire se apoya en las viguetas, agrega 25–50 kg/m² de carga muerta o provee una plataforma dedicada.",
+    ],
+    loadTypesSummary:
+      "Cuando tengas dudas, diseña para la carga de almacenamiento limitado (100 kg/m² carga viva). Cuesta solo un poco más en madera pero da flexibilidad futura.",
+
+    factorsHeading: "Factores que Afectan las Luces de Viguetas de Cielo",
+    factorsIntro:
+      "Varios factores más allá de la carga básica y especie afectan cuánto pueden cubrir tus viguetas de cielo.",
+    factorsItems: [
+      "Función de tirante: Cuando las viguetas sirven como tirantes de cabio, experimentan fuerzas de tensión además de flexión. Las conexiones deben resistir el empuje horizontal.",
+      "Peso del cielo raso: Yeso cartón estándar de 12 mm pesa ~10 kg/m². Yeso cartón de 16 mm (resistente al fuego) agrega 2,5 kg/m². Cielos de yeso pueden pesar 25–50 kg/m².",
+      "Peso del aislamiento: Aislamiento soplado a R-49 puede agregar 5–15 kg/m² a la carga muerta.",
+      "Espaciado y yeso cartón: A 60 cm e/c se requiere yeso cartón de 16 mm para prevenir pandeo entre viguetas. A 40 cm e/c se permite 12 mm.",
+      "Voladizos y desplazamientos: Las viguetas que no coinciden con los cabios no pueden servir como tirantes. Se necesitan tirantes separados o viga de cumbrera estructural.",
+      "Arriostramiento lateral: Las viguetas deben arriostrarse para prevenir volteo. Arriostramiento continuo clavado a través de las viguetas a mitad de luz mantiene las viguetas aplomadas.",
+    ],
+    factorsSummary:
+      "Las viguetas de cielo a menudo son el elemento de estructura más ignorado porque están ocultas. Pero cumplen roles estructurales críticos como tirantes y deben dimensionarse y conectarse correctamente.",
+
+    codeReferencesHeading: "Referencias Normativas para Viguetas de Cielo",
+    codeReferencesIntro:
+      "Las siguientes normas aplican al diseño de viguetas de cielo en construcción residencial.",
+    codeReferencesItems: [
+      "Tablas de luces de viguetas de cielo: Luces máximas según especie, grado, tamaño, espaciado y condición de carga",
+      "Conexiones de vigueta a cabio: Requisitos para clavetear viguetas a cabios cuando actúan como tirantes. Mínimo tres clavos de 8 cm por conexión.",
+      "Viguetas traslapadas: Cuando se traslapan sobre un muro portante interior, deben clavarse entre sí con mínimo tres clavos de 8 cm",
+      "Tirantes: Requeridos en el tercio superior de la luz del cabio. No sustituyen tirantes a nivel de solera.",
+      "Soporte de yeso cartón: Espaciado máximo para aplicación de yeso cartón en cielo. 12 mm para 40 cm e/c, 16 mm para 60 cm e/c.",
+      "Ventilación del entrepiso: Las viguetas definen el espacio que debe ventilarse. Área libre de ventilación de 1/150 del área de entrepiso.",
+    ],
+    codeReferencesSummary:
+      "El diseño de viguetas de cielo se intersecta con el diseño de cabios, requisitos de yeso cartón y ventilación de entrepiso. Siempre considera estas normas en conjunto al planificar la estructura de techo y cielo.",
+
+    calculatorCtaHeading: "Calcula los Materiales de tu Cielo",
+    calculatorCtaText:
+      "Usa nuestras calculadoras para determinar cuántas viguetas de cielo, cuánto yeso cartón y qué sujetadores necesitas.",
+    calculatorLinks: [
+      {
+        label: "Calculadora de Viguetas de Piso",
+        href: "/calculators/floor-framing/floor-joist-calculator",
+        description: "También funciona para viguetas de cielo — calcula cantidad, espaciado y bloqueo.",
+      },
+      {
+        label: "Calculadora de Yeso Cartón",
+        href: "/calculators/insulation-drywall/drywall-calculator",
+        description: "Estima las placas de yeso cartón, pasta y tornillos para tu cielo.",
+      },
+      {
+        label: "Calculadora de Aislamiento",
+        href: "/calculators/insulation-drywall/insulation-calculator",
+        description: "Calcula rollos o aislamiento soplado para tu entrepiso sobre las viguetas de cielo.",
+      },
+    ],
+    faqHeading: "Preguntas Frecuentes",
+    faqs: [
+      {
+        question: "¿Cuánto puede cubrir una vigueta de cielo de 5x15 cm?",
+        answer:
+          "Una vigueta de 5x15 cm en Pino Grado 2 a 40 cm e/c puede cubrir hasta 5,23 m para cielo solo con yeso cartón (sin almacenamiento). Para almacenamiento limitado (100 kg/m² carga viva), la luz baja a 3,78 m. Para entrepiso habitable, la luz es de unos 3,15 m.",
+      },
+      {
+        question: "¿Puedo usar viguetas de cielo de 5x10 cm?",
+        answer:
+          "Sí, las viguetas de 5x10 cm pueden cubrir hasta 3,63 m a 40 cm e/c para cielos solo con yeso cartón. Sin embargo, se limitan a ~2,44 m para entrepisos con almacenamiento. Son comunes en habitaciones pequeñas, pasillos y closets.",
+      },
+      {
+        question: "¿Las viguetas de cielo deben ir en la misma dirección que los cabios?",
+        answer:
+          "Cuando las viguetas de cielo sirven como tirantes (que es lo predeterminado en estructura convencional), deben ir paralelas a los cabios para poder clavarse directamente a los pies de los cabios. Si van perpendiculares, necesitas tirantes separados o viga de cumbrera estructural.",
+      },
+      {
+        question: "¿Cuál es la diferencia entre vigueta de cielo y vigueta de piso?",
+        answer:
+          "Estructuralmente son el mismo tipo de elemento. La diferencia es la carga de diseño: las viguetas de cielo soportan el cielo raso y posiblemente almacenamiento ligero (50–100 kg/m² total), mientras las viguetas de piso soportan personas, muebles y actividades (200–250 kg/m² total). Las viguetas de cielo pueden cubrir significativamente más.",
+      },
+      {
+        question: "¿Puedo caminar sobre las viguetas de cielo?",
+        answer:
+          "Puedes caminar con cuidado sobre viguetas dimensionadas para almacenamiento (100 kg/m² carga viva) o entrepiso habitable (150 kg/m²). Sin embargo, las viguetas dimensionadas solo para yeso cartón no deben usarse para caminar ni almacenamiento — pueden deflectarse lo suficiente para agrietar el cielo. Siempre pisa sobre las viguetas, nunca entre ellas.",
+      },
+      {
+        question: "¿Cómo refuerzo viguetas de cielo existentes para almacenamiento?",
+        answer:
+          "El método más común es adosar — fijar con pernos o clavos una nueva vigueta de peralte igual o mayor junto a cada vigueta existente. Usa adhesivo de construcción más pernos de 10 mm cada 40 cm o clavos de 8 cm cada 30 cm en patrón alternado. La vigueta adosada debe apoyarse en los mismos soportes. Consulta un ingeniero para el refuerzo específico.",
       },
     ],
   },

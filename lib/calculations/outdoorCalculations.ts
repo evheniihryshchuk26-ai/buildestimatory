@@ -252,6 +252,46 @@ export function calculatePicketFence(
   };
 }
 
+// ─── DECK BOARD SPACING ────────────────────────────────────────────────────────
+
+export interface DeckBoardSpacingResult {
+  boards: number;
+  actualGap: number;
+  totalBoardFeet: number;
+}
+
+export function calculateDeckBoardSpacing(
+  deckLengthFt: number,
+  boardWidthInches: number,
+  gapSizeInches: number
+): DeckBoardSpacingResult {
+  const deckLengthInches = deckLengthFt * 12;
+
+  // Each board+gap unit
+  const effectiveWidth = boardWidthInches + gapSizeInches;
+  const boards = Math.ceil(deckLengthInches / effectiveWidth);
+
+  // Recalculate actual gap for even spacing
+  // Total board width = boards * boardWidth
+  // Remaining space = deckLength - (boards * boardWidth)
+  // Number of gaps = boards - 1 (gap between boards only, not at edges)
+  const totalBoardWidth = boards * boardWidthInches;
+  const remainingSpace = deckLengthInches - totalBoardWidth;
+  const numberOfGaps = boards - 1;
+  const actualGap = numberOfGaps > 0 ? remainingSpace / numberOfGaps : 0;
+
+  // Board feet: assuming 5/4 deck boards (1" thick actual) × boardWidth × 1 ft length per board
+  // This gives BF per linear foot; multiply by number of boards
+  const boardFeetPerBoard = (1 / 12) * (boardWidthInches / 12);
+  const totalBoardFeet = boards * boardFeetPerBoard;
+
+  return {
+    boards,
+    actualGap: Math.round(actualGap * 100) / 100,
+    totalBoardFeet: Math.round(totalBoardFeet * 10) / 10,
+  };
+}
+
 export function calculateDeckStairs(
   totalRiseInches: number,
   stairWidthFt: number

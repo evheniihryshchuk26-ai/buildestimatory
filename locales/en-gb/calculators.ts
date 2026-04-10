@@ -20,6 +20,8 @@ export const categories: CategoryMeta[] = [
       { slug: "block-fill-calculator", title: "Free Block Fill Calculator — Metres & Bag Count (2026)", description: "Block fill calculator — how much concrete to fill concrete blocks? Free tool for 100 mm, 140 mm & 215 mm blocks. Get cubic metres and bag count instantly.", category: "Foundation", categorySlug: "foundation" },
       { slug: "mortar-mix-calculator", title: "Free Mortar Mix Calculator — Bags & Coverage (2026)", description: "Mortar mix calculator — free tool to estimate bags of mortar for blockwork, brickwork & stone. Covers designations M2, M4 & M6 with joint thickness options.", category: "Foundation", categorySlug: "foundation" },
       { slug: "retaining-wall-calculator", title: "Free Retaining Wall Calculator — Blocks & Cost (2026)", description: "Retaining wall calculator — free tool for block, masonry & stone walls. Get block count, coping stones, gravel backfill & drainage estimates instantly.", category: "Foundation", categorySlug: "foundation" },
+      { slug: "rebar-calculator", title: "Free Reinforcement Calculator — Bars, Metres & Weight (2026)", description: "How much reinforcement bar do I need? Free calculator for slabs, footings & walls — gives bar count, linear metres, weight in kg, and 6 m bar total.", category: "Foundation", categorySlug: "foundation" },
+      { slug: "rebar-spacing-calculator", title: "Free Reinforcement Spacing Calculator — Grid Layout & Count (2026)", description: "Reinforcement spacing calculator — free tool to find optimal grid layout by load type. Get bar count, linear metres, and chair supports for any slab.", category: "Foundation", categorySlug: "foundation" },
     ],
   },
   {
@@ -46,6 +48,7 @@ export const categories: CategoryMeta[] = [
       { slug: "top-plate-calculator", title: "Free Top Plate Calculator — Boards & Metres (2026)", description: "How much timber for double top plates? Free calculator — gives exact board count with overlap stagger included.", category: "Wall Framing", categorySlug: "wall-framing" },
       { slug: "header-calculator", title: "Free Header Calculator — Size, Count & Span (2026)", description: "Header calculator: What size header for my opening? Free tool for door & window spans — covers common header sizes.", category: "Wall Framing", categorySlug: "wall-framing" },
       { slug: "exterior-sheathing-calculator", title: "Free Sheathing Calculator — Sheets & Waste (2026)", description: "How many sheets of sheathing for exterior walls? Free calculator for OSB & plywood panels — includes waste factor estimates.", category: "Wall Framing", categorySlug: "wall-framing" },
+      { slug: "rake-wall-calculator", title: "Free Rake Wall Calculator — Studs & Cuts (2026)", description: "Free rake wall calculator — get stud count, individual heights, and cut angle for walls following the roof pitch.", category: "Wall Framing", categorySlug: "wall-framing" },
     ],
   },
   {
@@ -64,6 +67,10 @@ export const categories: CategoryMeta[] = [
       { slug: "roof-pitch-calculator", title: "Free Roof Pitch Calculator — Angle & Slope (2026)", description: "What pitch is my roof? Free roof pitch calculator — enter rise & run for instant angle, slope %, and area multiplier.", category: "Roofing", categorySlug: "roofing" },
       { slug: "roof-area-calculator", title: "Free Roof Area Calculator — Sq Metres & Cost (2026)", description: "Free roof area calculator — convert flat dimensions to true roof area using pitch multiplier. Get roofing squares & material estimates.", category: "Roofing", categorySlug: "roofing" },
       { slug: "roof-slope-calculator", title: "Free Roof Slope Calculator — Pitch & Angle (2026)", description: "Roof slope calculator — free tool to find pitch, angle, and sloped roof area multiplier. Enter rise & run for instant results in metres and degrees.", category: "Roofing", categorySlug: "roofing" },
+      { slug: "hip-roof-calculator", title: "Free Hip Roof Calculator — Rafters, Area & Materials (2026)", description: "Free hip roof calculator — get rafter count, hip rafter length, roof area & ridge length. Covers common, hip & jack rafters for any building size.", category: "Roofing", categorySlug: "roofing" },
+      { slug: "gambrel-roof-calculator", title: "Free Gambrel Roof Calculator — Rafters & Area (2026)", description: "Free gambrel (barn) roof calculator — get upper & lower rafter counts, roof area & wall height gained. Enter two pitches for instant results.", category: "Roofing", categorySlug: "roofing" },
+      { slug: "gable-roof-calculator", title: "Free Gable Roof Calculator — Rafters, Ridge & Area (2026)", description: "Free gable roof calculator — get rafter count, ridge length, roof area & gable end area. Enter building dimensions and pitch for instant estimate.", category: "Roofing", categorySlug: "roofing" },
+      { slug: "lean-to-roof-calculator", title: "Free Lean-To Roof Calculator — Rafters & Area (2026)", description: "Free lean-to (shed) roof calculator — get rafter count, rafter length, roof area & rise height. Single-slope calculator for extensions & sheds.", category: "Roofing", categorySlug: "roofing" },
     ],
   },
   {
@@ -76,6 +83,8 @@ export const categories: CategoryMeta[] = [
       { slug: "vinyl-siding-calculator", title: "Free Vinyl Cladding Calculator — Panels & Cost (2026)", description: "Free vinyl siding calculator — enter wall area in square metres for exact panel count. Accounts for doors, windows & 10% waste factor.", category: "Exterior Shell", categorySlug: "exterior-shell" },
       { slug: "hardie-siding-calculator", title: "Free Hardie Plank Calculator — Boards & Cost (2026)", description: "How many HardiePlank boards do I need? Free fibre cement cladding calculator — with waste included.", category: "Exterior Shell", categorySlug: "exterior-shell" },
       { slug: "window-flashing-calculator", title: "Free Window Flashing Calculator — Tape & Metres (2026)", description: "Window flashing tape calculator: Estimate linear metres for all openings. Free tool for self-adhesive flashing tape.", category: "Exterior Shell", categorySlug: "exterior-shell" },
+      { slug: "soffit-calculator", title: "Free Soffit Calculator — Panels & J-Channel (2026)", description: "How many soffit panels do I need? Free calculator by perimeter and eaves width — includes J-channel and ventilation.", category: "Exterior Shell", categorySlug: "exterior-shell" },
+      { slug: "board-and-batten-calculator", title: "Free Board & Batten Calculator — Boards & Battens (2026)", description: "Free board and batten calculator — get board and batten count by wall area. For vertical exterior cladding.", category: "Exterior Shell", categorySlug: "exterior-shell" },
     ],
   },
   {
@@ -132,6 +141,7 @@ export const categories: CategoryMeta[] = [
       { slug: "fence-post-calculator", title: "Free Fence Post Calculator — Posts & Concrete (2026)", description: "Fence post calculator — how many posts and bags of postcrete? Free tool gives post count, concrete bags & gravel for any fence length.", category: "Outdoor", categorySlug: "outdoor" },
       { slug: "fence-panel-calculator", title: "Free Fence Panel Calculator — Panels & Posts (2026)", description: "Fence panel calculator — how many pre-made panels for your fence? Free tool for 6 ft & 5 ft panels. Get panel count, posts & post caps.", category: "Outdoor", categorySlug: "outdoor" },
       { slug: "picket-fence-calculator", title: "Free Picket Fence Calculator — Pickets & Rails (2026)", description: "Picket fence calculator — how many pickets with custom spacing? Free tool for any picket width & gap. Get picket count, rails, posts & total board metres.", category: "Outdoor", categorySlug: "outdoor" },
+      { slug: "deck-board-spacing-calculator", title: "Free Deck Board Spacing Calculator — Even Gaps (2026)", description: "Free deck board spacing calculator — get even gaps between boards for any board width and deck length. Prevents buckling and water pooling.", category: "Outdoor", categorySlug: "outdoor" },
     ],
   },
   {
@@ -157,6 +167,7 @@ export const categories: CategoryMeta[] = [
       { slug: "rise-over-run-calculator", title: "Free Rise Over Run Calculator — Slope, Angle & Ratio (2026)", description: "Rise over run calculator — free slope tool. Get ratio, percentage, angle & description instantly. Works for stairs, ramps & roofs.", category: "Stairs", categorySlug: "stairs" },
       { slug: "spiral-staircase-calculator", title: "Free Spiral Staircase Calculator — Treads & Dimensions (2026)", description: "Free spiral staircase calculator — enter diameter & floor height for tread count, rise per step & rotation. Meets building regs.", category: "Stairs", categorySlug: "stairs" },
       { slug: "stair-landing-calculator", title: "Free Stair Landing Calculator — Flights & Dimensions (2026)", description: "Free stair landing calculator — split flights with intermediate landing. Get steps per flight, landing height & total run.", category: "Stairs", categorySlug: "stairs" },
+      { slug: "baluster-spacing-calculator", title: "Free Baluster Spacing Calculator — Count & Gap (2026)", description: "Free baluster spacing calculator — get exact count and uniform spacing for stair and deck balustrades. Complies with Building Regulations.", category: "Stairs", categorySlug: "stairs" },
     ],
   },
 ];

@@ -83,6 +83,24 @@ const guides: GuidesTranslations = {
           "Comment construire un escalier \u2014 guide complet : anatomie, normes DTU, calculs giron/hauteur, types (droit, L, U, colima\u00e7on), mat\u00e9riaux et co\u00fbts.",
         href: "/guides/stair-building-guide",
       },
+      {
+        title: "Tableau de portée des solives : référence complète",
+        description:
+          "Tableaux de portée pour solives de plancher 60×120 à 80×240 mm à 30, 40 et 60 cm d'entraxe. Avec valeurs résineux/BLC, références DTU/Eurocode et exigences de charges.",
+        href: "/guides/joist-span-table",
+      },
+      {
+        title: "Tableau de portée des chevrons : référence charpente",
+        description:
+          "Tableaux de portée des chevrons par section, entraxe, pente et charge de neige. Avec références DTU/Eurocode pour toutes les essences et qualités courantes.",
+        href: "/guides/rafter-span-table",
+      },
+      {
+        title: "Tableau de portée des solives de plafond : référence complète",
+        description:
+          "Tableaux de portée des solives de plafond par section, entraxe et type de charge. Combles non aménageables, stockage léger et combles habitables avec références DTU.",
+        href: "/guides/ceiling-joist-span-table",
+      },
     ],
   },
 
@@ -1853,6 +1871,512 @@ const guides: GuidesTranslations = {
       { question: "Combien de marches pour 2,70 m ?", answer: "2 700 + 300 mm (plancher) = 3 000 mm. 3 000 / 180 = 17 contremarches (176 mm) et 16 girons. Foul\u00e9e : 16 \u00d7 270 = 4 320 mm." },
       { question: "Solution la moins ch\u00e8re ?", answer: "Escalier droit en pin trait\u00e9. Limons 50\u00d7300 (30\u201370 \u20ac/pi\u00e8ce), marches (8\u201315 \u20ac/pi\u00e8ce). 14 marches ext\u00e9rieur : 200\u2013500 \u20ac." },
       { question: "Faut-il un permis ?", answer: "Pour les escaliers permanents, oui g\u00e9n\u00e9ralement. D\u00e9claration pr\u00e9alable de travaux. Co\u00fbt 50\u2013200 \u20ac. Petits escalons ext\u00e9rieurs (1\u20132 marches) souvent exempt\u00e9s." },
+    ],
+  },
+
+  joistSpanTable: {
+    title: "Tableau de portée des solives : référence complète",
+    metaDescription:
+      "Tableaux de portée pour solives de plancher 60×120 à 80×240 mm à 30, 40 et 60 cm d'entraxe. Résineux et BLC selon DTU 31.1, Eurocode 5, avec exigences de charges et guide de dimensionnement.",
+    heroTitle: "Tableau de portée des solives",
+    heroSubtitle: "Référence complète DTU/Eurocode",
+    heroDescription:
+      "Tableaux de portée complets pour les solives de plancher en construction résidentielle. Trouvez la portée maximale admissible pour chaque section courante, entraxe, essence et qualité selon le DTU 31.1 et l'Eurocode 5.",
+
+    quickAnswerHeading: "Réponse rapide",
+    quickAnswerText:
+      "Une solive 80×200 mm en résineux C24 à 60 cm d'entraxe peut franchir jusqu'à environ 4,20 m (charge d'exploitation 1,5 kN/m², charge permanente 0,5 kN/m²). Une solive 80×240 mm de même qualité à 60 cm d'entraxe atteint environ 5,00 m. Vérifiez toujours les portées auprès de votre bureau d'études, car les règles locales peuvent imposer des valeurs différentes.",
+
+    understandingHeading: "Comprendre les portées de solives",
+    understandingText1:
+      "La portée d'une solive est la distance horizontale libre entre deux appuis que la solive peut franchir sans déformation excessive ni rupture. Le DTU 31.1 et l'Eurocode 5 (NF EN 1995-1-1) fournissent les bases de calcul des portées maximales selon la section, l'essence, la classe de résistance, l'entraxe et les charges de dimensionnement.",
+    understandingText2:
+      "Les solives de plancher sont dimensionnées pour deux types de charges : la charge d'exploitation (personnes, mobilier, charges mobiles — typiquement 1,5 kN/m² pour les pièces d'habitation selon la NF EN 1991-1-1, catégorie A) et la charge permanente (poids propre de la structure — typiquement 0,5 kN/m² pour un solivage standard avec plancher et plafond en plaque de plâtre). La charge totale détermine la section et l'entraxe requis.",
+    understandingText3:
+      "Les limites de flèche contrôlent également la portée. L'Eurocode limite la flèche à L/300 pour la charge d'exploitation et L/200 pour la charge totale, où L est la portée. Une portée de 4,50 m ne peut donc fléchir de plus de 15 mm sous charge d'exploitation. Les planchers plus rigides sont plus confortables et évitent la fissuration du carrelage ou du plafond en dessous.",
+
+    spanTablesHeading: "Tableaux de portée par essence",
+    spanTablesIntro:
+      "Les tableaux suivants sont basés sur l'Eurocode 5 pour des solives avec 1,5 kN/m² de charge d'exploitation et 0,5 kN/m² de charge permanente. Les portées sont indiquées en mètres comme portée libre maximale. Utilisez toujours la classe de résistance marquée sur votre bois.",
+    spanTablesColSize: "Section",
+    spanTablesCol12: "30 cm",
+    spanTablesCol16: "40 cm",
+    spanTablesCol24: "60 cm",
+    spanTablesBySpecies: [
+      {
+        species: "Résineux C24 (épicéa, sapin, pin, douglas)",
+        grade: "Classe C24 — fm,k = 24 N/mm², E₀,mean = 11 000 N/mm²",
+        rows: [
+          { size: "60×120", oc12: "3,20 m", oc16: "2,90 m", oc24: "2,50 m" },
+          { size: "60×160", oc12: "4,20 m", oc16: "3,80 m", oc24: "3,30 m" },
+          { size: "80×200", oc12: "5,30 m", oc16: "4,80 m", oc24: "4,20 m" },
+          { size: "80×240", oc12: "6,30 m", oc16: "5,70 m", oc24: "5,00 m" },
+        ],
+      },
+      {
+        species: "BLC GL24h (bois lamellé-collé)",
+        grade: "Classe GL24h — fm,g,k = 24 N/mm², E₀,g,mean = 11 500 N/mm²",
+        rows: [
+          { size: "60×120", oc12: "3,40 m", oc16: "3,10 m", oc24: "2,70 m" },
+          { size: "60×160", oc12: "4,50 m", oc16: "4,10 m", oc24: "3,50 m" },
+          { size: "80×200", oc12: "5,60 m", oc16: "5,10 m", oc24: "4,40 m" },
+          { size: "80×240", oc12: "6,70 m", oc16: "6,10 m", oc24: "5,30 m" },
+        ],
+      },
+      {
+        species: "Résineux C18 (épicéa courant)",
+        grade: "Classe C18 — fm,k = 18 N/mm², E₀,mean = 9 000 N/mm²",
+        rows: [
+          { size: "60×120", oc12: "2,80 m", oc16: "2,50 m", oc24: "2,20 m" },
+          { size: "60×160", oc12: "3,60 m", oc16: "3,30 m", oc24: "2,80 m" },
+          { size: "80×200", oc12: "4,60 m", oc16: "4,10 m", oc24: "3,60 m" },
+          { size: "80×240", oc12: "5,50 m", oc16: "5,00 m", oc24: "4,30 m" },
+        ],
+      },
+      {
+        species: "Douglas C24",
+        grade: "Classe C24 — fm,k = 24 N/mm², E₀,mean = 11 000 N/mm²",
+        rows: [
+          { size: "60×120", oc12: "3,20 m", oc16: "2,90 m", oc24: "2,50 m" },
+          { size: "60×160", oc12: "4,20 m", oc16: "3,80 m", oc24: "3,30 m" },
+          { size: "80×200", oc12: "5,30 m", oc16: "4,80 m", oc24: "4,20 m" },
+          { size: "80×240", oc12: "6,30 m", oc16: "5,70 m", oc24: "5,00 m" },
+        ],
+      },
+    ],
+
+    loadRequirementsHeading: "Exigences de charges pour planchers (Eurocode)",
+    loadRequirementsIntro:
+      "L'Eurocode et la NF EN 1991-1-1 fixent les charges minimales de dimensionnement pour les planchers résidentiels. Ces charges déterminent la section et l'entraxe requis.",
+    loadRequirementsItems: [
+      "Pièces d'habitation (séjour, chambres, cuisine) : 1,5 kN/m² charge d'exploitation + 0,5 kN/m² charge permanente = 2,0 kN/m² total (catégorie A, NF EN 1991-1-1)",
+      "Balcons et terrasses accessibles : 3,5 kN/m² charge d'exploitation + charge permanente — plus exigeant qu'un plancher intérieur",
+      "Combles non aménageables sans stockage : 0,75 kN/m² charge d'exploitation — uniquement pour les plafonds sans usage",
+      "Combles avec stockage léger : 1,0 kN/m² charge d'exploitation — grenier accessible avec trappe ou escalier escamotable",
+      "La charge permanente inclut le poids propre des solives, du plancher, du revêtement de sol et du plafond éventuel. Pour un carrelage sur chape, augmentez la charge permanente à 1,0–1,5 kN/m²",
+      "Charges concentrées : l'Eurocode exige aussi qu'un plancher résiste à une charge ponctuelle de 2,0 kN sur une surface de 50×50 mm",
+    ],
+    loadRequirementsSummary:
+      "Pour la plupart des planchers résidentiels, utilisez le tableau 1,5/0,5 kN/m². En cas de doute, dimensionnez pour la charge la plus élevée — la différence de coût est minime.",
+
+    factorsHeading: "Facteurs influençant la portée des solives",
+    factorsIntro:
+      "Au-delà des valeurs tabulées, plusieurs facteurs pratiques modifient la section de solive requise.",
+    factorsItems: [
+      "Essence et classe de résistance : les classes supérieures (C24, GL28) permettent des portées plus longues que C16 ou C18. La classe détermine la résistance en flexion (fm,k) et le module d'élasticité (E₀,mean).",
+      "Entraxe : 30 cm permet les plus longues portées, 40 cm est l'entraxe standard en ossature bois française, 60 cm est économique mais limite la portée et nécessite un plancher plus épais.",
+      "Longueur d'appui : les solives doivent reposer sur au moins 40 mm de bois ou métal et 80 mm de maçonnerie (Eurocode 5). Un appui insuffisant réduit la capacité portante effective.",
+      "Entailles et percements : les entailles et trous dans les solives réduisent la section utile. Les entailles ne sont admises que dans le tiers extérieur de la portée, profondeur max. 1/4 de la hauteur.",
+      "Solives continues vs. simples : les solives franchissant un appui intermédiaire (poutre continue) peuvent porter légèrement plus que les solives simples. Les tableaux supposent des solives simples.",
+      "Revêtements lourds : carrelage, pierre naturelle ou chape augmentent significativement la charge permanente. Quand la charge permanente dépasse 0,5 kN/m², utilisez le tableau ajusté ou consultez un ingénieur.",
+    ],
+    factorsSummary:
+      "Utilisez toujours la classe de résistance réelle marquée sur votre bois. Quand plusieurs facteurs défavorables se combinent (revêtement lourd + grand entraxe + longue portée), passez à la section supérieure pour une marge de sécurité et un plancher plus rigide.",
+
+    codeReferencesHeading: "Références normatives pour les solives de plancher",
+    codeReferencesIntro:
+      "Les normes suivantes régissent le dimensionnement des solives de plancher en construction bois en France.",
+    codeReferencesItems: [
+      "NF EN 1995-1-1 (Eurocode 5) — Calcul des structures bois : portées, limites de flèche (L/300 exploitation, L/200 total), flambement, méthodes de vérification",
+      "NF EN 1991-1-1 (Eurocode 1) — Actions : charges d'exploitation pour habitations (catégorie A : 1,5 kN/m²), charges permanentes, coefficients partiels de sécurité",
+      "DTU 31.1 — Charpente en bois : règles de conception et de mise en œuvre pour les planchers à solives",
+      "DTU 31.2 — Construction de maisons à ossature bois : exigences spécifiques aux planchers en ossature bois",
+      "NF EN 338 — Classes de résistance du bois scié (C18, C24, etc.) avec caractéristiques mécaniques associées",
+      "NF EN 14080 — Bois lamellé-collé : classes de résistance (GL24h, GL28h, etc.)",
+    ],
+    codeReferencesSummary:
+      "Le dimensionnement des solives de plancher relève de l'Eurocode 5 (NF EN 1995-1-1). Pour les planchers courants, les tableaux normalisés peuvent être utilisés ; pour les cas particuliers, un calcul par un ingénieur structure est requis.",
+
+    calculatorCtaHeading: "Calculez vos matériaux de plancher",
+    calculatorCtaText:
+      "Une fois votre section et entraxe déterminés, utilisez nos calculateurs pour estimer le nombre exact de solives, connecteurs et fixations.",
+    calculatorLinks: [
+      {
+        label: "Calculateur de solives",
+        href: "/calculators/floor-framing/floor-joist-calculator",
+        description: "Calculez le nombre de solives, solives de rive et entretoises pour votre plancher.",
+      },
+      {
+        label: "Calculateur de panneau OSB",
+        href: "/calculators/floor-framing/osb-panel-calculator",
+        description: "Estimez le nombre de panneaux OSB ou contreplaqué pour votre plancher.",
+      },
+      {
+        label: "Calculateur d'étriers",
+        href: "/calculators/hardware/joist-hanger-calculator",
+        description: "Calculez les étriers de solive et la visserie pour chaque connexion.",
+      },
+    ],
+    faqHeading: "Questions fréquentes",
+    faqs: [
+      {
+        question: "Quelle portée pour une solive 80×200 mm ?",
+        answer:
+          "Une solive 80×200 mm en résineux C24 à 40 cm d'entraxe peut franchir jusqu'à environ 4,80 m (charge d'exploitation 1,5 kN/m²). À 60 cm d'entraxe, la portée descend à environ 4,20 m. À 30 cm, elle monte à environ 5,30 m. Vérifiez toujours avec votre bureau d'études.",
+      },
+      {
+        question: "Une section 60×120 mm suffit-elle comme solive ?",
+        answer:
+          "60×120 mm ne convient qu'aux courtes portées : environ 2,50–2,90 m à 40–60 cm d'entraxe. C'est suffisant pour de petites pièces, couloirs et placards, mais pas pour des pièces de vie courantes. La plupart des planchers résidentiels nécessitent au minimum du 80×200 mm.",
+      },
+      {
+        question: "Quelle différence entre charge d'exploitation et charge permanente ?",
+        answer:
+          "La charge d'exploitation correspond au poids des personnes, des meubles et des objets mobiles (1,5 kN/m² pour les habitations). La charge permanente est le poids propre de la structure — solives, plancher, revêtement et plafond éventuel (typiquement 0,5 kN/m²). Les deux ensemble donnent la charge totale de dimensionnement.",
+      },
+      {
+        question: "Faut-il utiliser un entraxe de 40 ou 60 cm ?",
+        answer:
+          "40 cm est l'entraxe standard pour la plupart des planchers en ossature bois et est requis pour les panneaux OSB de 18 mm. 60 cm économise environ 33 % de bois mais nécessite un plancher plus épais (22 mm OSB), limite la portée et peut donner un plancher plus souple. Utilisez 40 cm pour les pièces de vie.",
+      },
+      {
+        question: "Ai-je besoin d'entretoises entre les solives ?",
+        answer:
+          "L'Eurocode impose des entretoises ou un contreventement pour les solives de hauteur supérieure à 200 mm, à intervalles de 2,50 m maximum. Pour les sections de 60×160 mm et moins, les entretoises ne sont pas normativement requises mais sont recommandées pour réduire les vibrations et les grincements.",
+      },
+      {
+        question: "Puis-je utiliser du 80×240 mm à 60 cm d'entraxe ?",
+        answer:
+          "Oui, du 80×240 mm C24 à 60 cm d'entraxe franchit environ 5,00 m de portée. C'est suffisant pour la plupart des pièces d'habitation. La hauteur de solive accrue offre aussi plus de place pour l'isolation dans la structure du plancher.",
+      },
+    ],
+  },
+
+  rafterSpanTable: {
+    title: "Tableau de portée des chevrons : référence charpente",
+    metaDescription:
+      "Tableaux de portée des chevrons pour sections 60×120 à 80×240 mm à 60, 80 et 100 cm d'entraxe. Zones de neige, pente de toit et références DTU/Eurocode pour la charpente résidentielle.",
+    heroTitle: "Tableau de portée des chevrons",
+    heroSubtitle: "Référence charpente complète",
+    heroDescription:
+      "Tableaux de portée complets pour les chevrons de toiture résidentielle. Trouvez la portée maximale admissible pour chaque section, entraxe, zone de neige et essence selon le DTU et l'Eurocode 5.",
+
+    quickAnswerHeading: "Réponse rapide",
+    quickAnswerText:
+      "Un chevron 80×160 mm en résineux C24 à 80 cm d'entraxe peut franchir jusqu'à environ 3,80 m (projection horizontale) en zone de neige B1 (sk = 0,50 kN/m²). Un chevron 80×200 mm de même qualité à 80 cm atteint environ 4,80 m. Vérifiez la portée selon votre zone de neige et votre pente de toit.",
+
+    understandingHeading: "Comprendre les portées de chevrons",
+    understandingText1:
+      "La portée d'un chevron est la projection horizontale de la distance entre son appui sur la sablière (à l'égout) et le point de faîtage. Contrairement aux solives de plancher, la portée se mesure horizontalement et non le long de la pente. La longueur réelle du chevron est plus grande que la portée en raison de l'inclinaison du toit.",
+    understandingText2:
+      "Le dimensionnement des chevrons prend en compte deux charges principales : la charge permanente (couverture, lattage, voligeage, isolation — typiquement 0,5–1,0 kN/m²) et la charge variable, qui comprend la neige et le vent. La charge de neige est calculée selon la NF EN 1991-1-3 à partir de la zone de neige (A1 à E pour la France), de l'altitude et de la pente du toit.",
+    understandingText3:
+      "La France est divisée en zones de neige : A1 (sk = 0,45 kN/m²), A2 (0,45 kN/m²), B1 (0,50 kN/m²), B2 (0,50 kN/m²), C1 (0,65 kN/m²), C2 (0,65 kN/m²), D (0,90 kN/m²), E (1,40 kN/m²). La charge augmente avec l'altitude selon la formule de majoration. Les toits plus pentus (> 30°) réduisent la charge de neige grâce au coefficient de forme μ₁.",
+
+    spanTablesHeading: "Tableaux de portée des chevrons (zone B1, sk = 0,50 kN/m²)",
+    spanTablesIntro:
+      "Les tableaux suivants s'appliquent aux chevrons en zone de neige B1 (sk = 0,50 kN/m², altitude ≤ 200 m) avec 0,75 kN/m² de charge permanente et une pente de 30°. Les portées indiquées sont la projection horizontale maximale en mètres.",
+    spanTablesColSize: "Section",
+    spanTablesCol12: "60 cm",
+    spanTablesCol16: "80 cm",
+    spanTablesCol24: "100 cm",
+    spanTablesBySpecies: [
+      {
+        species: "Résineux C24 (épicéa, sapin, douglas)",
+        grade: "Classe C24 — fm,k = 24 N/mm², E₀,mean = 11 000 N/mm²",
+        rows: [
+          { size: "60×120", oc12: "3,10 m", oc16: "2,70 m", oc24: "2,40 m" },
+          { size: "60×160", oc12: "4,00 m", oc16: "3,50 m", oc24: "3,10 m" },
+          { size: "80×180", oc12: "4,80 m", oc16: "4,20 m", oc24: "3,70 m" },
+          { size: "80×200", oc12: "5,60 m", oc16: "4,90 m", oc24: "4,30 m" },
+          { size: "80×240", oc12: "6,60 m", oc16: "5,80 m", oc24: "5,10 m" },
+        ],
+      },
+      {
+        species: "BLC GL24h (lamellé-collé)",
+        grade: "Classe GL24h — fm,g,k = 24 N/mm², E₀,g,mean = 11 500 N/mm²",
+        rows: [
+          { size: "60×120", oc12: "3,30 m", oc16: "2,90 m", oc24: "2,60 m" },
+          { size: "60×160", oc12: "4,30 m", oc16: "3,80 m", oc24: "3,30 m" },
+          { size: "80×180", oc12: "5,10 m", oc16: "4,50 m", oc24: "4,00 m" },
+          { size: "80×200", oc12: "5,90 m", oc16: "5,20 m", oc24: "4,60 m" },
+          { size: "80×240", oc12: "7,00 m", oc16: "6,10 m", oc24: "5,40 m" },
+        ],
+      },
+      {
+        species: "Résineux C18 (épicéa courant)",
+        grade: "Classe C18 — fm,k = 18 N/mm², E₀,mean = 9 000 N/mm²",
+        rows: [
+          { size: "60×120", oc12: "2,60 m", oc16: "2,30 m", oc24: "2,00 m" },
+          { size: "60×160", oc12: "3,40 m", oc16: "3,00 m", oc24: "2,60 m" },
+          { size: "80×180", oc12: "4,10 m", oc16: "3,50 m", oc24: "3,10 m" },
+          { size: "80×200", oc12: "4,70 m", oc16: "4,10 m", oc24: "3,60 m" },
+          { size: "80×240", oc12: "5,60 m", oc16: "4,90 m", oc24: "4,30 m" },
+        ],
+      },
+      {
+        species: "Douglas C24",
+        grade: "Classe C24 — fm,k = 24 N/mm², E₀,mean = 11 000 N/mm²",
+        rows: [
+          { size: "60×120", oc12: "3,10 m", oc16: "2,70 m", oc24: "2,40 m" },
+          { size: "60×160", oc12: "4,00 m", oc16: "3,50 m", oc24: "3,10 m" },
+          { size: "80×180", oc12: "4,80 m", oc16: "4,20 m", oc24: "3,70 m" },
+          { size: "80×200", oc12: "5,60 m", oc16: "4,90 m", oc24: "4,30 m" },
+          { size: "80×240", oc12: "6,60 m", oc16: "5,80 m", oc24: "5,10 m" },
+        ],
+      },
+    ],
+
+    snowLoadHeading: "Impact de la charge de neige sur les portées de chevrons",
+    snowLoadIntro:
+      "La charge de neige réduit considérablement les portées admissibles des chevrons. La France est découpée en zones de neige ; la charge augmente aussi avec l'altitude. Voici l'impact sur un chevron typique 80×200 mm résineux C24 à 80 cm d'entraxe.",
+    snowLoadItems: [
+      "Zone A1/A2 (sk = 0,45 kN/m²) : 80×200 mm porte jusqu'à environ 5,30 m — plaines du nord et de l'ouest de la France",
+      "Zone B1/B2 (sk = 0,50 kN/m²) : 80×200 mm porte jusqu'à environ 4,90 m — centre de la France, vallée du Rhône, est non montagneux",
+      "Zone C1/C2 (sk = 0,65 kN/m²) : 80×200 mm se réduit à environ 4,40 m — Alpes basses, Massif Central, Jura piémont",
+      "Zone D (sk = 0,90 kN/m²) : 80×200 mm tombe à environ 3,90 m — Alpes, Pyrénées, Massif Central en altitude",
+      "Zone E (sk = 1,40 kN/m²) : 80×200 mm se réduit à environ 3,30 m — haute montagne alpine au-dessus de 1 500 m",
+      "Les pentes supérieures à 30° réduisent la charge de neige grâce au coefficient de forme μ₁ — à 45°, μ₁ vaut 0,67. À 60°, μ₁ = 0 (la neige glisse). Attention aux accumulations dans les noues et les toitures basses en contrebas.",
+    ],
+    snowLoadSummary:
+      "Dimensionnez toujours vos chevrons pour la zone de neige de votre commune. Le sous-dimensionnement en charge de neige est l'une des erreurs de charpente les plus courantes et les plus dangereuses.",
+
+    pitchFactorsHeading: "Comment la pente de toit influence le dimensionnement des chevrons",
+    pitchFactorsIntro:
+      "La pente du toit affecte le dimensionnement des chevrons de multiples façons : longueur réelle, répartition des charges, déchargement de la neige et nécessité d'entraits ou de pannes faîtières.",
+    pitchFactorsItems: [
+      "Pente faible (10°–20°) : les chevrons travaillent presque comme des solives de plancher. La poussée horizontale aux appuis est forte, nécessitant des entraits (solives de plafond) pour reprendre l'effort. Les portées des tableaux s'appliquent directement.",
+      "Pente moyenne (25°–35°) : la composante de charge perpendiculaire au chevron diminue. Les entraits restent nécessaires sauf en cas de panne faîtière porteuse (charpente à pannes).",
+      "Pente forte (40°–55°) : la charge de neige se réduit fortement (facteur μ₁). Le chevron est cependant beaucoup plus long que la portée horizontale, augmentant le coût matière. Les efforts de vent deviennent prépondérants.",
+      "Les tableaux donnent la projection horizontale, pas la longueur du chevron. Pour la longueur réelle, multipliez la portée par le coefficient de pente : 20° = 1,064, 30° = 1,155, 40° = 1,305, 45° = 1,414.",
+      "Charpente à pannes vs charpente à chevrons : en charpente à pannes, les pannes faîtière et intermédiaires portent les chevrons. En charpente à chevrons, les chevrons portent seuls, contreventés par les entraits. La charpente à pannes permet de plus grandes portées de bâtiment.",
+      "Entraits vs contrefiches : les entraits (au niveau des sablières) reprennent la poussée horizontale. Les contrefiches (dans le tiers supérieur) empêchent l'écartement au faîtage. Les entraits sont obligatoires en charpente à chevrons ; les contrefiches seules ne suffisent pas.",
+    ],
+    pitchFactorsSummary:
+      "Pour la plupart des toitures résidentielles (25°–35° de pente), les valeurs tabulées s'appliquent directement. Pour les combles aménagés sans entraits, une panne faîtière porteuse est requise et doit être dimensionnée par un ingénieur.",
+
+    codeReferencesHeading: "Références normatives pour les chevrons",
+    codeReferencesIntro:
+      "Les normes suivantes régissent le dimensionnement des chevrons en construction bois en France.",
+    codeReferencesItems: [
+      "NF EN 1995-1-1 (Eurocode 5) — Calcul des structures bois : portées, limites de flèche (L/200 exploitation, L/150 total pour les toitures), flambement",
+      "NF EN 1991-1-3 (Eurocode 1) — Charges de neige : zones A1 à E, coefficients de forme μ₁ selon la pente, formules de majoration pour l'altitude",
+      "NF EN 1991-1-4 (Eurocode 1) — Actions du vent : zones de vent, coefficients de pression sur les versants, succion en égout et en rive",
+      "DTU 31.1 — Charpente en bois : règles de conception et de mise en œuvre pour les toitures",
+      "NF EN 338 — Classes de résistance du bois scié (C18, C24) avec caractéristiques mécaniques",
+      "NF EN 14080 — Bois lamellé-collé : classes de résistance (GL24h, GL28h)",
+    ],
+    codeReferencesSummary:
+      "Le dimensionnement des chevrons relève de l'Eurocode 5 complété par les charges de neige (Eurocode 1-3) et de vent (Eurocode 1-4). Pour les charpentes à chevrons avec entraits, les tableaux fournissent un dimensionnement direct ; les charpentes à pannes et cas particuliers nécessitent un calcul par un bureau d'études.",
+
+    calculatorCtaHeading: "Calculez vos matériaux de charpente",
+    calculatorCtaText:
+      "Une fois votre section et entraxe déterminés, utilisez nos calculateurs pour connaître le nombre exact de chevrons, de panneaux et de fixations.",
+    calculatorLinks: [
+      {
+        label: "Calculateur de chevrons",
+        href: "/calculators/roofing/rafter-calculator",
+        description: "Calculez le nombre de chevrons, la longueur de faîtière et les entraits nécessaires.",
+      },
+      {
+        label: "Calculateur de voligeage",
+        href: "/calculators/roofing/roof-sheathing-calculator",
+        description: "Estimez le nombre de panneaux OSB ou contreplaqué pour votre couverture.",
+      },
+      {
+        label: "Calculateur de pente",
+        href: "/calculators/roofing/roof-pitch-calculator",
+        description: "Calculez la pente, le coefficient de surface et la longueur de chevron.",
+      },
+    ],
+    faqHeading: "Questions fréquentes",
+    faqs: [
+      {
+        question: "Quelle portée pour un chevron 80×160 mm ?",
+        answer:
+          "Un chevron 80×160 mm en résineux C24 à 80 cm d'entraxe porte jusqu'à environ 3,50 m (projection horizontale) en zone B1. À 60 cm d'entraxe, la portée monte à environ 4,00 m. Pour des portées supérieures, passez au 80×200 mm ou 80×240 mm.",
+      },
+      {
+        question: "Le 60×120 mm suffit-il comme chevron ?",
+        answer:
+          "60×120 mm ne convient qu'aux portées très courtes : environ 2,40–2,70 m à 80–100 cm d'entraxe. C'est adapté pour les petits appentis, carports et auvents, mais pas pour les toitures de maisons d'habitation. La plupart des toitures nécessitent au minimum du 80×180 mm.",
+      },
+      {
+        question: "Faut-il une panne faîtière ou un simple faîtage ?",
+        answer:
+          "Un simple faîtage (planche) suffit en charpente à chevrons si des entraits reprennent la poussée horizontale. Une panne faîtière porteuse (en BLC ou acier) est requise en charpente à pannes et obligatoire pour les combles aménagés sans entraits, car elle doit porter la totalité de la charge verticale des chevrons.",
+      },
+      {
+        question: "Comment la charge de neige affecte-t-elle les portées ?",
+        answer:
+          "La charge de neige réduit considérablement les portées admissibles. Un chevron 80×200 mm C24 à 80 cm porte environ 5,30 m en zone A1 mais seulement 3,30 m en zone E — une réduction de près de 40 %. Dimensionnez toujours pour la zone de neige de votre commune.",
+      },
+      {
+        question: "Les pannes intermédiaires permettent-elles d'allonger la portée ?",
+        answer:
+          "Oui, les pannes intermédiaires (pièces horizontales perpendiculaires aux chevrons) portées par des poteaux ou un mur porteur intérieur soutiennent les chevrons à mi-portée, divisant la portée effective par deux. C'est une solution économique pour réduire la section des chevrons.",
+      },
+      {
+        question: "Quelle section minimale pour un chevron de maison ?",
+        answer:
+          "Pour les toitures résidentielles, on utilise typiquement au minimum du 80×180 mm, couvrant des portées de 4 à 5 m. Pour les bâtiments plus larges, du 80×200 mm ou 80×240 mm est nécessaire. En zone de forte neige, même les petits bâtiments peuvent nécessiter des sections supérieures.",
+      },
+    ],
+  },
+
+  ceilingJoistSpanTable: {
+    title: "Tableau de portée des solives de plafond : référence complète",
+    metaDescription:
+      "Tableaux de portée pour solives de plafond 60×100 à 80×200 mm à 40, 60 et 80 cm d'entraxe. Combles non aménageables, stockage léger et combles habitables avec références DTU/Eurocode.",
+    heroTitle: "Tableau de portée des solives de plafond",
+    heroSubtitle: "Référence complète DTU/Eurocode",
+    heroDescription:
+      "Tableaux de portée complets pour les solives de plafond en construction résidentielle. Trouvez les portées maximales pour chaque section et type de charge — du simple plafond plaque de plâtre aux combles aménagés.",
+
+    quickAnswerHeading: "Réponse rapide",
+    quickAnswerText:
+      "Une solive de plafond 60×160 mm en résineux C24 à 60 cm d'entraxe peut franchir jusqu'à environ 4,80 m pour un plafond en plaque de plâtre seul (charge permanente 0,3 kN/m², pas de charge d'exploitation). Si le comble sert de stockage léger (0,75 kN/m²), la portée tombe à environ 3,50 m. Pour un comble habitable (1,5 kN/m²), utilisez au minimum du 80×200 mm.",
+
+    understandingHeading: "Comprendre les portées des solives de plafond",
+    understandingText1:
+      "Les solives de plafond remplissent une double fonction dans une charpente à chevrons : elles portent le parement de plafond en dessous (typiquement des plaques de plâtre) et servent d'entraits pour reprendre la poussée horizontale des chevrons opposés. La portée dépend principalement de l'utilisation du comble au-dessus, qui détermine la charge d'exploitation.",
+    understandingText2:
+      "La NF EN 1991-1-1 distingue trois catégories de charges pour les solives de plafond : combles non aménageables sans stockage (uniquement charge permanente 0,3 kN/m² — poids des plaques de plâtre), combles non aménageables avec stockage léger (0,75 kN/m² de charge d'exploitation), et combles habitables avec plancher fini (1,5 kN/m² de charge d'exploitation). Chaque catégorie a ses propres tableaux de portée.",
+    understandingText3:
+      "Quand les solives de plafond servent aussi d'entraits, elles doivent être raccordées aux pieds de chevrons avec une fixation dimensionnée pour reprendre la poussée horizontale. L'Eurocode exige que les entraits soient placés dans le tiers inférieur de la portée du chevron. Des entraits relevés (avec jambes de force) augmentent considérablement les efforts de traction et doivent être calculés en conséquence.",
+
+    spanTablesHeading: "Tableaux de portée des solives de plafond par type de charge",
+    spanTablesIntro:
+      "Les tableaux suivants sont basés sur l'Eurocode 5 pour des solives de plafond avec 0,3 kN/m² de charge permanente. Trois cas de charge : plafond seul (pas de charge d'exploitation), stockage léger (0,75 kN/m²), et comble habitable (1,5 kN/m²). Les portées sont indiquées pour les cas plafond seul / stockage léger.",
+    spanTablesColSize: "Section",
+    spanTablesCol12: "40 cm",
+    spanTablesCol16: "60 cm",
+    spanTablesCol24: "80 cm",
+    spanTablesBySpecies: [
+      {
+        species: "Résineux C24 — plafond seul (pas de charge d'exploitation)",
+        grade: "Classe C24 — 0,3 kN/m² charge permanente, pas de charge d'exploitation",
+        rows: [
+          { size: "60×100", oc12: "3,80 m", oc16: "3,30 m", oc24: "2,90 m" },
+          { size: "60×120", oc12: "4,60 m", oc16: "4,00 m", oc24: "3,50 m" },
+          { size: "60×160", oc12: "5,60 m", oc16: "4,80 m", oc24: "4,20 m" },
+          { size: "80×200", oc12: "7,00 m", oc16: "6,10 m", oc24: "5,30 m" },
+        ],
+      },
+      {
+        species: "Résineux C24 — stockage léger (0,75 kN/m²)",
+        grade: "Classe C24 — 0,3 kN/m² charge permanente + 0,75 kN/m² charge d'exploitation",
+        rows: [
+          { size: "60×100", oc12: "2,70 m", oc16: "2,40 m", oc24: "2,10 m" },
+          { size: "60×120", oc12: "3,30 m", oc16: "2,90 m", oc24: "2,50 m" },
+          { size: "60×160", oc12: "4,10 m", oc16: "3,50 m", oc24: "3,10 m" },
+          { size: "80×200", oc12: "5,10 m", oc16: "4,50 m", oc24: "3,90 m" },
+        ],
+      },
+      {
+        species: "BLC GL24h — plafond seul (pas de charge d'exploitation)",
+        grade: "Classe GL24h — 0,3 kN/m² charge permanente, pas de charge d'exploitation",
+        rows: [
+          { size: "60×100", oc12: "4,10 m", oc16: "3,50 m", oc24: "3,10 m" },
+          { size: "60×120", oc12: "4,90 m", oc16: "4,30 m", oc24: "3,70 m" },
+          { size: "60×160", oc12: "6,00 m", oc16: "5,20 m", oc24: "4,50 m" },
+          { size: "80×200", oc12: "7,50 m", oc16: "6,50 m", oc24: "5,70 m" },
+        ],
+      },
+      {
+        species: "Résineux C18 — stockage léger (0,75 kN/m²)",
+        grade: "Classe C18 — 0,3 kN/m² charge permanente + 0,75 kN/m² charge d'exploitation",
+        rows: [
+          { size: "60×100", oc12: "2,30 m", oc16: "2,00 m", oc24: "1,70 m" },
+          { size: "60×120", oc12: "2,80 m", oc16: "2,40 m", oc24: "2,10 m" },
+          { size: "60×160", oc12: "3,40 m", oc16: "3,00 m", oc24: "2,60 m" },
+          { size: "80×200", oc12: "4,30 m", oc16: "3,80 m", oc24: "3,30 m" },
+        ],
+      },
+    ],
+
+    loadTypesHeading: "Types de charges pour solives de plafond",
+    loadTypesIntro:
+      "La NF EN 1991-1-1 définit trois catégories de charges pour les combles. Le choix de la bonne catégorie est essentiel pour sélectionner le bon tableau de portée.",
+    loadTypesItems: [
+      "Combles non aménageables sans stockage (charge permanente 0,3 kN/m² uniquement) : s'applique quand le comble n'a pas d'accès (pas de trappe ni d'escalier escamotable) et n'est visité qu'exceptionnellement pour la maintenance. Les solives ne portent que le plafond en plaque de plâtre, autorisant les portées les plus longues.",
+      "Combles non aménageables avec stockage léger (0,75 kN/m²) : s'applique quand le comble a une trappe ou un escalier escamotable et peut servir au stockage léger (décorations, valises). C'est le cas de charge le plus couramment utilisé pour les combles perdus.",
+      "Combles aménageables ou habitables (1,5 kN/m²) : s'applique quand le comble a une hauteur sous plafond suffisante (1,80 m minimum sur 50 % de la surface) et peut être aménagé en pièce de vie. Utilisez les tableaux de solives de plancher si l'espace servira de chambre ou séjour.",
+      "Si vous envisagez un aménagement futur des combles, dimensionnez les solives pour 1,5 kN/m² dès la construction. Renforcer des solives sous-dimensionnées a posteriori est coûteux et perturbant.",
+      "Les équipements techniques en combles (VMC, pompe à chaleur) ajoutent des charges concentrées. Prévoyez un chevêtre ou un renforcement local sous les équipements lourds.",
+    ],
+    loadTypesSummary:
+      "En cas de doute, dimensionnez pour le stockage léger (0,75 kN/m²). Le surcoût par rapport au simple plafond est faible mais vous conservez la flexibilité pour un usage futur du comble.",
+
+    factorsHeading: "Facteurs influençant les portées de solives de plafond",
+    factorsIntro:
+      "Plusieurs facteurs au-delà de la charge et de l'essence modifient le dimensionnement de vos solives de plafond.",
+    factorsItems: [
+      "Fonction d'entrait : quand les solives servent d'entraits dans une charpente à chevrons, elles subissent des efforts de traction en plus de la flexion. La liaison solive-chevron doit être dimensionnée pour reprendre la poussée horizontale. La portée n'est pas directement réduite mais les assemblages doivent être renforcés (boulons, étriers).",
+      "Poids du parement de plafond : une plaque BA13 standard pèse environ 0,11 kN/m². Avec 2×BA13 (coupe-feu 1/2 h), le poids double à 0,22 kN/m². Les plafonds en bois ou en plâtre peuvent peser 0,3–0,5 kN/m² et nécessiter une section supérieure.",
+      "Isolation : l'isolant soufflé (ouate de cellulose, laine de verre) sur les solives peut peser 0,05–0,15 kN/m². Pour les couches très épaisses (> 40 cm), vérifiez que l'hypothèse de charge permanente reste valide.",
+      "Entraxe et parement : 60 cm d'entraxe nécessite du BA15 (ou du BA13 spécial plafond renforcé). 40 cm autorise le BA13 standard. À 80 cm, du BA18 ou un lattage croisé est recommandé pour éviter le fluage du plâtre.",
+      "Surcroît (jambe de force) : quand les entraits sont relevés au-dessus des sablières pour créer un volume habitable, les efforts de traction augmentent fortement. Un calcul de structure est indispensable pour les assemblages.",
+    ],
+    factorsSummary:
+      "Les solives de plafond sont souvent sous-estimées car cachées au-dessus du plafond. Mais elles remplissent un rôle structurel critique comme entraits dans la charpente et doivent être correctement dimensionnées et assemblées.",
+
+    codeReferencesHeading: "Références normatives pour les solives de plafond",
+    codeReferencesIntro:
+      "Les normes suivantes s'appliquent au dimensionnement des solives de plafond en construction bois en France.",
+    codeReferencesItems: [
+      "NF EN 1995-1-1 (Eurocode 5) — Calcul des structures bois : portées, limites de flèche, vérification en flexion et traction pour les solives de plafond servant d'entraits",
+      "NF EN 1991-1-1 (Eurocode 1) — Actions : catégories de charges pour les combles (0,75 kN/m² stockage, 1,5 kN/m² habitable)",
+      "DTU 31.1 — Charpente en bois : assemblages entrait-chevron, fixation minimale (3 boulons M12 ou étriers équivalents par nœud)",
+      "DTU 25.41 — Ouvrages en plaques de plâtre : entraxe maximal des ossatures pour le parement plafond (BA13 à 40 cm, BA15 à 60 cm) pour éviter le fluage",
+      "NF EN 338 — Classes de résistance du bois scié (C18, C24)",
+      "Arrêté du 31 janvier 1986 — Sécurité incendie : exigences de résistance au feu des planchers hauts (coupe-feu 1/4 h, 1/2 h) et épaisseur de plaque de plâtre correspondante",
+    ],
+    codeReferencesSummary:
+      "Le dimensionnement des solives de plafond croise l'Eurocode 5 (structure), l'Eurocode 1 (charges), le DTU 25.41 (plafonds plaque de plâtre) et la réglementation incendie. Considérez l'ensemble de ces textes lors de la conception.",
+
+    calculatorCtaHeading: "Calculez vos matériaux de plafond",
+    calculatorCtaText:
+      "Utilisez nos calculateurs pour déterminer le nombre de solives, de plaques de plâtre et de fixations nécessaires.",
+    calculatorLinks: [
+      {
+        label: "Calculateur de solives",
+        href: "/calculators/floor-framing/floor-joist-calculator",
+        description: "Aussi adapté aux solives de plafond — calculez quantité, entraxe et entretoises.",
+      },
+      {
+        label: "Calculateur de plaques de plâtre",
+        href: "/calculators/insulation-drywall/drywall-calculator",
+        description: "Estimez les plaques, l'enduit de jointoiement et les vis pour votre plafond.",
+      },
+      {
+        label: "Calculateur d'isolation",
+        href: "/calculators/insulation-drywall/cavity-insulation-calculator",
+        description: "Calculez les rouleaux ou l'isolant soufflé pour le comble au-dessus des solives.",
+      },
+    ],
+    faqHeading: "Questions fréquentes",
+    faqs: [
+      {
+        question: "Quelle portée pour une solive de plafond 60×160 mm ?",
+        answer:
+          "Une solive 60×160 mm en résineux C24 à 60 cm d'entraxe porte jusqu'à environ 4,80 m pour un plafond simple (pas de charge d'exploitation). Avec stockage léger (0,75 kN/m²), la portée tombe à environ 3,50 m. Pour un comble habitable (1,5 kN/m²), elle ne fait que 2,80 m environ — utilisez alors du 80×200 mm minimum.",
+      },
+      {
+        question: "Le 60×100 mm suffit-il en solive de plafond ?",
+        answer:
+          "60×100 mm peut franchir jusqu'à environ 3,30 m à 60 cm d'entraxe pour un plafond simple. Avec stockage, la portée descend à 2,40 m. Le 60×100 mm convient pour les petites pièces, couloirs et zones de comble étroites, pas pour les portées courantes supérieures à 4 m.",
+      },
+      {
+        question: "Les solives de plafond doivent-elles être parallèles aux chevrons ?",
+        answer:
+          "Oui, quand elles servent d'entraits (cas standard en charpente à chevrons), elles doivent être parallèles aux chevrons et fixées directement aux pieds de chevrons. Si elles sont perpendiculaires, des entraits séparés ou une panne faîtière porteuse sont nécessaires.",
+      },
+      {
+        question: "Quelle différence entre solive de plafond et solive de plancher ?",
+        answer:
+          "Structurellement, c'est le même type de pièce (poutre horizontale en flexion). La différence est la charge : les solives de plafond portent le parement et éventuellement un stockage léger (0,3–0,75 kN/m²), tandis que les solives de plancher portent les charges complètes d'habitation (1,5 kN/m²). Les solives de plafond peuvent donc franchir des portées nettement plus longues à section égale.",
+      },
+      {
+        question: "Peut-on marcher sur les solives de plafond ?",
+        answer:
+          "Uniquement si elles sont dimensionnées pour le stockage léger (0,75 kN/m²) ou l'habitation (1,5 kN/m²). Les solives dimensionnées pour le simple plafond (pas de charge d'exploitation) peuvent fléchir sous le poids d'une personne et endommager le plafond en plaque de plâtre en dessous. Marchez toujours sur les solives, jamais entre elles sur les plaques de plâtre.",
+      },
+      {
+        question: "Comment renforcer des solives de plafond existantes pour aménager les combles ?",
+        answer:
+          "La méthode la plus courante est le doublage : boulonner ou visser une solive neuve de hauteur égale ou supérieure contre chaque solive existante. Colle de charpente plus boulons M12 tous les 40 cm ou vis à bois 8×200 tous les 30 cm en quinconce. La solive doublée doit reposer sur les mêmes appuis. Autre solution : installer une poutre et des poteaux en dessous pour réduire la portée effective. Consultez un ingénieur structure.",
+      },
     ],
   },
 };

@@ -51,6 +51,10 @@ const clusters: Record<string, ClusterConfig> = {
     subCalculators: ["driveway-gravel-calculator"],
     guides: [{ href: "/guides/gravel-cost-guide/", title: "Gravel Cost Guide: Prices Per Ton & Yard" }],
   },
+  "rebar-calculator": {
+    subCalculators: ["rebar-spacing-calculator"],
+    guides: [{ href: "/guides/concrete-cost-guide/", title: "How Much Does Concrete Cost?" }],
+  },
   "fence-calculator": {
     subCalculators: ["fence-post-calculator", "fence-panel-calculator", "picket-fence-calculator"],
     guides: [{ href: "/guides/fence-cost-guide/", title: "Fence Cost Guide" }],

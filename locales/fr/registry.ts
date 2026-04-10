@@ -1503,6 +1503,171 @@ export const roofSlopeCalculator: CalculatorSEOContent = {
   ],
 };
 
+// ─── TOITURE EN CROUPE (HIP ROOF) ───────────────────────────────────────────
+
+export const hipRoofCalculatorFR: CalculatorSEOContent = {
+  disclaimer: "La géométrie de la toiture en croupe est approximative. Les arêtiers varient en longueur — ajuster chaque pièce individuellement. Prévoir 10–15 % de chute pour le bois.",
+  howToUse: [
+    "Mesurez la longueur et la largeur totales du bâtiment en mètres.",
+    "Entrez la pente du toit (montée pour 12 unités de course).",
+    "Sélectionnez l'entraxe des chevrons (40 cm est le standard).",
+    "Cliquez sur Calculer pour obtenir le nombre de chevrons, la longueur des arêtiers, la surface de toiture et la longueur du faîtage.",
+  ],
+  materialInfo:
+    "La toiture en croupe (ou toit à quatre pans) possède quatre versants inclinés — deux trapèzes latéraux et deux triangles aux pignons — qui se rejoignent sur un faîtage plus court que la longueur du bâtiment. Grâce aux débords de toit sur les quatre façades, la toiture en croupe offre une résistance au vent supérieure et peut supporter des vents de plus de 180 km/h, ce qui la rend préférable dans les zones exposées aux tempêtes (littoral atlantique, Méditerranée). La charpente requiert quatre arêtiers qui partent diagonalement de chaque angle du bâtiment vers l'extrémité du faîtage, des chevrons principaux centrés sur chaque versant triangulaire et de nombreux empannons (chevrons raccourcis) progressivement plus courts à mesure qu'ils se rapprochent de l'arêtier. L'arêtier est généralement d'une section supérieure aux chevrons courants (par ex. 8×20 cm pour l'arêtier contre 6×18 cm pour les chevrons) car il reprend les charges des deux côtés. La longueur du faîtage d'une croupe standard égale la longueur du bâtiment moins sa largeur. Pour une toiture en croupe de 9×12 m à 30° de pente, les coûts de charpente en bois (sapin/épicéa C24) s'élèvent de 3 500 à 8 000 EUR, la main-d'œuvre de charpentier de 5 000 à 12 000 EUR. La conception doit respecter le DTU 31.1 (charpente en bois) et les Eurocodes.",
+  nextSteps: [
+    { label: "Calculateur de voligeage", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Calculateur de tuiles", href: "/calculators/roofing/shingle-calculator/" },
+    { label: "Calculateur de pente", href: "/calculators/roofing/roof-pitch-calculator/" },
+    { label: "Calculateur toit à pignon", href: "/calculators/roofing/gable-roof-calculator/" },
+  ],
+  installationTips: [
+    "Utiliser des arêtiers d'une section supérieure aux chevrons courants pour assurer une portance suffisante.",
+    "Calculer les coupes d'empannons avec une équerre de charpentier — les arêtiers exigent des coupes biaises composées.",
+    "Installer les arêtiers en premier, puis remplir avec les empannons du plus long au plus court.",
+    "Chanfreiner le dessus des arêtiers (délardement) pour que le voligeage repose à plat sur la ligne d'arête.",
+    "Contreventer temporairement les arêtiers jusqu'à la pose du voligeage — ils peuvent vriller sous leur propre poids.",
+  ],
+  commonMistakes: [
+    "Utiliser la même section pour arêtiers et chevrons courants — les arêtiers reprennent le double de charge et doivent être plus forts.",
+    "Ne pas prévoir le délardement de l'arêtier — le voligeage ne sera pas plan et créera une bosse à l'arête.",
+    "Oublier que les empannons nécessitent des coupes biaises composées, pas de simples coupes d'aplomb.",
+    "Sous-estimer les matériaux — les toitures en croupe consomment 10–15 % de bois et voligeage de plus qu'un toit à pignon équivalent.",
+  ],
+  faqs: [
+    { question: "Qu'est-ce qu'une toiture en croupe ?", answer: "Une toiture en croupe a quatre versants inclinés qui descendent tous vers les murs. Les deux côtés longs sont des trapèzes et les deux courts sont des triangles. Tous se rejoignent sur un faîtage plus court que la longueur du bâtiment. Les toitures en croupe sont plus résistantes au vent que les toits à pignon et protègent les quatre façades." },
+    { question: "Comment calculer la surface d'une toiture en croupe ?", answer: "Mesurez l'emprise au sol (longueur × largeur) et multipliez par le coefficient de pente. Pour une pente de 30° (environ 7:12), le coefficient est 1,155. Un bâtiment de 9×12 m donne environ 9 × 12 × 1,155 = 124,7 m² de surface de toiture." },
+    { question: "Combien d'arêtiers a une toiture en croupe ?", answer: "Une croupe standard a exactement 4 arêtiers — un partant de chaque angle du bâtiment en diagonale vers l'extrémité du faîtage. Chaque arêtier est plus long que les chevrons courants car il court à 45° en plan." },
+    { question: "Croupe ou pignon — lequel est préférable ?", answer: "Les toitures en croupe résistent mieux au vent, protègent les quatre façades et sont auto-contreventées. Les toits à pignon sont plus simples, moins chers et offrent plus d'espace sous combles. En zone ventée ou littorale, la croupe est fortement recommandée." },
+    { question: "Quelle est la longueur d'un arêtier ?", answer: "Un arêtier court en diagonale de l'angle du bâtiment au faîtage. Sa course horizontale est celle du chevron courant multipliée par √2 (≈ 1,414). Pour un bâtiment de 9 m de large à 30° : course chevron = 4,5 m, course arêtier = 6,36 m, longueur arêtier ≈ 6,8 m." },
+    { question: "Quelle est la longueur du faîtage d'une croupe ?", answer: "La longueur du faîtage d'une croupe standard = longueur du bâtiment − largeur. Pour un bâtiment de 12×9 m : faîtage = 12 − 9 = 3 m. Si le bâtiment est carré, il n'y a pas de faîtage — les quatre arêtiers se rejoignent en un point (toit en pavillon)." },
+  ],
+};
+
+// ─── TOITURE MANSARDÉE (GAMBREL ROOF) ───────────────────────────────────────
+
+export const gambrelRoofCalculatorFR: CalculatorSEOContent = {
+  disclaimer: "Les proportions de toiture mansardée utilisent une répartition standard 67/33. Les proportions réelles peuvent varier. Consultez un ingénieur structure pour les plans définitifs.",
+  howToUse: [
+    "Entrez la longueur et la largeur du bâtiment en mètres.",
+    "Entrez la pente inférieure (raide) — typiquement 18:12 à 24:12 pour les murs de type grange.",
+    "Entrez la pente supérieure (douce) — typiquement 4:12 à 8:12 pour la calotte.",
+    "Sélectionnez l'entraxe des chevrons et cliquez sur Calculer.",
+  ],
+  materialInfo:
+    "La toiture mansardée (ou toit à la Mansart, toit brisé) présente deux pentes distinctes sur chaque versant : une section inférieure raide (typiquement 60–70°) et une section supérieure plus douce (typiquement 20–30°). Ce design à double pente maximise l'espace habitable sous combles et constitue le choix classique pour les granges, bâtiments agricoles et maisons de style colonial. La pente inférieure fonctionne presque comme un mur, offrant une hauteur sous plafond complète dans les combles, tandis que la pente supérieure forme le toit conventionnel. Structurellement, la transition entre les deux pentes (le brisis/terrassement) nécessite une panne sablière intermédiaire qui sert d'appui structurel aux chevrons supérieurs et transfère les charges aux chevrons inférieurs. Les chevrons inférieurs sont typiquement en 6×20 ou 6×24 cm, les supérieurs en 6×16 ou 6×20 cm. Les fermes mansardées peuvent être fabriquées en usine comme unité préfabriquée. Le design mansardé utilise 20–30 % moins de matériaux qu'un étage complet avec toit à pignon conventionnel. Les coûts matériaux pour une charpente mansardée de 9×12 m sont de 5 000 à 10 000 EUR en bois. Un inconvénient est la résistance au vent — la pente inférieure raide capte le vent, les toitures mansardées ne sont pas recommandées en zone ventée.",
+  nextSteps: [
+    { label: "Calculateur de voligeage", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Calculateur de chevrons", href: "/calculators/roofing/rafter-calculator/" },
+    { label: "Calculateur de tuiles", href: "/calculators/roofing/shingle-calculator/" },
+    { label: "Calculateur toit à pignon", href: "/calculators/roofing/gable-roof-calculator/" },
+  ],
+  installationTips: [
+    "Fabriquer les fermes mansardées sur une surface plane (gabarit) pour assurer la régularité sur toutes les fermes.",
+    "La panne au point de bris est structurelle — utiliser une poutre dimensionnée ou un doublage de bois.",
+    "Installer des contrefiches à la transition pente inférieure/supérieure pour renforcer la rigidité.",
+    "Poser le voligeage au passage du bris avec soin — le changement d'angle exige des coupes précises.",
+    "Utiliser des entraits ou poutres de plancher dans la section supérieure pour empêcher la poussée latérale.",
+  ],
+  commonMistakes: [
+    "Sous-dimensionner la panne au point de transition — elle reprend des charges structurelles importantes.",
+    "Ne pas contreventer la transition inférieure/supérieure — le point de bris est la partie la plus faible.",
+    "Utiliser la même pente pour les deux sections — l'inférieure doit être nettement plus raide pour gagner de l'espace habitable.",
+    "Ignorer l'exposition au vent — les toitures mansardées résistent mal aux vents forts à cause de la face inférieure raide.",
+  ],
+  faqs: [
+    { question: "Qu'est-ce qu'une toiture mansardée ?", answer: "Une toiture mansardée a deux pentes différentes sur chaque versant — une inférieure raide (60 à 70 degrés) et une supérieure douce (20 à 30 degrés). Ce design de type grange maximise l'espace intérieur habitable dans les combles." },
+    { question: "Quelles pentes pour une toiture mansardée ?", answer: "La section inférieure (raide) utilise typiquement 18:12 à 24:12 (56 à 63 degrés), la supérieure (douce) 4:12 à 8:12 (18 à 33 degrés). Une combinaison courante est 20:12 en bas et 6:12 en haut." },
+    { question: "Combien d'espace supplémentaire offre une mansarde ?", answer: "Une toiture mansardée offre environ 70 à 80 pour cent de la surface d'un étage complet, contre 40 à 50 pour cent pour des combles sous toit à pignon. Pour un bâtiment de 9 m de large, cela représente environ 55 à 65 m² par tranche de 9 m de longueur." },
+    { question: "Les toitures mansardées sont-elles solides ?", answer: "Elles sont solides lorsque correctement calculées et contreventées, mais plus vulnérables au vent que les toitures en croupe ou à pignon en raison de la face inférieure raide. Elles ne sont pas recommandées en zone littorale ou fortement ventée." },
+    { question: "Quelle différence entre mansarde et toit à la Mansart ?", answer: "En français, les termes sont souvent utilisés de manière interchangeable. Le toit mansardé (gambrel en anglais) a deux pentes sur deux côtés avec pignons. Le toit à la Mansart historique a deux pentes sur les quatre côtés — un hybride croupe-mansarde." },
+    { question: "Combien coûte une toiture mansardée ?", answer: "Une toiture mansardée coûte 15 à 25 pour cent de plus qu'un toit à pignon simple de même emprise. Pour un bâtiment de 9×12 m : 6 000 à 12 000 EUR en bois et quincaillerie, plus 8 000 à 18 000 EUR de main-d'œuvre. Néanmoins nettement moins qu'un étage complet conventionnel." },
+  ],
+};
+
+// ─── TOITURE À PIGNON (GABLE ROOF) ─────────────────────────────────────────
+
+export const gableRoofCalculatorFR: CalculatorSEOContent = {
+  disclaimer: "Prévoir 10–15 % de chute pour les coupes et débords. Les longueurs de chevrons n'incluent pas le débord — ajouter 30–60 cm par chevron pour les avant-toits.",
+  howToUse: [
+    "Entrez la longueur du bâtiment (le long du faîtage) et la largeur (en travers du pignon) en mètres.",
+    "Entrez la pente du toit (montée pour 12 unités de course).",
+    "Sélectionnez l'entraxe des chevrons (40 cm est le standard résidentiel).",
+    "Cliquez sur Calculer pour obtenir le nombre de chevrons, la surface de toiture, la longueur du faîtage et la surface du pignon.",
+  ],
+  materialInfo:
+    "Le toit à pignon est le type de toiture résidentiel le plus courant en France, avec deux versants inclinés qui se rejoignent sur un faîtage central courant sur toute la longueur du bâtiment. Les sections de mur triangulaires à chaque extrémité — les pignons — donnent leur nom à ce style. Les toits à pignon sont appréciés pour leur simplicité de conception, facilité de construction, économie de matériaux et excellent ruissellement des eaux pluviales et de la neige. Les deux versants opposés créent une ventilation naturelle efficace combinée avec des chatières et une ventilation de faîtage. Les pentes résidentielles standard en France vont de 25° à 45°, avec 30° à 40° étant les plus courantes selon la région et le DTU applicable. Les chevrons courent de la sablière au faîtage, avec un embrèvement à la sablière et une coupe d'aplomb au faîtage. Les sections courantes sont 6×14 cm (portée jusqu'à 3 m), 6×18 cm (jusqu'à 4 m), 6×20 cm (jusqu'à 5 m) et 6×24 cm (jusqu'à 6 m) à 40 cm d'entraxe en sapin/épicéa C24. Les murs pignons doivent être isolés et habillés, ce qui ajoute du matériau. Pour un toit à pignon de 9×12 m à 35°, le bois de charpente coûte de 2 500 à 6 000 EUR, avec la main-d'œuvre de 4 000 à 9 000 EUR.",
+  nextSteps: [
+    { label: "Calculateur de faîtage", href: "/calculators/roofing/ridge-board-calculator/" },
+    { label: "Calculateur de voligeage", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Calculateur de tuiles", href: "/calculators/roofing/shingle-calculator/" },
+    { label: "Calculateur toiture en croupe", href: "/calculators/roofing/hip-roof-calculator/" },
+  ],
+  installationTips: [
+    "Couper un chevron témoin et l'essayer avant de débiter l'ensemble du lot.",
+    "Utiliser une équerre de charpentier pour tracer des embrèvements et coupes d'aplomb réguliers.",
+    "Installer la panne faîtière sur des étais provisoires avant de poser les chevrons.",
+    "Travailler des deux extrémités vers le centre en posant les chevrons par paires opposées.",
+    "Installer des entraits retroussés dans le tiers supérieur des chevrons pour empêcher l'écartement des murs.",
+  ],
+  commonMistakes: [
+    "Oublier d'ajouter la longueur de débord au chevron — ajouter 30 à 60 cm par chevron au-delà du mur.",
+    "Ne pas inclure l'habillage et l'isolation du pignon dans l'estimation des matériaux.",
+    "Prendre la largeur du bâtiment comme course du chevron — la course est la moitié de la largeur pour chaque versant.",
+    "Omettre les entraits ou solives de plancher — sans eux les chevrons pousseront les murs vers l'extérieur avec le temps.",
+  ],
+  faqs: [
+    { question: "Qu'est-ce qu'un toit à pignon ?", answer: "Un toit à pignon est la forme classique de toit à deux versants qui se rejoignent sur un faîtage central. Les sections de mur triangulaires verticales à chaque extrémité s'appellent les pignons. C'est le type de toit le plus courant en France pour sa simplicité et son faible coût." },
+    { question: "Comment calculer la surface d'un toit à pignon ?", answer: "Multipliez la demi-largeur du bâtiment (la course) par le coefficient de pente, puis par la longueur pour un versant. Doublez pour les deux versants. Pour 9×12 m à 35° : course = 4,5 m, coefficient = 1,221, un versant = 4,5 × 1,221 × 12 = 65,9 m², total = 131,9 m²." },
+    { question: "Qu'est-ce que la surface de pignon et pourquoi est-elle importante ?", answer: "Le pignon est la section de mur triangulaire entre les deux versants à chaque extrémité du bâtiment. Sa surface = demi-largeur × hauteur du toit. Cette surface doit être isolée et habillée. Pour un bâtiment de 9 m avec pente de 35°, chaque pignon fait environ 9 × 3,15 / 2 = 14,2 m²." },
+    { question: "Quelle pente est idéale pour un toit à pignon ?", answer: "En France, 30° à 40° sont les pentes les plus courantes, variant selon la région et le climat. 35° offre un bon équilibre entre esthétique, efficacité matériaux et praticabilité. Les pentes plus faibles (25°–30°) conviennent à l'architecture moderne, les plus fortes (45°+) permettent l'aménagement des combles." },
+    { question: "Combien de chevrons pour un toit à pignon ?", answer: "Divisez la longueur du bâtiment par l'entraxe (en mètres), ajoutez un, puis doublez pour les deux versants. Pour 12 m à 40 cm d'entraxe : (12 / 0,4) + 1 = 31 par versant, 62 au total. Ajoutez 10 % de chute, soit 68 chevrons à commander." },
+    { question: "Croupe ou pignon — lequel coûte moins cher ?", answer: "Les toits à pignon coûtent 15 à 25 pour cent de moins car ils utilisent moins de bois, ont des coupes plus simples et se montent plus vite. Cependant, ils sont moins résistants au vent et exposent les murs pignons aux intempéries." },
+  ],
+};
+
+// ─── TOITURE EN APPENTIS (LEAN-TO ROOF) ─────────────────────────────────────
+
+export const leanToRoofCalculatorFR: CalculatorSEOContent = {
+  disclaimer: "Les mesures d'appentis supposent une pente unique sans noue ni arêtier. Prévoir 10–15 % de chute. La longueur du chevron n'inclut pas le débord.",
+  howToUse: [
+    "Entrez la longueur du toit (dimension le long du mur porteur).",
+    "Entrez la course du toit (profondeur depuis le mur).",
+    "Entrez la pente (montée pour 12 unités de course horizontale).",
+    "Sélectionnez l'entraxe des chevrons et cliquez sur Calculer pour le nombre de chevrons, la longueur, la surface et la hauteur de relevé.",
+  ],
+  materialInfo:
+    "Le toit en appentis (ou toit en pente unique, mono-pente, shed) est la forme de toiture la plus simple — un seul plan incliné qui s'appuie contre une construction existante ou relie des murs de hauteurs différentes. C'est le choix standard pour les extensions, vérandas couvertes, carports, abris de jardin et bûchers. Le côté haut est typiquement fixé au mur existant par une lisse d'appui boulonnée aux montants, le côté bas repose sur une poutre supportée par des poteaux. Avec une seule pente, l'appentis est le toit le plus économique à construire — il nécessite environ moitié moins de chevrons qu'un toit à pignon de même emprise et n'a ni faîtage, ni arêtier, ni coupes composées. Les pentes typiques vont de 5° à 30°, avec 15° à 20° les plus courantes pour les structures adossées. La pente minimale dépend du matériau de couverture : 2° pour membrane EPDM, 5° pour bac acier à joints debout, 22° pour tuiles terre cuite selon DTU 40.21. Les sections de chevrons suivent les mêmes abaques : 6×14 cm pour des portées jusqu'à 3 m, 6×18 cm jusqu'à 4 m, 6×20 cm jusqu'à 5 m à 40 cm d'entraxe. La fixation murale courante comprend une lisse 6×18 ou 6×20 cm boulonnée tous les 40 cm avec des tire-fond M12 et un solin au-dessus pour l'étanchéité. Un appentis de 3,6×6 m coûte 800 à 2 000 EUR en bois de charpente et 300 à 800 EUR en couverture, avec la main-d'œuvre de 1 500 à 3 500 EUR.",
+  nextSteps: [
+    { label: "Calculateur de chevrons", href: "/calculators/roofing/rafter-calculator/" },
+    { label: "Calculateur de voligeage", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Calculateur de pente", href: "/calculators/roofing/roof-pitch-calculator/" },
+    { label: "Calculateur toit à pignon", href: "/calculators/roofing/gable-roof-calculator/" },
+  ],
+  installationTips: [
+    "Fixer la lisse d'appui aux montants ou à la lisse basse du mur existant avec des tire-fond M12 — ne jamais ancrer uniquement dans le bardage.",
+    "Installer un solin ou un relevé d'étanchéité au-dessus de la lisse pour empêcher l'eau de pénétrer dans le mur.",
+    "Tendre un cordeau de la lisse à la poutre pour vérifier la pente régulière avant de couper les chevrons.",
+    "Incliner le toit en s'éloignant du bâtiment existant pour diriger les eaux pluviales vers le côté bas.",
+    "Pour les portées supérieures à 4 mètres, prévoir une poutre intermédiaire pour réduire la section des chevrons.",
+  ],
+  commonMistakes: [
+    "Fixer la lisse au bardage au lieu de la structure — elle doit être boulonnée aux montants ou à la lisse filante.",
+    "Oublier le solin au-dessus de la lisse — c'est la cause la plus fréquente d'infiltration dans les extensions en appentis.",
+    "Incliner le toit vers le bâtiment existant au lieu de l'opposé — l'eau doit s'évacuer vers le côté extérieur (bas).",
+    "Utiliser une pente trop faible pour le matériau de couverture choisi — les tuiles terre cuite nécessitent au moins 22° selon DTU.",
+  ],
+  faqs: [
+    { question: "Qu'est-ce qu'un toit en appentis ?", answer: "Un toit en appentis est un toit à pente unique qui s'appuie typiquement contre un mur de bâtiment existant. Un côté est plus haut (fixé au mur par une lisse) et l'autre plus bas (supporté par des poteaux et une poutre). C'est le type de toit le plus simple et économique, courant pour les extensions, vérandas, carports et abris." },
+    { question: "Quelle est la pente minimale pour un appentis ?", answer: "Cela dépend du matériau de couverture : 2° pour membrane EPDM, 3° pour bac acier à joints debout, 5° pour bac acier à fixation traversante, et 22° pour tuiles terre cuite (DTU 40.21). Pour la plupart des appentis, 15° à 20° offre un bon compromis drainage/hauteur libre." },
+    { question: "Comment calculer la surface d'un toit en appentis ?", answer: "Multipliez la longueur (le long du mur) par la course (profondeur), puis par le coefficient de pente. Pour un appentis de 6×3,6 m à 18° : coefficient = 1,054, surface = 6 × 3,6 × 1,054 = 22,8 m²." },
+    { question: "Quelle hauteur de relevé pour un appentis ?", answer: "La hauteur = course × rapport de pente. Pour une course de 3,6 m à 18° (4:12) : 3,6 × (4/12) = 1,2 m de dénivelé. Le côté haut sera 1,2 m plus haut que le côté bas." },
+    { question: "Peut-on fixer un appentis à n'importe quel mur ?", answer: "On peut le fixer à tout mur structurel capable de supporter les charges de la lisse. Le mur doit avoir des montants ou une lisse filante accessibles. Les murs en maçonnerie nécessitent des chevilles à expansion ou des goujons traversants. Toujours vérifier que le mur existant peut supporter la charge de toiture supplémentaire." },
+    { question: "Combien coûte un toit en appentis ?", answer: "Un appentis de 3,6×6 m coûte 800 à 2 000 EUR en charpente, 300 à 800 EUR en couverture et étanchéité, et 1 500 à 3 500 EUR de main-d'œuvre. Coût total installé : typiquement 2 500 à 6 500 EUR selon les matériaux et la complexité." },
+  ],
+};
+
+
 // ─── EXTERIOR SHELL ─────────────────────────────────────────────────────────
 
 export const housewrapCalculator: CalculatorSEOContent = {
@@ -2641,6 +2806,290 @@ const stairLandingCalculatorFR: CalculatorSEOContent = {
   ],
 };
 
+// ─── FERRAILLAGE ────────────────────────────────────────────────────────────
+
+export const rebarCalculator: CalculatorSEOContent = {
+  disclaimer: "Cette estimation suppose un treillis plat monocouche. Les besoins réels en armature dépendent des spécifications d'ingénierie, des conditions de sol et de la réglementation locale. Consultez toujours un ingénieur structure pour les applications porteuses et sismiques.",
+  howToUse: [
+    "Entrez la longueur et la largeur de la dalle en mètres.",
+    "Définissez l'espacement souhaité — 15 cm entre-axes est courant pour les dalles résidentielles.",
+    "Sélectionnez le diamètre : HA 8 pour charge légère, HA 10 pour résidentiel standard, HA 12 pour structurel.",
+    "Cliquez sur Calculer pour obtenir le nombre de barres, les mètres linéaires et le poids total.",
+  ],
+  materialInfo:
+    "Le ferraillage (armature en acier, fer à béton) est constitué de barres en acier à haute adhérence (HA) noyées dans le béton pour lui conférer une résistance à la traction que le béton seul ne peut fournir. Le béton résiste bien en compression mais est faible en traction — les armatures reprennent les efforts de traction et empêchent la fissuration sous charge. Les diamètres les plus courants pour la construction résidentielle et commerciale légère en France sont : HA 6 (0,222 kg/m), HA 8 (0,395 kg/m), HA 10 (0,617 kg/m) et HA 12 (0,888 kg/m). Les barres standard mesurent 6 m ou 12 m de longueur. Lorsque la dimension de la dalle dépasse la longueur de la barre, des recouvrements d'au moins 40 diamètres sont nécessaires — soit 48 cm pour du HA 12. L'acier B500B (limite d'élasticité 500 MPa) est la norme selon l'Eurocode 2 / NF EN 1992 pour la construction résidentielle en France. Il est disponible en acier brut (noir), galvanisé et inoxydable pour les environnements corrosifs. L'espacement type est de 15 cm entre-axes dans les deux directions pour les dalles résidentielles de 12 cm, 20 cm pour les terrasses et 10 cm pour les dalles de garage ou structurelles. Les armatures doivent être surélevées du fond de coffrage à l'aide de cales (distanciers) pour se situer dans le tiers inférieur de l'épaisseur de la dalle — poser les barres sur le sol n'apporte aucun bénéfice structurel. Le prix actuel est d'environ 1,00–1,80 € le mètre linéaire pour du HA 10, soit 6–11 € la barre de 6 m.",
+  nextSteps: [
+    { label: "Calculateur d'espacement ferraillage", href: "/calculators/foundation/rebar-spacing-calculator/" },
+    { label: "Calculateur de dalle béton", href: "/calculators/foundation/concrete-slab-calculator/" },
+    { label: "Calculateur de semelles", href: "/calculators/foundation/concrete-footing-calculator/" },
+  ],
+  installationTips: [
+    "Placez les armatures sur des cales (distanciers) pour les positionner dans le tiers inférieur de la dalle — ne jamais les poser directement sur le sol.",
+    "Recouvrez les jonctions sur 40 diamètres (48 cm pour HA 12) et liez chaque intersection avec du fil de ligature.",
+    "Ligaturez chaque croisement avec du fil recuit de 1,4 mm à l'aide d'une pince à ligaturer.",
+    "Respectez un enrobage minimum de 3,5 cm (intérieur) à 5 cm (extérieur) pour prévenir la corrosion.",
+    "Coupez les barres avec une cisaille à fer ou une meuleuse avec disque métal — jamais au chalumeau.",
+    "Pliez les barres à froid avec une cintreuse manuelle ou hydraulique — le chauffage affaiblit l'acier.",
+  ],
+  commonMistakes: [
+    "Poser les armatures sur le sol au lieu de les surélever — sans positionnement correct, le ferraillage n'a aucune valeur structurelle.",
+    "Recouvrement insuffisant — des jonctions inférieures à 40 diamètres cèderont sous charge.",
+    "Utiliser un diamètre trop faible — HA 6 est trop léger pour les dalles de garage ; HA 10 minimum.",
+    "Ne pas ligaturer les intersections — les barres non attachées se déplacent lors du coulage.",
+    "Oublier le facteur de chute — commander 10–15 % de plus pour coupes, pliages et recouvrements.",
+  ],
+  faqs: [
+    { question: "Combien de ferraillage pour une dalle de 6×6 m ?", answer: "Une dalle de 6×6 m avec HA 10 à 15 cm entre-axes nécessite 41 barres dans chaque direction — 82 barres au total, environ 44 barres de 6 m. Le métrage total est d'environ 252 mètres linéaires pour un poids d'environ 156 kg. Ajoutez 10 % de chute." },
+    { question: "Quel diamètre pour une dalle de 12 cm ?", answer: "HA 10 (Ø 10 mm) est le choix standard pour les dalles résidentielles de 12 cm (garage, sous-sol, terrasse couverte). Pour les terrasses extérieures peu chargées, HA 8 peut suffire. Pour les dalles structurelles, passez à HA 12 ou consultez un bureau d'études." },
+    { question: "Quel espacement pour le ferraillage ?", answer: "L'espacement le plus courant est 15 cm entre-axes dans les deux directions pour les dalles de 12 cm. Terrasses légères : 20 cm. Garages et dalles structurelles : 10 cm. L'ingénieur structure ou le DTU peut spécifier des espacements différents." },
+    { question: "Combien coûte le ferraillage ?", answer: "HA 10 coûte environ 1,00–1,80 € le mètre linéaire, soit 6–11 € la barre de 6 m. Une dalle de 6×6 m nécessite ~44 barres, soit 264–484 € de matériaux. L'inox coûte 3–4× plus cher. Les cales : 0,30–0,80 € pièce." },
+    { question: "Ferraillage ou treillis soudé ?", answer: "Le ferraillage en barres HA offre un meilleur contrôle de la fissuration et est obligatoire pour les dalles de garage, sous-sol et applications structurelles. Le treillis soudé (ST25, ST35) convient pour les dalles faiblement chargées de moins de 12 cm. Le treillis est plus difficile à maintenir sur cales lors du coulage." },
+    { question: "Comment calculer le poids du ferraillage ?", answer: "Multipliez les mètres linéaires par le poids au mètre : HA 6 = 0,222 kg/m, HA 8 = 0,395 kg/m, HA 10 = 0,617 kg/m, HA 12 = 0,888 kg/m. Exemple : 252 m de HA 10 = 252 × 0,617 = 156 kg. Utile pour planifier la livraison." },
+  ],
+};
+
+export const rebarSpacingCalculator: CalculatorSEOContent = {
+  disclaimer: "Les recommandations d'espacement sont des directives générales pour l'usage résidentiel et commercial léger. L'espacement réel doit être déterminé par un ingénieur structure selon les charges, conditions de sol et réglementation locale.",
+  howToUse: [
+    "Entrez la longueur et la largeur de la dalle en mètres.",
+    "Sélectionnez le diamètre — HA 10 est standard pour la plupart des travaux résidentiels.",
+    "Choisissez le type de charge pour obtenir l'espacement recommandé.",
+    "Cliquez sur Calculer pour l'espacement optimal, le nombre de barres et les cales.",
+  ],
+  materialInfo:
+    "L'espacement du ferraillage détermine la proximité des barres d'armature dans une dalle de béton, affectant directement la capacité portante et la résistance à la fissuration. Un espacement correct assure une distribution uniforme des efforts de traction dans toute la section de béton. Pour les dalles résidentielles (terrasses, sous-sols, allées piétonnes), un espacement de 20 cm entre-axes avec HA 10 est courant. Les garages et allées carrossables utilisent 15 cm pour supporter les charges véhiculaires sans fissurer. Les dalles structurelles pour machines, planchers commerciaux ou planchers sur vide sanitaire nécessitent 10 cm ou moins, selon le calcul du bureau d'études. Les cales d'armature (distanciers) sont essentielles pour maintenir le ferraillage à la bonne hauteur dans la dalle. La règle standard est une cale par 0,4 m² de surface de dalle. Les cales existent en plusieurs types : individuelles pour barres isolées, continues pour les grands linéaires, et en treillis pour les nappes. Des cales à embout plastique sont requises lorsque le ferraillage est proche de la surface pour éviter les taches de rouille. L'enrobage — la distance entre l'armature et la surface de béton la plus proche — doit être d'au moins 3,5 cm pour les dalles sur terre-plein et 2,5 cm pour les surfaces coffrées selon l'Eurocode 2. Un enrobage insuffisant entraîne corrosion et éclatement en 5 à 10 ans. Pour les dalles de plus de 6 m dans une direction, les barres doivent être recouvertes avec un recouvrement minimal de 40 diamètres. Les recouvrements doivent être décalés pour que 50 % maximum des barres soient recouvertes à la même section. Le coût d'installation du ferraillage (main-d'œuvre et matériaux) est de 12–25 €/m² pour une grille standard de 15 cm, cales et fil de ligature compris.",
+  nextSteps: [
+    { label: "Calculateur de ferraillage", href: "/calculators/foundation/rebar-calculator/" },
+    { label: "Calculateur de dalle", href: "/calculators/foundation/concrete-slab-calculator/" },
+    { label: "Calculateur de béton", href: "/calculators/foundation/concrete-calculator/" },
+  ],
+  installationTips: [
+    "Tracez les lignes d'espacement au crayon sur le coffrage avant la pose — cela assure une grille régulière.",
+    "Posez les cales tous les 1,2 m dans les deux directions avant de poser les barres.",
+    "Posez d'abord les barres dans le sens de la longueur, puis les barres transversales dessus — ligaturez chaque intersection.",
+    "Maintenez 3,5 à 5 cm d'enrobage entre le ferraillage et tout bord ou fond de dalle.",
+    "Pour les dalles avec joints de retrait, passez le ferraillage en continu à travers le joint — ne coupez pas les barres aux joints.",
+    "Parcourez la grille terminée avant le coulage pour vérifier qu'aucune barre n'a glissé des cales.",
+  ],
+  commonMistakes: [
+    "Espacement trop large pour le type de charge — 20 cm est trop lâche pour les garages et allées.",
+    "Cales trop espacées — le ferraillage non soutenu s'affaisse dans le gravier et perd toute valeur structurelle.",
+    "Couper le ferraillage aux joints de retrait — les joints sont faits pour fissurer ; le ferraillage doit être continu.",
+    "Ne pas décaler les recouvrements — tous les recouvrements au même endroit créent un plan de faiblesse.",
+    "Ignorer les exigences d'enrobage — moins de 3,5 cm d'enrobage entraîne corrosion prématurée et éclatement.",
+  ],
+  faqs: [
+    { question: "Quel est l'espacement standard du ferraillage pour une dalle ?", answer: "L'espacement le plus courant est 15 cm entre-axes dans les deux directions pour les dalles résidentielles de 12 cm. Terrasses : 20 cm. Garages : 15 cm. Dalles structurelles : 10 cm ou selon le bureau d'études." },
+    { question: "Combien de cales d'armature faut-il ?", answer: "Prévoyez 1 cale par 0,4 m² de surface de dalle. Une dalle de 6×6 m (36 m²) nécessite ~90 cales. Pour les gros diamètres (HA 12+), utilisez des cales adaptées au poids. Espacement max de 1,2 m." },
+    { question: "Que se passe-t-il si l'espacement est trop large ?", answer: "La dalle développera des fissures plus larges sous charge car les efforts de traction ne sont pas suffisamment répartis. Cela réduit la capacité portante et permet l'infiltration d'eau, accélérant les dégâts gel-dégel en climat froid." },
+    { question: "Treillis soudé ou ferraillage en barres ?", answer: "Le treillis soudé (ST25, ST35) convient pour les dalles faiblement chargées de moins de 12 cm. Les barres HA offrent un meilleur contrôle de la fissuration et sont obligatoires pour les garages, sous-sols et dalles structurelles. Le treillis est plus difficile à maintenir sur cales lors du coulage." },
+    { question: "Comment le type de charge affecte-t-il l'espacement ?", answer: "Des charges plus lourdes nécessitent un espacement plus serré. Dalles résidentielles (piétons) : 20 cm. Garages (véhicules) : 15 cm. Applications structurelles (machines, planchers commerciaux) : 10 cm ou moins." },
+    { question: "Quel est l'enrobage minimum pour le ferraillage ?", answer: "Selon l'Eurocode 2, l'enrobage minimum est de 35 mm pour les dalles sur terre-plein (XC2) et 25 mm pour les surfaces coffrées non exposées (XC1). Pour les dalles exposées aux sels de déverglaçage ou en milieu marin, l'enrobage augmente à 45–50 mm." },
+  ],
+};
+
+// ─── ESPACEMENT DES BARREAUX ─────────────────────────────────────────────────
+
+export const balusterSpacingCalculatorFR: CalculatorSEOContent = {
+  disclaimer:
+    "Les calculs sont basés sur la norme NF P01-012 et le DTU qui imposent un espacement maximal de 11 cm entre les barreaux (une sphère de 11 cm ne doit pas pouvoir passer). Vérifiez les exigences spécifiques de votre commune ou du bureau de contrôle.",
+  howToUse: [
+    "Mesurez la longueur totale de la section de garde-corps en centimètres, de poteau à poteau.",
+    "Saisissez la largeur d'un barreau (barreaux carrés standard : 4 cm ; barreaux ronds : 1,2 à 2 cm).",
+    "Saisissez la largeur des poteaux (9 cm pour un poteau standard 9×9 cm).",
+    "Saisissez le nombre de poteaux et cliquez sur Calculer pour obtenir le nombre exact de barreaux et l'espacement régulier.",
+  ],
+  materialInfo:
+    "Les barreaux de garde-corps (également appelés balustres ou fuseaux) sont les éléments verticaux de remplissage qui empêchent les chutes et le passage de jeunes enfants. La norme NF P01-012 impose qu'une sphère de 11 cm de diamètre ne puisse traverser aucune ouverture du garde-corps — entre barreaux, entre un barreau et un poteau, et entre la lisse basse et le sol ou la marche.\n\nLes barreaux carrés standard en acier inoxydable ou aluminium mesurent typiquement 4 cm de côté ; les barreaux ronds (souvent en inox 304 ou 316) font 1,2 à 2 cm de diamètre. Avec des barreaux carrés de 4 cm et l'espacement maximum autorisé de 11 cm, il faut environ 7 barreaux par mètre linéaire de garde-corps. Une section courante de 1,00 m entre deux poteaux utilise 5 à 7 barreaux selon la largeur des poteaux.\n\nMatériaux courants : inox 304 (10–18 €/pièce), acier thermolaqué (6–14 €/pièce), aluminium (7–12 €/pièce) et bois (4–10 €/pièce). Les systèmes à câbles en inox avec câbles de 4 mm espacés de 10 cm sont une alternative contemporaine. Ce calculateur distribue les barreaux de façon régulière dans chaque travée pour que chaque intervalle soit identique — garantissant un aspect professionnel et le respect automatique de la règle des 11 cm.",
+  nextSteps: [
+    { label: "Calculateur de garde-corps", href: "/calculators/outdoor/deck-railing-calculator/" },
+    { label: "Calculateur d'escalier", href: "/calculators/stairs/stair-calculator/" },
+    { label: "Calculateur de lames de terrasse", href: "/calculators/outdoor/deck-board-calculator/" },
+  ],
+  installationTips: [
+    "Découpez une cale à la largeur calculée de l'intervalle et utilisez-la entre chaque barreau pour un espacement parfaitement régulier.",
+    "Pré-percez les trous de fixation dans les barreaux en bois pour éviter le fendillement — surtout les feuillus et les petites sections.",
+    "Posez d'abord la lisse basse, placez tous les barreaux avec la cale, puis fixez la lisse haute.",
+    "Pour les garde-corps extérieurs, utilisez de la visserie inox A2 ou A4 pour une résistance durable à la corrosion.",
+  ],
+  commonMistakes: [
+    "Espacer les barreaux trop largement — le test de la sphère de 11 cm s'applique à chaque ouverture, pas seulement à l'espacement moyen.",
+    "Oublier de soustraire la largeur des poteaux de la longueur totale pour calculer l'espace disponible pour les barreaux.",
+    "Ne pas pré-percer les barreaux en bois — les petites sections fendent facilement lors du vissage en bout.",
+    "Ignorer l'espace entre le sol et la lisse basse — la règle des 11 cm s'y applique également.",
+  ],
+  faqs: [
+    { question: "Quel est l'espacement maximal entre les barreaux ?", answer: "La norme NF P01-012 impose qu'une sphère de 11 cm ne puisse traverser aucune ouverture. Avec des barreaux carrés de 4 cm, l'intervalle libre maximal entre barreaux est donc de 11 cm." },
+    { question: "Combien de barreaux me faut-il par mètre ?", answer: "Avec des barreaux carrés de 4 cm et l'espacement maximal de 11 cm, comptez environ 7 barreaux par mètre linéaire. Une travée courante de 1,00 m entre deux poteaux utilise 5 à 7 barreaux selon la largeur des poteaux." },
+    { question: "Peut-on utiliser un remplissage horizontal au lieu de barreaux verticaux ?", answer: "Certaines réglementations l'autorisent, mais la règle de la sphère de 11 cm s'applique toujours entre les éléments horizontaux. Les remplissages horizontaux facilitent l'escalade par les enfants et sont souvent restreints par les bureaux de contrôle. Vérifiez la réglementation locale." },
+    { question: "Quelle hauteur doit avoir le garde-corps ?", answer: "La norme NF P01-012 impose une hauteur minimale de 1,00 m pour les garde-corps d'escalier et de balcon en habitation. Pour les ERP (établissements recevant du public), la hauteur minimale est de 1,00 m. En cas de hauteur de chute supérieure à 1 m, le garde-corps est obligatoire." },
+    { question: "Quel matériau choisir pour un garde-corps extérieur ?", answer: "L'inox 304 ou 316 et l'aluminium thermolaqué offrent la meilleure résistance aux intempéries sans entretien. Le bois traité autoclave est l'option la plus économique mais nécessite un entretien régulier (lasure ou huile tous les 2–3 ans)." },
+    { question: "Faut-il un permis pour installer un garde-corps ?", answer: "Les garde-corps sont obligatoires dès que la hauteur de chute dépasse 1 m (NF P01-012). Aucun permis spécifique n'est requis pour l'installation, mais le garde-corps doit être conforme aux normes lors du contrôle de conformité ou de la réception des travaux par le bureau de contrôle." },
+  ],
+};
+
+// ─── SOUS-FACE DE TOITURE (SOFFIT) ──────────────────────────────────────────
+
+export const soffitCalculatorFR: CalculatorSEOContent = {
+  disclaimer:
+    "Cette estimation est basée sur des panneaux de sous-face standard de 30 cm de large. Les dimensions réelles et le recouvrement varient selon le fabricant. Prévoyez 10 % de chutes pour les découpes et ajustements.",
+  howToUse: [
+    "Mesurez le périmètre total de votre maison en mètres.",
+    "Mesurez la largeur de la sous-face (distance du mur à la planche de rive) en centimètres.",
+    "Saisissez la longueur des panneaux (3,00 m ou 4,00 m selon le fabricant).",
+    "Cliquez sur Calculer pour obtenir le nombre de panneaux, la longueur de profilé et la quantité de bandes ventilées.",
+  ],
+  materialInfo:
+    "La sous-face de toiture (soffit) est le matériau qui habille le dessous du débord de toit (avant-toit), comblant l'espace entre le mur extérieur et la planche de rive. Ses fonctions principales sont la protection des queues de chevrons et de la charpente contre les intempéries, les nuisibles et l'humidité, tout en assurant la ventilation du comble lorsque des panneaux ventilés sont utilisés.\n\nLes panneaux de sous-face existent en trois versions de ventilation : pleins (sans ventilation), semi-perforés (bande ventilée centrale) et intégralement perforés (perforés sur toute la surface). Une sous-face correctement ventilée combinée à une ventilation de faîtage crée un flux d'air continu à travers le comble, prévenant la condensation, les barrages de glace et la surchauffe — conformément au DTU 40.36 et aux règles professionnelles de la couverture.\n\nMatériaux courants : PVC (15–30 €/m² posé), aluminium (25–50 €/m²), fibres-ciment (30–60 €/m²) et bois (40–80 €/m²). Le PVC est le plus populaire en résidentiel pour son faible coût et son absence d'entretien. Dimensions standard : 30 cm de large et 3,00 ou 4,00 m de long.\n\nLes profilés en J courent le long des deux bords de la sous-face (côté mur et côté planche de rive) pour recevoir les chants des panneaux. Pour une maison de 50 m de périmètre avec des débords de 45 cm, comptez environ 40 panneaux, 100 m de profilé et 12 bandes ventilées.",
+  nextSteps: [
+    { label: "Calculateur de bardage", href: "/calculators/exterior-shell/vinyl-siding-calculator/" },
+    { label: "Calculateur de larmier", href: "/calculators/roofing/drip-edge-calculator/" },
+    { label: "Calculateur de planche de rive", href: "/calculators/exterior-shell/hardie-siding-calculator/" },
+  ],
+  installationTips: [
+    "Posez d'abord le profilé en J côté mur, bien de niveau — toute déviation sera visible sur les panneaux finis.",
+    "Laissez 6 mm de jeu de dilatation à chaque extrémité de panneau pour éviter le flambage par temps chaud.",
+    "Alternez panneaux ventilés et pleins si vous n'avez besoin que d'une ventilation partielle.",
+    "Coupez les panneaux PVC avec une scie à denture fine ou des cisailles aviation pour des coupes nettes.",
+  ],
+  commonMistakes: [
+    "Ne pas laisser de jeu de dilatation — les panneaux PVC flamberont s'ils sont posés trop serrés.",
+    "Poser uniquement des panneaux pleins alors que le comble nécessite une ventilation — au moins un tiers des panneaux doivent être ventilés.",
+    "Ne pas niveler le profilé en J — tout creux ou bosse sera visible dans la sous-face finie.",
+    "Oublier les pièces de fermeture aux rives de pignon ou aux transitions de porche.",
+  ],
+  faqs: [
+    { question: "Qu'est-ce que la sous-face de toiture et pourquoi en ai-je besoin ?", answer: "La sous-face (soffit) est le panneau qui habille le dessous du débord de toit. Elle protège les queues de chevrons des intempéries et des nuisibles, permet la ventilation du comble via des panneaux perforés et donne un aspect fini à l'avant-toit." },
+    { question: "Ai-je besoin de panneaux ventilés ?", answer: "Oui, si votre comble dispose d'une ventilation de faîtage ou de chatières. Les panneaux ventilés laissent entrer l'air par l'avant-toit et sortir au faîtage, créant un flux continu qui prévient la condensation et la surchauffe. Au moins un tiers des panneaux doivent être perforés (DTU 40.36)." },
+    { question: "Combien coûte une sous-face de toiture ?", answer: "La sous-face PVC coûte 15–30 €/m² posée. Pour une maison de 50 m de périmètre avec des débords de 45 cm (22,5 m² de sous-face), les matériaux reviennent à 340–675 € et la pose à 400–800 €." },
+    { question: "Peut-on poser une nouvelle sous-face sur l'ancienne ?", answer: "Oui, si l'ancienne sous-face est en bon état et solidement fixée. Posez les nouveaux profilés par-dessus. Si l'ancienne est endommagée, pourrie ou affaissée, déposez-la entièrement avant repose." },
+    { question: "Quelle largeur de panneau me faut-il ?", answer: "La largeur dépend de votre débord de toit. Les panneaux standard de 30 cm conviennent pour les débords jusqu'à 30 cm. Pour des débords plus larges (45–60 cm), utilisez deux rangées ou des panneaux plus larges proposés par certains fabricants." },
+    { question: "De combien de profilé ai-je besoin ?", answer: "Vous avez besoin de profilé des deux côtés de la sous-face (côté mur et côté planche de rive) : multipliez le périmètre par 2. Pour 50 m de périmètre, il vous faut 100 mètres linéaires de profilé." },
+  ],
+};
+
+// ─── BARDAGE BOIS À COUVRE-JOINTS ───────────────────────────────────────────
+
+export const boardAndBattenCalculatorFR: CalculatorSEOContent = {
+  disclaimer:
+    "Cette estimation suppose une pose verticale standard avec planches bord à bord et couvre-joints sur les raccords. Prévoyez 10 % de chutes pour les découpes autour des portes et fenêtres.",
+  howToUse: [
+    "Calculez la surface totale des murs en mètres carrés (périmètre × hauteur, moins portes et fenêtres).",
+    "Saisissez la largeur des planches (courant : 15, 20, 25 ou 30 cm).",
+    "Saisissez la largeur des couvre-joints (courant : 4 à 8 cm).",
+    "Saisissez la hauteur du mur en mètres et cliquez sur Calculer.",
+  ],
+  materialInfo:
+    "Le bardage bois à couvre-joints (board and batten) est un revêtement de façade classique composé de planches larges posées verticalement et de tasseaux étroits (couvre-joints) recouvrant les raccords entre planches. Ce système permet le mouvement naturel du bois — les planches gonflent et se rétractent avec l'humidité sans ouvrir de jour visible, les couvre-joints pontant les joints.\n\nHistoriquement le bardage le plus répandu sur les bâtiments agricoles et ruraux en Europe, le bardage à couvre-joints connaît un retour en force dans l'architecture contemporaine et néo-rurale. Il est disponible en bois naturel (mélèze, douglas, red cedar), fibres-ciment (Cedral, Eternit), panneaux composites (Fundermax) et WPC.\n\nLa largeur des planches varie de 15 à 30 cm, les 20–25 cm étant les plus populaires en résidentiel. Les couvre-joints font typiquement 4 à 8 cm de large. Plus la planche est large, plus l'aspect est rustique ; des planches étroites avec des couvre-joints fins donnent un rendu plus moderne et épuré.\n\nLes coûts varient fortement selon le matériau : planches en épicéa 3–8 €/ml, mélèze 6–15 €/ml, fibres-ciment 8–16 €/ml. Pour une façade de 45 m² (3,00 m de haut × 15 m de périmètre moins ouvertures), comptez 60–80 planches et 65–85 couvre-joints selon les largeurs choisies.\n\nLa pose nécessite un pare-pluie perspirant (type Delta Fassade ou Siga Majvest) derrière le bardage, conforme au DTU 31.2. Les planches sont fixées avec un seul point de fixation au centre pour permettre la dilatation latérale. Les couvre-joints sont vissés à travers le chevauchement dans les tasseaux du lattage ou de l'ossature.",
+  nextSteps: [
+    { label: "Calculateur de bardage vinyle", href: "/calculators/exterior-shell/vinyl-siding-calculator/" },
+    { label: "Calculateur de bardage fibres-ciment", href: "/calculators/exterior-shell/hardie-siding-calculator/" },
+    { label: "Calculateur de pare-pluie", href: "/calculators/exterior-shell/housewrap-calculator/" },
+  ],
+  installationTips: [
+    "Posez un pare-pluie perspirant (Delta, Siga ou équivalent) sur le voile travaillant avant tout bardage, conformément au DTU 31.2.",
+    "Fixez chaque planche avec une seule vis au centre — cela permet au bois de gonfler et de se rétracter sans fendre.",
+    "Les couvre-joints doivent être vissés à travers le chevauchement, dans le lattage ou l'ossature derrière.",
+    "Laissez 3 mm d'espace entre le bas des planches et le profil horizontal de pied pour le drainage.",
+    "Appliquez une lasure ou un primaire sur toutes les coupes et les faces arrière avant la pose pour prévenir l'absorption d'humidité.",
+  ],
+  commonMistakes: [
+    "Fixer les planches aux deux bords — cela empêche le mouvement naturel du bois et provoque fentes et tuilage.",
+    "Omettre le pare-pluie — indispensable pour protéger l'ossature de l'infiltration d'eau (exigence DTU 31.2).",
+    "Utiliser des couvre-joints trop étroits — un minimum de 4 cm est recommandé pour recouvrir correctement les joints.",
+    "Ne pas traiter les coupes — le bois de bout absorbe l'humidité très rapidement, entraînant un pourrissement prématuré.",
+  ],
+  faqs: [
+    { question: "Qu'est-ce que le bardage à couvre-joints ?", answer: "Le bardage à couvre-joints (board and batten) est un revêtement vertical composé de planches larges posées debout et de tasseaux étroits recouvrant les joints. Il permet le mouvement du bois tout en assurant l'étanchéité de la façade." },
+    { question: "Quels matériaux conviennent ?", answer: "Mélèze et douglas (traditionnels, grande durabilité), épicéa (économique, nécessite un traitement), fibres-ciment (Cedral, Eternit — durable, faible entretien), panneaux composites et WPC. Chaque matériau a son propre rapport coût/durabilité." },
+    { question: "Combien coûte un bardage à couvre-joints ?", answer: "Matériaux : 3–8 €/ml pour l'épicéa, 6–15 €/ml pour le mélèze, 8–16 €/ml pour le fibres-ciment. Pose professionnelle : 30–80 €/m². Une façade complète (80–120 m²) revient à 5 000–15 000 € fourniture et pose." },
+    { question: "Peut-on poser le bardage horizontalement ?", answer: "Traditionnellement vertical, une pose horizontale est possible. Cependant, les couvre-joints horizontaux peuvent retenir l'eau contre les planches, nécessitant un détail de drainage plus soigné. La pose verticale est recommandée pour un écoulement optimal." },
+    { question: "Quelle largeur choisir pour les planches et couvre-joints ?", answer: "Planches de 20–25 cm avec couvre-joints de 5 cm : le choix résidentiel le plus courant. Des planches plus larges (30 cm) donnent un aspect rustique ; des planches étroites (15 cm) avec des couvre-joints fins (4 cm) créent un rendu contemporain." },
+    { question: "Faut-il un pare-pluie derrière le bardage ?", answer: "Oui, toujours. Un pare-pluie perspirant (Delta Fassade, Siga Majvest ou Tyvek) derrière le bardage est obligatoire selon le DTU 31.2. Les joints entre planches et couvre-joints ne sont pas étanches — c'est le pare-pluie qui assure réellement la protection contre l'eau." },
+  ],
+};
+
+// ─── MUR RAMPANT (RAKE WALL) ────────────────────────────────────────────────
+
+export const rakeWallCalculatorFR: CalculatorSEOContent = {
+  disclaimer:
+    "Les hauteurs de montants calculées sont des valeurs théoriques. Mesurez et coupez chaque montant individuellement sur chantier. La sablière rampante nécessite une coupe biaise correspondant à la pente du toit. Prévoyez 10 % de chutes.",
+  howToUse: [
+    "Mesurez la longueur totale du mur en mètres le long de la lisse basse.",
+    "Saisissez la hauteur du côté bas (côté égout) en mètres.",
+    "Saisissez la hauteur du côté haut (côté faîtage) en mètres.",
+    "Choisissez l'entraxe des montants (40 ou 60 cm) et cliquez sur Calculer.",
+  ],
+  materialInfo:
+    "Un mur rampant (rake wall ou mur de pignon) est un mur dont la sablière haute suit la pente du toit au lieu d'être horizontale. Cela crée une surface trapézoïdale ou triangulaire où chaque montant a une hauteur différente, croissant progressivement du côté bas vers le côté haut.\n\nLes murs rampants se trouvent aux pignons des toits à deux pentes, sous les toits monopentes (appentis), dans les combles aménagés et partout où un mur rencontre un rampant de toiture. Ils sont ossaturés avec le même bois que les murs standard — typiquement des montants en bois de charpente 45×95 mm, 45×145 mm ou 45×200 mm à 40 ou 60 cm d'entraxe selon le DTU 31.2 et l'Eurocode 5.\n\nLa différence principale avec les murs standards : la sablière haute doit être coupée en biais à l'angle de la pente, et chaque montant doit être mesuré et coupé individuellement. La lisse basse reste horizontale au sol. Pour les montants très courts (moins de 60 cm), des entretoises horizontales entre montants offrent une surface de clouage suffisante pour le voile travaillant et les parements intérieurs.\n\nPour un mur rampant de 6 m allant de 2,40 m à 4,20 m de haut, il vous faudra environ 16 montants à 40 cm d'entraxe, avec des hauteurs allant d'environ 2 340 mm à 4 140 mm. La longueur de la sablière rampante (hypoténuse) sera d'environ 6,3 m.\n\nLe coût des matériaux est similaire à celui d'une ossature standard mais avec plus de chutes en raison des coupes individuelles. Prévoyez 10–15 % de bois supplémentaire. Un mur rampant de 6 m revient à environ 150–350 € en bois de charpente.",
+  nextSteps: [
+    { label: "Calculateur de montants", href: "/calculators/wall-framing/stud-calculator/" },
+    { label: "Calculateur de toit à deux pentes", href: "/calculators/roofing/gable-roof-calculator/" },
+    { label: "Calculateur de voile travaillant", href: "/calculators/wall-framing/exterior-sheathing-calculator/" },
+  ],
+  installationTips: [
+    "Repérez toutes les positions des montants sur la lisse basse avant de couper quoi que ce soit.",
+    "Tracez un cordeau entre les points bas et haut pour établir l'angle de la sablière rampante.",
+    "Coupez la sablière rampante avec un biseau correspondant à la pente du toit pour un appui correct des chevrons ou du voile.",
+    "Mesurez et coupez chaque montant individuellement — les hauteurs théoriques peuvent varier en raison des irrégularités du bois.",
+    "Pour les montants très courts (moins de 60 cm), ajoutez des entretoises horizontales entre montants adjacents pour assurer une surface de clouage pour le voile travaillant.",
+  ],
+  commonMistakes: [
+    "Couper tous les montants à la même hauteur — chaque montant d'un mur rampant a une longueur différente.",
+    "Ne pas biseauter la sablière haute — sans l'angle correct, le voile ou les chevrons ne porteront pas correctement.",
+    "Oublier les entretoises pour les montants courts — le voile et les plaques de plâtre ont besoin d'une surface de clouage continue sur toute la hauteur du mur.",
+    "Ne pas vérifier que l'angle du mur rampant correspond à la pente réelle du toit — tout écart cause des problèmes de raccord au nœud mur-toiture.",
+  ],
+  faqs: [
+    { question: "Qu'est-ce qu'un mur rampant ?", answer: "Un mur rampant est un mur dont la sablière haute suit la pente du toit au lieu d'être horizontale. Chaque montant a une hauteur progressivement différente. On le trouve aux pignons, sous les appentis et dans les combles aménagés." },
+    { question: "Comment calculer les hauteurs individuelles des montants ?", answer: "Divisez la différence de hauteur (haut moins bas) par le nombre de travées. Chaque montant suivant augmente de cet incrément. Exemple : de 2,40 m à 4,20 m sur 15 travées = 12 cm d'augmentation par montant." },
+    { question: "Faut-il biseauter la sablière haute ?", answer: "Oui. La sablière rampante doit être coupée à l'angle de la pente pour que les chevrons et le voile portent correctement. Utilisez une fausse équerre ou un rapporteur d'angle." },
+    { question: "Que faire pour les montants très courts ?", answer: "Les montants de moins de 60 cm n'offrent pas assez de surface de clouage pour le voile travaillant. Installez des entretoises horizontales entre les montants adjacents pour créer une surface de fixation continue." },
+    { question: "L'entraxe change-t-il dans un mur rampant ?", answer: "Non. L'entraxe horizontal reste le même que dans le reste de la structure (40 ou 60 cm). Seule la hauteur de chaque montant individuel change." },
+    { question: "Combien de bois supplémentaire commander ?", answer: "Prévoyez 10–15 % de chutes supplémentaires car chaque montant est une coupe sur mesure et les chutes correspondent rarement à un autre montant. Les coupes individuelles augmentent aussi le temps de main-d'œuvre par rapport aux murs standards." },
+  ],
+};
+
+// ─── ESPACEMENT DES LAMES DE TERRASSE ───────────────────────────────────────
+
+export const deckBoardSpacingCalculatorFR: CalculatorSEOContent = {
+  disclaimer:
+    "L'espacement recommandé varie selon le matériau : 5–6 mm pour le bois traité sec, 3–5 mm pour le composite (consultez les spécifications du fabricant), aucun espace pour le bois traité humide (il rétrécira en séchant). Suivez les consignes de pose du fabricant.",
+  howToUse: [
+    "Saisissez la largeur de la terrasse en mètres (la dimension perpendiculaire aux lames).",
+    "Saisissez la largeur d'une lame en millimètres (145 mm est le standard pour bois et composite).",
+    "Saisissez l'espacement souhaité en millimètres (6 mm est courant pour le bois sec).",
+    "Cliquez sur Calculer pour obtenir le nombre exact de lames et l'espacement uniforme réel.",
+  ],
+  materialInfo:
+    "L'espacement correct entre les lames de terrasse est essentiel pour le drainage, le mouvement du bois et la longévité de la terrasse. Les joints entre lames permettent à l'eau de s'écouler, à l'air de circuler sous la terrasse et aux lames de se dilater et se contracter avec les variations de température et d'humidité.\n\nPour le bois traité autoclave (pin classe 4) posé sec, utilisez un espacement de 5 à 6 mm. Si le bois est fraîchement traité et encore humide (courant à la livraison), posez les lames bord à bord sans espace — le bois rétrécira en séchant et créera des joints naturels d'environ 3 à 5 mm. Mélèze, douglas et ipé : 3 à 5 mm d'espacement.\n\nLes lames composites (Trex, Silvadec, Fiberon) se dilatent à la chaleur et se rétractent au froid. La plupart des fabricants préconisent 3–5 mm de joint latéral et 5–8 mm de joint de bout. Consultez toujours le tableau de pose spécifique au fabricant, qui varie selon la température de pose.\n\nLa lame de terrasse standard mesure 145 mm de large et 21–28 mm d'épaisseur en bois traité, mélèze ou composite (prix : 5–15 €/ml pour le bois, 10–30 €/ml pour le composite). Pour une terrasse de 3,60 m de large avec des lames de 145 mm et un joint de 6 mm, il faut environ 24 lames.\n\nCe calculateur distribue les lames de façon régulière pour que chaque joint soit identique — évitant le problème courant de la dernière lame avec un joint différent des autres, ce qui donne un résultat peu esthétique.",
+  nextSteps: [
+    { label: "Calculateur de lames de terrasse", href: "/calculators/outdoor/deck-board-calculator/" },
+    { label: "Calculateur de plots de terrasse", href: "/calculators/outdoor/deck-footing-calculator/" },
+    { label: "Calculateur de garde-corps", href: "/calculators/outdoor/deck-railing-calculator/" },
+  ],
+  installationTips: [
+    "Utilisez un espaceur constant (cale, vis ou clip fabricant) entre chaque lame pour un résultat régulier.",
+    "Posez la première lame parfaitement parallèle au mur de la maison — toutes les lames suivantes s'aligneront sur cette référence.",
+    "Pour le bois traité humide, posez les lames bord à bord — elles rétréciront en séchant et créeront des joints naturels.",
+    "Pour le composite, suivez le tableau de pose du fabricant qui adapte l'espacement selon la température ambiante lors de la pose.",
+  ],
+  commonMistakes: [
+    "Espacer les lames en bois traité humide — une fois sec, les joints deviennent trop larges et accrochent les talons.",
+    "Ignorer la dilatation thermique du composite — des lames posées serrées en hiver peuvent flamber en plein été.",
+    "Espacement irrégulier — des joints inégaux sont très visibles et donnent un résultat amateur. Utilisez toujours un espaceur.",
+    "Joints trop larges (plus de 8 mm) — accrochent les talons, accumulent les débris et laissent passer les petits objets.",
+  ],
+  faqs: [
+    { question: "Quel est l'espacement correct entre les lames de terrasse ?", answer: "Bois traité sec : 5–6 mm. Mélèze et douglas : 3–5 mm. Composite : 3–5 mm latéralement, 5–8 mm en bout (vérifiez les spécifications du fabricant). Bois traité humide : bord à bord, sans espace." },
+    { question: "Pourquoi l'espacement des lames est-il important ?", answer: "Des joints corrects permettent le drainage de l'eau, la circulation d'air sous la terrasse et la place nécessaire à la dilatation des lames avec les variations climatiques. Sans joints, l'eau stagne entre les lames et provoque le pourrissement, et les lames gonflantes peuvent flamber." },
+    { question: "Faut-il laisser un espace avec du bois traité humide ?", answer: "Non. Le bois fraîchement traité a un taux d'humidité élevé et rétrécira en séchant sur 2 à 4 semaines. Posez les lames bord à bord et le retrait naturel créera des joints d'environ 3 à 5 mm." },
+    { question: "Quel espaceur utiliser ?", answer: "Des cales ou vis en inox (5–6 mm de diamètre) conviennent pour les joints en bois. Les clips de pose spécifiques au fabricant (Silvadec, Fiberon) assurent un espacement constant et une fixation invisible pour les lames composites." },
+    { question: "Comment l'espacement évolue-t-il avec la température ?", answer: "Les lames composites se dilatent à la chaleur et se rétractent au froid. Une lame posée à 10 °C sera sensiblement plus longue à 40 °C. La plupart des fabricants fournissent un tableau de pose qui augmente l'espacement pour les poses en période froide afin d'absorber la dilatation estivale." },
+    { question: "Combien de lames de terrasse me faut-il ?", answer: "Divisez la largeur de la terrasse en mm par (largeur de lame + joint). Pour une terrasse de 3,60 m (3 600 mm) avec des lames de 145 mm et des joints de 6 mm : 3 600 / 151 = 24 lames. Ce calculateur ajuste légèrement le joint pour garantir un espacement parfaitement régulier." },
+  ],
+};
+
 // ─── REGISTRY MAP ─────────────────────────────────────────────────────────────
 
 export const registryFR: Record<string, Record<string, CalculatorSEOContent>> = {
@@ -2658,6 +3107,8 @@ export const registryFR: Record<string, Record<string, CalculatorSEOContent>> = 
     "mortar-mix-calculator": mortarMixCalculator,
     "block-fill-calculator": blockFillCalculator,
     "retaining-wall-calculator": retainingWallCalculator,
+    "rebar-calculator": rebarCalculator,
+    "rebar-spacing-calculator": rebarSpacingCalculator,
   },
   "floor-framing": {
     "rim-joist-calculator": rimJoistCalculator,
@@ -2672,6 +3123,7 @@ export const registryFR: Record<string, Record<string, CalculatorSEOContent>> = 
     "top-plate-calculator": topPlateCalculator,
     "header-calculator": headerCalculator,
     "exterior-sheathing-calculator": exteriorSheathingCalculator,
+    "rake-wall-calculator": rakeWallCalculatorFR,
   },
   roofing: {
     "truss-calculator": trussCalculator,
@@ -2690,6 +3142,8 @@ export const registryFR: Record<string, Record<string, CalculatorSEOContent>> = 
     "vinyl-siding-calculator": vinylSidingCalculator,
     "hardie-siding-calculator": hardieSidingCalculator,
     "window-flashing-calculator": windowFlashingCalculator,
+    "soffit-calculator": soffitCalculatorFR,
+    "board-and-batten-calculator": boardAndBattenCalculatorFR,
   },
   "insulation-drywall": {
     "cavity-insulation-calculator": cavityInsulationCalculator,
@@ -2718,6 +3172,7 @@ export const registryFR: Record<string, Record<string, CalculatorSEOContent>> = 
     "deck-stair-calculator": deckStairCalculatorFR,
     "post-hole-calculator": postHoleCalculatorFR,
     "pond-calculator": pondCalculator,
+    "deck-board-spacing-calculator": deckBoardSpacingCalculatorFR,
   },
   stairs: {
     "stair-calculator": stairCalculatorFR,
@@ -2725,5 +3180,6 @@ export const registryFR: Record<string, Record<string, CalculatorSEOContent>> = 
     "rise-over-run-calculator": riseOverRunCalculatorFR,
     "spiral-staircase-calculator": spiralStaircaseCalculatorFR,
     "stair-landing-calculator": stairLandingCalculatorFR,
+    "baluster-spacing-calculator": balusterSpacingCalculatorFR,
   },
 };

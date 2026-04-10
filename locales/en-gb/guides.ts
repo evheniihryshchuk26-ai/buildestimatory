@@ -83,6 +83,24 @@ const guides: GuidesTranslations = {
           "How to build stairs — complete guide covering stair anatomy, UK Building Regulations Approved Document K, rise & going calculations, stair types, materials, and costs.",
         href: "/guides/stair-building-guide",
       },
+      {
+        title: "Floor Joist Span Table: BS 5268 & Eurocode 5 Reference",
+        description:
+          "Floor joist span tables for 47x150, 47x175, 47x200, 47x250mm timber at 400mm and 600mm centres. Covers C16 and C24 graded softwood per BS 5268 and Eurocode 5.",
+        href: "/guides/joist-span-table",
+      },
+      {
+        title: "Rafter Span Table: Complete UK Roof Framing Reference",
+        description:
+          "Rafter span tables by size, spacing, pitch, and snow load. Covers common UK timber sizes with Building Regulations and Eurocode 5 references.",
+        href: "/guides/rafter-span-table",
+      },
+      {
+        title: "Ceiling Joist Span Table: UK Building Regs Reference",
+        description:
+          "Ceiling joist span tables by size, spacing, and load type. Covers uninhabited loft, light storage, and habitable loft spans per BS 5268 and Approved Document A.",
+        href: "/guides/ceiling-joist-span-table",
+      },
     ],
   },
 
@@ -1866,6 +1884,511 @@ const guides: GuidesTranslations = {
       { question: "Cheapest way to build stairs?", answer: "Straight staircase in treated softwood. Stringers 50×300 (£15–35 each), treads (£5–10 each). 14 steps exterior: £150–400 materials." },
       { question: "Do I need Building Regs approval?", answer: "Yes for permanent stairs. Submit a Building Notice or Full Plans to Building Control. Fee: £150–500." },
       { question: "How to use the calculator?", answer: "Enter total rise and desired going. Calculator gives step count, rise, total going, and stringer length — verified against Approved Document K." },
+    ],
+  },
+
+  joistSpanTable: {
+    title: "Floor Joist Span Table: BS 5268 & Eurocode 5 Reference",
+    metaDescription:
+      "Floor joist span tables for 47x150, 47x175, 47x200, 47x250 mm timber at 400 mm and 600 mm centres. Covers C16 and C24 graded softwood per BS 5268 and Eurocode 5 with TRADA guidance.",
+    heroTitle: "Floor Joist Span Table",
+    heroSubtitle: "BS 5268 & Eurocode 5 Reference",
+    heroDescription:
+      "Comprehensive floor joist span tables for UK residential construction. Find maximum allowable spans for every common timber size, spacing, grade, and load condition per British Standards and Eurocode 5.",
+
+    quickAnswerHeading: "Quick Answer",
+    quickAnswerText:
+      "A 47x200 mm C24 floor joist at 400 mm centres can span up to approximately 3.87 m for a domestic floor with 1.5 kN/m\u00b2 imposed load. A 47x250 mm C24 joist at 400 mm centres spans up to approximately 4.82 m. Always verify spans against TRADA span tables and your local Building Control requirements.",
+
+    understandingHeading: "Understanding Floor Joist Spans",
+    understandingText1:
+      "A floor joist span is the horizontal distance a joist can safely bridge between supports without excessive deflection or structural failure. In the UK, span tables are published by TRADA (Timber Research and Development Association) and referenced in Approved Document A of the Building Regulations, based on BS 5268 (permissible stress design) and Eurocode 5 / BS EN 1995 (limit state design).",
+    understandingText2:
+      "Floor joist spans are calculated for two load conditions: imposed load (people, furniture, movable weight — typically 1.5 kN/m\u00b2 for domestic floors) and dead load (the permanent weight of the structure — typically 0.25 to 0.50 kN/m\u00b2 for standard framing with plasterboard ceiling below). The combined total load determines the required joist size and spacing.",
+    understandingText3:
+      "Deflection limits also control span lengths. Eurocode 5 requires floor joists to limit deflection to span/300 for imposed load and span/250 for total load in domestic applications. Stiffer floors feel more solid underfoot and prevent cracking in plasterboard ceilings below and tile finishes above.",
+
+    spanTablesHeading: "Floor Joist Span Tables by Timber Grade",
+    spanTablesIntro:
+      "The following span tables are based on TRADA guidance for domestic floors with 1.5 kN/m\u00b2 imposed load and 0.25 kN/m\u00b2 dead load (plasterboard ceiling, no heavy finishes). Spans are listed as maximum clear span in metres. Always use the grade stamped on your timber.",
+    spanTablesColSize: "Joist Size",
+    spanTablesCol12: "400 mm c/c",
+    spanTablesCol16: "450 mm c/c",
+    spanTablesCol24: "600 mm c/c",
+    spanTablesBySpecies: [
+      {
+        species: "C16 Graded Softwood",
+        grade: "C16 — Fb = 5.3 N/mm\u00b2, E = 8,000 N/mm\u00b2",
+        rows: [
+          { size: "47\u00d7150 mm", oc12: "2.71 m", oc16: "2.60 m", oc24: "2.38 m" },
+          { size: "47\u00d7175 mm", oc12: "3.19 m", oc16: "3.07 m", oc24: "2.81 m" },
+          { size: "47\u00d7200 mm", oc12: "3.49 m", oc16: "3.36 m", oc24: "3.07 m" },
+          { size: "47\u00d7250 mm", oc12: "4.35 m", oc16: "4.18 m", oc24: "3.83 m" },
+        ],
+      },
+      {
+        species: "C24 Graded Softwood",
+        grade: "C24 — Fb = 7.5 N/mm\u00b2, E = 11,000 N/mm\u00b2",
+        rows: [
+          { size: "47\u00d7150 mm", oc12: "3.07 m", oc16: "2.95 m", oc24: "2.71 m" },
+          { size: "47\u00d7175 mm", oc12: "3.61 m", oc16: "3.47 m", oc24: "3.19 m" },
+          { size: "47\u00d7200 mm", oc12: "3.87 m", oc16: "3.73 m", oc24: "3.49 m" },
+          { size: "47\u00d7250 mm", oc12: "4.82 m", oc16: "4.64 m", oc24: "4.35 m" },
+        ],
+      },
+      {
+        species: "C16 — Doubled (twin joists)",
+        grade: "C16 — twin 47 mm joists bolted together, effective 94 mm width",
+        rows: [
+          { size: "2\u00d747\u00d7200 mm", oc12: "4.35 m", oc16: "4.18 m", oc24: "3.83 m" },
+          { size: "2\u00d747\u00d7250 mm", oc12: "5.42 m", oc16: "5.22 m", oc24: "4.78 m" },
+        ],
+      },
+      {
+        species: "C24 — Doubled (twin joists)",
+        grade: "C24 — twin 47 mm joists bolted together, effective 94 mm width",
+        rows: [
+          { size: "2\u00d747\u00d7200 mm", oc12: "4.82 m", oc16: "4.64 m", oc24: "4.35 m" },
+          { size: "2\u00d747\u00d7250 mm", oc12: "6.02 m", oc16: "5.79 m", oc24: "5.42 m" },
+        ],
+      },
+    ],
+
+    loadRequirementsHeading: "Floor Load Requirements (Building Regulations)",
+    loadRequirementsIntro:
+      "Building Regulations Approved Document A and BS EN 1991-1-1 specify minimum design loads for residential floors. These loads determine which span table to use.",
+    loadRequirementsItems: [
+      "Domestic floors (all habitable rooms): 1.5 kN/m\u00b2 imposed load + 0.25 kN/m\u00b2 dead load (plasterboard ceiling) = 1.75 kN/m\u00b2 total",
+      "Loft floors used for storage: 0.75 kN/m\u00b2 imposed load (limited storage) or 1.5 kN/m\u00b2 if the loft is habitable",
+      "Dead load includes joist self-weight, decking, finish flooring, and any ceiling below. If using heavy finishes like tiles on cement board, increase dead load to 0.75\u20131.0 kN/m\u00b2",
+      "Partition loading: an additional 0.5 kN/m\u00b2 is added where lightweight partitions may be placed on the floor",
+      "Concentrated loads: floors must also support a 1.4 kN concentrated load on a 50 mm square area, which is typically satisfied when deflection limits are met",
+    ],
+    loadRequirementsSummary:
+      "For most UK domestic floors, use the 1.5 kN/m\u00b2 imposed load span table. Add 0.5 kN/m\u00b2 if the floor may carry lightweight partitions. When in doubt, design for the higher load — the cost difference is minimal.",
+
+    factorsHeading: "Factors That Affect Joist Span",
+    factorsIntro:
+      "Beyond the basic span table values, several real-world factors can increase or decrease your required joist size.",
+    factorsItems: [
+      "Timber grade: C24 allows longer spans than C16. Always check the grade stamp on your timber — unmarked timber cannot be relied upon for structural use.",
+      "Joist spacing: 400 mm centres allow the longest spans. 600 mm centres are economical but limit span length and require thicker decking (22 mm minimum).",
+      "Bearing length: Joists must bear at least 50 mm on timber or steel and 90 mm on masonry per Approved Document A.",
+      "Notching and drilling: Notches must be in the first or last quarter of the span and no deeper than 0.125 times the joist depth. Holes must be on the neutral axis, between 0.25 and 0.4 of the span, and no larger than 0.25 times the joist depth, per TRADA guidance.",
+      "Heavy finishes: Tile, stone, or thick timber flooring adds significant dead load. When dead load exceeds 0.5 kN/m\u00b2, use the appropriate adjusted span table or consult an engineer.",
+      "Cantilevers: Joists extending beyond a bearing wall are limited to one-quarter of the backspan.",
+    ],
+    factorsSummary:
+      "Always use the actual grade stamped on your timber. When multiple factors overlap (heavy finishes + wide spacing + long span), consider upsizing joists by one depth increment for extra safety margin and a stiffer floor.",
+
+    codeReferencesHeading: "Building Regulations & Standards for Floor Joists",
+    codeReferencesIntro:
+      "The following standards and regulations govern floor joist design in UK residential construction.",
+    codeReferencesItems: [
+      "Approved Document A (Structure) — references span tables for timber floor joists in domestic buildings",
+      "BS 5268 Part 2 — permissible stress design of structural timber (being superseded by Eurocode 5 but still widely referenced)",
+      "BS EN 1995-1-1 (Eurocode 5) — limit state design of timber structures, the current European standard for structural timber design",
+      "BS EN 338 — strength classes for structural timber (C16, C24, etc.)",
+      "TRADA Span Tables — the primary reference for UK builders, providing ready-made span tables for common domestic loading conditions",
+      "BS EN 1991-1-1 — imposed loads on buildings, specifying the 1.5 kN/m\u00b2 domestic floor load",
+      "BS 8103-3 — structural design of low-rise buildings, specifically timber floors",
+    ],
+    codeReferencesSummary:
+      "TRADA span tables are the practical reference used by most UK builders and Building Control officers. They are derived from Eurocode 5 calculations and cover all common domestic loading conditions.",
+
+    calculatorCtaHeading: "Calculate Your Floor Framing Materials",
+    calculatorCtaText:
+      "Once you know your joist size and spacing, use our calculators to work out exactly how many joists, hangers, and fixings you need.",
+    calculatorLinks: [
+      {
+        label: "Floor Joist Calculator",
+        href: "/calculators/floor-framing/floor-joist-calculator",
+        description: "Calculate the number of joists, rim boards, and noggings needed for your floor frame.",
+      },
+      {
+        label: "Subfloor Calculator",
+        href: "/calculators/floor-framing/subfloor-calculator",
+        description: "Estimate plywood or chipboard sheets and fixings for your subfloor decking.",
+      },
+      {
+        label: "Joist Hanger Calculator",
+        href: "/calculators/floor-framing/joist-hanger-calculator",
+        description: "Calculate joist hangers and structural screws for each connection.",
+      },
+    ],
+    faqHeading: "Frequently Asked Questions",
+    faqs: [
+      {
+        question: "How far can a 47x200 mm floor joist span?",
+        answer:
+          "A 47x200 mm C24 floor joist at 400 mm centres can span up to approximately 3.87 m for a domestic floor with 1.5 kN/m\u00b2 imposed load. C16 at 400 mm centres spans about 3.49 m. Always check the TRADA span table for your specific timber grade.",
+      },
+      {
+        question: "How far can a 47x250 mm floor joist span?",
+        answer:
+          "A 47x250 mm C24 floor joist at 400 mm centres can span up to approximately 4.82 m. C16 at 400 mm centres spans about 4.35 m. For spans exceeding 5 m, consider engineered timber joists (I-joists) or twin joists bolted together.",
+      },
+      {
+        question: "Can I use 47x150 mm floor joists?",
+        answer:
+          "Yes, but 47x150 mm joists are limited to short spans: about 2.71 m at 400 mm centres for C16 and 3.07 m for C24. They are suitable for small rooms, WCs, corridors, and landings, but not for typical room-sized spans. Most domestic floors require at minimum 47x175 mm joists.",
+      },
+      {
+        question: "What is the difference between C16 and C24 timber?",
+        answer:
+          "C16 and C24 are strength classes defined by BS EN 338. C24 has higher bending strength (7.5 vs 5.3 N/mm\u00b2) and stiffness (11,000 vs 8,000 N/mm\u00b2), allowing longer spans for the same size. C24 costs about 10\u201320% more than C16 but can reduce joist depth by one size, saving headroom.",
+      },
+      {
+        question: "Should I use 400 mm or 600 mm centres for floor joists?",
+        answer:
+          "400 mm centres is standard for most UK domestic floor framing and allows 18 mm chipboard or plywood decking. 600 mm centres uses fewer joists but requires 22 mm decking and reduces maximum spans. Use 400 mm for main living areas and 600 mm only where the span is short and a slightly more flexible floor is acceptable.",
+      },
+      {
+        question: "Do I need noggings (blocking) between floor joists?",
+        answer:
+          "Noggings are recommended at mid-span for joists over 2.5 m to reduce deflection and squeaking. They also provide fire stopping within the floor zone. Solid timber noggings cut from joist offcuts or herringbone strutting both satisfy the requirement.",
+      },
+    ],
+  },
+
+  rafterSpanTable: {
+    title: "Rafter Span Table: Complete UK Roof Framing Reference",
+    metaDescription:
+      "Rafter span tables for 47x100, 47x125, 47x150, 47x175, 47x200 mm timber at 400 mm and 600 mm centres. Covers C16 and C24 grades with BS 5268, Eurocode 5, and TRADA references.",
+    heroTitle: "Rafter Span Table",
+    heroSubtitle: "Complete UK Roof Framing Reference",
+    heroDescription:
+      "Comprehensive rafter span tables for UK residential roof framing. Find maximum allowable spans for every common rafter size, spacing, timber grade, and load condition per British Standards and Eurocode 5.",
+
+    quickAnswerHeading: "Quick Answer",
+    quickAnswerText:
+      "A 47x150 mm C24 rafter at 400 mm centres can span up to approximately 3.15 m horizontally for a domestic roof with 0.75 kN/m\u00b2 imposed load (snow and maintenance). A 47x200 mm C24 rafter at 400 mm centres spans up to approximately 4.20 m. Always verify against TRADA span tables for your specific conditions.",
+
+    understandingHeading: "Understanding Rafter Spans",
+    understandingText1:
+      "A rafter span is the horizontal projection distance a rafter can cover between its bearing point at the wall plate and the ridge board or ridge beam. In the UK, rafter spans are measured as the horizontal run, not along the slope of the rafter. The actual rafter length is longer than the span because it follows the roof pitch.",
+    understandingText2:
+      "Rafter design considers two primary loads: the dead load (tiles, slates, battens, underlay, insulation — typically 0.5 to 1.0 kN/m\u00b2 depending on covering) and the imposed load, which includes snow load and a minimum 0.6 kN/m\u00b2 maintenance access load per BS EN 1991-1-3. In snow-prone areas of Scotland and upland England, higher snow loads apply per the UK National Annex.",
+    understandingText3:
+      "Eurocode 5 provides the basis for span calculations, with TRADA publishing ready-made span tables for common UK conditions. Rafters must satisfy deflection limits of span/200 for imposed load. Steeper pitches allow slightly longer spans for the same rafter size because the load component perpendicular to the rafter is reduced.",
+
+    spanTablesHeading: "Rafter Span Tables by Timber Grade (0.75 kN/m\u00b2 Imposed, Light Covering)",
+    spanTablesIntro:
+      "The following tables are based on TRADA guidance for rafters with 0.75 kN/m\u00b2 imposed load (snow + maintenance) and light roof covering (slates or lightweight tiles, dead load \u22640.50 kN/m\u00b2). Spans are horizontal projection in metres.",
+    spanTablesColSize: "Rafter Size",
+    spanTablesCol12: "400 mm c/c",
+    spanTablesCol16: "450 mm c/c",
+    spanTablesCol24: "600 mm c/c",
+    spanTablesBySpecies: [
+      {
+        species: "C16 Graded Softwood — Light Covering",
+        grade: "C16 — 0.75 kN/m\u00b2 imposed, \u22640.50 kN/m\u00b2 dead (slates/lightweight tiles)",
+        rows: [
+          { size: "47\u00d7100 mm", oc12: "2.06 m", oc16: "1.98 m", oc24: "1.82 m" },
+          { size: "47\u00d7125 mm", oc12: "2.42 m", oc16: "2.33 m", oc24: "2.14 m" },
+          { size: "47\u00d7150 mm", oc12: "2.82 m", oc16: "2.71 m", oc24: "2.49 m" },
+          { size: "47\u00d7175 mm", oc12: "3.22 m", oc16: "3.10 m", oc24: "2.84 m" },
+          { size: "47\u00d7200 mm", oc12: "3.75 m", oc16: "3.61 m", oc24: "3.31 m" },
+        ],
+      },
+      {
+        species: "C24 Graded Softwood — Light Covering",
+        grade: "C24 — 0.75 kN/m\u00b2 imposed, \u22640.50 kN/m\u00b2 dead (slates/lightweight tiles)",
+        rows: [
+          { size: "47\u00d7100 mm", oc12: "2.34 m", oc16: "2.25 m", oc24: "2.06 m" },
+          { size: "47\u00d7125 mm", oc12: "2.75 m", oc16: "2.64 m", oc24: "2.42 m" },
+          { size: "47\u00d7150 mm", oc12: "3.15 m", oc16: "3.03 m", oc24: "2.78 m" },
+          { size: "47\u00d7175 mm", oc12: "3.66 m", oc16: "3.52 m", oc24: "3.22 m" },
+          { size: "47\u00d7200 mm", oc12: "4.20 m", oc16: "4.04 m", oc24: "3.70 m" },
+        ],
+      },
+      {
+        species: "C16 Graded Softwood — Heavy Covering",
+        grade: "C16 — 0.75 kN/m\u00b2 imposed, 0.50\u20131.0 kN/m\u00b2 dead (concrete tiles, heavy slates)",
+        rows: [
+          { size: "47\u00d7100 mm", oc12: "1.82 m", oc16: "1.75 m", oc24: "1.61 m" },
+          { size: "47\u00d7125 mm", oc12: "2.14 m", oc16: "2.06 m", oc24: "1.89 m" },
+          { size: "47\u00d7150 mm", oc12: "2.49 m", oc16: "2.40 m", oc24: "2.20 m" },
+          { size: "47\u00d7175 mm", oc12: "2.84 m", oc16: "2.73 m", oc24: "2.51 m" },
+          { size: "47\u00d7200 mm", oc12: "3.31 m", oc16: "3.19 m", oc24: "2.92 m" },
+        ],
+      },
+      {
+        species: "C24 Graded Softwood — Heavy Covering",
+        grade: "C24 — 0.75 kN/m\u00b2 imposed, 0.50\u20131.0 kN/m\u00b2 dead (concrete tiles, heavy slates)",
+        rows: [
+          { size: "47\u00d7100 mm", oc12: "2.06 m", oc16: "1.98 m", oc24: "1.82 m" },
+          { size: "47\u00d7125 mm", oc12: "2.42 m", oc16: "2.33 m", oc24: "2.14 m" },
+          { size: "47\u00d7150 mm", oc12: "2.82 m", oc16: "2.71 m", oc24: "2.49 m" },
+          { size: "47\u00d7175 mm", oc12: "3.22 m", oc16: "3.10 m", oc24: "2.84 m" },
+          { size: "47\u00d7200 mm", oc12: "3.75 m", oc16: "3.61 m", oc24: "3.31 m" },
+        ],
+      },
+    ],
+
+    snowLoadHeading: "Snow Load Impact on Rafter Spans",
+    snowLoadIntro:
+      "Snow load is a key consideration for UK roof design, particularly in Scotland, northern England, and upland areas. BS EN 1991-1-3 and the UK National Annex define ground snow loads which are converted to roof snow loads.",
+    snowLoadItems: [
+      "Zone 1 (most of southern England, lowland Wales): ground snow load 0.30\u20130.40 kN/m\u00b2 — the lightest zone, standard span tables apply for most locations",
+      "Zone 2 (central England, midlands, southern Scotland lowlands): ground snow load 0.40\u20130.50 kN/m\u00b2 — minor span reductions of 5\u201310% may apply",
+      "Zone 3 (northern England, Scottish Highlands, upland Wales): ground snow load 0.50\u20130.80 kN/m\u00b2 — significant span reductions of 10\u201320% compared to standard tables",
+      "Altitude correction: add 0.1 kN/m\u00b2 for every 100 m above sea level on top of the ground snow load",
+      "Roof slope reduces snow accumulation: pitches above 30\u00b0 shed snow more effectively. BS EN 1991-1-3 provides shape coefficients that reduce the roof snow load for steep pitches",
+      "Drifting: valleys, parapets, and changes in roof height can create snow drifts with concentrated loads 2\u20133 times the uniform snow load",
+    ],
+    snowLoadSummary:
+      "In southern lowland England, standard span tables are generally adequate. In Scotland, northern England, and areas above 200 m altitude, always check the specific snow load for your location and reduce spans accordingly.",
+
+    pitchFactorsHeading: "How Roof Pitch Affects Rafter Sizing",
+    pitchFactorsIntro:
+      "Roof pitch affects rafter design in multiple ways: actual rafter length, load distribution, snow shedding ability, and the need for collar ties or ridge beams.",
+    pitchFactorsItems: [
+      "Low pitch (10\u00b0 to 22\u00b0): Rafters carry load almost like a floor joist. The horizontal thrust at the bearing wall is high, requiring adequate ceiling joists or collar ties. Limited choice of roof covering \u2014 membrane, metal, or specific low-pitch tiles.",
+      "Medium pitch (22\u00b0 to 40\u00b0): The load component perpendicular to the rafter decreases. Most UK roof coverings (tiles, slates) are suitable in this range. Ceiling joists or collar ties are still required unless a structural ridge beam is used.",
+      "Steep pitch (40\u00b0 to 60\u00b0): Good snow shedding and dramatic appearance. Actual rafter length is much longer than the horizontal span, increasing material cost. Wind uplift becomes a bigger concern \u2014 mechanical fixing of tiles is essential per BS 5534.",
+      "Pitch multipliers for rafter length: 20\u00b0 = 1.064, 25\u00b0 = 1.103, 30\u00b0 = 1.155, 35\u00b0 = 1.221, 40\u00b0 = 1.305, 45\u00b0 = 1.414.",
+      "Structural ridge beam: eliminates the need for ceiling joists by supporting the ridge. Required for vaulted ceiling designs. The beam must be engineered by a chartered structural engineer for the specific loads.",
+      "Collar ties vs ceiling joists: Collar ties in the upper third of the rafter length prevent ridge separation. Ceiling joists at the plate level resist outward thrust. Most conventional roofs need ceiling joists; collar ties alone are not a substitute.",
+    ],
+    pitchFactorsSummary:
+      "For most UK residential roofs (30\u00b0 to 45\u00b0 pitch), TRADA span tables can be used directly. For vaulted ceilings without ceiling joists, a structural ridge beam is required and must be designed by an engineer.",
+
+    codeReferencesHeading: "Building Regulations & Standards for Rafters",
+    codeReferencesIntro:
+      "The following standards and regulations govern rafter design in UK residential construction.",
+    codeReferencesItems: [
+      "Approved Document A (Structure) \u2014 references span tables for timber rafters in domestic buildings",
+      "BS 5268 Part 2 \u2014 permissible stress design of structural timber (legacy standard, still widely referenced)",
+      "BS EN 1995-1-1 (Eurocode 5) \u2014 limit state design of timber structures",
+      "BS 5534 \u2014 code of practice for slating and tiling, governs fixing specifications based on exposure and pitch",
+      "BS EN 1991-1-3 \u2014 snow loads on structures, with UK National Annex for regional snow maps",
+      "TRADA Span Tables \u2014 the primary builder's reference for rafter sizing under common UK loading conditions",
+      "BS EN 338 \u2014 strength classes for structural timber (C16, C24, etc.)",
+    ],
+    codeReferencesSummary:
+      "TRADA span tables, derived from Eurocode 5, are the standard reference for UK builders. BS 5534 governs the tile and slate fixing details. For unusual geometries or heavy roof coverings, consult a structural engineer.",
+
+    calculatorCtaHeading: "Calculate Your Roof Framing Materials",
+    calculatorCtaText:
+      "Once you know your rafter size and spacing, use our calculators to determine how many rafters, how much sheathing, and what fixings you need.",
+    calculatorLinks: [
+      {
+        label: "Rafter Calculator",
+        href: "/calculators/roofing/rafter-calculator",
+        description: "Calculate the number of rafters, ridge board length, and collar ties needed.",
+      },
+      {
+        label: "Roof Sheathing Calculator",
+        href: "/calculators/roofing/roof-sheathing-calculator",
+        description: "Estimate plywood or OSB sheets for your roof deck.",
+      },
+      {
+        label: "Shingle Calculator",
+        href: "/calculators/roofing/shingle-calculator",
+        description: "Calculate bundles of shingles and fixings needed.",
+      },
+    ],
+    faqHeading: "Frequently Asked Questions",
+    faqs: [
+      {
+        question: "How far can a 47x150 mm rafter span?",
+        answer:
+          "A 47x150 mm C24 rafter at 400 mm centres can span up to approximately 3.15 m horizontally with a light roof covering. For heavy concrete tiles, the span drops to about 2.82 m. C16 at 400 mm centres spans about 2.82 m and 2.49 m respectively.",
+      },
+      {
+        question: "How far can a 47x100 mm rafter span?",
+        answer:
+          "A 47x100 mm rafter has limited span: about 2.34 m for C24 and 2.06 m for C16 at 400 mm centres with a light covering. These small rafters are suitable only for lean-to porches, small sheds, and outbuildings.",
+      },
+      {
+        question: "Do I need a ridge beam or a ridge board?",
+        answer:
+          "A ridge board (typically 25 mm or 50 mm thick, at least the depth of the rafter cut) is sufficient when ceiling joists resist the outward thrust at the walls. A structural ridge beam (typically glulam or steel) is required for vaulted ceilings without ceiling joists, because it must carry the full vertical load. Ridge beams must be designed by a chartered structural engineer.",
+      },
+      {
+        question: "How does snow load affect rafter spans in the UK?",
+        answer:
+          "Snow load reduces allowable rafter spans. In most of lowland England (ground snow load 0.30\u20130.40 kN/m\u00b2), standard span tables apply. In Scotland and upland areas (0.50\u20130.80 kN/m\u00b2), spans can be reduced by 10\u201320%. Always check the specific snow load for your postcode area using the UK National Annex to BS EN 1991-1-3.",
+      },
+      {
+        question: "Can I use purlins to extend rafter spans?",
+        answer:
+          "Yes, purlins (horizontal members running perpendicular to rafters) supported by struts to a load-bearing wall below can support rafters at mid-span, effectively halving the span. This is common in UK traditional roof construction. The purlin must be adequately sized per TRADA tables.",
+      },
+      {
+        question: "What is the minimum rafter size for a house?",
+        answer:
+          "The minimum rafter size for a UK domestic roof is typically 47x100 mm for very short spans (under 2.5 m) or 47x125 mm for small extensions. For typical room spans of 3 to 4 m, 47x150 mm or 47x175 mm rafters are standard. The required size depends on span, spacing, timber grade, roof covering weight, and snow load.",
+      },
+    ],
+  },
+
+  ceilingJoistSpanTable: {
+    title: "Ceiling Joist Span Table: UK Building Regs Reference",
+    metaDescription:
+      "Ceiling joist span tables for 47x100, 47x125, 47x150, 47x175, 47x200 mm timber at 400 mm and 600 mm centres. Covers uninhabited loft, light storage, and habitable loft spans per BS 5268 and Approved Document A.",
+    heroTitle: "Ceiling Joist Span Table",
+    heroSubtitle: "UK Building Regs Reference",
+    heroDescription:
+      "Comprehensive ceiling joist span tables for UK residential construction. Find maximum spans for every common timber size, spacing, and load condition — from plasterboard-only ceilings to habitable loft floors.",
+
+    quickAnswerHeading: "Quick Answer",
+    quickAnswerText:
+      "A 47x150 mm C24 ceiling joist at 400 mm centres can span up to approximately 4.50 m for a plasterboard-only ceiling (no loft storage). If the loft is used for light storage (0.75 kN/m\u00b2), the span drops to about 3.15 m. For a habitable loft (1.5 kN/m\u00b2), use 47x175 mm or larger joists.",
+
+    understandingHeading: "Understanding Ceiling Joist Spans",
+    understandingText1:
+      "Ceiling joists serve a dual purpose in conventional roof framing: they support the ceiling finish below (typically plasterboard) and they act as rafter ties to resist the outward horizontal thrust of opposing rafters. The span of a ceiling joist depends primarily on whether the loft space above will be used for storage or habitation, which determines the imposed load requirement.",
+    understandingText2:
+      "Building Regulations and TRADA categorise ceiling joist loads into three conditions: uninhabited loft without storage (dead load only — just the plasterboard weight, approximately 0.25 kN/m\u00b2), uninhabited loft with limited storage (0.25 kN/m\u00b2 dead + 0.75 kN/m\u00b2 imposed), and habitable loft (0.25 kN/m\u00b2 dead + 1.5 kN/m\u00b2 imposed).",
+    understandingText3:
+      "When ceiling joists also serve as rafter ties, they must be connected to the rafter feet with adequate fixings to resist the horizontal thrust. The joists must be located in the lower third of the rafter span. If joists are raised above the plate line (as in a vaulted ceiling with collar ties), the lateral forces increase significantly, and the connections must be engineered accordingly.",
+
+    spanTablesHeading: "Ceiling Joist Span Tables by Timber Grade",
+    spanTablesIntro:
+      "The following tables are based on TRADA guidance for ceiling joists. Two load conditions are shown: plasterboard only (no loft access or storage) and limited loft storage (0.75 kN/m\u00b2 imposed load). Spans are in metres.",
+    spanTablesColSize: "Joist Size",
+    spanTablesCol12: "400 mm c/c",
+    spanTablesCol16: "450 mm c/c",
+    spanTablesCol24: "600 mm c/c",
+    spanTablesBySpecies: [
+      {
+        species: "C16 — Plasterboard Only (No Loft Storage)",
+        grade: "C16 — 0.25 kN/m\u00b2 dead load, no imposed load",
+        rows: [
+          { size: "47\u00d7100 mm", oc12: "3.15 m", oc16: "3.03 m", oc24: "2.78 m" },
+          { size: "47\u00d7125 mm", oc12: "3.73 m", oc16: "3.59 m", oc24: "3.29 m" },
+          { size: "47\u00d7150 mm", oc12: "4.08 m", oc16: "3.93 m", oc24: "3.60 m" },
+          { size: "47\u00d7175 mm", oc12: "4.72 m", oc16: "4.54 m", oc24: "4.16 m" },
+        ],
+      },
+      {
+        species: "C24 — Plasterboard Only (No Loft Storage)",
+        grade: "C24 — 0.25 kN/m\u00b2 dead load, no imposed load",
+        rows: [
+          { size: "47\u00d7100 mm", oc12: "3.57 m", oc16: "3.44 m", oc24: "3.15 m" },
+          { size: "47\u00d7125 mm", oc12: "4.20 m", oc16: "4.04 m", oc24: "3.70 m" },
+          { size: "47\u00d7150 mm", oc12: "4.50 m", oc16: "4.33 m", oc24: "3.96 m" },
+          { size: "47\u00d7175 mm", oc12: "5.20 m", oc16: "5.00 m", oc24: "4.58 m" },
+        ],
+      },
+      {
+        species: "C16 — Limited Loft Storage (0.75 kN/m\u00b2 Imposed)",
+        grade: "C16 — 0.25 kN/m\u00b2 dead + 0.75 kN/m\u00b2 imposed",
+        rows: [
+          { size: "47\u00d7100 mm", oc12: "2.20 m", oc16: "2.12 m", oc24: "1.94 m" },
+          { size: "47\u00d7125 mm", oc12: "2.59 m", oc16: "2.49 m", oc24: "2.28 m" },
+          { size: "47\u00d7150 mm", oc12: "2.82 m", oc16: "2.71 m", oc24: "2.49 m" },
+          { size: "47\u00d7175 mm", oc12: "3.22 m", oc16: "3.10 m", oc24: "2.84 m" },
+        ],
+      },
+      {
+        species: "C24 — Limited Loft Storage (0.75 kN/m\u00b2 Imposed)",
+        grade: "C24 — 0.25 kN/m\u00b2 dead + 0.75 kN/m\u00b2 imposed",
+        rows: [
+          { size: "47\u00d7100 mm", oc12: "2.50 m", oc16: "2.40 m", oc24: "2.20 m" },
+          { size: "47\u00d7125 mm", oc12: "2.94 m", oc16: "2.83 m", oc24: "2.59 m" },
+          { size: "47\u00d7150 mm", oc12: "3.15 m", oc16: "3.03 m", oc24: "2.78 m" },
+          { size: "47\u00d7175 mm", oc12: "3.66 m", oc16: "3.52 m", oc24: "3.22 m" },
+        ],
+      },
+    ],
+
+    loadTypesHeading: "Ceiling Joist Load Types Explained",
+    loadTypesIntro:
+      "Building Regulations and TRADA define three categories of loft loads, each requiring different joist sizing. Choosing the correct load category is critical for selecting the right span table.",
+    loadTypesItems: [
+      "Uninhabited loft without storage (0.25 kN/m\u00b2 dead load only): The loft has no boarded floor, no loft hatch large enough for access, and is used only for occasional inspection. Ceiling joists carry only the plasterboard below and insulation above, allowing the longest spans.",
+      "Uninhabited loft with limited storage (0.75 kN/m\u00b2 imposed load): The loft has a hatch and may have partial boarding for storage of light items. This is the most commonly used span table for domestic ceiling joists.",
+      "Habitable loft (1.5 kN/m\u00b2 imposed load): The loft has adequate headroom (2.1 m minimum over at least 50% of the area), a permanent staircase, and is finished as living space. Use floor joist span tables for this condition.",
+      "If you plan to convert a loft in future, size ceiling joists for the habitable load from the start. Reinforcing undersized joists later is expensive and disruptive.",
+      "HVAC equipment or hot water cylinders in the loft add concentrated dead load. Provide dedicated platform framing for heavy equipment rather than relying on ceiling joists alone.",
+    ],
+    loadTypesSummary:
+      "When in doubt, design for the limited storage load (0.75 kN/m\u00b2). It costs only slightly more in timber than the plasterboard-only design but gives you future flexibility for loft storage and access.",
+
+    factorsHeading: "Factors Affecting Ceiling Joist Spans",
+    factorsIntro:
+      "Several factors beyond basic load and timber grade affect how far your ceiling joists can span.",
+    factorsItems: [
+      "Rafter tie function: When ceiling joists serve as rafter ties, they experience tension in addition to bending. The joists must be connected to the rafters with fixings adequate to resist the horizontal thrust. This does not reduce the span table value but does affect connection requirements.",
+      "Ceiling finish weight: Standard 12.5 mm plasterboard weighs about 10 kg/m\u00b2 (0.10 kN/m\u00b2). If using 15 mm fire-rated board, add 2 kg/m\u00b2. Lath and plaster ceilings in older buildings can weigh 40\u201360 kg/m\u00b2.",
+      "Insulation weight: 300 mm of mineral wool loft insulation weighs approximately 4\u20136 kg/m\u00b2 (0.04\u20130.06 kN/m\u00b2). This is within the dead load assumption for standard span tables.",
+      "Spacing and plasterboard: 600 mm centres requires 12.5 mm plasterboard as minimum for ceilings. 400 mm centres also uses 12.5 mm but provides a stiffer ceiling with less risk of sagging.",
+      "Joists perpendicular to rafters: If ceiling joists run perpendicular to the rafters, they cannot serve as rafter ties. Separate rafter ties or a structural ridge beam is needed.",
+      "Lateral bracing: Ceiling joists should be braced with noggings or continuous lateral bracing at mid-span to prevent rolling under load.",
+    ],
+    factorsSummary:
+      "Ceiling joists are often the most overlooked framing member because they are hidden above the ceiling. But they serve critical structural roles as rafter ties and must be properly sized and connected.",
+
+    codeReferencesHeading: "Building Regulations & Standards for Ceiling Joists",
+    codeReferencesIntro:
+      "The following standards and regulations apply to ceiling joist design in UK residential construction.",
+    codeReferencesItems: [
+      "Approved Document A (Structure) \u2014 references span tables for ceiling joists in domestic buildings",
+      "BS 5268 Part 2 \u2014 permissible stress design of structural timber",
+      "BS EN 1995-1-1 (Eurocode 5) \u2014 limit state design of timber structures",
+      "TRADA Span Tables \u2014 practical span tables for ceiling joists under common UK loading conditions",
+      "Approved Document B (Fire Safety) \u2014 fire stopping requirements in the ceiling/loft zone, affecting nogging and blocking details",
+      "Approved Document E (Sound) \u2014 sound insulation requirements for separating floors in semi-detached and terraced houses, which may affect ceiling joist specification",
+      "BS EN 338 \u2014 strength classes for structural timber (C16, C24, etc.)",
+    ],
+    codeReferencesSummary:
+      "TRADA span tables are the standard reference for UK builders. Ceiling joist design intersects with structural requirements (Approved Document A), fire safety (B), and sound insulation (E). Consider all relevant documents when specifying ceiling construction.",
+
+    calculatorCtaHeading: "Calculate Your Ceiling Framing Materials",
+    calculatorCtaText:
+      "Use our calculators to determine how many ceiling joists, how much plasterboard, and what fixings you need for your project.",
+    calculatorLinks: [
+      {
+        label: "Floor Joist Calculator",
+        href: "/calculators/floor-framing/floor-joist-calculator",
+        description: "Also works for ceiling joists \u2014 calculate quantity, spacing, and noggings.",
+      },
+      {
+        label: "Drywall Calculator",
+        href: "/calculators/insulation-drywall/drywall-calculator",
+        description: "Estimate plasterboard sheets, jointing compound, and screws for your ceiling.",
+      },
+      {
+        label: "Insulation Calculator",
+        href: "/calculators/insulation-drywall/insulation-calculator",
+        description: "Calculate mineral wool or other insulation for your loft above the ceiling joists.",
+      },
+    ],
+    faqHeading: "Frequently Asked Questions",
+    faqs: [
+      {
+        question: "How far can a 47x150 mm ceiling joist span?",
+        answer:
+          "A 47x150 mm C24 ceiling joist at 400 mm centres can span up to approximately 4.50 m for a plasterboard-only ceiling. For limited loft storage (0.75 kN/m\u00b2), the span drops to about 3.15 m. Always check the TRADA span table for your specific timber grade and load condition.",
+      },
+      {
+        question: "Can I use 47x100 mm ceiling joists?",
+        answer:
+          "Yes, 47x100 mm ceiling joists can span up to about 3.57 m at 400 mm centres for plasterboard-only ceilings (C24). For lofts with storage, the span drops to about 2.50 m. They are suitable for small rooms, corridors, and landings where the loft above will not be used.",
+      },
+      {
+        question: "Do ceiling joists need to run the same direction as rafters?",
+        answer:
+          "When ceiling joists serve as rafter ties (the default in conventional roof framing), they must run parallel to the rafters so they can be fixed directly to the rafter feet at the wall plate. If the ceiling joists run perpendicular, separate rafter ties or a structural ridge beam is needed.",
+      },
+      {
+        question: "What is the difference between a ceiling joist and a floor joist?",
+        answer:
+          "Structurally, they are the same type of member. The difference is the design load: ceiling joists carry the ceiling finish and possibly light loft storage (0.25\u20131.0 kN/m\u00b2 total), while floor joists carry people, furniture, and activities (1.5\u20132.5 kN/m\u00b2 total). This means ceiling joists can span significantly longer than floor joists of the same size.",
+      },
+      {
+        question: "Can I walk on ceiling joists?",
+        answer:
+          "You can walk carefully on ceiling joists sized for loft storage (0.75 kN/m\u00b2). However, joists sized for plasterboard only should not be used for walking or storage \u2014 they may deflect enough to crack the plasterboard below. Always step on the joists, never between them on the plasterboard.",
+      },
+      {
+        question: "How do I reinforce existing ceiling joists for loft storage?",
+        answer:
+          "The most common method is sistering \u2014 bolting a new joist of equal or greater depth alongside each existing joist with M10 coach bolts at 400 mm centres. The sister joist must bear on the same supports. Alternatively, add a beam and posts below to shorten the effective span. Consult a structural engineer for the specific reinforcement needed.",
+      },
     ],
   },
 };

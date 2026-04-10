@@ -2373,6 +2373,448 @@ const stairLandingCalcPL: CalculatorSEOContent = {
   ],
 };
 
+// ─── ZBROJENIE ──────────────────────────────────────────────────────────────
+
+export const rebarCalculator: CalculatorSEOContent = {
+  disclaimer: "Ta kalkulacja zakłada jedną warstwę płaskiej siatki. Rzeczywiste wymagania zbrojenia zależą od specyfikacji inżynieryjnych, warunków gruntowych i lokalnych przepisów budowlanych. Zawsze konsultuj się z inżynierem konstruktorem przy zastosowaniach nośnych i sejsmicznych.",
+  howToUse: [
+    "Wprowadź długość i szerokość płyty w metrach.",
+    "Ustaw żądany rozstaw — 15 cm jest typowy dla płyt mieszkalnych.",
+    "Wybierz średnicę pręta: Ø 8 do lekkich obciążeń, Ø 10 standard mieszkalny, Ø 12 do zastosowań konstrukcyjnych.",
+    "Kliknij Oblicz, aby uzyskać liczbę prętów, metry bieżące i wagę całkowitą.",
+  ],
+  materialInfo:
+    "Zbrojenie (pręty żebrowane, stal zbrojeniowa) to pręty ze stali o podwyższonej przyczepności zatapiane w betonie, aby zapewnić wytrzymałość na rozciąganie, której sam beton nie może zapewnić. Beton dobrze wytrzymuje ściskanie, ale jest słaby na rozciąganie — zbrojenie łączy rysy i utrzymuje płytę w całości pod obciążeniem. Najczęściej stosowane średnice w polskim budownictwie mieszkalnym i lekkim komercyjnym to: Ø 6 (0,222 kg/m), Ø 8 (0,395 kg/m), Ø 10 (0,617 kg/m) i Ø 12 (0,888 kg/m). Standardowe pręty dostarczane są w długościach 6 m i 12 m. Gdy wymiar płyty przekracza długość pręta, konieczne są zakłady o długości co najmniej 40 średnic — czyli 48 cm dla Ø 12. Stal B500SP (granica plastyczności 500 MPa) jest standardem zgodnym z PN-EN 1992 (Eurokod 2) i polskimi przepisami budowlanymi. Dostępna jest w postaci stali czarnej (bez powłoki), ocynkowanej i nierdzewnej do środowisk agresywnych. Typowy rozstaw to 15 cm w obu kierunkach dla płyt mieszkalnych o grubości 12 cm, 20 cm dla lekko obciążonych tarasów i 10 cm dla płyt garażowych lub konstrukcyjnych. Zbrojenie musi być uniesione z podłoża na dystansach (podkładkach betonowych lub plastikowych), aby znajdowało się w dolnej trzeciej grubości płyty — układanie prętów na gruncie nie daje żadnego efektu konstrukcyjnego. Aktualny koszt to ok. 3,50–6,00 zł/mb dla Ø 10, czyli 21–36 zł za pręt 6 m.",
+  nextSteps: [
+    { label: "Kalkulator Rozstawu Zbrojenia", href: "/calculators/foundation/rebar-spacing-calculator/" },
+    { label: "Kalkulator Płyty Betonowej", href: "/calculators/foundation/concrete-slab-calculator/" },
+    { label: "Kalkulator Ław Fundamentowych", href: "/calculators/foundation/concrete-footing-calculator/" },
+  ],
+  installationTips: [
+    "Umieść zbrojenie na dystansach (podkładkach), aby znajdowało się w dolnej trzeciej płyty — nigdy nie kładź prętów bezpośrednio na gruncie.",
+    "Zakładaj pręty na 40 średnic (48 cm dla Ø 12) i wiąż każde skrzyżowanie drutem wiązałkowym.",
+    "Wiąż każde skrzyżowanie drutem wiązałkowym Ø 1,4 mm za pomocą haczyków lub wiązarki.",
+    "Zachowaj minimalne otulenie betonowe 3,5 cm (wnętrze) do 5,0 cm (kontakt z gruntem) wg PN-EN 1992.",
+    "Tnij pręty nożycami do stali lub szlifierką z tarczą do metalu — nigdy nie używaj palnika.",
+    "Gij pręty na zimno za pomocą giętarki ręcznej lub hydraulicznej — nagrzewanie osłabia stal.",
+  ],
+  commonMistakes: [
+    "Układanie zbrojenia na gruncie zamiast na dystansach — bez prawidłowego ułożenia zbrojenie nie pełni funkcji konstrukcyjnej.",
+    "Zbyt krótki zakład — zakłady krótsze niż 40 średnic rozejdą się pod obciążeniem.",
+    "Użycie niewłaściwej średnicy — Ø 6 jest zbyt słabe na płyty garażowe; minimum Ø 8–10.",
+    "Niewiązanie skrzyżowań — luźne pręty przesuwają się podczas betonowania.",
+    "Zapomnienie o naddatku — zamów 10–15% więcej na cięcia, gięcia i zakłady.",
+  ],
+  faqs: [
+    { question: "Ile zbrojenia potrzebuję na płytę 6×6 m?", answer: "Płyta 6×6 m z Ø 10 w rozstawie 15 cm wymaga 41 prętów w każdym kierunku — 82 pręty łącznie, ok. 44 prętów 6-metrowych. Łączna długość to ok. 252 mb o wadze ok. 156 kg. Dodaj 10% naddatku." },
+    { question: "Jaka średnica na płytę 12 cm?", answer: "Ø 10 (B500SP) to standardowy wybór na płyty mieszkalne 12 cm (garaż, piwnica, taras kryty). Na lekko obciążone tarasy może wystarczyć Ø 8. Na płyty konstrukcyjne — Ø 12 lub wg projektu inżyniera." },
+    { question: "Jaki rozstaw zbrojenia wybrać?", answer: "Najczęstszy to 15 cm w obu kierunkach na płyty mieszkalne 12 cm. Tarasy lekkie: 20 cm. Garaże i płyty konstrukcyjne: 10 cm. Inżynier konstruktor lub norma mogą określić inne rozstawy." },
+    { question: "Ile kosztuje zbrojenie?", answer: "Ø 10 kosztuje ok. 3,50–6,00 zł/mb, czyli 21–36 zł za pręt 6 m. Płyta 6×6 m wymaga ~44 prętów, koszt materiału: 924–1 584 zł. Stal nierdzewna: 3–4× drożej. Dystanse: 0,50–1,50 zł/szt." },
+    { question: "Zbrojenie prętowe czy siatka zgrzewana?", answer: "Pręty B500SP oferują lepszą kontrolę rys i są obowiązkowe na garaże, piwnice i płyty konstrukcyjne. Siatka zgrzewana jest akceptowalna na lekko obciążone płyty poniżej 12 cm. Siatkę trudniej utrzymać na dystansach podczas betonowania." },
+    { question: "Jak obliczyć wagę zbrojenia?", answer: "Pomnóż metry bieżące przez masę jednostkową: Ø 6 = 0,222 kg/m, Ø 8 = 0,395 kg/m, Ø 10 = 0,617 kg/m, Ø 12 = 0,888 kg/m. Przykład: 252 m Ø 10 = 252 × 0,617 = 156 kg." },
+  ],
+};
+
+export const rebarSpacingCalculator: CalculatorSEOContent = {
+  disclaimer: "Zalecenia dotyczące rozstawu to ogólne wytyczne dla typowego budownictwa mieszkalnego i lekkiego komercyjnego. Rzeczywisty rozstaw musi być określony przez inżyniera konstruktora na podstawie obciążeń, warunków gruntowych i przepisów budowlanych.",
+  howToUse: [
+    "Wprowadź długość i szerokość płyty w metrach.",
+    "Wybierz średnicę pręta — Ø 10 jest standardem dla większości prac mieszkalnych.",
+    "Wybierz typ obciążenia, aby uzyskać zalecany rozstaw.",
+    "Kliknij Oblicz, aby uzyskać optymalny rozstaw, liczbę prętów i dystansów.",
+  ],
+  materialInfo:
+    "Rozstaw zbrojenia określa, jak blisko siebie ułożone są pręty zbrojeniowe w płycie betonowej, bezpośrednio wpływając na nośność i odporność na zarysowania. Prawidłowy rozstaw zapewnia równomierny rozkład sił rozciągających w całym przekroju betonu. Dla płyt mieszkalnych (tarasy, posadzki piwnic, chodniki) rozstaw 20 cm z Ø 10 jest typowy. Garaże i podjazdy stosują 15 cm, aby wytrzymać obciążenia pojazdami. Płyty konstrukcyjne pod maszyny, posadzki przemysłowe lub stropy wymagają 10 cm lub mniej, zgodnie z projektem inżyniera. Dystanse (podkładki betonowe, plastikowe lub metalowe) są niezbędne do utrzymania zbrojenia na właściwej wysokości. Standardowa reguła to jeden dystans na 0,4 m² powierzchni płyty. Dystanse dostępne są w różnych typach: pojedyncze dla pojedynczych prętów, ciągłe dla długich odcinków i kratownicowe dla siatek. Gdy zbrojenie jest blisko powierzchni, stosuje się dystanse z końcówką plastikową, aby zapobiec plamom rdzy. Otulenie betonowe — odległość od zbrojenia do najbliższej powierzchni betonu — musi wynosić co najmniej 3,5 cm dla płyt wewnętrznych i 5 cm dla płyt w kontakcie z gruntem wg PN-EN 1992 (Eurokod 2). Niewystarczające otulenie prowadzi do korozji i odpryskiwania w ciągu 5–10 lat. Dla płyt powyżej 6 m w dowolnym kierunku, pręty muszą być zakładane z minimalną długością zakładu 40 średnic. Zakłady powinny być rozłożone tak, aby nie więcej niż 50% prętów było zakładanych w tym samym przekroju. Koszt montażu zbrojenia (robocizna i materiały) to 40–80 zł/m² dla standardowej siatki 15 cm, z dystansami i drutem wiązałkowym.",
+  nextSteps: [
+    { label: "Kalkulator Zbrojenia", href: "/calculators/foundation/rebar-calculator/" },
+    { label: "Kalkulator Płyty Betonowej", href: "/calculators/foundation/concrete-slab-calculator/" },
+    { label: "Kalkulator Betonu", href: "/calculators/foundation/concrete-calculator/" },
+  ],
+  installationTips: [
+    "Zaznacz linie rozstawu na szalunku kredą przed układaniem zbrojenia.",
+    "Ustaw dystanse co 1,2 m w obu kierunkach przed ułożeniem prętów.",
+    "Ułóż najpierw pręty w dłuższym kierunku, potem poprzeczne na wierzchu — wiąż każde skrzyżowanie.",
+    "Zachowaj 3,5–5,0 cm otulenia od zbrojenia do krawędzi lub spodu płyty.",
+    "W płytach z dylatacjami skurczowymi przeprowadź zbrojenie ciągłe — nie tnij prętów w miejscach dylatacji.",
+    "Przejdź po gotowej siatce przed betonowaniem, sprawdzając czy żadne pręty nie zesunęły się z dystansów.",
+  ],
+  commonMistakes: [
+    "Zbyt duży rozstaw na dany typ obciążenia — 20 cm to za dużo na garaże i podjazdy.",
+    "Dystanse zbyt daleko od siebie — nieosadzone zbrojenie opada na podsypkę żwirową.",
+    "Cięcie zbrojenia w dylatacjach — dylatacje mają pękać; zbrojenie musi przechodzić ciągłe.",
+    "Brak rozłożenia zakładów — wszystkie zakłady w jednym miejscu tworzą słabą strefę.",
+    "Ignorowanie wymagań otulenia — mniej niż 3,5 cm otulenia powoduje przedwczesną korozję.",
+  ],
+  faqs: [
+    { question: "Jaki jest standardowy rozstaw zbrojenia na płytę betonową?", answer: "Najczęstszy to 15 cm w obu kierunkach na płyty mieszkalne 12 cm. Tarasy lekkie: 20 cm. Garaże: 15 cm. Płyty konstrukcyjne: 10 cm lub wg projektu." },
+    { question: "Ile dystansów potrzebuję?", answer: "Planuj 1 dystans na 0,4 m². Płyta 6×6 m (36 m²) wymaga ~90 dystansów. Dla grubego zbrojenia (Ø 12+) stosuj dystanse o odpowiedniej nośności. Max 1,2 m rozstawu." },
+    { question: "Co się stanie, jeśli rozstaw jest za duży?", answer: "Płyta rozwinie szersze rysy pod obciążeniem, ponieważ siły rozciągające nie są odpowiednio rozłożone. To obniża nośność i umożliwia infiltrację wody, przyspieszając uszkodzenia mrozowe w polskim klimacie." },
+    { question: "Siatka zgrzewana czy pręty zbrojeniowe?", answer: "Siatka zgrzewana jest akceptowalna na lekko obciążone płyty poniżej 12 cm. Pręty B500SP oferują lepszą kontrolę rys i są obowiązkowe na garaże, piwnice i płyty konstrukcyjne." },
+    { question: "Jak typ obciążenia wpływa na rozstaw?", answer: "Większe obciążenia wymagają mniejszych rozstawów. Płyty mieszkalne (ruch pieszy): 20 cm. Garaże (pojazdy): 15 cm. Konstrukcyjne (maszyny, przemysłowe): 10 cm lub mniej." },
+    { question: "Jakie jest minimalne otulenie betonowe?", answer: "Wg PN-EN 1992 (Eurokod 2): 35 mm dla płyt wewnętrznych (XC1), 40 mm dla płyt na gruncie (XC2), 45–50 mm dla środowisk agresywnych (XC3/XC4, XD). Niewystarczające otulenie prowadzi do korozji w 5–10 lat." },
+  ],
+};
+
+// ─── DACH CZTEROSPADOWY ──────────────────────────────────────────────────────
+
+export const hipRoofCalculatorPL: CalculatorSEOContent = {
+  disclaimer: "Geometria dachu czterospadowego jest przybliżona. Krokwie narożne różnią się długością — każdą należy ciąć indywidualnie. Dodaj 10–15% naddatku na odpady.",
+  howToUse: [
+    "Zmierz długość i szerokość budynku w metrach.",
+    "Wprowadź kąt nachylenia dachu (w stosunku wysokość/baza).",
+    "Wybierz rozstaw krokwi (40 cm jest standardem).",
+    "Kliknij Oblicz, aby uzyskać liczbę krokwi, długość narożnych, powierzchnię i kalenicę.",
+  ],
+  materialInfo:
+    "Dach czterospadowy (kopertowy) ma cztery połacie — dwie trapezowe i dwie trójkątne — zbiegające się w kalenicy krótszej niż długość budynku. Wszystkie ściany chronione są okapem, co zapewnia wyższą odporność na wiatr (ponad 180 km/h) niż dachy dwuspadowe. Są preferowane w strefach przybrzeżnych i narażonych na silne wiatry. Konstrukcja wymaga czterech krokwi narożnych biegnących ukośnie z każdego narożnika do kalenicy, krokwi zwykłych oraz licznych krokwi skróconych (krokwi koszowych). Krokiew narożna jest zwykle o jeden rozmiar większa od zwykłych (np. 8x20 cm narożna przy 8x16 cm zwykłych), gdyż przenosi obciążenia z obu stron. Zgodnie z PN-EN 1995 (Eurokod 5) wszystkie połączenia muszą być obliczone na siły projektowe. Długość kalenicy równa się długości budynku minus szerokość. Dla dachu czterospadowego 9x12 m o kącie 35% materiały konstrukcyjne kosztują 8.000–18.000 PLN, a robocizna dodaje 12.000–25.000 PLN.",
+  nextSteps: [
+    { label: "Kalkulator Deskowania Dachu", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Kalkulator Dachówek", href: "/calculators/roofing/shingle-calculator/" },
+    { label: "Kalkulator Kąta Nachylenia", href: "/calculators/roofing/roof-pitch-calculator/" },
+    { label: "Kalkulator Dachu Dwuspadowego", href: "/calculators/roofing/gable-roof-calculator/" },
+  ],
+  installationTips: [
+    "Użyj krokwi narożnych o jeden rozmiar większych niż zwykłe, by przenosić podwójne obciążenie.",
+    "Użyj kątownika ciesielskiego lub kalkulatora budowlanego do kątów złożonych krokwi skróconych.",
+    "Zamontuj najpierw krokwie narożne, potem uzupełniaj skróconymi od najdłuższej do najkrótszej.",
+    "Sfazuj górną krawędź krokwi narożnych (obniżenie narożnej), by poszycie leżało płasko na linii naroża.",
+    "Tymczasowo podpieraj krokwie narożne aż do montażu poszycia — mogą się skręcać pod własnym ciężarem.",
+  ],
+  commonMistakes: [
+    "Użycie tego samego przekroju dla narożnych i zwykłych — narożne przenoszą podwójne obciążenie.",
+    "Nieuwzględnienie obniżenia narożnej — poszycie nie będzie leżało płasko i powstanie garb.",
+    "Zapomnienie, że krokwie skrócone wymagają cięć pod kątem złożonym, nie prostych cięć pionowych.",
+    "Niedoszacowanie materiałów — dachy czterospadowe zużywają 10–15% więcej drewna niż dwuspadowe.",
+  ],
+  faqs: [
+    { question: "Czym jest dach czterospadowy?", answer: "Dach czterospadowy ma cztery nachylone połacie opadające ku ścianom. Dwie dłuższe to trapezy, dwie krótsze to trójkąty. Zbiegają się w kalenicy krótszej niż długość budynku. Są bardziej odporne na wiatr niż dachy dwuspadowe." },
+    { question: "Jak obliczyć powierzchnię dachu czterospadowego?", answer: "Zmierz rzut budynku (długość x szerokość) i pomnóż przez współczynnik nachylenia. Dla 35% (6/12) współczynnik wynosi 1,118. Budynek 9x12 m z nachyleniem 35% ma ok. 9 x 12 x 1,118 = 120,7 m² powierzchni dachu." },
+    { question: "Ile krokwi narożnych ma dach czterospadowy?", answer: "Standardowy dach czterospadowy ma dokładnie 4 krokwie narożne — po jednej z każdego narożnika budynku, biegnące ukośnie do końca kalenicy." },
+    { question: "Czterospadowy vs dwuspadowy — który lepszy?", answer: "Czterospadowy jest bardziej odporny na wiatr, chroni wszystkie ściany i jest strukturalnie samousztywniający. Dwuspadowy jest prostszy, tańszy i daje więcej miejsca na poddaszu. W strefach wietrznych preferowany jest czterospadowy." },
+    { question: "Jaka jest długość krokwi narożnej?", answer: "Krokiew narożna biegnie ukośnie z narożnika do kalenicy. Jej rzut poziomy to bieg krokwi zwykłej pomnożony przez pierwiastek z 2 (ok. 1,414). Dla budynku o szerokości 9 m z nachyleniem 35%: bieg zwykłej = 4,5 m, narożnej = 6,36 m." },
+    { question: "Jaka jest długość kalenicy?", answer: "Długość kalenicy równa się długości budynku minus szerokość. Dla budynku 12x9 m kalenica ma 12 - 9 = 3 m. Jeśli budynek jest kwadratowy, kalenicy nie ma — cztery krokwie narożne zbiegają się w jednym punkcie tworząc dach namiotowy." },
+  ],
+};
+
+// ─── DACH MANSARDOWY ─────────────────────────────────────────────────────────
+
+export const gambrelRoofCalculatorPL: CalculatorSEOContent = {
+  disclaimer: "Proporcje dachu mansardowego zakładają standardowy podział 67/33 dolny/górny. Rzeczywiste proporcje mogą się różnić w zależności od projektu. Skonsultuj się z konstruktorem.",
+  howToUse: [
+    "Wprowadź długość i szerokość budynku w metrach.",
+    "Wprowadź nachylenie dolne (strome) — typowo 18/12 do 24/12 dla ścian stodolnych.",
+    "Wprowadź nachylenie górne (łagodne) — typowo 4/12 do 8/12 dla czapy.",
+    "Wybierz rozstaw krokwi i kliknij Oblicz.",
+  ],
+  materialInfo:
+    "Dach mansardowy — nazywany też dachem stodolnym — ma dwie różne nachylenia po każdej stronie: stromą dolną sekcję (typowo 60–70 stopni) i łagodną górną (typowo 20–30 stopni). Ten podwójny spadek maksymalizuje użyteczną przestrzeń na piętrze, będąc klasycznym wyborem dla stodół, budynków gospodarczych i domów w stylu holenderskim kolonialnym. Strome dolne nachylenie działa niemal jak ściana, zapewniając pełną wysokość na poddaszu. Konstrukcyjnie przejście między nachyleniami (załamanie mansardowe) wymaga poziomej płatwie, która służy jako wspornik dla krokwi górnych i przekazuje obciążenia na dolne. Krokwie dolne to typowo 8x20 lub 8x24 cm, górne mogą być 8x16 lub 8x20 cm. Zgodnie z PN-EN 1995 wszystkie połączenia muszą być zweryfikowane. Dach mansardowy zużywa 20–30% mniej materiału niż dodanie pełnego drugiego piętra z dachem dwuspadowym. Koszt materiałów dla dachu mansardowego 9x12 m to 10.000–22.000 PLN na drewno. Wadą jest odporność na wiatr — strome nachylenie łapie wiatr.",
+  nextSteps: [
+    { label: "Kalkulator Deskowania Dachu", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Kalkulator Krokwi", href: "/calculators/roofing/rafter-calculator/" },
+    { label: "Kalkulator Dachówek", href: "/calculators/roofing/shingle-calculator/" },
+    { label: "Kalkulator Dachu Dwuspadowego", href: "/calculators/roofing/gable-roof-calculator/" },
+  ],
+  installationTips: [
+    "Buduj wiązary mansardowe na płaskiej powierzchni (szablonie) dla zachowania powtarzalności.",
+    "Płatew na załamaniu mansardowym jest elementem nośnym — użyj odpowiedniej belki lub podwojonego drewna.",
+    "Zamontuj zastrzały na przejściu dolnym-górnym dla większej sztywności.",
+    "Deskuj przez załamanie ostrożnie — zmiana kąta wymaga precyzyjnych cięć.",
+    "Użyj ściągów lub belek stropowych w sekcji górnej, by zapobiec parciu bocznemu.",
+  ],
+  commonMistakes: [
+    "Niedowymiarowanie płatwi na przejściu — przenosi ona znaczne siły konstrukcyjne.",
+    "Brak stężenia przejścia dolnego-górnego — punkt załamania jest najsłabszą częścią mansardy.",
+    "Użycie tego samego nachylenia w obu sekcjach — dolne musi być wyraźnie stromsze.",
+    "Ignorowanie ekspozycji na wiatr — dachy mansardowe źle sprawdzają się w strefach wietrznych.",
+  ],
+  faqs: [
+    { question: "Czym jest dach mansardowy?", answer: "Dach mansardowy ma dwie różne nachylenia po każdej stronie — strome dolne (60–70 stopni) i łagodne górne (20–30 stopni). Ten stodolny kształt maksymalizuje użyteczną przestrzeń wewnętrzną na piętrze." },
+    { question: "Jakie nachylenia stosuje się w dachu mansardowym?", answer: "Sekcja dolna typowo 18/12 do 24/12 (56–63 stopni), górna 4/12 do 8/12 (18–33 stopni). Popularna kombinacja to 20/12 dolne i 6/12 górne." },
+    { question: "Ile dodatkowej przestrzeni daje dach mansardowy?", answer: "Dach mansardowy zapewnia ok. 70–80% powierzchni pełnego drugiego piętra, w porównaniu z 40–50% dla poddasza pod dachem dwuspadowym." },
+    { question: "Czy dachy mansardowe są wytrzymałe?", answer: "Są wytrzymałe przy prawidłowym zaprojektowaniu i stężeniu wg PN-EN 1995, ale bardziej podatne na wiatr niż dachy czterospadowe lub dwuspadowe z powodu stromego dolnego nachylenia." },
+    { question: "Różnica między mansardą a dachem francuskim?", answer: "Dach mansardowy ma dwa nachylenia na dwóch stronach ze szczytami. Dach francuski (mansard) ma dwa nachylenia na wszystkich czterech stronach — hybryd czterospadowego i mansardowego." },
+    { question: "Ile kosztuje dach mansardowy?", answer: "Dach mansardowy kosztuje 15–25% więcej niż prosty dwuspadowy. Dla budynku 9x12 m: 12.000–28.000 PLN na drewno i okucia, plus 15.000–40.000 PLN robocizny." },
+  ],
+};
+
+// ─── DACH DWUSPADOWY ─────────────────────────────────────────────────────────
+
+export const gableRoofCalculatorPL: CalculatorSEOContent = {
+  disclaimer: "Dodaj 10–15% naddatku na cięcia i okapy. Długości krokwi nie uwzględniają okapu — dodaj 30–60 cm na krokiew na okapy.",
+  howToUse: [
+    "Wprowadź długość budynku (wzdłuż kalenicy) i szerokość (wzdłuż szczytu) w metrach.",
+    "Wprowadź kąt nachylenia dachu (stosunek wysokość/baza).",
+    "Wybierz rozstaw krokwi (40 cm jest standardem mieszkaniowym).",
+    "Kliknij Oblicz, aby uzyskać liczbę krokwi, powierzchnię, kalenicę i pole szczytu.",
+  ],
+  materialInfo:
+    "Dach dwuspadowy jest najpopularniejszym typem dachu mieszkalnego w Polsce, z dwoma nachylonymi połaciami spotykającymi się w kalenicy biegnącej wzdłuż całego budynku. Trójkątne sekcje ścian na obu końcach — szczyty (frontony) — nadają temu stylowi nazwę. Popularne ze względu na prostotę projektu, ekonomię materiałów i doskonałe odprowadzanie wody. Standardowe nachylenia mieszkaniowe to 25%–45%, z 35% jako najpopularniejszym. Krokwie biegną od murłaty do kalenicy, z podcięciem 'oczepu' na murłacie i cięciem pionowym przy kalenicy. Typowe przekroje wg PN-EN 1995 to 8x14 (do 3,5 m rozpiętości), 8x18 (do 4,5 m) i 8x22 (do 5,5 m) przy rozstawie 40 cm. Powierzchnia szczytów musi być uwzględniona w oszacowaniu oblicowania. Dla dachu dwuspadowego 9x12 m z nachyleniem 35%, drewno konstrukcyjne kosztuje typowo 6.000–14.000 PLN, z robocizną dodatkową 9.000–20.000 PLN.",
+  nextSteps: [
+    { label: "Kalkulator Kalenicy", href: "/calculators/roofing/ridge-board-calculator/" },
+    { label: "Kalkulator Deskowania Dachu", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Kalkulator Dachówek", href: "/calculators/roofing/shingle-calculator/" },
+    { label: "Kalkulator Dachu Czterospadowego", href: "/calculators/roofing/hip-roof-calculator/" },
+  ],
+  installationTips: [
+    "Wytnij najpierw krokiew wzorcową i sprawdź pasowanie przed cięciem całego kompletu.",
+    "Użyj kątownika szybkiego do oznaczania podcięć oczepu i cięć pionowych w sposób powtarzalny.",
+    "Zamontuj kalenicę na tymczasowych podporach przed ustawianiem krokwi.",
+    "Pracuj od obu końców ku środkowi, montując pary przeciwległych krokwi.",
+    "Zamontuj jętki w górnej trzeciej części krokwi, aby zapobiec rozchodzeniu się ścian.",
+  ],
+  commonMistakes: [
+    "Zapomnienie o dodaniu długości okapu do pomiaru krokwi — dodaj 30–60 cm poza ścianę.",
+    "Nieuwzględnienie deskowania i oblicowania szczytu w kosztorysie materiałów.",
+    "Użycie szerokości budynku jako biegu krokwi — bieg to połowa szerokości na każdą stronę.",
+    "Pominięcie jętek lub belek stropowych — bez nich krokwie z czasem będą wypychać ściany na zewnątrz.",
+  ],
+  faqs: [
+    { question: "Czym jest dach dwuspadowy?", answer: "Dach dwuspadowy to klasyczny kształt trójkątny z dwoma nachylonymi połaciami spotykającymi się w centralnej kalenicy. Trójkątne sekcje ścian na końcach to szczyty. Jest najpopularniejszy w Polsce ze względu na prostotę, niski koszt i skuteczne odprowadzanie wody." },
+    { question: "Jak obliczyć powierzchnię dachu dwuspadowego?", answer: "Pomnóż połowę szerokości budynku (bieg krokwi) przez współczynnik nachylenia, potem przez długość dla jednej połaci. Podwój dla obu stron. Dla 9x12 m z nachyleniem 35% (6/12): bieg = 4,5 m, współczynnik = 1,118, jedna połać = 4,5 x 1,118 x 12 = 60,4 m², razem = 120,8 m²." },
+    { question: "Co to jest pole szczytu i dlaczego jest ważne?", answer: "Szczyt to trójkątna sekcja ściany między dwiema połaciami na każdym końcu. Jego powierzchnia musi być uwzględniona w oblicowaniu i wentylacji. Dla budynku o szerokości 9 m z nachyleniem 35% każdy szczyt ma 9 x 2,25 / 2 = 10,1 m²." },
+    { question: "Jaki kąt jest najlepszy dla dachu dwuspadowego?", answer: "Nachylenie 35% (6/12) jest najpopularniejsze w budownictwie mieszkaniowym — dobra równowaga estetyki, efektywności materiałowej i możliwości chodzenia. Dachówki ceramiczne wymagają min. 30% wg polskich norm." },
+    { question: "Ile krokwi potrzebuję na dach dwuspadowy?", answer: "Podziel długość budynku przez rozstaw (w metrach), dodaj jeden, pomnóż przez dwa dla obu stron. Dla 12 m przy rozstawie 40 cm: (12 / 0,40) + 1 = 31 na stronę, 62 łącznie. Dodaj 10% na odpady." },
+    { question: "Dwuspadowy vs czterospadowy — który tańszy?", answer: "Dachy dwuspadowe kosztują 15–25% mniej, bo zużywają mniej drewna, mają prostsze cięcia i szybszy montaż. Jednak są mniej odporne na wiatr i wystawiają szczyty na działanie pogody." },
+  ],
+};
+
+// ─── DACH JEDNOSPADOWY ───────────────────────────────────────────────────────
+
+export const leanToRoofCalculatorPL: CalculatorSEOContent = {
+  disclaimer: "Pomiary jednospadowego zakładają dach o pojedynczym spadku bez koszów. Dodaj 10–15% naddatku na materiały. Długość krokwi nie uwzględnia okapu.",
+  howToUse: [
+    "Wprowadź długość dachu (wzdłuż ściany nośnej) w metrach.",
+    "Wprowadź bieg dachu (głębokość od ściany) w metrach.",
+    "Wprowadź nachylenie (stosunek wysokość/baza).",
+    "Wybierz rozstaw krokwi i kliknij Oblicz, aby uzyskać liczbę, długość, powierzchnię i wysokość wzniesienia.",
+  ],
+  materialInfo:
+    "Dach jednospadowy (zwany też pulpitowym, shed lub mono-spadkowym) to najprostsza forma pokrycia — pojedyncza nachylona płaszczyzna opierająca się o istniejącą konstrukcję lub rozpięta między ścianami o różnych wysokościach. To standardowy wybór dla dobudówek, wiat garażowych, zadaszeń tarasów i szop. Strona wysoka jest typowo mocowana do istniejącej ściany za pomocą belki przyściennej skręconej śrubami do słupków, a strona niska opiera się na belce podpartej słupami. Mając tylko jedno nachylenie, dach jednospadowy jest najekonomiczniejszy — wymaga ok. połowy krokwi dachu dwuspadowego i nie ma kalenicy, krokwi narożnych ani cięć złożonych. Typowe nachylenia to 10%–30%, z 15%–20% najczęstszymi. Wg PN-EN 1991-1-3 minimalne nachylenie zależy od pokrycia: 1% dla membrany (EPDM), 5% dla blachy z uszczelnieniem, 30% dla dachówek ceramicznych. Dach jednospadowy 3,6x6 m kosztuje 3.500–9.000 PLN w drewnie konstrukcyjnym i 1.500–4.000 PLN w pokryciu, z robocizną dodatkową 6.000–14.000 PLN.",
+  nextSteps: [
+    { label: "Kalkulator Krokwi", href: "/calculators/roofing/rafter-calculator/" },
+    { label: "Kalkulator Deskowania Dachu", href: "/calculators/roofing/roof-sheathing-calculator/" },
+    { label: "Kalkulator Kąta Nachylenia", href: "/calculators/roofing/roof-pitch-calculator/" },
+    { label: "Kalkulator Dachu Dwuspadowego", href: "/calculators/roofing/gable-roof-calculator/" },
+  ],
+  installationTips: [
+    "Przymocuj belkę przyścienną do słupków istniejącej ściany śrubami przelotowymi M12 — nigdy nie mocuj tylko do oblicowania.",
+    "Zamontuj obróbkę blacharską typu Z lub schodkową nad belką przyścienną, by zapobiec przeciekaniu.",
+    "Użyj sznurka od belki do murłaty, by zweryfikować jednostajne nachylenie przed cięciem.",
+    "Nachyl dach od budynku, by kierować odpływ na stronę niską (zewnętrzną).",
+    "Dla biegów powyżej 3,5 m rozważ belkę pośrednią, by zmniejszyć przekrój krokwi.",
+  ],
+  commonMistakes: [
+    "Mocowanie belki przyściennej do oblicowania zamiast konstrukcji — musi być skręcona ze słupkami lub belką obwodową.",
+    "Zapomnienie o obróbce nad belką przyścienną — najczęstsza przyczyna przecieków w dobudówkach jednospadowych.",
+    "Nachylenie dachu w kierunku budynku zamiast od niego — woda musi spływać na stronę zewnętrzną.",
+    "Zbyt małe nachylenie dla wybranego pokrycia — dachówki ceramiczne wymagają min. 30%.",
+  ],
+  faqs: [
+    { question: "Czym jest dach jednospadowy?", answer: "Dach jednospadowy to dach o pojedynczym spadku, typowo opierający się o ścianę istniejącego budynku. Jeden koniec jest wyższy (mocowany do ściany belką przyścienną), drugi niższy (podparty słupami i belką). Najprostszy i najekonomiczniejszy typ." },
+    { question: "Jakie jest minimalne nachylenie dla dachu jednospadowego?", answer: "Wg norm PN-EN: 1% dla membrany (TPO, EPDM), 3%–5% dla blachy z uszczelnieniem i 30% dla dachówek ceramicznych. Dla większości wiat 15%–20% daje dobry kompromis." },
+    { question: "Jak obliczyć powierzchnię dachu jednospadowego?", answer: "Pomnóż długość dachu przez bieg, potem przez współczynnik nachylenia. Dla 6x3,6 m z nachyleniem 20% (4/12): współczynnik 1,054, powierzchnia = 6 x 3,6 x 1,054 = 22,8 m²." },
+    { question: "Jak wysoko wznosi się dach jednospadowy?", answer: "Wzniesienie = bieg × stosunek nachylenia. Dla biegu 3,6 m z nachyleniem 20% (4/12): 3,6 x (4/12) = 1,2 m." },
+    { question: "Czy mogę przymocować jednospadowy do dowolnej ściany?", answer: "Można mocować do każdej ściany nośnej zdolnej przenieść obciążenia. Ściana musi mieć dostępne słupki. Ściany murowane wymagają kotew chemicznych. Zawsze sprawdź nośność istniejącej ściany." },
+    { question: "Ile kosztuje dach jednospadowy?", answer: "Jednospadowy 3,6x6 m: 3.500–9.000 PLN drewno, 1.500–4.000 PLN pokrycie, 6.000–14.000 PLN robocizna. Razem 10.000–27.000 PLN." },
+  ],
+};
+
+// ─── ROZSTAW TRALEK ──────────────────────────────────────────────────────────
+
+export const balusterSpacingCalculatorPL: CalculatorSEOContent = {
+  disclaimer: "Obliczenia oparte są na PN-EN 1991 i rozporządzeniu w sprawie warunków technicznych, które ograniczają otwory do maksymalnie 12 cm. Sprawdź wymagania lokalne w swoim starostwie.",
+  howToUse: [
+    "Zmierz całkowitą długość balustrady w centymetrach od słupka do słupka.",
+    "Wprowadź szerokość tralki (3,8 cm dla standardowych kwadratowych, 2 cm dla okrągłych).",
+    "Wprowadź szerokość słupka (8,9 cm dla standardowych słupków 9x9 cm).",
+    "Wprowadź liczbę słupków i kliknij Oblicz, aby uzyskać dokładną liczbę tralek i równomierny rozstaw.",
+  ],
+  materialInfo:
+    "Tralki (zwane też szczeblami lub wstawkami pionowymi) to pionowe elementy wypełniające systemu balustrady, które zapobiegają upadkom i spełniają normy budowlane. Rozporządzenie w sprawie warunków technicznych (Dz.U. 2019 poz. 1065) wymaga, by kula o średnicy 12 cm nie mogła przejść przez żadną szczelinę — dotyczy to przestrzeni między tralkami, między tralkami a słupkami oraz między dolną poręczą a powierzchnią podłogi.\n\nStandardowe tralki kwadratowe mają bok 3,8 cm, okrągłe typowo 2 cm średnicy. Przy tralkach 3,8 cm i maksymalnym prześwicie 12 cm potrzeba ok. 6–7 tralek na metr bieżący balustrady.\n\nPopularne materiały: stal malowana proszkowa (30–70 PLN/szt.), aluminium (40–100 PLN), stal nierdzewna (80–200 PLN) i drewno (40–120 PLN). Dla typowej balustrady 10 m bieżących potrzeba 60–80 tralek. Równomierny rozstaw poprawia estetykę i zgodność z normami — używaj dystansowników.",
+  nextSteps: [
+    { label: "Kalkulator Balustrady Tarasu", href: "/calculators/outdoor/deck-railing-calculator/" },
+    { label: "Kalkulator Schodów", href: "/calculators/stairs/stair-calculator/" },
+    { label: "Kalkulator Desek Tarasowych", href: "/calculators/outdoor/deck-board-calculator/" },
+  ],
+  installationTips: [
+    "Wytnij klocek dystansowy o obliczonej szerokości i używaj go między każdą tralką dla idealnie równomiernego rozstawu.",
+    "Nawiercaj otwory w tralkach drewnianych, by zapobiec pękaniu — zwłaszcza w drewnie twardym.",
+    "Zamontuj najpierw dolną poręcz, ustaw wszystkie tralki z dystansownikiem, potem zamocuj górną poręcz.",
+    "Użyj kleju zewnętrznego oprócz wkrętów dla trwałości w balustradach narażonych na pogodę.",
+  ],
+  commonMistakes: [
+    "Zbyt duży rozstaw tralek — test kuli 12 cm dotyczy każdego otworu, nie średniej.",
+    "Zapomnienie o odjęciu szerokości słupków od długości całkowitej przy obliczaniu dostępnej przestrzeni.",
+    "Brak nawiercania tralek drewnianych — małe przekroje pękają łatwo przy wkręcaniu na końcach.",
+    "Ignorowanie prześwitu między podłogą a dolną poręczą — reguła 12 cm obowiązuje też tutaj.",
+  ],
+  faqs: [
+    { question: "Jaki jest maksymalny rozstaw tralek?", answer: "Wg warunków technicznych kula o średnicy 12 cm nie może przejść przez żadną szczelinę. Przy standardowych tralkach kwadratowych 3,8 cm maksymalny prześwit to mniej niż 12 cm." },
+    { question: "Ile tralek na metr bieżący?", answer: "Przy tralkach kwadratowych 3,8 cm i prześwicie max. 12 cm potrzeba ok. 6–7 tralek na metr bieżący." },
+    { question: "Czy można użyć poziomych elementów?", answer: "Niektóre przepisy na to pozwalają, ale reguła kuli 12 cm nadal obowiązuje. Wiele gmin zakazuje poziomych konstrukcji, bo dzieci mogą się po nich wspinać." },
+    { question: "Jaka powinna być wysokość balustrady?", answer: "Wg warunków technicznych minimalna wysokość to 110 cm dla balustrad mieszkalnych i publicznych." },
+    { question: "Jaki materiał najlepszy na zewnętrzne tralki?", answer: "Aluminium i stal nierdzewna oferują najlepszą trwałość przy minimalnej konserwacji. Stal ocynkowana jest ekonomiczna, ale wymaga okresowego malowania. Drewno dębowe jest naturalnie odporne." },
+    { question: "Czy potrzebuję pozwolenia na balustradę?", answer: "Tak, w większości gmin instalacja balustrady na tarasie wymaga zgłoszenia lub pozwolenia budowlanego. Inspektorzy sprawdzają wysokość, rozstaw, mocowanie i nośność." },
+  ],
+};
+
+// ─── PODBITKA (SOFFIT) ───────────────────────────────────────────────────────
+
+export const soffitCalculatorPL: CalculatorSEOContent = {
+  disclaimer: "Szacunek zakłada panele standardowe o szerokości 30 cm. Rzeczywiste wymiary i pokrycie różnią się wg producenta. Dodaj 10% naddatku na cięcia.",
+  howToUse: [
+    "Zmierz całkowity obwód domu w metrach.",
+    "Zmierz szerokość podbitki (odległość od ściany do deski czołowej) w centymetrach.",
+    "Wprowadź długość panelu (typowo 3,60 m dla standardowych).",
+    "Kliknij Oblicz, aby uzyskać liczbę paneli, długość listwy J i liczbę pasków wentylacyjnych.",
+  ],
+  materialInfo:
+    "Podbitka (soffit) to materiał, którym wykańcza się spód okapu dachu, wypełniając szczelinę między ścianą zewnętrzną a deską czołową. Główne funkcje to ochrona ogonów krokwi przed warunkami atmosferycznymi, owadami i wilgocią oraz zapewnienie wentylacji poddasza przy użyciu paneli perforowanych.\n\nPanele podbitkowe są w trzech wariantach: pełne (bez wentylacji), centralnie wentylowane (perforowany pasek pośrodku) i w pełni wentylowane. Podbitka wentylowana w połączeniu z wentylacją kalenicową tworzy ciągły przepływ powietrza.\n\nPopularne materiały: PVC (40–80 PLN/m² zamontowane), aluminium (70–140 PLN/m²), włóknocement (80–160 PLN/m²) i drewno (100–200 PLN/m²). PVC jest najpopularniejszy w Polsce. Standardowe wymiary: 30 cm szerokości na 3,60 m długości.\n\nListwa J (kanałek) montowana jest na obu krawędziach podbitki (strona ściany i strona deski czołowej) do osadzenia i mocowania brzegów paneli.",
+  nextSteps: [
+    { label: "Kalkulator Sidingu", href: "/calculators/exterior-shell/vinyl-siding-calculator/" },
+    { label: "Kalkulator Kapinosu", href: "/calculators/roofing/drip-edge-calculator/" },
+    { label: "Kalkulator Okładziny Włóknistej", href: "/calculators/exterior-shell/hardie-siding-calculator/" },
+  ],
+  installationTips: [
+    "Zamontuj listwę J wzdłuż ściany jako pierwszą, utrzymując ją wypoziomowaną i prostą — każde odchylenie będzie widoczne.",
+    "Zostaw 6 mm luzu dylatacyjnego na każdym końcu panelu, by zapobiec wypaczeniu w upały.",
+    "Naprzemiennie stosuj panele wentylowane i pełne, jeśli potrzebna jest częściowa wentylacja.",
+    "Tnij panele piłą tarczową o drobnych zębach (odwróconą dla PVC) lub nożycami blacharskimi.",
+  ],
+  commonMistakes: [
+    "Brak luzu dylatacyjnego — panele PVC wypaczają się i deformują przy zbyt ciasnym montażu.",
+    "Montaż samych paneli pełnych gdy potrzebna wentylacja poddasza — stosuj co najmniej 1/3 paneli perforowanych.",
+    "Brak wypoziomowania listwy J — każda falista będzie widoczna w gotowej podbitce.",
+    "Zapomnienie o zaślepkach gdzie podbitka kończy się przy szczytach lub przejściach.",
+  ],
+  faqs: [
+    { question: "Co to jest podbitka i po co jest?", answer: "Podbitka to panel wykańczający spód okapu dachu. Chroni ogony krokwi przed pogodą i owadami, zapewnia wentylację poddasza gdy jest perforowana i nadaje okapowi estetyczny wygląd." },
+    { question: "Czy potrzebuję paneli wentylowanych?", answer: "Tak, jeśli poddasze ma wentylację kalenicową. Panele wentylowane umożliwiają wlot powietrza od okapów i wylot przez kalenicę, tworząc ciągły przepływ zapobiegający wilgoci i przegrzewaniu. Stosuj min. 1/3 paneli wentylowanych." },
+    { question: "Ile kosztuje podbitka?", answer: "Podbitka PVC kosztuje 40–80 PLN/m² zamontowana. Dla typowego domu o obwodzie 48 m i okapie 45 cm (21,6 m²) materiały kosztują 860–1.730 PLN, a montaż profesjonalny dodaje 1.000–2.000 PLN." },
+    { question: "Czy mogę zamontować podbitkę na istniejącej?", answer: "Tak, jeśli istniejąca jest w dobrym stanie. Zamontuj nowe listwy J na starej powierzchni. Jeśli stara jest uszkodzona lub przemoczona, usuń ją całkowicie." },
+    { question: "Jaka szerokość panelu?", answer: "Zależy od okapu. Standardowe 30 cm na okapy do 30 cm. Dla szerszych okapów (45–60 cm) użyj dwóch rzędów lub szerszych paneli." },
+    { question: "Ile listwy J potrzebuję?", answer: "Listwa J jest po obu stronach (ściana i deska czołowa), więc pomnóż obwód przez 2. Dla 48 m obwodu potrzeba 96 m bieżących." },
+  ],
+};
+
+// ─── DESKA I LISTWA ──────────────────────────────────────────────────────────
+
+export const boardAndBattenCalculatorPL: CalculatorSEOContent = {
+  disclaimer: "Szacunek zakłada standardowy montaż pionowy z deskami stykowymi i listwami zakrywającymi złącza. Dodaj 10% naddatku na cięcia wokół okien i drzwi.",
+  howToUse: [
+    "Oblicz łączną powierzchnię ściany w m² (obwód x wysokość, minus okna i drzwi).",
+    "Wprowadź szerokość deski (typowo: 15, 20, 25 lub 30 cm).",
+    "Wprowadź szerokość listwy (typowo: 4–8 cm).",
+    "Wprowadź wysokość ściany w metrach i kliknij Oblicz.",
+  ],
+  materialInfo:
+    "Okładzina deska i listwa to klasyczny wzór pionowej okładziny z szerokimi deskami montowanymi pionowo i wąskimi listwami (kaplugi) zakrywającymi złącza. Ten design pozwala na naturalne ruchy drewna — deski mogą się rozszerzać i kurczyć z wilgotnością bez otwierania widocznych szpar.\n\nHistorycznie najpopularniejsza okładzina w polskim budownictwie wiejskim i dworskim, deska i listwa powraca w architekturze współczesnej i stylu nowoczesnej stodoły. Dostępna w drewnie naturalnym (modrzew, sosna, cedr), drewnie inżynieryjnym, włóknocemencie i PVC.\n\nSzerokości desek: 15–30 cm, z 20–25 cm najpopularniejszymi. Listwy typowo 4–8 cm. Montaż wymaga folii wiatroizolacyjnej za okładziną. Koszt materiału: sosna impregnowana 20–40 PLN/m bieżący, modrzew 50–100 PLN, włóknocement 35–70 PLN.",
+  nextSteps: [
+    { label: "Kalkulator Sidingu", href: "/calculators/exterior-shell/vinyl-siding-calculator/" },
+    { label: "Kalkulator Okładziny Włóknistej", href: "/calculators/exterior-shell/hardie-siding-calculator/" },
+    { label: "Kalkulator Folii Wiatroizolacyjnej", href: "/calculators/exterior-shell/housewrap-calculator/" },
+  ],
+  installationTips: [
+    "Zamontuj folię wiatroizolacyjną (Tyvek lub równoważną) na poszyciu konstrukcyjnym przed jakąkolwiek okładziną.",
+    "Przybijaj każdą deskę jednym gwoździem na środku — to pozwala na rozszerzanie i kurczenie bez pęknięć.",
+    "Listwy przybijaj przez zakładkę desek, mocując do poszycia lub słupków za nimi.",
+    "Zostaw 3 mm przerwy na dole desek przy listwach poziomych na drenowanie.",
+    "Zaimpregnuj wszystkie ścięte końce i tylne powierzchnie przed montażem.",
+  ],
+  commonMistakes: [
+    "Przybijanie desek na obu krawędziach — ogranicza naturalną dylatację i powoduje pęknięcia.",
+    "Pominięcie folii wiatroizolacyjnej — niezbędna do ochrony przed uszkodzeniami wodnymi.",
+    "Zbyt wąskie listwy — min. 4 cm zalecane do prawidłowego zakrycia złączy.",
+    "Niezabezpieczenie ściętych końców — drewno czołowe szybko wchłania wilgoć powodując gnicie.",
+  ],
+  faqs: [
+    { question: "Co to jest okładzina deska i listwa?", answer: "To styl okładziny pionowej z szerokimi deskami pionowymi i wąskimi listwami zakrywającymi złącza. Pozwala na ruch drewna utrzymując szczelną elewację." },
+    { question: "Jakie materiały nadają się?", answer: "Modrzew (najtrwalszy), sosna impregnowana (ekonomiczny), włóknocement (trwały, niska konserwacja), PVC i drewno szlachetne jak dąb. Każdy ma inny profil kosztów i konserwacji." },
+    { question: "Ile kosztuje?", answer: "Materiały: 20–40 PLN/m bieżący sosna, 50–100 PLN modrzew, 35–70 PLN włóknocement. Montaż profesjonalny 80–180 PLN/m². Dla elewacji 45 m²: 10.000–35.000 PLN razem." },
+    { question: "Można montować poziomo?", answer: "Tradycyjnie jest pionowo, ale poziomy montaż jest możliwy. Jednak poziome listwy mogą zatrzymywać wodę. Montaż pionowy jest zalecany dla najlepszego odprowadzania wody." },
+    { question: "Potrzebuję folii za okładziną?", answer: "Tak, zawsze. Folia wiatroizolacyjna za okładziną jest niezbędna. Złącza deska-listwa nie są wodoszczelne — listwy odchylają większość wody, ale część może się przedostawać." },
+    { question: "Optymalne szerokości?", answer: "Deski 20–25 cm z listwami 5 cm to najpopularniejszy wybór mieszkaniowy. Szersze deski (30 cm) dają bardziej rustykalny wygląd; węższe (15 cm) — bardziej nowoczesny." },
+  ],
+};
+
+// ─── ŚCIANA SKOŚNA ───────────────────────────────────────────────────────────
+
+export const rakeWallCalculatorPL: CalculatorSEOContent = {
+  disclaimer: "Wysokości słupków ściany skośnej to obliczenia teoretyczne. Zawsze mierz i tnij każdy słupek indywidualnie na budowie. Górna oczepnica wymaga cięcia pod kątem. Dodaj 10% naddatku.",
+  howToUse: [
+    "Zmierz całkowitą długość ściany w metrach wzdłuż dolnej oczepu.",
+    "Wprowadź wysokość niskiego końca w metrach.",
+    "Wprowadź wysokość wysokiego końca w metrach.",
+    "Ustaw rozstaw słupków (40 lub 60 cm) i kliknij Oblicz.",
+  ],
+  materialInfo:
+    "Ściana skośna (zwana też ścianą szczytową lub ścianą z nachylonym wieńcem) to ściana, w której górna oczepnica biegnie pod kątem dachu zamiast poziomo. Tworzy to trójkątną lub trapezową sekcję ściany, gdzie każdy słupek ma inną wysokość.\n\nŚciany skośne znajdują się w szczytach dachów, pod dachami jednospadowymi, na poddaszach i wszędzie, gdzie ściana spotyka skośny sufit. Są konstrukcyjnie takie same jak standardowe — typowo słupki 10x5 lub 14x5 cm co 40 lub 60 cm wg PN-EN 1995.\n\nKluczowa różnica: górna oczepnica musi być ścięta pod kątem odpowiadającym nachyleniu dachu, a każdy słupek mierzy się i tnie indywidualnie. Dla ściany skośnej 6 m od 2,4 do 4,2 m potrzeba ok. 16 słupków co 40 cm, z wysokościami od ok. 231 do 415 cm.",
+  nextSteps: [
+    { label: "Kalkulator Słupków", href: "/calculators/wall-framing/stud-calculator/" },
+    { label: "Kalkulator Dachu Dwuspadowego", href: "/calculators/roofing/gable-roof-calculator/" },
+    { label: "Kalkulator Poszycia Zewnętrznego", href: "/calculators/wall-framing/exterior-sheathing-calculator/" },
+  ],
+  installationTips: [
+    "Wytnij szablon pod kątem nachylenia dla górnego cięcia każdego słupka.",
+    "Mierz każdy słupek indywidualnie na budowie — obliczenia teoretyczne mogą mieć niewielkie odchylenia.",
+    "Zamontuj dolną oczepnicę wypoziomowaną jako pierwszą, potem ustaw górną skośną.",
+    "Dla słupków poniżej 60 cm stosuj poziome blokowania między nimi jako powierzchnię mocowania poszycia.",
+    "Użyj poziomu laserowego do sprawdzenia wyrównania górnej oczepu na całej długości.",
+  ],
+  commonMistakes: [
+    "Cięcie wszystkich słupków na tę samą długość — każdy słupek w ścianie skośnej ma inną wysokość.",
+    "Zapomnienie o cięciu kątowym na górnej oczepie — musi śledzić nachylenie dachu.",
+    "Brak indywidualnych pomiarów na budowie — nierówności podłogi wpływają na każdą wysokość.",
+    "Pominięcie blokowań poziomych przy krótkich słupkach — poszycie potrzebuje powierzchni mocowania.",
+  ],
+  faqs: [
+    { question: "Czym jest ściana skośna?", answer: "Ściana skośna (szczytowa) to ściana, w której górna oczepnica biegnie pod kątem dachu. Każdy słupek ma inną wysokość, tworząc trójkątną lub trapezową sekcję." },
+    { question: "Jak obliczyć wysokości słupków?", answer: "Różnicę wysokości między końcami dziel przez liczbę rozstawów. Dla ściany 6 m od 2,4 do 4,2 m co 40 cm: 15 rozstawów, różnica 1,8 m, przyrost 12 cm na słupek." },
+    { question: "Jakiego drewna użyć?", answer: "Tego samego co w ścianach standardowych — słupki 10x5 lub 14x5 cm wg PN-EN 1995. Przekrój zależy od wysokości i obciążeń." },
+    { question: "Jak ściąć górną oczep?", answer: "Oblicz kąt nachylenia (arcus tangens różnicy wysokości dzielonej przez długość). Zaznacz kątownikiem i tnij piłą tarczową ustawioną na kąt." },
+    { question: "Czy potrzebne jest stężenie?", answer: "Tak. Stosuj te same zasady stężenia co w ścianach konwencjonalnych. Dodaj blokowania poziome między krótkimi słupkami do mocowania poszycia i płyt g-k." },
+  ],
+};
+
+// ─── ROZSTAW DESEK TARASOWYCH ─────────────────────────────────────────────────
+
+export const deckBoardSpacingCalculatorPL: CalculatorSEOContent = {
+  disclaimer: "Zalecany rozstaw różni się wg materiału i wilgotności lokalnej. Drewno naturalne wymaga większych przerw niż materiały kompozytowe. Sprawdź zalecenia producenta.",
+  howToUse: [
+    "Wprowadź szerokość deski tarasowej w centymetrach.",
+    "Wprowadź całkowitą długość tarasu w metrach.",
+    "Wybierz typ materiału (drewno naturalne lub kompozyt/WPC).",
+    "Kliknij Oblicz, aby uzyskać zalecany rozstaw i liczbę desek.",
+  ],
+  materialInfo:
+    "Rozstaw między deskami tarasowymi jest kluczowy dla drenażu, wentylacji, dylatacji i trwałości konstrukcji. Standardowy rozstaw dla drewna naturalnego to 5–8 mm, dla kompozytów WPC 5–6 mm wg zaleceń producenta.\n\nW Polsce najpopularniejsze gatunki na tarasy to modrzew syberyjski, bangkirai, garapa i sosna impregnowana ciśnieniowo. Drewno twarde ma niższy współczynnik dylatacji niż iglaste, mogąc stosować mniejsze przerwy (5 mm vs 8 mm). Deski kompozytowe WPC mają współczynnik rozszerzalności cieplnej, który trzeba uwzględnić, zwłaszcza przy nasłonecznionych tarasach.\n\nNiedostateczny rozstaw powoduje wypaczanie, zastoje wody i przyspieszony rozkład. Nadmierny rozstaw umożliwia gromadzenie się zanieczyszczeń i może być niewygodny dla bosych stóp. Używaj dystansowników plastikowych podczas montażu dla zachowania równomierności.",
+  nextSteps: [
+    { label: "Kalkulator Desek Tarasowych", href: "/calculators/outdoor/deck-board-calculator/" },
+    { label: "Kalkulator Stóp Fundamentowych", href: "/calculators/outdoor/deck-footing-calculator/" },
+    { label: "Kalkulator Balustrady", href: "/calculators/outdoor/deck-railing-calculator/" },
+  ],
+  installationTips: [
+    "Używaj plastikowych dystansowników o jednakowej grubości między każdą deską dla stałej przerwy.",
+    "Dla drewna naturalnego montuj stroną kory do góry, by zminimalizować wypaczanie.",
+    "Zostaw 10–15 mm przerwy między końcami desek a stałymi elementami na dylatację podłużną.",
+    "Nawiercaj końce desek z drewna twardego, by zapobiec pęknięciom przy wkręcaniu.",
+    "Sprawdź wilgotność drewna przed montażem — montuj przy 12%–18%.",
+  ],
+  commonMistakes: [
+    "Montaż desek bez przerw — drewno rozszerzy się z wilgotnością i wypacza lub unosi.",
+    "Nieregularny rozstaw — nierówny wygląd i problemy z drenażem.",
+    "Nieuwzględnienie rozszerzalności cieplnej kompozytów — WPC znacząco się rozszerza w cieple.",
+    "Brak przerwy na końcach — deski stykające się ze ścianami lub krawędziami wypaczą się przy dylatacji.",
+  ],
+  faqs: [
+    { question: "Jaki idealny rozstaw między deskami?", answer: "Drewno naturalne: 5–8 mm. Kompozyty WPC: 5–6 mm wg producenta. W polskim klimacie z wyraźnymi porami roku preferuj 6–8 mm dla drewna naturalnego." },
+    { question: "Czy mogę montować deski bez przerw?", answer: "Nie. Deski bez przerw wypaczą się i szybko się zepsują. Przerwy są niezbędne do drenażu, wentylacji podkonstrukcji i dylatacji." },
+    { question: "Jak utrzymać równomierny rozstaw?", answer: "Używaj plastikowych dystansowników wielokrotnego użytku (20–50 PLN za paczkę) lub gwoździ jako prowadnic tymczasowych. Nie polegaj na pomiarze wizualnym." },
+    { question: "Czy rozstaw różni się wg materiału?", answer: "Tak. Drewno twarde (bangkirai, modrzew) — 5 mm. Sosna impregnowana — 8 mm. WPC wg producenta, typowo 5–6 mm." },
+    { question: "A rozstaw na końcach desek?", answer: "Zostaw 10–15 mm między końcami a powierzchniami stałymi. Dla desek łączonych na styk: 3–5 mm przerwy." },
+  ],
+};
+
 // ─── REGISTRY MAP ───────────────────────────────────────────────────────────
 
 export const registryPL: Record<string, Record<string, CalculatorSEOContent>> = {
@@ -2404,6 +2846,7 @@ export const registryPL: Record<string, Record<string, CalculatorSEOContent>> = 
     "top-plate-calculator": topPlateCalculator,
     "header-calculator": headerCalculator,
     "exterior-sheathing-calculator": exteriorSheathingCalculator,
+    "rake-wall-calculator": rakeWallCalculatorPL,
   },
   roofing: {
     "truss-calculator": trussCalculator,
@@ -2416,12 +2859,18 @@ export const registryPL: Record<string, Record<string, CalculatorSEOContent>> = 
     "roof-pitch-calculator": roofPitchCalculator,
     "roof-area-calculator": roofAreaCalculator,
     "roof-slope-calculator": roofSlopeCalculator,
+    "hip-roof-calculator": hipRoofCalculatorPL,
+    "gambrel-roof-calculator": gambrelRoofCalculatorPL,
+    "gable-roof-calculator": gableRoofCalculatorPL,
+    "lean-to-roof-calculator": leanToRoofCalculatorPL,
   },
   "exterior-shell": {
     "housewrap-calculator": housewrapCalculator,
     "vinyl-siding-calculator": vinylSidingCalculator,
     "hardie-siding-calculator": hardieSidingCalculator,
     "window-flashing-calculator": windowFlashingCalculator,
+    "soffit-calculator": soffitCalculatorPL,
+    "board-and-batten-calculator": boardAndBattenCalculatorPL,
   },
   "insulation-drywall": {
     "cavity-insulation-calculator": cavityInsulationCalculator,
@@ -2450,6 +2899,7 @@ export const registryPL: Record<string, Record<string, CalculatorSEOContent>> = 
     "deck-stair-calculator": deckStairCalculator,
     "post-hole-calculator": postHoleCalculator,
     "pond-calculator": pondCalculator,
+    "deck-board-spacing-calculator": deckBoardSpacingCalculatorPL,
   },
   stairs: {
     "stair-calculator": stairCalculatorPL,
@@ -2457,5 +2907,6 @@ export const registryPL: Record<string, Record<string, CalculatorSEOContent>> = 
     "rise-over-run-calculator": riseOverRunCalcPL,
     "spiral-staircase-calculator": spiralStaircaseCalcPL,
     "stair-landing-calculator": stairLandingCalcPL,
+    "baluster-spacing-calculator": balusterSpacingCalculatorPL,
   },
 };

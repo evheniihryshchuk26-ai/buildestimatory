@@ -28,6 +28,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/guides/flooring-cost-guide/`, lastModified, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/guides/fence-cost-guide/`, lastModified, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/guides/stair-building-guide/`, lastModified, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/guides/joist-span-table/`, lastModified, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/guides/rafter-span-table/`, lastModified, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/guides/ceiling-joist-span-table/`, lastModified, changeFrequency: "monthly", priority: 0.8 },
   ];
 
   const categoryPages: MetadataRoute.Sitemap = categories.map((cat) => ({

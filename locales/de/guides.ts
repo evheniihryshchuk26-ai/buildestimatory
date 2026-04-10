@@ -83,6 +83,24 @@ const guides: GuidesTranslations = {
           "Wie man Treppen baut \u2014 kompletter Ratgeber \u00fcber Treppenanatomie, DIN 18065 Bauvorschriften, Steigung & Auftritt, Treppentypen (gerade, L-, U-, Wendel), Materialien und Kosten.",
         href: "/guides/stair-building-guide",
       },
+      {
+        title: "Deckenbalken-Spannweitentabelle: Vollständige Referenz",
+        description:
+          "Spannweitentabellen für Deckenbalken 60×120 bis 80×240 mm bei 30, 40 und 60 cm Achsabstand. Mit KVH/BSH-Werten, DIN/Eurocode-Referenzen und Lastanforderungen.",
+        href: "/guides/joist-span-table",
+      },
+      {
+        title: "Sparren-Spannweitentabelle: Vollständige Dachkonstruktions-Referenz",
+        description:
+          "Sparren-Spannweitentabellen nach Größe, Abstand, Dachneigung und Schneelast. Mit DIN/Eurocode-Referenzen für alle gängigen Holzarten und -güten.",
+        href: "/guides/rafter-span-table",
+      },
+      {
+        title: "Kehlbalken-Spannweitentabelle: Vollständige Referenz",
+        description:
+          "Kehlbalken-Spannweitentabellen nach Größe, Abstand und Lasttyp. Mit Spannweiten für nicht begehbare Dachräume, Lagerräume und Wohnräume.",
+        href: "/guides/ceiling-joist-span-table",
+      },
     ],
   },
 
@@ -1576,6 +1594,511 @@ const guides: GuidesTranslations = {
       { question: "Wie viele Stufen bei 2,70 m Geschossh\u00f6he?", answer: "2.700 mm + 300 mm Deckenaufbau = 3.000 mm. 3.000 / 180 = 16,7 \u2192 17 Steigungen (176 mm) und 16 Auftritte. Laufl\u00e4nge: 16 \u00d7 270 = 4.320 mm." },
       { question: "Was ist die g\u00fcnstigste Treppe?", answer: "Gerade Treppe aus impr\u00e4gnierter Fichte: Wangen 50\u00d7300 (25\u201360 \u20ac/St\u00fcck, 2\u20133 St.), Trittstufen (8\u201315 \u20ac/St.), Setzstufen (5\u201310 \u20ac/St.). 14 Stufen au\u00dfen: 200\u2013500 \u20ac Material." },
       { question: "Brauche ich eine Baugenehmigung?", answer: "F\u00fcr permanente Treppen in der Regel ja, besonders bei Geb\u00e4ude\u00e4nderungen. Geb\u00fchren 50\u2013300 \u20ac. Kleine Au\u00dfentreppen (1\u20132 Stufen) oft genehmigungsfrei. Bauamt kontaktieren." },
+    ],
+  },
+  joistSpanTable: {
+    title: "Deckenbalken-Spannweitentabelle: Vollständige Referenz",
+    metaDescription:
+      "Spannweitentabellen für Deckenbalken 60×120 bis 80×240 mm bei 30, 40 und 60 cm Achsabstand. Für Fichte/Tanne KVH und BSH nach DIN EN 1995-1-1 (Eurocode 5) mit Lastanforderungen und Bemessungshinweisen.",
+    heroTitle: "Deckenbalken-Spannweitentabelle",
+    heroSubtitle: "Vollständige DIN/Eurocode-Referenz",
+    heroDescription:
+      "Umfassende Spannweitentabellen für Deckenbalken im Wohnungsbau. Finden Sie die maximal zulässige Spannweite für alle gängigen Querschnitte, Achsabstände und Holzgüten nach DIN EN 1995-1-1 (Eurocode 5).",
+
+    quickAnswerHeading: "Kurzantwort",
+    quickAnswerText:
+      "Ein KVH-Deckenbalken 80×200 mm aus Fichte C24 bei 60 cm Achsabstand kann bis ca. 4,20 m stützenfrei überspannen (Nutzlast 1,5 kN/m², Eigenlast 0,5 kN/m²). Ein 80×240-mm-Balken gleicher Güte bei 60 cm Achsabstand schafft ca. 5,00 m. Prüfen Sie die Spannweiten stets gegen die jeweilige Statik, da Landesbauordnungen abweichende Werte fordern können.",
+
+    understandingHeading: "Spannweiten von Deckenbalken verstehen",
+    understandingText1:
+      "Die Spannweite eines Deckenbalkens ist die lichte Distanz zwischen zwei Auflagern, die der Balken stützenfrei überbrücken kann, ohne unzulässige Durchbiegung oder Versagen. DIN EN 1995-1-1 (Eurocode 5) und die DIN 1052 liefern die Berechnungsgrundlagen für maximale Spannweiten basierend auf Querschnitt, Holzart, Festigkeitsklasse, Achsabstand und Bemessungslasten.",
+    understandingText2:
+      "Deckenbalken werden für zwei Lastzustände bemessen: Nutzlast (Personen, Möbel, bewegliche Lasten — typisch 1,5 kN/m² für Wohnräume und 0,75 kN/m² für nicht begehbare Dachböden nach DIN EN 1991-1-1) und ständige Last (Eigengewicht der Konstruktion — typisch 0,5 kN/m² für Standard-Holzbalkendecke mit Dielung und Gipskartonverkleidung). Die Gesamtlast bestimmt den erforderlichen Querschnitt und Achsabstand.",
+    understandingText3:
+      "Durchbiegungsgrenzen steuern ebenfalls die Spannweite. Der Eurocode begrenzt die Durchbiegung auf L/300 für Nutzlast und L/200 für die Gesamtlast, wobei L die Spannweite ist. Eine 4,50-m-Spannweite darf also unter Nutzlast maximal 15 mm durchbiegen. Steifere Decken fühlen sich solider an und verhindern Rissbildung in Fliesen oder Gipskartondecken darunter.",
+
+    spanTablesHeading: "Deckenbalken-Spannweitentabellen nach Holzart",
+    spanTablesIntro:
+      "Die folgenden Spannweitentabellen basieren auf DIN EN 1995-1-1 für Deckenbalken mit 1,5 kN/m² Nutzlast und 0,5 kN/m² Eigenlast. Spannweiten sind als maximale lichte Spannweite in Metern angegeben. Verwenden Sie stets die Festigkeitsklasse, die auf Ihrem Holz gestempelt ist.",
+    spanTablesColSize: "Querschnitt",
+    spanTablesCol12: "30 cm",
+    spanTablesCol16: "40 cm",
+    spanTablesCol24: "60 cm",
+    spanTablesBySpecies: [
+      {
+        species: "Fichte/Tanne KVH C24",
+        grade: "Festigkeitsklasse C24 — fm,k = 24 N/mm², E₀,mean = 11.000 N/mm²",
+        rows: [
+          { size: "60×120", oc12: "3,20 m", oc16: "2,90 m", oc24: "2,50 m" },
+          { size: "60×160", oc12: "4,20 m", oc16: "3,80 m", oc24: "3,30 m" },
+          { size: "80×200", oc12: "5,30 m", oc16: "4,80 m", oc24: "4,20 m" },
+          { size: "80×240", oc12: "6,30 m", oc16: "5,70 m", oc24: "5,00 m" },
+        ],
+      },
+      {
+        species: "Fichte/Tanne BSH GL24h",
+        grade: "Brettschichtholz GL24h — fm,g,k = 24 N/mm², E₀,g,mean = 11.500 N/mm²",
+        rows: [
+          { size: "60×120", oc12: "3,40 m", oc16: "3,10 m", oc24: "2,70 m" },
+          { size: "60×160", oc12: "4,50 m", oc16: "4,10 m", oc24: "3,50 m" },
+          { size: "80×200", oc12: "5,60 m", oc16: "5,10 m", oc24: "4,40 m" },
+          { size: "80×240", oc12: "6,70 m", oc16: "6,10 m", oc24: "5,30 m" },
+        ],
+      },
+      {
+        species: "Douglasie KVH C24",
+        grade: "Festigkeitsklasse C24 — fm,k = 24 N/mm², E₀,mean = 11.000 N/mm²",
+        rows: [
+          { size: "60×120", oc12: "3,20 m", oc16: "2,90 m", oc24: "2,50 m" },
+          { size: "60×160", oc12: "4,20 m", oc16: "3,80 m", oc24: "3,30 m" },
+          { size: "80×200", oc12: "5,30 m", oc16: "4,80 m", oc24: "4,20 m" },
+          { size: "80×240", oc12: "6,30 m", oc16: "5,70 m", oc24: "5,00 m" },
+        ],
+      },
+      {
+        species: "Fichte/Tanne KVH C16",
+        grade: "Festigkeitsklasse C16 — fm,k = 16 N/mm², E₀,mean = 8.000 N/mm²",
+        rows: [
+          { size: "60×120", oc12: "2,70 m", oc16: "2,40 m", oc24: "2,10 m" },
+          { size: "60×160", oc12: "3,50 m", oc16: "3,20 m", oc24: "2,70 m" },
+          { size: "80×200", oc12: "4,40 m", oc16: "4,00 m", oc24: "3,50 m" },
+          { size: "80×240", oc12: "5,30 m", oc16: "4,80 m", oc24: "4,20 m" },
+        ],
+      },
+    ],
+
+    loadRequirementsHeading: "Lastanforderungen für Deckenbalken (Eurocode)",
+    loadRequirementsIntro:
+      "Der Eurocode und die DIN EN 1991-1-1 legen die Mindest-Bemessungslasten für Wohngebäudedecken fest. Diese Lasten bestimmen den erforderlichen Balkenquerschnitt und Achsabstand.",
+    loadRequirementsItems: [
+      "Wohnräume (Wohnzimmer, Schlafzimmer, Küche): 1,5 kN/m² Nutzlast + 0,5 kN/m² Eigenlast = 2,0 kN/m² Gesamtlast nach Kategorie A, DIN EN 1991-1-1",
+      "Nicht begehbare Dachräume: 0,75 kN/m² Nutzlast + 0,3 kN/m² Eigenlast — nur für Decken ohne Lagernutzung",
+      "Dachräume mit Lagerfunktion: 1,0 kN/m² Nutzlast + 0,5 kN/m² Eigenlast",
+      "Ausbaufähige Dachgeschosse: 1,5 kN/m² Nutzlast wie Wohnräume — bei geplantem Ausbau von Anfang an so dimensionieren",
+      "Eigenlast umfasst Balkeneigengewicht, Dielung/OSB, Fußbodenaufbau und ggf. Gipskartonverkleidung darunter. Bei schwerem Bodenbelag (Fliesen auf Estrich) Eigenlast auf 1,0–1,5 kN/m² erhöhen",
+      "Einzellasten: Der Eurocode fordert zusätzlich eine Einzellast von 2,0 kN auf einer Fläche von 50×50 mm, die typischerweise bei Einhaltung der Durchbiegungsgrenzen erfüllt ist",
+    ],
+    loadRequirementsSummary:
+      "Für die meisten Wohngebäudedecken verwenden Sie die Tabelle für 1,5/0,5 kN/m². Dimensionieren Sie im Zweifel für die höhere Last — der Mehrpreis ist minimal.",
+
+    factorsHeading: "Einflussfaktoren auf die Balkenspannweite",
+    factorsIntro:
+      "Neben den reinen Tabellenwerten beeinflussen mehrere praxisrelevante Faktoren die erforderliche Balkengröße.",
+    factorsItems: [
+      "Holzart und Festigkeitsklasse: Höhere Klassen (C24, GL28) erlauben längere Spannweiten als C16 oder C18. Die Klasse bestimmt die Biegefestigkeit (fm,k) und den E-Modul.",
+      "Achsabstand: 30 cm erlaubt die längsten Spannweiten, 40 cm ist der gebräuchlichste Abstand im deutschen Holzbau, 60 cm ist wirtschaftlich, begrenzt aber die Spannweite und erfordert dickere Beplankung.",
+      "Auflagerlänge: Balken müssen mindestens 40 mm auf Holz oder Stahl und 80 mm auf Mauerwerk aufliegen (DIN EN 1995-1-1). Unzureichende Auflagerlänge reduziert die effektive Tragfähigkeit.",
+      "Kerben und Durchführungen: Ausklinkungen und Bohrungen in Balken reduzieren den wirksamen Querschnitt. Kerben sind nur im äußeren Drittel der Spannweite zulässig, max. 1/4 der Balkenhöhe.",
+      "Durchlaufende vs. Einfeldbalken: Balken, die über ein Mittelauflager laufen (Durchlaufträger), können etwas weiter spannen als Einfeldträger. Die Tabellenwerte gelten für Einfeldträger.",
+      "Schwere Bodenbeläge: Fliesen, Naturstein oder Estrich erhöhen die Eigenlast erheblich. Bei Eigenlasten über 0,5 kN/m² die entsprechend angepasste Tabelle verwenden oder einen Statiker hinzuziehen.",
+    ],
+    factorsSummary:
+      "Verwenden Sie stets die tatsächliche Festigkeitsklasse Ihres Holzes. Wenn mehrere ungünstige Faktoren zusammentreffen (schwerer Belag + weiter Abstand + lange Spannweite), erwägen Sie den nächstgrößeren Querschnitt für Reserve und eine steifere Decke.",
+
+    codeReferencesHeading: "Normenverweise für Deckenbalken",
+    codeReferencesIntro:
+      "Die folgenden Normen regeln die Bemessung von Deckenbalken im Holzbau in Deutschland.",
+    codeReferencesItems: [
+      "DIN EN 1995-1-1 (Eurocode 5) — Holzbau-Bemessung: Spannweiten, Durchbiegungsgrenzen (L/300 Nutzlast, L/200 Gesamtlast), Knicken, Nachweisverfahren",
+      "DIN EN 1991-1-1 (Eurocode 1) — Einwirkungen: Nutzlasten für Wohngebäude (Kategorie A: 1,5 kN/m²), Eigenlasten, Teilsicherheitsbeiwerte",
+      "DIN 68800 — Holzschutz: Anforderungen an den konstruktiven und chemischen Holzschutz für tragende Bauteile",
+      "DIN EN 338 — Festigkeitsklassen: Klassifizierung von Bauschnittholz (C16, C24 etc.) mit zugehörigen mechanischen Kennwerten",
+      "DIN EN 14080 — Brettschichtholz: Festigkeitsklassen für BSH (GL24h, GL28h etc.)",
+      "Landesbauordnungen — können abweichende oder zusätzliche Anforderungen an Deckenbalken stellen",
+    ],
+    codeReferencesSummary:
+      "Die Bemessung von Deckenbalken erfolgt nach Eurocode 5 (DIN EN 1995-1-1). Für Standard-Wohngebäudedecken können vorgefertigte Tabellen verwendet werden; bei Sonderkonstruktionen ist eine statische Berechnung durch einen Tragwerksplaner erforderlich.",
+
+    calculatorCtaHeading: "Berechnen Sie Ihre Deckenmaterialien",
+    calculatorCtaText:
+      "Sobald Sie Ihren Balkenquerschnitt und Achsabstand kennen, nutzen Sie unsere Rechner, um die genaue Anzahl der Balken, Verbinder und Befestigungsmittel zu ermitteln.",
+    calculatorLinks: [
+      {
+        label: "Deckenbalken-Rechner",
+        href: "/calculators/floor-framing/floor-joist-calculator",
+        description: "Berechnen Sie die Anzahl der Balken, Randbalken und Aussteifungen für Ihre Decke.",
+      },
+      {
+        label: "OSB-Platten-Rechner",
+        href: "/calculators/floor-framing/osb-panel-calculator",
+        description: "Schätzen Sie die Anzahl der OSB- oder Sperrholzplatten für Ihre Deckenbeplankung.",
+      },
+      {
+        label: "Balkenschuh-Rechner",
+        href: "/calculators/hardware/joist-hanger-calculator",
+        description: "Berechnen Sie Balkenschuhe und Verbindungsmittel für jeden Anschluss.",
+      },
+    ],
+    faqHeading: "Häufig gestellte Fragen",
+    faqs: [
+      {
+        question: "Wie weit kann ein 80×200-mm-Deckenbalken spannen?",
+        answer:
+          "Ein 80×200-mm-KVH-Deckenbalken aus Fichte C24 bei 40 cm Achsabstand kann bis ca. 4,80 m stützenfrei überspannen (1,5 kN/m² Nutzlast). Bei 60 cm Achsabstand reduziert sich die Spannweite auf ca. 4,20 m. Bei 30 cm Achsabstand erhöht sie sich auf ca. 5,30 m. Prüfen Sie stets die Statik für Ihre spezifische Situation.",
+      },
+      {
+        question: "Reicht ein 60×120-mm-Querschnitt als Deckenbalken?",
+        answer:
+          "60×120 mm ist nur für kurze Spannweiten geeignet: ca. 2,50–2,90 m bei 40–60 cm Achsabstand. Das reicht für kleine Räume, Flure und Abstellkammern, aber nicht für typische Wohnräume. Die meisten Wohngebäudedecken erfordern mindestens 80×200 mm.",
+      },
+      {
+        question: "Was ist der Unterschied zwischen Nutzlast und Eigenlast?",
+        answer:
+          "Nutzlast ist das Gewicht von Personen, Möbeln und beweglichen Gegenständen auf der Decke (1,5 kN/m² für Wohnräume). Eigenlast ist das Gewicht der Konstruktion selbst — Balken, Beplankung, Fußbodenaufbau und Deckenverkleidung (typisch 0,5 kN/m²). Beide zusammen ergeben die Gesamtlast für die Bemessung.",
+      },
+      {
+        question: "Soll ich 40 cm oder 60 cm Achsabstand verwenden?",
+        answer:
+          "40 cm ist der Standard für die meisten Wohngebäudedecken und erforderlich für 18-mm-OSB-Platten. 60 cm spart ca. 33 % Holz, erfordert aber dickere Beplankung (22 mm OSB), begrenzt die Spannweite und kann zu einem etwas schwingungsanfälligeren Boden führen. Verwenden Sie 40 cm für Hauptwohnräume.",
+      },
+      {
+        question: "Brauche ich Aussteifungen zwischen Deckenbalken?",
+        answer:
+          "Der Eurocode verlangt Aussteifungen oder Windrispen bei Balkenhöhen über 200 mm in Abständen von max. 2,50 m. Für 60×160 mm und kleiner sind Aussteifungen nicht normativ erforderlich, werden aber empfohlen, um Schwingungen und Knarren zu reduzieren.",
+      },
+      {
+        question: "Kann ich 80×240-mm-Balken bei 60 cm Achsabstand verwenden?",
+        answer:
+          "Ja, 80×240 mm C24 bei 60 cm Achsabstand schafft ca. 5,00 m Spannweite. Das ist für die meisten Wohnräume ausreichend. Die größere Balkenhöhe bietet auch mehr Platz für Dämmung in der Deckenkonstruktion.",
+      },
+    ],
+  },
+
+  rafterSpanTable: {
+    title: "Sparren-Spannweitentabelle: Vollständige Dachkonstruktions-Referenz",
+    metaDescription:
+      "Sparren-Spannweitentabellen für 60×120 bis 80×240 mm bei 60, 80 und 100 cm Achsabstand. Mit Schneelastzonen, Dachneigungsfaktoren und DIN/Eurocode-Referenzen für alle gängigen Holzarten.",
+    heroTitle: "Sparren-Spannweitentabelle",
+    heroSubtitle: "Vollständige Dachkonstruktions-Referenz",
+    heroDescription:
+      "Umfassende Sparren-Spannweitentabellen für den Wohnungsbau. Finden Sie die maximal zulässige Spannweite für alle gängigen Querschnitte, Achsabstände und Schneelastzonen nach DIN EN 1995-1-1 (Eurocode 5).",
+
+    quickAnswerHeading: "Kurzantwort",
+    quickAnswerText:
+      "Ein KVH-Sparren 80×160 mm aus Fichte C24 bei 80 cm Achsabstand kann bei Schneelastzone 2 (0,85 kN/m²) bis ca. 3,80 m stützenfrei überspannen (horizontale Projektion). Ein 80×200-mm-Sparren gleicher Güte bei 80 cm schafft ca. 4,80 m. Prüfen Sie die Spannweite gegen Ihre lokale Schneelastzone und Dachneigung.",
+
+    understandingHeading: "Sparren-Spannweiten verstehen",
+    understandingText1:
+      "Die Sparrenspannweite ist die horizontale Projektion der Strecke vom Auflager an der Fußpfette (Traufe) bis zum Firstpunkt. Im Gegensatz zu Deckenbalken wird die Spannweite als horizontaler Abstand gemessen, nicht entlang der Sparrenneigung. Die tatsächliche Sparrenlänge ist wegen der Dachneigung länger als die Spannweite.",
+    understandingText2:
+      "Die Sparrenbemessung berücksichtigt zwei Hauptlasten: Eigenlast (Dacheindeckung, Lattung, Schalung, Dämmung — typisch 0,5–1,0 kN/m²) und Verkehrslast, die Schneelast und Windlast umfasst. Die Schneelast wird nach DIN EN 1991-1-3 aus der Schneelastzone (1–3 für Deutschland), der Geländehöhe und der Dachneigung berechnet.",
+    understandingText3:
+      "Der Eurocode liefert Bemessungswerte für verschiedene Schneelastzonen: Zone 1 (0,65 kN/m²), Zone 2 (0,85 kN/m²), Zone 2a (1,10 kN/m²), Zone 3 (1,10 kN/m²). Die Schneelast erhöht sich mit der Geländehöhe nach der Formel sk = 0,19 + 0,91 × ((A+140)/760)² für Zone 2. Steilere Dächer (> 30°) reduzieren die Schneelast durch den Formbeiwert μ.",
+
+    spanTablesHeading: "Sparren-Spannweitentabellen (Schneelastzone 2, 0,85 kN/m²)",
+    spanTablesIntro:
+      "Die folgenden Tabellen gelten für Sparren in Schneelastzone 2 (sk = 0,85 kN/m², Geländehöhe ≤ 285 m) mit 0,75 kN/m² Eigenlast und Dachneigung 30°. Spannweiten sind als maximale horizontale Projektion in Metern angegeben.",
+    spanTablesColSize: "Querschnitt",
+    spanTablesCol12: "60 cm",
+    spanTablesCol16: "80 cm",
+    spanTablesCol24: "100 cm",
+    spanTablesBySpecies: [
+      {
+        species: "Fichte/Tanne KVH C24",
+        grade: "Festigkeitsklasse C24 — fm,k = 24 N/mm², E₀,mean = 11.000 N/mm²",
+        rows: [
+          { size: "60×120", oc12: "3,00 m", oc16: "2,60 m", oc24: "2,30 m" },
+          { size: "60×160", oc12: "3,90 m", oc16: "3,40 m", oc24: "3,00 m" },
+          { size: "80×180", oc12: "4,70 m", oc16: "4,10 m", oc24: "3,60 m" },
+          { size: "80×200", oc12: "5,50 m", oc16: "4,80 m", oc24: "4,20 m" },
+          { size: "80×240", oc12: "6,50 m", oc16: "5,70 m", oc24: "5,00 m" },
+        ],
+      },
+      {
+        species: "Fichte/Tanne BSH GL24h",
+        grade: "Brettschichtholz GL24h — fm,g,k = 24 N/mm², E₀,g,mean = 11.500 N/mm²",
+        rows: [
+          { size: "60×120", oc12: "3,20 m", oc16: "2,80 m", oc24: "2,50 m" },
+          { size: "60×160", oc12: "4,20 m", oc16: "3,60 m", oc24: "3,20 m" },
+          { size: "80×180", oc12: "5,00 m", oc16: "4,40 m", oc24: "3,90 m" },
+          { size: "80×200", oc12: "5,80 m", oc16: "5,10 m", oc24: "4,50 m" },
+          { size: "80×240", oc12: "6,90 m", oc16: "6,00 m", oc24: "5,30 m" },
+        ],
+      },
+      {
+        species: "Fichte/Tanne KVH C16",
+        grade: "Festigkeitsklasse C16 — fm,k = 16 N/mm², E₀,mean = 8.000 N/mm²",
+        rows: [
+          { size: "60×120", oc12: "2,50 m", oc16: "2,20 m", oc24: "1,90 m" },
+          { size: "60×160", oc12: "3,30 m", oc16: "2,90 m", oc24: "2,50 m" },
+          { size: "80×180", oc12: "4,00 m", oc16: "3,40 m", oc24: "3,00 m" },
+          { size: "80×200", oc12: "4,60 m", oc16: "4,00 m", oc24: "3,50 m" },
+          { size: "80×240", oc12: "5,50 m", oc16: "4,80 m", oc24: "4,20 m" },
+        ],
+      },
+      {
+        species: "Douglasie KVH C24",
+        grade: "Festigkeitsklasse C24 — fm,k = 24 N/mm², E₀,mean = 11.000 N/mm²",
+        rows: [
+          { size: "60×120", oc12: "3,00 m", oc16: "2,60 m", oc24: "2,30 m" },
+          { size: "60×160", oc12: "3,90 m", oc16: "3,40 m", oc24: "3,00 m" },
+          { size: "80×180", oc12: "4,70 m", oc16: "4,10 m", oc24: "3,60 m" },
+          { size: "80×200", oc12: "5,50 m", oc16: "4,80 m", oc24: "4,20 m" },
+          { size: "80×240", oc12: "6,50 m", oc16: "5,70 m", oc24: "5,00 m" },
+        ],
+      },
+    ],
+
+    snowLoadHeading: "Einfluss der Schneelast auf Sparren-Spannweiten",
+    snowLoadIntro:
+      "Die Schneelast reduziert die zulässige Sparrenspannweite erheblich. Deutschland ist in Schneelastzonen unterteilt; die Schneelast steigt zusätzlich mit der Geländehöhe. Hier der Einfluss auf einen typischen Sparren 80×200 mm Fichte C24 bei 80 cm Achsabstand.",
+    snowLoadItems: [
+      "Schneelastzone 1 (sk = 0,65 kN/m²): 80×200 mm spannt bis ca. 5,20 m — geeignet für Nordseeküste, norddeutsche Tiefebene",
+      "Schneelastzone 2 (sk = 0,85 kN/m²): 80×200 mm spannt bis ca. 4,80 m — weite Teile Mittel- und Süddeutschlands unter 285 m",
+      "Schneelastzone 2a (sk = 1,10 kN/m²): 80×200 mm reduziert sich auf ca. 4,30 m — Mittelgebirge 285–460 m (Harz, Schwarzwald, Bayerischer Wald)",
+      "Schneelastzone 3 (sk = 1,10 kN/m² + Höhenformel): 80×200 mm auf ca. 3,80 m — Alpenvorland, höhere Mittelgebirgslagen über 460 m",
+      "Ermitteln Sie Ihre Schneelastzone über die DIN EN 1991-1-3/NA oder die Schneelastkarte Ihres Bundeslandes. Die charakteristische Schneelast steigt mit der Geländehöhe nach der Höhenformel.",
+      "Steile Dächer (> 30°) reduzieren die Schneelast durch den Formbeiwert μ₁ — bei 45° beträgt μ₁ nur noch 0,67. Bei 60° wird μ₁ = 0 angesetzt (Schnee rutscht ab). Schneeanhäufungen an Kehlen und tiefer liegenden Dächern erzeugen jedoch Zusatzlasten.",
+    ],
+    snowLoadSummary:
+      "Bemessen Sie Sparren stets für die Schneelastzone Ihres Standorts. Unterdimensionierung bei Schneelast ist einer der häufigsten und gefährlichsten Konstruktionsfehler im Dachbau.",
+
+    pitchFactorsHeading: "Einfluss der Dachneigung auf die Sparrenbemessung",
+    pitchFactorsIntro:
+      "Die Dachneigung beeinflusst die Sparrenbemessung in mehrfacher Hinsicht: tatsächliche Sparrenlänge, Lastverteilung, Schneelastminderung und Notwendigkeit von Kehlbalken oder Firstpfetten.",
+    pitchFactorsItems: [
+      "Flache Neigung (10°–20°): Sparren tragen die Last fast wie Deckenbalken. Der horizontale Schub an der Traufe ist hoch und erfordert Zugbänder (Kehlbalken oder Deckenbalken) zur Aufnahme. Tabellenwerte gelten direkt.",
+      "Mittlere Neigung (25°–35°): Die Lastkomponente senkrecht zum Sparren nimmt ab. Kehlbalken oder Zugbänder sind weiterhin erforderlich, sofern keine Firstpfette (Pfettendach) verwendet wird.",
+      "Steile Neigung (40°–55°): Die Schneedachlast reduziert sich deutlich (μ₁-Faktor). Der Sparren ist jedoch wesentlich länger als die horizontale Spannweite, was den Materialverbrauch erhöht. Windlasten werden relevanter.",
+      "Die Tabellenwerte geben die horizontale Projektion an, nicht die Sparrenlänge. Für die tatsächliche Sparrenlänge multiplizieren Sie die Spannweite mit dem Neigungsfaktor: 20° = 1,064, 30° = 1,155, 40° = 1,305, 45° = 1,414.",
+      "Pfettendach vs. Sparrendach: Beim Pfettendach stützen First- und Mittelpfetten die Sparren. Beim Sparrendach tragen die Sparren allein, verspannt durch Kehlbalken. Pfettendächer erlauben größere Gebäudebreiten.",
+      "Kehlbalken vs. Zugband: Kehlbalken im oberen Drittel verhindern das Auseinanderweichen am First. Zugbänder (Deckenbalken) auf Fußpfettenhöhe nehmen den horizontalen Schub auf. Beim Sparrendach sind Zugbänder zwingend; Kehlbalken allein reichen nicht.",
+    ],
+    pitchFactorsSummary:
+      "Für die meisten Wohngebäudedächer (25°–35° Neigung) können die Tabellenwerte direkt verwendet werden. Für Dachgeschossausbauten ohne Kehlbalken ist eine Firstpfette (Pfettendach) erforderlich und muss statisch nachgewiesen werden.",
+
+    codeReferencesHeading: "Normenverweise für Sparren",
+    codeReferencesIntro:
+      "Die folgenden Normen regeln die Sparrenbemessung im Holzbau in Deutschland.",
+    codeReferencesItems: [
+      "DIN EN 1995-1-1 (Eurocode 5) — Holzbau-Bemessung: Spannweiten, Durchbiegungsgrenzen (L/200 für Nutzlast, L/150 für Gesamtlast bei Dächern), Knicknachweise",
+      "DIN EN 1991-1-3 (Eurocode 1) — Schneelasten: Schneelastzonen 1–3, Formbeiwerte μ₁ nach Dachneigung, Höhenformeln für Geländehöhe",
+      "DIN EN 1991-1-4 (Eurocode 1) — Windlasten: Windlastzonen, Druckbeiwerte für Dachflächen, Soglasten an Traufe und Ortgang",
+      "DIN EN 338 — Festigkeitsklassen für Bauschnittholz (C16, C24) mit mechanischen Kennwerten",
+      "DIN EN 14080 — Brettschichtholz-Festigkeitsklassen (GL24h, GL28h)",
+      "DIN 68800 — Holzschutz: Anforderungen an Sparren in den Gebrauchsklassen GK 0–2",
+    ],
+    codeReferencesSummary:
+      "Die Sparrenbemessung erfolgt nach Eurocode 5 unter Berücksichtigung der Schneelast (Eurocode 1-3) und Windlast (Eurocode 1-4). Für Standard-Sparrendächer mit Kehlbalken können Tabellenwerte verwendet werden; Pfettendächer und Sonderkonstruktionen erfordern eine statische Berechnung.",
+
+    calculatorCtaHeading: "Berechnen Sie Ihre Dachkonstruktionsmaterialien",
+    calculatorCtaText:
+      "Sobald Sie Ihren Sparrenquerschnitt und Achsabstand kennen, nutzen Sie unsere Rechner für die genaue Material- und Stückzahl.",
+    calculatorLinks: [
+      {
+        label: "Sparren-Rechner",
+        href: "/calculators/roofing/rafter-calculator",
+        description: "Berechnen Sie Sparrenanzahl, Firstpfettenlänge und Kehlbalken.",
+      },
+      {
+        label: "Dachschalung-Rechner",
+        href: "/calculators/roofing/roof-sheathing-calculator",
+        description: "Schätzen Sie die Anzahl der OSB- oder Sperrholzplatten für Ihre Dachfläche.",
+      },
+      {
+        label: "Dachneigung-Rechner",
+        href: "/calculators/roofing/roof-pitch-calculator",
+        description: "Berechnen Sie Dachneigung, Neigungsfaktor und Sparrenlänge.",
+      },
+    ],
+    faqHeading: "Häufig gestellte Fragen",
+    faqs: [
+      {
+        question: "Wie weit kann ein 80×160-mm-Sparren spannen?",
+        answer:
+          "Ein 80×160-mm-Sparren aus Fichte C24 bei 80 cm Achsabstand kann in Schneelastzone 2 bis ca. 3,40 m (horizontale Projektion) spannen. Bei 60 cm Achsabstand erhöht sich die Spannweite auf ca. 3,90 m. Für größere Spannweiten greifen Sie zu 80×200 mm oder 80×240 mm.",
+      },
+      {
+        question: "Reicht 60×120 mm als Sparrenquerschnitt?",
+        answer:
+          "60×120 mm ist nur für sehr kurze Spannweiten geeignet: ca. 2,30–2,60 m bei 80–100 cm Achsabstand. Das reicht für kleine Anbauten, Carports und Vordächer, aber nicht für typische Wohngebäudedächer. Die meisten Dächer erfordern mindestens 80×180 mm.",
+      },
+      {
+        question: "Brauche ich eine Firstpfette oder reicht ein Firstbrett?",
+        answer:
+          "Ein Firstbrett (Sparrenständer) genügt beim klassischen Sparrendach, wenn Kehlbalken oder Zugbänder den horizontalen Schub aufnehmen. Eine Firstpfette (tragendes Element aus BSH oder Stahl) ist beim Pfettendach erforderlich und zwingend bei Dachgeschossausbauten ohne Kehlbalken, da sie die volle Vertikallast der Sparren tragen muss.",
+      },
+      {
+        question: "Wie wirkt sich die Schneelast auf Sparren-Spannweiten aus?",
+        answer:
+          "Die Schneelast reduziert die zulässige Spannweite erheblich. Ein 80×200-mm-Sparren C24 bei 80 cm spannt in Zone 1 ca. 5,20 m, in Zone 2 ca. 4,80 m und in Zone 3 ca. 3,80 m — ein Rückgang von über 25 %. Bemessen Sie stets für Ihre lokale Schneelastzone.",
+      },
+      {
+        question: "Kann ich durch Pfetten die Sparren-Spannweite verlängern?",
+        answer:
+          "Ja, Mittelpfetten (horizontale Balken quer zu den Sparren) stützen die Sparren in der Feldmitte und halbieren die effektive Spannweite. Die Pfetten müssen von Stützen auf eine tragende Innenwand oder Unterkonstruktion abgetragen werden. Dies ist ein wirtschaftlicher Weg, um den Sparrenquerschnitt zu reduzieren.",
+      },
+      {
+        question: "Was ist der kleinste Sparrenquerschnitt für ein Wohnhaus?",
+        answer:
+          "Typisch sind mindestens 80×180 mm für Wohngebäudedächer, da damit Spannweiten von 4–5 m abgedeckt werden. Für breitere Gebäude sind 80×200 mm oder 80×240 mm erforderlich. In hohen Schneelastgebieten können auch kleinere Gebäude größere Querschnitte benötigen.",
+      },
+    ],
+  },
+
+  ceilingJoistSpanTable: {
+    title: "Kehlbalken-Spannweitentabelle: Vollständige Referenz",
+    metaDescription:
+      "Kehlbalken-Spannweitentabellen für 60×120 bis 80×240 mm bei 40 und 60 cm Achsabstand. Für nicht begehbare Dachräume, Lagerflächen und Wohnräume mit DIN/Eurocode-Referenzen.",
+    heroTitle: "Kehlbalken-Spannweitentabelle",
+    heroSubtitle: "Vollständige DIN/Eurocode-Referenz",
+    heroDescription:
+      "Umfassende Spannweitentabellen für Kehlbalken im Wohnungsbau. Finden Sie maximale Spannweiten für alle gängigen Querschnitte und Lastfälle — von reiner Deckenverkleidung bis zum ausgebauten Dachgeschoss.",
+
+    quickAnswerHeading: "Kurzantwort",
+    quickAnswerText:
+      "Ein KVH-Kehlbalken 60×160 mm aus Fichte C24 bei 60 cm Achsabstand kann bis ca. 4,80 m stützenfrei überspannen, wenn er nur eine Gipskartondecke trägt (Eigenlast 0,3 kN/m², keine Nutzlast). Bei Nutzung als Lagerboden (0,75 kN/m²) sinkt die Spannweite auf ca. 3,50 m. Für ausgebaute Dachgeschosse (1,5 kN/m²) mindestens 80×200 mm verwenden.",
+
+    understandingHeading: "Kehlbalken-Spannweiten verstehen",
+    understandingText1:
+      "Kehlbalken erfüllen im konventionellen Sparrendach eine Doppelfunktion: Sie tragen die Deckenverkleidung (typisch Gipskarton) und wirken als Zugband, das den horizontalen Schub der gegenüberliegenden Sparren aufnimmt. Die Spannweite eines Kehlbalkens hängt primär davon ab, ob der Dachraum darüber als Lager- oder Wohnfläche genutzt wird.",
+    understandingText2:
+      "Die DIN EN 1991-1-1 unterscheidet drei Belastungskategorien für Kehlbalken: nicht begehbare Dachräume ohne Lagernutzung (nur Eigenlast 0,3 kN/m² — Gewicht der Gipskartondecke), nicht begehbare Dachräume mit leichter Lagernutzung (0,75 kN/m² Nutzlast), und ausgebaute Dachgeschosse/Wohnräume (1,5 kN/m² Nutzlast). Jede Kategorie hat eigene Spannweitentabellen.",
+    understandingText3:
+      "Wenn Kehlbalken gleichzeitig als Zugbänder im Sparrendach dienen, müssen sie zusätzlich zur Biegebeanspruchung Zugkräfte aufnehmen. Die Verbindung zum Sparrenfuß muss für den horizontalen Schub bemessen sein. Der Eurocode verlangt, dass Kehlbalken im unteren Drittel der Sparrenlänge angeordnet werden. Höher gesetzte Kehlbalken (Drempel) erhöhen die Zugkräfte erheblich.",
+
+    spanTablesHeading: "Kehlbalken-Spannweitentabellen nach Lastfall",
+    spanTablesIntro:
+      "Die folgenden Tabellen basieren auf DIN EN 1995-1-1 für Kehlbalken mit 0,3 kN/m² Eigenlast. Drei Lastfälle: reine Deckenverkleidung (keine Nutzlast), leichte Lagerfläche (0,75 kN/m²) und ausgebauter Wohnraum (1,5 kN/m²). Spannweiten für den Lastfall Deckenverkleidung / leichte Lagerfläche.",
+    spanTablesColSize: "Querschnitt",
+    spanTablesCol12: "40 cm",
+    spanTablesCol16: "60 cm",
+    spanTablesCol24: "80 cm",
+    spanTablesBySpecies: [
+      {
+        species: "Fichte C24 — nur Deckenverkleidung (keine Nutzlast)",
+        grade: "Festigkeitsklasse C24 — 0,3 kN/m² Eigenlast, keine Nutzlast",
+        rows: [
+          { size: "60×100", oc12: "3,80 m", oc16: "3,30 m", oc24: "2,90 m" },
+          { size: "60×120", oc12: "4,60 m", oc16: "4,00 m", oc24: "3,50 m" },
+          { size: "60×160", oc12: "5,60 m", oc16: "4,80 m", oc24: "4,20 m" },
+          { size: "80×200", oc12: "7,00 m", oc16: "6,10 m", oc24: "5,30 m" },
+        ],
+      },
+      {
+        species: "Fichte C24 — leichte Lagerfläche (0,75 kN/m² Nutzlast)",
+        grade: "Festigkeitsklasse C24 — 0,3 kN/m² Eigenlast + 0,75 kN/m² Nutzlast",
+        rows: [
+          { size: "60×100", oc12: "2,70 m", oc16: "2,40 m", oc24: "2,10 m" },
+          { size: "60×120", oc12: "3,30 m", oc16: "2,90 m", oc24: "2,50 m" },
+          { size: "60×160", oc12: "4,10 m", oc16: "3,50 m", oc24: "3,10 m" },
+          { size: "80×200", oc12: "5,10 m", oc16: "4,50 m", oc24: "3,90 m" },
+        ],
+      },
+      {
+        species: "Fichte BSH GL24h — nur Deckenverkleidung (keine Nutzlast)",
+        grade: "Brettschichtholz GL24h — 0,3 kN/m² Eigenlast, keine Nutzlast",
+        rows: [
+          { size: "60×100", oc12: "4,10 m", oc16: "3,50 m", oc24: "3,10 m" },
+          { size: "60×120", oc12: "4,90 m", oc16: "4,30 m", oc24: "3,70 m" },
+          { size: "60×160", oc12: "6,00 m", oc16: "5,20 m", oc24: "4,50 m" },
+          { size: "80×200", oc12: "7,50 m", oc16: "6,50 m", oc24: "5,70 m" },
+        ],
+      },
+      {
+        species: "Fichte C16 — leichte Lagerfläche (0,75 kN/m² Nutzlast)",
+        grade: "Festigkeitsklasse C16 — 0,3 kN/m² Eigenlast + 0,75 kN/m² Nutzlast",
+        rows: [
+          { size: "60×100", oc12: "2,30 m", oc16: "2,00 m", oc24: "1,70 m" },
+          { size: "60×120", oc12: "2,80 m", oc16: "2,40 m", oc24: "2,10 m" },
+          { size: "60×160", oc12: "3,40 m", oc16: "3,00 m", oc24: "2,60 m" },
+          { size: "80×200", oc12: "4,30 m", oc16: "3,80 m", oc24: "3,30 m" },
+        ],
+      },
+    ],
+
+    loadTypesHeading: "Lastfälle für Kehlbalken",
+    loadTypesIntro:
+      "Die DIN EN 1991-1-1 definiert drei Kategorien von Dachraum-Nutzlasten. Die richtige Zuordnung ist entscheidend für die korrekte Spannweiten-Tabelle.",
+    loadTypesItems: [
+      "Nicht begehbarer Dachraum ohne Lagernutzung (nur 0,3 kN/m² Eigenlast): Gilt, wenn der Dachraum keinen Zugang hat (kein Bodenluke, keine Einschubtreppe) und nur gelegentlich für Wartung (Haustechnik, Leitungen) betreten wird. Die Kehlbalken tragen nur die Gipskartondecke und erlauben die längsten Spannweiten.",
+      "Nicht begehbarer Dachraum mit leichter Lagernutzung (0,75 kN/m² Nutzlast): Gilt, wenn der Dachraum eine Bodenluke oder Einschubtreppe hat und leicht gelagert wird (Weihnachtsdeko, Koffer). Dies ist der häufigste Lastfall bei Sparrendächern.",
+      "Ausgebautes Dachgeschoss / Wohnraum (1,5 kN/m² Nutzlast): Gilt, wenn der Dachraum als Wohnfläche genutzt wird. Verwenden Sie in diesem Fall die Deckenbalken-Spannweitentabellen (Kategorie A).",
+      "Planen Sie einen späteren Dachausbau, dimensionieren Sie die Kehlbalken von Anfang an für 1,5 kN/m². Eine Nachrüstung ist aufwändig und teuer.",
+      "Haustechnik im Dachraum (Wärmepumpe, Lüftungsanlage) erzeugt Einzellasten. Stellen Sie schwere Geräte auf eigene Tragglieder oder verstärkte Balkenabschnitte.",
+    ],
+    loadTypesSummary:
+      "Im Zweifel dimensionieren Sie für leichte Lagerfläche (0,75 kN/m²). Der Mehrpreis gegenüber der reinen Deckenverkleidung ist gering, aber Sie erhalten Flexibilität für spätere Lagernutzung.",
+
+    factorsHeading: "Einflussfaktoren auf Kehlbalken-Spannweiten",
+    factorsIntro:
+      "Neben Last und Holzart beeinflussen weitere Faktoren die Bemessung Ihrer Kehlbalken.",
+    factorsItems: [
+      "Zugbandfunktion: Wenn Kehlbalken als Zugbänder im Sparrendach wirken, treten neben der Biegebeanspruchung Zugkräfte auf. Die Verbindung Kehlbalken-Sparren muss für den horizontalen Schub bemessen sein. Die Spannweite wird dadurch nicht direkt reduziert, aber die Anschlüsse erfordern ausreichende Befestigung (Bolzen, Balkenschuhe).",
+      "Gewicht der Deckenverkleidung: Standard-12,5-mm-Gipskarton wiegt ca. 0,11 kN/m². Bei 2 × 12,5 mm (Brandschutz F30) verdoppelt sich das auf 0,22 kN/m². Holzdecken und Putzdecken können 0,3–0,5 kN/m² wiegen und erfordern ggf. größere Querschnitte.",
+      "Dämmung: Einblasdämmung (Zellulose, Glaswolle) auf den Kehlbalken kann 0,05–0,15 kN/m² wiegen. Bei sehr hohen Dämmschichten (> 40 cm) prüfen, ob die Eigenlastannahme noch stimmt.",
+      "Achsabstand und Beplankung: 60 cm Achsabstand erfordert 15 mm Gipskarton (oder spezielle 12,5-mm-Deckenplatten). 40 cm erlaubt Standard-12,5-mm-Platten. Bei 80 cm wird 18-mm-Gipskarton oder Querlattung empfohlen.",
+      "Drempel (Kniestock): Bei Dächern mit Drempel sind die Kehlbalken oberhalb der Fußpfette angeordnet. Die resultierenden Zugkräfte steigen stark an und erfordern eine statische Berechnung für die Anschlüsse.",
+    ],
+    factorsSummary:
+      "Kehlbalken werden oft unterschätzt, weil sie über der Decke verborgen sind. Aber sie erfüllen kritische Aufgaben als Zugband im Sparrendach und müssen korrekt dimensioniert und angeschlossen sein.",
+
+    codeReferencesHeading: "Normenverweise für Kehlbalken",
+    codeReferencesIntro:
+      "Die folgenden Normen regeln die Bemessung von Kehlbalken im Holzbau.",
+    codeReferencesItems: [
+      "DIN EN 1995-1-1 (Eurocode 5) — Holzbau-Bemessung: Spannweiten, Durchbiegungsgrenzen, Zug- und Biegenachweise für Kehlbalken",
+      "DIN EN 1991-1-1 (Eurocode 1) — Einwirkungen: Nutzlastkategorien für Dachräume (0,75 kN/m² Lagerfläche, 1,5 kN/m² Wohnraum)",
+      "DIN EN 1991-1-1/NA — Nationaler Anhang: Kehlbalken-Verbindungen, wenn sie als Zugbänder wirken. Mindestens 3 Bolzen M12 oder gleichwertige Balkenschuhe pro Anschluss.",
+      "DIN 4102-4 / DIN EN 13501 — Brandschutz: Anforderungen an die Feuerwiderstandsdauer von Decken (F30, F60) und die erforderliche Gipskartondicke",
+      "DIN EN 338 — Festigkeitsklassen für Bauschnittholz (C16, C24)",
+      "DIN 68800 — Holzschutz: Anforderungen an Kehlbalken in den Gebrauchsklassen GK 0–1",
+    ],
+    codeReferencesSummary:
+      "Die Kehlbalken-Bemessung berührt den Eurocode 5 (Tragwerk), Eurocode 1 (Lasten), Brandschutz (DIN 4102/EN 13501) und ggf. Schallschutz (DIN 4109). Betrachten Sie alle relevanten Normen gemeinsam bei der Planung.",
+
+    calculatorCtaHeading: "Berechnen Sie Ihre Deckenmaterialien",
+    calculatorCtaText:
+      "Nutzen Sie unsere Rechner, um die genaue Anzahl der Kehlbalken, Gipskartonplatten und Befestigungsmittel zu ermitteln.",
+    calculatorLinks: [
+      {
+        label: "Deckenbalken-Rechner",
+        href: "/calculators/floor-framing/floor-joist-calculator",
+        description: "Auch für Kehlbalken geeignet — Stückzahl, Achsabstand und Aussteifung berechnen.",
+      },
+      {
+        label: "Gipskarton-Rechner",
+        href: "/calculators/insulation-drywall/drywall-calculator",
+        description: "Schätzen Sie die Anzahl der Gipskartonplatten, Spachtelmasse und Schrauben.",
+      },
+      {
+        label: "Dämmung-Rechner",
+        href: "/calculators/insulation-drywall/cavity-insulation-calculator",
+        description: "Berechnen Sie Matten- oder Einblasdämmung für den Dachraum über den Kehlbalken.",
+      },
+    ],
+    faqHeading: "Häufig gestellte Fragen",
+    faqs: [
+      {
+        question: "Wie weit kann ein 60×160-mm-Kehlbalken spannen?",
+        answer:
+          "Ein 60×160-mm-Kehlbalken Fichte C24 bei 60 cm Achsabstand spannt bis ca. 4,80 m bei reiner Deckenverkleidung. Bei leichter Lagerfläche (0,75 kN/m²) sinkt die Spannweite auf ca. 3,50 m. Für ausgebaute Dachgeschosse (1,5 kN/m²) reicht er nur ca. 2,80 m — verwenden Sie dann mindestens 80×200 mm.",
+      },
+      {
+        question: "Reicht 60×100 mm als Kehlbalken?",
+        answer:
+          "60×100 mm kann bis ca. 3,30 m für reine Deckenverkleidung bei 60 cm Achsabstand spannen. Bei Lagernutzung sinkt die Spannweite auf ca. 2,40 m. 60×100 mm eignet sich für kleine Räume, Flure und schmale Dachbereiche, nicht für typische Wohnraumspannweiten über 4 m.",
+      },
+      {
+        question: "Müssen Kehlbalken in Sparrenrichtung verlaufen?",
+        answer:
+          "Wenn Kehlbalken als Zugbänder im Sparrendach dienen (Standardfall), müssen sie parallel zu den Sparren verlaufen und direkt mit dem Sparrenfuß verbunden sein. Verlaufen sie quer zu den Sparren, sind separate Zugbänder oder eine tragende Firstpfette (Pfettendach) erforderlich.",
+      },
+      {
+        question: "Was ist der Unterschied zwischen Kehlbalken und Deckenbalken?",
+        answer:
+          "Konstruktiv sind es gleichartige Bauteile (horizontale Biegeträger). Der Unterschied liegt in der Belastung: Kehlbalken tragen nur die Deckenverkleidung und ggf. leichte Lagerlasten (0,3–0,75 kN/m²), Deckenbalken tragen volle Wohnlasten (1,5 kN/m²). Dadurch können Kehlbalken bei gleichem Querschnitt deutlich weiter spannen.",
+      },
+      {
+        question: "Kann ich den Dachboden über den Kehlbalken betreten?",
+        answer:
+          "Nur wenn die Kehlbalken für Lagernutzung (0,75 kN/m²) oder Wohnraum (1,5 kN/m²) dimensioniert sind. Kehlbalken, die nur für die Deckenverkleidung ausgelegt sind, können unter Personenlast durchbiegen und die Gipskartondecke beschädigen. Treten Sie immer auf die Balken, nie zwischen sie auf die Gipskartonplatten.",
+      },
+      {
+        question: "Wie verstärke ich bestehende Kehlbalken für Dachausbau?",
+        answer:
+          "Die gängigste Methode ist das Aufdoppeln: Einen neuen Balken gleicher oder größerer Höhe mit Bolzen oder Vollgewindeschrauben seitlich an den bestehenden Balken anschließen. Baukleber plus M12-Bolzen alle 40 cm oder 8×200 Vollgewindeschrauben alle 30 cm versetzt. Der aufgedoppelte Balken muss auf denselben Auflagern ruhen. Alternativ eine Unterzug-Stützen-Konstruktion einbauen. Statiker hinzuziehen.",
+      },
     ],
   },
 };

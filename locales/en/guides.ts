@@ -89,6 +89,24 @@ const guides: GuidesTranslations = {
           "How to build stairs — complete guide covering stair anatomy, IRC building code (R311.7), rise & run calculations, stair types (straight, L-shaped, U-shaped, spiral), materials, and costs.",
         href: "/guides/stair-building-guide",
       },
+      {
+        title: "Floor Joist Span Table: Complete IRC Reference",
+        description:
+          "Floor joist span tables for 2x6, 2x8, 2x10, 2x12 at 12\", 16\", 24\" OC. Covers Douglas Fir, SPF, Southern Pine, and Hem-Fir with IRC code references and load requirements.",
+        href: "/guides/joist-span-table",
+      },
+      {
+        title: "Rafter Span Table: Complete Roof Framing Reference",
+        description:
+          "Rafter span tables by size, spacing, pitch, and snow load. Covers 2x4 through 2x12 rafters with IRC references for all common wood species and grades.",
+        href: "/guides/rafter-span-table",
+      },
+      {
+        title: "Ceiling Joist Span Table: Complete Reference Guide",
+        description:
+          "Ceiling joist span tables by size, spacing, and load type. Covers uninhabitable attic, limited storage, and habitable attic spans with IRC code references.",
+        href: "/guides/ceiling-joist-span-table",
+      },
     ],
   },
 
@@ -1988,6 +2006,516 @@ const guides: GuidesTranslations = {
         question: "Do I need a permit to build stairs?",
         answer:
           "Yes, most jurisdictions require a building permit for permanent staircase construction, including exterior deck stairs exceeding 30 inches above grade. The permit ensures your stairs meet IRC R311.7 requirements and will be inspected for safety. Permit costs range from $50 to $300. Temporary stairs, short stoops (1-2 steps), and interior cosmetic modifications (replacing treads without structural changes) typically do not require permits, but check with your local building department.",
+      },
+    ],
+  },
+
+  joistSpanTable: {
+    title: "Floor Joist Span Table: Complete IRC Reference",
+    metaDescription:
+      "Floor joist span tables for 2x6, 2x8, 2x10, 2x12 at 12\", 16\", 24\" OC spacing. Covers Douglas Fir, SPF, Southern Pine with IRC R502.3.1 code references, load requirements, and sizing guide.",
+    heroTitle: "Floor Joist Span Table",
+    heroSubtitle: "Complete IRC Reference",
+    heroDescription:
+      "Comprehensive floor joist span tables for residential construction. Find maximum allowable spans for every common lumber size, spacing, wood species, and grade per the International Residential Code.",
+
+    quickAnswerHeading: "Quick Answer",
+    quickAnswerText:
+      "A 2x10 Douglas Fir #2 floor joist at 16\" OC can span up to 15'-5\" for a 40 psf live load / 10 psf dead load. A 2x12 of the same species and grade at 16\" OC spans up to 18'-10\". Always verify spans against your local building code, as jurisdictions may amend IRC tables.",
+
+    understandingHeading: "Understanding Floor Joist Spans",
+    understandingText1:
+      "A floor joist span is the horizontal distance a joist can safely bridge between supports without excessive deflection or structural failure. The IRC (International Residential Code) publishes span tables in Section R502.3.1 that specify maximum spans based on lumber size, species, grade, spacing, and the design loads the floor must carry.",
+    understandingText2:
+      "Floor joist spans are calculated for two load conditions: live load (people, furniture, moving weight -- typically 40 psf for habitable rooms and 30 psf for sleeping rooms) and dead load (the weight of the structure itself -- typically 10 psf for standard framing with drywall ceiling below). The combined total load determines the required joist size and spacing.",
+    understandingText3:
+      "Deflection limits also control span lengths. The IRC requires floor joists to limit deflection to L/360 for live load and L/240 for total load, where L is the span length. This means a 15-foot span (180 inches) can deflect no more than 0.5 inches under live load. Stiffer floors feel more solid underfoot and prevent cracking in tile or drywall ceilings below.",
+
+    spanTablesHeading: "Floor Joist Span Tables by Species",
+    spanTablesIntro:
+      "The following span tables are based on IRC Table R502.3.1(1) for floors with a 40 psf live load and 10 psf dead load. Spans are listed as maximum clear span in feet and inches. Always use the species and grade stamped on your lumber.",
+    spanTablesColSize: "Joist Size",
+    spanTablesCol12: "12\" OC",
+    spanTablesCol16: "16\" OC",
+    spanTablesCol24: "24\" OC",
+    spanTablesBySpecies: [
+      {
+        species: "Douglas Fir-Larch",
+        grade: "#2 Grade -- Fb = 900 psi, E = 1,600,000 psi",
+        rows: [
+          { size: "2x6", oc12: "11'-4\"", oc16: "10'-4\"", oc24: "8'-6\"" },
+          { size: "2x8", oc12: "14'-11\"", oc16: "13'-7\"", oc24: "11'-2\"" },
+          { size: "2x10", oc12: "19'-1\"", oc16: "15'-5\"", oc24: "12'-8\"" },
+          { size: "2x12", oc12: "23'-3\"", oc16: "18'-10\"", oc24: "15'-5\"" },
+        ],
+      },
+      {
+        species: "Southern Pine",
+        grade: "#2 Grade -- Fb = 1,000 psi, E = 1,600,000 psi",
+        rows: [
+          { size: "2x6", oc12: "11'-4\"", oc16: "10'-4\"", oc24: "9'-0\"" },
+          { size: "2x8", oc12: "14'-11\"", oc16: "13'-7\"", oc24: "11'-10\"" },
+          { size: "2x10", oc12: "19'-1\"", oc16: "16'-1\"", oc24: "13'-1\"" },
+          { size: "2x12", oc12: "23'-3\"", oc16: "19'-6\"", oc24: "15'-11\"" },
+        ],
+      },
+      {
+        species: "Spruce-Pine-Fir (SPF)",
+        grade: "#2 Grade -- Fb = 875 psi, E = 1,400,000 psi",
+        rows: [
+          { size: "2x6", oc12: "10'-9\"", oc16: "9'-9\"", oc24: "8'-1\"" },
+          { size: "2x8", oc12: "14'-2\"", oc16: "12'-10\"", oc24: "10'-7\"" },
+          { size: "2x10", oc12: "18'-0\"", oc16: "14'-7\"", oc24: "11'-11\"" },
+          { size: "2x12", oc12: "21'-11\"", oc16: "17'-9\"", oc24: "14'-6\"" },
+        ],
+      },
+      {
+        species: "Hem-Fir",
+        grade: "#2 Grade -- Fb = 850 psi, E = 1,300,000 psi",
+        rows: [
+          { size: "2x6", oc12: "10'-6\"", oc16: "9'-6\"", oc24: "7'-10\"" },
+          { size: "2x8", oc12: "13'-10\"", oc16: "12'-7\"", oc24: "10'-4\"" },
+          { size: "2x10", oc12: "17'-8\"", oc16: "14'-3\"", oc24: "11'-8\"" },
+          { size: "2x12", oc12: "21'-6\"", oc16: "17'-5\"", oc24: "14'-3\"" },
+        ],
+      },
+    ],
+
+    loadRequirementsHeading: "Floor Load Requirements (IRC)",
+    loadRequirementsIntro:
+      "The IRC specifies minimum design loads for residential floors. These loads determine which span table to use and directly affect maximum joist spans.",
+    loadRequirementsItems: [
+      "Habitable rooms (living rooms, bedrooms, kitchens): 40 psf live load + 10 psf dead load = 50 psf total",
+      "Sleeping rooms only: 30 psf live load + 10 psf dead load = 40 psf total (allows longer spans)",
+      "Decks and exterior balconies: 40 psf live load + 10 psf dead load, plus any snow load where applicable",
+      "Garages: 50 psf live load (for passenger vehicles) or per manufacturer specs for heavier loads",
+      "Dead load includes joist self-weight, subfloor, finish flooring, and any ceiling below. If using heavy finishes like tile on cement board or thick hardwood, increase dead load to 15-20 psf and use a reduced span table",
+      "Concentrated loads: the IRC also requires floors to support a 300-lb concentrated load on any 2.5-ft area, which is typically satisfied when deflection limits are met",
+    ],
+    loadRequirementsSummary:
+      "For most residential floors, use the 40/10 span table. Use the 30/10 sleeping room table only when the room will never serve another purpose. When in doubt, design for the higher load -- the cost difference is minimal.",
+
+    factorsHeading: "Factors That Affect Joist Span",
+    factorsIntro:
+      "Beyond the basic span table values, several real-world factors can increase or decrease your required joist size.",
+    factorsItems: [
+      "Wood species and grade: Higher grades (Select Structural, #1) allow longer spans than #2 or #3. The species determines the base fiber stress (Fb) and modulus of elasticity (E) values.",
+      "Joist spacing: 12\" OC allows the longest spans, 16\" OC is the standard for most residential construction, and 24\" OC is the most economical but limits span length and is only allowed for certain subfloor thicknesses.",
+      "Bearing length: Joists must bear at least 1.5\" on wood or metal and 3\" on masonry or concrete (IRC R502.6). Insufficient bearing reduces effective span capacity.",
+      "Notching and boring: Holes and notches in joists reduce their effective cross-section. The IRC limits notches to the outer third of the span and no deeper than 1/3 the joist depth. Holes must be at least 2\" from edges (IRC R502.8).",
+      "Continuous spans vs. simple spans: Joists spanning over a center beam (continuous over three supports) can span slightly longer than simple two-point spans, but the span tables assume simple spans.",
+      "Heavy finishes: Tile, stone, or thick hardwood adds significant dead load. When dead load exceeds 10 psf, use the appropriate adjusted span table or consult an engineer.",
+      "Cantilevered joists: When joists extend beyond a bearing wall (for bay windows, bump-outs), the cantilever is limited to 1/4 the backspan, and the backspan must still meet span table requirements.",
+    ],
+    factorsSummary:
+      "Always use the actual species and grade stamped on your lumber. When multiple factors overlap (heavy finishes + wide spacing + long span), consider upsizing joists by one dimension for extra safety margin and a stiffer floor.",
+
+    codeReferencesHeading: "IRC Code References for Floor Joists",
+    codeReferencesIntro:
+      "The following IRC sections govern floor joist design in residential construction. Local jurisdictions may amend these requirements.",
+    codeReferencesItems: [
+      "IRC R502.3.1 -- Floor joist span tables (Tables R502.3.1(1) through R502.3.1(2)): Maximum spans for various species, grades, sizes, spacings, and load conditions",
+      "IRC R502.6 -- Bearing: Minimum bearing length for joists on different support materials (1.5\" on wood/metal, 3\" on masonry)",
+      "IRC R502.7 -- Lateral restraint: Joists deeper than 2x12 require bridging or blocking at intervals not exceeding 8 feet",
+      "IRC R502.8 -- Cutting, notching, and boring: Limits on holes and notches to prevent structural weakening of joists",
+      "IRC R502.9 -- Fastening: Nailing schedule for joist-to-sill, joist-to-header, and joist-to-beam connections",
+      "IRC R502.11 -- Engineered wood products: I-joists, LVL, and trusses must be installed per manufacturer specifications, not standard span tables",
+      "IRC Table R503.2.1.1 -- Subfloor requirements: Minimum subfloor thickness based on joist spacing (23/32\" for 24\" OC, 19/32\" for 16\" OC)",
+    ],
+    codeReferencesSummary:
+      "The 2021 IRC is the current model code adopted by most U.S. jurisdictions, though some states use the 2018 or 2015 edition. Always verify which edition your local building department enforces before finalizing your design.",
+
+    calculatorCtaHeading: "Calculate Your Floor Framing Materials",
+    calculatorCtaText:
+      "Once you know your joist size and spacing, use our calculators to figure out exactly how many joists, hangers, and fasteners you need.",
+    calculatorLinks: [
+      {
+        label: "Floor Joist Calculator",
+        href: "/calculators/floor-framing/floor-joist-calculator",
+        description: "Calculate the number of joists, rim boards, and blocking needed for your floor frame.",
+      },
+      {
+        label: "Subfloor Calculator",
+        href: "/calculators/floor-framing/subfloor-calculator",
+        description: "Estimate plywood or OSB sheets and fasteners for your subfloor.",
+      },
+      {
+        label: "Joist Hanger Calculator",
+        href: "/calculators/floor-framing/joist-hanger-calculator",
+        description: "Calculate joist hangers and structural screws for each connection.",
+      },
+    ],
+    faqHeading: "Frequently Asked Questions",
+    faqs: [
+      {
+        question: "How far can a 2x10 floor joist span?",
+        answer:
+          "A 2x10 floor joist span depends on species, grade, and spacing. For Douglas Fir-Larch #2 at 16\" OC with a 40 psf live load, the maximum span is 15'-5\". At 12\" OC, it increases to 19'-1\". For SPF #2 at 16\" OC, the maximum is 14'-7\". Always check the IRC span table (R502.3.1) for your specific lumber species and grade.",
+      },
+      {
+        question: "How far can a 2x12 floor joist span?",
+        answer:
+          "A 2x12 Douglas Fir-Larch #2 floor joist at 16\" OC can span up to 18'-10\" for a 40 psf live load. At 12\" OC, the span increases to 23'-3\". Southern Pine #2 at 16\" OC spans up to 19'-6\". For the longest possible spans with dimensional lumber, use Select Structural grade, which can add 1-2 feet to maximum spans.",
+      },
+      {
+        question: "Can I use 2x6 floor joists?",
+        answer:
+          "Yes, but 2x6 floor joists are limited to short spans: about 9'-6\" to 10'-4\" at 16\" OC depending on species. They are suitable for small rooms, closets, bump-outs, and platforms, but not for typical room-sized spans. Most residential floors require at minimum 2x8 joists, and 2x10 or 2x12 are the standard for main floor framing.",
+      },
+      {
+        question: "What is the difference between live load and dead load?",
+        answer:
+          "Live load is the weight of people, furniture, and movable objects on the floor (typically 40 psf for residential). Dead load is the permanent weight of the structure itself -- joists, subfloor, finish flooring, and ceiling below (typically 10 psf). Together they determine the total design load used to look up maximum spans in the IRC tables.",
+      },
+      {
+        question: "Should I use 16\" or 24\" on-center spacing for floor joists?",
+        answer:
+          "16\" OC is the standard for most residential floor framing and is required for 19/32\" subfloor panels. 24\" OC uses fewer joists (saving about 33% on lumber) but requires thicker subfloor (23/32\"), limits maximum spans, and can result in a bouncier floor. Use 16\" OC for main living areas and 24\" OC only where code allows and a slightly more flexible floor is acceptable.",
+      },
+      {
+        question: "Do I need blocking between floor joists?",
+        answer:
+          "The IRC requires blocking or bridging for joists deeper than a nominal 2x12 at intervals not exceeding 8 feet (R502.7). For 2x10 and smaller joists, blocking is not required by code but is recommended at mid-span for long runs to reduce bounce and squeaking. Solid blocking from joist cutoffs or manufactured cross-bridging both satisfy the requirement.",
+      },
+    ],
+  },
+
+  rafterSpanTable: {
+    title: "Rafter Span Table: Complete Roof Framing Reference",
+    metaDescription:
+      "Rafter span tables for 2x4, 2x6, 2x8, 2x10, 2x12 at 12\", 16\", 24\" OC. Covers snow loads, roof pitch factors, and IRC R802.4 code references for residential roof framing.",
+    heroTitle: "Rafter Span Table",
+    heroSubtitle: "Complete Roof Framing Reference",
+    heroDescription:
+      "Comprehensive rafter span tables for residential roof framing. Find maximum allowable spans for every common rafter size, spacing, wood species, and snow load condition per the IRC.",
+
+    quickAnswerHeading: "Quick Answer",
+    quickAnswerText:
+      "A 2x8 Douglas Fir-Larch #2 rafter at 16\" OC can span up to 15'-0\" for a 20 psf live load (no snow). For a 30 psf ground snow load, the span drops to about 13'-6\". A 2x6 rafter at 16\" OC spans up to 11'-6\" under light loads -- suitable for small roofs, porches, and low-slope applications.",
+
+    understandingHeading: "Understanding Rafter Spans",
+    understandingText1:
+      "A rafter span is the horizontal projection distance a rafter can cover between its bearing point at the wall top plate and the ridge board or ridge beam. Unlike floor joists, rafter spans are measured as the horizontal run, not along the slope of the rafter. The actual rafter length is longer than the span because it follows the roof pitch.",
+    understandingText2:
+      "Rafter design considers two primary loads: the dead load (roofing material, sheathing, insulation -- typically 10-15 psf) and the live load, which includes snow load, wind uplift, and the minimum 20 psf construction/maintenance load. In snow country, the ground snow load is converted to a roof snow load using factors for exposure, thermal condition, and roof slope.",
+    understandingText3:
+      "The IRC provides separate span tables for different load conditions: 20 psf live load (no snow), 30 psf, 50 psf, and 70 psf snow loads. Rafters must also satisfy deflection limits of L/180 for live load under the IRC. Higher pitches allow slightly longer spans for the same rafter size because the load component along the rafter is reduced at steeper slopes.",
+
+    spanTablesHeading: "Rafter Span Tables by Species (20 psf Live Load, 10 psf Dead Load)",
+    spanTablesIntro:
+      "The following tables are based on IRC Table R802.4(1) for rafters with a 20 psf live load (no snow) and 10 psf dead load. Spans are the maximum horizontal projection in feet and inches. For snow load conditions, see the reduction factors below.",
+    spanTablesColSize: "Rafter Size",
+    spanTablesCol12: "12\" OC",
+    spanTablesCol16: "16\" OC",
+    spanTablesCol24: "24\" OC",
+    spanTablesBySpecies: [
+      {
+        species: "Douglas Fir-Larch",
+        grade: "#2 Grade -- Fb = 900 psi, E = 1,600,000 psi",
+        rows: [
+          { size: "2x4", oc12: "9'-6\"", oc16: "8'-3\"", oc24: "6'-9\"" },
+          { size: "2x6", oc12: "14'-11\"", oc16: "12'-10\"", oc24: "10'-7\"" },
+          { size: "2x8", oc12: "19'-8\"", oc16: "15'-0\"", oc24: "12'-4\"" },
+          { size: "2x10", oc12: "21'-3\"", oc16: "18'-2\"", oc24: "14'-11\"" },
+          { size: "2x12", oc12: "24'-6\"", oc16: "21'-1\"", oc24: "17'-3\"" },
+        ],
+      },
+      {
+        species: "Southern Pine",
+        grade: "#2 Grade -- Fb = 1,000 psi, E = 1,600,000 psi",
+        rows: [
+          { size: "2x4", oc12: "9'-11\"", oc16: "8'-8\"", oc24: "7'-1\"" },
+          { size: "2x6", oc12: "15'-7\"", oc16: "13'-6\"", oc24: "11'-2\"" },
+          { size: "2x8", oc12: "20'-6\"", oc16: "15'-10\"", oc24: "13'-0\"" },
+          { size: "2x10", oc12: "22'-4\"", oc16: "19'-2\"", oc24: "15'-7\"" },
+          { size: "2x12", oc12: "25'-8\"", oc16: "22'-0\"", oc24: "18'-0\"" },
+        ],
+      },
+      {
+        species: "Spruce-Pine-Fir (SPF)",
+        grade: "#2 Grade -- Fb = 875 psi, E = 1,400,000 psi",
+        rows: [
+          { size: "2x4", oc12: "9'-0\"", oc16: "7'-10\"", oc24: "6'-5\"" },
+          { size: "2x6", oc12: "14'-2\"", oc16: "12'-2\"", oc24: "10'-0\"" },
+          { size: "2x8", oc12: "18'-8\"", oc16: "14'-3\"", oc24: "11'-8\"" },
+          { size: "2x10", oc12: "20'-2\"", oc16: "17'-3\"", oc24: "14'-1\"" },
+          { size: "2x12", oc12: "23'-3\"", oc16: "20'-0\"", oc24: "16'-4\"" },
+        ],
+      },
+      {
+        species: "Hem-Fir",
+        grade: "#2 Grade -- Fb = 850 psi, E = 1,300,000 psi",
+        rows: [
+          { size: "2x4", oc12: "8'-9\"", oc16: "7'-7\"", oc24: "6'-3\"" },
+          { size: "2x6", oc12: "13'-9\"", oc16: "11'-10\"", oc24: "9'-9\"" },
+          { size: "2x8", oc12: "18'-2\"", oc16: "13'-10\"", oc24: "11'-4\"" },
+          { size: "2x10", oc12: "19'-8\"", oc16: "16'-10\"", oc24: "13'-9\"" },
+          { size: "2x12", oc12: "22'-8\"", oc16: "19'-6\"", oc24: "15'-11\"" },
+        ],
+      },
+    ],
+
+    snowLoadHeading: "Snow Load Impact on Rafter Spans",
+    snowLoadIntro:
+      "Snow load significantly reduces allowable rafter spans. The IRC provides separate span tables for different ground snow load conditions. Here is how increasing snow load affects a typical 2x8 Douglas Fir-Larch #2 rafter at 16\" OC.",
+    snowLoadItems: [
+      "20 psf live load (no snow): 2x8 spans up to 15'-0\" -- suitable for mild climates like the southern U.S., coastal areas, and regions with minimal snowfall",
+      "30 psf ground snow load: 2x8 spans drop to approximately 13'-6\" -- typical for moderate snow regions like the mid-Atlantic, Pacific Northwest lowlands, and parts of the Midwest",
+      "50 psf ground snow load: 2x8 spans reduce to approximately 11'-10\" -- required in heavy snow regions like northern New England, the Rocky Mountains, and the upper Midwest",
+      "70 psf ground snow load: 2x8 spans shrink to approximately 10'-6\" -- required in extreme snow areas like mountain communities above 5,000 feet elevation",
+      "To determine your ground snow load, check ASCE 7 maps or contact your local building department. The ground snow load is converted to a roof snow load using exposure factor (Ce), thermal factor (Ct), and importance factor (Is).",
+      "Roof slope reduces snow accumulation: pitches above 6:12 shed snow more effectively, and many codes allow a reduction factor for steep roofs above 30 degrees. However, drifting and sliding snow can create concentrated loads at valleys and lower roofs.",
+    ],
+    snowLoadSummary:
+      "In snow country, always design rafters for the ground snow load specified by your local building code. Undersizing rafters for snow load is one of the most common and dangerous framing errors.",
+
+    pitchFactorsHeading: "How Roof Pitch Affects Rafter Sizing",
+    pitchFactorsIntro:
+      "Roof pitch affects rafter design in multiple ways: actual rafter length, load distribution, snow shedding ability, and the need for collar ties or ridge beams.",
+    pitchFactorsItems: [
+      "Low pitch (2:12 to 4:12): Rafters carry load almost like a floor joist. The horizontal thrust at the bearing wall is high, requiring adequate ceiling joists or collar ties to resist spreading. Rafter spans from the IRC tables apply directly.",
+      "Medium pitch (5:12 to 8:12): The load component perpendicular to the rafter decreases, potentially allowing slightly longer spans. Ceiling joists or collar ties are still required unless a structural ridge beam is used.",
+      "Steep pitch (9:12 to 12:12): Gravity load creates less bending in the rafter, and snow slides off more readily. However, the actual rafter is much longer than the horizontal span, increasing material cost. Wind uplift becomes a bigger concern.",
+      "The IRC span tables give horizontal projection spans, not rafter length. To find the actual rafter length, multiply the horizontal span by the pitch multiplier: 4:12 = 1.054, 6:12 = 1.118, 8:12 = 1.202, 10:12 = 1.302, 12:12 = 1.414.",
+      "Structural ridge beam: eliminates the need for ceiling joists or collar ties by supporting the ridge. Required for cathedral ceiling (open rafter) designs. The beam must be engineered for the specific loads and spans involved.",
+      "Collar ties vs rafter ties: Collar ties in the upper third of the rafter length prevent ridge separation. Rafter ties (ceiling joists) at the plate level resist outward thrust. Most conventional roofs need rafter ties; collar ties alone are not a substitute.",
+    ],
+    pitchFactorsSummary:
+      "For most residential roofs (4:12 to 8:12 pitch), the IRC span tables can be used directly. For cathedral ceilings without ceiling joists, a structural ridge beam is required and should be engineered for the specific loads.",
+
+    codeReferencesHeading: "IRC Code References for Rafters",
+    codeReferencesIntro:
+      "The following IRC sections govern rafter design in residential construction.",
+    codeReferencesItems: [
+      "IRC R802.4 -- Rafter span tables (Tables R802.4(1) through R802.4(8)): Maximum spans for various species, grades, sizes, spacings, and load conditions including snow load",
+      "IRC R802.3 -- Framing details: Requirements for ridge boards, collar ties, rafter ties, and their connections",
+      "IRC R802.5 -- Purlins and strutting: Intermediate support for long rafters to reduce effective span",
+      "IRC R802.6 -- Bearing: Minimum bearing length for rafters (1.5\" on wood/metal, 3\" on masonry)",
+      "IRC R802.7 -- Cutting and notching: Limits on notches (outer 1/3 of span, max 1/3 depth) and holes (min 2\" from edges) in rafters",
+      "IRC R802.10 -- Roof trusses: Factory-built trusses must be designed by a licensed engineer and installed per the manufacturer's specifications",
+      "IRC R802.11 -- Roof sheathing: Minimum sheathing thickness based on rafter spacing (7/16\" for 16\" OC, 15/32\" for 24\" OC)",
+    ],
+    codeReferencesSummary:
+      "Rafter design is governed by IRC Section R802. For standard stick-framed roofs with ceiling joists acting as rafter ties, the span tables provide straightforward sizing. For cathedral ceilings, hip/valley rafters, or unusual geometries, consult a structural engineer.",
+
+    calculatorCtaHeading: "Calculate Your Roof Framing Materials",
+    calculatorCtaText:
+      "Once you know your rafter size and spacing, use our calculators to determine how many rafters, how much sheathing, and what fasteners you need.",
+    calculatorLinks: [
+      {
+        label: "Roof Rafter Calculator",
+        href: "/calculators/roofing/roof-rafter-calculator",
+        description: "Calculate the number of rafters, ridge board length, and collar ties needed.",
+      },
+      {
+        label: "Roof Sheathing Calculator",
+        href: "/calculators/roofing/roof-sheathing-calculator",
+        description: "Estimate plywood or OSB sheets for your roof deck.",
+      },
+      {
+        label: "Roofing Shingles Calculator",
+        href: "/calculators/roofing/roofing-shingles-calculator",
+        description: "Calculate bundles of shingles and roofing nails needed.",
+      },
+    ],
+    faqHeading: "Frequently Asked Questions",
+    faqs: [
+      {
+        question: "How far can a 2x6 rafter span?",
+        answer:
+          "A 2x6 Douglas Fir-Larch #2 rafter at 16\" OC can span up to 12'-10\" horizontally with a 20 psf live load (no snow). For a 30 psf snow load, the span drops to about 11'-6\". Southern Pine #2 at 16\" OC spans up to 13'-6\" under light loads. 2x6 rafters are common for smaller roofs, porches, dormers, and additions.",
+      },
+      {
+        question: "How far can a 2x4 rafter span?",
+        answer:
+          "A 2x4 rafter has very limited span: 7'-7\" to 8'-8\" at 16\" OC depending on species. 2x4 rafters are suitable only for small structures like sheds, covered porches under 8 feet wide, and lightweight patio covers. They are not permitted for most habitable building roofs under the IRC.",
+      },
+      {
+        question: "Do I need a ridge beam or a ridge board?",
+        answer:
+          "A ridge board (typically a 1x or 2x board at the peak) is sufficient when ceiling joists or rafter ties resist the outward thrust at the walls. A structural ridge beam (typically LVL or glulam) is required for cathedral ceilings or any design without ceiling joists, because it must carry the full vertical load of the rafters. Ridge beams must be engineered for the specific span and loads.",
+      },
+      {
+        question: "How does snow load affect rafter spans?",
+        answer:
+          "Snow load significantly reduces allowable rafter spans. A 2x8 Douglas Fir #2 at 16\" OC spans 15'-0\" with no snow but only about 10'-6\" with a 70 psf ground snow load -- a 30% reduction. Always design for the ground snow load specified by your local building code, which you can find from your building department or ASCE 7 snow load maps.",
+      },
+      {
+        question: "Can I use purlins to extend rafter spans?",
+        answer:
+          "Yes, purlins (horizontal members running perpendicular to rafters) supported by struts to a bearing wall below can support rafters at mid-span, effectively cutting the span in half. IRC R802.5 allows purlin-and-strut systems for rafters. The purlin must be at least 2x4, and the strut must bear on an interior load-bearing wall. This is a cost-effective alternative to upsizing rafters.",
+      },
+      {
+        question: "What is the minimum roof rafter size for a house?",
+        answer:
+          "The minimum rafter size for a residential roof is typically 2x6, which provides adequate span for most rooms up to about 12 feet wide (24-foot total building width with a center ridge). For wider buildings, 2x8 or 2x10 rafters are needed. In heavy snow areas, even small buildings may require 2x8 or larger rafters. The IRC does not set a blanket minimum size -- it depends on span, spacing, species, and loads.",
+      },
+    ],
+  },
+
+  ceilingJoistSpanTable: {
+    title: "Ceiling Joist Span Table: Complete Reference Guide",
+    metaDescription:
+      "Ceiling joist span tables for 2x4, 2x6, 2x8, 2x10 at 12\", 16\", 24\" OC. Covers uninhabitable attic, limited storage, and habitable attic spans with IRC R802.4 code references.",
+    heroTitle: "Ceiling Joist Span Table",
+    heroSubtitle: "Complete Reference Guide",
+    heroDescription:
+      "Comprehensive ceiling joist span tables for residential construction. Find maximum spans for every common size, spacing, and load condition -- from drywall-only ceilings to habitable attic floors.",
+
+    quickAnswerHeading: "Quick Answer",
+    quickAnswerText:
+      "A 2x6 Douglas Fir-Larch #2 ceiling joist at 16\" OC can span up to 17'-2\" for a drywall-only ceiling (10 psf dead load, no attic live load). If the attic is used for limited storage (20 psf live load), the span drops to about 12'-5\". For a habitable attic (30 psf live load), use 2x8 or larger joists.",
+
+    understandingHeading: "Understanding Ceiling Joist Spans",
+    understandingText1:
+      "Ceiling joists serve a dual purpose in conventional roof framing: they support the ceiling finish below (typically drywall) and they act as rafter ties to resist the outward horizontal thrust of opposing rafters. The span of a ceiling joist depends primarily on whether the attic space above will be used for storage or habitation, which determines the live load requirement.",
+    understandingText2:
+      "The IRC categorizes ceiling joist loads into three conditions: uninhabitable attics without storage (10 psf dead load only, no live load -- just drywall weight), uninhabitable attics with limited storage (10 psf dead + 20 psf live load), and habitable attics or rooms with finished floors (10 psf dead + 30 psf live load). Each condition has its own span table.",
+    understandingText3:
+      "When ceiling joists also serve as rafter ties, they must be connected to the rafter feet with adequate fastening to resist the horizontal thrust. The IRC requires ceiling joists to be located in the lower third of the rafter span. If joists are raised above the plate line (as in a cathedral ceiling with collar ties), the lateral forces increase significantly, and the connections must be designed accordingly.",
+
+    spanTablesHeading: "Ceiling Joist Span Tables by Species",
+    spanTablesIntro:
+      "The following tables are based on IRC Table R802.4(1) for ceiling joists with a 10 psf dead load. Three load conditions are shown: drywall only (no attic live load), limited storage (20 psf live load), and habitable attic (30 psf live load). Spans shown are for the drywall-only / limited storage conditions.",
+    spanTablesColSize: "Joist Size",
+    spanTablesCol12: "12\" OC",
+    spanTablesCol16: "16\" OC",
+    spanTablesCol24: "24\" OC",
+    spanTablesBySpecies: [
+      {
+        species: "Douglas Fir-Larch (Drywall Only -- No Attic Storage)",
+        grade: "#2 Grade -- 10 psf dead load, no live load",
+        rows: [
+          { size: "2x4", oc12: "13'-1\"", oc16: "11'-11\"", oc24: "10'-5\"" },
+          { size: "2x6", oc12: "20'-7\"", oc16: "17'-2\"", oc24: "13'-4\"" },
+          { size: "2x8", oc12: "25'-0\"", oc16: "21'-7\"", oc24: "17'-6\"" },
+          { size: "2x10", oc12: "26'-0\"", oc16: "24'-0\"", oc24: "20'-9\"" },
+        ],
+      },
+      {
+        species: "Douglas Fir-Larch (Limited Attic Storage -- 20 psf Live Load)",
+        grade: "#2 Grade -- 10 psf dead load + 20 psf live load",
+        rows: [
+          { size: "2x4", oc12: "9'-2\"", oc16: "8'-0\"", oc24: "6'-6\"" },
+          { size: "2x6", oc12: "14'-5\"", oc16: "12'-5\"", oc24: "10'-2\"" },
+          { size: "2x8", oc12: "19'-0\"", oc16: "16'-4\"", oc24: "13'-5\"" },
+          { size: "2x10", oc12: "24'-3\"", oc16: "20'-11\"", oc24: "17'-1\"" },
+        ],
+      },
+      {
+        species: "Southern Pine (Drywall Only -- No Attic Storage)",
+        grade: "#2 Grade -- 10 psf dead load, no live load",
+        rows: [
+          { size: "2x4", oc12: "13'-1\"", oc16: "11'-11\"", oc24: "10'-5\"" },
+          { size: "2x6", oc12: "20'-7\"", oc16: "18'-1\"", oc24: "14'-1\"" },
+          { size: "2x8", oc12: "25'-0\"", oc16: "22'-8\"", oc24: "18'-6\"" },
+          { size: "2x10", oc12: "26'-0\"", oc16: "25'-3\"", oc24: "21'-10\"" },
+        ],
+      },
+      {
+        species: "Spruce-Pine-Fir (Limited Attic Storage -- 20 psf Live Load)",
+        grade: "#2 Grade -- 10 psf dead load + 20 psf live load",
+        rows: [
+          { size: "2x4", oc12: "8'-8\"", oc16: "7'-6\"", oc24: "6'-2\"" },
+          { size: "2x6", oc12: "13'-8\"", oc16: "11'-9\"", oc24: "9'-8\"" },
+          { size: "2x8", oc12: "18'-0\"", oc16: "15'-6\"", oc24: "12'-8\"" },
+          { size: "2x10", oc12: "23'-0\"", oc16: "19'-9\"", oc24: "16'-2\"" },
+        ],
+      },
+    ],
+
+    loadTypesHeading: "Ceiling Joist Load Types Explained",
+    loadTypesIntro:
+      "The IRC defines three categories of attic loads, each requiring different joist sizing. Choosing the correct load category is critical for selecting the right span table.",
+    loadTypesItems: [
+      "Uninhabitable attic without storage (10 psf dead load only): This applies when the attic has no flooring, no pull-down stairs, and is accessed only for occasional maintenance (HVAC, plumbing). Ceiling joists carry only the drywall below, allowing the longest spans. Most common in single-story homes with truss roofs.",
+      "Uninhabitable attic with limited storage (20 psf live load): This applies when the attic has a scuttle hole or pull-down stairs and may be used for light storage. The 20 psf live load represents stored items like holiday decorations and boxes. This is the most commonly used span table for stick-framed roofs.",
+      "Habitable attic (30 psf live load): This applies when the attic space has sufficient headroom (7 feet minimum over 50% of the area) and may be finished as living space. The 30 psf live load matches sleeping room requirements. Use the floor joist span tables (IRC R502.3.1) if the space will serve as a bedroom or living room (40 psf).",
+      "If you plan to convert an attic to living space in the future, size ceiling joists for the habitable attic load from the start. Reinforcing undersized joists later is expensive and disruptive.",
+      "HVAC equipment in the attic adds concentrated dead load. If your air handler or ductwork sits on the ceiling joists, add 5-10 psf dead load or provide dedicated platform framing for the equipment.",
+    ],
+    loadTypesSummary:
+      "When in doubt, design for the limited storage load (20 psf live load). It costs only slightly more in lumber than the drywall-only design but gives you future flexibility for attic storage access.",
+
+    factorsHeading: "Factors Affecting Ceiling Joist Spans",
+    factorsIntro:
+      "Several factors beyond basic load and species affect how far your ceiling joists can span.",
+    factorsItems: [
+      "Rafter tie function: When ceiling joists serve as rafter ties, they experience tension forces in addition to bending. The joists must be connected to the rafters with nailing or metal connectors adequate to resist the horizontal thrust. This does not reduce the span table value but does affect connection requirements.",
+      "Ceiling finish weight: Standard 1/2\" drywall weighs about 2 psf. If using 5/8\" drywall (fire-rated), add 0.5 psf. Plaster ceilings can weigh 5-10 psf and may require the next larger joist size or closer spacing.",
+      "Insulation weight: Blown-in insulation (cellulose or fiberglass) at R-49 can add 1-3 psf to the dead load. While this is within the 10 psf dead load assumption, extremely deep insulation installations should be checked.",
+      "Spacing and drywall: 24\" OC ceiling joist spacing requires 5/8\" drywall to prevent sagging between joists. 16\" OC allows 1/2\" drywall. If using 24\" OC, the thicker drywall adds slightly to the dead load.",
+      "Cantilevers and offsets: Ceiling joists that do not align with rafters (e.g., when ceiling runs perpendicular to rafters) cannot serve as rafter ties. A separate rafter tie or structural ridge beam is needed.",
+      "Lateral bracing: Ceiling joists should be braced to prevent rolling. Continuous 1x3 or 2x4 lateral bracing nailed across the top of joists at mid-span keeps joists plumb under load.",
+    ],
+    factorsSummary:
+      "Ceiling joists are often the most overlooked framing member because they are hidden above the ceiling. But they serve critical structural roles as rafter ties and must be properly sized and connected.",
+
+    codeReferencesHeading: "IRC Code References for Ceiling Joists",
+    codeReferencesIntro:
+      "The following IRC sections apply to ceiling joist design in residential construction.",
+    codeReferencesItems: [
+      "IRC R802.4 -- Ceiling joist span tables (Tables R802.4(1) through R802.4(2)): Maximum spans for ceiling joists based on species, grade, size, spacing, and load condition",
+      "IRC R802.3.1 -- Ceiling joist and rafter connections: Requirements for nailing ceiling joists to rafters when they act as rafter ties. Minimum three 10d nails per connection for standard loads.",
+      "IRC R802.3.2 -- Ceiling joists lapped: When ceiling joists are lapped over an interior bearing wall, they must be nailed together with minimum three 10d nails and must both be nailed to the top plate",
+      "IRC R802.5 -- Collar ties: Required in the upper third of the rafter span to prevent ridge separation. Not a substitute for rafter ties (ceiling joists) at the plate level.",
+      "IRC R702.3.5 -- Ceiling drywall support: Maximum framing spacing for drywall ceiling application. 1/2\" drywall for 16\" OC, 5/8\" drywall for 24\" OC to prevent sag.",
+      "IRC R806 -- Attic ventilation: Ceiling joists define the attic space that must be ventilated. Net free ventilation area of 1/150 of the attic floor area, reducible to 1/300 with balanced high/low vents.",
+    ],
+    codeReferencesSummary:
+      "Ceiling joist design intersects with rafter design (IRC R802), drywall requirements (IRC R702), and attic ventilation (IRC R806). Always consider these sections together when planning your roof and ceiling framing.",
+
+    calculatorCtaHeading: "Calculate Your Ceiling Framing Materials",
+    calculatorCtaText:
+      "Use our calculators to determine how many ceiling joists, how much drywall, and what fasteners you need for your project.",
+    calculatorLinks: [
+      {
+        label: "Floor Joist Calculator",
+        href: "/calculators/floor-framing/floor-joist-calculator",
+        description: "Also works for ceiling joists -- calculate quantity, spacing, and blocking.",
+      },
+      {
+        label: "Drywall Calculator",
+        href: "/calculators/insulation-drywall/drywall-calculator",
+        description: "Estimate drywall sheets, joint compound, and screws for your ceiling.",
+      },
+      {
+        label: "Insulation Calculator",
+        href: "/calculators/insulation-drywall/insulation-calculator",
+        description: "Calculate batts or blown-in insulation for your attic above the ceiling joists.",
+      },
+    ],
+    faqHeading: "Frequently Asked Questions",
+    faqs: [
+      {
+        question: "How far can a 2x6 ceiling joist span?",
+        answer:
+          "A 2x6 Douglas Fir-Larch #2 ceiling joist at 16\" OC can span up to 17'-2\" for a drywall-only ceiling (no attic storage). For limited attic storage (20 psf live load), the span drops to 12'-5\". For habitable attic space (30 psf), the span is about 10'-4\". Always check the specific span table for your species and load condition.",
+      },
+      {
+        question: "Can I use 2x4 ceiling joists?",
+        answer:
+          "Yes, 2x4 ceiling joists can span up to 11'-11\" at 16\" OC for drywall-only ceilings (Douglas Fir #2). However, they are limited to about 8'-0\" for attics with storage. 2x4 ceiling joists are common in smaller rooms, hallways, and closets where the attic above will not be used. They are not suitable for spans exceeding 12 feet or where any attic load is anticipated.",
+      },
+      {
+        question: "Do ceiling joists need to run the same direction as rafters?",
+        answer:
+          "When ceiling joists serve as rafter ties (which is the default in conventional roof framing), they must run parallel to the rafters so they can be nailed directly to the rafter feet. If the ceiling joists run perpendicular to the rafters, you need separate rafter ties or a structural ridge beam to resist the outward thrust of the rafters.",
+      },
+      {
+        question: "What is the difference between a ceiling joist and a floor joist?",
+        answer:
+          "Structurally, they are the same type of member (horizontal bending member spanning between supports). The difference is the design load: ceiling joists carry the ceiling finish below and possibly light attic storage (10-20 psf total), while floor joists carry the full weight of people, furniture, and activities above (40-50 psf total). This means ceiling joists can span significantly longer than floor joists of the same size.",
+      },
+      {
+        question: "Can I walk on ceiling joists?",
+        answer:
+          "You can walk carefully on ceiling joists sized for attic storage (20 psf live load) or habitable attics (30 psf). However, ceiling joists sized for drywall only (no live load) should not be used for walking or storage -- they may deflect enough to crack the ceiling drywall below or, in extreme cases, fail structurally. Always place your feet on the joists, never between them on the drywall.",
+      },
+      {
+        question: "How do I reinforce existing ceiling joists for attic storage?",
+        answer:
+          "The most common method is sistering -- bolting or nailing a new joist of equal or greater depth alongside each existing joist. Use construction adhesive plus 3/8\" carriage bolts every 16\" or 16d nails every 12\" in a staggered pattern. The sister joist must bear on the same supports as the original. Alternatively, you can add a beam and posts below to shorten the effective span. Consult an engineer for the specific reinforcement needed.",
       },
     ],
   },
